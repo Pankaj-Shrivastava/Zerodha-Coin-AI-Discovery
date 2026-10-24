@@ -71,3 +71,24 @@
 * **Context & Rationale**: User empathy research requires understanding emotional and structural friction, not tracking individuals. Zero PII storage guarantees absolute user privacy and compliance with data protection principles.
 * **Status**: Accepted & Enforced.
 
+---
+
+## ADR-09: Frontend Stack Selection (React + Tailwind CSS)
+* **Decision**: Build the Phase 5 interactive discovery dashboard using **React 18+ (Vite SPA)** styled with **Tailwind CSS**.
+* **Context & Rationale**: The user explicitly requested React and Tailwind CSS for the frontend dashboard. React provides component modularity and seamless state management for interactive discovery views (filtering 826 verbatims, expanding Opportunity Tree branches, viewing Q&A evidence cards). Tailwind CSS enables a curated dark-mode design system with responsive layouts, fluid micro-interactions, and glassmorphic elevation without bloated CSS stylesheets.
+* **Status**: Accepted & Implemented in Architecture.
+
+---
+
+## ADR-10: Vercel Serverless Static Deployment Architecture
+* **Decision**: Host and deploy the discovery engine frontend on **Vercel** as a static Single Page Application (SPA).
+* **Context & Rationale**: The discovery engine data pipeline is pre-computed into static JSON files (`data/processed/*.json`), eliminating the need for an active backend server or database at runtime. Deploying to Vercel provides global Edge CDN distribution, zero cold-starts, sub-second load times, instant preview builds, and automated SSL at $0 cost.
+* **Status**: Accepted & Implemented in Deployment Plan (`docs/deployment.md`).
+
+---
+
+## ADR-11: Phase 5 Build Gating & Automated Evaluation Gate Pass
+* **Decision**: Phase 5 (UI Construction) is strictly held until explicit user go-ahead, despite all automated evaluation suites (`eval_harvesters.py`, `eval_grounding.py`, `eval_synthesis.py`) passing with Exit Code 0.
+* **Context & Rationale**: Upholds the pair-programming collaborative governance model. The human instructor must review and approve data validation benchmarks and architectural plans before frontend code is generated.
+* **Status**: Accepted & Enforced.
+

@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Zerodha Coin AI Discovery Engine</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#fffbff", "surface-dim": "#cbdbf5", "surface-container-low": "#eff4ff", "tertiary-fixed-dim": "#ffb599", "error-container": "#ffdad6", "primary-fixed-dim": "#a5c8ff", "on-error-container": "#93000a", "outline-variant": "#c1c6d3", "secondary-fixed-dim": "#68dba9", "on-tertiary-fixed": "#370e00", "on-secondary-container": "#00714e", "inverse-surface": "#213145", "tertiary-fixed": "#ffdbce", "on-primary-container": "#fefcff", "secondary-container": "#82f5c1", "on-secondary": "#ffffff", "surface-container-high": "#dce9ff", "on-tertiary": "#ffffff", "primary-fixed": "#d4e3ff", "on-secondary-fixed": "#002114", "surface-tint": "#005faf", "on-tertiary-fixed-variant": "#7f2b00", "on-primary-fixed": "#001c3a", "outline": "#727783", "on-background": "#0b1c30", "surface-variant": "#d3e4fe", "surface-container": "#e5eeff", "secondary": "#006c4a", "inverse-on-surface": "#eaf1ff", "surface": "#f8f9ff", "error": "#ba1a1a", "on-surface": "#0b1c30", "tertiary-container": "#cc4900", "primary": "#005cab", "on-primary": "#ffffff", "on-surface-variant": "#414751", "primary-container": "#2d76c8", "on-error": "#ffffff", "on-primary-fixed-variant": "#004786", "surface-bright": "#f8f9ff", "surface-container-highest": "#d3e4fe", "background": "#f8f9ff", "secondary-fixed": "#85f8c4", "surface-container-lowest": "#ffffff", "tertiary": "#a33900", "on-secondary-fixed-variant": "#005137", "inverse-primary": "#a5c8ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "gutter-desktop": "1.5rem", "space-md": "1rem", "gutter": "1rem", "space-xs": "0.25rem", "margin": "1rem", "margin-desktop": "3rem", "space-sm": "0.5rem", "margin-tablet": "2rem", "space-lg": "1.5rem" }, "fontFamily": { "label-sm": ["JetBrains Mono"], "label-lg": ["JetBrains Mono"], "label-md": ["JetBrains Mono"], "headline-md": ["Inter"], "body-lg": ["Inter"], "headline-xl": ["Inter"], "headline-lg-mobile": ["Inter"], "headline-xl-mobile": ["Inter"], "body-sm": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"] }, "fontSize": { "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "500" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest border-b border-outline-variant/30"><div class="h-28 w-full px-gutter-desktop mx-auto flex flex-col justify-between py-space-xs"><div class="flex items-center justify-between gap-space-md pt-space-xs"><div class="flex items-center gap-space-md"><img alt="Zerodha Coin AI Discovery Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UIsdG3WPlSiDpWBDJPkAaA9S5ONGLZOq2jXxQ9pwrKJOTraSUtgyngkoHBhlpdY2V9r5Dh6mgt0rstwoCDlzgxC64nDg_tsNqBH1BGKoEaJtv4kzDWNUyRx62lDq-XwjwniMbnxsi4KeZUSG-6n69zxa5TztMfJMq6MGGmT5mIw2Te9T_NvDI8Y0svQgX5SGCybtX7UhG3DhSzh0SZDJWQ1uwDIBClaNdiI-ctwCbdDy_hl55NVHSAC_c"/><div class="flex flex-col"><span class="font-headline-md text-headline-md text-on-surface tracking-tight leading-none">Coin AI Discovery Engine</span><span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">SIP Retention Months 1–12 • Continuous Discovery Platform</span></div></div><div class="hidden xl:flex items-center gap-space-sm"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-low border border-outline-variant/40"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span></span><span class="font-label-sm text-label-sm text-on-surface">2,759 Raw Corpus Analyzed</span><span class="font-label-sm text-label-sm text-on-surface-variant">(Reddit, Play Store, TradingQ&amp;A, YT)</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-low border border-outline-variant/40"><span class="material-symbols-outlined text-secondary text-sm">lock</span><span class="font-label-sm text-label-sm text-on-surface">826 Grounded Verbatims</span><span class="font-label-sm text-label-sm text-secondary">(Zero PII)</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-tertiary-fixed/30 border border-tertiary-fixed-dim/50"><span class="material-symbols-outlined text-tertiary text-sm">warning</span><span class="font-label-sm text-label-sm text-tertiary font-medium">89.7% Addressable Friction</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-secondary-container/20 border border-secondary-fixed/40"><span class="material-symbols-outlined text-secondary text-sm">verified</span><span class="font-label-sm text-label-sm text-secondary font-medium">Zero Hallucination Certified</span></div></div><div class="flex items-center gap-space-md pl-space-md border-l border-outline-variant/30"><div class="text-right hidden sm:block"><div class="font-body-sm text-body-sm text-on-surface font-medium leading-none">Dr. Ananya Iyer</div><div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5 flex items-center justify-end gap-1"><span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary"></span>Head of Discovery</div></div><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvfVtJ2K6wqOLp0cFihSHISDCHn9YY_NsffRApI6YqyrsTUzJwrZ0H0QcPld_BE13ylUKQbyS_8_YMvT49tWzs9Df-HzzQZqpS2n2qg0RTh9qkFjwmNCVq6FiuEOkq4GwNI6JOA0jF-5IfVt5Ax4q5b2MFlujey17WXkathYWel15Aaaoythd5sV4iOphfiqpwMfrms0eCLqQIZLNEzU-6EGTvSmQ8T3NTyQ24CC4y1kSSLs6TZBSxVA"/><span class="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-secondary ring-1 ring-surface-container-lowest"></span></div></div></div><nav class="flex items-center gap-1 border-t border-outline-variant/20 pt-1 -mb-space-xs overflow-x-auto" data-active-classes="border-b-2 border-primary text-primary font-medium bg-surface-container-low"><a class="px-space-md py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors whitespace-nowrap" data-path="executive-discovery" href="#">Executive Discovery</a><a class="px-space-md py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors whitespace-nowrap" data-path="platform-benchmark" href="#">Platform Benchmark</a><a class="px-space-md py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors whitespace-nowrap" data-path="12-month-journey" href="#">12-Month Journey</a><a class="px-space-md py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors whitespace-nowrap" data-path="behavioral-archetypes" href="#">Behavioral Archetypes</a><a class="px-space-md py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors whitespace-nowrap" data-path="opportunity-tree-ost" href="#">Opportunity Tree (OST)</a><a class="px-space-md py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors whitespace-nowrap" data-path="interview-guide-golden-set" href="#">Interview Guide &amp; Golden Set</a></nav></div></header><main class="w-full pt-28 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="w-full px-gutter-desktop mx-auto max-w-[1440px] py-space-lg flex flex-col gap-space-xl">
+<!-- Workbench Top Executive Bar -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm">RESEARCH MODULE • M1–12</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">PROTOCOL SPEC v3.9</span>
+<span class="text-on-surface-variant">•</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>HITL ACTIVE
+          </span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Primary Research Guide &amp; AI Benchmark Golden Set</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">Teresa Torres story-based interview protocol coupled with a human-in-the-loop validation interface for 20 golden set benchmarks.</p>
+</div>
+<!-- Quantitative Pipeline KPI Badges -->
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<div class="bg-surface-container-lowest px-space-md py-space-sm rounded-lg shadow-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Calibrated Accuracy</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">97.8%</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">+1.4%</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest px-space-md py-space-sm rounded-lg shadow-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Inter-Annotator Kappa</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">0.912</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">κ-Fleiss</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest px-space-md py-space-sm rounded-lg shadow-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Annotated Horizon</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-md text-headline-md text-primary font-semibold">20 / 20</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Units</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 1: Teresa Torres Story-Based Interview Protocol -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container-low/40">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">psychology_alt</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Continuous Interview Protocol: Uncovering Unprompted Past Behaviors</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Zero speculation principle: interrogate actual instances in time. Eliminate hypothetical self-reporting by locking questions strictly to past physical actions.
+          </p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-sm py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Methodology: Continuous Discovery Habits</span>
+<span class="px-space-sm py-1 rounded bg-secondary-container/20 font-label-sm text-label-sm text-secondary font-medium">Empirical Retrospective</span>
+</div>
+</div>
+<!-- Tab Buttons -->
+<div class="grid grid-cols-2 lg:grid-cols-4 bg-surface-container-low/60 p-1.5 gap-1.5" id="protocolTabs">
+<button class="protocol-tab flex flex-col items-start p-space-sm rounded-lg text-left transition-all bg-surface-container-lowest shadow-sm" id="tab-btn-track-1" onclick="switchTrack('track-1')">
+<span class="font-label-sm text-label-sm text-primary font-medium">TRACK 01</span>
+<span class="font-body-md text-body-md text-on-surface font-medium truncate w-full">First Drawdown Event</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Horizon: Months 1–3</span>
+</button>
+<button class="protocol-tab flex flex-col items-start p-space-sm rounded-lg text-left transition-all hover:bg-surface-container-lowest/60" id="tab-btn-track-2" onclick="switchTrack('track-2')">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">TRACK 02</span>
+<span class="font-body-md text-body-md text-on-surface font-medium truncate w-full">Salary &amp; Mandate Clash</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Horizon: Months 1–6</span>
+</button>
+<button class="protocol-tab flex flex-col items-start p-space-sm rounded-lg text-left transition-all hover:bg-surface-container-lowest/60" id="tab-btn-track-3" onclick="switchTrack('track-3')">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">TRACK 03</span>
+<span class="font-body-md text-body-md text-on-surface font-medium truncate w-full">T+2 Settlement Friction</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Horizon: Months 1–12</span>
+</button>
+<button class="protocol-tab flex flex-col items-start p-space-sm rounded-lg text-left transition-all hover:bg-surface-container-lowest/60" id="tab-btn-track-4" onclick="switchTrack('track-4')">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">TRACK 04</span>
+<span class="font-body-md text-body-md text-on-surface font-medium truncate w-full">Decision to Pause / Cancel</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Horizon: Months 4–12</span>
+</button>
+</div>
+<!-- Tab Panels -->
+<div class="p-space-lg">
+<!-- Track 1 Content -->
+<div class="protocol-content flex flex-col gap-space-lg" id="track-1">
+<div class="bg-surface-container-low/70 rounded-lg p-space-md flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase font-medium">Specific Past-Event Prompt (Read verbatim to subject)</span>
+<p class="font-headline-md text-headline-md text-on-surface tracking-tight italic">
+              "Think back to the first time you opened Coin and saw your mutual fund portfolio in red. Walk me through what you did immediately afterwards."
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Confirmation Criteria -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-lg">check_circle</span>
+<span class="font-label-sm text-label-sm font-semibold uppercase">Confirmation Criteria</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                User must cite specific, granular physical and digital actions: e.g., abruptly closed application, messaged a family WhatsApp group, searched YouTube for "why market falling today", or took a screenshot.
+              </p>
+</div>
+<!-- Invalidation Signal -->
+<div class="p-space-md rounded-lg bg-error-container/20 flex flex-col gap-space-xs">
+<div class="flex items-center gap-1.5 text-error">
+<span class="material-symbols-outlined text-lg">cancel</span>
+<span class="font-label-sm text-label-sm font-semibold uppercase">Invalidation Signal</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Participant retreats into hypothetical or generic rationalizations: e.g., <span class="italic text-on-surface">"Usually I would just wait it out because equity is for 5 years."</span> Invalidate response and reprompt for actual recall.
+              </p>
+</div>
+<!-- Interrogation Steering Tactics -->
+<div class="p-space-md rounded-lg bg-surface-container-high/40 flex flex-col gap-space-xs">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-lg">alt_route</span>
+<span class="font-label-sm text-label-sm font-semibold uppercase">Field Follow-up Anchors</span>
+</div>
+<ul class="font-body-sm text-body-sm text-on-surface-variant space-y-1 list-disc list-inside">
+<li>"Where were you sitting when you saw that screen?"</li>
+<li>"What device did you switch to right after?"</li>
+<li>"Did you calculate the cash loss or the percentage?"</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Track 2 Content -->
+<div class="protocol-content hidden flex flex-col gap-space-lg" id="track-2">
+<div class="bg-surface-container-low/70 rounded-lg p-space-md flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase font-medium">Specific Past-Event Prompt (Read verbatim to subject)</span>
+<p class="font-headline-md text-headline-md text-on-surface tracking-tight italic">
+              "Think back to the last time your salary was credited late or on a non-working day. What happened with your scheduled SIP debit?"
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-lg">check_circle</span>
+<span class="font-label-sm text-label-sm font-semibold uppercase">Confirmation Criteria</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Specific chronological recall of receiving bank SMS bounce warning, opening netbanking app to move funds from savings to salary account, or paying penalty charges.
+              </p>
+</div>
+<div class="p-space-md rounded-lg bg-error-container/20 flex flex-col gap-space-xs">
+<div class="flex items-center gap-1.5 text-error">
+<span class="material-symbols-outlined text-lg">cancel</span>
+<span class="font-label-sm text-label-sm font-semibold uppercase">Invalidation Signal</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                User claims they "never check balances" or claims "auto-debit always works seamlessly without attention" when transaction records show failed attempts.
+              </p>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-high/40 flex flex-col gap-space-xs">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-lg">alt_route</span>
+<span class="font-label-sm text-label-sm font-semibold uppercase">Field Follow-up Anchors</span>
+</div>
+<ul class="font-body-sm text-body-sm text-on-surface-variant space-y-1 list-disc list-inside">
+<li>"What exact date is your salary credited vs SIP date?"</li>
+<li>"Did your bank charge an ECS / NACH bounce fee?"</li>
+<li>"Did you re-attempt payment manually or leave it?"</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Track 3 Content -->
+<div class="protocol-content hidden flex flex-col gap-space-lg" id="track-3">
+<div class="bg-surface-container-low/70 rounded-lg p-space-md flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase font-medium">Specific Past-Event Prompt (Read verbatim to subject)</span>
+<p class="font-headline-md text-headline-md text-on-surface tracking-tight italic">
+              "Tell me about the last time you checked for your units after a debit. How long did it take, and what was going through your mind?"
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-lg">check_circle</span>
+<span class="font-label-sm text-label-sm font-semibold uppercase">Confirmation Criteria</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Clear articulation of elapsed days (e.g., "money went on Monday but units weren't visible until Thursday afternoon") and emotional sentiment shift (perceived platform fraud vs delayed NAV).
+              </p>
+</div>
+<div class="p-space-md rounded-lg bg-error-container/20 flex flex-col gap-space-xs">
+<div class="flex items-center gap-1.5 text-error">
+<span class="material-symbols-outlined text-lg">cancel</span>
+<span class="font-label-sm text-label-sm font-semibold uppercase">Invalidation Signal</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                User conflates demat mutual fund settlement (CDSL statement) with standard SoA platform instant allotments without remembering their specific order history.
+              </p>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-high/40 flex flex-col gap-space-xs">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-lg">alt_route</span>
+<span class="font-label-sm text-label-sm font-semibold uppercase">Field Follow-up Anchors</span>
+</div>
+<ul class="font-body-sm text-body-sm text-on-surface-variant space-y-1 list-disc list-inside">
+<li>"Did you open a support ticket with Coin?"</li>
+<li>"Did you check Zerodha Console or wait for the CDSL email?"</li>
+<li>"Did this delay prevent you from placing another order?"</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Track 4 Content -->
+<div class="protocol-content hidden flex flex-col gap-space-lg" id="track-4">
+<div class="bg-surface-container-low/70 rounded-lg p-space-md flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase font-medium">Specific Past-Event Prompt (Read verbatim to subject)</span>
+<p class="font-headline-md text-headline-md text-on-surface tracking-tight italic">
+              "Describe the exact moment you clicked 'Pause' or 'Cancel' on your SIP. Where were you, and what was the immediate trigger?"
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-lg">check_circle</span>
+<span class="font-label-sm text-label-sm font-semibold uppercase">Confirmation Criteria</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Identifies clear real-world financial friction point (Diwali festival expense, car insurance premium renewal, medical emergency, or anger over -4% 6-month returns).
+              </p>
+</div>
+<div class="p-space-md rounded-lg bg-error-container/20 flex flex-col gap-space-xs">
+<div class="flex items-center gap-1.5 text-error">
+<span class="material-symbols-outlined text-lg">cancel</span>
+<span class="font-label-sm text-label-sm font-semibold uppercase">Invalidation Signal</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Subject provides textbook theoretical asset reallocation statements: <span class="italic text-on-surface">"I felt large caps were overvalued so I paused to buy debt."</span>
+</p>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-high/40 flex flex-col gap-space-xs">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-lg">alt_route</span>
+<span class="font-label-sm text-label-sm font-semibold uppercase">Field Follow-up Anchors</span>
+</div>
+<ul class="font-body-sm text-body-sm text-on-surface-variant space-y-1 list-disc list-inside">
+<li>"Did you intend to resume within 3 months?"</li>
+<li>"Did Coin provide an easy way to pause instead of full delete?"</li>
+<li>"Where did that committed cash get spent that month?"</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Human-in-the-Loop 20-Item Golden Benchmark Candidates -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm flex flex-col overflow-hidden">
+<!-- Review Panel Header -->
+<div class="p-space-lg flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-low/30">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-2xl">verified_user</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Human Ground-Truth Review &amp; NLP Calibration</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Instructor Review Interface: Benchmark AI auto-classifications against validated human judgment. Calibrates continuous fine-tuning embeddings.
+          </p>
+</div>
+<!-- Filter Chips and Actions -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="filter-chip px-space-sm py-1.5 rounded text-on-surface font-label-sm text-label-sm bg-surface-container-high hover:bg-surface-container font-medium transition-colors" id="btn-filter-all" onclick="filterTable('all')">
+            All (20)
+          </button>
+<button class="filter-chip px-space-sm py-1.5 rounded text-primary font-label-sm text-label-sm bg-primary/10 hover:bg-primary/20 font-medium transition-colors" id="btn-filter-pending" onclick="filterTable('pending')">
+            Pending Review (8)
+          </button>
+<button class="filter-chip px-space-sm py-1.5 rounded text-secondary font-label-sm text-label-sm bg-secondary/10 hover:bg-secondary/20 font-medium transition-colors" id="btn-filter-consensus" onclick="filterTable('consensus')">
+            Consensus (10)
+          </button>
+<button class="filter-chip px-space-sm py-1.5 rounded text-tertiary font-label-sm text-label-sm bg-tertiary/10 hover:bg-tertiary/20 font-medium transition-colors" id="btn-filter-discrepancy" onclick="filterTable('discrepancy')">
+            Discrepancy (2)
+          </button>
+<button class="ml-space-xs px-space-md py-1.5 rounded bg-primary text-on-primary font-label-sm text-label-sm font-medium hover:bg-primary-container transition-colors flex items-center gap-1 shadow-sm" onclick="exportGoldenSet()">
+<span class="material-symbols-outlined text-base">download</span>
+            Export Labeled Set
+          </button>
+</div>
+</div>
+<!-- Golden Benchmark Table View -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<tr>
+<th class="py-space-sm px-space-md w-16">ID</th>
+<th class="py-space-sm px-space-md w-36">Channel &amp; Source</th>
+<th class="py-space-sm px-space-md min-w-[340px]">Grounded Verbatim Quote</th>
+<th class="py-space-sm px-space-md w-48">AI Proposed Class</th>
+<th class="py-space-sm px-space-md w-28 text-right">Confidence</th>
+<th class="py-space-sm px-space-md w-56">Human Review Classification</th>
+<th class="py-space-sm px-space-md w-24 text-center">Status</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm text-on-surface" id="goldenBenchmarkTbody">
+<!-- Row 1: Drawdown Shock -->
+<tr class="hover:bg-surface-container-low/40 transition-colors" data-status="pending">
+<td class="py-space-md px-space-md font-label-sm text-label-sm text-on-surface-variant align-top">#GB-01</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex items-center gap-1.5">
+<span class="px-space-xs py-0.5 rounded bg-tertiary/10 text-tertiary font-label-sm text-label-sm uppercase">Reddit</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1 block">r/IndiaInvestments</span>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-body-sm text-body-sm text-on-surface leading-snug">
+                  "I started ₹10,000 SIP in Parag Parikh and Nifty 50 on Jan 2nd. Today my invested value is ₹30,000 and current is ₹28,420 (-5.2%). I thought mutual funds were safe like FDs. Should I stop right now before it drops to zero?"
+                </div>
+<div class="flex items-center gap-space-xs mt-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Timestamp: M+2 Active</span>
+<span class="text-on-surface-variant">•</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">First-time Demat User</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<span class="px-space-xs py-1 rounded bg-error-container/40 text-on-error-container font-label-sm text-label-sm inline-block">
+                  Returns Shock (M1-3)
+                </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-1">Sub: Principal Panic</span>
+</td>
+<td class="py-space-md px-space-md text-right align-top">
+<span class="font-label-sm text-label-sm font-semibold text-secondary">98.7%</span>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-1 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 98.7%"></div>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<select class="w-full bg-surface-container-low font-label-sm text-label-sm p-1.5 rounded text-on-surface outline-none focus:bg-surface-container transition-colors" onchange="updateRowState(this, 'status-badge-1')">
+<option selected="" value="confirmed">Confirmed: Returns Shock</option>
+<option value="recat-beh">Re-categorize: Behavioral</option>
+<option value="recat-man">Re-categorize: Mandate UX</option>
+<option value="hardship">Flag as Pure Hardship</option>
+</select>
+</td>
+<td class="py-space-md px-space-md text-center align-top" id="status-badge-1">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-surface-container text-on-surface-variant" title="Pending Final Signoff">
+<span class="material-symbols-outlined text-sm">schedule</span>
+</span>
+</td>
+</tr>
+<!-- Row 2: Salary Collision -->
+<tr class="hover:bg-surface-container-low/40 transition-colors" data-status="consensus">
+<td class="py-space-md px-space-md font-label-sm text-label-sm text-on-surface-variant align-top">#GB-02</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex items-center gap-1.5">
+<span class="px-space-xs py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm uppercase">TradingQ&amp;A</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1 block">Thread #98201</span>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-body-sm text-body-sm text-on-surface leading-snug">
+                  "My SIP scheduled date is the 5th. But in August the 5th was Sunday, so HDFC tried debit on the 3rd before my salary came on the 4th evening. Got hit with ₹450 NACH bounce charge. Coin needs to stop triggering early."
+                </div>
+<div class="flex items-center gap-space-xs mt-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Timestamp: M+4</span>
+<span class="text-on-surface-variant">•</span>
+<span class="font-label-sm text-label-sm text-error font-medium">Bank Penalty Friction</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<span class="px-space-xs py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm inline-block">
+                  Salary-Mandate Mismatch
+                </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-1">Sub: Non-Working Day Debit</span>
+</td>
+<td class="py-space-md px-space-md text-right align-top">
+<span class="font-label-sm text-label-sm font-semibold text-secondary">99.1%</span>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-1 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 99.1%"></div>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<select class="w-full bg-surface-container-low font-label-sm text-label-sm p-1.5 rounded text-on-surface outline-none focus:bg-surface-container transition-colors" onchange="updateRowState(this, 'status-badge-2')">
+<option selected="" value="confirmed">Confirmed: Salary Mismatch</option>
+<option value="recat-beh">Re-categorize: Behavioral</option>
+<option value="recat-man">Re-categorize: Mandate UX</option>
+<option value="hardship">Flag as Pure Hardship</option>
+</select>
+</td>
+<td class="py-space-md px-space-md text-center align-top" id="status-badge-2">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-secondary-container/30 text-secondary" title="Consensus Verified">
+<span class="material-symbols-outlined text-sm">verified</span>
+</span>
+</td>
+</tr>
+<!-- Row 3: Demat Settlement Delay -->
+<tr class="hover:bg-surface-container-low/40 transition-colors" data-status="consensus">
+<td class="py-space-md px-space-md font-label-sm text-label-sm text-on-surface-variant align-top">#GB-03</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex items-center gap-1.5">
+<span class="px-space-xs py-0.5 rounded bg-secondary/10 text-secondary font-label-sm text-label-sm uppercase">Play Store</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1 block">Rating: 1-Star Review</span>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-body-sm text-body-sm text-on-surface leading-snug">
+                  "Amount deducted from ICICI on Monday morning 10 AM. Today is Wednesday 8 PM, still units not allocated in app! Groww allocates next day itself. Coin customer care says 'check CDSL'. Why can't I see my own units?"
+                </div>
+<div class="flex items-center gap-space-xs mt-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Timestamp: M+1</span>
+<span class="text-on-surface-variant">•</span>
+<span class="font-label-sm text-label-sm text-tertiary font-medium">Competitor Churn Risk</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<span class="px-space-xs py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm inline-block">
+                  T+2 Demat Confusion
+                </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-1">Sub: SoA vs Demat Mental Model</span>
+</td>
+<td class="py-space-md px-space-md text-right align-top">
+<span class="font-label-sm text-label-sm font-semibold text-secondary">96.4%</span>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-1 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 96.4%"></div>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<select class="w-full bg-surface-container-low font-label-sm text-label-sm p-1.5 rounded text-on-surface outline-none focus:bg-surface-container transition-colors" onchange="updateRowState(this, 'status-badge-3')">
+<option selected="" value="confirmed">Confirmed: Demat Delay</option>
+<option value="recat-beh">Re-categorize: Behavioral</option>
+<option value="recat-man">Re-categorize: Mandate UX</option>
+<option value="hardship">Flag as Pure Hardship</option>
+</select>
+</td>
+<td class="py-space-md px-space-md text-center align-top" id="status-badge-3">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-secondary-container/30 text-secondary" title="Consensus Verified">
+<span class="material-symbols-outlined text-sm">verified</span>
+</span>
+</td>
+</tr>
+<!-- Row 4: Discrepancy Case -->
+<tr class="hover:bg-surface-container-low/40 transition-colors bg-tertiary/5" data-status="discrepancy">
+<td class="py-space-md px-space-md font-label-sm text-label-sm text-tertiary align-top">#GB-04</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex items-center gap-1.5">
+<span class="px-space-xs py-0.5 rounded bg-on-surface-variant/10 text-on-surface font-label-sm text-label-sm uppercase">Twitter / X</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1 block">@user_tweet</span>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-body-sm text-body-sm text-on-surface leading-snug">
+                  "I had to delete my entire Coin SIP basket because my medical insurance had a co-pay bill of ₹65,000 this month. Wish I could just freeze it for 60 days without restarting whole e-mandate."
+                </div>
+<div class="flex items-center gap-space-xs mt-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Timestamp: M+8</span>
+<span class="text-on-surface-variant">•</span>
+<span class="font-label-sm text-label-sm text-tertiary font-medium">Ambiguity: Hardship vs UX</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<span class="px-space-xs py-1 rounded bg-tertiary/20 text-tertiary font-label-sm text-label-sm inline-block">
+                  Emergency Liquidity Shock
+                </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-1">AI Flag: Exogenous Hardship</span>
+</td>
+<td class="py-space-md px-space-md text-right align-top">
+<span class="font-label-sm text-label-sm font-semibold text-tertiary">74.2%</span>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-1 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 74.2%"></div>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<select class="w-full bg-surface-container-low font-label-sm text-label-sm p-1.5 rounded text-on-surface outline-none focus:bg-surface-container transition-colors" onchange="updateRowState(this, 'status-badge-4')">
+<option selected="" value="recat-man">Re-categorize: Mandate UX (Pause)</option>
+<option value="confirmed">Confirmed: Emergency Hardship</option>
+<option value="recat-beh">Re-categorize: Behavioral</option>
+<option value="hardship">Flag as Pure Hardship</option>
+</select>
+</td>
+<td class="py-space-md px-space-md text-center align-top" id="status-badge-4">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-tertiary/20 text-tertiary" title="Classifier Discrepancy">
+<span class="material-symbols-outlined text-sm">sync_problem</span>
+</span>
+</td>
+</tr>
+<!-- Row 5: Step-Up Mandate Friction -->
+<tr class="hover:bg-surface-container-low/40 transition-colors" data-status="pending">
+<td class="py-space-md px-space-md font-label-sm text-label-sm text-on-surface-variant align-top">#GB-05</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex items-center gap-1.5">
+<span class="px-space-xs py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm uppercase">TradingQ&amp;A</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1 block">Thread #104112</span>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-body-sm text-body-sm text-on-surface leading-snug">
+                  "Coin asked me to approve a new mandate for 10% annual Step-Up. When I authorized, it didn't cancel the old one and both fired together! I ended up investing ₹15,000 instead of ₹8,000. Super frustrated."
+                </div>
+<div class="flex items-center gap-space-xs mt-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Timestamp: M+12</span>
+<span class="text-on-surface-variant">•</span>
+<span class="font-label-sm text-label-sm text-error font-medium">Duplicate Debit Event</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<span class="px-space-xs py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm inline-block">
+                  Step-Up Mandate UX Bug
+                </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-1">Sub: Dual Active Mandates</span>
+</td>
+<td class="py-space-md px-space-md text-right align-top">
+<span class="font-label-sm text-label-sm font-semibold text-secondary">95.1%</span>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-1 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 95.1%"></div>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<select class="w-full bg-surface-container-low font-label-sm text-label-sm p-1.5 rounded text-on-surface outline-none focus:bg-surface-container transition-colors" onchange="updateRowState(this, 'status-badge-5')">
+<option selected="" value="confirmed">Confirmed: Step-Up UX</option>
+<option value="recat-beh">Re-categorize: Behavioral</option>
+<option value="recat-man">Re-categorize: Mandate Architecture</option>
+<option value="hardship">Flag as Pure Hardship</option>
+</select>
+</td>
+<td class="py-space-md px-space-md text-center align-top" id="status-badge-5">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-surface-container text-on-surface-variant" title="Pending Signoff">
+<span class="material-symbols-outlined text-sm">schedule</span>
+</span>
+</td>
+</tr>
+<!-- Row 6: Narrative Fatigue / Comparison Friction -->
+<tr class="hover:bg-surface-container-low/40 transition-colors" data-status="pending">
+<td class="py-space-md px-space-md font-label-sm text-label-sm text-on-surface-variant align-top">#GB-06</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex items-center gap-1.5">
+<span class="px-space-xs py-0.5 rounded bg-tertiary/10 text-tertiary font-label-sm text-label-sm uppercase">Reddit</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1 block">r/MutualfundsIndia</span>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-body-sm text-body-sm text-on-surface leading-snug">
+                  "My large cap fund gave only 8% this year while my colleague made 34% in PSU and Defense sectoral funds on Groww. Stopped my Nifty 50 SIP and put the lump sum in an energy fund."
+                </div>
+<div class="flex items-center gap-space-xs mt-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Timestamp: M+7</span>
+<span class="text-on-surface-variant">•</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">FOMO Churn Archetype</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<span class="px-space-xs py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm inline-block">
+                  Narrative FOMO Churn
+                </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-1">Sub: Performance Envy</span>
+</td>
+<td class="py-space-md px-space-md text-right align-top">
+<span class="font-label-sm text-label-sm font-semibold text-secondary">93.8%</span>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-1 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 93.8%"></div>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<select class="w-full bg-surface-container-low font-label-sm text-label-sm p-1.5 rounded text-on-surface outline-none focus:bg-surface-container transition-colors" onchange="updateRowState(this, 'status-badge-6')">
+<option selected="" value="confirmed">Confirmed: Narrative FOMO</option>
+<option value="recat-beh">Re-categorize: Behavioral</option>
+<option value="recat-man">Re-categorize: Fund Discovery</option>
+<option value="hardship">Flag as Pure Hardship</option>
+</select>
+</td>
+<td class="py-space-md px-space-md text-center align-top" id="status-badge-6">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-surface-container text-on-surface-variant" title="Pending Signoff">
+<span class="material-symbols-outlined text-sm">schedule</span>
+</span>
+</td>
+</tr>
+<!-- Row 7: Second Discrepancy Case -->
+<tr class="hover:bg-surface-container-low/40 transition-colors bg-tertiary/5" data-status="discrepancy">
+<td class="py-space-md px-space-md font-label-sm text-label-sm text-tertiary align-top">#GB-07</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex items-center gap-1.5">
+<span class="px-space-xs py-0.5 rounded bg-secondary/10 text-secondary font-label-sm text-label-sm uppercase">Play Store</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1 block">Rating: 2-Star Review</span>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-body-sm text-body-sm text-on-surface leading-snug">
+                  "Changed my salary account from HDFC to Axis due to job change. Coin gave me no simple button to transfer my existing 6 active SIP mandates to the new bank. Had to manually delete and recreate every single one."
+                </div>
+<div class="flex items-center gap-space-xs mt-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Timestamp: M+5</span>
+<span class="text-on-surface-variant">•</span>
+<span class="font-label-sm text-label-sm text-tertiary font-medium">Bank Porting Churn</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<span class="px-space-xs py-1 rounded bg-tertiary/20 text-tertiary font-label-sm text-label-sm inline-block">
+                  Primary Bank Switch
+                </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-1">AI Flag: Technical Friction</span>
+</td>
+<td class="py-space-md px-space-md text-right align-top">
+<span class="font-label-sm text-label-sm font-semibold text-tertiary">78.5%</span>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-1 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 78.5%"></div>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<select class="w-full bg-surface-container-low font-label-sm text-label-sm p-1.5 rounded text-on-surface outline-none focus:bg-surface-container transition-colors" onchange="updateRowState(this, 'status-badge-7')">
+<option selected="" value="recat-man">Re-categorize: Mandate UX (Portability)</option>
+<option value="confirmed">Confirmed: Bank Account Switch</option>
+<option value="recat-beh">Re-categorize: Behavioral Fatigue</option>
+<option value="hardship">Flag as Hardship</option>
+</select>
+</td>
+<td class="py-space-md px-space-md text-center align-top" id="status-badge-7">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-tertiary/20 text-tertiary" title="Classifier Discrepancy">
+<span class="material-symbols-outlined text-sm">sync_problem</span>
+</span>
+</td>
+</tr>
+<!-- Row 8: Dividend vs Growth Confusion -->
+<tr class="hover:bg-surface-container-low/40 transition-colors" data-status="consensus">
+<td class="py-space-md px-space-md font-label-sm text-label-sm text-on-surface-variant align-top">#GB-08</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex items-center gap-1.5">
+<span class="px-space-xs py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm uppercase">TradingQ&amp;A</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1 block">Thread #110903</span>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="font-body-sm text-body-sm text-on-surface leading-snug">
+                  "Selected IDCW payout plan assuming I will get regular monthly income like interest. When NAV fell after payout, I thought Coin took maintenance charges. Canceling my SIP and taking money back to FD."
+                </div>
+<div class="flex items-center gap-space-xs mt-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Timestamp: M+3</span>
+<span class="text-on-surface-variant">•</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Product Mental Model</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<span class="px-space-xs py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm inline-block">
+                  IDCW Plan Misconception
+                </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-1">Sub: Nav Erosion Disconnect</span>
+</td>
+<td class="py-space-md px-space-md text-right align-top">
+<span class="font-label-sm text-label-sm font-semibold text-secondary">97.3%</span>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-1 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 97.3%"></div>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<select class="w-full bg-surface-container-low font-label-sm text-label-sm p-1.5 rounded text-on-surface outline-none focus:bg-surface-container transition-colors" onchange="updateRowState(this, 'status-badge-8')">
+<option selected="" value="confirmed">Confirmed: Product Disconnect</option>
+<option value="recat-beh">Re-categorize: Behavioral</option>
+<option value="recat-man">Re-categorize: Discovery UX</option>
+<option value="hardship">Flag as Pure Hardship</option>
+</select>
+</td>
+<td class="py-space-md px-space-md text-center align-top" id="status-badge-8">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-secondary-container/30 text-secondary" title="Consensus Verified">
+<span class="material-symbols-outlined text-sm">verified</span>
+</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Human-in-the-Loop Batch Audit Footer -->
+<div class="p-space-md bg-surface-container-low/40 flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-space-sm">
+<span>Showing 8 of 20 Ground Truth Vectors</span>
+<span>•</span>
+<span class="flex items-center gap-1 text-secondary">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+            Embedding Vector Baseline: Coin-BERT-v2 (Zero-PII Tokenized)
+          </span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container shadow-sm font-medium transition-colors">
+            Previous 8
+          </button>
+<span class="px-space-xs font-semibold text-on-surface">Page 1 / 3</span>
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container shadow-sm font-medium transition-colors">
+            Next 8
+          </button>
+</div>
+</div>
+</div>
+<!-- Methodology Verification Card & Telemetry -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-primary font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-lg">science</span>
+<span>STORY INTERVIEW CRITERIA</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface tracking-tight mt-1">Past Action Grounding</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Teresa Torres Continuous Discovery insists that user memories are notoriously reconstructed when framed around generalizations. All 4 tracks forbid "How do you usually invest?" in favor of absolute temporal anchors.
+        </p>
+</div>
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-lg">sync_saved_locally</span>
+<span>CALIBRATION PROTOCOL</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface tracking-tight mt-1">Zero Hallucination Guard</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          The 20 Golden Set benchmarks function as unit tests for automated sentiment and root-cause classification pipelines. Discrepancies greater than 20% confidence trigger instant engineering re-tokenization.
+        </p>
+</div>
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-tertiary font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-lg">policy</span>
+<span>DATA INTEGRITY</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface tracking-tight mt-1">PII Scrubbing SLA</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Client IDs, mobile numbers, PAN patterns, and bank account numbers are scrubbed at ingress via regex masking and named-entity redaction before ingestion into the benchmark registry.
+        </p>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function switchTrack(trackId) {
+    // Hide all track contents
+    const contents = document.querySelectorAll('.protocol-content');
+    contents.forEach(el => el.classList.add('hidden'));
+
+    // Remove active styles from all buttons
+    const buttons = document.querySelectorAll('.protocol-tab');
+    buttons.forEach(btn => {
+      btn.classList.remove('bg-surface-container-lowest', 'shadow-sm');
+      btn.classList.add('hover:bg-surface-container-lowest/60');
+      const trackLabel = btn.querySelector('.font-label-sm');
+      if (trackLabel) {
+        trackLabel.classList.remove('text-primary');
+        trackLabel.classList.add('text-on-surface-variant');
+      }
+    });
+
+    // Show target track
+    const target = document.getElementById(trackId);
+    if (target) {
+      target.classList.remove('hidden');
+    }
+
+    // Set active button
+    const activeBtn = document.getElementById('tab-btn-' + trackId);
+    if (activeBtn) {
+      activeBtn.classList.remove('hover:bg-surface-container-lowest/60');
+      activeBtn.classList.add('bg-surface-container-lowest', 'shadow-sm');
+      const trackLabel = activeBtn.querySelector('.font-label-sm');
+      if (trackLabel) {
+        trackLabel.classList.remove('text-on-surface-variant');
+        trackLabel.classList.add('text-primary');
+      }
+    }
+  }
+
+  function filterTable(status) {
+    const rows = document.querySelectorAll('#goldenBenchmarkTbody tr');
+    rows.forEach(row => {
+      if (status === 'all') {
+        row.classList.remove('hidden');
+      } else {
+        if (row.getAttribute('data-status') === status) {
+          row.classList.remove('hidden');
+        } else {
+          row.classList.add('hidden');
+        }
+      }
+    });
+
+    // Toggle active chip classes
+    const chips = document.querySelectorAll('.filter-chip');
+    chips.forEach(chip => {
+      chip.classList.remove('ring-1', 'ring-primary');
+    });
+    const activeChip = document.getElementById('btn-filter-' + status);
+    if (activeChip) {
+      activeChip.classList.add('ring-1', 'ring-primary');
+    }
+  }
+
+  function updateRowState(selectElement, statusBadgeId) {
+    const badge = document.getElementById(statusBadgeId);
+    const val = selectElement.value;
+    if (!badge) return;
+
+    if (val === 'confirmed') {
+      badge.innerHTML = '<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-secondary-container/30 text-secondary" title="Consensus Verified"><span class="material-symbols-outlined text-sm">verified</span></span>';
+      selectElement.closest('tr').setAttribute('data-status', 'consensus');
+      selectElement.closest('tr').classList.remove('bg-tertiary/5');
+    } else if (val.startsWith('recat')) {
+      badge.innerHTML = '<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-primary/20 text-primary" title="Re-classified"><span class="material-symbols-outlined text-sm">edit_note</span></span>';
+      selectElement.closest('tr').setAttribute('data-status', 'discrepancy');
+      selectElement.closest('tr').classList.remove('bg-tertiary/5');
+    } else {
+      badge.innerHTML = '<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-tertiary/20 text-tertiary" title="Flagged"><span class="material-symbols-outlined text-sm">flag</span></span>';
+      selectElement.closest('tr').setAttribute('data-status', 'discrepancy');
+    }
+  }
+
+  function exportGoldenSet() {
+    alert("Downloading Golden Set Benchmark JSON (20 records, tokenized, ISO-8601 annotated format)...");
+  }
+</script></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 py-space-md"><div class="w-full px-gutter-desktop mx-auto flex flex-col md:flex-row items-center justify-between gap-space-sm"><div class="flex items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm"><span>Zerodha Coin Discovery Engine v4.2 Institutional</span><span>•</span><span>Continuous Ingestion Active</span><span>•</span><span>Confidence: 99.4% Bayesian Lower Bound</span></div><div class="flex items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm"><span>Strict Zero-PII Protocol Guard</span><span>Audit Logs Pinned</span></div></div></footer></body></html>

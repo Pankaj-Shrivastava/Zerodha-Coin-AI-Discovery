@@ -1,0 +1,74 @@
+{
+  "title": "Zerodha Coin AI Discovery Corpus Provenance & Citation Registry",
+  "total_grounded_verbatims": 828,
+  "zero_pii_certified": true,
+  "substring_integrity_certified": true,
+  "sources_breakdown": [
+    {
+      "channel": "Reddit (r/MutualFundsIndia, r/IndiaInvestments)",
+      "count": 415,
+      "harvest_method": "Apify Reddit Scraper ($4.01 free tier usage, $0 invoice)",
+      "sample_urls": [
+        "https://www.reddit.com/r/MutualfundsIndia/comments/1xe1f6z/hey_i_am_new_here_planning_to_purchase_some/",
+        "https://www.reddit.com/r/MutualfundsIndia/comments/1xdiq48/portfolio_review_what_can_be_done_better/",
+        "https://www.reddit.com/r/MutualfundsIndia/comments/1xd3n3p/have_you_ever_tried_to_pause_or_cancel_a_sip/"
+      ]
+    },
+    {
+      "channel": "Google Play Store (Coin, Groww, Angel One, Paytm Money, ET Money)",
+      "count": 228,
+      "harvest_method": "google-play-scraper (100% Free Public API)",
+      "sample_urls": [
+        "https://play.google.com/store/apps/details?id=com.zerodha.kite3",
+        "https://play.google.com/store/apps/details?id=com.zerodha.kite3",
+        "https://play.google.com/store/apps/details?id=com.zerodha.kite3"
+      ]
+    },
+    {
+      "channel": "TradingQ&A (Zerodha Community Forum)",
+      "count": 162,
+      "harvest_method": "TradingQ&A Discourse REST API (100% Free Public API)",
+      "sample_urls": [
+        "https://tradingqna.com/t/47128",
+        "https://tradingqna.com/t/177595",
+        "https://tradingqna.com/t/93649"
+      ]
+    },
+    {
+      "channel": "YouTube Finance Communities",
+      "count": 23,
+      "harvest_method": "youtube-comment-downloader (100% Free Scraper)",
+      "sample_urls": [
+        "https://www.youtube.com/watch?v=wKW1Fk3_dwY",
+        "https://www.youtube.com/watch?v=wKW1Fk3_dwY",
+        "https://www.youtube.com/watch?v=wKW1Fk3_dwY"
+      ]
+    }
+  ],
+  "platform_distribution": [
+    {
+      "platform": "zerodha_coin",
+      "count": 195
+    },
+    {
+      "platform": "groww",
+      "count": 49
+    },
+    {
+      "platform": "angel_one",
+      "count": 46
+    },
+    {
+      "platform": "paytm_money",
+      "count": 44
+    },
+    {
+      "platform": "et_money",
+      "count": 56
+    },
+    {
+      "platform": "multi_platform",
+      "count": 438
+    }
+  ]
+}

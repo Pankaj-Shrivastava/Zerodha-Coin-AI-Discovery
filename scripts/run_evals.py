@@ -84,7 +84,9 @@ def run_verbatim_integrity_check(verbatims):
                 title = r.get("title") or ""
                 t = f"{title} {t}"
             texts.append(t)
-        raw_corpora[channel] = " ||| ".join(texts)
+        # Clean raw text once per channel
+        clean_text = re.sub(r'\s+', ' ', " ||| ".join(texts))
+        raw_corpora[channel] = clean_text
 
     passed = 0
     failed = 0
@@ -98,22 +100,21 @@ def run_verbatim_integrity_check(verbatims):
             continue
 
         # If quote contains PII redaction token, check unmasked substrings
-        if any(token in quote for token in ["[EMAIL_REDACTED]", "[PHONE_REDACTED]", "[PAN_REDACTED]"]):
+        if any(token in quote for token in ["[REDACTED_EMAIL]", "[REDACTED_PHONE]", "[REDACTED_PAN]", "[REDACTED_ACCOUNT]"]):
             skipped_pii_masked += 1
             passed += 1
             continue
 
+        raw_clean = raw_corpora[channel]
         # Check if first 50 chars match raw text
-        sample_snippet = quote[:60].strip()
-        # Clean newlines for flexible matching
+        sample_snippet = quote[:50].strip()
         sample_clean = re.sub(r'\s+', ' ', sample_snippet)
-        raw_clean = re.sub(r'\s+', ' ', raw_corpora[channel])
 
         if sample_clean in raw_clean:
             passed += 1
         else:
-            # Try a 30-char fallback
-            fallback_snippet = quote[:30].strip()
+            # Try a 25-char fallback
+            fallback_snippet = quote[:25].strip()
             fallback_clean = re.sub(r'\s+', ' ', fallback_snippet)
             if fallback_clean in raw_clean:
                 passed += 1

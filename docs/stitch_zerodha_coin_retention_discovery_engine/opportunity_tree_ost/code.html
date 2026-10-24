@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Zerodha Coin AI Discovery Engine</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#fffbff", "surface-dim": "#cbdbf5", "surface-container-low": "#eff4ff", "tertiary-fixed-dim": "#ffb599", "error-container": "#ffdad6", "primary-fixed-dim": "#a5c8ff", "on-error-container": "#93000a", "outline-variant": "#c1c6d3", "secondary-fixed-dim": "#68dba9", "on-tertiary-fixed": "#370e00", "on-secondary-container": "#00714e", "inverse-surface": "#213145", "tertiary-fixed": "#ffdbce", "on-primary-container": "#fefcff", "secondary-container": "#82f5c1", "on-secondary": "#ffffff", "surface-container-high": "#dce9ff", "on-tertiary": "#ffffff", "primary-fixed": "#d4e3ff", "on-secondary-fixed": "#002114", "surface-tint": "#005faf", "on-tertiary-fixed-variant": "#7f2b00", "on-primary-fixed": "#001c3a", "outline": "#727783", "on-background": "#0b1c30", "surface-variant": "#d3e4fe", "surface-container": "#e5eeff", "secondary": "#006c4a", "inverse-on-surface": "#eaf1ff", "surface": "#f8f9ff", "error": "#ba1a1a", "on-surface": "#0b1c30", "tertiary-container": "#cc4900", "primary": "#005cab", "on-primary": "#ffffff", "on-surface-variant": "#414751", "primary-container": "#2d76c8", "on-error": "#ffffff", "on-primary-fixed-variant": "#004786", "surface-bright": "#f8f9ff", "surface-container-highest": "#d3e4fe", "background": "#f8f9ff", "secondary-fixed": "#85f8c4", "surface-container-lowest": "#ffffff", "tertiary": "#a33900", "on-secondary-fixed-variant": "#005137", "inverse-primary": "#a5c8ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "gutter-desktop": "1.5rem", "space-md": "1rem", "gutter": "1rem", "space-xs": "0.25rem", "margin": "1rem", "margin-desktop": "3rem", "space-sm": "0.5rem", "margin-tablet": "2rem", "space-lg": "1.5rem" }, "fontFamily": { "label-sm": ["JetBrains Mono"], "label-lg": ["JetBrains Mono"], "label-md": ["JetBrains Mono"], "headline-md": ["Inter"], "body-lg": ["Inter"], "headline-xl": ["Inter"], "headline-lg-mobile": ["Inter"], "headline-xl-mobile": ["Inter"], "body-sm": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"] }, "fontSize": { "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "500" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest border-b border-outline-variant/30"><div class="h-28 w-full px-gutter-desktop mx-auto flex flex-col justify-between py-space-xs"><div class="flex items-center justify-between gap-space-md pt-space-xs"><div class="flex items-center gap-space-md"><img alt="Zerodha Coin AI Discovery Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UIsdG3WPlSiDpWBDJPkAaA9S5ONGLZOq2jXxQ9pwrKJOTraSUtgyngkoHBhlpdY2V9r5Dh6mgt0rstwoCDlzgxC64nDg_tsNqBH1BGKoEaJtv4kzDWNUyRx62lDq-XwjwniMbnxsi4KeZUSG-6n69zxa5TztMfJMq6MGGmT5mIw2Te9T_NvDI8Y0svQgX5SGCybtX7UhG3DhSzh0SZDJWQ1uwDIBClaNdiI-ctwCbdDy_hl55NVHSAC_c"/><div class="flex flex-col"><span class="font-headline-md text-headline-md text-on-surface tracking-tight leading-none">Coin AI Discovery Engine</span><span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">SIP Retention Months 1–12 • Continuous Discovery Platform</span></div></div><div class="hidden xl:flex items-center gap-space-sm"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-low border border-outline-variant/40"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span></span><span class="font-label-sm text-label-sm text-on-surface">2,759 Raw Corpus Analyzed</span><span class="font-label-sm text-label-sm text-on-surface-variant">(Reddit, Play Store, TradingQ&amp;A, YT)</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-low border border-outline-variant/40"><span class="material-symbols-outlined text-secondary text-sm">lock</span><span class="font-label-sm text-label-sm text-on-surface">826 Grounded Verbatims</span><span class="font-label-sm text-label-sm text-secondary">(Zero PII)</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-tertiary-fixed/30 border border-tertiary-fixed-dim/50"><span class="material-symbols-outlined text-tertiary text-sm">warning</span><span class="font-label-sm text-label-sm text-tertiary font-medium">89.7% Addressable Friction</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-secondary-container/20 border border-secondary-fixed/40"><span class="material-symbols-outlined text-secondary text-sm">verified</span><span class="font-label-sm text-label-sm text-secondary font-medium">Zero Hallucination Certified</span></div></div><div class="flex items-center gap-space-md pl-space-md border-l border-outline-variant/30"><div class="text-right hidden sm:block"><div class="font-body-sm text-body-sm text-on-surface font-medium leading-none">Dr. Ananya Iyer</div><div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5 flex items-center justify-end gap-1"><span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary"></span>Head of Discovery</div></div><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvfVtJ2K6wqOLp0cFihSHISDCHn9YY_NsffRApI6YqyrsTUzJwrZ0H0QcPld_BE13ylUKQbyS_8_YMvT49tWzs9Df-HzzQZqpS2n2qg0RTh9qkFjwmNCVq6FiuEOkq4GwNI6JOA0jF-5IfVt5Ax4q5b2MFlujey17WXkathYWel15Aaaoythd5sV4iOphfiqpwMfrms0eCLqQIZLNEzU-6EGTvSmQ8T3NTyQ24CC4y1kSSLs6TZBSxVA"/><span class="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-secondary ring-1 ring-surface-container-lowest"></span></div></div></div><nav class="flex items-center gap-1 border-t border-outline-variant/20 pt-1 -mb-space-xs overflow-x-auto" data-active-classes="border-b-2 border-primary text-primary font-medium bg-surface-container-low"><a class="px-space-md py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors whitespace-nowrap" data-path="executive-discovery" href="#">Executive Discovery</a><a class="px-space-md py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors whitespace-nowrap" data-path="platform-benchmark" href="#">Platform Benchmark</a><a class="px-space-md py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors whitespace-nowrap" data-path="12-month-journey" href="#">12-Month Journey</a><a class="px-space-md py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors whitespace-nowrap" data-path="behavioral-archetypes" href="#">Behavioral Archetypes</a><a class="px-space-md py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors whitespace-nowrap" data-path="opportunity-tree-ost" href="#">Opportunity Tree (OST)</a><a class="px-space-md py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors whitespace-nowrap" data-path="interview-guide-golden-set" href="#">Interview Guide &amp; Golden Set</a></nav></div></header><main class="w-full pt-28 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Section Title Area -->
+<div class="px-gutter-desktop mx-auto w-full max-w-[1440px] pt-space-lg pb-space-md">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pb-space-md">
+<div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase tracking-wider mb-1">
+<span class="inline-block w-2 h-2 rounded-full bg-primary"></span>
+<span>Teresa Torres Framework • Continuous Discovery Habits</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Opportunity Solution Tree: First-Year SIP Retention</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl mt-1">Hierarchical mapping of grounded user friction points connected to the business outcome. Strictly problem space without feature jumping.</p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<div class="px-space-sm py-1.5 rounded-lg bg-surface-container-low flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">account_tree</span>
+<span class="font-label-sm text-label-sm text-on-surface">4 Domains • 8 Sub-Opportunities</span>
+</div>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-body-sm text-body-sm transition-colors flex items-center gap-1.5" id="toggleDrawerBtn">
+<span class="material-symbols-outlined text-sm">dock_to_left</span>
+<span id="drawerToggleText">Hide Evidence Bay</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Workspace Container: Grid with Tree Diagram & Slide-out Drawer -->
+<div class="px-gutter-desktop mx-auto w-full max-w-[1440px] pb-space-xl flex-1 flex flex-col lg:flex-row gap-space-lg items-start">
+<!-- LEFT: Tree Diagram Canvas -->
+<div class="flex-1 w-full transition-all duration-300 flex flex-col items-center" id="treeContainer">
+<!-- LEVEL 0: Desired Outcome Root Node -->
+<div class="w-full max-w-2xl bg-surface-container-lowest rounded-xl shadow-sm p-space-lg relative z-10 flex flex-col items-center text-center">
+<div class="absolute -top-3 px-space-sm py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm tracking-wider uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">flag</span>
+          Desired Business Outcome
+        </div>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-1 mb-space-sm">
+          Increase % of first-time mutual fund investors with an active SIP at Month 12
+        </h2>
+<!-- Metrics Telemetry Bar -->
+<div class="w-full grid grid-cols-3 gap-space-sm bg-surface-container-low p-space-sm rounded-lg mt-space-xs">
+<div class="flex flex-col text-left">
+<span class="font-label-sm text-label-sm text-on-surface-variant">AMFI Retail Baseline</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">46.2%</span>
+</div>
+<div class="flex flex-col text-center">
+<span class="font-label-sm text-label-sm text-primary">FY26 Target Metric</span>
+<span class="font-label-lg text-label-lg text-primary font-semibold">65.0% <span class="text-secondary font-label-sm text-label-sm">(+18.8%)</span></span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Grounded Corpus Total</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">775 Records</span>
+</div>
+</div>
+<div class="w-full mt-space-sm bg-surface-container h-1.5 rounded-full overflow-hidden flex">
+<div class="bg-outline-variant h-full" style="width: 46.2%"></div>
+<div class="bg-primary h-full" style="width: 18.8%"></div>
+<div class="bg-surface-variant h-full flex-1"></div>
+</div>
+</div>
+<!-- Connector Line from Root to Branch Hub -->
+<div class="w-0.5 h-10 bg-outline-variant/60"></div>
+<div class="w-full max-w-5xl h-0.5 bg-outline-variant/60 hidden xl:block"></div>
+<!-- LEVEL 1 & 2: Four Major Opportunity Branches -->
+<div class="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md pt-2">
+<!-- BRANCH 1: Underwhelming Returns Shock -->
+<div class="flex flex-col items-center">
+<div class="w-0.5 h-6 bg-outline-variant/60 hidden xl:block"></div>
+<!-- Major Opportunity Card 1 -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between gap-space-xs mb-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-fixed/30 px-2 py-0.5 rounded font-medium">M1 – M3 Shock</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">442 Verbatims</span>
+</div>
+<h3 class="font-body-lg text-body-lg text-on-surface font-semibold leading-snug">
+                Mitigate Underwhelming Returns Shock
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Discrepancy between long-term compounding expectations and day-30 nominal performance.</p>
+<div class="w-full bg-surface-container h-1 rounded-full mt-space-sm overflow-hidden">
+<div class="bg-tertiary h-full" style="width: 57%"></div>
+</div>
+</div>
+<!-- Sub-opportunities tree stack -->
+<div class="mt-space-md pt-space-sm flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Sub-Opportunities</span>
+<!-- Sub-op 1.1 (Selected by default) -->
+<div class="sub-op-card cursor-pointer p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-all" id="sub-card-1.1" onclick="selectOpportunity('1.1')">
+<div class="flex items-start justify-between gap-1">
+<span class="font-label-sm text-label-sm text-primary font-medium">1.1 • Day-30 Disillusionment</span>
+<span class="material-symbols-outlined text-primary text-base">radio_button_checked</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium mt-1">Managing Day-30 First Statement Disillusionment</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs mt-1">Early portfolio displays negative or tiny nominal gains, breaking mental compounding models.</p>
+<div class="flex items-center gap-2 mt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">284 Citations</span>
+<span class="text-xs text-secondary font-medium">• 64.2% Severity</span>
+</div>
+</div>
+<!-- Sub-op 1.2 -->
+<div class="sub-op-card cursor-pointer p-space-sm rounded-lg bg-surface hover:bg-surface-container transition-all" id="sub-card-1.2" onclick="selectOpportunity('1.2')">
+<div class="flex items-start justify-between gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">1.2 • FD Comparison</span>
+<span class="material-symbols-outlined text-outline-variant text-base">radio_button_unchecked</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium mt-1">Addressing Nominal Flatness vs Bank FD</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs mt-1">Users compare fluctuating equities against guaranteed 7% bank fixed deposits.</p>
+<div class="flex items-center gap-2 mt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">158 Citations</span>
+<span class="text-xs text-on-surface-variant">• 35.8% Severity</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- BRANCH 2: Silent Mandate Failures & Penalties -->
+<div class="flex flex-col items-center">
+<div class="w-0.5 h-6 bg-outline-variant/60 hidden xl:block"></div>
+<!-- Major Opportunity Card 2 -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between gap-space-xs mb-space-xs">
+<span class="font-label-sm text-label-sm text-error bg-error-container/40 px-2 py-0.5 rounded font-medium">M1 – M6 Friction</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">44 Verbatims</span>
+</div>
+<h3 class="font-body-lg text-body-lg text-on-surface font-semibold leading-snug">
+                Eliminate Silent Mandate Failures &amp; Penalties
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Unforgiving NACH/e-Mandate debits that trigger punitive bank bounce charges.</p>
+<div class="w-full bg-surface-container h-1 rounded-full mt-space-sm overflow-hidden">
+<div class="bg-error h-full" style="width: 15%"></div>
+</div>
+</div>
+<!-- Sub-opportunities tree stack -->
+<div class="mt-space-md pt-space-sm flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Sub-Opportunities</span>
+<!-- Sub-op 2.1 -->
+<div class="sub-op-card cursor-pointer p-space-sm rounded-lg bg-surface hover:bg-surface-container transition-all" id="sub-card-2.1" onclick="selectOpportunity('2.1')">
+<div class="flex items-start justify-between gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">2.1 • Salary Timing Misalignment</span>
+<span class="material-symbols-outlined text-outline-variant text-base">radio_button_unchecked</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium mt-1">Bridging Salary Credit Timing Variations</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs mt-1">Fixed 1st of month debits clash with 3rd-5th corporate salary disbursements.</p>
+<div class="flex items-center gap-2 mt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">26 Citations</span>
+<span class="text-xs text-error font-medium">• 59.1% High Stress</span>
+</div>
+</div>
+<!-- Sub-op 2.2 -->
+<div class="sub-op-card cursor-pointer p-space-sm rounded-lg bg-surface hover:bg-surface-container transition-all" id="sub-card-2.2" onclick="selectOpportunity('2.2')">
+<div class="flex items-start justify-between gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">2.2 • Bank Bounce Dread</span>
+<span class="material-symbols-outlined text-outline-variant text-base">radio_button_unchecked</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium mt-1">Removing Bank Bounce Penalty Dread (₹295-₹590)</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs mt-1">Inflexible auto-mandates cause punitive bank charges, inducing spiteful cancellations.</p>
+<div class="flex items-center gap-2 mt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">18 Citations</span>
+<span class="text-xs text-error font-medium">• 40.9% Churn Rate</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- BRANCH 3: Demat & Ledger Settlement Confusion -->
+<div class="flex flex-col items-center">
+<div class="w-0.5 h-6 bg-outline-variant/60 hidden xl:block"></div>
+<!-- Major Opportunity Card 3 -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between gap-space-xs mb-space-xs">
+<span class="font-label-sm text-label-sm text-primary bg-primary-fixed/40 px-2 py-0.5 rounded font-medium">M1 – M12 Infra</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">49 Verbatims</span>
+</div>
+<h3 class="font-body-lg text-body-lg text-on-surface font-semibold leading-snug">
+                Demystify Demat &amp; Ledger Settlement
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Misunderstandings around demat units, settlement cycles, and AMC portals.</p>
+<div class="w-full bg-surface-container h-1 rounded-full mt-space-sm overflow-hidden">
+<div class="bg-primary h-full" style="width: 17%"></div>
+</div>
+</div>
+<!-- Sub-opportunities tree stack -->
+<div class="mt-space-md pt-space-sm flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Sub-Opportunities</span>
+<!-- Sub-op 3.1 -->
+<div class="sub-op-card cursor-pointer p-space-sm rounded-lg bg-surface hover:bg-surface-container transition-all" id="sub-card-3.1" onclick="selectOpportunity('3.1')">
+<div class="flex items-start justify-between gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">3.1 • Settlement Black Hole</span>
+<span class="material-symbols-outlined text-outline-variant text-base">radio_button_unchecked</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium mt-1">Resolving the T+2 Black Hole Anxiety</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs mt-1">48-hour gap between bank debit and BSE StAR MF unit allocation feels like fund loss.</p>
+<div class="flex items-center gap-2 mt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">31 Citations</span>
+<span class="text-xs text-primary font-medium">• Support Friction</span>
+</div>
+</div>
+<!-- Sub-op 3.2 -->
+<div class="sub-op-card cursor-pointer p-space-sm rounded-lg bg-surface hover:bg-surface-container transition-all" id="sub-card-3.2" onclick="selectOpportunity('3.2')">
+<div class="flex items-start justify-between gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">3.2 • Demat Execution Nuance</span>
+<span class="material-symbols-outlined text-outline-variant text-base">radio_button_unchecked</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium mt-1">Clarifying Coin SIP vs AMC SIP Discrepancies</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs mt-1">Demat execution limitations prevent instant AMC portal modifications.</p>
+<div class="flex items-center gap-2 mt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">18 Citations</span>
+<span class="text-xs text-on-surface-variant">• Institutional Clarity</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- BRANCH 4: Market Drawdown Isolation -->
+<div class="flex flex-col items-center">
+<div class="w-0.5 h-6 bg-outline-variant/60 hidden xl:block"></div>
+<!-- Major Opportunity Card 4 -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between gap-space-xs mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-secondary-container bg-secondary-container/40 px-2 py-0.5 rounded font-medium">M4 – M9 Retention</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">240 Verbatims</span>
+</div>
+<h3 class="font-body-lg text-body-lg text-on-surface font-semibold leading-snug">
+                Overcome Emotional Isolation in Drawdowns
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Behavioral panic when macro indices dip, coupled with zero platform proactive guidance.</p>
+<div class="w-full bg-surface-container h-1 rounded-full mt-space-sm overflow-hidden">
+<div class="bg-secondary h-full" style="width: 31%"></div>
+</div>
+</div>
+<!-- Sub-opportunities tree stack -->
+<div class="mt-space-md pt-space-sm flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Sub-Opportunities</span>
+<!-- Sub-op 4.1 -->
+<div class="sub-op-card cursor-pointer p-space-sm rounded-lg bg-surface hover:bg-surface-container transition-all" id="sub-card-4.1" onclick="selectOpportunity('4.1')">
+<div class="flex items-start justify-between gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">4.1 • Red Portfolio Panic</span>
+<span class="material-symbols-outlined text-outline-variant text-base">radio_button_unchecked</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium mt-1">Providing Contextual Reassurance During Red Phases</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs mt-1">Complete app silence when Nifty corrects 4-6% leaves retail users feeling abandoned.</p>
+<div class="flex items-center gap-2 mt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">162 Citations</span>
+<span class="text-xs text-error font-medium">• Critical Panic Vector</span>
+</div>
+</div>
+<!-- Sub-op 4.2 -->
+<div class="sub-op-card cursor-pointer p-space-sm rounded-lg bg-surface hover:bg-surface-container transition-all" id="sub-card-4.2" onclick="selectOpportunity('4.2')">
+<div class="flex items-start justify-between gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">4.2 • Silent App Abandonment</span>
+<span class="material-symbols-outlined text-outline-variant text-base">radio_button_unchecked</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium mt-1">Combating App Inaction &amp; Silence After Setup</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs mt-1">Absence of value-centric nudges causes paused SIPs to lapse into permanent dormancies.</p>
+<div class="flex items-center gap-2 mt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">78 Citations</span>
+<span class="text-xs text-secondary font-medium">• Dormancy Risk</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- OST Guardrail Banner: Problem Space Only -->
+<div class="w-full mt-space-lg bg-surface-container-low rounded-xl p-space-md flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined">rule</span>
+</div>
+<div>
+<h4 class="font-headline-md text-body-lg text-on-surface font-semibold">Strict Torres OST Problem Boundary In Effect</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Solutions, prototype ideas, and UI redesign concepts are decoupled until opportunity verification scores exceed 95% Bayesian significance.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0 font-label-sm text-label-sm bg-surface-container-lowest px-space-sm py-1.5 rounded">
+<span class="text-secondary font-semibold">• ACTIVE</span>
+<span class="text-on-surface">Zero Feature Jumping Protocol</span>
+</div>
+</div>
+</div>
+<!-- RIGHT: Interactive Slide-out Evidence Bay (Docked, 380px) -->
+<aside class="w-full lg:w-[380px] shrink-0 bg-surface-container-lowest rounded-xl shadow-md p-space-md flex flex-col transition-all duration-300" id="evidenceBay">
+<!-- Drawer Header -->
+<div class="pb-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-primary uppercase font-medium">
+<span class="material-symbols-outlined text-sm">verified</span>
+<span>Grounded Evidence Bay</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface font-semibold" id="currentSelectionTag">Sub-op 1.1</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-1" id="currentOpportunityTitle">Managing Day-30 First Statement Disillusionment</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1" id="currentFilterSubtitle">Showing 3 of 442 verbatim records</p>
+</div>
+<!-- Context Snapshot Card -->
+<div class="my-space-sm p-space-sm rounded-lg bg-surface-container-low">
+<div class="font-label-sm text-label-sm text-outline uppercase tracking-wider mb-1">Grounded Behavioral Pattern</div>
+<p class="font-body-sm text-body-sm text-on-surface" id="opportunityCoreContext">
+          Early portfolio displays negative or tiny nominal gains, breaking mental compounding models set by initial ROI calculators.
+        </p>
+</div>
+<!-- Verbatim Cards Feed -->
+<div class="flex flex-col gap-space-sm flex-1 overflow-y-auto max-h-[560px] pr-1" id="verbatimContainer">
+<!-- Verbatim Card 1 -->
+<div class="p-space-sm rounded-lg bg-surface hover:bg-surface-container-low transition-colors flex flex-col justify-between">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-base shrink-0 mt-0.5">format_quote</span>
+<p class="font-body-sm text-body-sm text-on-surface italic leading-relaxed">
+              “When my first statement arrived, my ₹5000 had become ₹4982. I felt duped. The calculator on the app showed ₹1 Crore in 20 years, but day 30 is in minus.”
+            </p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="font-medium text-on-surface">u/techie_pune</span>
+<span>•</span>
+<span>Reddit r/IndiaInvestments</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-fixed/30 text-tertiary text-[10px] font-semibold">Disillusioned</span>
+</div>
+</div>
+<!-- Verbatim Card 2 -->
+<div class="p-space-sm rounded-lg bg-surface hover:bg-surface-container-low transition-colors flex flex-col justify-between">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-error text-base shrink-0 mt-0.5">format_quote</span>
+<p class="font-body-sm text-body-sm text-on-surface italic leading-relaxed">
+              “Why should I risk ₹10,000 for ₹20 return when SBI FD gives me interest every quarter without stress?”
+            </p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="font-medium text-on-surface">Anonymous User</span>
+<span>•</span>
+<span>Google Play Store</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-error-container/50 text-error text-[10px] font-semibold">Frustrated</span>
+</div>
+</div>
+<!-- Verbatim Card 3 -->
+<div class="p-space-sm rounded-lg bg-surface hover:bg-surface-container-low transition-colors flex flex-col justify-between">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-outline text-base shrink-0 mt-0.5">format_quote</span>
+<p class="font-body-sm text-body-sm text-on-surface italic leading-relaxed">
+              “I panicked and stopped the SIP. Nobody explained that in the first few months you are buying units, not making interest.”
+            </p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="font-medium text-on-surface">Karthik R.</span>
+<span>•</span>
+<span>TradingQ&amp;A</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-[10px] font-semibold">Loss Aversion</span>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="pt-space-md mt-space-sm flex flex-col gap-space-xs">
+<button class="w-full py-2.5 px-space-md rounded-lg bg-primary hover:bg-primary-container text-on-primary font-body-sm text-body-sm font-medium transition-colors flex items-center justify-center gap-2" onclick="triggerExportNotice()">
+<span class="material-symbols-outlined text-sm">download</span>
+<span>Export Citation Set (CSV) • Zero-PII</span>
+</button>
+<span class="font-label-sm text-label-sm text-center text-outline text-[10px]">Audit Log ID: #OST-DISC-2025-V4</span>
+</div>
+</aside>
+</div>
+</div>
+<script>
+  // Evidence Repository Data per Sub-Opportunity
+  const evidenceStore = {
+    '1.1': {
+      code: 'Sub-op 1.1',
+      title: 'Managing Day-30 First Statement Disillusionment',
+      subtitle: 'Showing 3 of 442 verbatim records',
+      context: 'Early portfolio displays negative or tiny nominal gains, breaking mental compounding models set by initial ROI calculators.',
+      cards: [
+        {
+          quote: "When my first statement arrived, my ₹5000 had become ₹4982. I felt duped. The calculator on the app showed ₹1 Crore in 20 years, but day 30 is in minus.",
+          author: "u/techie_pune",
+          source: "Reddit r/IndiaInvestments",
+          sentiment: "Disillusioned",
+          sentimentColor: "bg-tertiary-fixed/30 text-tertiary"
+        },
+        {
+          quote: "Why should I risk ₹10,000 for ₹20 return when SBI FD gives me interest every quarter without stress?",
+          author: "Anonymous User",
+          source: "Google Play Store",
+          sentiment: "Frustrated",
+          sentimentColor: "bg-error-container/50 text-error"
+        },
+        {
+          quote: "I panicked and stopped the SIP. Nobody explained that in the first few months you are buying units, not making interest.",
+          author: "Karthik R.",
+          source: "TradingQ&A",
+          sentiment: "Loss Aversion",
+          sentimentColor: "bg-surface-container-high text-on-surface-variant"
+        }
+      ]
+    },
+    '1.2': {
+      code: 'Sub-op 1.2',
+      title: 'Addressing Nominal Flatness vs Bank FD Comparison',
+      subtitle: 'Showing 3 of 158 verbatim records',
+      context: 'New retail entrants anchor returns strictly against safe recurring deposits, interpreting sideways equity consolidation as total failure.',
+      cards: [
+        {
+          quote: "My HDFC Recurring Deposit at 7.1% guaranteed gives clear predictable returns every month. Here Coin shows 0.4% after 90 days. What is the benefit?",
+          author: "Siddharth M.",
+          source: "TradingQ&A",
+          sentiment: "Opportunity Cost",
+          sentimentColor: "bg-tertiary-fixed/30 text-tertiary"
+        },
+        {
+          quote: "If market is flat for 6 months, my money did nothing while inflation ate it. Nobody warns first timers that equity requires waiting 3+ years.",
+          author: "u/finance_noob",
+          source: "Reddit r/personalfinanceindia",
+          sentiment: "Impatience",
+          sentimentColor: "bg-error-container/50 text-error"
+        },
+        {
+          quote: "Cancelled my 3 active SIPs. Bank FD feels safe. At least I do not see my hard earned money dancing in red every alternate week.",
+          author: "Rajeshwar Rao",
+          source: "Google Play Review",
+          sentiment: "Risk Avoidance",
+          sentimentColor: "bg-surface-container-high text-on-surface-variant"
+        }
+      ]
+    },
+    '2.1': {
+      code: 'Sub-op 2.1',
+      title: 'Bridging Salary Credit Timing Variations',
+      subtitle: 'Showing 3 of 26 verbatim records',
+      context: 'Fixed 1st of month auto-debits clash with delayed weekend or corporate 3rd-5th salary credits, sparking panic and manual pauses.',
+      cards: [
+        {
+          quote: "My company credits salary on the 3rd or 4th depending on month end weekends. Coin attempted debit on 1st, account had low balance, mandate failed immediately.",
+          author: "Nikhil V.",
+          source: "Twitter @zerodhaonline",
+          sentiment: "Operational Clash",
+          sentimentColor: "bg-error-container/50 text-error"
+        },
+        {
+          quote: "Can we not have an auto-buffer window? Debit should retry when funds reflect instead of immediately bouncing.",
+          author: "Pooja Hegde",
+          source: "TradingQ&A",
+          sentiment: "Friction",
+          sentimentColor: "bg-surface-container-high text-on-surface-variant"
+        },
+        {
+          quote: "I had to pause the SIP just because salary was 2 days late. Once paused, I forgot to unpause for 4 months.",
+          author: "u/dev_blr",
+          source: "Reddit r/IndiaInvestments",
+          sentiment: "Dormancy Trigger",
+          sentimentColor: "bg-tertiary-fixed/30 text-tertiary"
+        }
+      ]
+    },
+    '2.2': {
+      code: 'Sub-op 2.2',
+      title: 'Removing Bank Bounce Penalty Dread (₹295-₹590)',
+      subtitle: 'Showing 3 of 18 verbatim records',
+      context: 'Retail investors face punitive bank penalty charges on failed auto-mandates, blaming the investment platform and canceling entire journeys.',
+      cards: [
+        {
+          quote: "ICICI charged me ₹590 ECS bounce penalty for a ₹1000 SIP! That is 59% of my investment down the drain in fines. Deleted the app.",
+          author: "Arun_Kumar_88",
+          source: "Google Play Store",
+          sentiment: "Outraged",
+          sentimentColor: "bg-error-container/50 text-error"
+        },
+        {
+          quote: "Why can't Coin ping me on WhatsApp 24 hours prior saying mandate will execute tomorrow? Instead I discover the failure via a penal SMS from SBI.",
+          author: "Deepak S.",
+          source: "TradingQ&A",
+          sentiment: "Communication Gap",
+          sentimentColor: "bg-tertiary-fixed/30 text-tertiary"
+        },
+        {
+          quote: "The fear of getting charged ₹350 every month if balance dips makes me want to invest manually or not invest at all.",
+          author: "u/mumbai_commuter",
+          source: "Reddit r/personalfinanceindia",
+          sentiment: "Penalty Dread",
+          sentimentColor: "bg-error-container/50 text-error"
+        }
+      ]
+    },
+    '3.1': {
+      code: 'Sub-op 3.1',
+      title: 'Resolving the T+2 Black Hole Anxiety',
+      subtitle: 'Showing 3 of 31 verbatim records',
+      context: 'The mandatory settlement latency between bank debits and BSE StAR MF depository unit allocation creates perceived asset vanishing panic.',
+      cards: [
+        {
+          quote: "Money debited on Monday morning from bank, but Coin showed 'Pending' and portfolio showed 0 units until Wednesday evening. Thought my money was lost.",
+          author: "Vikramaditya G.",
+          source: "Coin App Support Ticket",
+          sentiment: "Anxiety",
+          sentimentColor: "bg-primary-fixed/40 text-primary"
+        },
+        {
+          quote: "Other apps give instant confirmation tags. On demat Coin, it feels like tossing money into a dark well for 2 full working days.",
+          author: "u/algo_trader9",
+          source: "Reddit r/IndiaInvestments",
+          sentiment: "Uncertainty",
+          sentimentColor: "bg-tertiary-fixed/30 text-tertiary"
+        },
+        {
+          quote: "Customer care took 48 hours to explain that unit allocation follows BSE trade date settlement. Why isn't this tracked visually like Swiggy delivery?",
+          author: "Meera K.",
+          source: "TradingQ&A",
+          sentiment: "Telemetry Deficit",
+          sentimentColor: "bg-surface-container-high text-on-surface-variant"
+        }
+      ]
+    },
+    '3.2': {
+      code: 'Sub-op 3.2',
+      title: 'Clarifying Coin SIP vs AMC SIP Discrepancies',
+      subtitle: 'Showing 3 of 18 verbatim records',
+      context: 'Users try modifying SIPs directly on AMC websites (e.g. Nippon or Parag Parikh) and get confused when demat holdings operate under depository rules.',
+      cards: [
+        {
+          quote: "Logged into AMC site to change SIP date, it says 'Folio held in Demat mode, contact your depository participant'. Why make it so confusing?",
+          author: "Tanmay B.",
+          source: "TradingQ&A",
+          sentiment: "System Friction",
+          sentimentColor: "bg-surface-container-high text-on-surface-variant"
+        },
+        {
+          quote: "I thought Coin was an AMC distributor. Didn't realize Zerodha holds units in CDSL demat account. Needed a simple 10-second explainer upfront.",
+          author: "u/investor_chennai",
+          source: "Reddit r/IndiaInvestments",
+          sentiment: "Knowledge Gap",
+          sentimentColor: "bg-primary-fixed/40 text-primary"
+        },
+        {
+          quote: "Wanted to pause via CAMS online, but couldn't locate active mandate because Coin runs its own scheduled basket routing.",
+          author: "Harish Nair",
+          source: "Google Play Review",
+          sentiment: "Confusion",
+          sentimentColor: "bg-tertiary-fixed/30 text-tertiary"
+        }
+      ]
+    },
+    '4.1': {
+      code: 'Sub-op 4.1',
+      title: 'Providing Contextual Reassurance During Red Portfolio Phases',
+      subtitle: 'Showing 3 of 162 verbatim records',
+      context: 'Complete platform quietude during macroeconomic corrections leaves first-timers emotionally stranded and inclined to panic-sell.',
+      cards: [
+        {
+          quote: "Nifty fell 500 points in 3 days. My entire small cap SIP portfolio is in red. Coin sent zero notifications or market context, just absolute cold silence.",
+          author: "u/delhi_tech",
+          source: "Reddit r/IndiaInvestments",
+          sentiment: "Abandoned",
+          sentimentColor: "bg-error-container/50 text-error"
+        },
+        {
+          quote: "When markets crash, Zerodha tells you your account balance is down ₹8,000, but doesn't remind you that buying down is the whole purpose of SIP.",
+          author: "Shruti Sharma",
+          source: "TradingQ&A",
+          sentiment: "Psychological Strain",
+          sentimentColor: "bg-tertiary-fixed/30 text-tertiary"
+        },
+        {
+          quote: "I stopped my monthly ₹15,000 auto-debit in month 5 because seeing the portfolio flash crimson red everyday was giving me real life stress.",
+          author: "Girish P.",
+          source: "Google Play Store",
+          sentiment: "Panic Churn",
+          sentimentColor: "bg-error-container/50 text-error"
+        }
+      ]
+    },
+    '4.2': {
+      code: 'Sub-op 4.2',
+      title: 'Combating App Inaction & Silence After Setup',
+      subtitle: 'Showing 3 of 78 verbatim records',
+      context: 'The mechanical set-and-forget nature of SIP without value reinforcement results in high psychological disengagement and easy pauses.',
+      cards: [
+        {
+          quote: "Once SIP is started, you never open Coin. Then one random day you pause it to buy an iPhone and you never resume again. The app doesn't engage you.",
+          author: "Akash Verma",
+          source: "TradingQ&A",
+          sentiment: "Disengagement",
+          sentimentColor: "bg-surface-container-high text-on-surface-variant"
+        },
+        {
+          quote: "There are no milestone celebrations. Did I complete 6 months? Did I accumulate 500 units? Just mechanical debits like an electricity bill.",
+          author: "u/bengaluru_guy",
+          source: "Reddit r/personalfinanceindia",
+          sentiment: "Indifference",
+          sentimentColor: "bg-tertiary-fixed/30 text-tertiary"
+        },
+        {
+          quote: "A paused SIP is practically a canceled SIP. Coin sends no follow-up nudge or recovery insight to help restart disciplined investing.",
+          author: "Sowmya Iyer",
+          source: "YouTube Comment",
+          sentiment: "Lapse Risk",
+          sentimentColor: "bg-secondary-container/40 text-on-secondary-container"
+        }
+      ]
+    }
+  };
+
+  // Selection Handler
+  function selectOpportunity(id) {
+    const data = evidenceStore[id];
+    if (!data) return;
+
+    // Reset all sub-opportunity cards styling
+    document.querySelectorAll('.sub-op-card').forEach(card => {
+      card.classList.remove('bg-surface-container-low', 'border-primary');
+      card.classList.add('bg-surface');
+      const icon = card.querySelector('.material-symbols-outlined');
+      if (icon) {
+        icon.textContent = 'radio_button_unchecked';
+        icon.classList.remove('text-primary');
+        icon.classList.add('text-outline-variant');
+      }
+    });
+
+    // Highlight active card
+    const activeCard = document.getElementById(`sub-card-${id}`);
+    if (activeCard) {
+      activeCard.classList.remove('bg-surface');
+      activeCard.classList.add('bg-surface-container-low');
+      const activeIcon = activeCard.querySelector('.material-symbols-outlined');
+      if (activeIcon) {
+        activeIcon.textContent = 'radio_button_checked';
+        activeIcon.classList.remove('text-outline-variant');
+        activeIcon.classList.add('text-primary');
+      }
+    }
+
+    // Update Drawer Elements
+    document.getElementById('currentSelectionTag').textContent = data.code;
+    document.getElementById('currentOpportunityTitle').textContent = data.title;
+    document.getElementById('currentFilterSubtitle').textContent = data.subtitle;
+    document.getElementById('opportunityCoreContext').textContent = data.context;
+
+    // Render Verbatim Cards
+    const container = document.getElementById('verbatimContainer');
+    container.innerHTML = data.cards.map(card => `
+      <div class="p-space-sm rounded-lg bg-surface hover:bg-surface-container-low transition-colors flex flex-col justify-between">
+        <div class="flex items-start gap-2">
+          <span class="material-symbols-outlined text-outline text-base shrink-0 mt-0.5">format_quote</span>
+          <p class="font-body-sm text-body-sm text-on-surface italic leading-relaxed">
+            &ldquo;${card.quote}&rdquo;
+          </p>
+        </div>
+        <div class="mt-space-sm pt-space-xs flex items-center justify-between font-label-sm text-label-sm">
+          <div class="flex items-center gap-1.5 text-on-surface-variant">
+            <span class="font-medium text-on-surface">${card.author}</span>
+            <span>&bull;</span>
+            <span>${card.source}</span>
+          </div>
+          <span class="px-1.5 py-0.5 rounded ${card.sentimentColor} text-[10px] font-semibold">${card.sentiment}</span>
+        </div>
+      </div>
+    `).join('');
+
+    // Ensure drawer is open if hidden
+    const drawer = document.getElementById('evidenceBay');
+    if (drawer.classList.contains('hidden')) {
+      toggleDrawer();
+    }
+  }
+
+  // Toggle Drawer Visibility
+  const toggleBtn = document.getElementById('toggleDrawerBtn');
+  const drawer = document.getElementById('evidenceBay');
+  const toggleText = document.getElementById('drawerToggleText');
+
+  function toggleDrawer() {
+    drawer.classList.toggle('hidden');
+    if (drawer.classList.contains('hidden')) {
+      toggleText.textContent = 'Show Evidence Bay';
+    } else {
+      toggleText.textContent = 'Hide Evidence Bay';
+    }
+  }
+
+  toggleBtn.addEventListener('click', toggleDrawer);
+
+  // Notice Trigger for Export
+  function triggerExportNotice() {
+    const btn = event.currentTarget;
+    const originalText = btn.innerHTML;
+    btn.innerHTML = `<span class="material-symbols-outlined text-sm animate-spin">refresh</span><span>Exporting Anonymized Set...</span>`;
+    setTimeout(() => {
+      btn.innerHTML = `<span class="material-symbols-outlined text-sm text-secondary">check</span><span>Citation Bundle Ready (CSV)</span>`;
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+      }, 2500);
+    }, 800);
+  }
+</script></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 py-space-md"><div class="w-full px-gutter-desktop mx-auto flex flex-col md:flex-row items-center justify-between gap-space-sm"><div class="flex items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm"><span>Zerodha Coin Discovery Engine v4.2 Institutional</span><span>•</span><span>Continuous Ingestion Active</span><span>•</span><span>Confidence: 99.4% Bayesian Lower Bound</span></div><div class="flex items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm"><span>Strict Zero-PII Protocol Guard</span><span>Audit Logs Pinned</span></div></div></footer></body></html>

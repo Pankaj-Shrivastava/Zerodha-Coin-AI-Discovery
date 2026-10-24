@@ -412,7 +412,36 @@ Once the JSON datasets are harvested and normalized, an interactive, rich web ap
 
 ---
 
-## 6. User Prerequisites & Action Items for Pankaj
+## 5.1 Frontend Technical Stack: React + Tailwind CSS v3.4 + Vercel
+
+```
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                              FRONTEND TECHNICAL STACK                                  │
+├──────────────────────────┬─────────────────────────────┬───────────────────────────────┤
+│ Layer / Component        │ Technology Choice           │ Architectural Justification   │
+├──────────────────────────┼─────────────────────────────┼───────────────────────────────┤
+│ Core Framework           │ React 18+ (Vite SPA)        │ Component modularity, state   │
+│                          │                             │ management, fast build cycles │
+├──────────────────────────┼─────────────────────────────┼───────────────────────────────┤
+│ Styling & Design System  │ Tailwind CSS v3.4           │ "Zerodha Clean Slate" Light:  │
+│                          │                             │ Crisp pure white (#FFFFFF),   │
+│                          │                             │ Zerodha Blue (#387ED1) accent,│
+│                          │                             │ Coin Coral (#EA580C) highlights│
+│                          │                             │ Slate-900 text, 1px borders   │
+├──────────────────────────┼─────────────────────────────┼───────────────────────────────┤
+│ Iconography              │ Lucide React                │ Crisp, accessible fintech icons│
+├──────────────────────────┼─────────────────────────────┼───────────────────────────────┤
+│ Data Ingestion Strategy  │ Bundled Static JSON Imports │ Zero backend runtime latency, │
+│                          │ / public/data/ fetch        │ 100% offline-ready & cacheable│
+├──────────────────────────┼─────────────────────────────┼───────────────────────────────┤
+│ Deployment Platform      │ Vercel Serverless Static SPA│ Global Edge CDN, instant SSL, │
+│                          │                             │ zero server maintenance costs │
+└──────────────────────────┴─────────────────────────────┴───────────────────────────────┘
+```
+
+---
+
+## 6. User Prerequisites & Action Items Status
 
 To initiate the automated data harvesting, here is the exact checklist of prerequisites:
 
@@ -464,32 +493,51 @@ Zerodha-Coin-AI-Discovery/
 │   ├── discovery_plan.md               # Master Discovery & Resource Plan
 │   ├── context.md                      # Problem Statement & Grounding Manifesto
 │   ├── architecture.md                 # System Architecture & Technical Blueprint
-│   ├── decision.md                     # Core Architectural & Strategic Decisions
+│   ├── decision.md                     # Core Architectural & Strategic Decisions (ADRs)
 │   ├── implementation-plan.md          # Phase-wise Execution & Build Roadmap
 │   ├── evals.md                        # Evaluation Framework & Verbatim Quality Benchmarks
 │   ├── edge-cases.md                   # Platform, Linguistic & Behavioral Edge-Cases
 │   ├── workflow_and_validation.md      # Workflow, Analyzed Sources & Human Golden Set Audit
-│   └── zerodha_coin_app_journey.md     # Zerodha Coin Architecture & Journey Touchpoint Map
+│   ├── zerodha_coin_app_journey.md     # Zerodha Coin Architecture & Journey Touchpoint Map
+│   └── deployment.md                   # Vercel Deployment Architecture & Execution Plan
 ├── scripts/
-│   ├── harvest_reddit.js / .py         # Apify Reddit integration ($5 limit)
-│   ├── harvest_playstore.js            # Node.js google-play-scraper (Free)
-│   ├── harvest_tradingqna.py           # Discourse JSON API scraper (Free)
-│   ├── harvest_youtube.py              # YouTube comment scraper (Free)
-│   ├── filter_and_normalize.py         # Noise elimination & JSON schema validator
-│   └── synthesize_opportunities.py     # OST & Q&A synthesis generator
+│   ├── harvest_playstore.js            # Node.js google-play-scraper (1,026 reviews)
+│   ├── harvest_tradingqna.py           # Discourse JSON API scraper (346 posts)
+│   ├── harvest_youtube.py              # YouTube comment scraper (384 comments)
+│   ├── dry_run_reddit.py               # Apify Reddit actor integration (1,003 posts)
+│   ├── filter_and_normalize.py         # Noise elimination, Zero-PII scrubber, normalizer
+│   ├── synthesize_engine.py            # Generates all synthesis discovery JSONs
+│   ├── build_qa_synthesis.py           # Curates 9 Core Questions backed by 3 quotes each
+│   ├── eval_harvesters.py              # Automated Harvester & Cost audit runner (Dims 1 & 2)
+│   ├── eval_grounding.py               # Automated Verbatim & Zero-PII runner (Dims 3, 4, 8)
+│   ├── eval_synthesis.py               # Automated OST & 9 Q&A runner (Dims 5, 6, 7)
+│   └── inspect_verbatims.py            # CLI query tool for spot-checking grounded quotes
 ├── data/
 │   ├── raw/
-│   │   ├── reddit_raw.json
-│   │   ├── playstore_reviews_raw.json
-│   │   ├── tradingqna_raw.json
-│   │   ├── youtube_comments_raw.json
-│   │   └── twitter_raw.json
+│   │   ├── playstore_reviews_raw.json  # 1,026 raw reviews
+│   │   ├── tradingqna_raw.json         # 346 raw forum posts
+│   │   ├── youtube_comments_raw.json   # 384 raw comments
+│   │   └── reddit_raw.json             # 1,003 raw Reddit items
 │   └── processed/
-│       ├── grounded_verbatims.json     # All verified quotes with citations
-│       ├── platform_comparison.json    # Coin vs Groww vs Angel One matrix
-│       ├── opportunities_tree.json     # Hierarchical Opportunity Tree
-│       ├── grounded_qa_synthesis.json  # Answers to 9 Core Questions (2-4 quotes each)
-│       └── primary_interview_guide.json# Story-based interview protocol
-└── ui/                                 # Interactive Discovery UI (Built after data)
-└── ui/                                 # Interactive Discovery UI (Built after data)
+│       ├── grounded_verbatims.json     # 826 verified quotes with citations
+│       ├── platform_comparison.json    # Coin vs Groww vs Angel One comparative matrix
+│       ├── opportunities_tree.json     # Teresa Torres Opportunity Solution Tree
+│       ├── grounded_qa_synthesis.json  # The 9 Core Questions (3 authentic quotes each)
+│       ├── primary_interview_guide.json# Story-based interview protocol with rubrics
+│       ├── journey_touchpoints_matrix.json # 12-month lifecycle drop-off matrix
+│       ├── behavioral_vs_hardship_breakdown.json # 89.7% addressable vs 10.3% hardship
+│       ├── user_archetypes_personas.json # 4 grounded behavioral investor archetypes
+│       ├── citations_provenance_registry.json # Complete source links directory
+│       └── golden_set_candidates.json  # 20 hand-labeled validation benchmark items
+└── ui/                                 # Phase 5: React + Tailwind CSS Dashboard (Vercel Ready)
+    ├── package.json
+    ├── vite.config.js
+    ├── tailwind.config.js
+    ├── vercel.json                     # Vercel SPA routing rewrite config
+    ├── index.html
+    └── src/
+        ├── App.jsx
+        ├── main.jsx
+        ├── index.css
+        └── components/                 # Views 1 to 6 & 9 Core Questions Module
 ```

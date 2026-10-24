@@ -51,12 +51,11 @@ def is_noise(text: str) -> bool:
     t_lower = text.lower()
     for pattern in NOISE_PATTERNS:
         if re.search(pattern, t_lower):
+            if any(st in t_lower for st in ['gtt', 'stop-loss', 'stop loss', 'target order', 'bracket order', 'option chain', 'crypto', 'bitcoin', 'intraday', 'f&o', 'expiry']):
+                return True
             # Only allow if it explicitly discusses SIP or mutual fund mandates
             if 'sip' in t_lower or 'mutual fund' in t_lower or 'mandate' in t_lower:
-                # If it's about GTT / stop loss, it's definitely stock trading, not MF SIP
-                if any(st in t_lower for st in ['gtt', 'stop-loss', 'stop loss', 'target order', 'bracket order', 'option chain']):
-                    return True
-                continue
+                return False
             return True
     return False
 

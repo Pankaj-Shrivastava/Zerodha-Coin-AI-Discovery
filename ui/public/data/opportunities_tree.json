@@ -1,0 +1,115 @@
+{
+  "tree_title": "Zerodha Coin First-Year SIP Retention Discovery Tree",
+  "framework": "Teresa Torres Continuous Discovery Opportunity Solution Tree (First Diamond Only)",
+  "desired_outcome": "First-time mutual fund investors stay invested past their first 12 months with uninterrupted monthly SIP installments",
+  "opportunity_areas": [
+    {
+      "id": "OPP-1",
+      "title": "Mitigating Underwhelming Returns Shock (Months 1–3)",
+      "description": "Users start SIP after seeing 15% CAGR compounding charts or social media reels. In months 1–3, portfolio returns fluctuate between -2% and +2%, leading users to feel SIP is a waste compared to 7% bank FDs.",
+      "total_verbatims": 442,
+      "linked_verbatim_sample_ids": [
+        "playstore-zerodha_coin-890aea81-7b94-4c46-b3a0-2d8515043715",
+        "playstore-zerodha_coin-6421517d-0d76-49aa-9259-6a77ca44a867",
+        "playstore-zerodha_coin-521f8be4-1d75-4e31-9df1-937b046ba421",
+        "playstore-zerodha_coin-c7d2485b-1efa-476c-999b-ce1be67b68d3",
+        "playstore-zerodha_coin-1e148241-7c4b-471d-96ae-f5e16b99fc9c"
+      ],
+      "sub_opportunities": [
+        {
+          "sub_id": "OPP-1.1",
+          "title": "Managing Day-30 First Statement Disillusionment",
+          "evidence": "Users check first month statement expecting visible wealth generation; seeing ₹10 gain on ₹1,000 feels meaningless.",
+          "addressability": "Behavioral expectation calibration"
+        },
+        {
+          "sub_id": "OPP-1.2",
+          "title": "Addressing Nominal Flatness vs Fixed Deposit Comparison",
+          "evidence": "Repeated verbatim mentions: 'Bank FD gives guaranteed 7%, why take risk in MF for 2%?'",
+          "addressability": "Cognitive reframing of unit accumulation vs short-term valuation"
+        }
+      ]
+    },
+    {
+      "id": "OPP-2",
+      "title": "Eliminating Silent Mandate Failures & Penalty Trauma (Months 1–6)",
+      "description": "Auto-debit mandates (e-NACH/BSE StAR) trigger on dates when salary is delayed or account balance is low, triggering ₹250–₹590 bank bounce fees and silent cancellation after 3 misses.",
+      "total_verbatims": 44,
+      "linked_verbatim_sample_ids": [
+        "playstore-zerodha_coin-df8a2317-b3f3-41ac-9040-003641b6701b",
+        "playstore-zerodha_coin-70b5ed00-7c26-41bb-9ba9-ca52c6ad4a28",
+        "playstore-zerodha_coin-bdf7c9b5-c880-4435-9fd9-bc3ec6a83e62",
+        "playstore-zerodha_coin-b28ddde7-f09b-43b8-8717-d669b1a99eca",
+        "playstore-angel_one-4f71ee20-5cf3-4b27-966e-7bc4d853e998"
+      ],
+      "sub_opportunities": [
+        {
+          "sub_id": "OPP-2.1",
+          "title": "Bridging Salary Credit Timing Variations",
+          "evidence": "When salary credit slides from 1st to 5th of month, automatic debit fails with zero warning.",
+          "addressability": "Dynamic debit scheduling and smart pre-debit notifications"
+        },
+        {
+          "sub_id": "OPP-2.2",
+          "title": "Removing Bank Bounce Penalty Dread",
+          "evidence": "Users furious after paying ₹295 penalty on a ₹500 SIP installment, leading them to cancel the mandate immediately.",
+          "addressability": "Proactive balance pre-check and zero-penalty pause mechanisms"
+        }
+      ]
+    },
+    {
+      "id": "OPP-3",
+      "title": "Demystifying Demat & Ledger Settlement Confusion (Months 1–12)",
+      "description": "Zerodha Coin's Demat holding structure and BSE StAR routing creates a T+1/T+2 gap where bank funds are debited but units do not appear, making users fear their money was stolen or lost.",
+      "total_verbatims": 49,
+      "linked_verbatim_sample_ids": [
+        "playstore-zerodha_coin-e05d33fc-0a19-407c-b90a-80e37ffcb0d6",
+        "playstore-groww-72fc09f0-4880-4aef-93c8-8d57172661b7",
+        "playstore-groww-b4dd6d6d-25fc-41ba-a343-965574de362e",
+        "playstore-angel_one-534ef158-170a-41d8-b72d-ecf49cbc3b41",
+        "playstore-angel_one-4d4717bf-5cb0-4978-a727-fd50f172dbb2"
+      ],
+      "sub_opportunities": [
+        {
+          "sub_id": "OPP-3.1",
+          "title": "Resolving the T+2 Black Hole Anxiety",
+          "evidence": "Repeated panic inquiries: 'Money debited from HDFC but Zerodha Coin shows ₹0 units and portfolio empty!'",
+          "addressability": "Transparent real-time order lifecycle tracking"
+        },
+        {
+          "sub_id": "OPP-3.2",
+          "title": "Clarifying Coin SIP vs AMC SIP Discrepancies",
+          "evidence": "Users trying to pause or modify amounts find AMC SIPs locked and un-editable.",
+          "addressability": "Unifying mandate controls and clear in-app taxonomy"
+        }
+      ]
+    },
+    {
+      "id": "OPP-4",
+      "title": "Overcoming Emotional Isolation During Market Drawdowns (Months 4–9)",
+      "description": "During sideways markets or temporary corrections (-5%), the app shows red figures without explanation. Users receive no guidance, leading to loss aversion and panic cancellation.",
+      "total_verbatims": 257,
+      "linked_verbatim_sample_ids": [
+        "playstore-angel_one-f7313493-b099-4777-a5bc-8ac28e8e5781",
+        "playstore-angel_one-f440c884-3a0b-403e-a12e-924d865632ca",
+        "playstore-et_money-5a957f9d-3708-458a-ae85-869981588336",
+        "tradingqna-132136",
+        "youtube-UgwKmTUE5zcRpfSZbc14AaABAg"
+      ],
+      "sub_opportunities": [
+        {
+          "sub_id": "OPP-4.1",
+          "title": "Providing Contextual Reassurance During Red Portfolio Phases",
+          "evidence": "Users open app, see red numbers, panic, and withdraw money to avoid losing capital.",
+          "addressability": "Contextual market drawdown education and Rupee Cost Averaging visualizers"
+        },
+        {
+          "sub_id": "OPP-4.2",
+          "title": "Combating App Inaction & Silence After Setup",
+          "evidence": "Once SIP is set, app remains completely silent; users only receive transactional SMS from BSE/CDSL.",
+          "addressability": "Milestone acknowledgment and habit validation"
+        }
+      ]
+    }
+  ]
+}

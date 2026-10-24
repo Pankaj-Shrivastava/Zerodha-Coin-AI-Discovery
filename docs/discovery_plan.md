@@ -450,63 +450,81 @@ Once raw data is collected, the AI Discovery Engine processes it through the 5-p
 
 ## 5. Execution Sequence & Timeline
 
-| Step | Action | Tool / Method | Cost | Output |
+## 5. Execution Sequence & Status
+
+| Step | Action | Tool / Method | Cost | Status / Output |
 | :--- | :--- | :--- | :--- | :--- |
-| **Step 0** | Create Apify free account (Reddit only) | [apify.com](https://apify.com/pricing) | $0 | API token secured |
-| **Step 1** | Install Node.js dependencies | `npm install google-play-scraper` | $0 | Local tooling ready |
-| **Step 2** | Read industry reports (I1-I7) | `read_url_content` / browser | $0 | Contextual grounding notes |
-| **Step 3** | Scrape TradingQ&A via Discourse JSON API | Python script (`requests`) | $0 | ~500 posts/replies JSON |
-| **Step 4** | Scrape Play Store reviews (P1-P5) | `google-play-scraper` npm | $0 | ~1,500 reviews JSON |
-| **Step 5** | Scrape YouTube comments (Y1-Y5) | YouTube Data API v3 | $0 | ~500–1,000 comments JSON |
-| **Step 6** | Scrape Reddit (R1-R4) | **Apify Reddit Scraper** | **~$2–3** | ~3,000–5,000 posts+comments JSON |
-| **Step 7** | Curate Twitter/X signals | Manual search + copy | $0 | ~100–200 tweets JSON |
-| **Step 8** | Run Nuggetization & Empathy Mapping | AI Discovery Engine (Phase 1-2) | $0 | Nugget database + Empathy Map |
-| **Step 9** | Run 5-Whys & Opportunity Tree | AI Discovery Engine (Phase 3-4) | $0 | Validated Opportunity Tree |
-| **Step 10** | Generate Secondary→Primary Bridge | AI Discovery Engine (Phase 5) | $0 | Interview questions + dossier |
+| **Step 0** | Create Apify free account (Reddit only) | [apify.com](https://apify.com/pricing) | $0 | ✅ Token configured in `.env` |
+| **Step 1** | Install Node.js & Python dependencies | `npm` & `pip` | $0 | ✅ Tooling verified |
+| **Step 2** | Scrape Play Store reviews (5 apps) | `google-play-scraper` npm | $0 | ✅ 1,026 reviews captured |
+| **Step 3** | Scrape TradingQ&A via Discourse REST API | Python script (`requests`) | $0 | ✅ 346 topic posts/replies |
+| **Step 4** | Scrape YouTube comments | `youtube-comment-downloader` | $0 | ✅ 384 comments captured |
+| **Step 5** | Scrape Reddit (r/MutualFundsIndia) | Apify Reddit Scraper | $4.01 ($0 invoice) | ✅ 1,003 posts/comments |
+| **Step 6** | Noise Filtering & PII Scrubbing | `filter_and_normalize.py` | $0 | ✅ 826 grounded verbatims (Zero PII) |
+| **Step 7** | Qualitative Synthesis & Opportunity Tree | `synthesize_engine.py` | $0 | ✅ All 8 synthesis JSON files |
+| **Step 8** | Curate 9 Core Discovery Questions | `build_qa_synthesis.py` | $0 | ✅ 9 questions backed by 3 quotes each |
+| **Step 9** | Automated Evaluation Suites | `eval_*.py` | $0 | ✅ Dims 1-8 all PASSED [EXIT 0] |
+| **Step 10** | Interactive Discovery UI Construction | React + Vite + Tailwind CSS | $0 | 🟡 Ready (Awaiting user go-ahead) |
+| **Step 11** | Production Deployment | Vercel Serverless Static SPA | $0 | 🟡 Documented in `deployment.md` |
 
 ---
 
 ## 6. Success Criteria for This Discovery
 
-This discovery effort will be considered successful when we can confidently answer:
+This discovery effort has successfully achieved:
 
-1. **We have identified the top 3-5 root causes** (not surface symptoms) for why first-time SIP investors lapse within 12 months.
-2. **Each root cause is backed by verifiable secondary evidence** — verbatim quotes from real users across multiple independent sources.
-3. **We have structured an Opportunity Tree** where every opportunity is an unmet user need (not a feature).
-4. **We have generated story-based interview questions** ready for primary 1-on-1 user research to validate or invalidate each opportunity.
-5. **We can clearly distinguish** behavioral dropout (addressable) from genuine financial hardship (not addressable by product intervention).
+1. **Top 4 Opportunity Spaces Identified**: Underwhelming returns shock, silent mandate failures, Demat/ledger confusion, and emotional drawdown isolation.
+2. **Empirical Verbatim Backing**: 100% exact substring match across 826 records with 0 hallucinations.
+3. **Structured Opportunity Solution Tree**: Teresa Torres hierarchy strictly in Problem Space (0 feature solutions).
+4. **Story-Based Interview Protocol**: 4-track primary guide with confirmation and invalidation criteria.
+5. **Addressability Separation**: 89.7% addressable friction (64.5% behavioral, 25.2% structural UX) vs 10.3% non-addressable hardship.
+6. **Zero-PII Storage Compliance**: Complete anonymization with 0 phone, email, PAN, or account leaks.
 
 ---
 
 ## 7. File & Artifact Organization
 
-All discovery outputs will be organized in the following workspace structure:
-
 ```
 Zerodha-Coin-AI-Discovery/
-├── .agents/skills/user-empathy-discovery/     # Methodology & templates
-│   ├── SKILL.md
-│   ├── references/
-│   └── templates/
 ├── docs/
-│   ├── discovery_plan.md                       # ← THIS FILE
-│   ├── context.md                              # AI Engine context & grounding rules
-│   └── architecture.md                         # Technical architecture & UI screens
+│   ├── discovery_plan.md                       # ← THIS FILE (Master Discovery Plan)
+│   ├── context.md                              # Problem Statement & Grounding Manifesto
+│   ├── architecture.md                         # Technical architecture & UI screen map
+│   ├── decision.md                             # Architectural Decision Records (ADR 01-11)
+│   ├── implementation-plan.md                  # Phase-wise execution roadmap
+│   ├── evals.md                                # Evaluation Framework & benchmark results
+│   ├── edge-cases.md                           # Edge-case handling & linguistic rules
+│   ├── workflow_and_validation.md              # Workflow, volume links & Human Golden Set
+│   ├── zerodha_coin_app_journey.md             # Zerodha Coin architecture & touchpoints
+│   └── deployment.md                           # Vercel deployment plan & configuration
 ├── data/
-│   ├── raw/                                    # Raw scraped JSON files
-│   │   ├── reddit_raw.json                     # Source: Apify ($2-3)
-│   │   ├── playstore_reviews_raw.json          # Source: google-play-scraper npm ($0)
-│   │   ├── tradingqna_raw.json                 # Source: Discourse JSON API ($0)
-│   │   ├── youtube_comments_raw.json           # Source: YouTube Data API v3 ($0)
-│   │   └── twitter_raw.json                    # Source: Manual curation ($0)
-│   └── processed/                              # Nuggetized & tagged data
-│       ├── nuggets.json                        # All nuggets with source citations
-│       └── opportunities.json                  # Structured opportunity tree
-├── analysis/
-│   ├── empathy_map.md                          # Says/Thinks/Does/Feels
-│   ├── jtbd_canvas.md                          # Jobs & Four Forces
-│   ├── five_whys_analysis.md                   # Root cause drilldowns
-│   ├── opportunity_tree.md                     # Hierarchical OST
-│   └── secondary_to_primary_bridge.md          # Interview questions
-└── ai_product_discovery_learnings.md           # Knowledge synthesis
+│   ├── raw/
+│   │   ├── playstore_reviews_raw.json          # 1,026 reviews
+│   │   ├── tradingqna_raw.json                 # 346 forum posts
+│   │   ├── youtube_comments_raw.json           # 384 comments
+│   │   └── reddit_raw.json                     # 1,003 Reddit items
+│   └── processed/
+│       ├── grounded_verbatims.json             # 826 verified quotes
+│       ├── platform_comparison.json            # Cross-platform matrix
+│       ├── opportunities_tree.json             # Hierarchical OST
+│       ├── grounded_qa_synthesis.json          # 9 Core Questions with 3 quotes each
+│       ├── primary_interview_guide.json        # 4-track story interview protocol
+│       ├── journey_touchpoints_matrix.json     # 12-month lifecycle drop-off matrix
+│       ├── behavioral_vs_hardship_breakdown.json# 89.7% addressable breakdown
+│       ├── user_archetypes_personas.json       # 4 grounded personas
+│       ├── citations_provenance_registry.json   # Citation links directory
+│       └── golden_set_candidates.json          # 20 human benchmark items
+├── scripts/
+│   ├── harvest_playstore.js
+│   ├── harvest_tradingqna.py
+│   ├── harvest_youtube.py
+│   ├── dry_run_reddit.py
+│   ├── filter_and_normalize.py
+│   ├── synthesize_engine.py
+│   ├── build_qa_synthesis.py
+│   ├── eval_harvesters.py
+│   ├── eval_grounding.py
+│   ├── eval_synthesis.py
+│   └── inspect_verbatims.py
+└── ui/                                         # Phase 5: React + Tailwind CSS Dashboard (Vercel)
 ```

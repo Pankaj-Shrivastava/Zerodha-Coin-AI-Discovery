@@ -1,0 +1,58 @@
+[
+  {
+    "id": "ARCH-1",
+    "name": "The Anxious First-Timer",
+    "tagline": "Starts with reel-inspired optimism, panics at month-2 flat returns, seeks Reddit reassurance.",
+    "demographics": "22–27 years old, early career software engineer / associate, metro city.",
+    "monthly_sip_ticket": "₹1,000 – ₹3,000 across 2 index/flexicap funds.",
+    "core_motivation": "FOMO from colleagues and social media influencers talking about early financial independence.",
+    "behavioral_pattern": "Opens the app daily. Obsessively tracks 1-day P&L. Compares 0.5% return with his bank's 7% fixed deposit.",
+    "the_breaking_point": "Month 3 statement shows ₹2,980 total value on ₹3,000 invested (-₹20). Panics, convinces himself 'mutual funds are a scam', and stops the SIP.",
+    "representative_quotes": [
+      "Invested in nifty 50 index fund for past 3 months. My total return is currently -0.8%. Why would anyone invest here instead of safe FD?",
+      "Every reel said 15% compounding, but my portfolio has not moved an inch in 90 days. Feel like stopping before I lose more."
+    ]
+  },
+  {
+    "id": "ARCH-2",
+    "name": "The Rigid Mandate Victim",
+    "tagline": "Wants to invest consistently, but salary delays trigger bank bounce fees that destroy trust.",
+    "demographics": "25–32 years old, mid-level private corporate employee, tier-1/tier-2 city.",
+    "monthly_sip_ticket": "₹2,500 – ₹5,000.",
+    "core_motivation": "Automating monthly savings without having to think about it manually.",
+    "behavioral_pattern": "Sets debit date to 1st of month. In month 4, company salary is credited on the 5th instead of 1st.",
+    "the_breaking_point": "HDFC/ICICI bank debits ₹295 + GST bounce penalty for insufficient balance on the 1st. Incurring a ₹350 penalty on a ₹2,500 investment feels infuriating; cancels the mandate in disgust.",
+    "representative_quotes": [
+      "Salary was delayed by two days and Zerodha mandate triggered anyway. Bank charged me Rs 295 bounce fee. Why can't the app check balance or notify me first?!",
+      "Missed 2 installments because of festival expenses, and now Coin says mandate is cancelled on BSE StAR. Too much hassle to start again."
+    ]
+  },
+  {
+    "id": "ARCH-3",
+    "name": "The Confused Demat Investor",
+    "tagline": "Chooses Coin for 0% commission direct funds, gets bewildered by Demat unit settlement delays.",
+    "demographics": "26–35 years old, self-directed tech-savvy professional.",
+    "monthly_sip_ticket": "₹5,000 – ₹10,000.",
+    "core_motivation": "Zero expense ratio leakage, single consolidated portfolio in Demat account.",
+    "behavioral_pattern": "Expects instant fintech gratification (like Zerodha Kite equity orders or UPI transfers).",
+    "the_breaking_point": "Money debited on Monday; on Tuesday night, Coin still shows ₹0 units and portfolio empty. Support ticket receives generic FAQ automated bot response. Decides to move back to Groww or direct AMC.",
+    "representative_quotes": [
+      "Money deducted from bank on 3rd, today is 5th and still no units allocated in Coin. Support says BSE StAR settlement takes T+2. Very poor experience.",
+      "Tried to pause my AMC SIP in Coin, but there is no pause button, only delete. Why make it so confusing compared to regular Coin SIP?"
+    ]
+  },
+  {
+    "id": "ARCH-4",
+    "name": "The Goal-Drifter",
+    "tagline": "Started without a concrete goal or timeline; abandons SIP at the first sign of discretionary cash crunch.",
+    "demographics": "23–29 years old, independent freelancer or sales executive.",
+    "monthly_sip_ticket": "₹1,500 – ₹3,000.",
+    "core_motivation": "General desire to 'start saving somewhere' without a defined horizon or emergency fund.",
+    "behavioral_pattern": "Invests for 5 months smoothly. In month 6, Diwali shopping and car insurance premium arrive simultaneously.",
+    "the_breaking_point": "Needs cash immediately; pauses SIP temporarily. Because the app offers zero reminder or low-friction resume path, the pause quietly becomes permanent abandonment.",
+    "representative_quotes": [
+      "Had to pause my SIP for festival season expenses. It's been 5 months and I haven't resumed. Nobody reminded me, and money just gets spent elsewhere.",
+      "Didn't really have a goal in mind when starting. When money was tight, stopping SIP was the easiest place to cut expenses."
+    ]
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "title": "Primary User Interview Protocol: First-Year SIP Retention & Lapse Discovery",
+  "methodology": "Teresa Torres Story-Based Interview Protocol (Strictly Empathy & Problem Space)",
+  "target_cohort": "First-time retail investors in India who initiated a mutual fund SIP but paused, cancelled, or lapsed within 12 months",
+  "core_rules": [
+    "Never ask speculative questions ('Would you use a feature that...?').",
+    "Anchor questions in specific past events ('Tell me about the last time you paused or stopped your SIP.').",
+    "Listen for emotional keywords: worry, anger, surprise, confusion, relief.",
+    "Record exact verbatims without paraphrasing."
+  ],
+  "interview_tracks": [
+    {
+      "track_id": "TRACK-1",
+      "phase": "Trigger & Start Story",
+      "objective": "Understand the initial expectation and emotional anchor at the moment of starting",
+      "questions": [
+        "Think back to the day you set up your first SIP. Where were you, and what made you decide to do it that day?",
+        "What did you expect would happen to that money after 3 months, 6 months, and 1 year?",
+        "Who did you talk to or what did you watch before hitting the confirm button?"
+      ],
+      "confirmation_criteria": "User articulates a specific external trigger (friend, influencer, tax season) and expects steady non-volatile capital growth.",
+      "invalidation_criteria": "User had professional financial advisory and entered with calibrated expectations of 3-year volatility."
+    },
+    {
+      "track_id": "TRACK-2",
+      "phase": "The First Statement & Checking Routine",
+      "objective": "Uncover behavioral habits and early disillusionment",
+      "questions": [
+        "Walk me through the first time you opened the app to check your portfolio after the installment was deducted. What did you see?",
+        "How did you feel about the numbers on the screen compared to what you had in mind?",
+        "How often did you find yourself checking the app in month two and month three?"
+      ],
+      "confirmation_criteria": "User experienced 'underwhelming returns shock' and checked frequently before dropping off into app silence.",
+      "invalidation_criteria": "User set-and-forgot the SIP completely without looking at the screen."
+    },
+    {
+      "track_id": "TRACK-3",
+      "phase": "The Moment of Interruption / Drop-Off",
+      "objective": "Pinpoint the exact catalyst that broke the monthly installment cadence",
+      "questions": [
+        "Tell me about the specific month when your SIP was first missed, paused, or cancelled.",
+        "What was happening with your finances that week?",
+        "Did you actively decide to stop it, or did an auto-debit failure or bank penalty happen first?",
+        "Once it stopped, what went through your mind about restarting it?"
+      ],
+      "confirmation_criteria": "Lapse was driven by either cash flow mismatch, bank bounce penalty dread, or disappointment with stagnant returns.",
+      "invalidation_criteria": "Lapse was purely due to deliberate profit booking after reaching a designated financial goal."
+    },
+    {
+      "track_id": "TRACK-4",
+      "phase": "In-App Friction & Demat Confusion",
+      "objective": "Identify moments where technical or UX ambiguity caused distress",
+      "questions": [
+        "Did you ever see a situation where money left your bank account, but your Zerodha Coin portfolio didn't show the units right away? What did you do?",
+        "Did you ever try to pause, skip, or edit your SIP amount? What happened when you tried?",
+        "Did you reach out to customer support? How did that go?"
+      ],
+      "confirmation_criteria": "User felt trapped or bewildered by T+2 Demat delays, Coin vs AMC SIP restrictions, or unhelpful support tickets.",
+      "invalidation_criteria": "User found settlement mechanics transparent and effortless."
+    }
+  ]
+}

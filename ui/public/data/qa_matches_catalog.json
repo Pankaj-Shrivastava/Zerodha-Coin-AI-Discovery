@@ -1,0 +1,11 @@
+{
+  "Q1_start_expectations": 23,
+  "Q2_behavior_change": 230,
+  "Q3_pause_stop_churn": 14,
+  "Q4_checking_frequency": 24,
+  "Q5_in_app_confusion": 10,
+  "Q6_outside_app_unsure": 157,
+  "Q7_continue_vs_dropoff": 29,
+  "Q8_user_segments": 18,
+  "Q9_unmet_needs": 12
+}

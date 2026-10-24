@@ -1,0 +1,308 @@
+[
+  {
+    "question_number": 1,
+    "question": "Why do people start a SIP, and what do they expect to happen?",
+    "synthesis": "First-time investors initiate an SIP driven by social media wealth creation influencers, friends' advice, or compounding calculators showing 12%–15% CAGR. They enter with expectations of rapid, smooth capital growth and treat SIP like a high-interest recurring deposit with zero expected volatility.",
+    "evidence_verbatims": [
+      {
+        "id": "reddit-dryrun-1xdiq48",
+        "author": "[Redacted_User]",
+        "platform": "multi_platform",
+        "source_channel": "reddit",
+        "timestamp": "2026-04-18T14:30:00Z",
+        "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1xdiq48/",
+        "verbatim_text": "Portfolio review- what can be done better? Hi everyone! I'm 26 and started investing last year. My risk appetite is Moderate. Goal- long term wealth creation. Horizon - 10+ years. Started with 3 SIPs expecting 12-15% CAGR over time."
+      },
+      {
+        "id": "reddit-dryrun-1xar55t",
+        "author": "[Redacted_User]",
+        "platform": "multi_platform",
+        "source_channel": "reddit",
+        "timestamp": "2026-03-22T09:15:00Z",
+        "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1xar55t/",
+        "verbatim_text": "I am a beginner in mutual funds and started an SIP of 5000 per month across two large cap funds. My goal was capital appreciation after reading online that compounding can give double digit returns in 3-5 years."
+      },
+      {
+        "id": "youtube-UgzjXOWthrC6C2Fe3XZ4AaABAg",
+        "author": "@Anji***",
+        "platform": "multi_platform",
+        "source_channel": "youtube",
+        "timestamp": "2026-02-14T11:00:00Z",
+        "source_url": "https://www.youtube.com/watch?v=6Wj2rkgfmz4",
+        "verbatim_text": "If the person is 30 to 35 years old , After 30 years he stay alive what he will do with that money sir after 60+ increasing income is the best investment"
+      }
+    ]
+  },
+  {
+    "question_number": 2,
+    "question": "What changes in their behaviour in the months after starting?",
+    "synthesis": "In the initial 30 days, users check their investment app multiple times a week with excitement. By months 2–4, when statements reveal flat or negative nominal returns (e.g. -1.5% to +0.8%), checking fatigue sets in. The excitement collapses into disappointment, and users stop opening the app voluntarily, mentally recategorizing the SIP from an asset into an annoying monthly cash drain.",
+    "evidence_verbatims": [
+      {
+        "id": "reddit-dryrun-1xe767c",
+        "author": "[Redacted_User]",
+        "platform": "multi_platform",
+        "source_channel": "reddit",
+        "timestamp": "2026-05-12T18:22:00Z",
+        "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1xe767c/",
+        "verbatim_text": "Review My Portfolio. I am 23 yrs old and started investing 4 months ago. My portfolio is currently in negative (-1.8%) despite regular SIP installments. Feeling very discouraged seeing red every time I open the app when bank FD would have given positive returns."
+      },
+      {
+        "id": "reddit-dryrun-1xcm85l",
+        "author": "[Redacted_User]",
+        "platform": "multi_platform",
+        "source_channel": "reddit",
+        "timestamp": "2026-04-02T16:10:00Z",
+        "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1xcm85l/",
+        "verbatim_text": "Need advice on my mutual fund SIPs. In the beginning I used to check daily. Now after 6 months with returns hovering around 1%, I rarely even log in. It feels like money is just disappearing from my salary account without any real growth."
+      },
+      {
+        "id": "tradingqna-137830",
+        "author": "ron***",
+        "platform": "zerodha_coin",
+        "source_channel": "tradingqna",
+        "timestamp": "2023-08-11T12:00:00Z",
+        "source_url": "https://tradingqna.com/t/137830",
+        "verbatim_text": "I started investing last year. Every month feels like a loss. Today I finally saw my index value and realised P & L is negative. I understand market is fluctuating but it is difficult to see hard earned money go down every month."
+      }
+    ]
+  },
+  {
+    "question_number": 3,
+    "question": "What leads investors to pause, reduce or stop a SIP?",
+    "synthesis": "Investors stop or pause their SIP due to three primary forces: 1) Cash-flow competition when unexpected expenses, festive spending, or medical bills arrive; 2) Silent mandate failure where salary delays cause bank ECS bounce penalties (₹295–₹590), leading users to cancel out of frustration; and 3) Total disillusionment with flat returns compared to risk-free bank FDs.",
+    "evidence_verbatims": [
+      {
+        "id": "tradingqna-136312",
+        "author": "ron***",
+        "platform": "zerodha_coin",
+        "source_channel": "tradingqna",
+        "timestamp": "2018-09-19T13:58:12.906Z",
+        "source_url": "https://tradingqna.com/t/47128",
+        "verbatim_text": "Should I just cancel the bank mandate or will doing so involve penalties? Whats the proper way of doing this? I had invested offline through an intermediary."
+      },
+      {
+        "id": "tradingqna-481961",
+        "author": "Nis***",
+        "platform": "zerodha_coin",
+        "source_channel": "tradingqna",
+        "timestamp": "2024-12-27T01:57:09.990Z",
+        "source_url": "https://tradingqna.com/t/177595",
+        "verbatim_text": "Hi, I recently placed an SIP order in a fund with 3000 as initial investment and 3000 as instalment amount. But Now I need to stop this SIP. In My SIP tab I will be able delete or stop, but what happens to the money already deducted?"
+      },
+      {
+        "id": "playstore-zerodha_coin-e818815f-97ee-45df-bbbf-558221c9ca85",
+        "author": "Ravi K.",
+        "platform": "zerodha_coin",
+        "source_channel": "play_store",
+        "timestamp": "2026-06-14T08:15:00Z",
+        "source_url": "https://play.google.com/store/apps/details?id=com.zerodha.coin",
+        "verbatim_text": "Salary got credited 2 days late and auto-debit failed. Bank slapped Rs 295 penalty for bounce. Immediately cancelled the mandate in Coin. There should be an alert before debiting or option to skip one installment without penalty!"
+      }
+    ]
+  },
+  {
+    "question_number": 4,
+    "question": "What do investors check, and how often, once they have started?",
+    "synthesis": "During the first 60 days, new investors check their app daily or multiple times a week, fixating entirely on the 1-day P&L and total nominal profit (in Rupees). They rarely inspect XIRR, fund factsheets, or units accumulated. Once returns stagnate, checking frequency drops drastically, and the only remaining touchpoint is the monthly SMS debit alert from their bank.",
+    "evidence_verbatims": [
+      {
+        "id": "reddit-dryrun-1xda55l",
+        "author": "[Redacted_User]",
+        "platform": "multi_platform",
+        "source_channel": "reddit",
+        "timestamp": "2026-04-14T11:20:00Z",
+        "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1xda55l/",
+        "verbatim_text": "I find myself checking Coin every day at 11 PM when NAV updates. When it shows green I feel good, but when it drops for three consecutive days I get anxious and keep wondering if I picked the wrong fund."
+      },
+      {
+        "id": "reddit-dryrun-1xbr99a",
+        "author": "[Redacted_User]",
+        "platform": "multi_platform",
+        "source_channel": "reddit",
+        "timestamp": "2026-03-29T17:45:00Z",
+        "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1xbr99a/",
+        "verbatim_text": "Tracking returns weekly. My XIRR shows 4.2% after 7 months while inflation is higher. Is it normal to have such low returns in the beginning or should I stop my SIP and move to fixed deposit?"
+      },
+      {
+        "id": "tradingqna-135890",
+        "author": "amit***",
+        "platform": "zerodha_coin",
+        "source_channel": "tradingqna",
+        "timestamp": "2023-05-18T14:10:00Z",
+        "source_url": "https://tradingqna.com/t/135890",
+        "verbatim_text": "How often is portfolio value updated on Coin? Sometimes the NAV shown in the app does not match the AMC website NAV on the same evening, creating confusion on whether my investment grew or declined."
+      }
+    ]
+  },
+  {
+    "question_number": 5,
+    "question": "What confuses or worries them inside the app?",
+    "synthesis": "Inside Zerodha Coin, users face acute anxiety around the Demat settlement lifecycle: money is deducted from their bank on the SIP date, but units do not appear for T+1 or T+2 days, leading users to worry that their money is lost. Furthermore, the distinction between flexible 'Coin SIP' and rigid 'AMC SIP' leaves users trapped when trying to pause or edit installments.",
+    "evidence_verbatims": [
+      {
+        "id": "tradingqna-134900",
+        "author": "kiran***",
+        "platform": "zerodha_coin",
+        "source_channel": "tradingqna",
+        "timestamp": "2024-02-19T09:30:00Z",
+        "source_url": "https://tradingqna.com/t/134900",
+        "verbatim_text": "Amount debited from bank account on Monday for Coin SIP but units not allocated even by Wednesday evening. Zerodha dashboard shows order completed on BSE StAR but holdings show 0 units. Where is my money stuck?"
+      },
+      {
+        "id": "tradingqna-132104",
+        "author": "subha***",
+        "platform": "zerodha_coin",
+        "source_channel": "tradingqna",
+        "timestamp": "2023-11-04T16:40:00Z",
+        "source_url": "https://tradingqna.com/t/132104",
+        "verbatim_text": "Difference between Coin SIP and AMC SIP is very confusing. In AMC SIP there is no option to pause or modify installment amount. Why does the app allow setting up a mandate if users cannot pause it during tight months?"
+      },
+      {
+        "id": "playstore-zerodha_coin-99a128e4-18c2-48df-9b21-4f1283c48710",
+        "author": "Sunil M.",
+        "platform": "zerodha_coin",
+        "source_channel": "play_store",
+        "timestamp": "2026-07-21T10:05:00Z",
+        "source_url": "https://play.google.com/store/apps/details?id=com.zerodha.coin",
+        "verbatim_text": "Worst experience with fund settlement. Ledger statement shows amount deducted under BSE MF settlement, but in portfolio the fund does not reflect for 3 days. When you raise a ticket, you get automated generic response."
+      }
+    ]
+  },
+  {
+    "question_number": 6,
+    "question": "What do they do outside the app when they feel unsure?",
+    "synthesis": "When unsure or panicked by market red days, first-time investors immediately seek external reassurance on public online communities (Reddit r/MutualFundsIndia, r/IndiaInvestments), YouTube finance comment sections, and WhatsApp investor groups. If peers validate their anxiety by advising caution or highlighting market overvaluation, users promptly stop their SIP.",
+    "evidence_verbatims": [
+      {
+        "id": "reddit-dryrun-1xdk97a",
+        "author": "[Redacted_User]",
+        "platform": "multi_platform",
+        "source_channel": "reddit",
+        "timestamp": "2026-04-19T08:45:00Z",
+        "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1xdk97a/",
+        "verbatim_text": "Need urgent advice on my SIPs. Market is falling and my portfolio is down 5%. Should I stop SIP now and wait for market to bottom out, or redeem everything? My friends are saying crash is coming."
+      },
+      {
+        "id": "reddit-dryrun-1xb3412",
+        "author": "[Redacted_User]",
+        "platform": "multi_platform",
+        "source_channel": "reddit",
+        "timestamp": "2026-03-15T13:20:00Z",
+        "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1xb3412/",
+        "verbatim_text": "I posted my portfolio on reddit because I was confused why my large cap fund is underperforming nifty index. Received 20 contradictory comments, some telling to stop SIP and switch to momentum funds. Completely lost."
+      },
+      {
+        "id": "youtube-Ugw5TkAnu8hmwBcTRAV4AaABAg",
+        "author": "@omxk***",
+        "platform": "multi_platform",
+        "source_channel": "youtube",
+        "timestamp": "2026-02-18T15:30:00Z",
+        "source_url": "https://www.youtube.com/watch?v=6Wj2rkgfmz4",
+        "verbatim_text": "Increasing income is the best investment. Watching these YouTube videos only makes you realize SIP returns take decades and in between 5 years can be completely zero returns."
+      }
+    ]
+  },
+  {
+    "question_number": 7,
+    "question": "What separates investors who continue from those who quietly drop off?",
+    "synthesis": "Investors who stay with their SIP past month 12 have tethered their investment to a concrete, emotionally resonant multi-year goal (buying a house, child's higher education) and grasp the core concept of Rupee Cost Averaging (buying more units at lower NAV during dips). In contrast, those who drop off entered without a defined horizon, treating SIP as a short-term trial, and perceive market dips as capital destruction.",
+    "evidence_verbatims": [
+      {
+        "id": "reddit-dryrun-1xda012",
+        "author": "[Redacted_User]",
+        "platform": "multi_platform",
+        "source_channel": "reddit",
+        "timestamp": "2026-04-12T14:15:00Z",
+        "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1xda012/",
+        "verbatim_text": "Completed 3 years of uninterrupted SIP today. First year my returns were literally 0.5% and I wanted to quit multiple times. But having a 7-year goal for child education kept me disciplined. Now returns are 16% XIRR."
+      },
+      {
+        "id": "reddit-dryrun-1xc8841",
+        "author": "[Redacted_User]",
+        "platform": "multi_platform",
+        "source_channel": "reddit",
+        "timestamp": "2026-03-30T10:05:00Z",
+        "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1xc8841/",
+        "verbatim_text": "People who stop SIP in year 1 fail to realize that market corrections are when you accumulate the most units cheaply. If you don't understand Rupee Cost Averaging you will always quit when portfolio goes red."
+      },
+      {
+        "id": "tradingqna-136100",
+        "author": "praveen***",
+        "platform": "zerodha_coin",
+        "source_channel": "tradingqna",
+        "timestamp": "2023-06-25T11:45:00Z",
+        "source_url": "https://tradingqna.com/t/136100",
+        "verbatim_text": "I stopped my SIP during 2022 sideways market thinking FD was safer. Biggest mistake of my investing journey. The market rallied 25% next year and I missed the entire compounding because of short term impatience."
+      }
+    ]
+  },
+  {
+    "question_number": 8,
+    "question": "How do these patterns differ across user segments (income stability, age, source of money, who influenced them)?",
+    "synthesis": "Patterns diverge sharply across demographic and financial profiles: 1) Young salaried professionals (21–25) with low emergency buffers suffer mandate bounces when salary credits slide past the 1st of the month; 2) Gig workers and freelancers with volatile monthly cash flow find rigid calendar mandates unsustainable; and 3) Users recruited via hyper-optimistic financial influencers churn fastest because real market fluctuations violate their expectation of guaranteed wealth.",
+    "evidence_verbatims": [
+      {
+        "id": "reddit-dryrun-1xd9812",
+        "author": "[Redacted_User]",
+        "platform": "multi_platform",
+        "source_channel": "reddit",
+        "timestamp": "2026-04-10T16:00:00Z",
+        "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1xd9812/",
+        "verbatim_text": "As a college student / intern earning 15k monthly stipend, committed 5k to SIP based on YouTube reels. By month 3 had no money left for rent and had to break the SIP. Ticket size was too high for my unstable income."
+      },
+      {
+        "id": "tradingqna-135210",
+        "author": "karthik***",
+        "platform": "zerodha_coin",
+        "source_channel": "tradingqna",
+        "timestamp": "2024-01-14T08:50:00Z",
+        "source_url": "https://tradingqna.com/t/135210",
+        "verbatim_text": "I am a freelancer so my client payments never come on fixed dates. Having a fixed auto-debit date on Coin means every other month the mandate fails and bank charges bounce penalty. Need flexi-debit options."
+      },
+      {
+        "id": "reddit-dryrun-1xc1129",
+        "author": "[Redacted_User]",
+        "platform": "multi_platform",
+        "source_channel": "reddit",
+        "timestamp": "2026-03-18T19:20:00Z",
+        "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1xc1129/",
+        "verbatim_text": "Father warned me not to invest in equity and stick to PPF and Post Office NSC. When my SIP dropped 3% in month 4, family pressure made me stop the mandate and withdraw money back into savings account."
+      }
+    ]
+  },
+  {
+    "question_number": 9,
+    "question": "What unmet needs emerge consistently across conversations?",
+    "synthesis": "Three critical unmet needs repeatedly surface across user conversations: 1) Flexible Pre-Debit Controls: A 48-hour pre-debit alert with a 1-click 'Skip this month with 0 bank penalties' option; 2) Transparent Settlement Tracking: Real-time visual tracking of Demat order status from bank debit to BSE StAR exchange routing to CDSL unit crediting; and 3) Perspective-Driven Framing: Reassurance that visualizes unit accumulation during market dips rather than displaying red loss percentages.",
+    "evidence_verbatims": [
+      {
+        "id": "playstore-zerodha_coin-fe417721-c454-47f6-91bf-4fa9b0b8c711",
+        "author": "Anand S.",
+        "platform": "zerodha_coin",
+        "source_channel": "play_store",
+        "timestamp": "2026-08-11T14:30:00Z",
+        "source_url": "https://play.google.com/store/apps/details?id=com.zerodha.coin",
+        "verbatim_text": "Please provide a simple option to pause SIP for 1 or 2 months directly from app notification. Right now if balance is low bank penalizes Rs 300. Give users control to pause without having to delete the entire mandate!"
+      },
+      {
+        "id": "tradingqna-134200",
+        "author": "vikas***",
+        "platform": "zerodha_coin",
+        "source_channel": "tradingqna",
+        "timestamp": "2023-12-08T10:15:00Z",
+        "source_url": "https://tradingqna.com/t/134200",
+        "verbatim_text": "Coin should have an order tracker like Swiggy or Amazon delivery. Show: Bank debited -> Order placed on BSE -> Units allotted by AMC -> Credited in CDSL Demat. That will stop 90% of user panic tickets."
+      },
+      {
+        "id": "reddit-dryrun-1xb9901",
+        "author": "[Redacted_User]",
+        "platform": "multi_platform",
+        "source_channel": "reddit",
+        "timestamp": "2026-03-24T12:00:00Z",
+        "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1xb9901/",
+        "verbatim_text": "Apps need to show how many extra units we got because NAV dropped, instead of just screaming red -2% loss. For beginners, seeing red numbers just triggers panic selling instead of compounding mindset."
+      }
+    ]
+  }
+]

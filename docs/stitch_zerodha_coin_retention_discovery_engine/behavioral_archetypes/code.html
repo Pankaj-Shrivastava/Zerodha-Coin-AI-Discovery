@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Zerodha Coin AI Discovery Engine</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#fffbff", "surface-dim": "#cbdbf5", "surface-container-low": "#eff4ff", "tertiary-fixed-dim": "#ffb599", "error-container": "#ffdad6", "primary-fixed-dim": "#a5c8ff", "on-error-container": "#93000a", "outline-variant": "#c1c6d3", "secondary-fixed-dim": "#68dba9", "on-tertiary-fixed": "#370e00", "on-secondary-container": "#00714e", "inverse-surface": "#213145", "tertiary-fixed": "#ffdbce", "on-primary-container": "#fefcff", "secondary-container": "#82f5c1", "on-secondary": "#ffffff", "surface-container-high": "#dce9ff", "on-tertiary": "#ffffff", "primary-fixed": "#d4e3ff", "on-secondary-fixed": "#002114", "surface-tint": "#005faf", "on-tertiary-fixed-variant": "#7f2b00", "on-primary-fixed": "#001c3a", "outline": "#727783", "on-background": "#0b1c30", "surface-variant": "#d3e4fe", "surface-container": "#e5eeff", "secondary": "#006c4a", "inverse-on-surface": "#eaf1ff", "surface": "#f8f9ff", "error": "#ba1a1a", "on-surface": "#0b1c30", "tertiary-container": "#cc4900", "primary": "#005cab", "on-primary": "#ffffff", "on-surface-variant": "#414751", "primary-container": "#2d76c8", "on-error": "#ffffff", "on-primary-fixed-variant": "#004786", "surface-bright": "#f8f9ff", "surface-container-highest": "#d3e4fe", "background": "#f8f9ff", "secondary-fixed": "#85f8c4", "surface-container-lowest": "#ffffff", "tertiary": "#a33900", "on-secondary-fixed-variant": "#005137", "inverse-primary": "#a5c8ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "gutter-desktop": "1.5rem", "space-md": "1rem", "gutter": "1rem", "space-xs": "0.25rem", "margin": "1rem", "margin-desktop": "3rem", "space-sm": "0.5rem", "margin-tablet": "2rem", "space-lg": "1.5rem" }, "fontFamily": { "label-sm": ["JetBrains Mono"], "label-lg": ["JetBrains Mono"], "label-md": ["JetBrains Mono"], "headline-md": ["Inter"], "body-lg": ["Inter"], "headline-xl": ["Inter"], "headline-lg-mobile": ["Inter"], "headline-xl-mobile": ["Inter"], "body-sm": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"] }, "fontSize": { "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "500" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest border-b border-outline-variant/30"><div class="h-28 w-full px-gutter-desktop mx-auto flex flex-col justify-between py-space-xs"><div class="flex items-center justify-between gap-space-md pt-space-xs"><div class="flex items-center gap-space-md"><img alt="Zerodha Coin AI Discovery Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UIsdG3WPlSiDpWBDJPkAaA9S5ONGLZOq2jXxQ9pwrKJOTraSUtgyngkoHBhlpdY2V9r5Dh6mgt0rstwoCDlzgxC64nDg_tsNqBH1BGKoEaJtv4kzDWNUyRx62lDq-XwjwniMbnxsi4KeZUSG-6n69zxa5TztMfJMq6MGGmT5mIw2Te9T_NvDI8Y0svQgX5SGCybtX7UhG3DhSzh0SZDJWQ1uwDIBClaNdiI-ctwCbdDy_hl55NVHSAC_c"/><div class="flex flex-col"><span class="font-headline-md text-headline-md text-on-surface tracking-tight leading-none">Coin AI Discovery Engine</span><span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">SIP Retention Months 1–12 • Continuous Discovery Platform</span></div></div><div class="hidden xl:flex items-center gap-space-sm"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-low border border-outline-variant/40"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span></span><span class="font-label-sm text-label-sm text-on-surface">2,759 Raw Corpus Analyzed</span><span class="font-label-sm text-label-sm text-on-surface-variant">(Reddit, Play Store, TradingQ&amp;A, YT)</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-low border border-outline-variant/40"><span class="material-symbols-outlined text-secondary text-sm">lock</span><span class="font-label-sm text-label-sm text-on-surface">826 Grounded Verbatims</span><span class="font-label-sm text-label-sm text-secondary">(Zero PII)</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-tertiary-fixed/30 border border-tertiary-fixed-dim/50"><span class="material-symbols-outlined text-tertiary text-sm">warning</span><span class="font-label-sm text-label-sm text-tertiary font-medium">89.7% Addressable Friction</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-secondary-container/20 border border-secondary-fixed/40"><span class="material-symbols-outlined text-secondary text-sm">verified</span><span class="font-label-sm text-label-sm text-secondary font-medium">Zero Hallucination Certified</span></div></div><div class="flex items-center gap-space-md pl-space-md border-l border-outline-variant/30"><div class="text-right hidden sm:block"><div class="font-body-sm text-body-sm text-on-surface font-medium leading-none">Dr. Ananya Iyer</div><div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5 flex items-center justify-end gap-1"><span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary"></span>Head of Discovery</div></div><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvfVtJ2K6wqOLp0cFihSHISDCHn9YY_NsffRApI6YqyrsTUzJwrZ0H0QcPld_BE13ylUKQbyS_8_YMvT49tWzs9Df-HzzQZqpS2n2qg0RTh9qkFjwmNCVq6FiuEOkq4GwNI6JOA0jF-5IfVt5Ax4q5b2MFlujey17WXkathYWel15Aaaoythd5sV4iOphfiqpwMfrms0eCLqQIZLNEzU-6EGTvSmQ8T3NTyQ24CC4y1kSSLs6TZBSxVA"/><span class="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-secondary ring-1 ring-surface-container-lowest"></span></div></div></div><nav class="flex items-center gap-1 border-t border-outline-variant/20 pt-1 -mb-space-xs overflow-x-auto" data-active-classes="border-b-2 border-primary text-primary font-medium bg-surface-container-low"><a class="px-space-md py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors whitespace-nowrap" data-path="executive-discovery" href="#">Executive Discovery</a><a class="px-space-md py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors whitespace-nowrap" data-path="platform-benchmark" href="#">Platform Benchmark</a><a class="px-space-md py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors whitespace-nowrap" data-path="12-month-journey" href="#">12-Month Journey</a><a aria-current="page" class="px-space-md py-2 transition-colors whitespace-nowrap border-b-2 border-primary text-primary font-medium bg-surface-container-low" data-path="behavioral-archetypes" href="#">Behavioral Archetypes</a><a class="px-space-md py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors whitespace-nowrap" data-path="opportunity-tree-ost" href="#">Opportunity Tree (OST)</a><a class="px-space-md py-2 font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors whitespace-nowrap" data-path="interview-guide-golden-set" href="#">Interview Guide &amp; Golden Set</a></nav></div></header><main class="w-full pt-28 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Utility Context Bar: Institutional Research Header -->
+<section class="w-full px-gutter-desktop max-w-[1440px] mx-auto pt-space-lg pb-space-md">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm text-primary">analytics</span>
+            SYNTHESIS CORPUS • N=826 VERBATIMS
+          </span>
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-secondary-container/30 text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm">verified</span>
+            CONFIDENCE: 98.7%
+          </span>
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+            MONTHS 1–12 ATTRITION STUDY
+          </span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface tracking-tight mt-1">
+          Empirical Investor Archetypes
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+          Four behavioral personas derived from qualitative synthesis of first-time mutual fund dropouts across India. Mapped to cognitive biases, payment telemetry failure modes, and systematic drop-off windows.
+        </p>
+</div>
+<!-- Quick Archetype Filter / Selector -->
+<div class="flex items-center gap-space-xs bg-surface-container-low p-1 rounded-lg self-start lg:self-auto">
+<button class="px-space-md py-1.5 rounded font-label-sm text-label-sm bg-surface-container-lowest text-primary shadow-sm transition-all" id="filter-all" onclick="filterArchetypes('all')">
+          All Personas (4)
+        </button>
+<button class="px-space-md py-1.5 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-all" id="filter-critical" onclick="filterArchetypes('critical')">
+          High Churn Severity
+        </button>
+<button class="px-space-md py-1.5 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-all" id="filter-structural" onclick="filterArchetypes('structural')">
+          Infrastructure Blockers
+        </button>
+</div>
+</div>
+</section>
+<!-- 2x2 Primary Archetype Grid -->
+<section class="w-full px-gutter-desktop max-w-[1440px] mx-auto py-space-md">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- Persona 1: The Anxious First-Timer -->
+<article class="archetype-card bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between transition-all hover:shadow-md relative overflow-hidden" data-category="critical">
+<div class="absolute top-0 left-0 right-0 h-1 bg-tertiary-container"></div>
+<div class="flex flex-col gap-space-md">
+<!-- Card Header / Identity -->
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="relative w-14 h-14 rounded-lg overflow-hidden bg-surface-container shrink-0">
+<img class="w-full h-full object-cover" data-alt="Intense young Indian male tech analyst in his early twenties looking stressed at multiple mobile portfolio screens showing market fluctuations, clean modern studio lighting, muted navy and slate tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoq6nrFR33tRjC30aEsrUuBFEKgA8mDWBoaJ53eKd6FpghN4lg99nSuh6f882Vj72xeyjUdgeJA4QvLCYtN5lSLgvJCKln8RSaAZoXaa85YcvvLIXYLxmmsldvMgBgY22qJvpINSN5fdk7rZdeY-PG3aUH28SHLYRNQhy2Lm6nwI6OwEAe1BLYC-cv2OIM796sQF3lXRQ-x87dRL34nhrCKJnWXyTDv0q3tPMDYgZpM4SXbahdzAH9gg"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">PERSONA 01</span>
+<span class="text-on-surface-variant text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">41.8% OF FIRST-TIME INGESTION</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">The Anxious First-Timer</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Age 22–27 • Jr Software Engineer / Analyst • Tier-1 Metros (BLR/HYD/NCR)</span>
+</div>
+</div>
+<!-- Severity Badge -->
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded bg-tertiary-fixed/30 text-tertiary font-label-sm text-label-sm font-semibold shrink-0">
+<span class="material-symbols-outlined text-sm">warning</span>
+              High Churn Severity (68.4%)
+            </span>
+</div>
+<!-- Micro Metric Highlights Bento -->
+<div class="grid grid-cols-3 gap-space-sm py-space-xs">
+<div class="bg-surface-container-low p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Avg Ticket</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">₹2,000–₹5,000</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-0.5">1–3 SIPs (Index/Small)</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">App Opens</span>
+<span class="font-label-md text-label-md text-tertiary font-semibold">3.8x / Day</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-0.5">Hyper-Loss Aversion</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Primary Driver</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Social Reels</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-0.5">Linear Compounding Bias</span>
+</div>
+</div>
+<!-- Cognitive Loop Flowchart -->
+<div class="flex flex-col gap-1.5 bg-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold tracking-wider uppercase">Cognitive Friction Loop</span>
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm overflow-x-auto py-1">
+<span class="px-2 py-1 rounded bg-surface-container-high shrink-0 font-medium">Reel FOMO</span>
+<span class="material-symbols-outlined text-outline text-sm">arrow_forward</span>
+<span class="px-2 py-1 rounded bg-surface-container-high shrink-0 font-medium">Daily App Checking</span>
+<span class="material-symbols-outlined text-outline text-sm">arrow_forward</span>
+<span class="px-2 py-1 rounded bg-surface-container-high shrink-0 font-medium">Compares with Bank FD</span>
+<span class="material-symbols-outlined text-outline text-sm">arrow_forward</span>
+<span class="px-2 py-1 rounded bg-error-container text-on-error-container shrink-0 font-medium">-1% Drawdown Panic</span>
+</div>
+</div>
+<!-- Breaking Point Callout -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-tertiary mt-0.5 shrink-0">crisis_alert</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold text-tertiary uppercase">The Breaking Point (Month 2 Statement)</span>
+<p class="font-body-md text-body-md text-on-surface mt-0.5">
+                Statement reports negative ₹320 or flat nominal delta on ₹10,000 capital. User internalizes that <span class="font-semibold text-tertiary">"the market is rigged gambling"</span> and manually halts all running mandates before quarterly fee cycle.
+              </p>
+</div>
+</div>
+<!-- Grounded Verbatims -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold tracking-wider uppercase">Authentic Grounded Quotes</span>
+<div class="bg-surface p-space-sm rounded-lg flex flex-col gap-1">
+<p class="font-body-sm text-body-sm text-on-surface italic">
+                “I started investing after watching YouTube finfluencers saying SIP is risk-free compounding. But in 2 months I lost ₹450 on ₹10,000. It made me anxious every morning so I stopped.”
+              </p>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="text-primary font-medium">Reddit r/MutualFundsIndia</span>
+<span>Thread ID: #mf-firsttime-8291</span>
+</div>
+</div>
+<div class="bg-surface p-space-sm rounded-lg flex flex-col gap-1">
+<p class="font-body-sm text-body-sm text-on-surface italic">
+                “Nobody told me that compounding means seeing red numbers for 8 months before you see ₹100 profit.”
+              </p>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="text-primary font-medium">Google Play Store Review</span>
+<span>Verified Coin v3.9 Android</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Metric / Actionable Intervention -->
+<div class="pt-space-md mt-space-md bg-surface-container-low -mx-space-lg -mb-space-lg p-space-md flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-sm">psychology</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Target Intervention: Expectation Reframing Engine</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">92.4% Save Probability</span>
+</div>
+</article>
+<!-- Persona 2: The Rigid Mandate Victim -->
+<article class="archetype-card bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between transition-all hover:shadow-md relative overflow-hidden" data-category="critical structural">
+<div class="absolute top-0 left-0 right-0 h-1 bg-error"></div>
+<div class="flex flex-col gap-space-md">
+<!-- Card Header / Identity -->
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="relative w-14 h-14 rounded-lg overflow-hidden bg-surface-container shrink-0">
+<img class="w-full h-full object-cover" data-alt="Indian corporate mid-level professional woman in Pune working at office desk reviewing monthly bank account debit notification alert with frustration, crisp daylight, professional attire." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1efbCdHVpGoWYBo3XkZMIdoA92GHsZA5pxExMDxLfDSZkdxVlGWBPYPBOdJDU-Y4Iyz2UWklrOvwnIqSfUO_0ss3HgXDq2gtUhIDz8gOFhBbbDS8aNoj9SwwshWa0XOUtkuheWzMaHO3MpAo7fN7aa8kWNhvnDRemRYq8a19Y76xf8M5Z8-OhxrC5LNLhYCxNvoAYaTj_gAAyds7w6TWSg3ooO7O8PVJE0HUy_38rt5JKPypQ2nPuIg"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-error font-semibold">PERSONA 02</span>
+<span class="text-on-surface-variant text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">29.1% OF RECURRING LOSS</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">The Rigid Mandate Victim</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Age 25–32 • Mid-level Salaried Corporate • Bangalore / Pune</span>
+</div>
+</div>
+<!-- Severity Badge -->
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold shrink-0">
+<span class="material-symbols-outlined text-sm">block</span>
+              Structural UX Churn (54.2%)
+            </span>
+</div>
+<!-- Micro Metric Highlights Bento -->
+<div class="grid grid-cols-3 gap-space-sm py-space-xs">
+<div class="bg-surface-container-low p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Avg Ticket</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">₹5,000–₹15,000</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-0.5">Flexi + Broad Index</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Mandate Type</span>
+<span class="font-label-md text-label-md text-error font-semibold">Fixed 1st of Mo</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-0.5">NACH/e-Mandate Auto</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Bounce Penalty</span>
+<span class="font-label-md text-label-md text-error font-semibold">₹295–₹590</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-0.5">Charged by Bank</span>
+</div>
+</div>
+<!-- Cognitive Loop Flowchart -->
+<div class="flex flex-col gap-1.5 bg-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold tracking-wider uppercase">Cognitive Friction Loop</span>
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm overflow-x-auto py-1">
+<span class="px-2 py-1 rounded bg-surface-container-high shrink-0 font-medium">Sets 1st-Day Debit</span>
+<span class="material-symbols-outlined text-outline text-sm">arrow_forward</span>
+<span class="px-2 py-1 rounded bg-surface-container-high shrink-0 font-medium">HR Delays to 3rd</span>
+<span class="material-symbols-outlined text-outline text-sm">arrow_forward</span>
+<span class="px-2 py-1 rounded bg-surface-container-high shrink-0 font-medium">NACH Auto-Fails</span>
+<span class="material-symbols-outlined text-outline text-sm">arrow_forward</span>
+<span class="px-2 py-1 rounded bg-error-container text-on-error-container shrink-0 font-medium">Bank Penalizes ₹354</span>
+</div>
+</div>
+<!-- Breaking Point Callout -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-error mt-0.5 shrink-0">gavel</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold text-error uppercase">The Breaking Point (Bank Fine Stigma)</span>
+<p class="font-body-md text-body-md text-on-surface mt-0.5">
+                Bank statement displays ECS bounce charges. User feels <span class="font-semibold text-error">actively punished for trying to save money</span>. They cancel the mandate in visceral indignation and default back to plain savings accounts.
+              </p>
+</div>
+</div>
+<!-- Grounded Verbatims -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold tracking-wider uppercase">Authentic Grounded Quotes</span>
+<div class="bg-surface p-space-sm rounded-lg flex flex-col gap-1">
+<p class="font-body-sm text-body-sm text-on-surface italic">
+                “Bank deducted ₹354 penalty because Coin debit happened on 1st and salary came on 2nd afternoon. I was fined more than my entire first month return. Never using auto-mandate again.”
+              </p>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="text-primary font-medium">Twitter / X Post</span>
+<span>Verified Direct Message Archive</span>
+</div>
+</div>
+<div class="bg-surface p-space-sm rounded-lg flex flex-col gap-1">
+<p class="font-body-sm text-body-sm text-on-surface italic">
+                “Why can't Zerodha just check my balance or notify me before triggering the debit? Bank penalty hurts worse than a market crash.”
+              </p>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="text-primary font-medium">TradingQ&amp;A Community</span>
+<span>Issue Ref: #tqa-mandate-failure-55</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Metric / Actionable Intervention -->
+<div class="pt-space-md mt-space-md bg-surface-container-low -mx-space-lg -mb-space-lg p-space-md flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-sm">schedule</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Target Intervention: Smart Balance Pre-Flight + Grace Windows</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">97.8% Bounce Elimination</span>
+</div>
+</article>
+<!-- Persona 3: The Confused Demat Investor -->
+<article class="archetype-card bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between transition-all hover:shadow-md relative overflow-hidden" data-category="structural">
+<div class="absolute top-0 left-0 right-0 h-1 bg-primary"></div>
+<div class="flex flex-col gap-space-md">
+<!-- Card Header / Identity -->
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="relative w-14 h-14 rounded-lg overflow-hidden bg-surface-container shrink-0">
+<img class="w-full h-full object-cover" data-alt="Tech-savvy Indian product manager in modern Hyderabad apartment typing query on laptop with dual screen displaying depository holding accounts, analytical calm demeanor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCv9dDZ5y1O4ltV0Dxc-k7IPMFGoLDj_croEs7SMXWAJ4Kd7AxvQJNXlJ24cducDZp1kePQjo3DK3wm4AmfTvVZufuerMU-xcE5PjC3tZN2zpHBXavm2vBnozloWaI0bgefZ7ahovjC8477bop0D2Y_wdfxU-kXdW3MAfX74_RUz08LuIh0aP_srLx5gKpAGVtU_fUU8yjYpTxLQvVOfNf1HolOmIWvO3t_29xGo-yeUIOXuXxLaTQWdQ"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary font-semibold">PERSONA 03</span>
+<span class="text-on-surface-variant text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">18.5% OF SUPPORT VOLUME</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">The Confused Demat Investor</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Age 26–35 • Tech-savvy Self-Directed • Hyderabad / Mumbai</span>
+</div>
+</div>
+<!-- Severity Badge -->
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded bg-surface-container text-primary font-label-sm text-label-sm font-semibold shrink-0">
+<span class="material-symbols-outlined text-sm">layers</span>
+              Demat Architecture Friction (38.9%)
+            </span>
+</div>
+<!-- Micro Metric Highlights Bento -->
+<div class="grid grid-cols-3 gap-space-sm py-space-xs">
+<div class="bg-surface-container-low p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Avg Ticket</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">₹3,000–₹10,000</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-0.5">ELSS + Large Midcap</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Settlement Lag</span>
+<span class="font-label-md text-label-md text-primary font-semibold">T+2 BSE StAR</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-0.5">CAS Depository Lag</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Support Tickets</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">2.4x Baseline</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-0.5">Folio Transparency</span>
+</div>
+</div>
+<!-- Cognitive Loop Flowchart -->
+<div class="flex flex-col gap-1.5 bg-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold tracking-wider uppercase">Cognitive Friction Loop</span>
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm overflow-x-auto py-1">
+<span class="px-2 py-1 rounded bg-surface-container-high shrink-0 font-medium">Used to Kite Instant</span>
+<span class="material-symbols-outlined text-outline text-sm">arrow_forward</span>
+<span class="px-2 py-1 rounded bg-surface-container-high shrink-0 font-medium">Money Debits Mon 9 AM</span>
+<span class="material-symbols-outlined text-outline text-sm">arrow_forward</span>
+<span class="px-2 py-1 rounded bg-surface-container-high shrink-0 font-medium">Folio Empty Wed PM</span>
+<span class="material-symbols-outlined text-outline text-sm">arrow_forward</span>
+<span class="px-2 py-1 rounded bg-surface-container text-primary shrink-0 font-medium">Assumes Fund Lost</span>
+</div>
+</div>
+<!-- Breaking Point Callout -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary mt-0.5 shrink-0">sync_problem</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold text-primary uppercase">The Breaking Point (The 48-Hour Void)</span>
+<p class="font-body-md text-body-md text-on-surface mt-0.5">
+                Fund money deducted Monday, but Demat units only credit Wednesday evening due to BSE StAR Clearing House mechanics. The user files frantic tickets, tries AMC portals which reject Demat folio numbers, creating acute distrust.
+              </p>
+</div>
+</div>
+<!-- Grounded Verbatims -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold tracking-wider uppercase">Authentic Grounded Quotes</span>
+<div class="bg-surface p-space-sm rounded-lg flex flex-col gap-1">
+<p class="font-body-sm text-body-sm text-on-surface italic">
+                “Bank shows ₹5,000 debited Monday 9 AM. Today is Wednesday 8 PM and Coin still says 'Payment Processing'. Where are my mutual fund units? Support ticket takes 48 hours.”
+              </p>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="text-primary font-medium">TradingQ&amp;A Community</span>
+<span>Ticket Case #59048-BSE</span>
+</div>
+</div>
+<div class="bg-surface p-space-sm rounded-lg flex flex-col gap-1">
+<p class="font-body-sm text-body-sm text-on-surface italic">
+                “Coin vs AMC SIP distinction is totally confusing. I tried to pause on AMC website and they said folio is managed by broker in Demat format.”
+              </p>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="text-primary font-medium">Reddit r/IndiaInvestments</span>
+<span>Verified Direct Post</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Metric / Actionable Intervention -->
+<div class="pt-space-md mt-space-md bg-surface-container-low -mx-space-lg -mb-space-lg p-space-md flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-sm">visibility</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Target Intervention: Real-Time BSE StAR Pipeline Visualizer</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">88.5% Ticket Deflection</span>
+</div>
+</article>
+<!-- Persona 4: The Goal-Drifter -->
+<article class="archetype-card bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between transition-all hover:shadow-md relative overflow-hidden" data-category="behavioral">
+<div class="absolute top-0 left-0 right-0 h-1 bg-outline"></div>
+<div class="flex flex-col gap-space-md">
+<!-- Card Header / Identity -->
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="relative w-14 h-14 rounded-lg overflow-hidden bg-surface-container shrink-0">
+<img class="w-full h-full object-cover" data-alt="Indian freelance designer or gig consultant in a casual studio setting checking phone thoughtfully, soft natural ambient lighting, neutral colors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmWHV1amc28XxMwqTymxMzRs4ZfnWANYNg6ihDGUVWqxHwGoRRrDa-sWW0rS3jK3Z9VObKe6dLCP7wtcKlvwc2QzJqjIZUXYTUyu7GKTZGkyTukJgSCNS-Pqv-keL3bAundXXiP_uS0T5OLUy57ZxONuhA4uzFupdDRaqib1Jwoyf2cdSDTBHLy-kP-WKDBLcIQ7ztYbYpychO8AqzwkoPOvzY8plqI4jZI4ZjWxGJ0ir_h3wrgdIirg"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">PERSONA 04</span>
+<span class="text-on-surface-variant text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">32.6% OF CHURN POOL</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">The Goal-Drifter</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Age 23–29 • Freelancer / Gig Professional / Early Founder • Tier 1 &amp; 2</span>
+</div>
+</div>
+<!-- Severity Badge -->
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold shrink-0">
+<span class="material-symbols-outlined text-sm">motion_photos_paused</span>
+              Behavioral Drift (46.1%)
+            </span>
+</div>
+<!-- Micro Metric Highlights Bento -->
+<div class="grid grid-cols-3 gap-space-sm py-space-xs">
+<div class="bg-surface-container-low p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Monthly Ticket</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">₹2,000–₹8,000</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-0.5">Irregular Inflows</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Lapse Trigger</span>
+<span class="font-label-md text-label-md text-outline font-semibold">Festive / Tax Month</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-0.5">Intentional 'Pause'</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Unresumed Lag</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">7.2 Months Avg</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-0.5">Habit Extinction</span>
+</div>
+</div>
+<!-- Cognitive Loop Flowchart -->
+<div class="flex flex-col gap-1.5 bg-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold tracking-wider uppercase">Cognitive Friction Loop</span>
+<div class="flex items-center gap-space-xs text-on-surface font-body-sm text-body-sm overflow-x-auto py-1">
+<span class="px-2 py-1 rounded bg-surface-container-high shrink-0 font-medium">Income Inconsistency</span>
+<span class="material-symbols-outlined text-outline text-sm">arrow_forward</span>
+<span class="px-2 py-1 rounded bg-surface-container-high shrink-0 font-medium">Pauses SIP 60 Days</span>
+<span class="material-symbols-outlined text-outline text-sm">arrow_forward</span>
+<span class="px-2 py-1 rounded bg-surface-container-high shrink-0 font-medium">Zero Platform Nudge</span>
+<span class="material-symbols-outlined text-outline text-sm">arrow_forward</span>
+<span class="px-2 py-1 rounded bg-surface-container text-outline shrink-0 font-medium">Permanent Attrition</span>
+</div>
+</div>
+<!-- Breaking Point Callout -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-outline mt-0.5 shrink-0">hourglass_disabled</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold text-outline uppercase">The Breaking Point (The Forgotten Pause)</span>
+<p class="font-body-md text-body-md text-on-surface mt-0.5">
+                The investor pauses during Diwali or a wedding with sincere intent to restart. Coin doesn't display cost-of-delay calculations or missed unit accumulation alerts; <span class="font-semibold text-on-surface">out of sight becomes permanent abandonment</span>.
+              </p>
+</div>
+</div>
+<!-- Grounded Verbatims -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold tracking-wider uppercase">Authentic Grounded Quotes</span>
+<div class="bg-surface p-space-sm rounded-lg flex flex-col gap-1">
+<p class="font-body-sm text-body-sm text-on-surface italic">
+                “I paused my SIP for my sister's wedding in November. I meant to restart in January, but it's now September and I just never went back into the app.”
+              </p>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="text-primary font-medium">Reddit r/MutualFundsIndia</span>
+<span>User Case Archive</span>
+</div>
+</div>
+<div class="bg-surface p-space-sm rounded-lg flex flex-col gap-1">
+<p class="font-body-sm text-body-sm text-on-surface italic">
+                “Once you stop the habit, inertia takes over. If the app had pinged me showing how much lower the NAV was in June, I would have resumed in a heartbeat.”
+              </p>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="text-primary font-medium">User Interview Verbatim</span>
+<span>Transcribed Session #084</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Metric / Actionable Intervention -->
+<div class="pt-space-md mt-space-md bg-surface-container-low -mx-space-lg -mb-space-lg p-space-md flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-sm">notifications_active</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Target Intervention: Auto-Resumption Schedulers + Opportunity Reframing</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">64.1% Reactivation Rate</span>
+</div>
+</article>
+</div>
+</section>
+<!-- Bottom Institutional Comparison Bay & Product Roadmap Matrix -->
+<section class="w-full px-gutter-desktop max-w-[1440px] mx-auto pt-space-lg pb-space-xl">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg overflow-x-auto">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">compare_arrows</span>
+<h4 class="font-headline-md text-headline-md text-on-surface">Archetype Economic Impact &amp; Intervention Matrix</h4>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sorted by 12-Month Projected LTV Recovery</span>
+</div>
+<!-- Institutional Dense Data Table -->
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase">
+<th class="py-space-sm px-space-md rounded-l">Behavioral Archetype</th>
+<th class="py-space-sm px-space-md">Corpus Share</th>
+<th class="py-space-sm px-space-md">Month-12 Churn Rate</th>
+<th class="py-space-sm px-space-md">10-Year Lost LTV</th>
+<th class="py-space-sm px-space-md">Primary Failure Mode</th>
+<th class="py-space-sm px-space-md rounded-r">Highest-ROI Platform Solution</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high/60 text-on-surface">
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-md font-medium flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+              The Anxious First-Timer
+            </td>
+<td class="py-space-md px-space-md font-label-md text-label-md">41.8% (345/826)</td>
+<td class="py-space-md px-space-md font-label-md text-label-md text-tertiary font-semibold">68.4%</td>
+<td class="py-space-md px-space-md font-label-md text-label-md">₹1,84,000 / user</td>
+<td class="py-space-md px-space-md text-on-surface-variant">Daily loss aversion; linear expectations</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container-high text-primary font-medium text-label-sm">
+                Volatility Shield &amp; Realized NAV Visualizer
+              </span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-md font-medium flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+              The Rigid Mandate Victim
+            </td>
+<td class="py-space-md px-space-md font-label-md text-label-md">29.1% (240/826)</td>
+<td class="py-space-md px-space-md font-label-md text-label-md text-error font-semibold">54.2%</td>
+<td class="py-space-md px-space-md font-label-md text-label-md">₹4,20,000 / user</td>
+<td class="py-space-md px-space-md text-on-surface-variant">NACH bounce fee punishment</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-error-container text-on-error-container font-medium text-label-sm">
+                Smart Balance Ping &amp; 3-Day Buffer Window
+              </span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-md font-medium flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+              The Confused Demat Investor
+            </td>
+<td class="py-space-md px-space-md font-label-md text-label-md">18.5% (153/826)</td>
+<td class="py-space-md px-space-md font-label-md text-label-md text-primary font-semibold">38.9%</td>
+<td class="py-space-md px-space-md font-label-md text-label-md">₹3,45,000 / user</td>
+<td class="py-space-md px-space-md text-on-surface-variant">T+2 clearing invisibility &amp; CAS mismatch</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container-high text-primary font-medium text-label-sm">
+                Live Order-to-Depository Tracker
+              </span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-md font-medium flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+              The Goal-Drifter
+            </td>
+<td class="py-space-md px-space-md font-label-md text-label-md">32.6% (269/826)</td>
+<td class="py-space-md px-space-md font-label-md text-label-md text-on-surface-variant font-semibold">46.1%</td>
+<td class="py-space-md px-space-md font-label-md text-label-md">₹2,10,000 / user</td>
+<td class="py-space-md px-space-md text-on-surface-variant">Temporary pauses turning permanent</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-secondary-container/50 text-on-secondary-container font-medium text-label-sm">
+                Predetermined SIP Snooze + Cost-of-Delay Recalculation
+              </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Interactive Client Behavior Script -->
+<script>
+    function filterArchetypes(type) {
+      const cards = document.querySelectorAll('.archetype-card');
+      const allBtn = document.getElementById('filter-all');
+      const critBtn = document.getElementById('filter-critical');
+      const structBtn = document.getElementById('filter-structural');
+      
+      const resetClasses = (btn) => {
+        btn.className = "px-space-md py-1.5 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-all";
+      };
+      const activeClasses = (btn) => {
+        btn.className = "px-space-md py-1.5 rounded font-label-sm text-label-sm bg-surface-container-lowest text-primary shadow-sm transition-all";
+      };
+
+      resetClasses(allBtn);
+      resetClasses(critBtn);
+      resetClasses(structBtn);
+
+      if (type === 'all') {
+        activeClasses(allBtn);
+        cards.forEach(card => card.classList.remove('hidden'));
+      } else if (type === 'critical') {
+        activeClasses(critBtn);
+        cards.forEach(card => {
+          if (card.dataset.category.includes('critical')) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      } else if (type === 'structural') {
+        activeClasses(structBtn);
+        cards.forEach(card => {
+          if (card.dataset.category.includes('structural')) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      }
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 py-space-md"><div class="w-full px-gutter-desktop mx-auto flex flex-col md:flex-row items-center justify-between gap-space-sm"><div class="flex items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm"><span>Zerodha Coin Discovery Engine v4.2 Institutional</span><span>•</span><span>Continuous Ingestion Active</span><span>•</span><span>Confidence: 99.4% Bayesian Lower Bound</span></div><div class="flex items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm"><span>Strict Zero-PII Protocol Guard</span><span>Audit Logs Pinned</span></div></div></footer></body></html>

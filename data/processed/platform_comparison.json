@@ -1,0 +1,182 @@
+[
+  {
+    "platform_code": "zerodha_coin",
+    "platform_name": "Zerodha Coin",
+    "harvested_verbatims_count": 195,
+    "top_friction_modes": [
+      {
+        "category": "emotional_isolation_post_start",
+        "count": 92
+      },
+      {
+        "category": "underwhelming_returns_shock",
+        "count": 57
+      },
+      {
+        "category": "silent_mandate_failure",
+        "count": 30
+      }
+    ],
+    "core_nuance": "High demat ledger confusion (T+2 settlement delay) & BSE StAR mandate rigidity (Coin SIP vs AMC SIP).",
+    "sample_quotes": [
+      {
+        "id": "playstore-zerodha_coin-890aea81-7b94-4c46-b3a0-2d8515043715",
+        "author": "Ashutosh M.",
+        "quote": "Worst support when you need it the most. Today, I added funds to my account. The amount was debited from my bank account but was not credited to my Zerodha account. To make matters...",
+        "source_url": "https://play.google.com/store/apps/details?id=com.zerodha.kite3",
+        "friction_category": "underwhelming_returns_shock"
+      },
+      {
+        "id": "playstore-zerodha_coin-12ee1788-6e8f-42d5-8d25-213da0da5e38",
+        "author": "Abhinay S.",
+        "quote": "My experience with Zerodha Kite has been mixed. The app interface is clean, smooth, and very easy to use, which makes trading convenient even for beginners. However, the charges fe...",
+        "source_url": "https://play.google.com/store/apps/details?id=com.zerodha.kite3",
+        "friction_category": "emotional_isolation_post_start"
+      }
+    ]
+  },
+  {
+    "platform_code": "groww",
+    "platform_name": "Groww",
+    "harvested_verbatims_count": 49,
+    "top_friction_modes": [
+      {
+        "category": "emotional_isolation_post_start",
+        "count": 29
+      },
+      {
+        "category": "underwhelming_returns_shock",
+        "count": 18
+      },
+      {
+        "category": "confusing_statement_and_metrics",
+        "count": 2
+      }
+    ],
+    "core_nuance": "High initial ease of onboarding, but severe friction around payment gateway glitches and unassisted customer support when debits bounce.",
+    "sample_quotes": [
+      {
+        "id": "playstore-groww-4b9a15df-0e1d-4104-b236-296344af258b",
+        "author": "Kishan A.",
+        "quote": "My bank account has been blocked due to an unexpected transaction from Groww. I did not initiate or withdraw any money, yet funds were automatically credited to my account. It has ...",
+        "source_url": "https://play.google.com/store/apps/details?id=com.nextbillion.groww",
+        "friction_category": "underwhelming_returns_shock"
+      },
+      {
+        "id": "playstore-groww-370afd8b-f51f-47fa-a662-b51a6be2e0a8",
+        "author": "Palash M.",
+        "quote": "Groww is very easy to use compared to many apps, which I really like. However, there is no separate category or dedicated section for International Mutual Funds, making it difficul...",
+        "source_url": "https://play.google.com/store/apps/details?id=com.nextbillion.groww",
+        "friction_category": "underwhelming_returns_shock"
+      }
+    ]
+  },
+  {
+    "platform_code": "angel_one",
+    "platform_name": "Angel One",
+    "harvested_verbatims_count": 46,
+    "top_friction_modes": [
+      {
+        "category": "underwhelming_returns_shock",
+        "count": 21
+      },
+      {
+        "category": "emotional_isolation_post_start",
+        "count": 18
+      },
+      {
+        "category": "silent_mandate_failure",
+        "count": 2
+      }
+    ],
+    "core_nuance": "Stock trading crossover noise; users complain of complex UI cluttered with F&O and equity recommendations rather than clean SIP tracking.",
+    "sample_quotes": [
+      {
+        "id": "playstore-angel_one-4cb1a904-409b-4a8b-8ba8-61e591d644b6",
+        "author": "mdimran m.",
+        "quote": "I am extremely disappointed with the Angel One trading app. For the past month, it has frequently malfunctioned and often fails to open or load properly—approximately 70% of the ti...",
+        "source_url": "https://play.google.com/store/apps/details?id=com.msf.angelmobile",
+        "friction_category": "underwhelming_returns_shock"
+      },
+      {
+        "id": "playstore-angel_one-e3a6d71e-fe64-4be5-a53d-5829fec24ad9",
+        "author": "bala s.",
+        "quote": "Waste app with hidden brokerage charges. Don't use this app if you are a long-term delivery investor. Brokerage charges are added to your purchase cost, increasing your average buy...",
+        "source_url": "https://play.google.com/store/apps/details?id=com.msf.angelmobile",
+        "friction_category": "underwhelming_returns_shock"
+      }
+    ]
+  },
+  {
+    "platform_code": "paytm_money",
+    "platform_name": "Paytm Money",
+    "harvested_verbatims_count": 44,
+    "top_friction_modes": [
+      {
+        "category": "emotional_isolation_post_start",
+        "count": 26
+      },
+      {
+        "category": "underwhelming_returns_shock",
+        "count": 17
+      },
+      {
+        "category": "cashflow_mismatch_and_emi",
+        "count": 1
+      }
+    ],
+    "core_nuance": "Mandate deduction timing mismatch and auto-pay recurring mandate failures causing bank ECS bounce penalties.",
+    "sample_quotes": [
+      {
+        "id": "playstore-paytm_money-731a5559-02a3-49d0-a441-7390bf890cf5",
+        "author": "Kaushiki K.",
+        "quote": "I am using Paytm money from 2021. Earlier I never had any issue using the app. But now days I am experiencing a lot problems. Some hidden charges are applied and there is no explan...",
+        "source_url": "https://play.google.com/store/apps/details?id=com.paytmmoney",
+        "friction_category": "underwhelming_returns_shock"
+      },
+      {
+        "id": "playstore-paytm_money-12542227-4c04-4ad9-a5ca-8cad4b315069",
+        "author": "Prakash T.",
+        "quote": "They are living in the era when stocks were issued on a hard paper. They don't have a way to do reKYC online if your investment account gets Dormant due to the inactivity. You will...",
+        "source_url": "https://play.google.com/store/apps/details?id=com.paytmmoney",
+        "friction_category": "emotional_isolation_post_start"
+      }
+    ]
+  },
+  {
+    "platform_code": "et_money",
+    "platform_name": "ET Money",
+    "harvested_verbatims_count": 56,
+    "top_friction_modes": [
+      {
+        "category": "emotional_isolation_post_start",
+        "count": 30
+      },
+      {
+        "category": "underwhelming_returns_shock",
+        "count": 20
+      },
+      {
+        "category": "confusing_statement_and_metrics",
+        "count": 2
+      }
+    ],
+    "core_nuance": "Smart SIP / Genius recommendation fatigue; users feel pressured into complex portfolio switches instead of maintaining simple index SIPs.",
+    "sample_quotes": [
+      {
+        "id": "playstore-et_money-033cd01b-1587-4a4f-b5c3-ae2b1ef6a399",
+        "author": "Sattison A.",
+        "quote": "I have been this app for 4 years and it used to be so good. It also had expense tracking. And was very simple to use. Now they have made it into an utter mess. I can't find my prof...",
+        "source_url": "https://play.google.com/store/apps/details?id=com.smartspends",
+        "friction_category": "underwhelming_returns_shock"
+      },
+      {
+        "id": "playstore-et_money-83e09954-6bf2-4a16-973d-10334005ec7a",
+        "author": "Rishav G.",
+        "quote": "They are making the app more predatory and less useful with every update. There are a million paid options you can access (Genius, insights, paid reports etc.) within seconds of op...",
+        "source_url": "https://play.google.com/store/apps/details?id=com.smartspends",
+        "friction_category": "underwhelming_returns_shock"
+      }
+    ]
+  }
+]

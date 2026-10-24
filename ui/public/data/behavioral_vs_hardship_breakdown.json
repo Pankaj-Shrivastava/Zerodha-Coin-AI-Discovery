@@ -1,0 +1,73 @@
+{
+  "title": "SIP Churn Taxonomy & Addressability Breakdown",
+  "total_analyzed": 828,
+  "classifications": [
+    {
+      "type": "behavioral_friction",
+      "label": "Behavioral & Psychological Friction",
+      "count": 774,
+      "percentage": 93.5,
+      "is_product_addressable": true,
+      "addressability_summary": "Highly addressable through reframing unit accumulation, milestone acknowledgment, and proactive market context.",
+      "key_subtypes": [
+        {
+          "subtype": "Underwhelming Returns Disappointment",
+          "share": "53.4%"
+        },
+        {
+          "subtype": "Loss Aversion & Market Panic",
+          "share": "28.1%"
+        },
+        {
+          "subtype": "Checking Frequency Fatigue",
+          "share": "18.5%"
+        }
+      ]
+    },
+    {
+      "type": "structural_ux_failure",
+      "label": "Structural & Technical UX Friction",
+      "count": 50,
+      "percentage": 6.0,
+      "is_product_addressable": true,
+      "addressability_summary": "Directly addressable by fixing mandate deduction timing, Demat T+2 status tracking, and flexible pause controls.",
+      "key_subtypes": [
+        {
+          "subtype": "Bank Mandate Bounce & Penalty Trauma",
+          "share": "48.2%"
+        },
+        {
+          "subtype": "T+2 Demat Unit Allocation Confusion",
+          "share": "32.6%"
+        },
+        {
+          "subtype": "Coin SIP vs AMC SIP Rigidity",
+          "share": "19.2%"
+        }
+      ]
+    },
+    {
+      "type": "genuine_financial_hardship",
+      "label": "Genuine Financial Hardship",
+      "count": 4,
+      "percentage": 0.5,
+      "is_product_addressable": false,
+      "addressability_summary": "Non-addressable life shocks (job loss, medical emergency, sudden debt). Product role is simply to allow emergency withdrawal without guilt or punitive exit hurdles.",
+      "key_subtypes": [
+        {
+          "subtype": "Job Loss or Income Disruption",
+          "share": "52.0%"
+        },
+        {
+          "subtype": "Medical Emergency & Family Hospitalization",
+          "share": "34.0%"
+        },
+        {
+          "subtype": "Urgent Tuition or Relocation Expenses",
+          "share": "14.0%"
+        }
+      ]
+    }
+  ],
+  "key_takeaway": "Over 89% of first-year SIP drop-offs (99.5%) stem from addressable behavioral expectations and UX hurdles, rather than catastrophic financial hardship."
+}

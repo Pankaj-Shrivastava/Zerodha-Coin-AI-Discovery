@@ -132,43 +132,55 @@
 
 ---
 
-### Phase 5: Interactive Discovery UI Construction
-* **Goal**: Build an aesthetic, modern web application to explore the grounded findings.
+### Phase 5: Interactive Discovery UI Construction (React + Tailwind CSS + Vercel)
+* **Goal**: Build a modern, high-performance web dashboard in React & Tailwind CSS, optimized for zero-latency exploration and seamless Vercel deployment.
+* **Stack**:
+  - **Framework**: React (Vite-powered SPA for fast bundling and hot reload).
+  - **Styling**: Tailwind CSS for curated design tokens, sleek dark mode (`slate-950` / `zinc-900`), and fluid responsive layouts.
+  - **Icons**: Lucide React.
+  - **Data Delivery**: Direct client-side consumption of pre-synthesized JSON artifacts from `public/data/` (zero database or backend latency).
+  - **Hosting Target**: Vercel (Production Static SPA with automated edge CDN caching).
 * **Deliverables & Tasks**:
-  1. Initialize web project in `ui/` (Vite + Vanilla CSS / JS or lightweight component framework).
-  2. Implement Design System:
-     - Sleek dark mode palette with cyan/emerald accents and glassmorphic cards.
-     - Typography: Google Fonts (`Outfit` for titles, `Inter` for body).
-     - Micro-animations and hover transitions.
+  1. Initialize React + Vite project in `ui/` with Tailwind CSS.
+  2. Implement Core Design System:
+     - Harmonious dark mode palette (`#090d16`, `#111827`, `#059669`, `#06b6d4`, `#6366f1`).
+     - Modern typography (`Inter` / `Outfit` from Google Fonts).
+     - Dynamic glassmorphism cards and smooth tab transitions.
   3. Build 6 Dedicated Discovery Views:
-     - **View 1: Executive Summary & Drop-Off Timeline**: Includes the **9 Core Questions module** at the bottom with expandable verbatim cards and source links.
-     - **View 2: Cross-Platform Comparison Matrix**: Side-by-side benchmark of Coin vs. Groww vs. Angel One vs. others.
-     - **View 3: Grounded Verbatims Explorer**: Searchable, faceted feed with source badges and direct URL links.
-     - **View 4: Interactive Opportunity Solution Tree (OST)**: Visual hierarchical tree with slide-out evidence drawer.
-     - **View 5: Primary Research Interview Guide**: Ready-to-use 1-on-1 interview protocol.
-     - **View 6: Grounded Source Citations & Audit Log**: Verifiable index of all data sources.
-* **Success Criteria**: UI runs smoothly locally (`npm run dev`), renders all processed JSON files dynamically, and allows full verbatim traceability.
+     - **View 1: Executive Discovery & Addressability Matrix**: Total corpus stats, friction addressability breakdown donut (89.7% addressable vs 10.3% hardship). Includes **The 9 Foundational Questions Module** at the base with authentic quotes and citations.
+     - **View 2: Cross-Platform Comparison Matrix**: Side-by-side benchmark of Coin vs Groww vs Angel One vs Paytm Money vs ET Money.
+     - **View 3: 12-Month Lifecycle Journey Timeline**: 5-stage timeline showing peak drop-off moments and emotional shifts.
+     - **View 4: Grounded Behavioral Archetypes**: 4 empirical persona cards (*The Anxious First-Timer*, *The Rigid Mandate Victim*, *The Confused Demat Investor*, *The Goal-Drifter*).
+     - **View 5: Interactive Opportunity Solution Tree (OST)**: Teresa Torres Problem Space tree with expandable evidence slide-outs.
+     - **View 6: Primary Research Interview Guide & Audit Registry**: 4-track story-based interview protocol with full citation provenance directory.
+  4. Configure `vercel.json` and build pipeline (`npm run build`) for production deployment.
+* **Execution Gating**: **Phase 5 execution is held pending explicit user go-ahead.**
 
 ---
 
 ### Phase 6: Grounding Verification, Quality Assurance & Auditability
 * **Goal**: Audit every data point to guarantee absolute truthfulness and budget adherence.
 * **Deliverables & Tasks**:
-  1. Run automated URL check to confirm all permalinks resolve correctly.
-  2. Verify that no quotes were truncated or paraphrased.
-  3. Audit Apify console to confirm billing was $0 and usage stayed within the $5 free credit.
-  4. Generate a consolidated discovery summary report for stakeholder presentation.
+  1. Automated Evaluation Suite:
+     - `python scripts/eval_harvesters.py` (Dimensions 1 & 2) -> PASSED [EXIT 0]
+     - `python scripts/eval_grounding.py` (Dimensions 3, 4, 8 & Edge-Cases) -> PASSED [EXIT 0]
+     - `python scripts/eval_synthesis.py` (Dimensions 5, 6, 7) -> PASSED [EXIT 0]
+  2. 100% exact substring match verified against raw files (826 / 826 records, 0 mismatches).
+  3. Zero unmasked PII leaks confirmed.
+  4. Apify budget verified: $4.01 spent of $5.00 free credit; final invoice $0.00.
 * **Success Criteria**: 100% citation pass rate, zero budget overruns, zero hallucinations detected.
 
 ---
 
 ## Current Status & Next Immediate Action
 
-| Component | Status | Next Step |
+| Component | Status | Notes / Next Step |
 | :--- | :--- | :--- |
-| Documentation (`discovery_plan`, `context`, `architecture`, `decision`, `implementation-plan`, `evals`, `edge-cases`) | ✅ **Complete** | Ready for user verification & Phase 1 |
-| Folder Structure (`data/raw`, `data/processed`, `scripts`) | ✅ **Complete** | Ready for script creation |
-| Scraper Scripts (`scripts/harvest_*.py/js`) | 🟡 **Pending** | Build Phase 2 free scrapers (Play Store & TradingQ&A) |
-| Apify Reddit Configuration | 🟡 **Pending** | Awaiting Apify API token setup by user |
-| Normalization & Synthesis Pipelines | ⚪ **Queued** | Triggered after Phase 2 data harvest |
-| Interactive UI | ⚪ **Queued** | Built once Phase 3-4 data is ready |
+| **Documentation Suite** (`discovery_plan`, `context`, `architecture`, `decision`, `implementation-plan`, `evals`, `edge-cases`, `workflow_and_validation`, `zerodha_coin_app_journey`, `deployment`) | ✅ **Complete & Updated** | 100% aligned with React + Tailwind + Vercel and harvested metrics |
+| **Phase 1: Environment & Tooling** | ✅ **Complete** | Node.js & Python dependencies installed, `.env` configured |
+| **Phase 2: Multi-Platform Data Harvesting** | ✅ **Complete** | 2,759 raw records harvested (Play Store 1,026, TradingQ&A 346, YouTube 384, Reddit 1,003); Apify cost: $4.01 ($0 invoice) |
+| **Phase 3: Filtering & Grounded Normalization** | ✅ **Complete** | 826 high-signal, zero-PII verbatims normalized in `data/processed/grounded_verbatims.json` |
+| **Phase 4: Qualitative Synthesis & OST** | ✅ **Complete** | All 8 synthesis JSON files generated; 9 Core Questions backed by 3 authentic quotes each |
+| **Evaluation Suite & Edge-Case Validation** | ✅ **Complete & Passed** | `eval_harvesters.py`, `eval_grounding.py`, `eval_synthesis.py` all passing with Exit Code 0 |
+| **Phase 5: Interactive Discovery UI (React + Tailwind)** | 🟡 **Ready (On Hold)** | Fully architected; **Awaiting user go-ahead before execution** |
+| **Vercel Deployment Plan (`deployment.md`)** | ✅ **Complete** | Build and deployment plan ready for Vercel static SPA hosting |

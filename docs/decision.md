@@ -63,3 +63,11 @@
 * **Decision**: UI construction is strictly gated until Layer 1 (Scraping), Layer 2 (Noise Filtering & JSON Normalization), and Layer 3 (Opportunity Synthesis) are complete and validated against real JSON files in `data/processed/`.
 * **Context & Rationale**: Building a UI before data exists leads to hardcoded mockups and fictional data structures. The UI must be an interactive reflection of real, normalized user data.
 * **Status**: Accepted & Enforced.
+
+---
+
+## ADR-08: Zero PII Storage & Privacy Redaction Policy
+* **Decision**: The platform does **NOT store any Personally Identifiable Information (PII)**. All scraped and normalized data must be strictly anonymized. Any phone numbers, email addresses, PAN cards, bank account numbers, physical addresses, or full real names accidentally posted in user reviews or forum comments must be automatically scrubbed and redacted (e.g., `[REDACTED_PHONE]`, `[REDACTED_EMAIL]`, `[REDACTED_ACCOUNT]`). User handles are treated as public pseudonyms or anonymized.
+* **Context & Rationale**: User empathy research requires understanding emotional and structural friction, not tracking individuals. Zero PII storage guarantees absolute user privacy and compliance with data protection principles.
+* **Status**: Accepted & Enforced.
+

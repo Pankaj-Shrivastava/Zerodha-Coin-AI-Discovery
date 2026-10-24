@@ -159,6 +159,19 @@ Evaluates whether the generated interview guide prepares user researchers to con
 
 ---
 
+## 8. Dimension 8: Zero PII Storage & Privacy Redaction Audit
+
+Evaluates the database to ensure zero Personally Identifiable Information (PII) is stored or displayed:
+
+* **Regex Audit Scan**: Every record in `data/processed/grounded_verbatims.json` is scanned with automated regular expressions for:
+  - Phone numbers (10-digit Indian mobile formats: `(?:(?:\+|0{0,2})91[\s-]*)?[6789]\d{9}`).
+  - Email addresses (`[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+`).
+  - Bank Account Numbers (9–18 digit sequences) and IFSC codes.
+  - Indian PAN numbers (`[A-Z]{5}[0-9]{4}[A-Z]{1}`).
+* **Passing Standard**: **Zero un-redacted PII patterns detected (0% leakage)**. Any unmasked phone number or email triggers an immediate build halt until scrubbed.
+
+---
+
 ## 9. Automated Evaluation Execution Checklist
 
 Before Phase 5 (UI Construction) is approved, run the automated evaluation suite:

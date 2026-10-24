@@ -151,7 +151,12 @@ Raw text from internet forums and app reviews contains significant noise (unrela
 │   Exclude: F&O options bugs, intraday trading, crypto spam, general praise ("nice app")│
 │           │ PASSES                                                                     │
 │           ▼                                                                            │
-│   [ Check 4: Verbatim Grounding & Formatting ]                                         │
+│   [ Check 4: Automated PII Redaction & Privacy Scrubbing ]                             │
+│   Scrub phone numbers, emails, bank account numbers, PANs, addresses                   │
+│   (Replaced with [REDACTED_PHONE], [REDACTED_EMAIL], etc. Zero PII stored)             │
+│           │                                                                            │
+│           ▼                                                                            │
+│   [ Check 5: Verbatim Grounding & Formatting ]                                         │
 │   Extract verbatim text, assign ID, attach permalink citation, tag friction category   │
 │           │                                                                            │
 │           ▼                                                                            │
@@ -462,7 +467,9 @@ Zerodha-Coin-AI-Discovery/
 │   ├── decision.md                     # Core Architectural & Strategic Decisions
 │   ├── implementation-plan.md          # Phase-wise Execution & Build Roadmap
 │   ├── evals.md                        # Evaluation Framework & Verbatim Quality Benchmarks
-│   └── edge-cases.md                   # Platform, Linguistic & Behavioral Edge-Cases
+│   ├── edge-cases.md                   # Platform, Linguistic & Behavioral Edge-Cases
+│   ├── workflow_and_validation.md      # Workflow, Analyzed Sources & Human Golden Set Audit
+│   └── zerodha_coin_app_journey.md     # Zerodha Coin Architecture & Journey Touchpoint Map
 ├── scripts/
 │   ├── harvest_reddit.js / .py         # Apify Reddit integration ($5 limit)
 │   ├── harvest_playstore.js            # Node.js google-play-scraper (Free)

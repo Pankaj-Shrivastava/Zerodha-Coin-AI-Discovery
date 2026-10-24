@@ -95,6 +95,10 @@ To prevent cognitive bias, product hallucinations, and sterile summaries, the AI
 ### Guardrail 4: Episodic Past Inquiry over Speculative Desires
 * **Rule**: When synthesizing findings and formulating interview questions, always anchor in concrete past events (*"Walk me through what happened the morning your mandate failed"*) rather than speculative opinions (*"Would you like an automated pause alert?"*).
 
+### Guardrail 5: Zero PII Storage & Automated Privacy Redaction
+* **Rule**: The platform does **NOT store any Personally Identifiable Information (PII)**. Any phone numbers, email addresses, bank accounts, PAN numbers, full real names, or physical addresses present in public comments/reviews must be automatically scrubbed and redacted (e.g., `[REDACTED_PHONE]`, `[REDACTED_EMAIL]`).
+* **Why**: Empathy discovery focuses entirely on understanding behavioral frictions, mental models, and emotional pain points. Storing personal identifiers is strictly unnecessary and violates user privacy principles.
+
 ---
 
 ## 4. Methodological Foundations & Pillars

@@ -57,6 +57,18 @@
   1. Impose a **Minimum Information Density Rule**: Verbatims must contain at least **15 characters AND at least 4 words** to qualify for normalization into `grounded_verbatims.json`.
   2. Single-word complaints are stored in aggregate sentiment counts but barred from the verbatim evidence repository.
 
+### A.4 Accidental PII in Public Reviews & Forum Threads
+* **Scenario**: Desperate users seeking customer support inadvertently post their phone numbers, bank account numbers, email addresses, or PAN details in public reviews or forum comments:
+  - *"My SIP failed on Zerodha, please call me urgently on 9876543210 or email rahul.kumar@gmail.com, my account is 1092837465."*
+* **The Failure Mode**: Storing or displaying unmasked user PII violates privacy regulations and user confidentiality.
+* **Engine Handling Protocol**:
+  1. The normalization pipeline runs an automated regex scrubber before any text enters `grounded_verbatims.json`.
+  2. Identifiers are cleanly masked:
+     - Phone numbers ➔ `[REDACTED_PHONE]`
+     - Emails ➔ `[REDACTED_EMAIL]`
+     - Account / PAN sequences ➔ `[REDACTED_ACCOUNT]`
+  3. The core emotional and functional friction (*"My SIP failed on Zerodha, please call me urgently..."*) is preserved verbatim without altering the quote's qualitative value.
+
 ---
 
 ## 3. Category B: Scraper & Technical Platform Edge Cases

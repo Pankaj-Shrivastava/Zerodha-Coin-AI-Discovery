@@ -69,9 +69,10 @@ We will harvest qualitative user signals from the following verified, publicly a
 | :--- | :--- | :--- | :--- | :--- |
 | P1 | Zerodha Coin (Kite) | com.zerodha.kite3 | https://play.google.com/store/apps/details?id=com.zerodha.kite3 | Primary platform; SIP pause/cancel UX complaints, mandate failure frustrations, confusing statements |
 | P2 | Groww | com.nextbillion.groww | https://play.google.com/store/apps/details?id=com.nextbillion.groww | Major competitor; reviews frequently mention SIP auto-cancellation, poor return visibility, and mandate failures |
-| P3 | Paytm Money | com.paytmmoney | https://play.google.com/store/apps/details?id=com.paytmmoney | Popular among first-time investors; reviews cite confusion about SIP status and underwhelming returns |
-| P4 | ET Money | com.smartspends | https://play.google.com/store/apps/details?id=com.smartspends | SIP-focused app; reviews reveal frustration with return tracking and fund comparison complexity |
-| P5 | MF Utility (MFU) | com.mfu.cams | https://play.google.com/store/apps/details?id=com.mfu.cams | Direct plan utility; reviews from confused first-timers struggling with mandates and navigation |
+| P3 | Angel One | com.msf.angelmobile | https://play.google.com/store/apps/details?id=com.msf.angelmobile | Key competitor; reviews reveal mandate dropouts, hidden charges perception, and confusing MF portfolio UI |
+| P4 | Paytm Money | com.paytmmoney | https://play.google.com/store/apps/details?id=com.paytmmoney | Popular among first-time investors; reviews cite confusion about SIP status and underwhelming returns |
+| P5 | ET Money | com.smartspends | https://play.google.com/store/apps/details?id=com.smartspends | SIP-focused app; reviews reveal frustration with return tracking and fund comparison complexity |
+| P6 | MF Utility (MFU) | com.mfu.cams | https://play.google.com/store/apps/details?id=com.mfu.cams | Direct plan utility; reviews from confused first-timers struggling with mandates and navigation |
 
 **Review filtering strategy:**
 - Filter for 1-star, 2-star, and 3-star reviews (friction signals live in dissatisfaction)
@@ -125,28 +126,29 @@ We will harvest qualitative user signals from the following verified, publicly a
 
 ## 3. Data Harvesting Strategy
 
-### 3.1 Budget Constraint
+### 3.1 Budget Constraint & Apify Usage Policy
 
 | Item | Limit |
 | :--- | :--- |
 | **Total Budget** | **$5.00** (Apify Free Tier monthly credit) |
 | **Platform** | [Apify](https://apify.com/pricing) — Free plan, $5 monthly credit, $0.2/compute unit |
 | **No credit card required** | ✅ |
+| **Apify usage** | **Reddit ONLY** — all other sources use free open-source tools or native APIs |
 
 ### 3.2 Budget Allocation Across Sources
 
-| Source | Apify Actor | Est. Cost per 1K Items | Planned Volume | Est. Cost | Priority |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Reddit (R1-R4)** | `apify/reddit-scraper` or budget community actor | ~$0.60–$1.50 / 1K posts | ~2,000 posts+comments | ~$1.20–$2.00 | 🔴 **P0 — Highest** |
-| **Google Play Reviews (P1-P5)** | `apify/google-play-scraper` | ~$1.15 / 1K reviews | ~1,500 reviews (across 5 apps) | ~$1.00–$1.50 | 🔴 **P0 — Highest** |
-| **TradingQ&A (T1-T6)** | `arman-bd/discourse-forum-scraper` (Discourse native JSON) | ~$0.50–$1.00 / 1K posts | ~500 posts+replies | ~$0.50 | 🟡 **P1 — High** |
-| **YouTube Comments (Y1-Y5)** | `streamers/youtube-comment-scraper` or community actor | ~$0.40–$1.30 / 1K comments | ~500 comments | ~$0.50–$0.65 | 🟡 **P1 — High** |
-| **Twitter/X (X1-X3)** | `apidojo/tweet-scraper` or budget variant | ~$1.00–$2.00 / 1K tweets | ~200 tweets | ~$0.20–$0.40 | 🟢 **P2 — If budget remains** |
-| **Industry Reports (I1-I7)** | Manual read / `read_url_content` (no Apify cost) | $0.00 | All 7 sources | $0.00 | 🔴 **P0 — Free** |
-| | | | **TOTAL ESTIMATED** | **~$3.40–$5.05** | |
+| Source | Scraping Method | Cost | Planned Volume | Priority |
+| :--- | :--- | :--- | :--- | :--- |
+| **Reddit (R1-R4)** | **Apify** — budget community actor (e.g., `trudax/reddit-scraper-lite`) | **~$2.00–$3.00** (full $5 budget available) | ~3,000–5,000 posts+comments | 🔴 **P0 — Highest** |
+| **Google Play Reviews (P1-P6)** | **Free** — `google-play-scraper` npm package (Node.js) | $0.00 | ~1,800 reviews (300 per app × 6 apps, incl. Angel One) | 🔴 **P0 — Highest** |
+| **TradingQ&A (T1-T6)** | **Free** — Direct Discourse JSON API (`/search.json?q=...`) | $0.00 | ~500 posts+replies | 🔴 **P0 — High** |
+| **YouTube Comments (Y1-Y5)** | **Free** — YouTube Data API v3 (free quota: 10,000 units/day) or `yt-comment-scraper` npm | $0.00 | ~500–1,000 comments | 🟡 **P1 — High** |
+| **Twitter/X (X1-X3)** | **Free** — Manual curation / Nitter instances / search screenshots | $0.00 | ~100–200 tweets (manual) | 🟢 **P2 — Best effort** |
+| **Industry Reports (I1-I7)** | **Free** — `read_url_content` or manual browser reading | $0.00 | All 7 sources | 🔴 **P0 — Free** |
+| | | **TOTAL: ~$2.00–$3.00** (Apify for Reddit only) | | |
 
 > [!IMPORTANT]
-> **Budget Safety Rule**: Execute P0 sources first. Check remaining credit balance before proceeding to P1. Execute P2 (Twitter) only if >$0.30 remains after P0+P1.
+> **Apify Budget Rule**: The entire $5 Apify free-tier credit is reserved **exclusively for Reddit scraping**. This gives us maximum headroom to pull 3,000–5,000 Reddit posts+comments — our richest qualitative source. All other sources are scraped with free, open-source tooling.
 
 ### 3.3 Detailed Harvesting Strategy Per Source
 
@@ -192,71 +194,105 @@ Step 4: Feed into nuggetization pipeline
 - Timestamp (market context alignment)
 - Author flair (if available — indicates experience level)
 
-#### Strategy B: Google Play Store Reviews (via Apify Play Store Scraper)
+#### Strategy B: Google Play Store Reviews (Free — `google-play-scraper` npm)
 
-**Actor**: `apify/google-play-scraper` (Reviews mode)
+**Tool**: [`google-play-scraper`](https://www.npmjs.com/package/google-play-scraper) — open-source Node.js package. **Cost: $0.**
 
 **Execution Plan**:
-```
-Step 1: Run for each app package ID:
-{
-  "appIds": [
-    "com.zerodha.kite3",
-    "com.nextbillion.groww",
-    "com.paytmmoney",
-    "com.smartspends",
-    "com.mfu.cams"
-  ],
-  "maxReviews": 300,       // 300 per app × 5 apps = 1,500 total
-  "reviewsSort": "newest",
-  "reviewsFilter": "1,2,3" // Only 1-star, 2-star, 3-star reviews
-}
+```javascript
+// scrape_playstore.js
+const gplay = require('google-play-scraper');
+const fs = require('fs');
 
-Step 2: Export as JSON
-Step 3: Keyword-filter for SIP-related friction signals
-Step 4: Feed into nuggetization pipeline
+const apps = [
+  { id: 'com.zerodha.kite3', name: 'Zerodha Kite/Coin' },
+  { id: 'com.nextbillion.groww', name: 'Groww' },
+  { id: 'com.msf.angelmobile', name: 'Angel One' },
+  { id: 'com.paytmmoney', name: 'Paytm Money' },
+  { id: 'com.smartspends', name: 'ET Money' },
+  { id: 'com.mfu.cams', name: 'MF Utility' }
+];
+
+async function scrapeReviews() {
+  const allReviews = [];
+  for (const app of apps) {
+    const reviews = await gplay.reviews({
+      appId: app.id,
+      sort: gplay.sort.NEWEST,
+      num: 300,          // 300 per app
+      lang: 'en',
+      country: 'in'
+    });
+    reviews.data.forEach(r => {
+      allReviews.push({
+        app_name: app.name,
+        app_id: app.id,
+        review_text: r.text,      // VERBATIM — never rephrase
+        score: r.score,
+        thumbs_up: r.thumbsUp,
+        date: r.date,
+        reviewer: r.userName,
+        source_url: `https://play.google.com/store/apps/details?id=${app.id}`
+      });
+    });
+  }
+  fs.writeFileSync('data/raw/playstore_reviews_raw.json', JSON.stringify(allReviews, null, 2));
+  console.log(`Saved ${allReviews.length} reviews`);
+}
+scrapeReviews();
 ```
 
 **What we extract from each review**:
-- Full review text (verbatim)
+- Full review text (**verbatim — never rephrased**)
 - Star rating (severity proxy)
 - Review date
 - Thumbs-up count (resonance signal — others agreed)
-- App name (competitive context)
+- App name + source URL (for citation traceability)
 
-#### Strategy C: TradingQ&A / Discourse Forum (via Discourse Scraper)
+#### Strategy C: TradingQ&A / Discourse Forum (Free — Native Discourse JSON API)
 
-**Actor**: `arman-bd/discourse-forum-scraper` OR direct Discourse JSON API
+**Tool**: Direct HTTP requests to Discourse JSON endpoints. **Cost: $0.**
 
-**Key Insight**: TradingQ&A (tradingqna.com) is built on Discourse, which natively exposes structured JSON by appending `.json` to URLs. This makes scraping extremely lightweight and cheap.
+**Key Insight**: TradingQ&A (tradingqna.com) is built on Discourse, which natively exposes structured JSON by appending `.json` to URLs. No API key or authentication required for public content.
 
 **Execution Plan**:
-```
-Option 1 (Apify Actor):
-{
-  "forums": ["tradingqna.com"],
-  "searchTerms": [
+```python
+# scrape_tradingqna.py
+import requests, json, time
+
+BASE = "https://tradingqna.com"
+SEARCH_QUERIES = [
     "SIP stopped", "SIP paused", "SIP cancelled",
     "SIP mandate failed", "SIP returns negative",
-    "stopped investing mutual fund", "SIP bounce"
-  ],
-  "includePostContent": true,
-  "maxItems": 500
-}
+    "stopped investing mutual fund", "SIP bounce",
+    "SIP not worth", "stopped SIP market crash"
+]
 
-Option 2 (Free — Direct Discourse JSON API, no Apify cost):
-  Fetch: https://tradingqna.com/search.json?q=SIP%20stopped
-  Fetch: https://tradingqna.com/search.json?q=SIP%20paused
-  Fetch: https://tradingqna.com/search.json?q=SIP%20negative%20returns
-  Parse JSON responses directly with a Python script.
+all_posts = []
+for q in SEARCH_QUERIES:
+    url = f"{BASE}/search.json?q={q}"
+    resp = requests.get(url, headers={"User-Agent": "Mozilla/5.0"})
+    data = resp.json()
+    for post in data.get("posts", []):
+        all_posts.append({
+            "query": q,
+            "topic_id": post.get("topic_id"),
+            "post_text": post.get("blurb"),  # VERBATIM
+            "username": post.get("username"),
+            "created_at": post.get("created_at"),
+            "like_count": post.get("like_count"),
+            "source_url": f"{BASE}/t/{post.get('topic_id')}"
+        })
+    time.sleep(1)  # Respectful rate limiting
+
+with open("data/raw/tradingqna_raw.json", "w") as f:
+    json.dump(all_posts, f, indent=2)
+print(f"Saved {len(all_posts)} posts")
 ```
 
-> [!TIP]
-> **Cost Optimization**: Option 2 (direct Discourse JSON) is **completely free** and does not consume Apify credits. Prefer this approach for TradingQ&A and allocate saved budget to Reddit/Play Store instead.
+#### Strategy D: YouTube Comments (Free — YouTube Data API v3 or `yt-comment-scraper`)
 
-#### Strategy D: YouTube Comments (via Apify YouTube Scraper)
-
-**Actor**: `streamers/youtube-comment-scraper` or cheapest community alternative
+**Tool**: [YouTube Data API v3](https://developers.google.com/youtube/v3) (free quota: 10,000 units/day) or [`youtube-comment-scraper`](https://www.npmjs.com/package/youtube-comment-scraper) npm package. **Cost: $0.**
 
 **Execution Plan**:
 ```
@@ -265,42 +301,51 @@ Step 1: Identify 5-10 high-engagement videos by searching YouTube for:
   - "SIP market crash what to do"
   - "first SIP experience beginner"
   - "SIP cancelled should I restart"
+  - "SIP vs FD which is better India"
   
 Step 2: Collect video URLs/IDs of videos with >50K views and >200 comments
 
-Step 3: Configure scraper:
-{
-  "videoUrls": [
-    "https://www.youtube.com/watch?v=<VIDEO_ID_1>",
-    "https://www.youtube.com/watch?v=<VIDEO_ID_2>",
-    ... (5-10 videos)
-  ],
-  "maxComments": 100,  // per video
-  "sortBy": "top"
-}
+Step 3: Use YouTube Data API commentThreads.list endpoint:
+  GET https://www.googleapis.com/youtube/v3/commentThreads
+    ?part=snippet
+    &videoId={VIDEO_ID}
+    &maxResults=100
+    &order=relevance
+    &key={API_KEY}
 
-Step 4: Export and filter for SIP dropout signals
+Step 4: For each comment, extract:
+  - comment_text (VERBATIM — never rephrase)
+  - like_count
+  - published_at
+  - author_display_name
+  - video_id + source_url
+
+Step 5: Export to data/raw/youtube_comments_raw.json
 ```
 
-#### Strategy E: Twitter/X (Conditional — Budget Permitting)
+> [!TIP]
+> **YouTube Data API v3** provides 10,000 free quota units/day. Each `commentThreads.list` call costs ~1 unit. This is more than enough for our needs.
 
-**Actor**: `apidojo/tweet-scraper` or cheapest pay-per-result variant
+#### Strategy E: Twitter/X (Free — Manual Curation)
+
+**Tool**: Manual search on X (twitter.com/search) + screenshot archival, or Nitter instances for public search. **Cost: $0.**
 
 **Execution Plan**:
 ```
-{
-  "searchTerms": [
-    "\"stopped SIP\" OR \"paused SIP\" OR \"cancelled SIP\"",
-    "\"SIP showing loss\" OR \"SIP negative returns\"",
-    "\"first SIP\" AND (\"regret\" OR \"confused\" OR \"mistake\")"
-  ],
-  "maxItems": 200,
-  "sort": "Latest"
-}
+Step 1: Manually search on X/Twitter using advanced search:
+  - "stopped SIP" OR "paused SIP" OR "cancelled SIP" lang:en
+  - "SIP showing loss" OR "SIP negative returns"
+  - "first SIP" AND ("regret" OR "confused" OR "mistake")
+
+Step 2: Manually curate 100-200 relevant tweets
+  - Copy tweet text VERBATIM
+  - Record tweet URL, author handle, date, like count
+
+Step 3: Save to data/raw/twitter_raw.json
 ```
 
-> [!WARNING]
-> **Execute only if remaining Apify credit > $0.30 after Reddit + Play Store + TradingQ&A + YouTube.**
+> [!NOTE]
+> Twitter/X scraping is best-effort via manual curation. No Apify credits spent here.
 
 #### Strategy F: Industry Reports & Blog Articles (Free — Manual Read)
 
@@ -405,19 +450,19 @@ Once raw data is collected, the AI Discovery Engine processes it through the 5-p
 
 ## 5. Execution Sequence & Timeline
 
-| Step | Action | Tool / Method | Output |
-| :--- | :--- | :--- | :--- |
-| **Step 0** | Create Apify free account | [apify.com](https://apify.com/pricing) | API token secured |
-| **Step 1** | Read industry reports (I1-I7) | `read_url_content` / browser | Contextual grounding notes |
-| **Step 2** | Scrape TradingQ&A via Discourse JSON API | Python script (free, no Apify cost) | ~500 posts/replies JSON |
-| **Step 3** | Scrape Reddit (R1-R4) | Apify Reddit Scraper (~$1.50) | ~2,000 posts+comments JSON |
-| **Step 4** | Scrape Play Store reviews (P1-P5) | Apify Play Store Scraper (~$1.50) | ~1,500 reviews JSON |
-| **Step 5** | Check Apify credit balance | Apify dashboard | Remaining budget confirmed |
-| **Step 6** | Scrape YouTube comments (Y1-Y5) | Apify YouTube Scraper (~$0.50) | ~500 comments JSON |
-| **Step 7** | (Conditional) Scrape Twitter/X | Apify Tweet Scraper (~$0.30) | ~200 tweets JSON |
-| **Step 8** | Run Nuggetization & Empathy Mapping | AI Discovery Engine (Phase 1-2) | Nugget database + Empathy Map |
-| **Step 9** | Run 5-Whys & Opportunity Tree | AI Discovery Engine (Phase 3-4) | Validated Opportunity Tree |
-| **Step 10** | Generate Secondary→Primary Bridge | AI Discovery Engine (Phase 5) | Interview questions + dossier |
+| Step | Action | Tool / Method | Cost | Output |
+| :--- | :--- | :--- | :--- | :--- |
+| **Step 0** | Create Apify free account (Reddit only) | [apify.com](https://apify.com/pricing) | $0 | API token secured |
+| **Step 1** | Install Node.js dependencies | `npm install google-play-scraper` | $0 | Local tooling ready |
+| **Step 2** | Read industry reports (I1-I7) | `read_url_content` / browser | $0 | Contextual grounding notes |
+| **Step 3** | Scrape TradingQ&A via Discourse JSON API | Python script (`requests`) | $0 | ~500 posts/replies JSON |
+| **Step 4** | Scrape Play Store reviews (P1-P5) | `google-play-scraper` npm | $0 | ~1,500 reviews JSON |
+| **Step 5** | Scrape YouTube comments (Y1-Y5) | YouTube Data API v3 | $0 | ~500–1,000 comments JSON |
+| **Step 6** | Scrape Reddit (R1-R4) | **Apify Reddit Scraper** | **~$2–3** | ~3,000–5,000 posts+comments JSON |
+| **Step 7** | Curate Twitter/X signals | Manual search + copy | $0 | ~100–200 tweets JSON |
+| **Step 8** | Run Nuggetization & Empathy Mapping | AI Discovery Engine (Phase 1-2) | $0 | Nugget database + Empathy Map |
+| **Step 9** | Run 5-Whys & Opportunity Tree | AI Discovery Engine (Phase 3-4) | $0 | Validated Opportunity Tree |
+| **Step 10** | Generate Secondary→Primary Bridge | AI Discovery Engine (Phase 5) | $0 | Interview questions + dossier |
 
 ---
 
@@ -444,16 +489,19 @@ Zerodha-Coin-AI-Discovery/
 │   ├── references/
 │   └── templates/
 ├── docs/
-│   └── discovery_plan.md                       # ← THIS FILE
+│   ├── discovery_plan.md                       # ← THIS FILE
+│   ├── context.md                              # AI Engine context & grounding rules
+│   └── architecture.md                         # Technical architecture & UI screens
 ├── data/
 │   ├── raw/                                    # Raw scraped JSON files
-│   │   ├── reddit_raw.json
-│   │   ├── playstore_reviews_raw.json
-│   │   ├── tradingqna_raw.json
-│   │   ├── youtube_comments_raw.json
-│   │   └── twitter_raw.json (if budget allows)
+│   │   ├── reddit_raw.json                     # Source: Apify ($2-3)
+│   │   ├── playstore_reviews_raw.json          # Source: google-play-scraper npm ($0)
+│   │   ├── tradingqna_raw.json                 # Source: Discourse JSON API ($0)
+│   │   ├── youtube_comments_raw.json           # Source: YouTube Data API v3 ($0)
+│   │   └── twitter_raw.json                    # Source: Manual curation ($0)
 │   └── processed/                              # Nuggetized & tagged data
-│       └── nuggets.json
+│       ├── nuggets.json                        # All nuggets with source citations
+│       └── opportunities.json                  # Structured opportunity tree
 ├── analysis/
 │   ├── empathy_map.md                          # Says/Thinks/Does/Feels
 │   ├── jtbd_canvas.md                          # Jobs & Four Forces

@@ -37,21 +37,12 @@ export default function Header({ activeTab, setActiveTab }) {
             </div>
           </div>
 
-          {/* Right Actions */}
-          <div className="flex items-center gap-3 pl-3 border-l border-outline-variant/30">
-
-            <div className="text-right hidden sm:block">
-              <div className="font-sans text-xs text-on-surface font-semibold leading-none">
-                Pankaj Shrivastava
-              </div>
-              <div className="font-mono text-[10px] text-on-surface-variant mt-0.5 flex items-center justify-end gap-1">
-                <span className="inline-block w-1.5 h-1.5 rounded-full bg-secondary"></span>
-                Lead Product Discovery
-              </div>
-            </div>
-            <div className="w-8 h-8 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center text-primary font-mono text-xs font-semibold">
-              PS
-            </div>
+          {/* Right Status */}
+          <div className="hidden sm:flex items-center gap-2">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container border border-outline-variant/30 font-sans text-xs text-on-surface-variant">
+              <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              2,759 voices · 826 verified quotes
+            </span>
           </div>
         </div>
 

@@ -1,7 +1,6 @@
 import React from 'react';
-import { Image as ImageIcon } from 'lucide-react';
 
-export default function Header({ activeTab, setActiveTab, onOpenStitchModal }) {
+export default function Header({ activeTab, setActiveTab }) {
   const tabs = [
     { id: 'executive-discovery',       label: 'Executive Summary' },
     { id: 'platform-benchmark',        label: 'Platform Comparison' },
@@ -40,14 +39,6 @@ export default function Header({ activeTab, setActiveTab, onOpenStitchModal }) {
 
           {/* Right Actions */}
           <div className="flex items-center gap-3 pl-3 border-l border-outline-variant/30">
-            <button
-              onClick={onOpenStitchModal}
-              title="View Stitch design reference"
-              className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container border border-primary/20 text-primary text-xs font-medium font-sans transition-all hover:shadow-xs"
-            >
-              <ImageIcon className="w-3.5 h-3.5 text-primary" />
-              <span className="hidden md:inline">Design Reference</span>
-            </button>
 
             <div className="text-right hidden sm:block">
               <div className="font-sans text-xs text-on-surface font-semibold leading-none">

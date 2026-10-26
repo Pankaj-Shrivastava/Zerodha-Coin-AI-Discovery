@@ -6,11 +6,9 @@ import JourneyTimeline from './components/JourneyTimeline';
 import BehavioralArchetypes from './components/BehavioralArchetypes';
 import OpportunityTree from './components/OpportunityTree';
 import InterviewGuide from './components/InterviewGuide';
-import StitchMockupModal from './components/StitchMockupModal';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('executive-discovery');
-  const [isStitchModalOpen, setIsStitchModalOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [isFading, setIsFading] = useState(false);
 
@@ -80,7 +78,6 @@ export default function App() {
       <Header
         activeTab={activeTab}
         setActiveTab={handleTabChange}
-        onOpenStitchModal={() => setIsStitchModalOpen(true)}
       />
 
       {/* Main Content Area */}
@@ -126,12 +123,6 @@ export default function App() {
           </div>
         )}
       </main>
-
-      <StitchMockupModal
-        isOpen={isStitchModalOpen}
-        onClose={() => setIsStitchModalOpen(false)}
-        activeTab={activeTab}
-      />
 
       {/* Footer */}
       <footer className="w-full bg-white border-t border-outline-variant/30 py-3.5 px-4 lg:px-8 text-xs font-sans text-on-surface-variant">

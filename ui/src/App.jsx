@@ -12,6 +12,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState('executive-discovery');
   const [isStitchModalOpen, setIsStitchModalOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [isFading, setIsFading] = useState(false);
 
   // Discovery State Data
   const [qaData, setQaData] = useState([]);
@@ -51,7 +52,6 @@ export default function App() {
         if (goldenRes.ok) setGoldenSetData(await goldenRes.json());
         if (verbRes.ok) {
           const verbs = await verbRes.json();
-          // Store first 150 for speedy UI interactions
           setVerbatimsData(verbs.slice(0, 150));
         }
       } catch (err) {
@@ -64,56 +64,59 @@ export default function App() {
     loadAllDiscoveryData();
   }, []);
 
+  // Smooth tab transition
+  const handleTabChange = (tabId) => {
+    if (tabId === activeTab) return;
+    setIsFading(true);
+    setTimeout(() => {
+      setActiveTab(tabId);
+      setIsFading(false);
+    }, 120);
+  };
+
   return (
     <div className="min-h-screen bg-surface font-sans text-on-surface antialiased flex flex-col justify-between selection:bg-primary/20 selection:text-primary">
-      {/* Header */}
+
       <Header
         activeTab={activeTab}
-        setActiveTab={setActiveTab}
+        setActiveTab={handleTabChange}
         onOpenStitchModal={() => setIsStitchModalOpen(true)}
-        stats={{
-          totalCorpus: '2,759',
-          verbatimsCount: '826',
-        }}
       />
 
       {/* Main Content Area */}
-      <main className="w-full pt-28 pb-12 px-4 lg:px-8 mx-auto max-w-[1440px] flex-1">
+      <main className="w-full pt-28 pb-16 px-4 lg:px-8 mx-auto max-w-[1440px] flex-1">
         {isLoading ? (
           <div className="flex flex-col items-center justify-center min-h-[50vh] gap-3">
-            <div className="w-10 h-10 border-3 border-primary/20 border-t-primary rounded-full animate-spin"></div>
-            <span className="font-mono text-xs text-on-surface-variant">
-              Loading 826 Grounded Verbatims & Discovery Models...
+            <div className="w-10 h-10 border-[3px] border-primary/20 border-t-primary rounded-full animate-spin"></div>
+            <span className="font-sans text-sm text-on-surface-variant">
+              Loading discovery data…
             </span>
           </div>
         ) : (
-          <div className="w-full mt-4">
+          <div
+            className={`w-full mt-4 transition-opacity duration-150 ${isFading ? 'opacity-0' : 'opacity-100'}`}
+          >
             {activeTab === 'executive-discovery' && (
               <ExecutiveDiscovery qaData={qaData} />
             )}
-
             {activeTab === 'platform-benchmark' && (
               <PlatformBenchmark
                 platformData={platformData}
                 verbatimsData={verbatimsData}
               />
             )}
-
             {activeTab === '12-month-journey' && (
               <JourneyTimeline journeyData={journeyData} />
             )}
-
             {activeTab === 'behavioral-archetypes' && (
               <BehavioralArchetypes archetypesData={archetypesData} />
             )}
-
             {activeTab === 'opportunity-tree-ost' && (
               <OpportunityTree
                 treeData={treeData}
                 verbatimsData={verbatimsData}
               />
             )}
-
             {activeTab === 'interview-guide-golden-set' && (
               <InterviewGuide
                 interviewGuideData={null}
@@ -124,7 +127,6 @@ export default function App() {
         )}
       </main>
 
-      {/* High-Fidelity Stitch Reference Mockup Modal */}
       <StitchMockupModal
         isOpen={isStitchModalOpen}
         onClose={() => setIsStitchModalOpen(false)}
@@ -132,20 +134,16 @@ export default function App() {
       />
 
       {/* Footer */}
-      <footer className="w-full bg-surface-container-lowest border-t border-outline-variant/30 py-4 px-4 lg:px-8 text-xs font-sans text-on-surface-variant">
-        <div className="max-w-[1440px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
-          <div className="flex items-center gap-3">
-            <span className="font-semibold text-on-surface">Zerodha Coin AI Discovery Engine</span>
+      <footer className="w-full bg-white border-t border-outline-variant/30 py-3.5 px-4 lg:px-8 text-xs font-sans text-on-surface-variant">
+        <div className="max-w-[1440px] mx-auto flex items-center justify-between gap-3">
+          <div className="flex items-center gap-2.5">
+            <span className="font-semibold text-on-surface">Zerodha Coin</span>
             <span>•</span>
-            <span className="font-mono text-[11px]">Cohort Months 1–12 SIP Retention</span>
+            <span>SIP Year-1 Retention Study</span>
             <span>•</span>
-            <span className="font-mono text-[11px] text-secondary font-medium">100% Grounded</span>
+            <span className="text-secondary font-medium">2,759 real user voices · 826 verified quotes</span>
           </div>
-          <div className="flex items-center gap-4 font-mono text-[11px]">
-            <span>Double Diamond Phase 1 (Problem Space)</span>
-            <span>•</span>
-            <span>Vercel Edge Ready</span>
-          </div>
+          <span className="font-mono text-[11px] text-on-surface-variant">Problem Discovery Phase · 2026</span>
         </div>
       </footer>
     </div>

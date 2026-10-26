@@ -6,12 +6,17 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npm --prefix ui run dev",
+    "build": "npm --prefix ui run build",
+    "preview": "npm --prefix ui run preview",
+    "sync": "python scripts/sync_ui_assets.py",
+    "eval": "python scripts/run_evals.py",
+    "test": "python scripts/run_evals.py"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["zerodha", "coin", "product-discovery", "sip-retention", "ai-engine"],
+  "author": "Pankaj Shrivastava",
   "license": "ISC",
-  "description": "",
+  "description": "Zerodha Coin AI Discovery Engine — SIP Retention Intelligence Platform",
   "dependencies": {
     "dotenv": "^18.0.9",
     "google-play-scraper": "^10.1.4"

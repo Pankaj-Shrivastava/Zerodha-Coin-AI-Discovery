@@ -1,44 +1,44 @@
 import React, { useState } from 'react';
 import { X, ExternalLink, Image as ImageIcon, ZoomIn, ZoomOut } from 'lucide-react';
 
+const screenMap = {
+  'executive-discovery': {
+    title: 'Executive Discovery (Screen 01)',
+    file: '/stitch_screens/executive_discovery_9_questions.png',
+    desc: 'Top 4 KPI cards, Churn Taxonomy SVG donut, Top 4 friction drivers, and 9 Foundational Questions.'
+  },
+  'platform-benchmark': {
+    title: 'Platform Benchmark Matrix (Screen 02)',
+    file: '/stitch_screens/platform_benchmark_matrix.png',
+    desc: '5-Platform comparison bento grid, cross-platform dimension matrix, and grounded verbatim search.'
+  },
+  '12-month-journey': {
+    title: '12-Month SIP Retention Lifecycle (Screen 03)',
+    file: '/stitch_screens/12_month_sip_retention_journey.png',
+    desc: 'Investor Optimism vs Churn risk curve SVG, 3 shaded zones, and 5 empirical lifecycle phases.'
+  },
+  'behavioral-archetypes': {
+    title: 'Behavioral Archetypes (Screen 04)',
+    file: '/stitch_screens/behavioral_archetypes.png',
+    desc: '4 Grounded personas with micro-metrics, cognitive loops, breaking points, and authentic verbatims.'
+  },
+  'opportunity-tree-ost': {
+    title: 'Opportunity Solution Tree OST (Screen 05)',
+    file: '/stitch_screens/opportunity_tree_ost.png',
+    desc: 'Teresa Torres tree with 4 major problem branches, sub-opportunities, and grounded evidence drawer.'
+  },
+  'interview-guide-golden-set': {
+    title: 'Interview Protocol & Golden Set (Screen 06)',
+    file: '/stitch_screens/interview_guide_golden_set.png',
+    desc: '4-Track episodic interview guide with confirmation/invalidation criteria and 20-item golden benchmark.'
+  }
+};
+
 export default function StitchMockupModal({ isOpen, onClose, activeTab }) {
-  if (!isOpen) return null;
-
-  const screenMap = {
-    'executive-discovery': {
-      title: 'Executive Discovery (Screen 01)',
-      file: '/stitch_screens/executive_discovery_9_questions.png',
-      desc: 'Top 4 KPI cards, Churn Taxonomy SVG donut, Top 4 friction drivers, and 9 Foundational Questions.'
-    },
-    'platform-benchmark': {
-      title: 'Platform Benchmark Matrix (Screen 02)',
-      file: '/stitch_screens/platform_benchmark_matrix.png',
-      desc: '5-Platform comparison bento grid, cross-platform dimension matrix, and grounded verbatim search.'
-    },
-    '12-month-journey': {
-      title: '12-Month SIP Retention Lifecycle (Screen 03)',
-      file: '/stitch_screens/12_month_sip_retention_journey.png',
-      desc: 'Investor Optimism vs Churn risk curve SVG, 3 shaded zones, and 5 empirical lifecycle phases.'
-    },
-    'behavioral-archetypes': {
-      title: 'Behavioral Archetypes (Screen 04)',
-      file: '/stitch_screens/behavioral_archetypes.png',
-      desc: '4 Grounded personas with micro-metrics, cognitive loops, breaking points, and authentic verbatims.'
-    },
-    'opportunity-tree-ost': {
-      title: 'Opportunity Solution Tree OST (Screen 05)',
-      file: '/stitch_screens/opportunity_tree_ost.png',
-      desc: 'Teresa Torres tree with 4 major problem branches, sub-opportunities, and grounded evidence drawer.'
-    },
-    'interview-guide-golden-set': {
-      title: 'Interview Protocol & Golden Set (Screen 06)',
-      file: '/stitch_screens/interview_guide_golden_set.png',
-      desc: '4-Track episodic interview guide with confirmation/invalidation criteria and 20-item golden benchmark.'
-    }
-  };
-
   const [currentScreenKey, setCurrentScreenKey] = useState(activeTab || 'executive-discovery');
   const [zoomLevel, setZoomLevel] = useState(1);
+
+  if (!isOpen) return null;
 
   const activeScreen = screenMap[currentScreenKey] || screenMap['executive-discovery'];
 

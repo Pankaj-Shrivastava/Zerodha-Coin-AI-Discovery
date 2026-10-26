@@ -6,12 +6,10 @@ import {
   ShieldAlert,
   ChevronDown,
   ChevronUp,
-  Quote,
   ExternalLink,
   Brain,
   Flame,
   Search,
-  AlertTriangle
 } from 'lucide-react';
 
 export default function ExecutiveDiscovery({ qaData }) {

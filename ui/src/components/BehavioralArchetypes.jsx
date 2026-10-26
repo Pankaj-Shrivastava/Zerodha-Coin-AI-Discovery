@@ -7,7 +7,7 @@ import {
   Target,
 } from 'lucide-react';
 
-export default function BehavioralArchetypes({ archetypesData }) {
+export default function BehavioralArchetypes({ _archetypesData }) {
   const [activeArchetypeId, setActiveArchetypeId] = useState(1);
 
   const archetypes = [

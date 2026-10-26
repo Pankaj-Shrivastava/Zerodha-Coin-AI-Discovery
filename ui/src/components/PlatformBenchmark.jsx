@@ -147,7 +147,6 @@ export default function PlatformBenchmark({ platformData, verbatimsData }) {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
         {platformData.map((plat) => {
           const scoreInfo = platformScores[plat.platform_code] || { score: 70, label: 'Moderate experience' };
-          const isSelected = selectedPlatform === plat.platform_code || selectedPlatform === 'all';
           return (
             <div
               key={plat.platform_code}

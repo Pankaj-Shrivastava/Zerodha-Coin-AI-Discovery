@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { AlertTriangle, Activity, Quote, ExternalLink } from 'lucide-react';
 
-export default function JourneyTimeline({ journeyData }) {
+export default function JourneyTimeline({ _journeyData }) {
   const [selectedPhase, setSelectedPhase] = useState(1);
 
   const phases = [

@@ -11,7 +11,7 @@ import {
   ChevronUp,
 } from 'lucide-react';
 
-export default function InterviewGuide({ interviewGuideData, goldenSetData }) {
+export default function InterviewGuide({ _interviewGuideData, goldenSetData }) {
   const [selectedTrack, setSelectedTrack] = useState('track-1');
   const [auditOpen, setAuditOpen] = useState(false);
 

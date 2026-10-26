@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { ShieldCheck, Quote, ExternalLink } from 'lucide-react';
 
 export default function OpportunityTree({ treeData, verbatimsData }) {
   const [selectedSubOp, setSelectedSubOp] = useState('OPP-1.1');

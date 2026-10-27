@@ -9,41 +9,17 @@ import {
   ExternalLink,
   Brain,
   Flame,
-  Search,
 } from 'lucide-react';
 
 export default function ExecutiveDiscovery({ qaData }) {
-  const [expandedQs, setExpandedQs] = useState({ 1: true });
-  const [searchTerm, setSearchTerm] = useState('');
-  const [showAllQuestions, setShowAllQuestions] = useState(false);
+  const [activeQuestion, setActiveQuestion] = useState(null);
   const [taxonomyOpen, setTaxonomyOpen] = useState(false);
 
   const toggleAccordion = (qNum) => {
-    setExpandedQs((prev) => ({
-      ...prev,
-      [qNum]: !prev[qNum],
-    }));
+    setActiveQuestion((prev) => (prev === qNum ? null : qNum));
   };
 
-  const expandAll = () => {
-    const all = {};
-    filteredQA.forEach((q) => (all[q.question_number] = true));
-    setExpandedQs(all);
-  };
-
-  const collapseAll = () => setExpandedQs({});
-
-  const filteredQA = qaData.filter((q) => {
-    if (!searchTerm) return true;
-    const term = searchTerm.toLowerCase();
-    return (
-      q.question.toLowerCase().includes(term) ||
-      q.synthesis.toLowerCase().includes(term) ||
-      q.evidence_verbatims.some((v) => v.verbatim_text.toLowerCase().includes(term))
-    );
-  });
-
-  const visibleQA = showAllQuestions ? filteredQA : filteredQA.slice(0, 3);
+  const visibleQA = qaData || [];
 
   // Source channel colors
   const channelColor = (channel = '') => {
@@ -309,45 +285,19 @@ export default function ExecutiveDiscovery({ qaData }) {
       <div className="bg-white rounded-xl border border-outline-variant/30 shadow-xs flex flex-col gap-0 overflow-hidden">
 
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-5 border-b border-outline-variant/20">
-          <div>
-            <h2 className="font-sans font-semibold text-lg text-on-surface tracking-tight">
-              The 9 Questions Every PM Needs Answered
-            </h2>
-            <p className="font-sans text-xs text-on-surface-variant mt-0.5">
-              Each answer is backed by real user quotes — no AI paraphrasing, no assumptions.
-            </p>
-          </div>
-          <div className="flex items-center gap-2 shrink-0">
-            <div className="relative">
-              <Search className="w-3.5 h-3.5 text-outline absolute left-2.5 top-2.5" />
-              <input
-                type="text"
-                placeholder="Search questions…"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-8 pr-3 py-1.5 rounded-lg bg-surface border border-outline-variant/40 font-sans text-xs text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary w-44 sm:w-56"
-              />
-            </div>
-            <button
-              onClick={expandAll}
-              className="px-2.5 py-1.5 rounded-lg bg-surface border border-outline-variant/30 font-sans text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors whitespace-nowrap"
-            >
-              Expand all
-            </button>
-            <button
-              onClick={collapseAll}
-              className="px-2.5 py-1.5 rounded-lg bg-surface border border-outline-variant/30 font-sans text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
-            >
-              Collapse
-            </button>
-          </div>
+        <div className="p-5 border-b border-outline-variant/20">
+          <h2 className="font-sans font-semibold text-lg text-on-surface tracking-tight">
+            The 9 Questions Every PM Needs Answered
+          </h2>
+          <p className="font-sans text-xs text-on-surface-variant mt-0.5">
+            Each answer is backed by real user quotes — no AI paraphrasing, no assumptions.
+          </p>
         </div>
 
         {/* Accordion List */}
         <div className="divide-y divide-outline-variant/20">
           {visibleQA.map((item) => {
-            const isExpanded = !!expandedQs[item.question_number];
+            const isExpanded = activeQuestion === item.question_number;
             return (
               <div
                 key={item.question_number}
@@ -356,22 +306,15 @@ export default function ExecutiveDiscovery({ qaData }) {
                 {/* Header Row */}
                 <button
                   onClick={() => toggleAccordion(item.question_number)}
-                  className="w-full text-left px-5 py-4 flex items-center justify-between gap-4 transition-colors"
+                  className="w-full text-left px-5 py-3.5 flex items-center justify-between gap-4 transition-colors"
                 >
-                  <div className="flex items-start gap-3 min-w-0">
+                  <div className="flex items-center gap-3 min-w-0">
                     <span className="shrink-0 w-7 h-7 rounded-lg bg-surface-container text-on-surface flex items-center justify-center font-mono text-xs font-bold border border-outline-variant/40">
                       {item.question_number}
                     </span>
-                    <div className="min-w-0">
-                      <span className="font-sans font-semibold text-sm text-on-surface tracking-tight block">
-                        {item.question}
-                      </span>
-                      {!isExpanded && (
-                        <span className="font-sans text-xs text-on-surface-variant mt-0.5 block line-clamp-1">
-                          {item.synthesis}
-                        </span>
-                      )}
-                    </div>
+                    <span className="font-sans font-semibold text-sm text-on-surface tracking-tight">
+                      {item.question}
+                    </span>
                   </div>
                   <div className="flex items-center gap-2.5 shrink-0">
                     <span className="hidden sm:inline-flex px-2 py-0.5 rounded-full bg-surface-container font-mono text-[11px] text-on-surface-variant">
@@ -441,20 +384,7 @@ export default function ExecutiveDiscovery({ qaData }) {
           })}
         </div>
 
-        {/* Show more / less */}
-        {filteredQA.length > 3 && (
-          <div className="border-t border-outline-variant/20 p-4 flex justify-center">
-            <button
-              onClick={() => setShowAllQuestions((v) => !v)}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-surface border border-outline-variant/30 font-sans text-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
-            >
-              {showAllQuestions
-                ? <><ChevronUp className="w-4 h-4" /> Show fewer questions</>
-                : <><ChevronDown className="w-4 h-4" /> Show all {filteredQA.length} questions</>
-              }
-            </button>
-          </div>
-        )}
+
       </div>
     </div>
   );

@@ -21,6 +21,16 @@ import time
 import os
 import re
 import itertools
+import sys
+
+# Ensure UTF-8 stdout encoding on Windows to prevent UnicodeEncodeError with emojis in video titles
+try:
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+    if hasattr(sys.stderr, 'reconfigure'):
+        sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+except Exception:
+    pass
 
 try:
     from youtube_comment_downloader import YoutubeCommentDownloader, SORT_BY_POPULAR, SORT_BY_RECENT

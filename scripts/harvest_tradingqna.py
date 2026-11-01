@@ -1,6 +1,6 @@
 # scripts/harvest_tradingqna.py
 """
-TradingQ&A (Zerodha Discourse Forum) Harvester — Improved v2
+TradingQ&A (Zerodha Discourse Forum) Harvester — Improved v2 (Zero Dependencies)
 
 Changes from v1:
 - APPEND-SAFE: loads existing file, deduplicates by post ID, never overwrites data
@@ -11,9 +11,11 @@ Changes from v1:
 - Coin category feed paginated to page 5 (was page 1 only)
 - Posts per topic increased 3 → 10 (was 3)
 - Added Varsity community category (/c/varsity/) for beginner MF questions
+- Uses standard library urllib.request (zero third-party dependencies required)
 """
 
-import requests
+import urllib.request
+import urllib.parse
 import json
 import time
 import os
@@ -26,7 +28,7 @@ HEADERS = {
     "Accept": "application/json"
 }
 
-# Original queries (10)
+# Original queries (10) + New queries (5)
 SEARCH_QUERIES = [
     "SIP stopped",
     "SIP paused",
@@ -37,7 +39,6 @@ SEARCH_QUERIES = [
     "stopped mutual fund investing",
     "SIP showing loss",
     "Coin SIP not debited",
-    # New queries (5) — from discovery_plan.md, not previously scraped
     "SIP auto debit failed",
     "mandate not registered",
     "units not showing coin",
@@ -57,13 +58,9 @@ def redact_pii(text: str) -> str:
 def clean_discourse_text(raw_text: str) -> str:
     if not raw_text:
         return ""
-    # Remove BBCode quotes
     text = re.sub(r'\[quote.*?\[/quote\]', '', raw_text, flags=re.DOTALL)
-    # Remove HTML tags
     text = re.sub(r'<[^>]+>', ' ', text)
-    # Unescape HTML entities
     text = unescape(text)
-    # Normalize whitespace
     text = re.sub(r'\s+', ' ', text).strip()
     return redact_pii(text)
 
@@ -74,19 +71,22 @@ def anonymize_user(username: str) -> str:
         return f"{username[:3]}***"
     return "TradingQnA Member"
 
-def fetch_full_post_body(post_id: int) -> str:
-    """
-    Fetches the full post body from /posts/{id}.json instead of the blurb snippet.
-    This was not done in v1 — blurb is only ~150 chars; full body is the real verbatim.
-    """
-    url = f"{BASE_URL}/posts/{post_id}.json"
+def http_get_json(url: str, timeout: int = 12):
+    req = urllib.request.Request(url, headers=HEADERS)
     try:
-        resp = requests.get(url, headers=HEADERS, timeout=10)
-        if resp.status_code == 200:
-            cooked = resp.json().get("cooked", "")
-            return clean_discourse_text(cooked)
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            if resp.status == 200:
+                return json.loads(resp.read().decode('utf-8'))
     except Exception:
-        pass
+        return None
+    return None
+
+def fetch_full_post_body(post_id: int) -> str:
+    url = f"{BASE_URL}/posts/{post_id}.json"
+    data = http_get_json(url, timeout=10)
+    if data:
+        cooked = data.get("cooked", "")
+        return clean_discourse_text(cooked)
     return ""
 
 def harvest_tradingqna():
@@ -95,7 +95,7 @@ def harvest_tradingqna():
     delta_path   = os.path.join(output_dir, "tradingqna_delta.json")
     os.makedirs(output_dir, exist_ok=True)
 
-    # --- APPEND-SAFE: Load existing corpus and build deduplication index ---
+    # --- APPEND-SAFE: Load existing corpus ---
     existing_records = []
     seen_post_ids = set()
     if os.path.exists(output_path):
@@ -116,19 +116,19 @@ def harvest_tradingqna():
     # ── 1. Search Queries with Pagination (up to page 5) ──────────────────────
     for query in SEARCH_QUERIES:
         print(f"  Query: '{query}'...")
-        for page in range(1, 6):  # Pages 1–5 (was only page 1 in v1)
+        for page in range(1, 6):
             page_param = f"&page={page}" if page > 1 else ""
-            url = f"{BASE_URL}/search.json?q={requests.utils.quote(query)}{page_param}"
+            encoded_query = urllib.parse.quote(query)
+            url = f"{BASE_URL}/search.json?q={encoded_query}{page_param}"
             try:
-                resp = requests.get(url, headers=HEADERS, timeout=12)
-                if resp.status_code != 200:
-                    break  # No more pages or rate limited
-                data  = resp.json()
+                data = http_get_json(url, timeout=12)
+                if not data:
+                    break
                 posts  = data.get("posts", [])
                 topics = {t["id"]: t.get("title", "") for t in data.get("topics", [])}
 
                 if not posts:
-                    break  # Empty page — stop paginating this query
+                    break
 
                 print(f"    Page {page}: {len(posts)} posts found.")
 
@@ -141,10 +141,8 @@ def harvest_tradingqna():
                     topic_id    = p.get("topic_id")
                     topic_title = topics.get(topic_id, "")
 
-                    # Fetch full body instead of blurb snippet (KEY IMPROVEMENT)
                     full_body = fetch_full_post_body(post_id)
                     if not full_body:
-                        # Fallback to blurb if full body unavailable
                         full_body = clean_discourse_text(p.get("blurb", ""))
 
                     if len(full_body) < 15:
@@ -164,26 +162,25 @@ def harvest_tradingqna():
                         "source_url":    f"{BASE_URL}/t/{topic_id}"
                     })
 
-                    time.sleep(0.4)  # Rate limit: 1 extra request per post for full body
+                    time.sleep(0.3)
 
-                time.sleep(1.2)   # Rate limit between pages
+                time.sleep(1.0)
             except Exception as e:
                 print(f"    [Error] Page {page} for '{query}' failed: {e}")
                 break
 
-        time.sleep(1.5)  # Rate limit between queries
+        time.sleep(1.2)
 
     # ── 2. Coin Category Feed with Pagination (pages 1–5) ─────────────────────
     print("\n  Fetching Coin Category topics (/c/coin/14) with pagination...")
-    for page in range(1, 6):  # Pages 1–5 (was only page 1 in v1)
+    for page in range(1, 6):
         page_param = f"?page={page}" if page > 1 else ""
         coin_cat_url = f"{BASE_URL}/c/coin/14.json{page_param}"
         try:
-            resp = requests.get(coin_cat_url, headers=HEADERS, timeout=12)
-            if resp.status_code != 200:
+            cat_data = http_get_json(coin_cat_url, timeout=12)
+            if not cat_data:
                 break
-            cat_data = resp.json()
-            topics   = cat_data.get("topic_list", {}).get("topics", [])
+            topics = cat_data.get("topic_list", {}).get("topics", [])
             if not topics:
                 break
             print(f"    Coin Category page {page}: {len(topics)} topics.")
@@ -191,26 +188,21 @@ def harvest_tradingqna():
             for t in topics:
                 t_id    = t.get("id")
                 t_title = t.get("title", "")
-                # Filter for SIP/mandate friction topics
                 if not any(w in t_title.lower() for w in ["sip", "mandate", "failed", "stop", "pause", "cancel", "return", "negative", "units", "demat"]):
                     continue
 
                 t_url = f"{BASE_URL}/t/{t_id}.json"
                 try:
-                    t_resp = requests.get(t_url, headers=HEADERS, timeout=10)
-                    if t_resp.status_code == 200:
-                        t_json       = t_resp.json()
+                    t_json = http_get_json(t_url, timeout=10)
+                    if t_json:
                         stream_posts = t_json.get("post_stream", {}).get("posts", [])
-
-                        # Increased from 3 → 10 posts per topic to capture full thread context
                         for sp in stream_posts[:10]:
                             sp_id = sp.get("id")
                             if not sp_id or sp_id in seen_post_ids:
                                 continue
                             seen_post_ids.add(sp_id)
 
-                            sp_cooked = sp.get("cooked", "")
-                            cleaned   = clean_discourse_text(sp_cooked)
+                            cleaned = clean_discourse_text(sp.get("cooked", ""))
                             if len(cleaned) < 20:
                                 continue
 
@@ -227,23 +219,21 @@ def harvest_tradingqna():
                                 "search_query":  "category_coin",
                                 "source_url":    f"{BASE_URL}/t/{t_id}"
                             })
-                    time.sleep(1.0)
+                    time.sleep(0.5)
                 except Exception:
                     pass
         except Exception as e:
             print(f"    [Error] Coin category page {page}: {e}")
             break
-        time.sleep(1.5)
+        time.sleep(1.0)
 
-    # ── 3. Varsity Category Feed (NEW) ─────────────────────────────────────────
-    # Varsity hosts beginner finance education Q&A — rich source of "confused first-timer" voices
+    # ── 3. Varsity Category Feed ───────────────────────────────────────────────
     print("\n  Fetching Varsity Category topics (/c/varsity/) for beginner MF confusion...")
     try:
         varsity_url = f"{BASE_URL}/c/varsity.json"
-        resp = requests.get(varsity_url, headers=HEADERS, timeout=12)
-        if resp.status_code == 200:
-            cat_data = resp.json()
-            topics   = cat_data.get("topic_list", {}).get("topics", [])
+        cat_data = http_get_json(varsity_url, timeout=12)
+        if cat_data:
+            topics = cat_data.get("topic_list", {}).get("topics", [])
             print(f"    Varsity Category: {len(topics)} topics found.")
             for t in topics:
                 t_id    = t.get("id")
@@ -252,9 +242,9 @@ def harvest_tradingqna():
                     continue
                 t_url = f"{BASE_URL}/t/{t_id}.json"
                 try:
-                    t_resp = requests.get(t_url, headers=HEADERS, timeout=10)
-                    if t_resp.status_code == 200:
-                        stream_posts = t_resp.json().get("post_stream", {}).get("posts", [])
+                    t_json = http_get_json(t_url, timeout=10)
+                    if t_json:
+                        stream_posts = t_json.get("post_stream", {}).get("posts", [])
                         for sp in stream_posts[:5]:
                             sp_id = sp.get("id")
                             if not sp_id or sp_id in seen_post_ids:
@@ -276,7 +266,7 @@ def harvest_tradingqna():
                                 "search_query":  "category_varsity",
                                 "source_url":    f"{BASE_URL}/t/{t_id}"
                             })
-                    time.sleep(0.8)
+                    time.sleep(0.5)
                 except Exception:
                     pass
     except Exception as e:

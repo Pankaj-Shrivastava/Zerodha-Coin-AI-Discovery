@@ -50,7 +50,7 @@ export default function App() {
         if (goldenRes.ok) setGoldenSetData(await goldenRes.json());
         if (verbRes.ok) {
           const verbs = await verbRes.json();
-          setVerbatimsData(verbs.slice(0, 150));
+          setVerbatimsData(verbs);
         }
       } catch (err) {
         console.error('Error fetching discovery data:', err);

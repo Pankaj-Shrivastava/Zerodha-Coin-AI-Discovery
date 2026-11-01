@@ -19,9 +19,11 @@ export default function Header({ activeTab, setActiveTab }) {
 
           {/* Logo & Title */}
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-white font-bold shadow-sm shrink-0">
-              <span className="font-mono text-sm tracking-tighter">ZC</span>
-            </div>
+            <img
+              src="/screen.png"
+              alt="Zerodha Coin Logo"
+              className="w-9 h-9 rounded-lg object-contain shadow-xs shrink-0"
+            />
             <div className="flex flex-col">
               <div className="flex items-center gap-2">
                 <span className="font-sans font-semibold text-base text-on-surface tracking-tight leading-none">

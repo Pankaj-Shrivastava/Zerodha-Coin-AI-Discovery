@@ -1,11 +1,12 @@
 // UI vocabulary: display names for codes that appear in claims_manifest.json, and fixed colours.
 // No counts, percentages, amounts or user text live here: every value shown comes from the manifest.
 
-// Palette (agreed 2026-11-05): the previous UI's colours. Levers use its three accents; channels use
-// navy-to-grey tones so they never compete with the levers; neutral greys for everything that is not a lever.
+// Palette v2 (agreed 2026-11-05): the previous palette, softened. The three levers differ in lightness as well as
+// hue (dark blue, mid blue-green, warm orange) so they stay distinct with red-green or blue-yellow colour blindness.
+// Lever colours are for marks only (bars, dots, card edges); text always uses ink / muted.
 const C = {
-  navy: '#0B1C30', blue: '#005CAB', midBlue: '#2D76C8', green: '#006C4A', orange: '#A33900',
-  grey900: '#414751', grey600: '#727783', grey400: '#A2A7B2', grey200: '#C1C6D3', grey100: '#DCE1EA',
+  navy: '#243447', blue: '#24507F', midBlue: '#5584B8', green: '#4BA48E', orange: '#B86B28',
+  grey900: '#6B7482', grey600: '#8E98A8', grey400: '#A0A8B5', grey200: '#CBD2DD', grey100: '#E2E6ED',
 };
 
 export const CHANNELS = {
@@ -21,7 +22,7 @@ export const GROUPS = {
   trust: { short: 'Trust', color: C.green, lever: true },
   education: { short: 'Education', color: C.orange, lever: true },
   product_gap: { short: 'Product gaps', color: C.grey900, lever: false },
-  outside: { short: 'Outside the product', color: C.grey600, lever: false },
+  outside: { short: 'Outside the product', color: C.grey400, lever: false },
 };
 
 export const STAGES = {
@@ -61,6 +62,8 @@ export const CAUSES = {
   mixed: { name: 'Mixed', color: C.grey400 },
   unclear: { name: 'Unclear', color: C.grey100 },
 };
+
+export const STATUS_NAMES = { answered: 'Answered', partly_answered: 'Partly answered', not_answered: 'Not answered yet' };
 
 export const CONFIDENCE = {
   high: { name: 'High confidence', hint: 'At least 5 posts, 2 or more channels, 3 or more checked by a person' },

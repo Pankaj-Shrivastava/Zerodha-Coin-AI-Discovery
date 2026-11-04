@@ -24,7 +24,12 @@ export default function App() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const onHash = () => { setScreen(screenFromHash()); window.scrollTo(0, 0); };
+    // scroll to the top only when the screen changes; links inside a screen (#explorer/TRU-2, #questions/Q6) keep their place
+    let current = screenFromHash();
+    const onHash = () => {
+      const next = screenFromHash();
+      if (next !== current) { current = next; setScreen(next); window.scrollTo(0, 0); }
+    };
     window.addEventListener('hashchange', onHash);
     return () => window.removeEventListener('hashchange', onHash);
   }, []);

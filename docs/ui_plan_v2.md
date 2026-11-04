@@ -22,7 +22,8 @@
 - **`CountBar`:** horizontal bar always labelled "X of N".
 - **`ConfidenceBadge`:** High / Medium / Low / Insufficient, computed from the rubric (`evals.md` §12).
 - **`EvidenceEmpty`:** shown when a section has fewer than the evidence threshold: "Not enough evidence yet."
-- **No collapsible sections:** all content is shown open; no accordions or toggles.
+- **Progressive disclosure (changed 2026-11-05):** headline evidence (counts, confidence, problem statements, the first quote) is never hidden; only secondary detail may sit in an expandable section, a tab or a further carousel slide.
+- **Story layout:** each screen reads as numbered chapters (`Chapter`), with an "On this page" list on wide screens. Other shared blocks: `StatBlock`, `QuoteCarousel` (one quote at a time, never auto-advances), `Disclosure`, `Tabs`, `LeverDot`. Screen 2 is a list of problems with one problem shown at a time (a dropdown on phones); Screen 3 groups the questions by status.
 
 ### 0.4 Typography (Geist only)
 - **One family:** Geist, loaded from Google Fonts with **two weights only**: Regular 400 and SemiBold 600 (the single "bold").
@@ -38,13 +39,13 @@
 - Next to the count, every problem shows its evidence strength: posts that state drop-off, posts reporting money lost or held, number of channels, recency mix and the confidence badge.
 - No retention percentage anywhere: there is no cohort or internal data.
 
-### 0.6 Colour (agreed 2026-11-05: the previous UI's palette)
-- **Base:** page `#F8F9FF`, cards `#FFFFFF`, text `#0B1C30`, secondary text `#414751`, borders `#C1C6D3`, bar tracks `#E5EEFF`, links and focus `#005CAB`, errors `#BA1A1A`.
-- **Levers** (the previous accents): Reliability `#005CAB` blue · Trust `#006C4A` green · Education `#A33900` burnt orange. Product gaps `#414751` and Outside the product `#727783` in greys. No other hues.
-- **Channels** (navy-to-grey tones, always shown with name and count, so they never compete with the levers): Reddit `#0B1C30` · Play Store `#2D76C8` · TradingQnA `#727783` · YouTube `#C1C6D3`.
-- Fix type and cause bars reuse the lever colours for product (blue) and education (orange) and greys for the rest; recency uses a navy-to-grey ramp.
-- Colours live in one place, `ui/src/lib/vocab.js`, and are used identically on every screen.
-- Badges only where they carry computed meaning: confidence and question status use fill / outline / dashed, not colour.
+### 0.6 Colour (palette v2, agreed 2026-11-05: the previous palette, softened and colour-blind safe)
+- **Base:** page `#F4F6FA`, cards `#FFFFFF`, text `#1E2B3C` (14.3:1), secondary text `#4C5666` (7.4:1), borders `#D6DCE5`, bar tracks `#E9EDF4`, links and focus `#2F6CA3` (5.5:1), errors `#B3261E`.
+- **Levers** differ in lightness as well as hue, so they stay distinct with red-green or blue-yellow colour blindness (simulated colour difference of 31 or more for every pair): Reliability `#24507F` deep blue · Trust `#4BA48E` blue-green · Education `#B86B28` warm orange. Product gaps `#6B7482`, Outside the product `#A0A8B5`.
+- **Channels:** a dark-to-light ramp, always shown with name and count: Reddit `#243447` · Play Store `#5584B8` · TradingQnA `#8E98A8` · YouTube `#CBD2DD`.
+- Fix type and cause bars reuse the lever blue (product) and orange (education) and greys for the rest; recency uses the grey ramp.
+- Lever colours are for marks only (bars, dots, card edges); all text uses the text colours.
+- Colours live in one place, `ui/src/lib/vocab.js`. Confidence and question status use fill / outline / dashed, not colour.
 
 ---
 

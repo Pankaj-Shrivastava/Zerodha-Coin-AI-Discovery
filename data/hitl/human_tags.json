@@ -1,5 +1,5 @@
 {
- "description": "Reconciled gold set: only tags supported by the verbatim text. Human interpretations that are not stated in the text and AI-only inferences are excluded. Source of truth for tags: docs/hitl_tagged_verbatims.md.",
+ "description": "Reconciled gold set: only tags supported by the verbatim text. Human interpretations that are not stated in the text and AI-only inferences are excluded. Source of truth for tags: docs/hitl_tagging_log.md (side-by-side view: docs/hitl_tagged_verbatims.md).",
  "churn_risk_rule": "high only when the text states a stop, an intent to leave, or a realised exit; medium when the text shows a loss/failure/lapse pattern without a stated intent; low when neutral, positive or clearly engaged.",
  "adopted_friction_labels": [
   "bank_penalty",

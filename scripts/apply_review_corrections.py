@@ -8,6 +8,11 @@ direct records for the rules agreed in that review:
   R-continue: a past loss/failure where the text states the investor kept or increased investing -> risk low.
   R-error   : an error message quoted in the text that gives no reason or a misleading one
               -> friction other:unclear_error_message.
+Round 2 (2026-11-05): off-topic leakage review (data/hitl/leakage_review_round1.md, 30 items):
+  R-missell : distributor_misselling only when the text says an intermediary pushed, steered or chose an
+              unsuitable product or acted in their own interest. Posts that only say the money is in regular
+              plans / went via an advisor and the person now wants direct -> other:regular_to_direct_switch (EDU-4).
+  #27       : tradingqna-381928 describes a planned SIP ("I'm Willing to Do") -> hypothetical.
 Every added span must be an exact substring of the (whitespace-normalised) verbatim, or the change is rejected.
 Each applied change is logged on the record under 'review_log'. Re-running is idempotent.
 
@@ -26,9 +31,12 @@ TAGS, CORPUS = P('data', 'processed', 'tags_v2.json'), P('data', 'processed', 'c
 norm = lambda s: re.sub(r'\s+', ' ', s).strip()
 
 HITL, SWEEP = 'hitl_review_round1', 'rule_sweep_round1'
+LEAK, LSWEEP = 'leakage_review_round1', 'rule_sweep_round2'
+MIS, R2D = 'other:distributor_misselling', 'other:regular_to_direct_switch'
 ERR = 'other:unclear_error_message'
 
-# (record id, source, reason, changes) ; changes: {'risk': lvl} and/or {'add_friction': (label, span)}
+# (record id, source, reason, changes) ; changes: {'risk': lvl}, {'add_friction': (label, span)},
+#   {'relabel': (from_label, to_label)} (span kept) and/or {'experienced': 'hypothetical'|'experienced'}
 CORRECTIONS = [
     # --- user review, round 1 ---
     ('reddit-dryrun-1vv87ie', HITL, '#8 SIPs paused automatically, unresolved (R-medium)', {'risk': 'medium'}),
@@ -63,6 +71,25 @@ CORRECTIONS = [
     ('playstore-et_money-7a9393c4-9afa-49c7-80e4-d12ac6e1a0e3', SWEEP, 'server error, no guidance', {'add_friction': (ERR, 'After sometime it shows server error')}),
     ('playstore-et_money-95ad3f87-e4cf-4528-bbba-284c14179f52', SWEEP, 'user asks what the error means', {'add_friction': (ERR, '"something went wrong try after some time". What does something mean ?')}),
     ('playstore-zerodha_coin-d1b97377-e113-4a3c-ada0-37e6add1542b', SWEEP, 'vague holdings-discrepancy error', {'add_friction': (ERR, 'The error shown on all funds is there may be discrepancy in fund holdings')}),
+
+    # --- round 2: leakage review + R-missell sweep (kept as mis-selling: reddit-1nktvia, -1wm28sc, -1xirk0z,
+    #     -dryrun-1vbofl5, -dryrun-1w1v388, -1vfrwk7 (advisor moved her into a PMS), -1ub060p (advisor spread money over 17 funds)) ---
+    ('tradingqna-36579', LEAK, '#19 only says money is in regular plans; asks about switching (R-missell)', {'relabel': (MIS, R2D)}),
+    ('tradingqna-381928', LEAK, '#27 planned SIP, not yet experienced', {'experienced': 'hypothetical'}),
+    ('reddit-1bxlbx6', LSWEEP, 'regular funds, no claim of being mis-sold (R-missell)', {'relabel': (MIS, R2D)}),
+    ('reddit-1f5i9dv', LSWEEP, 'agent-sold regular plan, asks to switch (R-missell)', {'relabel': (MIS, R2D)}),
+    ('reddit-1frbc05', LSWEEP, 'regular via RM, moved to direct (R-missell)', {'relabel': (MIS, R2D)}),
+    ('reddit-1ph7f98', LSWEEP, 'via distributor, plans to move to direct (R-missell)', {'relabel': (MIS, R2D)}),
+    ('reddit-1r7zwsn', LSWEEP, 'SIP in regular plan (R-missell)', {'relabel': (MIS, R2D)}),
+    ('reddit-1s32351', LSWEEP, 'switching portfolio regular to direct (R-missell)', {'relabel': (MIS, R2D)}),
+    ('reddit-1s3yxtq', LSWEEP, 'via agent, switching to direct (R-missell)', {'relabel': (MIS, R2D)}),
+    ('reddit-1sjb086', LSWEEP, 'all investments in regular plans (R-missell)', {'relabel': (MIS, R2D)}),
+    ('reddit-1sk2jhz', LSWEEP, 'learned regular vs direct difference (R-missell)', {'relabel': (MIS, R2D)}),
+    ('reddit-1t0d98s', LSWEEP, 'advisor regular plans, returns lagging (R-missell)', {'relabel': (MIS, R2D)}),
+    ('reddit-1ua56dh', LSWEEP, 'money sitting in regular SIPs (R-missell)', {'relabel': (MIS, R2D)}),
+    ('reddit-62lgns', LSWEEP, 'distributor-sold MFs, wants direct (R-missell)', {'relabel': (MIS, R2D)}),
+    ('tradingqna-226012', LSWEEP, 'advisor regular funds, when to switch (R-missell)', {'relabel': (MIS, R2D)}),
+    ('tradingqna-312071', LSWEEP, 'regular fund, switch question (R-missell)', {'relabel': (MIS, R2D)}),
 ]
 
 
@@ -93,6 +120,27 @@ def main(dry):
                 t['friction'].append(label)
                 t['evidence'].setdefault('friction', {})[label] = norm(span)
                 log.append({'source': src, 'field': 'friction', 'added': label, 'span': norm(span), 'reason': reason})
+                applied += 1
+            elif kind == 'relabel':
+                frm, to = val
+                if frm not in t['friction']:
+                    if to in t['friction']:
+                        skipped += 1
+                    else:
+                        rejected.append((rid, f'label not on record: {frm}'))
+                    continue
+                t['friction'] = [to if x == frm else x for x in t['friction']]
+                ev = t['evidence'].setdefault('friction', {})
+                if frm in ev:
+                    ev[to] = ev.pop(frm)
+                log.append({'source': src, 'field': 'friction', 'from': frm, 'to': to, 'reason': reason})
+                applied += 1
+            elif kind == 'experienced':
+                before = t['experienced_vs_hypothetical']
+                if before == val:
+                    skipped += 1; continue
+                t['experienced_vs_hypothetical'] = val
+                log.append({'source': src, 'field': 'experienced_vs_hypothetical', 'from': before, 'to': val, 'reason': reason})
                 applied += 1
     print(f'applied {applied} · already applied {skipped} · rejected {len(rejected)}')
     for r in rejected:

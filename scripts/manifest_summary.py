@@ -62,7 +62,7 @@ for gk, gname in M['groups'].items():
     for x in ps:
         sdx = x['stated_dropoff']
         flag = f" · ⚑ {CH[x['top_channel']]} {pct(x['top_channel_share'] * 100, 100)} of posts" if x['channel_flag'] else ''
-        w(f"**#{x['rank']} {x['id']} — {x['name']}**  ")
+        w(f"**{'#' + str(x['rank']) if x['rank'] else 'Signal to watch (below threshold):'} {x['id']} — {x['name']}**  ")
         w(f"{x['count']} of {N} posts · {x['confidence']} confidence · {PL[x['platform_label']]} "
           f"(Coin {x['platform_split']['coin']} / other {x['platform_split']['other']} / not stated {x['platform_split']['not_identifiable']}) · "
           f"drop-off {sdx['investor']} (leaving Coin {sdx['leaving_coin']}, competitor {sdx['leaving_competitor']}) · money {x['money']['count']}{flag}\n")

@@ -254,9 +254,13 @@ def main():
             'meets_threshold': n >= 5 and n_ch >= 2,
             'all_ids': sorted(ids),
         })
-    problems.sort(key=lambda x: (-x['count'], x['id']))
+    # problems below the evidence threshold (evals.md §17.3) are not ranked: they are kept as 'signal' (signals to
+    # watch, shown apart with their confidence) when they have >=3 posts, and are not shown at all below that (§12)
+    for pr in problems:
+        pr['display'] = 'ranked' if pr['meets_threshold'] else 'signal' if pr['count'] >= 3 else 'hidden'
+    problems.sort(key=lambda x: (x['display'] != 'ranked', -x['count'], x['id']))
     for i, pr in enumerate(problems, 1):
-        pr['rank'] = i
+        pr['rank'] = i if pr['display'] == 'ranked' else None
 
     # ---------- quotes ----------
     # privacy: never quote a post in which the author states their own name (the dashboard may be shared widely)
@@ -378,6 +382,7 @@ def main():
             'status_by_count': by_count, 'status': status,
             'status_cap_reason': qn.get('status_cap_reason') if status != by_count else None,
             'channel_split': {c: sum(1 for k in ids if ch(k) == c) for c in CHANNELS},
+            'channel_flag': bool(n and max(sum(1 for k in ids if ch(k) == c) for c in CHANNELS) / n > 0.7),
             'by_problem': dict(prob_counts.most_common(8)),
             'by_stage': {s: sum(1 for k in ids if tg(k)['journey_stage'] == s) for s in STAGES} if qid == 'Q2' else None,
             'by_action': dict(Counter(tg(k)['user_action_stated'] for k in ids).most_common(10)) if qid == 'Q6' else None,

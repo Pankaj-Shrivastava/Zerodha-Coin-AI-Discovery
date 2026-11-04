@@ -48,7 +48,7 @@ for p in M['problems']:
     stage = (' '.join(f"{ST[s]} {v}" for s, v in p['stage']['counts'].items() if v) if p['stage']['shown']
              else f"not shown ({p['stage']['stated_count']} stated)")
     flag = f"{CH[p['top_channel']]} {round(100 * p['top_channel_share'])}%" if p['channel_flag'] else '–'
-    w(f"| {p['rank']} | {p['id']} | {p['name']} | {p['count']} | {p['confidence']} | {flag} | {PL[p['platform_label']]} | "
+    w(f"| {p['rank'] or 'signal'} | {p['id']} | {p['name']} | {p['count']} | {p['confidence']} | {flag} | {PL[p['platform_label']]} | "
       f"{sd['investor']} ({sd['leaving_coin']} / {sd['leaving_competitor']}) | {p['money']['count']} | {stage} | {len(p['quotes'])} of {p['quote_candidates']} |")
 
 w('\n## Rule-selected quotes\n')
@@ -57,7 +57,7 @@ w('Order: insight → 80+ characters → recency → shorter; one per channel fi
   '"(excerpt)" = whole sentences around the evidence span, cut from the exact text; '
   '"truncated at source" = the harvested text itself was cut off by the channel.\n')
 for p in M['problems']:
-    w(f"### {p['rank']}. {p['id']} {p['name']}\n")
+    w(f"### {p['rank'] or 'Signal'}. {p['id']} {p['name']}\n")
     if not p['quotes']:
         w('_No eligible quote._\n')
     for q in p['quotes']:

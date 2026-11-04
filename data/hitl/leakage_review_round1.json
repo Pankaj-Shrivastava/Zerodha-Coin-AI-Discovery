@@ -1,0 +1,227 @@
+{
+ "items": [
+  {
+   "n": 1,
+   "problem": "EDU-1",
+   "id": "reddit-1vlg05i",
+   "verdict": "fits",
+   "note": null,
+   "provisional": false
+  },
+  {
+   "n": 2,
+   "problem": "REL-1",
+   "id": "reddit-1azpy53",
+   "verdict": "fits",
+   "note": "user sees it as mandate_failed (mandate could not be set up for NRI)",
+   "provisional": false
+  },
+  {
+   "n": 3,
+   "problem": "TRU-4",
+   "id": "playstore-zerodha_coin-f48b1900-3a41-4d59-af44-cd07750aa294",
+   "verdict": "fits",
+   "note": null,
+   "provisional": false
+  },
+  {
+   "n": 4,
+   "problem": "EDU-2",
+   "id": "reddit-8uthl6",
+   "verdict": "fits",
+   "note": "user unsure; full text has the cancel-online sentence -> fits EDU-2; regular-to-direct topic untagged (missed secondary problem)",
+   "provisional": false
+  },
+  {
+   "n": 5,
+   "problem": "REL-5",
+   "id": "tradingqna-144478",
+   "verdict": "fits",
+   "note": null,
+   "provisional": false
+  },
+  {
+   "n": 6,
+   "problem": "REL-3",
+   "id": "playstore-et_money-42f7c369-ebae-42ac-809a-744af956977a",
+   "verdict": "fits",
+   "note": "user unsure; stale NAV/portfolio fits REL-3; label statement_confusion is a misleading name",
+   "provisional": false
+  },
+  {
+   "n": 7,
+   "problem": "EDU-3",
+   "id": "reddit-dryrun-1vn6ilr",
+   "verdict": "fits",
+   "note": null,
+   "provisional": false
+  },
+  {
+   "n": 8,
+   "problem": "TRU-3",
+   "id": "playstore-zerodha_coin-b22c0b3b-3cc7-47f6-93ed-84caaa3f7205",
+   "verdict": "fits",
+   "note": "also order_placement_failed per user; already counted in REL-4 via order_failed_no_reason",
+   "provisional": false
+  },
+  {
+   "n": 9,
+   "problem": "REL-4",
+   "id": "playstore-angel_one-34b80039-34c3-48ff-b73f-cbad3af2fd6d",
+   "verdict": "fits",
+   "note": null,
+   "provisional": false
+  },
+  {
+   "n": 10,
+   "problem": "REL-2",
+   "id": "reddit-1rjui69",
+   "verdict": "fits",
+   "note": null,
+   "provisional": false
+  },
+  {
+   "n": 11,
+   "problem": "TRU-2",
+   "id": "reddit-1v1o9o0",
+   "verdict": "fits",
+   "provisional": false
+  },
+  {
+   "n": 12,
+   "problem": "TRU-5",
+   "id": "tradingqna-88827",
+   "verdict": "fits",
+   "provisional": false
+  },
+  {
+   "n": 13,
+   "problem": "TRU-1",
+   "id": "playstore-zerodha_coin-7c7771a6-2b7b-4b83-b441-3b1adc388bd9",
+   "verdict": "fits",
+   "provisional": false
+  },
+  {
+   "n": 14,
+   "problem": "EDU-4",
+   "id": "tradingqna-61323",
+   "verdict": "fits",
+   "provisional": false
+  },
+  {
+   "n": 15,
+   "problem": "OUT-1",
+   "id": "reddit-dryrun-1nxn4qr",
+   "verdict": "fits",
+   "provisional": false
+  },
+  {
+   "n": 16,
+   "problem": "OUT-2",
+   "id": "tradingqna-405535",
+   "verdict": "fits",
+   "provisional": false
+  },
+  {
+   "n": 17,
+   "problem": "GAP-1",
+   "id": "playstore-et_money-b122e32e-ead0-4f9b-948b-54b0a35bf584",
+   "verdict": "fits",
+   "provisional": false
+  },
+  {
+   "n": 18,
+   "problem": "EDU-6",
+   "id": "reddit-1w4j2w5",
+   "verdict": "fits",
+   "provisional": false
+  },
+  {
+   "n": 19,
+   "problem": "OUT-3",
+   "id": "tradingqna-36579",
+   "verdict": "does_not_fit",
+   "provisional": false,
+   "note": "Span only says money is in regular plans; no statement that an advisor/distributor sold the wrong product. A regular-to-direct switch question, not mis-selling. Proposed by AI; confirmed by researcher."
+  },
+  {
+   "n": 20,
+   "problem": "EDU-5",
+   "id": "playstore-zerodha_coin-c238809b-61a2-4cb5-9666-158e488fe9fd",
+   "verdict": "fits",
+   "provisional": false
+  },
+  {
+   "n": 21,
+   "problem": "TRU-6",
+   "id": "youtube-Ugzli9DC0Z6ZGpVpQKd4AaABAg",
+   "verdict": "fits",
+   "provisional": false
+  },
+  {
+   "n": 22,
+   "problem": "EDU-3",
+   "id": "reddit-1pntay7",
+   "verdict": "fits",
+   "provisional": false,
+   "note": "First-time investor confused by mandate limit (1 lakh vs 1,000 SIP) and instalment date in mandate: matches EDU-3. Proposed by AI; confirmed by researcher."
+  },
+  {
+   "n": 23,
+   "problem": "TRU-2",
+   "id": "tradingqna-533664",
+   "verdict": "fits",
+   "provisional": false
+  },
+  {
+   "n": 24,
+   "problem": "TRU-4",
+   "id": "playstore-groww-d62bc2ae-f70b-42dd-bb59-00ad3151cb3f",
+   "verdict": "fits",
+   "provisional": false
+  },
+  {
+   "n": 25,
+   "problem": "OUT-1",
+   "id": "reddit-1septyi",
+   "verdict": "fits",
+   "provisional": false
+  },
+  {
+   "n": 26,
+   "problem": "OUT-1",
+   "id": "reddit-1varaq2",
+   "verdict": "fits",
+   "provisional": false
+  },
+  {
+   "n": 27,
+   "problem": "EDU-4",
+   "id": "tradingqna-381928",
+   "verdict": "does_not_fit",
+   "provisional": false,
+   "note": "Asks about AMC SIP minimum instalments before cancelling: a SIP-terms question (EDU-3), not confusion about where the SIP lives (EDU-4); label amc_sip_min_installments is mis-mapped. Also planned, not yet experienced (\"I am willing to do\"). Proposed by AI; confirmed by researcher."
+  },
+  {
+   "n": 28,
+   "problem": "OUT-2",
+   "id": "reddit-1uv5ifr",
+   "verdict": "fits",
+   "provisional": false
+  },
+  {
+   "n": 29,
+   "problem": "EDU-1",
+   "id": "youtube-UgxS2qFKlM2FXCW5Zhp4AaABAg",
+   "verdict": "fits",
+   "provisional": false
+  },
+  {
+   "n": 30,
+   "problem": "TRU-1",
+   "id": "reddit-1u595qp",
+   "verdict": "fits",
+   "provisional": false
+  }
+ ]
+}

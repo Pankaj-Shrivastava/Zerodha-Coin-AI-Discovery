@@ -19,21 +19,21 @@
    "indirect": 448,
    "off_topic": 124
   },
-  "direct_hypothetical_excluded": 30,
-  "counted_N": 784,
+  "direct_hypothetical_excluded": 31,
+  "counted_N": 783,
   "channel_split": {
    "reddit": 352,
    "play_store": 187,
-   "tradingqna": 108,
+   "tradingqna": 107,
    "youtube": 137
   },
   "platform_split": {
-   "coin": 251,
+   "coin": 250,
    "other": 214,
    "not_identifiable": 319
   },
   "platform_named": {
-   "zerodha_coin": 251,
+   "zerodha_coin": 250,
    "groww": 69,
    "etmoney": 54,
    "paytm_money": 35,
@@ -69,31 +69,31 @@
   "recency_mix": {
    "recent": 260,
    "aging": 85,
-   "old": 244,
+   "old": 243,
    "unknown": 195
   },
   "date_range": {
    "first": "2015-10-19",
    "last": "2026-11-01",
-   "dated_posts": 594
+   "dated_posts": 593
   },
   "posts_without_friction": 35,
   "human_confirmed_posts": 56,
-  "built_on": "2026-11-04"
+  "built_on": "2026-11-05"
  },
  "kpis": {
   "evidence_base": {
-   "count": 784,
+   "count": 783,
    "channel_split": {
     "reddit": 352,
     "play_store": 187,
-    "tradingqna": 108,
+    "tradingqna": 107,
     "youtube": 137
    }
   },
   "stated_dropoff": {
    "count_investor": 116,
-   "denominator": 784,
+   "denominator": 783,
    "by_scope": {
     "sip": 70,
     "platform": 46,
@@ -235,7 +235,7 @@
   },
   "money_and_trust_breakers": {
    "count": 148,
-   "denominator": 784,
+   "denominator": 783,
    "money_incurred": 40,
    "definition": "posts reporting money lost or held (cost incurred), or in TRU-1 unexpected debit, TRU-3 money stuck, TRU-4 support failure",
    "ids": [
@@ -391,12 +391,12 @@
   },
   "fix_type": {
    "counts": {
-    "product": 469,
+    "product": 468,
     "education": 122,
     "external": 80,
     "unclear": 78
    },
-   "denominator": 749,
+   "denominator": 748,
    "definition": "per post with at least one friction, from cause_type"
   }
  },
@@ -406,7 +406,7 @@
    "group": "education",
    "name": "My returns are not what I expected, and I doubt whether to continue",
    "count": 136,
-   "denominator": 784,
+   "denominator": 783,
    "channel_split": {
     "reddit": 98,
     "play_store": 0,
@@ -560,28 +560,64 @@
      "count": 19,
      "facts": [
       {
-       "id": "reddit-1t0d98s",
-       "text": "25F"
+       "id": "reddit-1tj7r18",
+       "text": "Age: 29"
+      },
+      {
+       "id": "reddit-dryrun-1w47pl1",
+       "text": "I am 23 earning below avg"
       },
       {
        "id": "reddit-dryrun-1v8roca",
        "text": "I'm 22"
       },
       {
-       "id": "reddit-1q9wbbj",
-       "text": "Age - 25 yo"
+       "id": "reddit-1t0d98s",
+       "text": "25F"
+      },
+      {
+       "id": "reddit-1s7ztsm",
+       "text": "Age: 27"
+      },
+      {
+       "id": "reddit-dryrun-1wdg52k",
+       "text": "I am currently 30 years old"
       },
       {
        "id": "reddit-1ko3rzy",
        "text": "I am 20 (M)"
       },
       {
-       "id": "reddit-1ptuyd8",
-       "text": "I am a 29"
+       "id": "reddit-1q9ro80",
+       "text": "27M, Debt free"
+      },
+      {
+       "id": "reddit-1q9wbbj",
+       "text": "Age - 25 yo"
+      },
+      {
+       "id": "reddit-1p56a6e",
+       "text": "32 M"
       },
       {
        "id": "reddit-dryrun-1wgnrvz",
        "text": "Portfolio review 29Y"
+      },
+      {
+       "id": "reddit-1ptuyd8",
+       "text": "I am a 29"
+      },
+      {
+       "id": "reddit-dryrun-1wvpw1n",
+       "text": "I am 21 and I started investing at the age of 19"
+      },
+      {
+       "id": "reddit-dryrun-1vzs60y",
+       "text": "I'm (21)"
+      },
+      {
+       "id": "reddit-1lgva0e",
+       "text": "Now,i m 21"
       },
       {
        "id": "reddit-1pxqdj9",
@@ -596,44 +632,8 @@
        "text": "My age is 27"
       },
       {
-       "id": "reddit-1p56a6e",
-       "text": "32 M"
-      },
-      {
-       "id": "reddit-1s7ztsm",
-       "text": "Age: 27"
-      },
-      {
-       "id": "reddit-1lgva0e",
-       "text": "Now,i m 21"
-      },
-      {
-       "id": "reddit-1q9ro80",
-       "text": "27M, Debt free"
-      },
-      {
-       "id": "reddit-dryrun-1wvpw1n",
-       "text": "I am 21 and I started investing at the age of 19"
-      },
-      {
-       "id": "reddit-dryrun-1wdg52k",
-       "text": "I am currently 30 years old"
-      },
-      {
        "id": "reddit-dryrun-1wfvfty",
        "text": "Im 22"
-      },
-      {
-       "id": "reddit-1tj7r18",
-       "text": "Age: 29"
-      },
-      {
-       "id": "reddit-dryrun-1w47pl1",
-       "text": "I am 23 earning below avg"
-      },
-      {
-       "id": "reddit-dryrun-1vzs60y",
-       "text": "I'm (21)"
       }
      ]
     },
@@ -645,16 +645,16 @@
        "text": "I'm a new investor"
       },
       {
-       "id": "reddit-dryrun-1xd27xx",
-       "text": "relatively new to investing/SIPs"
+       "id": "reddit-dryrun-1vasakw",
+       "text": "My parents only use fd"
       },
       {
        "id": "reddit-dryrun-1w5at5y",
        "text": "newbie in this arena"
       },
       {
-       "id": "reddit-dryrun-1vasakw",
-       "text": "My parents only use fd"
+       "id": "reddit-dryrun-1xd27xx",
+       "text": "relatively new to investing/SIPs"
       }
      ]
     },
@@ -679,16 +679,8 @@
      "count": 5,
      "facts": [
       {
-       "id": "reddit-dryrun-1wvtkds",
-       "text": "I am from a very poor background"
-      },
-      {
        "id": "reddit-1fz8se4",
        "text": "She is a student"
-      },
-      {
-       "id": "reddit-1lgva0e",
-       "text": "i am now sitting with my father in his shop helping"
       },
       {
        "id": "reddit-1snsc3u",
@@ -697,6 +689,14 @@
       {
        "id": "reddit-dryrun-1vzs60y",
        "text": "college student"
+      },
+      {
+       "id": "reddit-1lgva0e",
+       "text": "i am now sitting with my father in his shop helping"
+      },
+      {
+       "id": "reddit-dryrun-1wvtkds",
+       "text": "I am from a very poor background"
       }
      ]
     }
@@ -714,20 +714,20 @@
     "distrust_of_fund_industry": 7,
     "market_timing_stop": 5,
     "volatility_anxiety": 4,
-    "market_timing_regret": 2,
     "compulsive_checking": 2,
+    "market_timing_regret": 2,
     "over_diversification": 2,
-    "pause_urge": 1,
+    "exit_timing_uncertainty": 1,
     "sip_too_slow": 1,
-    "chasing_past_returns": 1,
-    "gold_fomo": 1,
     "disengagement": 1,
+    "ipo_chasing": 1,
+    "gold_fomo": 1,
+    "early_loss_scare": 1,
     "panic_exit_regret": 1,
     "early_withdrawal_regret": 1,
+    "pause_urge": 1,
     "influencer_driven_stop": 1,
-    "early_loss_scare": 1,
-    "exit_timing_uncertainty": 1,
-    "ipo_chasing": 1
+    "chasing_past_returns": 1
    },
    "human_confirmed": 7,
    "confidence": "high",
@@ -870,6 +870,7 @@
     "youtube-UgzgTnGUakDHBA_ItJ14AaABAg",
     "youtube-UgzhirBgdrT8oE1df8N4AaABAg"
    ],
+   "display": "ranked",
    "rank": 1,
    "quotes": [
     {
@@ -915,7 +916,7 @@
    "group": "reliability",
    "name": "My SIP instalment did not go through",
    "count": 101,
-   "denominator": 784,
+   "denominator": 783,
    "channel_split": {
     "reddit": 35,
     "play_store": 39,
@@ -1063,12 +1064,12 @@
        "text": "Im a college student"
       },
       {
-       "id": "reddit-1cp7hom",
-       "text": "I'm an NRI"
-      },
-      {
        "id": "reddit-1azpy53",
        "text": "I'm an NRI living in the EU"
+      },
+      {
+       "id": "reddit-1cp7hom",
+       "text": "I'm an NRI"
       }
      ]
     }
@@ -1091,26 +1092,26 @@
     "mandate_activation_delay": 4,
     "silent_mandate_failure": 2,
     "payment_gateway_failure": 2,
-    "sip_order_delayed": 1,
-    "conditional_order_failure": 1,
-    "auto_pause_unexplained": 1,
-    "aof_rejected_after_debit": 1,
-    "sip_stopped_without_notice": 1,
-    "payment_stuck_pending": 1,
     "sip_not_invested_in_time": 1,
-    "auto_payment_refunded": 1,
-    "missed_installment": 1,
     "sip_rejected_blacklisted_agent": 1,
-    "units_bounced_kyc_dpid": 1,
-    "tpv_pending_rejection": 1,
-    "sip_cancelled_during_platform_move": 1,
-    "unexplained_failure": 1,
-    "erroneous_sip_cancellation_email": 1,
-    "sip_payment_error": 1,
-    "mandate_not_effective": 1,
-    "payment_friction": 1,
+    "auto_payment_refunded": 1,
     "holiday_sip_execution": 1,
-    "sip_terminated_unexplained": 1
+    "sip_payment_error": 1,
+    "units_bounced_kyc_dpid": 1,
+    "aof_rejected_after_debit": 1,
+    "erroneous_sip_cancellation_email": 1,
+    "unexplained_failure": 1,
+    "sip_stopped_without_notice": 1,
+    "tpv_pending_rejection": 1,
+    "auto_pause_unexplained": 1,
+    "payment_friction": 1,
+    "sip_terminated_unexplained": 1,
+    "sip_cancelled_during_platform_move": 1,
+    "payment_stuck_pending": 1,
+    "conditional_order_failure": 1,
+    "mandate_not_effective": 1,
+    "missed_installment": 1,
+    "sip_order_delayed": 1
    },
    "human_confirmed": 12,
    "confidence": "high",
@@ -1218,6 +1219,7 @@
     "youtube-UgzLqlTirQvEYGa5DlF4AaABAg.ADi8KkwBhL_AE-eXWgFgMr",
     "youtube-Ugzlh5inE0PIVeGarwN4AaABAg"
    ],
+   "display": "ranked",
    "rank": 2,
    "quotes": [
     {
@@ -1262,7 +1264,7 @@
    "group": "trust",
    "name": "Support did not resolve my problem",
    "count": 67,
-   "denominator": 784,
+   "denominator": 783,
    "channel_split": {
     "reddit": 16,
     "play_store": 48,
@@ -1294,8 +1296,8 @@
     },
     "by_type": {
      "intent_to_leave": 7,
-     "realised_exit": 3,
      "sip_stop": 3,
+     "realised_exit": 3,
      "platform_switch": 1
     },
     "leaving_coin": 1,
@@ -1384,12 +1386,12 @@
      "count": 2,
      "facts": [
       {
-       "id": "reddit-1wut1m2",
-       "text": "I am still new to these things"
-      },
-      {
        "id": "reddit-1pgjnj9",
        "text": "I am new to this"
+      },
+      {
+       "id": "reddit-1wut1m2",
+       "text": "I am still new to these things"
       }
      ]
     }
@@ -1475,6 +1477,7 @@
     "tradingqna-387962",
     "youtube-UgwIVHjutTvVQ2-U2KR4AaABAg"
    ],
+   "display": "ranked",
    "rank": 3,
    "quotes": [
     {
@@ -1520,7 +1523,7 @@
    "group": "education",
    "name": "I do not know what pause, stop, cancel or delete will do, or how to do it",
    "count": 63,
-   "denominator": 784,
+   "denominator": 783,
    "channel_split": {
     "reddit": 27,
     "play_store": 7,
@@ -1636,23 +1639,23 @@
     "no_pause_option": 5,
     "offline_stop_process": 4,
     "cannot_stop_sip": 4,
-    "restart_unclear": 3,
     "exit_procedure_uncertainty": 3,
+    "restart_unclear": 3,
     "stop_notice_period": 2,
-    "cannot_resume_paused_sip": 1,
-    "folio_reuse_uncertainty": 1,
-    "sip_edit_skipped_installment": 1,
-    "transfer_sip_continuity": 1,
-    "sip_stop_required_for_transfer": 1,
     "no_bulk_cancel": 1,
-    "no_auto_resume": 1,
+    "sip_edit_skipped_installment": 1,
     "no_indefinite_pause": 1,
+    "folio_reuse_uncertainty": 1,
+    "offline_pause_process": 1,
+    "transfer_sip_continuity": 1,
+    "cannot_resume_paused_sip": 1,
+    "agent_dependency_to_pause": 1,
+    "slow_sip_cancellation": 1,
+    "no_auto_resume": 1,
+    "skip_not_working": 1,
     "accidental_sip_deletion": 1,
     "unclear_delete_meaning": 1,
-    "skip_not_working": 1,
-    "slow_sip_cancellation": 1,
-    "offline_pause_process": 1,
-    "agent_dependency_to_pause": 1
+    "sip_stop_required_for_transfer": 1
    },
    "human_confirmed": 5,
    "confidence": "high",
@@ -1722,6 +1725,7 @@
     "youtube-Ugz9jMtlrsnku1P8vOB4AaABAg",
     "youtube-UgzGvIWPrrzJuP7-P-V4AaABAg"
    ],
+   "display": "ranked",
    "rank": 4,
    "quotes": [
     {
@@ -1767,7 +1771,7 @@
    "group": "reliability",
    "name": "My SIP needs me to pay by hand each time, so instalments get missed",
    "count": 63,
-   "denominator": 784,
+   "denominator": 783,
    "channel_split": {
     "reddit": 13,
     "play_store": 24,
@@ -1861,17 +1865,17 @@
     "manual_payment_path_gap": 44,
     "missed_sip_no_reminder": 6,
     "no_reminder_feature": 4,
-    "mandate_aversion": 2,
     "upi_autopay_unavailable": 2,
+    "mandate_aversion": 2,
     "secondary_bank_mandate_unavailable": 1,
-    "bank_not_supported": 1,
-    "payment_method_visibility": 1,
-    "no_bank_sip": 1,
-    "missing_true_sip": 1,
     "mandate_not_reusable": 1,
+    "bank_not_supported": 1,
     "delayed_mandate_feature": 1,
     "autodebit_unavailable": 1,
-    "nri_mandate_unsupported": 1
+    "nri_mandate_unsupported": 1,
+    "no_bank_sip": 1,
+    "missing_true_sip": 1,
+    "payment_method_visibility": 1
    },
    "human_confirmed": 13,
    "confidence": "high",
@@ -1941,6 +1945,7 @@
     "youtube-UgxTWlbmv7fKvcqNXVt4AaABAg.9vPUwUmaw1CA0V6vEcjyAI",
     "youtube-Ugz5G42zBvmaSBjSH6h4AaABAg"
    ],
+   "display": "ranked",
    "rank": 5,
    "quotes": [
     {
@@ -1986,7 +1991,7 @@
    "group": "reliability",
    "name": "The app shows my holdings or values wrong, or not at all",
    "count": 56,
-   "denominator": 784,
+   "denominator": 783,
    "channel_split": {
     "reddit": 23,
     "play_store": 29,
@@ -2018,8 +2023,8 @@
     },
     "by_type": {
      "intent_to_leave": 3,
-     "sip_pause": 1,
-     "realised_exit": 1
+     "realised_exit": 1,
+     "sip_pause": 1
     },
     "leaving_coin": 2,
     "leaving_competitor": 2,
@@ -2073,12 +2078,12 @@
      "count": 2,
      "facts": [
       {
-       "id": "reddit-dryrun-1x8d08v",
-       "text": "in my early 20s"
-      },
-      {
        "id": "reddit-1p56a6e",
        "text": "32 M"
+      },
+      {
+       "id": "reddit-dryrun-1x8d08v",
+       "text": "in my early 20s"
       }
      ]
     },
@@ -2086,16 +2091,16 @@
      "count": 4,
      "facts": [
       {
-       "id": "reddit-w9rjhl",
-       "text": "I'm new to investments"
+       "id": "reddit-1fjurp1",
+       "text": "I am a beginner"
       },
       {
        "id": "reddit-dryrun-1x8d08v",
        "text": "been investing for past 2 years"
       },
       {
-       "id": "reddit-1fjurp1",
-       "text": "I am a beginner"
+       "id": "reddit-w9rjhl",
+       "text": "I'm new to investments"
       },
       {
        "id": "reddit-1ubqz7v",
@@ -2114,24 +2119,24 @@
     "statement_confusion": 26,
     "funds_apparently_missing": 8,
     "portfolio_value_mismatch": 4,
+    "external_fund_tracking": 2,
+    "no_payment_history": 2,
+    "fragmented_tracking": 2,
     "reporting_gap": 2,
     "holdings_not_visible": 2,
-    "no_payment_history": 2,
     "holdings_not_visible_after_transfer": 2,
-    "external_fund_tracking": 2,
-    "fragmented_tracking": 2,
-    "holdings_not_visible_in_mf_central": 1,
-    "virtual_account_visibility": 1,
-    "autopay_status_unclear": 1,
-    "active_sip_not_visible": 1,
-    "nav_not_shown": 1,
+    "amc_sip_not_in_portfolio": 1,
     "folio_name_mismatch": 1,
+    "holdings_not_visible_on_amc": 1,
+    "duplicate_folio_entry": 1,
+    "amc_sip_not_tracked": 1,
+    "holdings_not_visible_in_mf_central": 1,
+    "active_sip_not_visible": 1,
     "multiple_folios": 1,
     "payment_status_unclear": 1,
-    "amc_sip_not_tracked": 1,
-    "amc_sip_not_in_portfolio": 1,
-    "duplicate_folio_entry": 1,
-    "holdings_not_visible_on_amc": 1
+    "autopay_status_unclear": 1,
+    "nav_not_shown": 1,
+    "virtual_account_visibility": 1
    },
    "human_confirmed": 4,
    "confidence": "high",
@@ -2194,6 +2199,7 @@
     "youtube-Ugznl_NxgrUJKpfBqZN4AaABAg",
     "youtube-UgzqschJRHqcSlmf3Gp4AaABAg"
    ],
+   "display": "ranked",
    "rank": 6,
    "quotes": [
     {
@@ -2239,7 +2245,7 @@
    "group": "education",
    "name": "I do not understand the mandate, dates or SIP terms",
    "count": 55,
-   "denominator": 784,
+   "denominator": 783,
    "channel_split": {
     "reddit": 13,
     "play_store": 4,
@@ -2336,22 +2342,22 @@
     "mandate_end_date_confusion": 10,
     "notification_uncertainty": 4,
     "installment_date_confusion": 3,
-    "auto_debit_setup_confusion": 3,
     "forced_mandate_resetup_risk": 3,
+    "auto_debit_setup_confusion": 3,
     "upi_mandate_howto": 2,
-    "installment_date_mismatch": 2,
     "bank_account_setup_blocks_mandate": 2,
-    "joint_account_mandate": 1,
-    "order_date_confusion": 1,
-    "date_change_not_honoured": 1,
+    "installment_date_mismatch": 2,
     "mandate_type_change_blocked": 1,
-    "sip_tenure_confusion": 1,
+    "joint_account_mandate": 1,
+    "date_change_not_honoured": 1,
+    "mandate_name_matching": 1,
     "mandate_deletion_unclear": 1,
     "mandate_method_discontinued": 1,
-    "mandate_type_change": 1,
-    "mandate_name_matching": 1,
-    "mandate_type_confusion": 1,
+    "order_date_confusion": 1,
+    "sip_tenure_confusion": 1,
     "emandate_introduction": 1,
+    "mandate_type_change": 1,
+    "mandate_type_confusion": 1,
     "upi_autopay_limit_confusion": 1
    },
    "human_confirmed": 4,
@@ -2414,6 +2420,7 @@
     "youtube-UgzaEuIb2ssx2A38mSR4AaABAg",
     "youtube-UgzyZGl7KOpwbB8iewt4AaABAg"
    ],
+   "display": "ranked",
    "rank": 7,
    "quotes": [
     {
@@ -2459,7 +2466,7 @@
    "group": "trust",
    "name": "My money is stuck: a refund, redemption or bank change will not go through",
    "count": 54,
-   "denominator": 784,
+   "denominator": 783,
    "channel_split": {
     "reddit": 17,
     "play_store": 29,
@@ -2492,8 +2499,8 @@
     "by_type": {
      "intent_to_leave": 4,
      "sip_stop": 2,
-     "realised_exit": 1,
-     "platform_switch": 1
+     "platform_switch": 1,
+     "realised_exit": 1
     },
     "leaving_coin": 1,
     "leaving_competitor": 5,
@@ -2585,27 +2592,27 @@
     "refund_delay": 13,
     "redemption_blocked": 10,
     "redemption_issue": 7,
-    "refund_uncertainty": 3,
     "slow_withdrawal": 3,
     "bank_change_blocked": 3,
+    "refund_uncertainty": 3,
     "bank_detail_change_blocked": 2,
     "redemption_blocked_closed_bank": 2,
-    "bank_account_blocked": 1,
-    "nominee_transmission_harassment": 1,
-    "cannot_skip_or_change_bank": 1,
-    "redemption_amount_mismatch": 1,
     "withdrawal_limit": 1,
-    "redemption_friction": 1,
-    "bank_change_delay": 1,
-    "refund_tracking_missing": 1,
-    "nominee_detail_error": 1,
-    "redemption_in_installments": 1,
-    "regular_funds_locked": 1,
     "redemption_delay": 1,
     "bank_change_cooling_period": 1,
-    "name_mismatch_redemption": 1,
+    "redemption_friction": 1,
+    "refund_tracking_missing": 1,
     "redemption_to_defunct_account": 1,
-    "no_instant_redemption": 1
+    "no_instant_redemption": 1,
+    "redemption_in_installments": 1,
+    "name_mismatch_redemption": 1,
+    "bank_account_blocked": 1,
+    "regular_funds_locked": 1,
+    "cannot_skip_or_change_bank": 1,
+    "redemption_amount_mismatch": 1,
+    "nominee_transmission_harassment": 1,
+    "bank_change_delay": 1,
+    "nominee_detail_error": 1
    },
    "human_confirmed": 3,
    "confidence": "high",
@@ -2666,6 +2673,7 @@
     "youtube-Ugznl_NxgrUJKpfBqZN4AaABAg",
     "youtube-Ugzyo3FqEDnY34sDu6x4AaABAg"
    ],
+   "display": "ranked",
    "rank": 8,
    "quotes": [
     {
@@ -2711,7 +2719,7 @@
    "group": "reliability",
    "name": "The app errors, breaks or is hard to use, and does not say why",
    "count": 53,
-   "denominator": 784,
+   "denominator": 783,
    "channel_split": {
     "reddit": 19,
     "play_store": 32,
@@ -2743,8 +2751,8 @@
     },
     "by_type": {
      "realised_exit": 6,
-     "intent_to_leave": 1,
      "platform_switch": 1,
+     "intent_to_leave": 1,
      "sip_stop": 1
     },
     "leaving_coin": 3,
@@ -2814,16 +2822,16 @@
      "count": 3,
      "facts": [
       {
+       "id": "reddit-dryrun-1w1d9k0",
+       "text": "NRI here"
+      },
+      {
        "id": "playstore-angel_one-34b80039-34c3-48ff-b73f-cbad3af2fd6d",
        "text": "both my wife and I are visually impaired users"
       },
       {
        "id": "reddit-dryrun-1xarkf8",
        "text": "MBBS student investing some amount from my pocket money"
-      },
-      {
-       "id": "reddit-dryrun-1w1d9k0",
-       "text": "NRI here"
       }
      ]
     }
@@ -2838,28 +2846,28 @@
     "unclear_error_message": 10,
     "app_confusing": 8,
     "order_failed_no_reason": 7,
-    "ui_glitch": 4,
     "platform_bugginess": 4,
+    "ui_glitch": 4,
     "kyc_issue": 3,
-    "poor_web_interface": 2,
-    "login_failure": 2,
     "otp_loop": 2,
     "sip_setup_confusing": 2,
-    "double_payout_glitch": 1,
-    "accessibility_gap": 1,
-    "redemption_otp_failure": 1,
+    "poor_web_interface": 2,
+    "login_failure": 2,
+    "nri_otp_lockout": 1,
+    "account_blocked": 1,
+    "investment_limit_error": 1,
+    "broker_app_fatigue": 1,
+    "recurring_issues": 1,
     "cluttered_sip_list": 1,
+    "redemption_otp_failure": 1,
     "mandate_creation_difficult": 1,
     "search_broken": 1,
-    "recurring_issues": 1,
-    "slow_portal": 1,
-    "investment_limit_error": 1,
-    "ekyc_failure": 1,
+    "accessibility_gap": 1,
     "onboarding_document_friction": 1,
+    "slow_portal": 1,
+    "double_payout_glitch": 1,
     "stagnant_features": 1,
-    "broker_app_fatigue": 1,
-    "account_blocked": 1,
-    "nri_otp_lockout": 1
+    "ekyc_failure": 1
    },
    "human_confirmed": 4,
    "confidence": "high",
@@ -2919,6 +2927,7 @@
     "tradingqna-394662",
     "youtube-UgzGJKrF_gi_sXfBy0d4AaABAg"
    ],
+   "display": "ranked",
    "rank": 9,
    "quotes": [
     {
@@ -2964,7 +2973,7 @@
    "group": "reliability",
    "name": "My money left, but units came late or at a later NAV",
    "count": 51,
-   "denominator": 784,
+   "denominator": 783,
    "channel_split": {
     "reddit": 12,
     "play_store": 33,
@@ -2995,8 +3004,8 @@
      "fund": 0
     },
     "by_type": {
-     "realised_exit": 3,
-     "intent_to_leave": 3
+     "intent_to_leave": 3,
+     "realised_exit": 3
     },
     "leaving_coin": 3,
     "leaving_competitor": 3,
@@ -3064,8 +3073,8 @@
    "label_counts": {
     "unit_allocation_delay": 38,
     "delayed_nav": 13,
-    "early_cutoff_time": 1,
     "holiday_debit_timing": 1,
+    "early_cutoff_time": 1,
     "nav_update_lag": 1
    },
    "human_confirmed": 4,
@@ -3124,6 +3133,7 @@
     "tradingqna-426279",
     "youtube-UgxtJIiWa1fh_Mi0Wtl4AaABAg"
    ],
+   "display": "ranked",
    "rank": 10,
    "quotes": [
     {
@@ -3169,7 +3179,7 @@
    "group": "trust",
    "name": "My bank charged me a penalty for a failed SIP debit",
    "count": 50,
-   "denominator": 784,
+   "denominator": 783,
    "channel_split": {
     "reddit": 38,
     "play_store": 1,
@@ -3360,8 +3370,8 @@
     "penalty_uncertainty": 19,
     "insufficient_funds_on_sip_date": 17,
     "failed_payment_fear": 2,
-    "cibil_worry": 1,
     "unclear_debit_cutoff_time": 1,
+    "cibil_worry": 1,
     "platform_blamed_for_bank_charge": 1
    },
    "human_confirmed": 6,
@@ -3419,6 +3429,7 @@
     "youtube-UgyYJnLMZEVBQtv0dR14AaABAg",
     "youtube-Ugz0U0tqOBZpvDYcVu14AaABAg"
    ],
+   "display": "ranked",
    "rank": 11,
    "quotes": [
     {
@@ -3460,11 +3471,250 @@
    }
   },
   {
+   "id": "EDU-4",
+   "group": "education",
+   "name": "AMC SIP vs app SIP, demat vs statement, regular vs direct: I do not know what kind of SIP I hold",
+   "count": 48,
+   "denominator": 783,
+   "channel_split": {
+    "reddit": 28,
+    "play_store": 0,
+    "tradingqna": 16,
+    "youtube": 4
+   },
+   "channels_present": 3,
+   "top_channel": "reddit",
+   "top_channel_share": 0.583,
+   "channel_flag": false,
+   "recency_mix": {
+    "recent": 11,
+    "aging": 5,
+    "old": 21,
+    "unknown": 11
+   },
+   "platform_split": {
+    "coin": 20,
+    "other": 10,
+    "not_identifiable": 18
+   },
+   "platform_label": "mostly_coin",
+   "stated_dropoff": {
+    "investor": 3,
+    "by_scope": {
+     "sip": 1,
+     "platform": 2,
+     "fund": 5
+    },
+    "by_type": {
+     "intent_to_leave": 1,
+     "sip_stop": 1,
+     "realised_exit": 1
+    },
+    "leaving_coin": 1,
+    "leaving_competitor": 1,
+    "ids": [
+     "reddit-1esk1kp",
+     "reddit-1lqz1be",
+     "reddit-1sjb086"
+    ]
+   },
+   "money": {
+    "count": 0,
+    "items": []
+   },
+   "stage": {
+    "stated_count": 13,
+    "counts": {
+     "start": 6,
+     "month_1_3": 0,
+     "month_4_6": 0,
+     "month_7_12": 3,
+     "beyond_12": 4,
+     "exit_phase": 0
+    },
+    "shown": true,
+    "ids": [
+     "reddit-1esk1kp",
+     "reddit-1f5i9dv",
+     "reddit-1hetw1m",
+     "reddit-1mxqg4g",
+     "reddit-1ph7f98",
+     "reddit-1r7zwsn",
+     "reddit-1s32351",
+     "reddit-1s3yxtq",
+     "reddit-1sjb086",
+     "reddit-1t0d98s",
+     "reddit-dryrun-1wnbxmo",
+     "reddit-dryrun-1x6amwx",
+     "tradingqna-45536"
+    ]
+   },
+   "profile": {
+    "age": {
+     "count": 6,
+     "facts": [
+      {
+       "id": "reddit-1sjb086",
+       "text": "senior citizen, 65+"
+      },
+      {
+       "id": "reddit-1sk2jhz",
+       "text": "Age 23"
+      },
+      {
+       "id": "reddit-1t0d98s",
+       "text": "25F"
+      },
+      {
+       "id": "reddit-dryrun-1x6amwx",
+       "text": "Age- 28"
+      },
+      {
+       "id": "reddit-dryrun-1viok2u",
+       "text": "27, Risk Appetite"
+      },
+      {
+       "id": "reddit-1ph7f98",
+       "text": "I am 29"
+      }
+     ]
+    },
+    "income": {
+     "count": 1,
+     "facts": [
+      {
+       "id": "reddit-1t0d98s",
+       "text": "₹1.3L income"
+      }
+     ]
+    }
+   },
+   "fix_type_counts": {
+    "product": 28,
+    "education": 0,
+    "external": 19,
+    "unclear": 1
+   },
+   "label_counts": {
+    "regular_to_direct_switch": 15,
+    "amc_sip_confusion": 10,
+    "amc_sip_modification_gap": 5,
+    "regular_to_direct_tax": 5,
+    "soa_preference": 2,
+    "demat_folio_confusion": 2,
+    "demat_to_soa_process": 1,
+    "direct_regular_confusion": 1,
+    "external_sip_not_editable": 1,
+    "direct_conversion_tax_concern": 1,
+    "demat_default_on_sip_change": 1,
+    "etf_requires_kite_app": 1,
+    "sip_converted_to_amc_sip": 1,
+    "soa_to_demat_switch": 1,
+    "soa_transfer_form_confusion": 1
+   },
+   "human_confirmed": 1,
+   "confidence": "medium",
+   "meets_threshold": true,
+   "all_ids": [
+    "reddit-171ti46",
+    "reddit-1aor3zi",
+    "reddit-1bxlbx6",
+    "reddit-1dxa3a7",
+    "reddit-1esk1kp",
+    "reddit-1f5i9dv",
+    "reddit-1frbc05",
+    "reddit-1hetw1m",
+    "reddit-1lqz1be",
+    "reddit-1mxqg4g",
+    "reddit-1ochaab",
+    "reddit-1ph7f98",
+    "reddit-1r7zwsn",
+    "reddit-1rhxh1a",
+    "reddit-1s32351",
+    "reddit-1s3yxtq",
+    "reddit-1sjb086",
+    "reddit-1sk2jhz",
+    "reddit-1t0d98s",
+    "reddit-1ttl62i",
+    "reddit-1ua56dh",
+    "reddit-1w2aylc",
+    "reddit-62lgns",
+    "reddit-dryrun-1viok2u",
+    "reddit-dryrun-1we566s",
+    "reddit-dryrun-1wm21zn",
+    "reddit-dryrun-1wnbxmo",
+    "reddit-dryrun-1x6amwx",
+    "tradingqna-116826",
+    "tradingqna-127321",
+    "tradingqna-129443",
+    "tradingqna-226012",
+    "tradingqna-305357",
+    "tradingqna-307874",
+    "tradingqna-312071",
+    "tradingqna-329431",
+    "tradingqna-343467",
+    "tradingqna-35704",
+    "tradingqna-35785",
+    "tradingqna-36579",
+    "tradingqna-45536",
+    "tradingqna-503708",
+    "tradingqna-542497",
+    "tradingqna-61323",
+    "youtube-UgyDxSyMTxzGe5Vau994AaABAg",
+    "youtube-Ugyj4Pj0MD01VYtO3zl4AaABAg",
+    "youtube-UgyzOGx7H_bc2vecdVd4AaABAg",
+    "youtube-UgzLqlTirQvEYGa5DlF4AaABAg.ADi8KkwBhL_AE4UMwsD4pY"
+   ],
+   "display": "ranked",
+   "rank": 12,
+   "quotes": [
+    {
+     "id": "reddit-1t0d98s",
+     "text": "25F | ₹1.3L income | ₹4L MF portfolio | 4.4% CAGR - what am I doing wrong? 1 yr investing via advisor (regular plans). Returns lagging market.",
+     "excerpt": true,
+     "evidence_span": "1 yr investing via advisor (regular plans)"
+    },
+    {
+     "id": "tradingqna-542497",
+     "text": "Could the Coin team support pause/resume and permitted amount changes for AMC SIPs? The current https://support.zerodha.com/category/mutual-funds/features-on-coin/systematic-investment-plan/articles/amc-sip-on-coin AMC SIP help page says they cannot be paused, modified or stepped up. This matters...",
+     "excerpt": false,
+     "evidence_span": "AMC SIP help page says they cannot be paused, modified or stepped up"
+    },
+    {
+     "id": "youtube-UgzLqlTirQvEYGa5DlF4AaABAg.ADi8KkwBhL_AE4UMwsD4pY",
+     "text": "@ sir ek or doubt hai mene coin ke zareye amc sip start ki hai us me jo 0/9999 likh ker ata hai us ka kya mtlb hai ??",
+     "excerpt": false,
+     "evidence_span": "us me jo 0/9999 likh ker ata hai us ka kya mtlb hai"
+    }
+   ],
+   "quote_caps": {
+    "stated_dropoff": 0,
+    "money": 0
+   },
+   "quote_candidates": 47,
+   "narrative": {
+    "generated": true,
+    "statement": "Investors on Coin find two kinds of SIP and do not know the difference: the platform SIP and the AMC SIP, which cannot be paused, changed or stepped up, and units held in demat versus a statement of account. Beginners sometimes end up in an AMC SIP because it was the only option shown, and then cannot change it. Others learn late that an agent or advisor put them in regular plans, and ask how to move to direct plans without tax or exit load surprises.",
+    "cited_ids": [
+     "reddit-1hetw1m",
+     "tradingqna-542497",
+     "tradingqna-127321",
+     "reddit-1mxqg4g",
+     "youtube-UgyzOGx7H_bc2vecdVd4AaABAg",
+     "youtube-UgzLqlTirQvEYGa5DlF4AaABAg.ADi8KkwBhL_AE4UMwsD4pY",
+     "reddit-62lgns",
+     "reddit-1s3yxtq",
+     "tradingqna-226012"
+    ],
+    "invalidation": "First-time Coin investors can say which SIP type they hold and what it allows them to change."
+   }
+  },
+  {
    "id": "TRU-5",
    "group": "trust",
    "name": "Charges, upsells and pushes I did not expect",
    "count": 43,
-   "denominator": 784,
+   "denominator": 783,
    "channel_split": {
     "reddit": 12,
     "play_store": 20,
@@ -3590,16 +3840,16 @@
     "forced_demat_account": 2,
     "advisory_plan_underperformance": 2,
     "forced_autopay": 1,
+    "regular_plan_default": 1,
+    "paywall_upgrade": 1,
+    "charges_not_visible": 1,
     "no_value_add": 1,
     "amc_charges": 1,
-    "demat_push": 1,
-    "demat_conversion_charges": 1,
-    "demat_amc_surprise": 1,
-    "platform_fee_during_lock_in": 1,
     "ddpi_paywall": 1,
-    "charges_not_visible": 1,
-    "regular_plan_default": 1,
-    "paywall_upgrade": 1
+    "demat_amc_surprise": 1,
+    "demat_push": 1,
+    "platform_fee_during_lock_in": 1,
+    "demat_conversion_charges": 1
    },
    "human_confirmed": 4,
    "confidence": "high",
@@ -3649,7 +3899,8 @@
     "youtube-Ugzv4alq-U7Z41RN-Kp4AaABAg",
     "youtube-Ugzzp09O3Y8gjwnMF-94AaABAg"
    ],
-   "rank": 12,
+   "display": "ranked",
+   "rank": 13,
    "quotes": [
     {
      "id": "playstore-et_money-16911f5a-ea07-4f28-8e62-225af6db0dca",
@@ -3694,7 +3945,7 @@
    "group": "trust",
    "name": "Money was taken that I did not expect",
    "count": 39,
-   "denominator": 784,
+   "denominator": 783,
    "channel_split": {
     "reddit": 24,
     "play_store": 8,
@@ -3726,8 +3977,8 @@
     },
     "by_type": {
      "sip_stop": 2,
-     "intent_to_leave": 1,
-     "platform_switch": 1
+     "platform_switch": 1,
+     "intent_to_leave": 1
     },
     "leaving_coin": 1,
     "leaving_competitor": 1,
@@ -3874,14 +4125,14 @@
    "label_counts": {
     "unexplained_debit": 27,
     "duplicate_sip_debit": 3,
-    "mandate_continues_after_death": 2,
     "duplicate_sip_orders": 2,
     "cannot_cancel_mandate": 2,
-    "premature_debit_initiation": 1,
-    "unintended_sip_creation": 1,
-    "mandate_cancel_not_effective": 1,
+    "mandate_continues_after_death": 2,
     "unexpected_bill_paused_sip": 1,
-    "mandate_cancelled_without_consent": 1
+    "mandate_cancelled_without_consent": 1,
+    "premature_debit_initiation": 1,
+    "mandate_cancel_not_effective": 1,
+    "unintended_sip_creation": 1
    },
    "human_confirmed": 5,
    "confidence": "high",
@@ -3927,7 +4178,8 @@
     "youtube-UgwIu135RYcGVJHOndN4AaABAg",
     "youtube-UgwsX-lj2ctfdiAdJvR4AaABAg"
    ],
-   "rank": 13,
+   "display": "ranked",
+   "rank": 14,
    "quotes": [
     {
      "id": "playstore-paytm_money-78686b14-ae00-4f06-b2c1-a7229898a517",
@@ -3968,198 +4220,11 @@
    }
   },
   {
-   "id": "EDU-4",
-   "group": "education",
-   "name": "AMC SIP vs app SIP, demat vs statement: I do not know where my SIP lives",
-   "count": 34,
-   "denominator": 784,
-   "channel_split": {
-    "reddit": 16,
-    "play_store": 0,
-    "tradingqna": 14,
-    "youtube": 4
-   },
-   "channels_present": 3,
-   "top_channel": "reddit",
-   "top_channel_share": 0.471,
-   "channel_flag": false,
-   "recency_mix": {
-    "recent": 8,
-    "aging": 5,
-    "old": 16,
-    "unknown": 5
-   },
-   "platform_split": {
-    "coin": 20,
-    "other": 8,
-    "not_identifiable": 6
-   },
-   "platform_label": "mostly_coin",
-   "stated_dropoff": {
-    "investor": 2,
-    "by_scope": {
-     "sip": 0,
-     "platform": 2,
-     "fund": 1
-    },
-    "by_type": {
-     "realised_exit": 1,
-     "intent_to_leave": 1
-    },
-    "leaving_coin": 1,
-    "leaving_competitor": 1,
-    "ids": [
-     "reddit-1esk1kp",
-     "reddit-1lqz1be"
-    ]
-   },
-   "money": {
-    "count": 0,
-    "items": []
-   },
-   "stage": {
-    "stated_count": 6,
-    "counts": {
-     "start": 5,
-     "month_1_3": 0,
-     "month_4_6": 0,
-     "month_7_12": 1,
-     "beyond_12": 0,
-     "exit_phase": 0
-    },
-    "shown": true,
-    "ids": [
-     "reddit-1esk1kp",
-     "reddit-1hetw1m",
-     "reddit-1mxqg4g",
-     "reddit-dryrun-1wnbxmo",
-     "reddit-dryrun-1x6amwx",
-     "tradingqna-45536"
-    ]
-   },
-   "profile": {
-    "age": {
-     "count": 2,
-     "facts": [
-      {
-       "id": "reddit-dryrun-1x6amwx",
-       "text": "Age- 28"
-      },
-      {
-       "id": "reddit-dryrun-1viok2u",
-       "text": "27, Risk Appetite"
-      }
-     ]
-    }
-   },
-   "fix_type_counts": {
-    "product": 28,
-    "education": 0,
-    "external": 6,
-    "unclear": 0
-   },
-   "label_counts": {
-    "amc_sip_confusion": 10,
-    "amc_sip_modification_gap": 5,
-    "regular_to_direct_tax": 5,
-    "demat_folio_confusion": 2,
-    "soa_preference": 2,
-    "direct_regular_confusion": 1,
-    "direct_conversion_tax_concern": 1,
-    "etf_requires_kite_app": 1,
-    "demat_to_soa_process": 1,
-    "amc_sip_min_installments": 1,
-    "demat_default_on_sip_change": 1,
-    "sip_converted_to_amc_sip": 1,
-    "external_sip_not_editable": 1,
-    "soa_transfer_form_confusion": 1,
-    "soa_to_demat_switch": 1
-   },
-   "human_confirmed": 1,
-   "confidence": "medium",
-   "meets_threshold": true,
-   "all_ids": [
-    "reddit-171ti46",
-    "reddit-1aor3zi",
-    "reddit-1dxa3a7",
-    "reddit-1esk1kp",
-    "reddit-1hetw1m",
-    "reddit-1lqz1be",
-    "reddit-1mxqg4g",
-    "reddit-1ochaab",
-    "reddit-1rhxh1a",
-    "reddit-1ttl62i",
-    "reddit-1w2aylc",
-    "reddit-dryrun-1viok2u",
-    "reddit-dryrun-1we566s",
-    "reddit-dryrun-1wm21zn",
-    "reddit-dryrun-1wnbxmo",
-    "reddit-dryrun-1x6amwx",
-    "tradingqna-116826",
-    "tradingqna-127321",
-    "tradingqna-129443",
-    "tradingqna-305357",
-    "tradingqna-307874",
-    "tradingqna-329431",
-    "tradingqna-343467",
-    "tradingqna-35704",
-    "tradingqna-35785",
-    "tradingqna-381928",
-    "tradingqna-45536",
-    "tradingqna-503708",
-    "tradingqna-542497",
-    "tradingqna-61323",
-    "youtube-UgyDxSyMTxzGe5Vau994AaABAg",
-    "youtube-Ugyj4Pj0MD01VYtO3zl4AaABAg",
-    "youtube-UgyzOGx7H_bc2vecdVd4AaABAg",
-    "youtube-UgzLqlTirQvEYGa5DlF4AaABAg.ADi8KkwBhL_AE4UMwsD4pY"
-   ],
-   "rank": 14,
-   "quotes": [
-    {
-     "id": "reddit-1w2aylc",
-     "text": "Also why I prefer SoA over demat Hello folks, I have chosen to start my index fund journey with Motilal Oswal and plan to invest directly via their AMC platform (SoA format) rather than through broker platforms that hold units in demat form.",
-     "excerpt": true,
-     "evidence_span": "why I prefer SoA over demat"
-    },
-    {
-     "id": "tradingqna-542497",
-     "text": "Could the Coin team support pause/resume and permitted amount changes for AMC SIPs? The current https://support.zerodha.com/category/mutual-funds/features-on-coin/systematic-investment-plan/articles/amc-sip-on-coin AMC SIP help page says they cannot be paused, modified or stepped up. This matters...",
-     "excerpt": false,
-     "evidence_span": "AMC SIP help page says they cannot be paused, modified or stepped up"
-    },
-    {
-     "id": "youtube-UgzLqlTirQvEYGa5DlF4AaABAg.ADi8KkwBhL_AE4UMwsD4pY",
-     "text": "@ sir ek or doubt hai mene coin ke zareye amc sip start ki hai us me jo 0/9999 likh ker ata hai us ka kya mtlb hai ??",
-     "excerpt": false,
-     "evidence_span": "us me jo 0/9999 likh ker ata hai us ka kya mtlb hai"
-    }
-   ],
-   "quote_caps": {
-    "stated_dropoff": 0,
-    "money": 0
-   },
-   "quote_candidates": 33,
-   "narrative": {
-    "generated": true,
-    "statement": "Investors on Coin find two kinds of SIP and do not know the difference: the platform SIP and the AMC SIP, which cannot be paused, changed or stepped up, and units held in demat versus a statement of account. Beginners sometimes end up in an AMC SIP because it was the only option shown, and then cannot change it.",
-    "cited_ids": [
-     "reddit-1hetw1m",
-     "tradingqna-542497",
-     "tradingqna-127321",
-     "reddit-1mxqg4g",
-     "youtube-UgyzOGx7H_bc2vecdVd4AaABAg",
-     "youtube-UgzLqlTirQvEYGa5DlF4AaABAg.ADi8KkwBhL_AE4UMwsD4pY"
-    ],
-    "invalidation": "First-time Coin investors can say which SIP type they hold and what it allows them to change."
-   }
-  },
-  {
    "id": "OUT-1",
    "group": "outside",
    "name": "Money is tight or needed for something else",
    "count": 33,
-   "denominator": 784,
+   "denominator": 783,
    "channel_split": {
     "reddit": 27,
     "play_store": 2,
@@ -4254,14 +4319,6 @@
      "count": 7,
      "facts": [
       {
-       "id": "reddit-1kdnazh",
-       "text": "24F"
-      },
-      {
-       "id": "reddit-1tty22u",
-       "text": "I'm 27, earning ₹89k/month"
-      },
-      {
        "id": "reddit-dryrun-1wn9c5r",
        "text": "25, Need advice"
       },
@@ -4270,16 +4327,24 @@
        "text": "Portfolio review 29Y"
       },
       {
-       "id": "reddit-dryrun-1nxn4qr",
-       "text": "Age: 34"
-      },
-      {
-       "id": "reddit-dryrun-1vzs60y",
-       "text": "I'm (21)"
+       "id": "reddit-1tty22u",
+       "text": "I'm 27, earning ₹89k/month"
       },
       {
        "id": "reddit-1jdyltd",
        "text": "32M, out of my income"
+      },
+      {
+       "id": "reddit-dryrun-1nxn4qr",
+       "text": "Age: 34"
+      },
+      {
+       "id": "reddit-1kdnazh",
+       "text": "24F"
+      },
+      {
+       "id": "reddit-dryrun-1vzs60y",
+       "text": "I'm (21)"
       }
      ]
     },
@@ -4287,20 +4352,20 @@
      "count": 4,
      "facts": [
       {
-       "id": "reddit-1w4j2w5",
-       "text": "earn ₹1.23 lakh in hand each month"
+       "id": "reddit-1auec3w",
+       "text": "I get 1.05lpm"
       },
       {
        "id": "reddit-dryrun-1wgnrvz",
        "text": "Stable salary around 1Lakh"
       },
       {
-       "id": "reddit-dryrun-1nxn4qr",
-       "text": "Income: ₹2.2L per month (net in hand)"
+       "id": "reddit-1w4j2w5",
+       "text": "earn ₹1.23 lakh in hand each month"
       },
       {
-       "id": "reddit-1auec3w",
-       "text": "I get 1.05lpm"
+       "id": "reddit-dryrun-1nxn4qr",
+       "text": "Income: ₹2.2L per month (net in hand)"
       }
      ]
     },
@@ -4308,24 +4373,24 @@
      "count": 5,
      "facts": [
       {
-       "id": "tradingqna-544228",
-       "text": "switching to full-time freelancing 5 years ago"
-      },
-      {
        "id": "reddit-1varaq2",
        "text": "I used to do SIP in college with my internship money"
-      },
-      {
-       "id": "reddit-1r4pdi5",
-       "text": "22M Intern (15k/mo)"
       },
       {
        "id": "reddit-dryrun-1nxn4qr",
        "text": "Married, 1 child"
       },
       {
+       "id": "reddit-1r4pdi5",
+       "text": "22M Intern (15k/mo)"
+      },
+      {
        "id": "reddit-dryrun-1vzs60y",
        "text": "college student"
+      },
+      {
+       "id": "tradingqna-544228",
+       "text": "switching to full-time freelancing 5 years ago"
       }
      ]
     }
@@ -4338,8 +4403,8 @@
    },
    "label_counts": {
     "cashflow_pressure": 31,
-    "loan_prepayment_priority": 1,
-    "goal_redemption_for_house": 1
+    "goal_redemption_for_house": 1,
+    "loan_prepayment_priority": 1
    },
    "human_confirmed": 4,
    "confidence": "high",
@@ -4379,6 +4444,7 @@
     "youtube-UgwGxCyvcUDFM3tC-qt4AaABAg",
     "youtube-Ugy-otLBgnfRXVzmlDp4AaABAg"
    ],
+   "display": "ranked",
    "rank": 15,
    "quotes": [
     {
@@ -4423,7 +4489,7 @@
    "group": "outside",
    "name": "The fund or the rules stopped me investing",
    "count": 33,
-   "denominator": 784,
+   "denominator": 783,
    "channel_split": {
     "reddit": 23,
     "play_store": 1,
@@ -4498,12 +4564,12 @@
      "count": 4,
      "facts": [
       {
-       "id": "reddit-dryrun-1w6zxxc",
-       "text": "I'm 23"
-      },
-      {
        "id": "reddit-dryrun-1xar55t",
        "text": "I'm 24 and started investing after getting my first job"
+      },
+      {
+       "id": "reddit-dryrun-1w6zxxc",
+       "text": "I'm 23"
       },
       {
        "id": "reddit-dryrun-1wk2t9o",
@@ -4528,12 +4594,12 @@
      "count": 2,
      "facts": [
       {
-       "id": "reddit-dryrun-1x7j8y1",
-       "text": "I recently moved to Europe"
-      },
-      {
        "id": "reddit-dryrun-1vubu1c",
        "text": "Moved out of India for work"
+      },
+      {
+       "id": "reddit-dryrun-1x7j8y1",
+       "text": "I recently moved to Europe"
       }
      ]
     }
@@ -4589,6 +4655,7 @@
     "tradingqna-61323",
     "tradingqna-77506"
    ],
+   "display": "ranked",
    "rank": 16,
    "quotes": [
     {
@@ -4634,7 +4701,7 @@
    "group": "product_gap",
    "name": "I cannot change or shape my SIP the way I need",
    "count": 30,
-   "denominator": 784,
+   "denominator": 783,
    "channel_split": {
     "reddit": 3,
     "play_store": 17,
@@ -4719,19 +4786,19 @@
     "sip_amount_edit_missing": 5,
     "sip_schedule_restriction": 4,
     "goal_labelling_missing": 3,
+    "no_switch_option": 2,
     "redeem_by_amount_missing": 2,
     "sip_increase_lock": 2,
-    "no_switch_option": 2,
     "mandate_amount_edit_missing": 2,
     "no_swp": 2,
-    "min_sip_amount": 1,
-    "min_installment_lock": 1,
-    "sip_end_date_missing": 1,
-    "step_up_blocked_by_increment": 1,
-    "stp_restriction": 1,
     "missing_flexi_sip": 1,
     "unit_based_sip_request": 1,
-    "no_step_up_sip": 1
+    "step_up_blocked_by_increment": 1,
+    "sip_end_date_missing": 1,
+    "min_sip_amount": 1,
+    "min_installment_lock": 1,
+    "no_step_up_sip": 1,
+    "stp_restriction": 1
    },
    "human_confirmed": 2,
    "confidence": "medium",
@@ -4768,6 +4835,7 @@
     "youtube-UgyGMCT0UG6UOEGaIdR4AaABAg",
     "youtube-UgzZVubzVVceXIQBXJR4AaABAg"
    ],
+   "display": "ranked",
    "rank": 17,
    "quotes": [
     {
@@ -4813,7 +4881,7 @@
    "group": "education",
    "name": "I do not know enough to invest with confidence",
    "count": 23,
-   "denominator": 784,
+   "denominator": 783,
    "channel_split": {
     "reddit": 19,
     "play_store": 1,
@@ -4890,12 +4958,12 @@
      "count": 4,
      "facts": [
       {
-       "id": "reddit-1ptuyd8",
-       "text": "I am a 29"
-      },
-      {
        "id": "reddit-dryrun-1wte69m",
        "text": "Age: 19"
+      },
+      {
+       "id": "reddit-1ptuyd8",
+       "text": "I am a 29"
       },
       {
        "id": "reddit-1q9wbbj",
@@ -4967,6 +5035,7 @@
     "youtube-UgyIWti1wZfIXwQLrQd4AaABAg.AJNhs6ftHHXAKiWaZzNx9f",
     "youtube-UgyQxL5Vep7o_qxi-sZ4AaABAg"
    ],
+   "display": "ranked",
    "rank": 18,
    "quotes": [
     {
@@ -5008,195 +5077,11 @@
    }
   },
   {
-   "id": "OUT-3",
-   "group": "outside",
-   "name": "An advisor or distributor sold me the wrong product",
-   "count": 22,
-   "denominator": 784,
-   "channel_split": {
-    "reddit": 19,
-    "play_store": 0,
-    "tradingqna": 3,
-    "youtube": 0
-   },
-   "channels_present": 2,
-   "top_channel": "reddit",
-   "top_channel_share": 0.864,
-   "channel_flag": true,
-   "recency_mix": {
-    "recent": 7,
-    "aging": 0,
-    "old": 6,
-    "unknown": 9
-   },
-   "platform_split": {
-    "coin": 1,
-    "other": 4,
-    "not_identifiable": 17
-   },
-   "platform_label": "platform_rarely_stated",
-   "stated_dropoff": {
-    "investor": 3,
-    "by_scope": {
-     "sip": 2,
-     "platform": 1,
-     "fund": 4
-    },
-    "by_type": {
-     "sip_stop": 2,
-     "intent_to_leave": 1
-    },
-    "leaving_coin": 0,
-    "leaving_competitor": 1,
-    "ids": [
-     "reddit-1sjb086",
-     "reddit-dryrun-1vbofl5",
-     "reddit-dryrun-1w1v388"
-    ]
-   },
-   "money": {
-    "count": 0,
-    "items": []
-   },
-   "stage": {
-    "stated_count": 10,
-    "counts": {
-     "start": 2,
-     "month_1_3": 1,
-     "month_4_6": 0,
-     "month_7_12": 2,
-     "beyond_12": 5,
-     "exit_phase": 0
-    },
-    "shown": true,
-    "ids": [
-     "reddit-1f5i9dv",
-     "reddit-1ph7f98",
-     "reddit-1r7zwsn",
-     "reddit-1s32351",
-     "reddit-1s3yxtq",
-     "reddit-1sjb086",
-     "reddit-1t0d98s",
-     "reddit-1ub060p",
-     "reddit-1xirk0z",
-     "reddit-dryrun-1w1v388"
-    ]
-   },
-   "profile": {
-    "age": {
-     "count": 4,
-     "facts": [
-      {
-       "id": "reddit-1sjb086",
-       "text": "senior citizen, 65+"
-      },
-      {
-       "id": "reddit-1t0d98s",
-       "text": "25F"
-      },
-      {
-       "id": "reddit-1sk2jhz",
-       "text": "Age 23"
-      },
-      {
-       "id": "reddit-1ph7f98",
-       "text": "I am 29"
-      }
-     ]
-    },
-    "income": {
-     "count": 1,
-     "facts": [
-      {
-       "id": "reddit-1t0d98s",
-       "text": "₹1.3L income"
-      }
-     ]
-    }
-   },
-   "fix_type_counts": {
-    "product": 1,
-    "education": 0,
-    "external": 20,
-    "unclear": 1
-   },
-   "label_counts": {
-    "distributor_misselling": 20,
-    "ulip_misselling": 2
-   },
-   "human_confirmed": 1,
-   "confidence": "medium",
-   "meets_threshold": true,
-   "all_ids": [
-    "reddit-1bxlbx6",
-    "reddit-1f5i9dv",
-    "reddit-1frbc05",
-    "reddit-1nktvia",
-    "reddit-1ph7f98",
-    "reddit-1r7zwsn",
-    "reddit-1s32351",
-    "reddit-1s3yxtq",
-    "reddit-1sjb086",
-    "reddit-1sk2jhz",
-    "reddit-1t0d98s",
-    "reddit-1ua56dh",
-    "reddit-1ub060p",
-    "reddit-1vfrwk7",
-    "reddit-1wm28sc",
-    "reddit-1xirk0z",
-    "reddit-62lgns",
-    "reddit-dryrun-1vbofl5",
-    "reddit-dryrun-1w1v388",
-    "tradingqna-226012",
-    "tradingqna-312071",
-    "tradingqna-36579"
-   ],
-   "rank": 19,
-   "quotes": [
-    {
-     "id": "reddit-1t0d98s",
-     "text": "25F | ₹1.3L income | ₹4L MF portfolio | 4.4% CAGR - what am I doing wrong? 1 yr investing via advisor (regular plans). Returns lagging market.",
-     "excerpt": true,
-     "evidence_span": "1 yr investing via advisor (regular plans)"
-    },
-    {
-     "id": "tradingqna-36579",
-     "text": "Adding to the above question, can I “pause” the existing regular investments & start fresh SIPs in direct funds? The money already invested in regular plans will remain as it is but I’ll be starting fresh investments under direct plans",
-     "excerpt": false,
-     "evidence_span": "The money already invested in regular plans"
-    },
-    {
-     "id": "reddit-1sk2jhz",
-     "text": "I had initially started SIP with a friend of a friend (who works in a bank and cleared level 2 CFA). However, after learning about the difference between regular and direct SIPs, I canceled my SIPs with him.",
-     "excerpt": true,
-     "evidence_span": "after learning about the difference between regular and direct SIPs"
-    }
-   ],
-   "quote_caps": {
-    "stated_dropoff": 0,
-    "money": 0
-   },
-   "quote_candidates": 22,
-   "narrative": {
-    "generated": true,
-    "statement": "Investors learn that an advisor, agent, bank employee or acquaintance put them in regular plans or costlier products, and they stop those SIPs or switch them to direct plans. This usually shows up as stopping one SIP and restarting elsewhere, not as leaving investing.",
-    "cited_ids": [
-     "reddit-1frbc05",
-     "reddit-1f5i9dv",
-     "reddit-dryrun-1w1v388",
-     "reddit-1sk2jhz",
-     "tradingqna-226012",
-     "reddit-1nktvia"
-    ],
-    "invalidation": "Investors who moved from regular to direct plans then stopped investing altogether."
-   }
-  },
-  {
    "id": "EDU-5",
    "group": "education",
    "name": "Lock-in, exit load and tax catch me by surprise",
    "count": 15,
-   "denominator": 784,
+   "denominator": 783,
    "channel_split": {
     "reddit": 3,
     "play_store": 3,
@@ -5269,9 +5154,9 @@
    "label_counts": {
     "lock_in_confusion": 5,
     "lock_in_display_wrong": 3,
+    "elss_lock_in_surprise": 2,
     "tax_calculation_confusion": 2,
     "exit_load_confusion": 2,
-    "elss_lock_in_surprise": 2,
     "redemption_nav_timing_confusion": 1
    },
    "human_confirmed": 2,
@@ -5294,7 +5179,8 @@
     "youtube-UgzduUcWSlwE6lFecgZ4AaABAg",
     "youtube-Ugzv4alq-U7Z41RN-Kp4AaABAg"
    ],
-   "rank": 20,
+   "display": "ranked",
+   "rank": 19,
    "quotes": [
     {
      "id": "tradingqna-363884",
@@ -5339,7 +5225,7 @@
    "group": "trust",
    "name": "I am not sure my money is safe with the platform",
    "count": 9,
-   "denominator": 784,
+   "denominator": 783,
    "channel_split": {
     "reddit": 4,
     "play_store": 2,
@@ -5417,10 +5303,10 @@
    "label_counts": {
     "demat_custody_worry": 3,
     "trust_loss": 2,
-    "platform_trust_concern": 1,
     "privacy_concern": 1,
-    "platform_shutdown_worry": 1,
-    "safety_doubt": 1
+    "safety_doubt": 1,
+    "platform_trust_concern": 1,
+    "platform_shutdown_worry": 1
    },
    "human_confirmed": 0,
    "confidence": "medium",
@@ -5436,7 +5322,8 @@
     "youtube-UgweDZFBVsrasH-XWjF4AaABAg",
     "youtube-Ugzli9DC0Z6ZGpVpQKd4AaABAg"
    ],
-   "rank": 21,
+   "display": "ranked",
+   "rank": 20,
    "quotes": [
     {
      "id": "reddit-1nywhes",
@@ -5475,6 +5362,137 @@
     ],
     "invalidation": "Interviews show the custody format and platform safety play no part in whether investors continue."
    }
+  },
+  {
+   "id": "OUT-3",
+   "group": "outside",
+   "name": "An advisor or distributor sold me the wrong product",
+   "count": 7,
+   "denominator": 783,
+   "channel_split": {
+    "reddit": 7,
+    "play_store": 0,
+    "tradingqna": 0,
+    "youtube": 0
+   },
+   "channels_present": 1,
+   "top_channel": "reddit",
+   "top_channel_share": 1.0,
+   "channel_flag": true,
+   "recency_mix": {
+    "recent": 4,
+    "aging": 0,
+    "old": 0,
+    "unknown": 3
+   },
+   "platform_split": {
+    "coin": 0,
+    "other": 2,
+    "not_identifiable": 5
+   },
+   "platform_label": "platform_rarely_stated",
+   "stated_dropoff": {
+    "investor": 2,
+    "by_scope": {
+     "sip": 1,
+     "platform": 1,
+     "fund": 0
+    },
+    "by_type": {
+     "intent_to_leave": 1,
+     "sip_stop": 1
+    },
+    "leaving_coin": 0,
+    "leaving_competitor": 1,
+    "ids": [
+     "reddit-dryrun-1vbofl5",
+     "reddit-dryrun-1w1v388"
+    ]
+   },
+   "money": {
+    "count": 0,
+    "items": []
+   },
+   "stage": {
+    "stated_count": 3,
+    "counts": {
+     "start": 1,
+     "month_1_3": 1,
+     "month_4_6": 0,
+     "month_7_12": 0,
+     "beyond_12": 1,
+     "exit_phase": 0
+    },
+    "shown": false,
+    "ids": [
+     "reddit-1ub060p",
+     "reddit-1xirk0z",
+     "reddit-dryrun-1w1v388"
+    ]
+   },
+   "profile": {},
+   "fix_type_counts": {
+    "product": 0,
+    "education": 0,
+    "external": 7,
+    "unclear": 0
+   },
+   "label_counts": {
+    "distributor_misselling": 5,
+    "ulip_misselling": 2
+   },
+   "human_confirmed": 1,
+   "confidence": "low",
+   "meets_threshold": false,
+   "all_ids": [
+    "reddit-1nktvia",
+    "reddit-1ub060p",
+    "reddit-1vfrwk7",
+    "reddit-1wm28sc",
+    "reddit-1xirk0z",
+    "reddit-dryrun-1vbofl5",
+    "reddit-dryrun-1w1v388"
+   ],
+   "display": "signal",
+   "rank": null,
+   "quotes": [
+    {
+     "id": "reddit-dryrun-1w1v388",
+     "text": "Why these funds - I didn't research as these were selected directly by the advisor Hi. I started investing 3 months ago through a distributor. But quickly stopped all sip as I found him prioritising his gains (tried selling me LIC and term plans with rop). Obviously these are regular funds that he selected.",
+     "excerpt": true,
+     "evidence_span": "found him prioritising"
+    },
+    {
+     "id": "reddit-1nktvia",
+     "text": "My father sold a property he had for 80 lakhs. My mother went to fixed deposit 45 lakhs in sbi for 6 months, so that we had enough time to decide what to do with it(mostly build another home). Someone in the bank persuaded her into putting all the money in SBI Dynamic Bond Fund, saying it's safe.",
+     "excerpt": true,
+     "evidence_span": "Someone in the bank persuaded her into putting all the money in SBI Dynamic Bond Fund, saying it's safe"
+    },
+    {
+     "id": "reddit-1xirk0z",
+     "text": "The pitch was standard bank mis-selling: *\"Just pay for 5 years, and you can withdraw the whole thing for his marriage.\"* My parents had no clue what they were signing up for, and I was completely naive about personal finance.",
+     "excerpt": true,
+     "evidence_span": "The pitch was standard bank mis-selling"
+    }
+   ],
+   "quote_caps": {
+    "stated_dropoff": 1,
+    "money": 0
+   },
+   "quote_candidates": 7,
+   "narrative": {
+    "generated": true,
+    "statement": "Investors say a bank employee, broker, insurance seller or advisor steered them into products that suited the seller, such as ULIPs, proprietary funds, a PMS or too many overlapping funds, and they now feel trapped or regret it. Most of them are still investing and are asking how to start again the right way.",
+    "cited_ids": [
+     "reddit-1wm28sc",
+     "reddit-1xirk0z",
+     "reddit-dryrun-1vbofl5",
+     "reddit-dryrun-1w1v388",
+     "reddit-1nktvia",
+     "reddit-1ub060p"
+    ],
+    "invalidation": "Investors who were steered into such products mostly stop investing instead of starting again."
+   }
   }
  ],
  "questions": [
@@ -5483,7 +5501,7 @@
    "question": "Why do people start a SIP, and what do they expect to happen?",
    "criteria": "no tag captures why people start; motives were not tagged",
    "evidence_count": 0,
-   "denominator": 784,
+   "denominator": 783,
    "status_by_count": "not_answered",
    "status": "not_answered",
    "status_cap_reason": null,
@@ -5493,6 +5511,7 @@
     "tradingqna": 0,
     "youtube": 0
    },
+   "channel_flag": false,
    "by_problem": {},
    "by_stage": null,
    "by_action": null,
@@ -5510,7 +5529,7 @@
    "question": "What changes in their behaviour in the months after starting?",
    "criteria": "posts that state a tenure of up to twelve months",
    "evidence_count": 93,
-   "denominator": 784,
+   "denominator": 783,
    "status_by_count": "answered",
    "status": "partly_answered",
    "status_cap_reason": "Each post describes a single moment; none follow the same investor over time, so change in behaviour cannot be observed directly.",
@@ -5520,15 +5539,16 @@
     "tradingqna": 8,
     "youtube": 22
    },
+   "channel_flag": false,
    "by_problem": {
     "EDU-1": 24,
     "REL-1": 18,
     "EDU-3": 9,
+    "EDU-4": 9,
     "REL-2": 8,
     "EDU-2": 7,
     "EDU-6": 7,
-    "TRU-4": 6,
-    "REL-4": 6
+    "TRU-4": 6
    },
    "by_stage": {
     "start": 64,
@@ -5680,7 +5700,7 @@
    "question": "What leads investors to pause, reduce or stop a SIP?",
    "criteria": "posts stating a stop, pause, intent to leave or exit at SIP or platform scope",
    "evidence_count": 116,
-   "denominator": 784,
+   "denominator": 783,
    "status_by_count": "answered",
    "status": "answered",
    "status_cap_reason": null,
@@ -5690,6 +5710,7 @@
     "tradingqna": 8,
     "youtube": 11
    },
+   "channel_flag": false,
    "by_problem": {
     "EDU-1": 28,
     "TRU-5": 15,
@@ -5871,7 +5892,7 @@
    "question": "What do investors check, and how often, once they have started?",
    "criteria": "posts in REL-3 (what the app shows) plus posts about compulsive checking",
    "evidence_count": 58,
-   "denominator": 784,
+   "denominator": 783,
    "status_by_count": "answered",
    "status": "partly_answered",
    "status_cap_reason": "Posts show what investors check but never how often they check.",
@@ -5881,6 +5902,7 @@
     "tradingqna": 1,
     "youtube": 3
    },
+   "channel_flag": false,
    "by_problem": {
     "REL-3": 56,
     "TRU-4": 9,
@@ -5996,23 +6018,24 @@
    "id": "Q5",
    "question": "What confuses or worries them inside the app?",
    "criteria": "posts in EDU-2 to EDU-5, REL-3 and REL-4",
-   "evidence_count": 258,
-   "denominator": 784,
+   "evidence_count": 271,
+   "denominator": 783,
    "status_by_count": "answered",
    "status": "answered",
    "status_cap_reason": null,
    "channel_split": {
-    "reddit": 91,
+    "reddit": 102,
     "play_store": 67,
-    "tradingqna": 42,
+    "tradingqna": 44,
     "youtube": 58
    },
+   "channel_flag": false,
    "by_problem": {
     "EDU-2": 63,
     "REL-3": 56,
     "EDU-3": 55,
     "REL-4": 53,
-    "EDU-4": 34,
+    "EDU-4": 48,
     "TRU-4": 29,
     "REL-1": 17,
     "TRU-3": 15
@@ -6034,17 +6057,17 @@
      "evidence_span": "application asking multiple times the same process"
     },
     {
-     "id": "reddit-1vhvdd2",
-     "text": "I recently started the Invesco SIP. Groww didn't give me an option to create a separate mandate, and asked me to make the first Invesco instalment manually, which I have already done. Now I'm confused about what happens with future Invesco instalments. Groww support/chatbot is giving me conflicting advice.",
+     "id": "reddit-1w2aylc",
+     "text": "Before I fully commit, would love to hear from people already doing this: 1. Can you pause a SIP on Motilal Oswal's platform without cancelling it entirely? If I want to skip 1–2 months due to a financial crunch, is there a clean way to do it or does it require cancelling and restarting? 2.",
      "excerpt": true,
-     "evidence_span": "I'm confused about what happens with future Invesco instalments"
+     "evidence_span": "Can you pause a SIP on Motilal Oswal's platform without cancelling it entirely?"
     }
    ],
    "quote_caps": {
     "stated_dropoff": 0,
     "money": 0
    },
-   "quote_candidates": 252,
+   "quote_candidates": 265,
    "summary": {
     "generated": true,
     "text": "Inside the app, investors are most often confused by what pause, skip, cancel and delete will do, by numbers that do not match what they paid, by mandate terms and dates, by errors that give no reason, and by the difference between an AMC SIP and an app SIP.",
@@ -6131,6 +6154,7 @@
     "reddit-1aor3zi",
     "reddit-1bk5ama",
     "reddit-1bs2bu0",
+    "reddit-1bxlbx6",
     "reddit-1cm84ot",
     "reddit-1d1183w",
     "reddit-1dxa3a7",
@@ -6139,6 +6163,7 @@
     "reddit-1evayzx",
     "reddit-1f5i9dv",
     "reddit-1fjurp1",
+    "reddit-1frbc05",
     "reddit-1fwzi9e",
     "reddit-1gc0c6b",
     "reddit-1gpip7l",
@@ -6168,21 +6193,29 @@
     "reddit-1oqnm2t",
     "reddit-1p106vf",
     "reddit-1p56a6e",
+    "reddit-1ph7f98",
     "reddit-1pntay7",
     "reddit-1q3iubg",
     "reddit-1qsr5ej",
     "reddit-1qsxi9q",
     "reddit-1qy5uvi",
+    "reddit-1r7zwsn",
     "reddit-1rfv3xe",
     "reddit-1rhxh1a",
     "reddit-1rng5hl",
     "reddit-1ro2wbc",
+    "reddit-1s32351",
+    "reddit-1s3yxtq",
     "reddit-1s55xjz",
     "reddit-1s9vhn2",
+    "reddit-1sjb086",
+    "reddit-1sk2jhz",
+    "reddit-1t0d98s",
     "reddit-1te0ckm",
     "reddit-1ttl62i",
     "reddit-1twvd2p",
     "reddit-1u595qp",
+    "reddit-1ua56dh",
     "reddit-1ubqz7v",
     "reddit-1um7gum",
     "reddit-1vhvdd2",
@@ -6190,6 +6223,7 @@
     "reddit-1wkfwky",
     "reddit-1wnj5ds",
     "reddit-1xgognl",
+    "reddit-62lgns",
     "reddit-7is3i3",
     "reddit-8mxpdd",
     "reddit-8uthl6",
@@ -6229,9 +6263,11 @@
     "tradingqna-149109",
     "tradingqna-183507",
     "tradingqna-185351",
+    "tradingqna-226012",
     "tradingqna-270207",
     "tradingqna-305357",
     "tradingqna-307874",
+    "tradingqna-312071",
     "tradingqna-329431",
     "tradingqna-343467",
     "tradingqna-35704",
@@ -6239,8 +6275,8 @@
     "tradingqna-361591",
     "tradingqna-363884",
     "tradingqna-365526",
+    "tradingqna-36579",
     "tradingqna-369330",
-    "tradingqna-381928",
     "tradingqna-394662",
     "tradingqna-39941",
     "tradingqna-405535",
@@ -6324,7 +6360,7 @@
    "question": "What do they do outside the app when they feel unsure?",
    "criteria": "posts stating an action beyond posting: contacting support, the bank, a branch or the regulator",
    "evidence_count": 24,
-   "denominator": 784,
+   "denominator": 783,
    "status_by_count": "answered",
    "status": "partly_answered",
    "status_cap_reason": "The corpus was collected from forums and video comments, so asking the community is built into the data and cannot be counted as a finding; only actions beyond posting are counted, and those are few.",
@@ -6334,6 +6370,7 @@
     "tradingqna": 4,
     "youtube": 0
    },
+   "channel_flag": true,
    "by_problem": {
     "TRU-4": 13,
     "REL-1": 7,
@@ -6348,14 +6385,14 @@
    "by_action": {
     "contacted_support": 8,
     "contacted_bank": 4,
-    "contacted_bank_and_support": 1,
-    "contacted_bank_and_support_manual_invest": 1,
-    "contacting_support": 1,
-    "raised_query": 1,
-    "filed_scores_complaint": 1,
-    "raised_complaints": 1,
+    "visited_branch": 1,
     "raised_issue_warned_others": 1,
-    "raised_ticket": 1
+    "raised_complaints": 1,
+    "raised_ticket_and_keeps_competitor": 1,
+    "raised_query": 1,
+    "contacted_bank_and_support": 1,
+    "raised_ticket": 1,
+    "contacted_bank_and_support_manual_invest": 1
    },
    "by_profile_field": null,
    "quotes": [
@@ -6429,7 +6466,7 @@
    "question": "What separates investors who continue from those who quietly drop off?",
    "criteria": "no cohort data: the corpus cannot compare investors who continue with those who drop off",
    "evidence_count": 0,
-   "denominator": 784,
+   "denominator": 783,
    "status_by_count": "not_answered",
    "status": "not_answered",
    "status_cap_reason": null,
@@ -6439,6 +6476,7 @@
     "tradingqna": 0,
     "youtube": 0
    },
+   "channel_flag": false,
    "by_problem": {},
    "by_stage": null,
    "by_action": null,
@@ -6456,7 +6494,7 @@
    "question": "How do these patterns differ across user segments (income stability, age, source of money, who influenced them)?",
    "criteria": "posts that state an age, life stage, experience or income",
    "evidence_count": 80,
-   "denominator": 784,
+   "denominator": 783,
    "status_by_count": "answered",
    "status": "partly_answered",
    "status_cap_reason": "Few posts state a profile, and income stability, source of money and influencers are almost never stated, so segments cannot be compared.",
@@ -6466,23 +6504,24 @@
     "tradingqna": 2,
     "youtube": 1
    },
+   "channel_flag": true,
    "by_problem": {
     "EDU-1": 26,
     "OUT-1": 12,
+    "EDU-4": 6,
     "OUT-2": 6,
     "REL-3": 5,
     "EDU-6": 5,
     "REL-1": 4,
-    "REL-4": 4,
-    "OUT-3": 4
+    "REL-4": 4
    },
    "by_stage": null,
    "by_action": null,
    "by_profile_field": {
-    "life_stage": 23,
-    "income": 9,
+    "experience": 14,
     "age": 46,
-    "experience": 14
+    "life_stage": 23,
+    "income": 9
    },
    "quotes": [
     {
@@ -6611,7 +6650,7 @@
    "question": "What unmet needs emerge consistently across conversations?",
    "criteria": "posts in GAP-1 plus all feature requests",
    "evidence_count": 44,
-   "denominator": 784,
+   "denominator": 783,
    "status_by_count": "answered",
    "status": "answered",
    "status_cap_reason": null,
@@ -6621,6 +6660,7 @@
     "tradingqna": 12,
     "youtube": 2
    },
+   "channel_flag": false,
    "by_problem": {
     "GAP-1": 30,
     "REL-5": 11,
@@ -7054,14 +7094,14 @@
  },
  "cause_split": {
   "counts": {
-   "structural_ux": 469,
+   "structural_ux": 468,
    "behavioral": 122,
    "external_third_party": 71,
    "mixed": 69,
    "unclear": 9,
    "deliberate_strategy_shift": 9
   },
-  "denominator": 749
+  "denominator": 748
  },
  "quotes_index": {
   "reddit-1psrv0o": {
@@ -7427,6 +7467,39 @@
    "language": "english",
    "truncated_at_source": false
   },
+  "reddit-1t0d98s": {
+   "id": "reddit-1t0d98s",
+   "channel": "reddit",
+   "source_url": "https://www.reddit.com/r/IndianStockMarket/comments/1t0d98s/25f_13l_income_4l_mf_portfolio_44_cagr_what_am_i/",
+   "date": "2026-04-30",
+   "recency": "recent",
+   "author_label": "Reddit user",
+   "platform_subject": null,
+   "language": "english",
+   "truncated_at_source": false
+  },
+  "tradingqna-542497": {
+   "id": "tradingqna-542497",
+   "channel": "tradingqna",
+   "source_url": "https://tradingqna.com/t/198714",
+   "date": "2026-10-10",
+   "recency": "recent",
+   "author_label": "TradingQnA user",
+   "platform_subject": "zerodha_coin",
+   "language": "english",
+   "truncated_at_source": true
+  },
+  "youtube-UgzLqlTirQvEYGa5DlF4AaABAg.ADi8KkwBhL_AE4UMwsD4pY": {
+   "id": "youtube-UgzLqlTirQvEYGa5DlF4AaABAg.ADi8KkwBhL_AE4UMwsD4pY",
+   "channel": "youtube",
+   "source_url": "https://www.youtube.com/watch?v=ZY2BJKGgLfA",
+   "date": "2025-11-04",
+   "recency": "recent",
+   "author_label": "YouTube commenter",
+   "platform_subject": "zerodha_coin",
+   "language": "hinglish",
+   "truncated_at_source": false
+  },
   "playstore-et_money-16911f5a-ea07-4f28-8e62-225af6db0dca": {
    "id": "playstore-et_money-16911f5a-ea07-4f28-8e62-225af6db0dca",
    "channel": "play_store",
@@ -7492,39 +7565,6 @@
    "platform_subject": "zerodha_coin",
    "language": "english",
    "truncated_at_source": true
-  },
-  "reddit-1w2aylc": {
-   "id": "reddit-1w2aylc",
-   "channel": "reddit",
-   "source_url": "https://www.reddit.com/r/IndianStockMarket/comments/1w2aylc/motilal_oswal_direct_amc_sip_ability_to_pause/",
-   "date": "2026-08-30",
-   "recency": "recent",
-   "author_label": "Reddit user",
-   "platform_subject": "motilal_amc",
-   "language": "english",
-   "truncated_at_source": false
-  },
-  "tradingqna-542497": {
-   "id": "tradingqna-542497",
-   "channel": "tradingqna",
-   "source_url": "https://tradingqna.com/t/198714",
-   "date": "2026-10-10",
-   "recency": "recent",
-   "author_label": "TradingQnA user",
-   "platform_subject": "zerodha_coin",
-   "language": "english",
-   "truncated_at_source": true
-  },
-  "youtube-UgzLqlTirQvEYGa5DlF4AaABAg.ADi8KkwBhL_AE4UMwsD4pY": {
-   "id": "youtube-UgzLqlTirQvEYGa5DlF4AaABAg.ADi8KkwBhL_AE4UMwsD4pY",
-   "channel": "youtube",
-   "source_url": "https://www.youtube.com/watch?v=ZY2BJKGgLfA",
-   "date": "2025-11-04",
-   "recency": "recent",
-   "author_label": "YouTube commenter",
-   "platform_subject": "zerodha_coin",
-   "language": "hinglish",
-   "truncated_at_source": false
   },
   "reddit-dryrun-1wwoqnd": {
    "id": "reddit-dryrun-1wwoqnd",
@@ -7658,39 +7698,6 @@
    "language": "hinglish",
    "truncated_at_source": false
   },
-  "reddit-1t0d98s": {
-   "id": "reddit-1t0d98s",
-   "channel": "reddit",
-   "source_url": "https://www.reddit.com/r/IndianStockMarket/comments/1t0d98s/25f_13l_income_4l_mf_portfolio_44_cagr_what_am_i/",
-   "date": "2026-04-30",
-   "recency": "recent",
-   "author_label": "Reddit user",
-   "platform_subject": null,
-   "language": "english",
-   "truncated_at_source": false
-  },
-  "tradingqna-36579": {
-   "id": "tradingqna-36579",
-   "channel": "tradingqna",
-   "source_url": "https://tradingqna.com/t/12994",
-   "date": "2017-04-21",
-   "recency": "old",
-   "author_label": "TradingQnA user",
-   "platform_subject": null,
-   "language": "english",
-   "truncated_at_source": false
-  },
-  "reddit-1sk2jhz": {
-   "id": "reddit-1sk2jhz",
-   "channel": "reddit",
-   "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1sk2jhz/portfolio_review_aggressive_age_23/",
-   "date": null,
-   "recency": "unknown",
-   "author_label": "Reddit user",
-   "platform_subject": "zerodha_coin",
-   "language": "english",
-   "truncated_at_source": false
-  },
   "tradingqna-363884": {
    "id": "tradingqna-363884",
    "channel": "tradingqna",
@@ -7755,6 +7762,39 @@
    "author_label": "YouTube commenter",
    "platform_subject": "nj_wealth",
    "language": "hinglish",
+   "truncated_at_source": false
+  },
+  "reddit-dryrun-1w1v388": {
+   "id": "reddit-dryrun-1w1v388",
+   "channel": "reddit",
+   "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1w1v388/existing_portfolio_review/",
+   "date": "2026-08-29",
+   "recency": "recent",
+   "author_label": "Reddit user",
+   "platform_subject": null,
+   "language": "english",
+   "truncated_at_source": false
+  },
+  "reddit-1nktvia": {
+   "id": "reddit-1nktvia",
+   "channel": "reddit",
+   "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1nktvia/help_my_mom_made_a_bad_decision/",
+   "date": null,
+   "recency": "unknown",
+   "author_label": "Reddit user",
+   "platform_subject": null,
+   "language": "english",
+   "truncated_at_source": false
+  },
+  "reddit-1xirk0z": {
+   "id": "reddit-1xirk0z",
+   "channel": "reddit",
+   "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1xirk0z/got_trapped_in_a_canara_hsbc_ulip5yr_lockin_10yr/",
+   "date": "2026-10-29",
+   "recency": "recent",
+   "author_label": "Reddit user",
+   "platform_subject": null,
+   "language": "english",
    "truncated_at_source": false
   },
   "youtube-Ugx42t45jjr796Al6U54AaABAg.9z6ovmbIN-iAYLuQ1I1dny": {
@@ -7878,14 +7918,14 @@
    "language": "english",
    "truncated_at_source": false
   },
-  "reddit-1vhvdd2": {
-   "id": "reddit-1vhvdd2",
+  "reddit-1w2aylc": {
+   "id": "reddit-1w2aylc",
    "channel": "reddit",
-   "source_url": "https://www.reddit.com/r/mutualfunds/comments/1vhvdd2/groww_upi_autopay/",
-   "date": "2026-08-07",
+   "source_url": "https://www.reddit.com/r/IndianStockMarket/comments/1w2aylc/motilal_oswal_direct_amc_sip_ability_to_pause/",
+   "date": "2026-08-30",
    "recency": "recent",
    "author_label": "Reddit user",
-   "platform_subject": "groww",
+   "platform_subject": "motilal_amc",
    "language": "english",
    "truncated_at_source": false
   },
@@ -7998,16 +8038,16 @@
    "REL-4",
    "REL-2",
    "TRU-2",
+   "EDU-4",
    "TRU-5",
    "TRU-1",
-   "EDU-4",
    "OUT-1",
    "OUT-2",
    "GAP-1",
    "EDU-6",
-   "OUT-3",
    "EDU-5",
-   "TRU-6"
+   "TRU-6",
+   "OUT-3"
   ],
   "channels": [
    "reddit",

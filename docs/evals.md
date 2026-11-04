@@ -266,6 +266,8 @@ Each tagged verbatim carries a confidence value, and each claim carries a claim-
 | Low | 3–4 verbatims or a single channel |
 | Insufficient | <3 verbatims: the claim is not shown as a finding |
 
+**Ranked problems vs signals to watch (added 2026-11-05):** a problem is *ranked* only if it meets the §17.3 threshold (≥5 verbatims from ≥2 channels). A problem below it with ≥3 verbatims is kept as a *signal to watch*: shown apart from the ranked list, unranked, with its Low badge and cited posts. Below 3 it is not shown. First case: OUT-3 (mis-selling) fell to 7 Reddit-only posts after the leakage review moved regular-to-direct posts to EDU-4.
+
 *Human-confirmed* = a gold-set record (`data/hitl/human_tags.json`) or a record the user approved or corrected in a tag review round (e.g. `data/hitl/tag_review_round1.json`). **Changed 2026-11-04:** "High" previously needed only ≥1 human-confirmed verbatim, which put 20 of 21 problems at High and made the badge uninformative; ≥3 separates claims with real human checking from the rest and shows where more review is needed.
 
 **Citation requirement:** every claim in `claims_manifest.json` lists `supporting_verbatim_ids`, and the UI renders them as clickable source links.
@@ -367,13 +369,49 @@ The three non-negotiable rules are scored together. **Hallucination carries 40 p
 | Cross-screen equality: the same metric is identical on every screen | 8 | 0 mismatches |
 | Theme lineage: every journey stage, persona and opportunity lists existing verbatim IDs that carry the stated tag | 6 | 100% |
 | No literals: no hardcoded `%`, `₹` amounts or quoted user text in UI code | 5 | 0 violations |
-| Evidence thresholds: themes ≥5 verbatims from ≥2 channels; journey stages ≥5 tenure-stated verbatims | 3 | 100% |
+| Evidence thresholds: ranked problems ≥5 verbatims from ≥2 channels; signals to watch ≥3 verbatims; journey stages ≥5 tenure-stated verbatims | 3 | 100% |
 
 ### 17.4 Scoring and pass rule
 - Each sub-check scores `points × pass rate` (a check measured as a rate) or full/zero (a check measured as violations).
 - **Gates:** if quote integrity or UI traceability is below 100%, the hallucination dimension scores **0** and the build fails, whatever the total.
 - **Pass:** total ≥ 90 **and** hallucination = 40/40 **and** bias ≥ 24/30 **and** consistency ≥ 27/30.
 - Agreement metrics are indicative (reported, not gating) while the human-checked set is below 50 records.
+
+### 17.5 Scorecard: rubric final, before UI build (2026-11-05)
+
+Rubric frozen as above. Measured by `scripts/run_evals_v2.py` on `claims_manifest.json` (N = 783 counted posts, 20 ranked problems + 1 signal to watch); full output in `data/processed/eval_scorecard.json`.
+
+| Dimension | Score | Measurable now | Max |
+| :-- | --: | --: | --: |
+| No hallucination | 32.0 | 32 | 40 |
+| Bias | 27.3 | 30 | 30 |
+| Consistency | 25.0 | 25 | 30 |
+| **Total** | **84.3** | **87** | **100** |
+
+**What each score means**
+
+**No hallucination: 32 of 40.** This score asks whether the dashboard could show anything the users did not say. Every quote was checked against the original post, character for character, and every tag points to words that appear in that post. The short summaries we wrote contain no numbers, amounts or quotes we made up, and each one cites at least three real posts. All of that passed. The missing 8 points are for checking that the screens show only what is in the data file, and that can only be tested once the new UI is built.
+
+**Bias: 27.3 of 30.** This score asks whether the dashboard makes any problem look bigger or more common than it is. Every number says what it is counted out of, and a human sample of 30 posts found only 2 sitting under the wrong problem. No single tag or channel dominates without a visible warning, and "high churn risk" is used only when the user actually said they would stop. The small shortfall is agreement between the AI's tags and the researcher's: the AI picks the main problem in a post well but often misses the second one. That is why some problems, such as support failures, are probably undercounted.
+
+**Consistency: 25 of 30.** This score asks whether the same fact gives the same number everywhere. Every count was rebuilt from scratch and matched exactly. Every post listed under a problem really carries that problem's tag, and every problem shown meets the minimum evidence bar: at least 5 posts from at least 2 channels. A thinner pattern is shown separately as a signal to watch. The missing 5 points check that the UI code contains no hand-typed numbers or quotes, which can only be tested on the new UI.
+
+**Total: 84.3 of 100, pending.** Everything we can test before the UI exists passes, apart from the tag-agreement figure, which is reported but does not decide pass or fail yet. The verdict stays pending because 13 points can only be measured once the UI is rebuilt. If those UI checks pass, the score would reach 97.3, above the 90 needed to pass.
+
+**Verdict: PENDING.** Every check that can be measured before the UI passes except one; 13 points can only be measured on the rebuilt UI (Step 6).
+
+| Check | Score | Note |
+| :-- | --: | :-- |
+| Quote integrity · Evidence spans · Narrative claims · Citation completeness | 32 / 32 | 100% |
+| UI traceability | pending / 8 | gate; measured in Step 6 |
+| Denominators · Leakage · Tag dominance · Channel dominance · Churn grounding | 26 / 26 | leakage: 2 of 30 sampled items did not fit (7%, limit 10%) |
+| Agreement with humans | 1.3 / 4 | indicative (<50 checked): label precision 75%, recall 52%; problem level 92% / 69%; risk κ 0.90. Misses are mostly secondary problems not tagged |
+| Recompute · Cross-screen (manifest part) · Theme lineage · Evidence thresholds | 25 / 25 | |
+| No literals | pending / 5 | measured in Step 6 (legacy UI baseline: 108 literals, to be replaced) |
+
+**Best possible after Step 6:** 97.3 if both UI checks pass. That clears the pass rule (≥90, hallucination 40/40, bias ≥24, consistency ≥27). The only shortfall left would be agreement, which is indicative.
+
+**Corrections from the leakage review (round 2):** 15 posts that only said the money sat in regular plans were moved from OUT-3 (mis-selling) to EDU-4 as `regular_to_direct_switch`. `amc_sip_min_installments` moved to EDU-3. One planned (hypothetical) post left the counted base (N 784 → 783). OUT-3 became a signal to watch (see §12).
 
 ## 18. Schema v2 and Grounded Tagging (for the full corpus)
 

@@ -34,6 +34,7 @@
 
 ### 0.5 Ranking rule ("best evidence")
 - Problems are ranked by the **number of relevant, experienced posts** (excluding hypothetical, off-topic and needs-review records). No invented weighted score.
+- Only problems meeting the evidence threshold (≥5 posts from ≥2 channels) are ranked. Problems with `display = 'signal'` in the manifest (currently OUT-3) appear in a separate "Signals to watch" block below the ranked list, unranked, with their Low badge (`evals.md` §12).
 - Next to the count, every problem shows its evidence strength: posts that state drop-off, posts reporting money lost or held, number of channels, recency mix and the confidence badge.
 - No retention percentage anywhere: there is no cohort or internal data.
 

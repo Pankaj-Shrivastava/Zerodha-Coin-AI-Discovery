@@ -4,12 +4,12 @@ Everything below is read from `data/processed/claims_manifest.json`. No prose ye
 
 ## Corpus and headline numbers
 
-- Collected 7,831 unique posts from 4 channels; relevance-checked 1,386 (direct 814, indirect 448, off-topic 124); 30 hypothetical direct posts excluded.
-- **Counted N = 784** · Reddit 352 · Play 187 · TQnA 108 · YT 137 · Coin 251 / other 214 / not identifiable 319
-- Dated posts 594 of 784, from 2015-10-19 to 2026-11-01 · recency recent 260, aging 85, old 244, unknown 195
-- **Stated drop-off (SIP or platform scope): 116 of 784** · SIP 70, platform 46 (leaving Coin 12, leaving a competitor 34, platform not identifiable 0); fund-level 23 shown apart.
-- **Money and trust breakers: 148 of 784** (money lost or held: 40)
-- Fix type (posts with a friction, n=749): product 469, education 122, external 80, unclear 78
+- Collected 7,831 unique posts from 4 channels; relevance-checked 1,386 (direct 814, indirect 448, off-topic 124); 31 hypothetical direct posts excluded.
+- **Counted N = 783** · Reddit 352 · Play 187 · TQnA 107 · YT 137 · Coin 250 / other 214 / not identifiable 319
+- Dated posts 593 of 783, from 2015-10-19 to 2026-11-01 · recency recent 260, aging 85, old 243, unknown 195
+- **Stated drop-off (SIP or platform scope): 116 of 783** · SIP 70, platform 46 (leaving Coin 12, leaving a competitor 34, platform not identifiable 0); fund-level 23 shown apart.
+- **Money and trust breakers: 148 of 783** (money lost or held: 40)
+- Fix type (posts with a friction, n=748): product 468, education 122, external 80, unclear 78
 - Stated switches: 40 distinct flows; away from Coin 6, to Coin 11
 
 ## Problems in rank order
@@ -27,16 +27,16 @@ Everything below is read from `data/processed/claims_manifest.json`. No prose ye
 | 9 | REL-4 | The app errors, breaks or is hard to use, and does not say why | 53 | high | – | Coin and other platforms | 9 (3 / 5) | 3 | Start 5 M1–3 1 12+ 4 | 3 of 51 |
 | 10 | REL-2 | My money left, but units came late or at a later NAV | 51 | high | – | Coin and other platforms | 6 (3 / 3) | 1 | Start 7 M7–12 1 12+ 3 | 3 of 46 |
 | 11 | TRU-2 | My bank charged me a penalty for a failed SIP debit | 50 | high | Reddit 76% | Platform mostly not stated | 6 (0 / 1) | 18 | Start 2 M1–3 1 12+ 2 | 3 of 49 |
-| 12 | TRU-5 | Charges, upsells and pushes I did not expect | 43 | high | – | Coin and other platforms | 15 (2 / 13) | 2 | Start 3 M1–3 1 12+ 3 | 3 of 43 |
-| 13 | TRU-1 | Money was taken that I did not expect | 39 | high | – | Coin and other platforms | 4 (1 / 1) | 21 | Start 3 M1–3 1 12+ 3 | 3 of 37 |
-| 14 | EDU-4 | AMC SIP vs app SIP, demat vs statement: I do not know where my SIP lives | 34 | medium | – | Mostly Coin | 2 (1 / 1) | 0 | Start 5 M7–12 1 | 3 of 33 |
+| 12 | EDU-4 | AMC SIP vs app SIP, demat vs statement, regular vs direct: I do not know what kind of SIP I hold | 48 | medium | – | Mostly Coin | 3 (1 / 1) | 0 | Start 6 M7–12 3 12+ 4 | 3 of 47 |
+| 13 | TRU-5 | Charges, upsells and pushes I did not expect | 43 | high | – | Coin and other platforms | 15 (2 / 13) | 2 | Start 3 M1–3 1 12+ 3 | 3 of 43 |
+| 14 | TRU-1 | Money was taken that I did not expect | 39 | high | – | Coin and other platforms | 4 (1 / 1) | 21 | Start 3 M1–3 1 12+ 3 | 3 of 37 |
 | 15 | OUT-1 | Money is tight or needed for something else | 33 | high | Reddit 82% | Platform mostly not stated | 15 (0 / 0) | 2 | M7–12 2 12+ 4 | 3 of 32 |
 | 16 | OUT-2 | The fund or the rules stopped me investing | 33 | medium | – | Platform mostly not stated | 1 (0 / 0) | 2 | not shown (2 stated) | 3 of 32 |
 | 17 | GAP-1 | I cannot change or shape my SIP the way I need | 30 | medium | – | Mostly Coin | 4 (1 / 3) | 0 | not shown (3 stated) | 3 of 29 |
 | 18 | EDU-6 | I do not know enough to invest with confidence | 23 | medium | Reddit 83% | Platform mostly not stated | 2 (0 / 0) | 0 | Start 6 M7–12 1 12+ 6 | 3 of 23 |
-| 19 | OUT-3 | An advisor or distributor sold me the wrong product | 22 | medium | Reddit 86% | Platform mostly not stated | 3 (0 / 1) | 0 | Start 2 M1–3 1 M7–12 2 12+ 5 | 3 of 22 |
-| 20 | EDU-5 | Lock-in, exit load and tax catch me by surprise | 15 | medium | – | Platform mostly not stated | 2 (0 / 0) | 0 | not shown (4 stated) | 3 of 15 |
-| 21 | TRU-6 | I am not sure my money is safe with the platform | 9 | medium | – | Mostly Coin | 1 (0 / 1) | 0 | not shown (1 stated) | 3 of 8 |
+| 19 | EDU-5 | Lock-in, exit load and tax catch me by surprise | 15 | medium | – | Platform mostly not stated | 2 (0 / 0) | 0 | not shown (4 stated) | 3 of 15 |
+| 20 | TRU-6 | I am not sure my money is safe with the platform | 9 | medium | – | Mostly Coin | 1 (0 / 1) | 0 | not shown (1 stated) | 3 of 8 |
+| signal | OUT-3 | An advisor or distributor sold me the wrong product | 7 | low | Reddit 100% | Platform mostly not stated | 2 (0 / 1) | 0 | not shown (3 stated) | 3 of 7 |
 
 ## Rule-selected quotes
 
@@ -218,7 +218,23 @@ _Caps: drop-off ≤0, money ≤0._
 
 _Caps: drop-off ≤0, money ≤1._
 
-### 12. TRU-5 Charges, upsells and pushes I did not expect
+### 12. EDU-4 AMC SIP vs app SIP, demat vs statement, regular vs direct: I do not know what kind of SIP I hold
+
+> 25F | ₹1.3L income | ₹4L MF portfolio | 4.4% CAGR - what am I doing wrong? 1 yr investing via advisor (regular plans). Returns lagging market.
+
+— Reddit user · 2026-04-30 · platform: not stated · `reddit-1t0d98s` · (excerpt)
+
+> Could the Coin team support pause/resume and permitted amount changes for AMC SIPs? The current https://support.zerodha.com/category/mutual-funds/features-on-coin/systematic-investment-plan/articles/amc-sip-on-coin AMC SIP help page says they cannot be paused, modified or stepped up. This matters...
+
+— TradingQnA user · 2026-10-10 · platform: zerodha_coin · `tradingqna-542497` · (truncated at source)
+
+> @ sir ek or doubt hai mene coin ke zareye amc sip start ki hai us me jo 0/9999 likh ker ata hai us ka kya mtlb hai ??
+
+— YouTube commenter · 2025-11-04 · platform: zerodha_coin · `youtube-UgzLqlTirQvEYGa5DlF4AaABAg.ADi8KkwBhL_AE4UMwsD4pY`
+
+_Caps: drop-off ≤0, money ≤0._
+
+### 13. TRU-5 Charges, upsells and pushes I did not expect
 
 > Now started charging fees for direct funds diminishing the reason for using etmoneny. now started shifting to zerodha coin.
 
@@ -234,7 +250,7 @@ _Caps: drop-off ≤0, money ≤1._
 
 _Caps: drop-off ≤1, money ≤0._
 
-### 13. TRU-1 Money was taken that I did not expect
+### 14. TRU-1 Money was taken that I did not expect
 
 > Pathetic app. Money is deducted but not able to buy mutual funds, a regular sip is not working means money is not deducting from an account for an existing sip. Not able to set autopay in a new sip. For the last two months it's been happening.
 
@@ -249,22 +265,6 @@ _Caps: drop-off ≤1, money ≤0._
 — TradingQnA user · 2025-10-03 · platform: zerodha_coin · `tradingqna-507813` · (truncated at source, money)
 
 _Caps: drop-off ≤0, money ≤2._
-
-### 14. EDU-4 AMC SIP vs app SIP, demat vs statement: I do not know where my SIP lives
-
-> Also why I prefer SoA over demat Hello folks, I have chosen to start my index fund journey with Motilal Oswal and plan to invest directly via their AMC platform (SoA format) rather than through broker platforms that hold units in demat form.
-
-— Reddit user · 2026-08-30 · platform: motilal_amc · `reddit-1w2aylc` · (excerpt)
-
-> Could the Coin team support pause/resume and permitted amount changes for AMC SIPs? The current https://support.zerodha.com/category/mutual-funds/features-on-coin/systematic-investment-plan/articles/amc-sip-on-coin AMC SIP help page says they cannot be paused, modified or stepped up. This matters...
-
-— TradingQnA user · 2026-10-10 · platform: zerodha_coin · `tradingqna-542497` · (truncated at source)
-
-> @ sir ek or doubt hai mene coin ke zareye amc sip start ki hai us me jo 0/9999 likh ker ata hai us ka kya mtlb hai ??
-
-— YouTube commenter · 2025-11-04 · platform: zerodha_coin · `youtube-UgzLqlTirQvEYGa5DlF4AaABAg.ADi8KkwBhL_AE4UMwsD4pY`
-
-_Caps: drop-off ≤0, money ≤0._
 
 ### 15. OUT-1 Money is tight or needed for something else
 
@@ -330,23 +330,7 @@ _Caps: drop-off ≤0, money ≤0._
 
 _Caps: drop-off ≤0, money ≤0._
 
-### 19. OUT-3 An advisor or distributor sold me the wrong product
-
-> 25F | ₹1.3L income | ₹4L MF portfolio | 4.4% CAGR - what am I doing wrong? 1 yr investing via advisor (regular plans). Returns lagging market.
-
-— Reddit user · 2026-04-30 · platform: not stated · `reddit-1t0d98s` · (excerpt)
-
-> Adding to the above question, can I “pause” the existing regular investments & start fresh SIPs in direct funds? The money already invested in regular plans will remain as it is but I’ll be starting fresh investments under direct plans
-
-— TradingQnA user · 2017-04-21 · platform: not stated · `tradingqna-36579`
-
-> I had initially started SIP with a friend of a friend (who works in a bank and cleared level 2 CFA). However, after learning about the difference between regular and direct SIPs, I canceled my SIPs with him.
-
-— Reddit user · unknown · platform: zerodha_coin · `reddit-1sk2jhz` · (excerpt)
-
-_Caps: drop-off ≤0, money ≤0._
-
-### 20. EDU-5 Lock-in, exit load and tax catch me by surprise
+### 19. EDU-5 Lock-in, exit load and tax catch me by surprise
 
 > I have completed 3 years in ELSS but the units still show locked. Can I cancelled SIP and redeem all the amount now. Kindly find the screenshot attached for reference. If not kindly guide me how to redeem it. Screenshot_2022-07-21-08-14-58-778_com.zerodha.coin
 
@@ -362,7 +346,7 @@ _Caps: drop-off ≤0, money ≤0._
 
 _Caps: drop-off ≤0, money ≤0._
 
-### 21. TRU-6 I am not sure my money is safe with the platform
+### 20. TRU-6 I am not sure my money is safe with the platform
 
 > No ongoing SIPs in the demat ones—just lump sum holdings that I've accumulated over time. My Dilemma: From what I've gathered, SoA seems better for lower costs (no annual AMC fees like Zerodha's ₹300 or whatever it is now), easier direct plans, and no dependency on a broker for redemptions.
 
@@ -377,6 +361,22 @@ _Caps: drop-off ≤0, money ≤0._
 — YouTube commenter · 2025-11-04 · platform: nj_wealth · `youtube-UgweDZFBVsrasH-XWjF4AaABAg`
 
 _Caps: drop-off ≤0, money ≤0._
+
+### Signal. OUT-3 An advisor or distributor sold me the wrong product
+
+> Why these funds - I didn't research as these were selected directly by the advisor Hi. I started investing 3 months ago through a distributor. But quickly stopped all sip as I found him prioritising his gains (tried selling me LIC and term plans with rop). Obviously these are regular funds that he selected.
+
+— Reddit user · 2026-08-29 · platform: not stated · `reddit-dryrun-1w1v388` · (excerpt, states drop-off)
+
+> My father sold a property he had for 80 lakhs. My mother went to fixed deposit 45 lakhs in sbi for 6 months, so that we had enough time to decide what to do with it(mostly build another home). Someone in the bank persuaded her into putting all the money in SBI Dynamic Bond Fund, saying it's safe.
+
+— Reddit user · unknown · platform: not stated · `reddit-1nktvia` · (excerpt)
+
+> The pitch was standard bank mis-selling: *"Just pay for 5 years, and you can withdraw the whole thing for his marriage."* My parents had no clue what they were signing up for, and I was completely naive about personal finance.
+
+— Reddit user · 2026-10-29 · platform: not stated · `reddit-1xirk0z` · (excerpt)
+
+_Caps: drop-off ≤1, money ≤0._
 
 ## Stated switches (from → to)
 

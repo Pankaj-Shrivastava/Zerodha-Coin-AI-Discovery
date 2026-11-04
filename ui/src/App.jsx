@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import Overview from './screens/Overview';
 import Explorer from './screens/Explorer';
 import Questions from './screens/Questions';
+import Library from './screens/Library';
+import Research from './screens/Research';
 import { num, day } from './lib/format';
 
 // the 5 screens (docs/ui_plan_v2.md, information architecture); built: screens with a component
@@ -9,8 +11,8 @@ const SCREENS = [
   { id: 'overview', label: 'Overview', component: Overview },
   { id: 'explorer', label: 'Problem Explorer', component: Explorer },
   { id: 'questions', label: "What We Know and Don't", component: Questions },
-  { id: 'library', label: 'Evidence Library' },
-  { id: 'research', label: 'Next Research' },
+  { id: 'library', label: 'Evidence Library', component: Library },
+  { id: 'research', label: 'Next Research', component: Research },
 ];
 
 const screenFromHash = () => {

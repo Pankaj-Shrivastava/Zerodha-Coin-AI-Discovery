@@ -213,7 +213,9 @@ function ProblemDetail({ p, m, maxCount, prev, next, onPick }) {
         <Step title="What would prove this wrong" last>
           <div className="rounded-xl border border-dashed border-line p-3">
             <p className="max-w-[68ch] text-sm leading-relaxed text-ink">{p.narrative.invalidation}</p>
-            <p className="mt-1 text-xs text-muted">To test in interviews (Next Research)</p>
+            {m.research_tracks.some((t) => t.id === `track-${p.id}`)
+              ? <a href={`#research/track-${p.id}`} className="mt-1 inline-block text-xs text-link underline-offset-2 hover:underline">To test in interviews (Next Research)</a>
+              : <p className="mt-1 text-xs text-muted">To test in interviews (Next Research)</p>}
           </div>
         </Step>
       </div>

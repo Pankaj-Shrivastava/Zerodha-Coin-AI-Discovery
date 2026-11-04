@@ -123,3 +123,15 @@ export const labelName = (code) => {
   const t = String(code).replace(/^other:/, '').replace(/_/g, ' ');
   return t.charAt(0).toUpperCase() + t.slice(1);
 };
+
+export const EXCLUSION = {
+  off_topic: 'Off-topic',
+  indirect: 'Not about the poster\'s own SIP',
+  hypothetical: 'Hypothetical, not an experience',
+  duplicate: 'Near-duplicate of another post',
+  needs_review: 'Tag confidence too low',
+};
+
+export const LANGUAGES = { english: 'English', hinglish: 'Hinglish', hindi: 'Hindi' };
+
+export const DROPOFF_SCOPE = { sip: 'Stopped or paused a SIP', platform: 'Leaving a platform', fund: 'Switched a fund only' };

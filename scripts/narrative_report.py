@@ -75,3 +75,21 @@ for q in M['questions']:
         o.append(f"**What is missing:** {q['gap_note']}\n")
 open(P('data', 'hitl', 'narratives_review_batch2.md'), 'w', encoding='utf-8').write('\n'.join(o) + '\n')
 print('written data/hitl/narratives_review_batch2.md')
+
+# ---------- batch 3: research tracks ----------
+o = ['# Research tracks, batch 3 (Step 4c) — for review\n',
+     'One track per question that is not fully answered (Q1, Q2, Q4, Q6, Q7, Q8) and per top-two problem in each lever '
+     '(Reliability REL-1, REL-5 · Trust TRU-4, TRU-3 · Education EDU-1, EDU-2). Every interview question is episodic: the build '
+     'rejects hypothetical openers (would, if, imagine, do you think, what would…). A problem track\'s invalidation is identical '
+     'to the problem card. Evidence counts and ids are filled in by code. Reply per track with **ok** or what to change.\n']
+for t in M['research_tracks']:
+    o.append(f"## {t['id']} — {t['source_title']}\n")
+    o.append(f"Evidence: {t['evidence_count']} posts ({t['source_type']} {t['source']})\n")
+    o.append(f"**Objective:** {t['objective']}\n")
+    o.append(f"**Who to talk to:** {t['recruit']}\n")
+    o.append('**Questions (episodic):**\n')
+    o += [f'{i}. {x}' for i, x in enumerate(t['questions'], 1)]
+    o.append(f"\n**Would confirm it:** {t['confirmation']}\n")
+    o.append(f"**Would prove it wrong:** {t['invalidation']}\n")
+open(P('data', 'hitl', 'narratives_review_batch3.md'), 'w', encoding='utf-8').write('\n'.join(o) + '\n')
+print('written data/hitl/narratives_review_batch3.md')

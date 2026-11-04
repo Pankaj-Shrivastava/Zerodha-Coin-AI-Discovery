@@ -160,7 +160,7 @@ Evidence rule: posts stating an action beyond posting: contacting support, the b
 
 By problem: TRU-4 13, REL-1 7, TRU-1 7, REL-4 5, REL-3 4, EDU-3 3, TRU-2 3, REL-5 2
 
-By stated action: contacted_support 8, contacted_bank 4, contacted_bank_and_support_manual_invest 1, raised_ticket 1, contacted_bank_and_support 1, raised_ticket_and_keeps_competitor 1, visited_branch 1, raised_query 1, refreshed_and_tried_support 1, raised_issue_warned_others 1
+By stated action: contacted_support 8, contacted_bank 4, contacted_bank_and_support 1, contacted_bank_and_support_manual_invest 1, contacting_support 1, raised_query 1, filed_scores_complaint 1, raised_complaints 1, raised_issue_warned_others 1, raised_ticket 1
 
 **Summary (generated):** Beyond asking online, investors contact the platform's support, call or visit their bank, or complain to the market regulator. Several describe being passed between the bank, the platform and the fund house, or getting only automated replies, and some end up investing by hand while the problem stays open.
 
@@ -205,7 +205,7 @@ Evidence rule: posts that state an age, life stage, experience or income → **8
 
 By problem: EDU-1 26, OUT-1 12, OUT-2 6, REL-3 5, EDU-6 5, REL-1 4, REL-4 4, OUT-3 4
 
-By profile field: life_stage 23, age 46, experience 14, income 9
+By profile field: life_stage 23, income 9, age 46, experience 14
 
 **Summary (generated):** Where investors say who they are, they describe themselves as new to investing, as students putting in pocket or internship money, as salaried earners, or as NRIs. Posts from students are mostly about disappointing returns or money pressure, and NRIs describe mandates or apps that do not support them.
 

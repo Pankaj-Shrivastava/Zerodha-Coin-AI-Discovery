@@ -384,7 +384,7 @@ def main():
             'by_profile_field': dict(Counter(f for k in ids for f in tg(k)['stated_profile'])) if qid == 'Q8' else None,
             'quotes': pick, 'quote_caps': caps, 'quote_candidates': nc,
             'summary': ({'generated': True, 'text': qn['summary'], 'cited_ids': qn['cited_ids']} if qn.get('summary') else None),
-            'gap_note': qn.get('gap_note'), 'research_link': f'track-{qid}',
+            'gap_note': qn.get('gap_note'), 'research_link': f'track-{qid}' if status != 'answered' else None,
             'all_ids': sorted(ids),
         })
 
@@ -438,6 +438,35 @@ def main():
             errs.append(f'{q["id"]}: not fully answered but has no gap note')
         if q['status'] != q['status_by_count'] and not q['status_cap_reason']:
             errs.append(f'{q["id"]}: status lowered without a reason')
+    # ---------- research tracks (Step 4c batch 3) ----------
+    HYPOTHETICAL = re.compile(r"^\s*(would|if|imagine|suppose|do you think|how likely|what would|should|could you see)\b", re.I)
+    raw_tracks = load_json('data', 'processed', 'narratives.json').get('research_tracks', []) if os.path.exists(P('data', 'processed', 'narratives.json')) else []
+    src_of = {p['id']: p for p in problems} | {q['id']: q for q in questions}
+    pnar = load_json('data', 'processed', 'narratives.json').get('problems', {}) if raw_tracks else {}
+    research_tracks = []
+    for t in raw_tracks:
+        s = src_of.get(t['source'])
+        if not s:
+            errs.append(f'{t["id"]}: unknown source {t["source"]}')
+            continue
+        for field in ('objective', 'recruit', 'confirmation', 'invalidation'):
+            check_text(f'{t["id"]} {field}', t[field])
+        for i, qq in enumerate(t['questions'], 1):
+            check_text(f'{t["id"]} question {i}', qq)
+            if HYPOTHETICAL.search(qq):
+                errs.append(f'{t["id"]} question {i}: not episodic (hypothetical opener): {qq[:50]}')
+        if t['source'] in pnar and t['invalidation'] != pnar[t['source']]['invalidation']:
+            errs.append(f'{t["id"]}: invalidation differs from the problem card (cross-screen consistency)')
+        ids = s['all_ids']
+        research_tracks.append({**t, 'source_type': 'problem' if t['source'] in pnar or t['source'] in {p['id'] for p in problems} else 'question',
+                                'source_title': s.get('name') or s.get('question'), 'generated': True,
+                                'evidence_count': len(ids), 'evidence_ids': ids})
+    manifest['research_tracks'] = research_tracks
+    track_ids = {t['id'] for t in research_tracks}
+    for q in questions:
+        if q['research_link'] and q['research_link'] not in track_ids and raw_tracks:
+            errs.append(f'{q["id"]}: links to missing research track {q["research_link"]}')
+
     npath = P('data', 'processed', 'narratives.json')
     if os.path.exists(npath):
         nar = load_json('data', 'processed', 'narratives.json').get('problems', {})

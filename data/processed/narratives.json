@@ -157,5 +157,155 @@
    "summary": "The same asks recur, mostly in Play Store reviews and TradingQnA: automatic debit from the bank and a true SIP on Coin, reminders before a payment is due, a pause longer than a single skip, and control over an SIP after starting it, such as changing the amount or date, switching funds or withdrawing systematically.",
    "cited_ids": ["tradingqna-173943", "tradingqna-371637", "playstore-zerodha_coin-e4449d7a-f7b8-42c0-b7ae-38cfd9915f70", "playstore-groww-66aca4e9-e96a-4e94-ada8-dd661f1f3d02", "tradingqna-309803", "playstore-zerodha_coin-4b9286c4-46a7-4a35-870f-9ee71763ee2b"]
   }
- }
+ },
+ "batch_3_written": "2026-11-04",
+ "research_tracks": [
+  {
+   "id": "track-Q1", "source": "Q1",
+   "objective": "Learn why first-time investors start an SIP on Coin and what they expect it to do in the first year, which the posts cannot tell us.",
+   "recruit": "First-time Coin SIP investors in their first year, plus some who stopped within it.",
+   "questions": [
+    "Tell me about the day you set up your first SIP. What made you do it then?",
+    "Who or what did you look at before choosing the fund and the amount?",
+    "When you set it up, what did you picture your money looking like a year later?",
+    "Think of the first time you opened the app after investing. What were you looking for?"
+   ],
+   "confirmation": "Investors describe a specific expected return or timeline that their first months then failed to meet.",
+   "invalidation": "Investors describe no particular expectation, or say early returns did not affect how they felt about continuing."
+  },
+  {
+   "id": "track-Q2", "source": "Q2",
+   "objective": "See how behaviour changes across the first twelve months, which single-moment posts cannot show.",
+   "recruit": "Coin SIP investors between three and twelve months in, and some who stopped in that window; a diary study with a few of them over several months.",
+   "questions": [
+    "Walk me through what you did around your last SIP date, from the reminder or debit to checking the app.",
+    "Think back to your first month. What did you do differently then compared with last month?",
+    "Tell me about a time you changed something about your SIP: the amount, the date, a pause or a stop. What led up to it?",
+    "When did you last decide not to invest extra, or to invest less? What was happening that week?"
+   ],
+   "confirmation": "Investors describe a clear shift, such as checking less, pausing or reducing, tied to a specific event in the first year.",
+   "invalidation": "Investors describe the same routine from the first month to the twelfth, with no event that changed it."
+  },
+  {
+   "id": "track-Q4", "source": "Q4",
+   "objective": "Find out how often investors check and what they look for, and whether checking goes with stopping.",
+   "recruit": "Coin SIP investors in their first year; pair interviews with app usage data where available.",
+   "questions": [
+    "When did you last open Coin? What did you look at first, and why?",
+    "Tell me about a time the numbers in the app did not match what you expected. What did you do next?",
+    "Think of a week when the market fell. How did you check your SIP that week?"
+   ],
+   "confirmation": "Investors who check often describe stress or confusion from what they see, and link it to doubts about continuing.",
+   "invalidation": "How often investors check has no link to their doubts about continuing."
+  },
+  {
+   "id": "track-Q6", "source": "Q6",
+   "objective": "Learn where investors go when they are unsure, beyond the forums the corpus was collected from, and what finally resolves the problem.",
+   "recruit": "Coin SIP investors who had a payment, debit or order problem in their first year, including ones who never posted about it.",
+   "questions": [
+    "Think of the last time something about your SIP did not look right. Where did you go first?",
+    "Who else did you contact after that: support, your bank, the fund house, a friend? What happened each time?",
+    "What finally sorted it out, and how long did it take?"
+   ],
+   "confirmation": "Investors describe being passed between the platform, the bank and the fund house before the problem was resolved.",
+   "invalidation": "Most investors resolve problems through a single contact, or do not need help at all."
+  },
+  {
+   "id": "track-Q7", "source": "Q7",
+   "objective": "Compare investors who continued past twelve months with those who stopped, which the corpus cannot do.",
+   "recruit": "Two matched groups of first-time Coin SIP investors: still investing after twelve months, and stopped within twelve months. Use Coin account data to find them if possible.",
+   "questions": [
+    "Tell me about the moment you came closest to stopping your SIP. What happened, and what did you do?",
+    "Think back to the first problem you had with your SIP. How was it resolved?",
+    "Walk me through the last time money was tight. What happened to your SIP that month?",
+    "For those who stopped: tell me about the day you stopped. What happened in the weeks before?"
+   ],
+   "confirmation": "The two groups differ in specific early experiences, such as a failed instalment, an unexpected debit or a confusing pause, that the product can influence.",
+   "invalidation": "The two groups report the same early experiences, and stopping is explained by money or life events outside the product."
+  },
+  {
+   "id": "track-Q8", "source": "Q8",
+   "objective": "Compare patterns across segments by asking for the facts posts rarely state: income stability, source of money and who influenced the decision.",
+   "recruit": "First-time Coin SIP investors across income types (salaried, freelance, student or intern, NRI); use a short screener.",
+   "questions": [
+    "Tell me where the money for your SIP comes from each month, and what happened in a month when that changed.",
+    "Who or what influenced you to start: a friend, family, a video, an advisor? What did they say?",
+    "Think of a month when your income was lower or late. What did you do about your SIP?"
+   ],
+   "confirmation": "Investors with irregular income or outside influence describe different early problems from salaried investors.",
+   "invalidation": "Problems and outcomes look the same across segments."
+  },
+  {
+   "id": "track-REL-1", "source": "REL-1",
+   "objective": "Understand what happens when an early instalment does not go through, and how it affects the decision to continue.",
+   "recruit": "Coin SIP investors whose first or an early instalment failed, got stuck or was cancelled.",
+   "questions": [
+    "Tell me about the instalment that did not go through. How did you find out?",
+    "What did you see in the app at that moment, and what did you think had happened to your money?",
+    "What did you do next, and what happened to your SIP after that?"
+   ],
+   "confirmation": "Investors describe the failed instalment as the moment they started to doubt the platform or the SIP.",
+   "invalidation": "Order logs show that failed or stuck first instalments are rare, or that investors whose early instalment failed continued at the same rate as others."
+  },
+  {
+   "id": "track-REL-5", "source": "REL-5",
+   "objective": "Learn how paying by hand, without an active mandate, leads to missed instalments, and whether investors want a mandate at all.",
+   "recruit": "Coin SIP investors who pay manually, or who did before setting up a mandate, including some who chose not to use one.",
+   "questions": [
+    "Walk me through the last SIP you paid by hand. How did you know it was due?",
+    "Tell me about a time you missed an instalment. What happened that day?",
+    "When you were offered a mandate, what did you decide and why?"
+   ],
+   "confirmation": "Investors who pay by hand describe repeated missed instalments that a reminder or mandate would have prevented.",
+   "invalidation": "Coin data shows investors who pay by hand miss no more instalments than those with a mandate, or the posts describe a payment flow that has since changed for everyone."
+  },
+  {
+   "id": "track-TRU-4", "source": "TRU-4",
+   "objective": "Learn how support experiences during a money problem affect trust and the decision to stay.",
+   "recruit": "Coin SIP investors who contacted support about money in their first year, and some who left another platform after a support experience.",
+   "questions": [
+    "Tell me about the last time you contacted support about your money. What was the problem?",
+    "What reply did you get, and how long did it take?",
+    "What did you do while you were waiting, and what happened to your SIP afterwards?"
+   ],
+   "confirmation": "Investors describe the support experience, not the original problem, as what made them consider leaving.",
+   "invalidation": "Coin support data shows money-related tickets are resolved quickly, or interviews show the support experience plays no part in whether investors keep their SIPs."
+  },
+  {
+   "id": "track-TRU-3", "source": "TRU-3",
+   "objective": "Understand what it is like when money is stuck in a refund, redemption or bank change, and what that does to trust.",
+   "recruit": "Coin investors who waited for a refund, a redemption or a bank-account change in their first year.",
+   "questions": [
+    "Tell me about the time you were waiting for your money. What was it for?",
+    "How did you track where your money was, and what did you see in the app each time you looked?",
+    "How did that wait change what you did with your SIP?"
+   ],
+   "confirmation": "Investors describe the wait as a reason they reduced, stopped or moved their investing.",
+   "invalidation": "Refund and redemption timelines are met in nearly all cases, and investors who had to wait did not reduce their investing."
+  },
+  {
+   "id": "track-EDU-1", "source": "EDU-1",
+   "objective": "Learn how early losses or slow returns shape the decision to continue, and what investors expected beforehand.",
+   "recruit": "First-time SIP investors who saw a loss or low returns in their first year, including some who stopped or withdrew.",
+   "questions": [
+    "Tell me about the first time you saw your SIP in the red. What did you do that day?",
+    "Who did you talk to or what did you read after that, and what did they tell you?",
+    "Think about the last time you compared your SIP with a fixed deposit or another option. What led to that?"
+   ],
+   "confirmation": "Investors who stopped describe the early loss, not a need for money, as the trigger.",
+   "invalidation": "Interviews find that investors who saw early losses kept investing at the same rate as others, or that the ones who stopped did so because they needed the money, not because of returns."
+  },
+  {
+   "id": "track-EDU-2", "source": "EDU-2",
+   "objective": "Learn what investors believe pause, skip, cancel and delete do, and whether that belief leads to unintended stops.",
+   "recruit": "Coin SIP investors who paused, skipped, cancelled or deleted an SIP, or tried to, in their first year.",
+   "questions": [
+    "Tell me about the last time you wanted to stop paying into your SIP for a while. What did you do in the app?",
+    "What did you expect would happen to your money and to the next debit?",
+    "What actually happened next, and how did you find out?"
+   ],
+   "confirmation": "Investors describe choosing an action, such as cancel or delete, that did something different from what they expected, and not restarting afterwards.",
+   "invalidation": "In interviews, investors correctly explain what pause, skip, cancel and delete do, or those who were confused went on to restart without difficulty."
+  }
+ ]
 }

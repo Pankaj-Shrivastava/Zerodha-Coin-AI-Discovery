@@ -35,3 +35,43 @@ for p in M['problems']:
     o.append('')
 open(P('data', 'hitl', 'narratives_review_batch1.md'), 'w', encoding='utf-8').write('\n'.join(o) + '\n')
 print('written data/hitl/narratives_review_batch1.md')
+
+# ---------- batch 2: the 9 questions ----------
+ST = {'answered': 'Answered', 'partly_answered': 'Partly answered', 'not_answered': 'Not answered yet'}
+o = ['# The 9 questions, batch 2 (Step 4c) — for review\n',
+     'Evidence is selected by a tag rule (shown per question) and counted by code. Status by count: Answered ≥5 posts · '
+     'Partly 3–4 · Not answered <3. A status may be **lowered, never raised**, and only with the stated reason. '
+     'Summaries are generated, cite ≥3 posts from the question\'s evidence, and contain no digits or quotation marks. '
+     'Quotes follow the same rule as problems (bias caps included). Reply per question with **ok** or what to change.\n']
+for q in M['questions']:
+    o.append(f"## {q['id']}. {q['question']}\n")
+    o.append(f"**Status: {ST[q['status']]}**" + (f" (by count: {ST[q['status_by_count']]}; lowered because: {q['status_cap_reason']})" if q['status'] != q['status_by_count'] else '') + '\n')
+    top = max(q['channel_split'].values()) if q['evidence_count'] else 0
+    flag = ' ⚑ one channel >70%' if q['evidence_count'] and top / q['evidence_count'] > 0.7 else ''
+    o.append(f"Evidence rule: {q['criteria']} → **{q['evidence_count']} of {q['denominator']}** posts · " +
+             ' · '.join(f'{CH[c]} {v}' for c, v in q['channel_split'].items()) + flag + '\n')
+    if q['by_problem']:
+        o.append('By problem: ' + ', '.join(f'{p} {v}' for p, v in q['by_problem'].items()) + '\n')
+    for key, label in (('by_stage', 'By stated stage'), ('by_action', 'By stated action'), ('by_profile_field', 'By profile field')):
+        if q.get(key):
+            o.append(f'{label}: ' + ', '.join(f'{a} {b}' for a, b in q[key].items() if b) + '\n')
+    if q['summary']:
+        o.append(f"**Summary (generated):** {q['summary']['text']}\n")
+        o.append('**Cited posts and their evidence:**\n')
+        for c in q['summary']['cited_ids']:
+            t = recs[c]['tags']
+            sp = '; '.join(f'*{bare(l)}*: "{s}"' for l, s in t['evidence'].get('friction', {}).items())
+            extra = ' · '.join(x for x in (f'stage: "{t["evidence"]["journey_stage"]}"' if t['evidence'].get('journey_stage') else '',
+                                           f'stated: "{t["evidence"]["stated_churn"]}"' if t['evidence'].get('stated_churn') else '',
+                                           f'action: {t.get("user_action_stated")}' if q['id'] == 'Q6' else '',
+                                           'profile: ' + '; '.join(f'{a}: "{b}"' for a, b in t['stated_profile'].items()) if q['id'] == 'Q8' else '') if x)
+            o.append(f"- `{c}` ({CH[corpus[c]['source_channel']]}, platform {t['platform_subject'] or 'not stated'}) — {sp}" + (f' · {extra}' if extra else ''))
+        o.append('')
+    if q['quotes']:
+        o.append(f"**Quotes (rule-selected, {len(q['quotes'])} of {q['quote_candidates']} eligible):**\n")
+        for x in q['quotes']:
+            o.append(f"> {x['text']}\n\n— `{x['id']}`" + (' (excerpt)' if x['excerpt'] else '') + '\n')
+    if q['gap_note']:
+        o.append(f"**What is missing:** {q['gap_note']}\n")
+open(P('data', 'hitl', 'narratives_review_batch2.md'), 'w', encoding='utf-8').write('\n'.join(o) + '\n')
+print('written data/hitl/narratives_review_batch2.md')

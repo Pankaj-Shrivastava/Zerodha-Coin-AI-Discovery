@@ -1,0 +1,335 @@
+=== Q3 stop/pause/leave n=116 | by type Counter({'sip_stop/sip': 31, 'sip_pause/sip': 29, 'intent_to_leave/platform': 25, 'realised_exit/platform': 20, 'realised_exit/sip': 8, 'intent_to_leave/sip': 2, 'platform_switch/platform': 1})
+by problem: EDU-1 28, TRU-5 15, OUT-1 15, TRU-4 14, EDU-2 13, REL-4 9, TRU-3 8, REL-2 6, TRU-2 6, REL-1 5, REL-3 5, TRU-1 4, GAP-1 4, OUT-3 3, REL-5 2, EDU-3 2, EDU-4 2, EDU-6 2, EDU-5 2, OUT-2 1, TRU-6 1
+no friction: 15
+by cause: Counter({'structural_ux': 53, 'behavioral': 19, 'mixed': 16, 'deliberate_strategy_shift': 13, 'external_third_party': 9, 'unclear': 6})
+platform-scope by platform: Counter({'etmoney': 15, 'zerodha_coin': 12, 'groww': 5, 'paytm_money': 5, 'kuvera': 3, 'asset_plus': 1, 'bajaj_broking': 1, 'fundsindia': 1, 'hdfc_investright': 1, 'upstox': 1, 'niyo_money': 1})
+- playstore-et_money-0b486d52-b8a0-43dc-adf1-acda6a07e37a [play_store|etmoney] 
+  f: duplicate_sip_debit: "they deducted the amount twice for each SIP"; refund_delay: "till the date they didn't refund me the amount"
+  churn intent_to_leave/platform: "Planning to withdraw all the amount from this app"
+- playstore-et_money-16911f5a-ea07-4f28-8e62-225af6db0dca [play_store|etmoney] 
+  f: paywall_basic_features: "started charging fees for direct funds"
+  churn realised_exit/platform: "now started shifting to zerodha coin"
+- playstore-et_money-48e0099c-2211-4297-85ed-f4fedc0408e2 [play_store|etmoney] 
+  f: aggressive_marketing: "Everything pushes paid services"
+  churn realised_exit/platform: "I've moved to Groww"
+- playstore-et_money-4edb6db1-c44c-43d7-ad23-46f249efcdee [play_store|etmoney] 
+  f: notification_uncertainty: "Never received notifications for my registered SIPs"; support_failure: "Emailed support, but no response even after 15 days"
+  churn realised_exit/platform: "I've now stopped all SIPs, logged out, and uninstalled the ETMoney app"
+- playstore-et_money-55ebca46-25e7-4d22-b17b-56e6b3f7e989 [play_store|etmoney] 
+  f: paywall_upgrade: "paywalled basic mutual fund strategy improvements inside an expensive higher plan"
+  churn realised_exit/platform: "I am now moving my SIPs out of ET Genius to de-risk"
+- playstore-et_money-6be009a0-e105-4a16-a180-9ed479e05634 [play_store|etmoney] 
+  f: aggressive_marketing: "I had to click through 7 ad screens before being able to do that"; poor_web_interface: "They've stopped the website which was user-friendly"
+  churn realised_exit/platform: "I've switched completely to MFCentral"
+- playstore-et_money-740fa7bf-0a84-40cb-a2ce-6dfd6cf71eca [play_store|etmoney] 
+  f: delayed_nav: "they always delay placing an order with the AMC and you then get next days nav"; support_failure: "Pathetic service, no customer care"
+  churn intent_to_leave/platform: "better to switch to another app"
+- playstore-et_money-75e30f36-df10-4016-bbdc-d3483d590829 [play_store|etmoney] 
+  f: aggressive_marketing: "Everything is about purchasing Genius subscription"; external_fund_tracking: "Cannot see external MFs"
+  churn intent_to_leave/platform: "Going to switch to another platform!!"
+- playstore-et_money-80bcfd48-e192-4926-a13b-23fcd17e8b67 [play_store|etmoney] 
+  f: aggressive_marketing: "stop pushing unwanted things to the normal customer"
+  stage beyond_12: "after 8 years its time to move on"
+  churn intent_to_leave/platform: "plan to move my mutual funds to another simple user-friendly app"
+- playstore-et_money-902e9e92-1364-4cdb-bc1d-e4b7c1a9966e [play_store|etmoney] 
+  f: support_failure: "there was zero responce from them via mail or call"
+  churn intent_to_leave/platform: "Now planning to drop this app from any future transactions"
+- playstore-et_money-b122e32e-ead0-4f9b-948b-54b0a35bf584 [play_store|etmoney] 
+  f: delayed_nav: "the NAV is not allotted for the same date"; no_switch_option: "no option to switch mutual funds"
+  stage beyond_12: "Been with etmomey for 5 years now"
+  churn realised_exit/platform: "switching to other apps"
+- playstore-et_money-f1bacb4e-7e41-4a00-b7be-8603e01f31be [play_store|etmoney] 
+  f: app_confusing: "with updates it became very complex"
+  churn realised_exit/platform: "switching to other app now"
+- playstore-et_money-f234e1ba-76bc-4889-8c99-ef91957db498 [play_store|etmoney] 
+  f: paywall_basic_features: "started charging a hefty subscription fee just to invest in Direct Mutual Funds"
+  stage beyond_12: "After using it for 5 years"
+  churn realised_exit/platform: "I finally uninstalled it and switched to Groww"
+- playstore-groww-92f72fda-ba3f-4f1c-8055-15fec25e5799 [play_store|groww] 
+  f: hidden_fee: "There are hidden charges on small, small services"; support_failure: "customer support has been slow and lacks proper knowledge"
+  stage start: "Started using Groww for mutual funds and stocks just 2 days ago"
+  churn realised_exit/platform: "Within just 2 days I've decided to close my account"
+- playstore-groww-d62bc2ae-f70b-42dd-bb59-00ad3151cb3f [play_store|groww] 
+  f: support_failure: "No support from the customer service"
+  churn intent_to_leave/platform: "By this experience I will not invest any"
+- playstore-paytm_money-0ca50eb4-2aa4-4efc-8a02-de9906ce58f6 [play_store|paytm_money] 
+  f: forced_autopay: "Paytm money is forcing for autopay feature"
+  churn realised_exit/platform: "I'm now using different app"
+- playstore-paytm_money-1f6021f1-0e21-4a7c-8cf4-e9ecf65e69af [play_store|paytm_money] 
+  f: redemption_issue: "facing mutual fund redemption issue"; support_failure: "customer support services are very slow"
+  churn intent_to_leave/platform: "looks like I have to switch to zerodha or other apps"
+- playstore-paytm_money-3f0fe30a-35b4-4ac8-b1ef-44b6cd21c351 [play_store|paytm_money] 
+  f: hidden_fee: "the app itself has many hidden charges"; support_failure: "Zero customer service to complain except useless chatbots"; slow_withdrawal: "they take whole day to withdraw you own money"
+  churn intent_to_leave/platform: "Therefore I'm migrating to different platforms"
+- playstore-paytm_money-778975e6-c47c-4baa-9503-42d18afbe3cf [play_store|paytm_money] 
+  f: unit_allocation_delay: "unit allocation is taking 4,5 days almost"
+  stage beyond_12: "from last 2 years"
+  churn intent_to_leave/platform: "Otherwise I have to switch to other apps"
+- playstore-zerodha_coin-ac96c7c9-e7c5-4a71-909d-1269f6f31e50 [play_store|zerodha_coin] 
+  f: nav_not_shown: "you don't display what will be nav price i will get"; statement_confusion: "xirr on kite show different than coin"; reporting_gap: "no way to track how much i investment in given time period"
+  churn intent_to_leave/platform: "i am thinking to switch to other platform"
+- playstore-zerodha_coin-b3d4217c-d431-4b69-a902-274a1c966ddc [play_store|zerodha_coin] 
+  f: unit_allocation_delay: "Mutual Funds are taking lot of time to reflect after buying"; sip_not_executed: "sip that was supposed to execute today has not executed"
+  stage start: "I planned to move here"
+  churn intent_to_leave/platform: "now I will search for another platform or use mfcentral"
+- playstore-zerodha_coin-b89ecf4d-3351-4b3b-8f2d-08697f938126 [play_store|zerodha_coin] 
+  f: no_swp: "when the SWP option will be added"
+  churn intent_to_leave/platform: "If this feature will be not added then I will stop investing with coin"
+- playstore-zerodha_coin-be4d21cf-0436-4533-8c02-03a45b4bed86 [play_store|zerodha_coin] 
+  f: unexplained_debit: "money being deducted"; order_failed_no_reason: "They are not able to cite a proper reason"; refund_delay: "After a week of successful transaction and money being deducted, I am getting a refund"; support_failure: "a textbook reply on the ticket"; sip_not_invested_in_time: "Due to this I am not able to invest in SIP in time"
+  churn platform_switch/platform: "I will keep using the competitor Kuvera app"
+- reddit-1cb3mre [reddit|paytm_money] 
+  f: amc_charges: "to avoid amc charges"
+  churn intent_to_leave/platform: "I will close paytm money demat"
+- reddit-1eivny2 [reddit|zerodha_coin] 
+  f: unit_allocation_delay: "The money was debited successfully but they units were not allotted"
+  churn realised_exit/platform: "Why I stopped investing via Zerodha's Coin"
+- reddit-1esk1kp [reddit|zerodha_coin] 
+  f: soa_preference: "it stores the units in SOA format"; external_fund_tracking: "ability to track external funds"
+  stage start: "just started SIPs in these funds"
+  churn intent_to_leave/platform: "thinking to stop SIP in Zerodha coin and start SIP in Groww"
+- reddit-1fwzi9e [reddit|etmoney] 
+  f: aggressive_marketing: "Very aggressive marketing to the point the app is so distracting"; poor_web_interface: "Very poor web interface"; support_failure: "currently we do not have any feature through which product wise notifications"
+  churn intent_to_leave/platform: "I'm thinking to moving away from them"
+- reddit-1fz1th6 [reddit|upstox] 
+  f: bank_penalty: "I recently incurred a few fines"; insufficient_funds_on_sip_date: "maintain sufficient funds in my second bank account"; no_step_up_sip: "There is no Step-Up SIP option"
+  stage month_1_3: "For the past two months, I have been investing"
+  churn intent_to_leave/platform: "Because of these issues"
+- reddit-1hggk6i [reddit|zerodha_coin] 
+  f: platform_bugginess: "several issues arising related to funds, intraday transaction"; stagnant_features: "falling behind competitors such as IND Money, Dhan"
+  churn realised_exit/platform: "I've fully transitioned to IND Money for SIPs"
+- reddit-1lqz1be [reddit|groww] 
+  f: soa_to_demat_switch: "GROWW switching from SOA format to DEMAT"
+  churn realised_exit/platform: "Why I moved to MFUIndia"
+- reddit-1nzgx4g [reddit|niyo_money] 
+  f: platform_bugginess: "so broken that you can't even do an SIP without new issues cropping up every month"
+  stage beyond_12: "about 7-8 years"
+  churn realised_exit/platform: "Shifting from Niyo Money"
+- reddit-1o1xn2h [reddit|kuvera] 
+  f: sip_not_executed: "every month, the Parag Parikh Flexi Cap SIP fails to go through"; nominee_detail_error: "the SIP was failing because the nominee"; refund_delay: "my money gets stuck temporarily although it eventually gets refunded"
+  stage start: "as a complete beginner in investing"
+  churn intent_to_leave/platform: "considering switching to the Groww app for my future investments"
+- reddit-1tpzkiy [reddit|kuvera] 
+  f: privacy_concern: "CRED only focuses on selling your private data"
+  churn realised_exit/platform: "Kuvera - CRED acquisition pushed Me to Use MFCentral"
+- reddit-1ty9rdy [reddit|zerodha_coin] 
+  f: demat_amc_surprise: "Now they sent me an email saying I need to pay AMC for demat account which I didn't even realise I signed up for"
+  stage start: "I recently started investing on Coins"
+  churn intent_to_leave/platform: "Can I stop SIPs in Coin and continue somewhere else?"
+- reddit-1usk5ef [reddit|hdfc_investright] 
+  f: 
+  churn realised_exit/platform: "today, i stopped all of my sips on investright (regular plans) and ive switched to coin"
+- reddit-8d4kbt [reddit|fundsindia] 
+  f: min_installment_lock: "they have told that you need to complete six installments"
+  churn intent_to_leave/platform: "I decided to stop my SIPs at FundsIndia"
+- reddit-dryrun-1vbofl5 [reddit|bajaj_broking] 
+  f: distributor_misselling: "got steered heavily into Bajaj's proprietary funds"; returns_disappointment: "Feeling like FD was better"; fd_comparison: "FD was better"
+  churn intent_to_leave/platform: "Tax-Efficient Exit Strategy"
+- reddit-dryrun-1vudmi1 [reddit|etmoney] 
+  f: advisory_plan_underperformance: "blind trust in ET Money Genius plans"
+  churn intent_to_leave/platform: "trying to get out of its environment"
+- reddit-dryrun-1w1ptiz [reddit|asset_plus] 
+  f: returns_disappointment: "my return will be diminishing"
+  churn intent_to_leave/platform: "I am planning to stop asset plus platform to invest"
+- reddit-dryrun-1w7vfpp [reddit|groww] 
+  f: kyc_issue: "KYC process"; support_failure: "their customer service"; sip_cancelled_during_platform_move: "I cancelled those SIPs for a month"
+  stage beyond_12: "investing via SIPs for 4 years"
+  churn realised_exit/platform: "I decided to move away from Groww"
+
+=== Q2 early tenure n=93 | by stage Counter({'start': 64, 'month_7_12': 19, 'month_1_3': 6, 'month_4_6': 4}) | stops 12
+by problem: EDU-1 24, REL-1 18, EDU-3 9, REL-2 8, EDU-2 7, EDU-6 7, TRU-4 6, REL-4 6, EDU-4 6, REL-5 5, REL-3 5, TRU-3 5
+- playstore-zerodha_coin-4d300feb-28ec-4d22-a519-041907f9c38d [play_store|zerodha_coin] 
+  f: sip_order_delayed: "My SIP dated june 3th,but my ordered which was not placed"; sip_stuck_processing: "still, my order is incomplete"
+  stage month_7_12: "In the last one year, I have been using this app"
+- reddit-1cm84ot [reddit|groww] 
+  f: pause_cancel_confusion: "Is it better to skip instalments for those months ? Or should I cancel this"; cashflow_pressure: "Due to some personal reasons I will not be able to pay that for a couple of months"
+  stage month_7_12: "I got a job a year back"
+- reddit-1f5i9dv [reddit|-] 
+  f: distributor_misselling: "because of regular plan instead of direct one"; agent_dependency_to_pause: "is it possible to pause it without the help of agent?"
+  stage month_7_12: "About an year ago my parents started SIP"
+- reddit-1fz8se4 [reddit|groww] 
+  f: returns_disappointment: "Right now it shows losses so she is worried"
+  stage month_7_12: "since the last one year"
+- reddit-1hb90ri [reddit|groww] 
+  f: delayed_nav: "Groww has been giving me NAV of T+1 Day"
+  stage month_7_12: "using Groww for my mutual fund investments from a year now"
+- reddit-1nxtis0 [reddit|zerodha_coin] 
+  f: cashflow_pressure: "life threw me a curveball family commitments"
+  stage month_7_12: "For the last 9 months"
+  churn sip_pause/sip: "take a 2-year break"
+- reddit-1t0d98s [reddit|-] 
+  f: returns_disappointment: "Returns lagging market"; distributor_misselling: "1 yr investing via advisor (regular plans)"
+  stage month_7_12: "1 yr investing via advisor"
+- reddit-1tdu8ow [reddit|-] 
+  f: returns_disappointment: "seem to be getting any signs of recovery"
+  stage month_7_12: "since May-2025, a year ago"
+- reddit-8n0dj7 [reddit|-] 
+  f: returns_disappointment: "I am currently in red"; market_doubt: "its very difficult to make money in the market right now"; fd_comparison: "I can get better returns in FD"; low_financial_knowledge: "I don't have a lot of knowledge on the market"
+  stage month_7_12: "I started doing SIPs in MFs since almost a year back"
+- reddit-dryrun-1wfvfty [reddit|zerodha_coin] 
+  f: returns_disappointment: "the returns are slightly underwhelming"
+  stage month_7_12: "investing for about 7 months now"
+- reddit-dryrun-1x3rnvl [reddit|-] 
+  f: 
+  stage month_7_12: "5Lakh in 10Months"
+- reddit-dryrun-1x3tjfr [reddit|zerodha_coin] 
+  f: market_doubt: "the market is bad bad now"
+  stage month_7_12: "One-ish year in"
+- reddit-dryrun-1x8xzcv [reddit|zerodha_coin] 
+  f: returns_disappointment: "till now only my total return is 750 RS only"
+  stage month_7_12: "its nearly 7 months"
+- tradingqna-45536 [tradingqna|-] 
+  f: regular_to_direct_tax: "I will be subjected to the Capital gain tax and exit load requirements"
+  stage month_7_12: "for almost a year now"
+  churn sip_stop/fund: "I now wish to stop investing in the regular plan"
+- tradingqna-92190 [tradingqna|-] 
+  f: lock_in_confusion: "i have to wait till lock-in 3 yr period right"
+  stage month_7_12: "From past 1 year"
+  churn sip_stop/fund: "thinking to stop Regular fund and invest the same amount in new direct fund"
+- youtube-Ugx0iMgVMgS60d5tdVh4AaABAg [youtube|-] 
+  f: returns_disappointment: "now it is 0.5% mine at one time it was minus 12%"; distrust_of_fund_industry: "these chutiyas claim 12,15 and 20% return"
+  stage month_7_12: "i started investing in SIP for a year now"
+- youtube-UgxK6AW-TyRhj-LfThh4AaABAg [youtube|-] 
+  f: returns_disappointment: "salbhar me 500 rs bahde wo bhi muahkil se"; fd_comparison: "Isse zyada to FD de deti"
+  stage month_7_12: "salbhar me"
+- youtube-UgxWZ-X7571BoJ4GEvt4AaABAg [youtube|-] 
+  f: returns_disappointment: "only 250 rupees hi increase hue h"; fd_comparison: "isse jyada to bank ki FD se mil jata h"
+  stage month_7_12: "10 months ho gye"
+- youtube-Ugxkii8nF3i0iAB5Zol4AaABAg [youtube|-] 
+  f: returns_disappointment: "Kaafi time se daily loss hi dikh raha h"; volatility_anxiety: "portfolio red dekh kr daily bht dukh hota h"
+  stage month_7_12: "Mene bhi 1 yr se SIP Krna start Kiya h"
+- reddit-1vtb4cq [reddit|-] 
+  f: returns_disappointment: "Is there any chance of recovering"
+  stage month_4_6: "started investing 6 months ago"
+- reddit-dryrun-1wd4uoa [reddit|icici_amc] 
+  f: returns_disappointment: "Xirr became -5%"
+  stage month_4_6: "5 months into investing"
+- youtube-UgwIRz-VhFJ6Htq9Kyp4AaABAg [youtube|-] 
+  f: returns_disappointment: "aaj uska return lagbhag -325rs"; market_doubt: "mandi aane wale hai"
+  stage month_4_6: "5month pehle"
+- youtube-UgwuabgjWac2Zw1wbGl4AaABAg [youtube|-] 
+  f: returns_disappointment: "6 month hone k bad bhi return negative m h 5%"
+  stage month_4_6: "6 month hone k bad"
+- playstore-angel_one-e9a9f057-98ea-4047-85c5-a63e4a9bf533 [play_store|angel_one] 
+  f: low_financial_knowledge: "kya hoga pata nhi"
+  stage start: "ab pahali bar is mai sip kar raha hu"
+- playstore-et_money-95ad3f87-e4cf-4528-bbba-284c14179f52 [play_store|etmoney] 
+  f: ekyc_failure: "neither app nor website allowing me to complete the eKYC"; support_failure: "Already raised a ticket, no response"; unclear_error_message: ""something went wrong try after some time". What does something mean ?"
+  stage start: "choosing ETMoney for my first mutual fund"
+- playstore-groww-92f72fda-ba3f-4f1c-8055-15fec25e5799 [play_store|groww] 
+  f: hidden_fee: "There are hidden charges on small, small services"; support_failure: "customer support has been slow and lacks proper knowledge"
+  stage start: "Started using Groww for mutual funds and stocks just 2 days ago"
+  churn realised_exit/platform: "Within just 2 days I've decided to close my account"
+- playstore-zerodha_coin-8e4674b9-4cdf-43ef-9cf8-f15fc95b1c35 [play_store|zerodha_coin] 
+  f: sip_creation_failed_with_error: "So no SIP created and the money is gone"; funds_apparently_missing: "today i see all the money is gone"; support_failure: "The support button in the profile section doesn't respond"; unclear_error_message: "an error message "holdings: Request failed (kitetrade-common)""
+  stage start: "I had added 3 SIPs"
+- playstore-zerodha_coin-96d2d802-86c9-4a52-8951-e5322aadc856 [play_store|zerodha_coin] 
+  f: unit_allocation_delay: "it takes more time in Zerodha Coin for your SIPs to kick off"; support_failure: "10-15 mins of waiting on call"
+  stage start: "start an investment and wait for process to complete"
+- playstore-zerodha_coin-b22c0b3b-3cc7-47f6-93ed-84caaa3f7205 [play_store|zerodha_coin] 
+  f: order_failed_no_reason: "after 5 days the order gets rejected , god only knows why"; support_failure: "Customer care is not able to give exact reason"; refund_delay: "Didn't get my refund also"
+  stage start: "I placed order for 6 mutual funds"
+- playstore-zerodha_coin-b3d4217c-d431-4b69-a902-274a1c966ddc [play_store|zerodha_coin] 
+  f: unit_allocation_delay: "Mutual Funds are taking lot of time to reflect after buying"; sip_not_executed: "sip that was supposed to execute today has not executed"
+  stage start: "I planned to move here"
+  churn intent_to_leave/platform: "now I will search for another platform or use mfcentral"
+
+=== Q6 off-app action n=24 | Counter({'contacted_support': 8, 'contacted_bank': 4, 'contacted_bank_and_support': 1, 'contacted_bank_and_support_manual_invest': 1, 'raised_query': 1, 'raised_issue_warned_others': 1, 'asked_support': 1, 'visited_branch': 1, 'raised_complaints': 1, 'contacting_support': 1, 'filed_scores_complaint': 1, 'raised_ticket_and_keeps_competitor': 1, 'raised_ticket': 1, 'refreshed_and_tried_support': 1})
+all actions (incl. forum): [(None, 341), ('asked_forum', 312), ('warned_others', 25), ('switched_platform', 12), ('asked_creator', 12), ('restarting_sip', 9), ('plans_to_switch', 9), ('contacted_support', 8)]
+- reddit-dryrun-1wtw6bu [reddit|zerodha_coin] contacted_bank_and_support
+  f: mandate_failure: "my mandates are constantly failing"; support_failure: "So, I'm stuck in the middle"
+- reddit-dryrun-1wtfugh [reddit|groww] contacted_bank_and_support_manual_invest
+  f: autopay_failed_despite_balance: "Every SIP AutoPay attempt is failing"; support_failure: "they couldn't resolve the issue"; manual_payment_path_gap: "I currently have to manually invest in my mutual funds every month"
+  churn intent_to_leave/platform: "I'm now considering transferring"
+- reddit-dryrun-1vtc0ns [reddit|cams] raised_query
+  f: folio_name_mismatch: "CAMS automatically prefilled my Investor Name"
+- reddit-1mpnz39 [reddit|kuvera] raised_issue_warned_others
+  f: silent_mandate_failure: "they are stopping my SIP due to three consecutive SIP transaction failure"; unexplained_debit: "every month 7000 is debited from my account on time"; support_failure: "they came back with an automated reply"; portfolio_value_mismatch: "The difference is of 21,000 rupees"
+  stage beyond_12: "since last 2 years"
+- reddit-1azpy53 [reddit|kuvera] asked_support
+  f: nri_mandate_unsupported: "Kuvera apparently doesn't support SIP mandate for NRIs"; sip_creation_failed_with_error: "through Kuvera but it is failing"
+- reddit-1oa6yyt [reddit|zerodha_coin] visited_branch
+  f: bank_account_setup_blocks_mandate: "Debit Card to activate UPI to set mandate for SIP"
+- reddit-8d4kbt [reddit|fundsindia] contacted_support
+  f: min_installment_lock: "they have told that you need to complete six installments"
+  churn intent_to_leave/platform: "I decided to stop my SIPs at FundsIndia"
+- reddit-7is3i3 [reddit|reliance_mf] contacted_support
+  f: offline_stop_process: "I was told to go visit their branch and fill a form"
+  churn sip_stop/sip: "I want to stop the SIP now"
+- reddit-1h6bre7 [reddit|groww] raised_complaints
+  f: investment_limit_error: "unable to invest one time or sip in any of the funds for amounts greater than ₹50,000"; support_failure: "Raised multiple complaints with Groww support but no help"
+- reddit-1qy5uvi [reddit|groww] contacted_support
+  f: order_failed_no_reason: "the first instalment payment failed, there is no specific reason mentioned"; support_failure: "have been constantly bounced around by the agents"; failed_payment_fear: "I am concerned that it will stop accepting fresh investments soon"
+- reddit-1nwtv4d [reddit|etmoney] contacted_bank
+  f: mandate_cancelled_without_consent: "mandate was cancelled forcefully even though it is valid till 2050"; sip_not_executed: "SIP transaction on 01 Oct 2025 failed due to cancelled/inactive mandate"
+- reddit-1i08n3w [reddit|-] contacted_bank
+  f: cannot_cancel_mandate: "Not able to cancel NACH mandate"; support_failure: "I am unable to contact my distributor"
+  churn sip_stop/sip: "I started my SIPs through a distributor and want to cancel them"
+- reddit-1wut1m2 [reddit|kotak_mf] contacted_support
+  f: refund_delay: "it seems my funds are stuck with the AMC"; support_failure: "all I got is an auto reply"
+- reddit-1vhvdd2 [reddit|groww] contacted_support
+  f: unclear_mandate_terms: "I'm confused about what happens with future Invesco instalments"; support_failure: "Groww support/chatbot is giving me conflicting advice"; forced_mandate_resetup_risk: "suggested cancelling my existing ₹5,000 mandate and creating a new one"
+  stage start: "I recently started the Invesco SIP"
+- reddit-1d1183w [reddit|tata_mf] contacting_support
+  f: active_sip_not_visible: "I dont see my active SIP in their online portal"; slow_portal: "their online portal is very slow and they dont have any mobile app"
+- reddit-1de02u6 [reddit|zerodha_coin] filed_scores_complaint
+  f: delayed_nav: "Payments made through Razorpay weren't being reported to the ICCL"
+- reddit-1cikn3s [reddit|kuvera] contacted_support
+  f: duplicate_sip_orders: "I woke up today to duplicate SIP orders purchased"; support_failure: "the support executive just reads from their script"; bank_penalty: "This has resulted in penalties"; unexplained_debit: "my bank balance was simply exhausted"
+- reddit-1pgjnj9 [reddit|-] contacted_bank
+  f: bank_penalty: "Rps 590 was deducted from my acc bcz of a bounced sip payment"; support_failure: "there was only an automated voice that was responding"
+- playstore-zerodha_coin-be4d21cf-0436-4533-8c02-03a45b4bed86 [play_store|zerodha_coin] raised_ticket_and_keeps_competitor
+  f: unexplained_debit: "money being deducted"; order_failed_no_reason: "They are not able to cite a proper reason"; refund_delay: "After a week of successful transaction and money being deducted, I am getting a refund"; support_failure: "a textbook reply on the ticket"; sip_not_invested_in_time: "Due to this I am not able to invest in SIP in time"
+  churn platform_switch/platform: "I will keep using the competitor Kuvera app"
+- tradingqna-351434 [tradingqna|-] contacted_support
+  f: fund_restriction: "they have stopped my SIP"; support_failure: "more than a week but no response from their end"
+- tradingqna-481002 [tradingqna|zerodha_coin] raised_ticket
+  f: unexplained_debit: "For a total of 5000 SIP, it has deducted 13500"; mandate_cancel_not_effective: "I cancelled the mandate in Coin, but still getting transaction SMS from the bank"
+- tradingqna-519243 [tradingqna|zerodha_coin] contacted_support
+  f: bank_account_setup_blocks_mandate: "Zerodha said issue with bank they are not allowing to create mandate"
+- tradingqna-403177 [tradingqna|-] contacted_bank
+  f: cannot_cancel_mandate: "able to find any Nach/SI/Auto debit"
+- playstore-zerodha_coin-8e4674b9-4cdf-43ef-9cf8-f15fc95b1c35 [play_store|zerodha_coin] refreshed_and_tried_support
+  f: sip_creation_failed_with_error: "So no SIP created and the money is gone"; funds_apparently_missing: "today i see all the money is gone"; support_failure: "The support button in the profile section doesn't respond"; unclear_error_message: "an error message "holdings: Request failed (kitetrade-common)""
+  stage start: "I had added 3 SIPs"
+
+=== Q8 stated profile n=80 | fields Counter({'age': 46, 'life_stage': 23, 'experience': 14, 'income': 9}) | stops 24
+by problem: EDU-1 26, OUT-1 12, OUT-2 6, REL-3 5, EDU-6 5, REL-1 4, REL-4 4, OUT-3 4, TRU-4 3, REL-5 2, TRU-3 2, TRU-2 2
+experience: relatively new to investing/SIPs | been investing for past 2 years | newbie in this arena | My parents only use fd | I'm new to investments | I am a beginner | Newbie here | I am still new to these things | I'm new to this | I am not very financially savvy | I am new to this | I'm new to MFs | I'm a new investor | I am a newbie
+life_stage: MBBS student investing some amount from my pocket money | I recently moved to Europe | Married, 1 child | I am from a very poor background | College student | NRI here | college student | Moved out of India for work | im a doctor | I'm an NRI living in the EU | for my child(less than 3 years old as of now) | living outside India since 2019 | I used to do SIP in college with my internship money | 22M Intern (15k/mo) | preparing for multiple competitive examinations | I'm an NRI | Im a college student | investing what I can from my pocket money | i am now sitting with my father in his shop helping | She is a student | both my wife and I are visually impaired users | switching to full-time freelancing 5 years ago | Mai army mei hu
+income: earning around 1.15 lakhs per month | Salary 110k | Income: ₹2.2L per month (net in hand) | Stable salary around 1Lakh | earn ₹1.23 lakh in hand each month | ₹1.3L income | I get 1.05lpm | My monthly income is around ₹70K | my salary is 1.5L/month in hand
+text mentions influencer/friend/colleague (not a tag): 2
+
+=== Q9 unmet needs n=44 | by problem GAP-1 30, REL-5 11, REL-4 3, EDU-2 2, EDU-5 2, REL-1 1, REL-3 1, EDU-3 1, REL-2 1, TRU-2 1, TRU-5 1
+- playstore-groww-44cf2908-a553-4a3b-8909-604f853d4b63 [play_store|groww] 
+  f: cluttered_sip_list: "If any SIP is cancelled or rejected, it should disappear after 30 days"
+- playstore-groww-66aca4e9-e96a-4e94-ada8-dd661f1f3d02 [play_store|groww] 
+  f: no_indefinite_pause: "Allow us to pause SIPs indefinitely"
+- playstore-paytm_money-3bfa42df-63ce-47b3-9877-16a59ae21378 [play_store|paytm_money] 
+  f: statement_confusion: "I have to estimate the remaining amount by subtracting the cancelled SIP amount"
+- playstore-zerodha_coin-07e93014-5342-4346-9259-3403f726c457 [play_store|zerodha_coin] 
+  f: no_reminder_feature: "Coin is not sending mobile notification when an SIP order is ready for payment"
+- playstore-zerodha_coin-0d269280-0657-4ff3-a44d-3f7c1bdde5c4 [play_store|zerodha_coin] 
+  f: payment_method_visibility: "a label to mark SIP associated with the mandate or the Payment Gateway"
+- playstore-zerodha_coin-52cf5617-d3c8-4bd4-82d4-e8791c04d4bd [play_store|zerodha_coin] 
+  f: mandate_aversion: "avoid mandatory bank mandates, which are risky and slow"
+- playstore-zerodha_coin-8a2531f7-ccdd-4213-bff3-79b3969d489e [play_store|zerodha_coin] 
+  f: missed_sip_no_reminder: "its sometimes easy to forget to place order"; no_reminder_feature: "pls have a set reminder option for payment on sips"
+- playstore-zerodha_coin-bf0a4abc-a75a-44fd-8f7e-c1416b88769a [play_store|zerodha_coin] 
+  f: manual_payment_path_gap: "once you get auto debit from bank facility...it would be revoulutionary"
+- playstore-zerodha_coin-c238809b-61a2-4cb5-9666-158e488fe9fd [play_store|zerodha_coin] 
+  f: lock_in_display_wrong: "it will just show all units are available for redemption which is not true"
+- playstore-zerodha_coin-e4449d7a-f7b8-42c0-b7ae-38cfd9915f70 [play_store|zerodha_coin] 
+  f: no_reminder_feature: "at least add a reminder feature in app"
+- tradingqna-116819 [tradingqna|zerodha_coin] 
+  f: missing_true_sip: "Real SIP for which lump sums are not accepted"
+- tradingqna-144478 [tradingqna|zerodha_coin] 
+  f: manual_payment_path_gap: "one has to manually transfer funds to coin"
+- tradingqna-173943 [tradingqna|zerodha_coin] 
+  f: manual_payment_path_gap: "direct debit from my Bank Account and true SIP"
+- tradingqna-371637 [tradingqna|zerodha_coin] 
+  f: manual_payment_path_gap: "we need this auto debit SIPs for mutual funds"
+
+=== problems present in all 4 channels: REL-1, TRU-4, EDU-2, REL-5, REL-3, EDU-3, TRU-3, REL-4, REL-2, TRU-2, TRU-5, TRU-1, OUT-1, GAP-1, EDU-5, TRU-6
+=== Q4 by problem: REL-3 56, TRU-4 9, REL-4 8, REL-1 7, EDU-1 4, TRU-3 4, TRU-1 4, REL-2 3, TRU-5 3, REL-5 2
+=== Q5 n=258 by problem: EDU-2 63, REL-3 56, EDU-3 55, REL-4 53, EDU-4 34, TRU-4 29, REL-1 17, TRU-3 15, TRU-2 15, EDU-5 15

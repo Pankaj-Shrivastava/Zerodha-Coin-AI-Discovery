@@ -107,5 +107,55 @@
    "cited_ids": ["reddit-1ewcu5e", "tradingqna-458258", "youtube-UgweDZFBVsrasH-XWjF4AaABAg", "playstore-zerodha_coin-284e67ee-4088-401a-ad4a-bd14796b7bb8", "playstore-zerodha_coin-4a174746-010a-4cea-8a3f-4c6754e98ab1", "reddit-1mxqg4g"],
    "invalidation": "Interviews show the custody format and platform safety play no part in whether investors continue."
   }
+ },
+ "batch_2_written": "2026-11-04",
+ "questions": {
+  "Q1": {
+   "gap_note": "No tag captures why people start an SIP or what they expected from it, so this question is not answered from the corpus. Posts about disappointing returns and comparisons with a fixed deposit hint at expectations, but that is not a direct answer. Interviews should ask about the decision to start and what the investor expected to happen."
+  },
+  "Q2": {
+   "status_cap": "partly_answered",
+   "status_cap_reason": "Each post describes a single moment; none follow the same investor over time, so change in behaviour cannot be observed directly.",
+   "summary": "Investors who say they are within their first year mostly describe one early moment rather than a change: a first instalment or order that fails or is stuck, confusion about mandate terms, or, from about six months in, returns below what they hoped for and comparisons with a fixed deposit. A few in this window state a pause because of family or cash needs.",
+   "cited_ids": ["playstore-zerodha_coin-8e4674b9-4cdf-43ef-9cf8-f15fc95b1c35", "playstore-zerodha_coin-b22c0b3b-3cc7-47f6-93ed-84caaa3f7205", "reddit-1vhvdd2", "youtube-UgxWZ-X7571BoJ4GEvt4AaABAg", "reddit-dryrun-1x8xzcv", "reddit-1nxtis0"],
+   "gap_note": "Seeing what changes needs the same investors followed across their first year, for example a diary study or account-level data; the corpus only has snapshots."
+  },
+  "Q3": {
+   "summary": "Two different things happen. Investors stop or pause their SIPs because money is tight, because they doubt the market or the fund industry, or because they learn they were sold regular plans; these posts rarely blame the platform. Separately, investors leave a platform, most often another app, after new fees or paywalls, heavy upselling, support that does not respond, or repeated failures. Posts about leaving Coin cite late units and failed orders, missing features and numbers that do not add up.",
+   "cited_ids": ["reddit-1auec3w", "reddit-1nxtis0", "tradingqna-415104", "youtube-Ugx5rDuMatVJUKt4JSp4AaABAg", "reddit-dryrun-1w1v388", "playstore-et_money-f234e1ba-76bc-4889-8c99-ef91957db498", "playstore-et_money-48e0099c-2211-4297-85ed-f4fedc0408e2", "playstore-et_money-902e9e92-1364-4cdb-bc1d-e4b7c1a9966e", "reddit-1eivny2", "playstore-zerodha_coin-b89ecf4d-3351-4b3b-8f2d-08697f938126", "playstore-zerodha_coin-ac96c7c9-e7c5-4a71-909d-1269f6f31e50"],
+   "gap_note": "These are reasons stated in public posts. They show which reasons exist, not how often each one leads to an actual stop among Coin investors."
+  },
+  "Q4": {
+   "status_cap": "partly_answered",
+   "status_cap_reason": "Posts show what investors check but never how often they check.",
+   "summary": "Investors check their portfolio value, the amount invested, their units and the next instalment date, and they post when these do not match what they paid or when holdings seem to disappear.",
+   "cited_ids": ["reddit-1q3iubg", "reddit-1fjurp1", "playstore-zerodha_coin-8e4674b9-4cdf-43ef-9cf8-f15fc95b1c35", "youtube-UgzqschJRHqcSlmf3Gp4AaABAg"],
+   "gap_note": "How often investors check, and whether checking more often goes with stopping, is not visible in posts; it needs app usage data or a diary study."
+  },
+  "Q5": {
+   "summary": "Inside the app, investors are most often confused by what pause, skip, cancel and delete will do, by numbers that do not match what they paid, by mandate terms and dates, by errors that give no reason, and by the difference between an AMC SIP and an app SIP.",
+   "cited_ids": ["tradingqna-270207", "reddit-1q3iubg", "youtube-Ugwqc3BOxdu2aunAMYh4AaABAg", "playstore-zerodha_coin-d514130c-4e7e-4127-ba8e-92edbe3a5f25", "reddit-1hetw1m"]
+  },
+  "Q6": {
+   "status_cap": "partly_answered",
+   "status_cap_reason": "The corpus was collected from forums and video comments, so asking the community is built into the data and cannot be counted as a finding; only actions beyond posting are counted, and those are few.",
+   "summary": "Beyond asking online, investors contact the platform's support, call or visit their bank, or complain to the market regulator. Several describe being passed between the bank, the platform and the fund house, or getting only automated replies, and some end up investing by hand while the problem stays open.",
+   "cited_ids": ["reddit-dryrun-1wtw6bu", "reddit-dryrun-1wtfugh", "reddit-1de02u6", "reddit-1oa6yyt", "reddit-1wut1m2", "reddit-1pgjnj9"],
+   "gap_note": "Investors who solved the problem quietly, or gave up without posting, are not visible. Interviews should ask where they went first when unsure and what finally resolved it."
+  },
+  "Q7": {
+   "gap_note": "Public posts cannot compare investors who continue with those who stop: there is no cohort or account data, and people who quietly stop rarely post. A few posts describe continuing through a loss, but that is not a comparison. This needs interviews with both groups or Coin account data."
+  },
+  "Q8": {
+   "status_cap": "partly_answered",
+   "status_cap_reason": "Few posts state a profile, and income stability, source of money and influencers are almost never stated, so segments cannot be compared.",
+   "summary": "Where investors say who they are, they describe themselves as new to investing, as students putting in pocket or internship money, as salaried earners, or as NRIs. Posts from students are mostly about disappointing returns or money pressure, and NRIs describe mandates or apps that do not support them.",
+   "cited_ids": ["reddit-dryrun-1vzs60y", "reddit-1snsc3u", "reddit-1r4pdi5", "reddit-1azpy53", "reddit-1cp7hom", "reddit-1gdszzq"],
+   "gap_note": "Comparing segments needs the segment asked directly, for example a short screener in interviews covering income stability, source of money and who influenced the decision to start."
+  },
+  "Q9": {
+   "summary": "The same asks recur, mostly in Play Store reviews and TradingQnA: automatic debit from the bank and a true SIP on Coin, reminders before a payment is due, a pause longer than a single skip, and control over an SIP after starting it, such as changing the amount or date, switching funds or withdrawing systematically.",
+   "cited_ids": ["tradingqna-173943", "tradingqna-371637", "playstore-zerodha_coin-e4449d7a-f7b8-42c0-b7ae-38cfd9915f70", "playstore-groww-66aca4e9-e96a-4e94-ada8-dd661f1f3d02", "tradingqna-309803", "playstore-zerodha_coin-4b9286c4-46a7-4a35-870f-9ee71763ee2b"]
+  }
  }
 }

@@ -22,7 +22,8 @@ Rules (see docs/ui_plan_v2.md, docs/evals.md §12, §17):
   channel first, skip posts already quoted by a higher-ranked problem when an alternative exists, then fill.
   Bias cap: quotes stating drop-off (or money incurred) are at most round(3 x their share of the problem's posts),
   so quotes never make a problem look more severe than its posts do. Order within that: insight, quotes of
-  80+ characters before shorter ones, recency, shorter, id.
+  80+ characters before shorter ones, recency, shorter, id. Privacy: posts where the author states their own
+  name are never quoted. Question quotes must contain the span that answers the question (Q_ANCHOR).
   Text: the full verbatim when <= 320 characters, else the sentences around the evidence span (excerpt: true).
 - Self-checks before writing: recomputed counts equal, quotes are exact substrings of the raw record,
   every quote id is in its problem's ids. Any failure aborts without writing.
@@ -258,18 +259,24 @@ def main():
         pr['rank'] = i
 
     # ---------- quotes ----------
+    # privacy: never quote a post in which the author states their own name (the dashboard may be shared widely)
+    SELF_NAME = re.compile(r"\bmy name is\b|मेरा नाम", re.I)
     flags_bad = lambda k: (corpus[k]['flags'].get('near_duplicate_of') or corpus[k]['flags'].get('possible_rating_text_mismatch')
-                           or corpus[k]['flags'].get('has_redaction'))
+                           or corpus[k]['flags'].get('has_redaction') or SELF_NAME.search(corpus[k]['verbatim_text']))
     used = set()
     quotes = {}
-    for pr in problems:
+    is_stop = lambda k: tg(k)['churn_scope'] in CHURN_SCOPES
+    is_money = lambda k: tg(k)['cost_status'] in MONEY
+
+    def pick_quotes(ids, spans_of):
+        """Rule-based 0-3 quotes from ids; spans_of(k) gives the exact spans that may anchor the quote (the quote
+        must contain one). Caps keep drop-off / money quotes at their share of ids."""
         cands = []
-        for k in pr['all_ids']:
+        for k in ids:
             if flags_bad(k):
                 continue
             text = norm(corpus[k]['verbatim_text'])
-            spans = [tg(k)['evidence']['friction'].get(f) for f in post_labels[pr['id']][k]]
-            spans = [s for s in spans if s and s in text]
+            spans = [s for s in spans_of(k) if s and s in text]
             if not spans:
                 continue
             q, is_ex = excerpt(text, spans[0])
@@ -280,12 +287,9 @@ def main():
                    RECENCY_RANK.get(t.get('recency') or corpus[k]['recency'], 3), len(q), k)
             cands.append((key, k, q, is_ex, spans[0]))
         cands.sort()
-        # proportional caps: quotes stating drop-off / money may not exceed their share of the problem's posts
-        n = pr['count']
-        cap_stop = round(3 * pr['stated_dropoff']['investor'] / n) if n else 0
-        cap_money = round(3 * pr['money']['count'] / n) if n else 0
-        is_stop = lambda k: tg(k)['churn_scope'] in CHURN_SCOPES
-        is_money = lambda k: tg(k)['cost_status'] in MONEY
+        n = len(ids)
+        cap_stop = round(3 * sum(map(is_stop, ids)) / n) if n else 0
+        cap_money = round(3 * sum(map(is_money, ids)) / n) if n else 0
         pick, seen_ch = [], set()
         for allow_used, one_per_channel in ((False, True), (True, True), (False, False), (True, False)):
             for key, k, q, is_ex, span in cands:
@@ -299,7 +303,6 @@ def main():
                     continue
                 pick.append({'id': k, 'text': q, 'excerpt': is_ex, 'evidence_span': span})
                 seen_ch.add(ch(k))
-        pr['quote_caps'] = {'stated_dropoff': cap_stop, 'money': cap_money}
         for x in pick:
             used.add(x['id'])
             quotes[x['id']] = {'id': x['id'], 'channel': ch(x['id']), 'source_url': corpus[x['id']]['source_url'],
@@ -309,8 +312,81 @@ def main():
                                                 'tradingqna': 'TradingQnA user', 'youtube': 'YouTube commenter'}[ch(x['id'])],
                                'platform_subject': tg(x['id'])['platform_subject'], 'language': tg(x['id']).get('language'),
                                'truncated_at_source': bool(corpus[x['id']]['flags'].get('truncated'))}
-        pr['quotes'] = [{'id': x['id'], 'text': x['text'], 'excerpt': x['excerpt'], 'evidence_span': x['evidence_span']} for x in pick]
-        pr['quote_candidates'] = len(cands)
+        return pick, {'stated_dropoff': cap_stop, 'money': cap_money}, len(cands)
+
+    fspans = lambda k, labels=None: [s for l, s in tg(k)['evidence'].get('friction', {}).items() if labels is None or bare(l) in labels]
+    for pr in problems:
+        pick, caps, nc = pick_quotes(pr['all_ids'], lambda k, pid=pr['id']: [tg(k)['evidence']['friction'].get(f) for f in post_labels[pid][k]])
+        pr['quotes'], pr['quote_caps'], pr['quote_candidates'] = pick, caps, nc
+
+    # ---------- the 9 discovery questions (evidence by tag rule; status by count, capped down only with a reason) ----------
+    pid_of = {p['id']: set(p['all_ids']) for p in problems}
+    union = lambda *ps: set().union(*(pid_of[p] for p in ps))
+    has_label = lambda k, names: bool({bare(f) for f in tg(k)['friction']} & names)
+    EARLY = {'start', 'month_1_3', 'month_4_6', 'month_7_12'}
+    OFF_APP = re.compile(r'contact|support|bank|branch|scores|complaint|ticket|query|raised', re.I)
+    QDEF = [
+        ('Q1', 'Why do people start a SIP, and what do they expect to happen?', lambda: set(),
+         'no tag captures why people start; motives were not tagged'),
+        ('Q2', 'What changes in their behaviour in the months after starting?',
+         lambda: {k for k in C if tg(k)['journey_stage'] in EARLY and tg(k)['evidence'].get('journey_stage')},
+         'posts that state a tenure of up to twelve months'),
+        ('Q3', 'What leads investors to pause, reduce or stop a SIP?', lambda: {k for k in C if is_stop(k)},
+         'posts stating a stop, pause, intent to leave or exit at SIP or platform scope'),
+        ('Q4', 'What do investors check, and how often, once they have started?',
+         lambda: pid_of['REL-3'] | {k for k in C if has_label(k, {'compulsive_checking'})},
+         'posts in REL-3 (what the app shows) plus posts about compulsive checking'),
+        ('Q5', 'What confuses or worries them inside the app?', lambda: union('EDU-2', 'EDU-3', 'EDU-4', 'EDU-5', 'REL-3', 'REL-4'),
+         'posts in EDU-2 to EDU-5, REL-3 and REL-4'),
+        ('Q6', 'What do they do outside the app when they feel unsure?',
+         lambda: {k for k in C if OFF_APP.search(tg(k).get('user_action_stated') or '')},
+         'posts stating an action beyond posting: contacting support, the bank, a branch or the regulator'),
+        ('Q7', 'What separates investors who continue from those who quietly drop off?', lambda: set(),
+         'no cohort data: the corpus cannot compare investors who continue with those who drop off'),
+        ('Q8', 'How do these patterns differ across user segments (income stability, age, source of money, who influenced them)?',
+         lambda: {k for k in C if tg(k).get('stated_profile')}, 'posts that state an age, life stage, experience or income'),
+        ('Q9', 'What unmet needs emerge consistently across conversations?',
+         lambda: pid_of['GAP-1'] | {k for k in C if tg(k)['verbatim_type'] == 'feature_request'},
+         'posts in GAP-1 plus all feature requests'),
+    ]
+    plabels = {p['id']: set(p['labels']) for p in tm['problems']}
+    plabels_of = lambda *ps: set().union(*(plabels[p] for p in ps))
+    Q_ANCHOR = {  # which span answers each question: quotes must contain it
+        'Q2': lambda k: [tg(k)['evidence'].get('journey_stage')],
+        'Q3': lambda k: [tg(k)['evidence'].get('stated_churn')],
+        'Q4': lambda k: fspans(k, plabels['REL-3'] | {'compulsive_checking'}),
+        'Q5': lambda k: fspans(k, plabels_of('EDU-2', 'EDU-3', 'EDU-4', 'EDU-5', 'REL-3', 'REL-4')),
+        'Q6': lambda k: fspans(k, {'support_failure', 'cannot_cancel_mandate', 'bank_account_setup_blocks_mandate', 'offline_stop_process'}) or fspans(k),
+        'Q8': lambda k: list((tg(k).get('stated_profile') or {}).values()),
+        'Q9': lambda k: fspans(k, plabels_of('GAP-1', 'REL-5')) or fspans(k),
+    }
+    q_spans = lambda q, k: Q_ANCHOR.get(q, fspans)(k)
+    STATUS = ['not_answered', 'partly_answered', 'answered']
+    qnar = load_json('data', 'processed', 'narratives.json').get('questions', {}) if os.path.exists(P('data', 'processed', 'narratives.json')) else {}
+    questions = []
+    for qid, text, rule, crit in QDEF:
+        ids = rule()
+        n = len(ids)
+        by_count = 'answered' if n >= 5 else 'partly_answered' if n >= 3 else 'not_answered'
+        qn = qnar.get(qid, {})
+        cap = qn.get('status_cap')
+        status = by_count if not cap or STATUS.index(cap) >= STATUS.index(by_count) else cap
+        prob_counts = Counter(p for p, s in pid_of.items() for k in ids if k in s)
+        pick, caps, nc = (pick_quotes(sorted(ids), lambda k, q=qid: q_spans(q, k)) if status != 'not_answered' else ([], {}, 0))
+        questions.append({
+            'id': qid, 'question': text, 'criteria': crit, 'evidence_count': n, 'denominator': N,
+            'status_by_count': by_count, 'status': status,
+            'status_cap_reason': qn.get('status_cap_reason') if status != by_count else None,
+            'channel_split': {c: sum(1 for k in ids if ch(k) == c) for c in CHANNELS},
+            'by_problem': dict(prob_counts.most_common(8)),
+            'by_stage': {s: sum(1 for k in ids if tg(k)['journey_stage'] == s) for s in STAGES} if qid == 'Q2' else None,
+            'by_action': dict(Counter(tg(k)['user_action_stated'] for k in ids).most_common(10)) if qid == 'Q6' else None,
+            'by_profile_field': dict(Counter(f for k in ids for f in tg(k)['stated_profile'])) if qid == 'Q8' else None,
+            'quotes': pick, 'quote_caps': caps, 'quote_candidates': nc,
+            'summary': ({'generated': True, 'text': qn['summary'], 'cited_ids': qn['cited_ids']} if qn.get('summary') else None),
+            'gap_note': qn.get('gap_note'), 'research_link': f'track-{qid}',
+            'all_ids': sorted(ids),
+        })
 
     # ---------- switches and cause split ----------
     sw = defaultdict(list)
@@ -326,7 +402,7 @@ def main():
         'schema_version': '2.0', 'step': '4b (numbers and quotes; narratives pending 4c)',
         'rules': __doc__.split('Rules')[1].split('Usage:')[0].strip(),
         'groups': tm['groups'],
-        'corpus_summary': corpus_summary, 'kpis': kpis, 'problems': problems,
+        'corpus_summary': corpus_summary, 'kpis': kpis, 'problems': problems, 'questions': questions,
         'switch_flows': switch_flows,
         'switch_summary': {'from_coin': sum(x['count'] for x in switch_flows if x['from'] == 'zerodha_coin'),
                            'to_coin': sum(x['count'] for x in switch_flows if x['to'] == 'zerodha_coin')},
@@ -338,6 +414,30 @@ def main():
 
     # ---------- narratives (Step 4c, generated text) ----------
     errs = []
+
+    def check_text(where, txt):
+        if re.search(r'[0-9०-९%]', txt):
+            errs.append(f'{where}: contains a digit or % (numbers must come from the manifest)')
+        if re.search(r'["“”‘’]|(?<![A-Za-z])\'|\'(?![A-Za-z])', txt):
+            errs.append(f'{where}: contains quotation marks (no paraphrased quotes in generated text)')
+
+    for q in questions:
+        if q['summary']:
+            check_text(f'{q["id"]} summary', q['summary']['text'])
+            cited = q['summary']['cited_ids']
+            if len(set(cited)) < 3:
+                errs.append(f'{q["id"]}: summary cites fewer than 3 posts')
+            bad = [c for c in cited if c not in q['all_ids']]
+            if bad:
+                errs.append(f'{q["id"]}: cited ids not in this question\'s evidence: {bad}')
+        elif q['status'] != 'not_answered':
+            errs.append(f'{q["id"]}: has evidence but no summary')
+        if q['gap_note']:
+            check_text(f'{q["id"]} gap_note', q['gap_note'])
+        elif q['status'] != 'answered':
+            errs.append(f'{q["id"]}: not fully answered but has no gap note')
+        if q['status'] != q['status_by_count'] and not q['status_cap_reason']:
+            errs.append(f'{q["id"]}: status lowered without a reason')
     npath = P('data', 'processed', 'narratives.json')
     if os.path.exists(npath):
         nar = load_json('data', 'processed', 'narratives.json').get('problems', {})
@@ -375,11 +475,15 @@ def main():
         for q in pr['quotes']:
             if q['id'] not in pr['all_ids']:
                 errs.append(f'{pr["id"]}: quote {q["id"]} not in problem')
+    for q in questions:
+        for x in q['quotes']:
+            if x['id'] not in q['all_ids']:
+                errs.append(f'{q["id"]}: quote {x["id"]} not in question evidence')
     raw = {}
     for c, fn in RAW_FILES.items():
         for r in load_json('data', 'raw', fn):
             raw[r['id']] = r.get('verbatim_text') or r.get('review_text') or ''
-    for pr in problems:
+    for pr in problems + questions:
         for q in pr['quotes']:
             if q['id'] not in raw:
                 errs.append(f'quote {q["id"]}: not found in raw files')
@@ -392,6 +496,8 @@ def main():
                 errs.append(f'quote {q["id"]}: evidence span not inside the quoted text')
             if not q['excerpt'] and q['text'] != norm(raw[q['id']]):
                 errs.append(f'quote {q["id"]}: marked full but is not the full verbatim')
+    for q in questions:
+        print(f"{q['id']} n={q['evidence_count']} by_count={q['status_by_count']} status={q['status']} ch={q['channel_split']}")
     if errs:
         print('SELF-CHECK FAILED; manifest not written')
         for e in errs:

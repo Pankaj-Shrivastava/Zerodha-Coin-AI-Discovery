@@ -1,7 +1,7 @@
 {
  "schema_version": "2.0",
  "step": "4b (numbers and quotes; narratives pending 4c)",
- "rules": "(see docs/ui_plan_v2.md, docs/evals.md §12, §17):\n- Base N: direct + experienced + not needs_review (manifest_base.counted); gold records use human tags.\n- Problem membership: a post belongs to a problem if any of its friction labels maps to it (theme_map.json).\n- Stated drop-off: stated_churn != none_stated; scope fund is reported apart and never counted as investor churn.\n  Platform-scope churn on a non-Coin platform is 'leaving a competitor'.\n- Money: cost_status incurred / incurred_temporary; amounts only as the stated span.\n- Stage: only posts with a stated stage and a stage span; strip shown when >=5 such posts.\n- Fix type (per post, from cause_type): structural_ux -> product, behavioral -> education,\n  external_third_party / deliberate_strategy_shift -> external, mixed / unclear -> unclear.\n- Confidence (§12, updated 2026-11-04): High >=5 posts, >=2 channels, >=3 human-confirmed; Medium >=5 and >=2 channels;\n  Low 3-4 posts or a single channel; Insufficient <3.\n- Channel flag: one channel > 70% of a problem's posts.\n- Quotes (0-3 per problem): eligible posts carry an evidence span for a label in the problem and are not\n  near-duplicates, rating-text mismatches or redacted. Order: stated SIP/platform drop-off, money incurred,\n  insight high > medium > low, recency recent > aging > old > unknown, shorter text, id. Pick at most one per\n  channel first, skip posts already quoted by a higher-ranked problem when an alternative exists, then fill.\n  Bias cap: quotes stating drop-off (or money incurred) are at most round(3 x their share of the problem's posts),\n  so quotes never make a problem look more severe than its posts do. Order within that: insight, quotes of\n  80+ characters before shorter ones, recency, shorter, id.\n  Text: the full verbatim when <= 320 characters, else the sentences around the evidence span (excerpt: true).\n- Self-checks before writing: recomputed counts equal, quotes are exact substrings of the raw record,\n  every quote id is in its problem's ids. Any failure aborts without writing.",
+ "rules": "(see docs/ui_plan_v2.md, docs/evals.md §12, §17):\n- Base N: direct + experienced + not needs_review (manifest_base.counted); gold records use human tags.\n- Problem membership: a post belongs to a problem if any of its friction labels maps to it (theme_map.json).\n- Stated drop-off: stated_churn != none_stated; scope fund is reported apart and never counted as investor churn.\n  Platform-scope churn on a non-Coin platform is 'leaving a competitor'.\n- Money: cost_status incurred / incurred_temporary; amounts only as the stated span.\n- Stage: only posts with a stated stage and a stage span; strip shown when >=5 such posts.\n- Fix type (per post, from cause_type): structural_ux -> product, behavioral -> education,\n  external_third_party / deliberate_strategy_shift -> external, mixed / unclear -> unclear.\n- Confidence (§12, updated 2026-11-04): High >=5 posts, >=2 channels, >=3 human-confirmed; Medium >=5 and >=2 channels;\n  Low 3-4 posts or a single channel; Insufficient <3.\n- Channel flag: one channel > 70% of a problem's posts.\n- Quotes (0-3 per problem): eligible posts carry an evidence span for a label in the problem and are not\n  near-duplicates, rating-text mismatches or redacted. Order: stated SIP/platform drop-off, money incurred,\n  insight high > medium > low, recency recent > aging > old > unknown, shorter text, id. Pick at most one per\n  channel first, skip posts already quoted by a higher-ranked problem when an alternative exists, then fill.\n  Bias cap: quotes stating drop-off (or money incurred) are at most round(3 x their share of the problem's posts),\n  so quotes never make a problem look more severe than its posts do. Order within that: insight, quotes of\n  80+ characters before shorter ones, recency, shorter, id. Privacy: posts where the author states their own\n  name are never quoted. Question quotes must contain the span that answers the question (Q_ANCHOR).\n  Text: the full verbatim when <= 320 characters, else the sentences around the evidence span (excerpt: true).\n- Self-checks before writing: recomputed counts equal, quotes are exact substrings of the raw record,\n  every quote id is in its problem's ids. Any failure aborts without writing.",
  "groups": {
   "reliability": "Reliability: the SIP and the app work as expected",
   "trust": "Trust: my money is safe and nothing happens without my knowledge",
@@ -560,32 +560,40 @@
      "count": 19,
      "facts": [
       {
-       "id": "reddit-1lgva0e",
-       "text": "Now,i m 21"
+       "id": "reddit-dryrun-1vzs60y",
+       "text": "I'm (21)"
       },
       {
-       "id": "reddit-dryrun-1v8roca",
-       "text": "I'm 22"
+       "id": "reddit-1q9wbbj",
+       "text": "Age - 25 yo"
       },
       {
        "id": "reddit-dryrun-1w47pl1",
        "text": "I am 23 earning below avg"
       },
       {
-       "id": "reddit-1p56a6e",
-       "text": "32 M"
+       "id": "reddit-1pxqdj9",
+       "text": "I am 28 married with two kids under 2 years"
+      },
+      {
+       "id": "reddit-1ptuyd8",
+       "text": "I am a 29"
+      },
+      {
+       "id": "reddit-1s7ztsm",
+       "text": "Age: 27"
+      },
+      {
+       "id": "reddit-dryrun-1v8roca",
+       "text": "I'm 22"
+      },
+      {
+       "id": "reddit-dryrun-1wfvfty",
+       "text": "Im 22"
       },
       {
        "id": "reddit-dryrun-1wgnrvz",
        "text": "Portfolio review 29Y"
-      },
-      {
-       "id": "reddit-1tj7r18",
-       "text": "Age: 29"
-      },
-      {
-       "id": "reddit-dryrun-1vzs60y",
-       "text": "I'm (21)"
       },
       {
        "id": "reddit-1t0d98s",
@@ -596,8 +604,24 @@
        "text": "Age: 38 years"
       },
       {
+       "id": "reddit-1q9ro80",
+       "text": "27M, Debt free"
+      },
+      {
+       "id": "reddit-1tj7r18",
+       "text": "Age: 29"
+      },
+      {
+       "id": "reddit-dryrun-1wvpw1n",
+       "text": "I am 21 and I started investing at the age of 19"
+      },
+      {
        "id": "reddit-dryrun-1wdg52k",
        "text": "I am currently 30 years old"
+      },
+      {
+       "id": "reddit-1p56a6e",
+       "text": "32 M"
       },
       {
        "id": "reddit-1ko3rzy",
@@ -608,32 +632,8 @@
        "text": "My age is 27"
       },
       {
-       "id": "reddit-1s7ztsm",
-       "text": "Age: 27"
-      },
-      {
-       "id": "reddit-dryrun-1wvpw1n",
-       "text": "I am 21 and I started investing at the age of 19"
-      },
-      {
-       "id": "reddit-1ptuyd8",
-       "text": "I am a 29"
-      },
-      {
-       "id": "reddit-1q9wbbj",
-       "text": "Age - 25 yo"
-      },
-      {
-       "id": "reddit-dryrun-1wfvfty",
-       "text": "Im 22"
-      },
-      {
-       "id": "reddit-1q9ro80",
-       "text": "27M, Debt free"
-      },
-      {
-       "id": "reddit-1pxqdj9",
-       "text": "I am 28 married with two kids under 2 years"
+       "id": "reddit-1lgva0e",
+       "text": "Now,i m 21"
       }
      ]
     },
@@ -641,20 +641,20 @@
      "count": 4,
      "facts": [
       {
-       "id": "reddit-1gdszzq",
-       "text": "I'm a new investor"
-      },
-      {
        "id": "reddit-dryrun-1w5at5y",
        "text": "newbie in this arena"
       },
       {
-       "id": "reddit-dryrun-1xd27xx",
-       "text": "relatively new to investing/SIPs"
-      },
-      {
        "id": "reddit-dryrun-1vasakw",
        "text": "My parents only use fd"
+      },
+      {
+       "id": "reddit-1gdszzq",
+       "text": "I'm a new investor"
+      },
+      {
+       "id": "reddit-dryrun-1xd27xx",
+       "text": "relatively new to investing/SIPs"
       }
      ]
     },
@@ -662,26 +662,22 @@
      "count": 3,
      "facts": [
       {
+       "id": "reddit-1pxqdj9",
+       "text": "my salary is 1.5L/month in hand"
+      },
+      {
        "id": "reddit-dryrun-1wgnrvz",
        "text": "Stable salary around 1Lakh"
       },
       {
        "id": "reddit-1t0d98s",
        "text": "₹1.3L income"
-      },
-      {
-       "id": "reddit-1pxqdj9",
-       "text": "my salary is 1.5L/month in hand"
       }
      ]
     },
     "life_stage": {
      "count": 5,
      "facts": [
-      {
-       "id": "reddit-1lgva0e",
-       "text": "i am now sitting with my father in his shop helping"
-      },
       {
        "id": "reddit-1snsc3u",
        "text": "investing what I can from my pocket money"
@@ -697,6 +693,10 @@
       {
        "id": "reddit-dryrun-1wvtkds",
        "text": "I am from a very poor background"
+      },
+      {
+       "id": "reddit-1lgva0e",
+       "text": "i am now sitting with my father in his shop helping"
       }
      ]
     }
@@ -714,20 +714,20 @@
     "distrust_of_fund_industry": 7,
     "market_timing_stop": 5,
     "volatility_anxiety": 4,
-    "compulsive_checking": 2,
-    "over_diversification": 2,
     "market_timing_regret": 2,
-    "early_loss_scare": 1,
-    "influencer_driven_stop": 1,
-    "pause_urge": 1,
-    "exit_timing_uncertainty": 1,
-    "panic_exit_regret": 1,
-    "early_withdrawal_regret": 1,
-    "chasing_past_returns": 1,
-    "gold_fomo": 1,
-    "disengagement": 1,
+    "over_diversification": 2,
+    "compulsive_checking": 2,
     "ipo_chasing": 1,
-    "sip_too_slow": 1
+    "pause_urge": 1,
+    "disengagement": 1,
+    "chasing_past_returns": 1,
+    "sip_too_slow": 1,
+    "exit_timing_uncertainty": 1,
+    "influencer_driven_stop": 1,
+    "panic_exit_regret": 1,
+    "gold_fomo": 1,
+    "early_withdrawal_regret": 1,
+    "early_loss_scare": 1
    },
    "human_confirmed": 7,
    "confidence": "high",
@@ -871,10 +871,6 @@
     "youtube-UgzhirBgdrT8oE1df8N4AaABAg"
    ],
    "rank": 1,
-   "quote_caps": {
-    "stated_dropoff": 1,
-    "money": 0
-   },
    "quotes": [
     {
      "id": "reddit-1psrv0o",
@@ -895,6 +891,10 @@
      "evidence_span": "it is not performing well in past year"
     }
    ],
+   "quote_caps": {
+    "stated_dropoff": 1,
+    "money": 0
+   },
    "quote_candidates": 136,
    "narrative": {
     "generated": true,
@@ -1059,12 +1059,12 @@
      "count": 3,
      "facts": [
       {
-       "id": "reddit-1cp7hom",
-       "text": "I'm an NRI"
-      },
-      {
        "id": "reddit-1azpy53",
        "text": "I'm an NRI living in the EU"
+      },
+      {
+       "id": "reddit-1cp7hom",
+       "text": "I'm an NRI"
       },
       {
        "id": "reddit-1uwfj72",
@@ -1091,26 +1091,26 @@
     "mandate_activation_delay": 4,
     "silent_mandate_failure": 2,
     "payment_gateway_failure": 2,
-    "sip_stopped_without_notice": 1,
-    "sip_terminated_unexplained": 1,
-    "sip_order_delayed": 1,
-    "mandate_not_effective": 1,
-    "payment_friction": 1,
     "erroneous_sip_cancellation_email": 1,
-    "tpv_pending_rejection": 1,
+    "payment_friction": 1,
+    "sip_order_delayed": 1,
+    "sip_terminated_unexplained": 1,
+    "missed_installment": 1,
+    "sip_payment_error": 1,
+    "unexplained_failure": 1,
+    "aof_rejected_after_debit": 1,
     "auto_pause_unexplained": 1,
     "payment_stuck_pending": 1,
-    "sip_payment_error": 1,
-    "aof_rejected_after_debit": 1,
-    "sip_rejected_blacklisted_agent": 1,
-    "auto_payment_refunded": 1,
-    "missed_installment": 1,
-    "holiday_sip_execution": 1,
     "sip_not_invested_in_time": 1,
-    "unexplained_failure": 1,
     "sip_cancelled_during_platform_move": 1,
+    "units_bounced_kyc_dpid": 1,
+    "holiday_sip_execution": 1,
+    "auto_payment_refunded": 1,
+    "mandate_not_effective": 1,
+    "sip_stopped_without_notice": 1,
+    "tpv_pending_rejection": 1,
     "conditional_order_failure": 1,
-    "units_bounced_kyc_dpid": 1
+    "sip_rejected_blacklisted_agent": 1
    },
    "human_confirmed": 12,
    "confidence": "high",
@@ -1219,10 +1219,6 @@
     "youtube-Ugzlh5inE0PIVeGarwN4AaABAg"
    ],
    "rank": 2,
-   "quote_caps": {
-    "stated_dropoff": 0,
-    "money": 0
-   },
    "quotes": [
     {
      "id": "youtube-UgzLqlTirQvEYGa5DlF4AaABAg.ADi8KkwBhL_AE-IlT4Lhuc",
@@ -1243,6 +1239,10 @@
      "evidence_span": "I didn't pause these SIPs"
     }
    ],
+   "quote_caps": {
+    "stated_dropoff": 0,
+    "money": 0
+   },
    "quote_candidates": 96,
    "narrative": {
     "generated": true,
@@ -1294,8 +1294,8 @@
     },
     "by_type": {
      "intent_to_leave": 7,
-     "realised_exit": 3,
      "sip_stop": 3,
+     "realised_exit": 3,
      "platform_switch": 1
     },
     "leaving_coin": 1,
@@ -1476,10 +1476,6 @@
     "youtube-UgwIVHjutTvVQ2-U2KR4AaABAg"
    ],
    "rank": 3,
-   "quote_caps": {
-    "stated_dropoff": 1,
-    "money": 0
-   },
    "quotes": [
     {
      "id": "playstore-paytm_money-b66075a6-8b28-4a98-8403-485b10dedf45",
@@ -1500,6 +1496,10 @@
      "evidence_span": "their customer service"
     }
    ],
+   "quote_caps": {
+    "stated_dropoff": 1,
+    "money": 0
+   },
    "quote_candidates": 65,
    "narrative": {
     "generated": true,
@@ -1639,20 +1639,20 @@
     "restart_unclear": 3,
     "exit_procedure_uncertainty": 3,
     "stop_notice_period": 2,
-    "slow_sip_cancellation": 1,
-    "no_bulk_cancel": 1,
-    "transfer_sip_continuity": 1,
-    "no_indefinite_pause": 1,
-    "agent_dependency_to_pause": 1,
-    "sip_stop_required_for_transfer": 1,
     "accidental_sip_deletion": 1,
     "unclear_delete_meaning": 1,
-    "offline_pause_process": 1,
-    "folio_reuse_uncertainty": 1,
-    "no_auto_resume": 1,
-    "skip_not_working": 1,
     "cannot_resume_paused_sip": 1,
-    "sip_edit_skipped_installment": 1
+    "no_bulk_cancel": 1,
+    "slow_sip_cancellation": 1,
+    "no_auto_resume": 1,
+    "agent_dependency_to_pause": 1,
+    "folio_reuse_uncertainty": 1,
+    "sip_edit_skipped_installment": 1,
+    "offline_pause_process": 1,
+    "transfer_sip_continuity": 1,
+    "no_indefinite_pause": 1,
+    "skip_not_working": 1,
+    "sip_stop_required_for_transfer": 1
    },
    "human_confirmed": 5,
    "confidence": "high",
@@ -1723,10 +1723,6 @@
     "youtube-UgzGvIWPrrzJuP7-P-V4AaABAg"
    ],
    "rank": 4,
-   "quote_caps": {
-    "stated_dropoff": 1,
-    "money": 0
-   },
    "quotes": [
     {
      "id": "playstore-groww-66aca4e9-e96a-4e94-ada8-dd661f1f3d02",
@@ -1747,6 +1743,10 @@
      "evidence_span": "I cannot find any pause option on the website"
     }
    ],
+   "quote_caps": {
+    "stated_dropoff": 1,
+    "money": 0
+   },
    "quote_candidates": 63,
    "narrative": {
     "generated": true,
@@ -1861,17 +1861,17 @@
     "manual_payment_path_gap": 44,
     "missed_sip_no_reminder": 6,
     "no_reminder_feature": 4,
-    "mandate_aversion": 2,
     "upi_autopay_unavailable": 2,
-    "bank_not_supported": 1,
-    "missing_true_sip": 1,
-    "mandate_not_reusable": 1,
+    "mandate_aversion": 2,
     "payment_method_visibility": 1,
     "autodebit_unavailable": 1,
+    "missing_true_sip": 1,
     "secondary_bank_mandate_unavailable": 1,
+    "no_bank_sip": 1,
     "delayed_mandate_feature": 1,
+    "bank_not_supported": 1,
     "nri_mandate_unsupported": 1,
-    "no_bank_sip": 1
+    "mandate_not_reusable": 1
    },
    "human_confirmed": 13,
    "confidence": "high",
@@ -1942,10 +1942,6 @@
     "youtube-Ugz5G42zBvmaSBjSH6h4AaABAg"
    ],
    "rank": 5,
-   "quote_caps": {
-    "stated_dropoff": 0,
-    "money": 0
-   },
    "quotes": [
     {
      "id": "playstore-zerodha_coin-07e93014-5342-4346-9259-3403f726c457",
@@ -1966,6 +1962,10 @@
      "evidence_span": "it is asking to create a new OTM"
     }
    ],
+   "quote_caps": {
+    "stated_dropoff": 0,
+    "money": 0
+   },
    "quote_candidates": 59,
    "narrative": {
     "generated": true,
@@ -2086,20 +2086,20 @@
      "count": 4,
      "facts": [
       {
-       "id": "reddit-1fjurp1",
-       "text": "I am a beginner"
+       "id": "reddit-1ubqz7v",
+       "text": "I'm new to MFs"
       },
       {
        "id": "reddit-dryrun-1x8d08v",
        "text": "been investing for past 2 years"
       },
       {
-       "id": "reddit-1ubqz7v",
-       "text": "I'm new to MFs"
-      },
-      {
        "id": "reddit-w9rjhl",
        "text": "I'm new to investments"
+      },
+      {
+       "id": "reddit-1fjurp1",
+       "text": "I am a beginner"
       }
      ]
     }
@@ -2114,24 +2114,24 @@
     "statement_confusion": 26,
     "funds_apparently_missing": 8,
     "portfolio_value_mismatch": 4,
-    "no_payment_history": 2,
+    "holdings_not_visible": 2,
     "external_fund_tracking": 2,
     "holdings_not_visible_after_transfer": 2,
-    "reporting_gap": 2,
-    "holdings_not_visible": 2,
     "fragmented_tracking": 2,
-    "payment_status_unclear": 1,
-    "folio_name_mismatch": 1,
-    "holdings_not_visible_on_amc": 1,
-    "multiple_folios": 1,
+    "no_payment_history": 2,
+    "reporting_gap": 2,
     "duplicate_folio_entry": 1,
-    "holdings_not_visible_in_mf_central": 1,
-    "virtual_account_visibility": 1,
-    "active_sip_not_visible": 1,
-    "autopay_status_unclear": 1,
     "amc_sip_not_in_portfolio": 1,
-    "nav_not_shown": 1,
-    "amc_sip_not_tracked": 1
+    "holdings_not_visible_in_mf_central": 1,
+    "folio_name_mismatch": 1,
+    "payment_status_unclear": 1,
+    "holdings_not_visible_on_amc": 1,
+    "virtual_account_visibility": 1,
+    "amc_sip_not_tracked": 1,
+    "multiple_folios": 1,
+    "autopay_status_unclear": 1,
+    "active_sip_not_visible": 1,
+    "nav_not_shown": 1
    },
    "human_confirmed": 4,
    "confidence": "high",
@@ -2195,10 +2195,6 @@
     "youtube-UgzqschJRHqcSlmf3Gp4AaABAg"
    ],
    "rank": 6,
-   "quote_caps": {
-    "stated_dropoff": 0,
-    "money": 0
-   },
    "quotes": [
     {
      "id": "playstore-zerodha_coin-252f60e3-817c-4297-94d4-db34996a5882",
@@ -2219,6 +2215,10 @@
      "evidence_span": "there nothing in the transaction list"
     }
    ],
+   "quote_caps": {
+    "stated_dropoff": 0,
+    "money": 0
+   },
    "quote_candidates": 53,
    "narrative": {
     "generated": true,
@@ -2336,23 +2336,23 @@
     "mandate_end_date_confusion": 10,
     "notification_uncertainty": 4,
     "installment_date_confusion": 3,
-    "forced_mandate_resetup_risk": 3,
     "auto_debit_setup_confusion": 3,
+    "forced_mandate_resetup_risk": 3,
     "installment_date_mismatch": 2,
-    "upi_mandate_howto": 2,
     "bank_account_setup_blocks_mandate": 2,
-    "mandate_name_matching": 1,
+    "upi_mandate_howto": 2,
+    "mandate_type_change_blocked": 1,
+    "joint_account_mandate": 1,
+    "mandate_type_change": 1,
+    "date_change_not_honoured": 1,
+    "mandate_method_discontinued": 1,
+    "upi_autopay_limit_confusion": 1,
+    "mandate_type_confusion": 1,
+    "emandate_introduction": 1,
     "mandate_deletion_unclear": 1,
     "order_date_confusion": 1,
-    "sip_tenure_confusion": 1,
-    "mandate_type_change": 1,
-    "emandate_introduction": 1,
-    "mandate_type_confusion": 1,
-    "upi_autopay_limit_confusion": 1,
-    "date_change_not_honoured": 1,
-    "joint_account_mandate": 1,
-    "mandate_method_discontinued": 1,
-    "mandate_type_change_blocked": 1
+    "mandate_name_matching": 1,
+    "sip_tenure_confusion": 1
    },
    "human_confirmed": 4,
    "confidence": "high",
@@ -2415,10 +2415,6 @@
     "youtube-UgzyZGl7KOpwbB8iewt4AaABAg"
    ],
    "rank": 7,
-   "quote_caps": {
-    "stated_dropoff": 0,
-    "money": 0
-   },
    "quotes": [
     {
      "id": "playstore-zerodha_coin-70b5ed00-7c26-41bb-9ba9-ca52c6ad4a28",
@@ -2439,6 +2435,10 @@
      "evidence_span": "Will they be triggered tomorrow instead"
     }
    ],
+   "quote_caps": {
+    "stated_dropoff": 0,
+    "money": 0
+   },
    "quote_candidates": 55,
    "narrative": {
     "generated": true,
@@ -2492,8 +2492,8 @@
     "by_type": {
      "intent_to_leave": 4,
      "sip_stop": 2,
-     "realised_exit": 1,
-     "platform_switch": 1
+     "platform_switch": 1,
+     "realised_exit": 1
     },
     "leaving_coin": 1,
     "leaving_competitor": 5,
@@ -2586,26 +2586,26 @@
     "redemption_blocked": 10,
     "redemption_issue": 7,
     "refund_uncertainty": 3,
-    "slow_withdrawal": 3,
     "bank_change_blocked": 3,
-    "bank_detail_change_blocked": 2,
+    "slow_withdrawal": 3,
     "redemption_blocked_closed_bank": 2,
-    "redemption_delay": 1,
-    "bank_change_cooling_period": 1,
-    "redemption_amount_mismatch": 1,
+    "bank_detail_change_blocked": 2,
+    "redemption_in_installments": 1,
     "refund_tracking_missing": 1,
-    "no_instant_redemption": 1,
+    "regular_funds_locked": 1,
+    "redemption_amount_mismatch": 1,
     "nominee_transmission_harassment": 1,
-    "name_mismatch_redemption": 1,
     "bank_account_blocked": 1,
-    "bank_change_delay": 1,
+    "no_instant_redemption": 1,
     "redemption_to_defunct_account": 1,
     "cannot_skip_or_change_bank": 1,
+    "redemption_delay": 1,
+    "bank_change_cooling_period": 1,
     "withdrawal_limit": 1,
-    "redemption_friction": 1,
-    "regular_funds_locked": 1,
+    "bank_change_delay": 1,
     "nominee_detail_error": 1,
-    "redemption_in_installments": 1
+    "name_mismatch_redemption": 1,
+    "redemption_friction": 1
    },
    "human_confirmed": 3,
    "confidence": "high",
@@ -2667,10 +2667,6 @@
     "youtube-Ugzyo3FqEDnY34sDu6x4AaABAg"
    ],
    "rank": 8,
-   "quote_caps": {
-    "stated_dropoff": 0,
-    "money": 0
-   },
    "quotes": [
     {
      "id": "youtube-Ugxn7axztdEPpsHJZj94AaABAg",
@@ -2691,6 +2687,10 @@
      "evidence_span": "the platform is pending it since one year"
     }
    ],
+   "quote_caps": {
+    "stated_dropoff": 0,
+    "money": 0
+   },
    "quote_candidates": 51,
    "narrative": {
     "generated": true,
@@ -2814,16 +2814,16 @@
      "count": 3,
      "facts": [
       {
+       "id": "reddit-dryrun-1xarkf8",
+       "text": "MBBS student investing some amount from my pocket money"
+      },
+      {
        "id": "playstore-angel_one-34b80039-34c3-48ff-b73f-cbad3af2fd6d",
        "text": "both my wife and I are visually impaired users"
       },
       {
        "id": "reddit-dryrun-1w1d9k0",
        "text": "NRI here"
-      },
-      {
-       "id": "reddit-dryrun-1xarkf8",
-       "text": "MBBS student investing some amount from my pocket money"
       }
      ]
     }
@@ -2841,24 +2841,24 @@
     "ui_glitch": 4,
     "platform_bugginess": 4,
     "kyc_issue": 3,
+    "poor_web_interface": 2,
     "otp_loop": 2,
     "login_failure": 2,
     "sip_setup_confusing": 2,
-    "poor_web_interface": 2,
-    "onboarding_document_friction": 1,
-    "cluttered_sip_list": 1,
-    "accessibility_gap": 1,
-    "stagnant_features": 1,
-    "investment_limit_error": 1,
-    "slow_portal": 1,
     "account_blocked": 1,
-    "nri_otp_lockout": 1,
-    "double_payout_glitch": 1,
-    "recurring_issues": 1,
-    "ekyc_failure": 1,
+    "cluttered_sip_list": 1,
+    "onboarding_document_friction": 1,
     "broker_app_fatigue": 1,
+    "accessibility_gap": 1,
     "mandate_creation_difficult": 1,
     "search_broken": 1,
+    "investment_limit_error": 1,
+    "nri_otp_lockout": 1,
+    "ekyc_failure": 1,
+    "stagnant_features": 1,
+    "recurring_issues": 1,
+    "double_payout_glitch": 1,
+    "slow_portal": 1,
     "redemption_otp_failure": 1
    },
    "human_confirmed": 4,
@@ -2920,10 +2920,6 @@
     "youtube-UgzGJKrF_gi_sXfBy0d4AaABAg"
    ],
    "rank": 9,
-   "quote_caps": {
-    "stated_dropoff": 1,
-    "money": 0
-   },
    "quotes": [
     {
      "id": "playstore-zerodha_coin-e05d33fc-0a19-407c-b90a-80e37ffcb0d6",
@@ -2944,7 +2940,11 @@
      "evidence_span": "These issues keep repeating"
     }
    ],
-   "quote_candidates": 52,
+   "quote_caps": {
+    "stated_dropoff": 1,
+    "money": 0
+   },
+   "quote_candidates": 51,
    "narrative": {
     "generated": true,
     "statement": "Investors hit errors that do not say what went wrong or what to do next: cryptic codes, generic failures, or orders rejected without a reason. Others describe slow, cluttered or inaccessible screens. When the same issues repeat, some investors move their new money elsewhere.",
@@ -2995,8 +2995,8 @@
      "fund": 0
     },
     "by_type": {
-     "realised_exit": 3,
-     "intent_to_leave": 3
+     "intent_to_leave": 3,
+     "realised_exit": 3
     },
     "leaving_coin": 3,
     "leaving_competitor": 3,
@@ -3064,9 +3064,9 @@
    "label_counts": {
     "unit_allocation_delay": 38,
     "delayed_nav": 13,
+    "nav_update_lag": 1,
     "holiday_debit_timing": 1,
-    "early_cutoff_time": 1,
-    "nav_update_lag": 1
+    "early_cutoff_time": 1
    },
    "human_confirmed": 4,
    "confidence": "high",
@@ -3125,10 +3125,6 @@
     "youtube-UgxtJIiWa1fh_Mi0Wtl4AaABAg"
    ],
    "rank": 10,
-   "quote_caps": {
-    "stated_dropoff": 0,
-    "money": 0
-   },
    "quotes": [
     {
      "id": "playstore-et_money-8b535fbf-aab4-447f-b54d-1b81ba74d419",
@@ -3149,6 +3145,10 @@
      "evidence_span": "there is a delay of 2-3 days between funds debit and MF Units purchase"
     }
    ],
+   "quote_caps": {
+    "stated_dropoff": 0,
+    "money": 0
+   },
    "quote_candidates": 46,
    "narrative": {
     "generated": true,
@@ -3360,9 +3360,9 @@
     "penalty_uncertainty": 19,
     "insufficient_funds_on_sip_date": 17,
     "failed_payment_fear": 2,
-    "cibil_worry": 1,
+    "unclear_debit_cutoff_time": 1,
     "platform_blamed_for_bank_charge": 1,
-    "unclear_debit_cutoff_time": 1
+    "cibil_worry": 1
    },
    "human_confirmed": 6,
    "confidence": "high",
@@ -3420,10 +3420,6 @@
     "youtube-Ugz0U0tqOBZpvDYcVu14AaABAg"
    ],
    "rank": 11,
-   "quote_caps": {
-    "stated_dropoff": 0,
-    "money": 1
-   },
    "quotes": [
     {
      "id": "youtube-UgyYJnLMZEVBQtv0dR14AaABAg",
@@ -3444,6 +3440,10 @@
      "evidence_span": "will doing so involve penalties?"
     }
    ],
+   "quote_caps": {
+    "stated_dropoff": 0,
+    "money": 1
+   },
    "quote_candidates": 49,
    "narrative": {
     "generated": true,
@@ -3586,20 +3586,20 @@
     "hidden_fee": 6,
     "paywall_basic_features": 4,
     "exit_load_surprise": 3,
+    "demat_amc_charges": 2,
     "advisory_plan_underperformance": 2,
     "forced_demat_account": 2,
-    "demat_amc_charges": 2,
-    "regular_plan_default": 1,
     "forced_autopay": 1,
-    "amc_charges": 1,
-    "paywall_upgrade": 1,
-    "ddpi_paywall": 1,
-    "demat_conversion_charges": 1,
-    "demat_amc_surprise": 1,
-    "demat_push": 1,
     "platform_fee_during_lock_in": 1,
+    "no_value_add": 1,
+    "regular_plan_default": 1,
+    "paywall_upgrade": 1,
+    "amc_charges": 1,
+    "demat_push": 1,
+    "demat_amc_surprise": 1,
     "charges_not_visible": 1,
-    "no_value_add": 1
+    "ddpi_paywall": 1,
+    "demat_conversion_charges": 1
    },
    "human_confirmed": 4,
    "confidence": "high",
@@ -3650,10 +3650,6 @@
     "youtube-Ugzzp09O3Y8gjwnMF-94AaABAg"
    ],
    "rank": 12,
-   "quote_caps": {
-    "stated_dropoff": 1,
-    "money": 0
-   },
    "quotes": [
     {
      "id": "playstore-et_money-16911f5a-ea07-4f28-8e62-225af6db0dca",
@@ -3674,6 +3670,10 @@
      "evidence_span": "What would be different charges once I start investing??"
     }
    ],
+   "quote_caps": {
+    "stated_dropoff": 1,
+    "money": 0
+   },
    "quote_candidates": 43,
    "narrative": {
     "generated": true,
@@ -3877,9 +3877,9 @@
     "mandate_continues_after_death": 2,
     "duplicate_sip_orders": 2,
     "cannot_cancel_mandate": 2,
-    "mandate_cancelled_without_consent": 1,
-    "unexpected_bill_paused_sip": 1,
     "mandate_cancel_not_effective": 1,
+    "unexpected_bill_paused_sip": 1,
+    "mandate_cancelled_without_consent": 1,
     "premature_debit_initiation": 1,
     "unintended_sip_creation": 1
    },
@@ -3928,10 +3928,6 @@
     "youtube-UgwsX-lj2ctfdiAdJvR4AaABAg"
    ],
    "rank": 13,
-   "quote_caps": {
-    "stated_dropoff": 0,
-    "money": 2
-   },
    "quotes": [
     {
      "id": "playstore-paytm_money-78686b14-ae00-4f06-b2c1-a7229898a517",
@@ -3952,6 +3948,10 @@
      "evidence_span": "mrng i checked money deducted"
     }
    ],
+   "quote_caps": {
+    "stated_dropoff": 0,
+    "money": 2
+   },
    "quote_candidates": 37,
    "narrative": {
     "generated": true,
@@ -4042,12 +4042,12 @@
      "count": 2,
      "facts": [
       {
-       "id": "reddit-dryrun-1viok2u",
-       "text": "27, Risk Appetite"
-      },
-      {
        "id": "reddit-dryrun-1x6amwx",
        "text": "Age- 28"
+      },
+      {
+       "id": "reddit-dryrun-1viok2u",
+       "text": "27, Risk Appetite"
       }
      ]
     }
@@ -4060,20 +4060,20 @@
    },
    "label_counts": {
     "amc_sip_confusion": 10,
-    "amc_sip_modification_gap": 5,
     "regular_to_direct_tax": 5,
+    "amc_sip_modification_gap": 5,
     "soa_preference": 2,
     "demat_folio_confusion": 2,
-    "direct_regular_confusion": 1,
-    "sip_converted_to_amc_sip": 1,
-    "demat_default_on_sip_change": 1,
     "etf_requires_kite_app": 1,
     "amc_sip_min_installments": 1,
     "soa_transfer_form_confusion": 1,
-    "external_sip_not_editable": 1,
-    "direct_conversion_tax_concern": 1,
     "demat_to_soa_process": 1,
-    "soa_to_demat_switch": 1
+    "direct_conversion_tax_concern": 1,
+    "soa_to_demat_switch": 1,
+    "external_sip_not_editable": 1,
+    "demat_default_on_sip_change": 1,
+    "sip_converted_to_amc_sip": 1,
+    "direct_regular_confusion": 1
    },
    "human_confirmed": 1,
    "confidence": "medium",
@@ -4115,10 +4115,6 @@
     "youtube-UgzLqlTirQvEYGa5DlF4AaABAg.ADi8KkwBhL_AE4UMwsD4pY"
    ],
    "rank": 14,
-   "quote_caps": {
-    "stated_dropoff": 0,
-    "money": 0
-   },
    "quotes": [
     {
      "id": "reddit-1w2aylc",
@@ -4139,6 +4135,10 @@
      "evidence_span": "us me jo 0/9999 likh ker ata hai us ka kya mtlb hai"
     }
    ],
+   "quote_caps": {
+    "stated_dropoff": 0,
+    "money": 0
+   },
    "quote_candidates": 33,
    "narrative": {
     "generated": true,
@@ -4254,28 +4254,28 @@
      "count": 7,
      "facts": [
       {
-       "id": "reddit-dryrun-1wn9c5r",
-       "text": "25, Need advice"
+       "id": "reddit-dryrun-1vzs60y",
+       "text": "I'm (21)"
       },
       {
-       "id": "reddit-1jdyltd",
-       "text": "32M, out of my income"
+       "id": "reddit-dryrun-1wn9c5r",
+       "text": "25, Need advice"
       },
       {
        "id": "reddit-1tty22u",
        "text": "I'm 27, earning ₹89k/month"
       },
       {
+       "id": "reddit-dryrun-1wgnrvz",
+       "text": "Portfolio review 29Y"
+      },
+      {
        "id": "reddit-dryrun-1nxn4qr",
        "text": "Age: 34"
       },
       {
-       "id": "reddit-dryrun-1vzs60y",
-       "text": "I'm (21)"
-      },
-      {
-       "id": "reddit-dryrun-1wgnrvz",
-       "text": "Portfolio review 29Y"
+       "id": "reddit-1jdyltd",
+       "text": "32M, out of my income"
       },
       {
        "id": "reddit-1kdnazh",
@@ -4287,8 +4287,8 @@
      "count": 4,
      "facts": [
       {
-       "id": "reddit-1auec3w",
-       "text": "I get 1.05lpm"
+       "id": "reddit-dryrun-1wgnrvz",
+       "text": "Stable salary around 1Lakh"
       },
       {
        "id": "reddit-dryrun-1nxn4qr",
@@ -4299,8 +4299,8 @@
        "text": "earn ₹1.23 lakh in hand each month"
       },
       {
-       "id": "reddit-dryrun-1wgnrvz",
-       "text": "Stable salary around 1Lakh"
+       "id": "reddit-1auec3w",
+       "text": "I get 1.05lpm"
       }
      ]
     },
@@ -4308,16 +4308,16 @@
      "count": 5,
      "facts": [
       {
-       "id": "tradingqna-544228",
-       "text": "switching to full-time freelancing 5 years ago"
+       "id": "reddit-dryrun-1vzs60y",
+       "text": "college student"
       },
       {
        "id": "reddit-dryrun-1nxn4qr",
        "text": "Married, 1 child"
       },
       {
-       "id": "reddit-dryrun-1vzs60y",
-       "text": "college student"
+       "id": "tradingqna-544228",
+       "text": "switching to full-time freelancing 5 years ago"
       },
       {
        "id": "reddit-1r4pdi5",
@@ -4380,10 +4380,6 @@
     "youtube-Ugy-otLBgnfRXVzmlDp4AaABAg"
    ],
    "rank": 15,
-   "quote_caps": {
-    "stated_dropoff": 1,
-    "money": 0
-   },
    "quotes": [
     {
      "id": "reddit-dryrun-1wwoqnd",
@@ -4404,6 +4400,10 @@
      "evidence_span": "mere account paise nahin hai"
     }
    ],
+   "quote_caps": {
+    "stated_dropoff": 1,
+    "money": 0
+   },
    "quote_candidates": 32,
    "narrative": {
     "generated": true,
@@ -4498,6 +4498,10 @@
      "count": 4,
      "facts": [
       {
+       "id": "reddit-dryrun-1vjjelz",
+       "text": "24 here"
+      },
+      {
        "id": "reddit-dryrun-1wk2t9o",
        "text": "I am 23 yr old"
       },
@@ -4508,10 +4512,6 @@
       {
        "id": "reddit-dryrun-1xar55t",
        "text": "I'm 24 and started investing after getting my first job"
-      },
-      {
-       "id": "reddit-dryrun-1vjjelz",
-       "text": "24 here"
       }
      ]
     },
@@ -4547,8 +4547,8 @@
    "label_counts": {
     "fund_restriction": 27,
     "platform_fund_availability": 3,
-    "nri_status_change": 2,
     "nri_not_supported": 2,
+    "nri_status_change": 2,
     "high_expense_ratio": 1
    },
    "human_confirmed": 2,
@@ -4590,10 +4590,6 @@
     "tradingqna-77506"
    ],
    "rank": 16,
-   "quote_caps": {
-    "stated_dropoff": 0,
-    "money": 0
-   },
    "quotes": [
     {
      "id": "tradingqna-104289",
@@ -4614,6 +4610,10 @@
      "evidence_span": "NRI s in the gulf and other countries cannot invest using their nre accounts"
     }
    ],
+   "quote_caps": {
+    "stated_dropoff": 0,
+    "money": 0
+   },
    "quote_candidates": 32,
    "narrative": {
     "generated": true,
@@ -4720,18 +4720,18 @@
     "sip_schedule_restriction": 4,
     "goal_labelling_missing": 3,
     "no_switch_option": 2,
-    "mandate_amount_edit_missing": 2,
     "redeem_by_amount_missing": 2,
     "no_swp": 2,
+    "mandate_amount_edit_missing": 2,
     "sip_increase_lock": 2,
     "stp_restriction": 1,
-    "missing_flexi_sip": 1,
+    "unit_based_sip_request": 1,
+    "step_up_blocked_by_increment": 1,
     "min_installment_lock": 1,
     "min_sip_amount": 1,
     "no_step_up_sip": 1,
-    "sip_end_date_missing": 1,
-    "unit_based_sip_request": 1,
-    "step_up_blocked_by_increment": 1
+    "missing_flexi_sip": 1,
+    "sip_end_date_missing": 1
    },
    "human_confirmed": 2,
    "confidence": "medium",
@@ -4769,10 +4769,6 @@
     "youtube-UgzZVubzVVceXIQBXJR4AaABAg"
    ],
    "rank": 17,
-   "quote_caps": {
-    "stated_dropoff": 0,
-    "money": 0
-   },
    "quotes": [
     {
      "id": "playstore-zerodha_coin-aa955a03-0ab6-43ac-9e03-fcd4fb44ce38",
@@ -4793,6 +4789,10 @@
      "evidence_span": "no option either to start the STP from existing LF to a new fund"
     }
    ],
+   "quote_caps": {
+    "stated_dropoff": 0,
+    "money": 0
+   },
    "quote_candidates": 29,
    "narrative": {
     "generated": true,
@@ -4844,8 +4844,8 @@
      "fund": 1
     },
     "by_type": {
-     "sip_stop": 1,
-     "sip_pause": 1
+     "sip_pause": 1,
+     "sip_stop": 1
     },
     "leaving_coin": 0,
     "leaving_competitor": 0,
@@ -4968,10 +4968,6 @@
     "youtube-UgyQxL5Vep7o_qxi-sZ4AaABAg"
    ],
    "rank": 18,
-   "quote_caps": {
-    "stated_dropoff": 0,
-    "money": 0
-   },
    "quotes": [
     {
      "id": "reddit-1hty7ro",
@@ -4992,6 +4988,10 @@
      "evidence_span": "kya hoga pata nhi"
     }
    ],
+   "quote_caps": {
+    "stated_dropoff": 0,
+    "money": 0
+   },
    "quote_candidates": 23,
    "narrative": {
     "generated": true,
@@ -5152,10 +5152,6 @@
     "tradingqna-36579"
    ],
    "rank": 19,
-   "quote_caps": {
-    "stated_dropoff": 0,
-    "money": 0
-   },
    "quotes": [
     {
      "id": "reddit-1t0d98s",
@@ -5176,6 +5172,10 @@
      "evidence_span": "after learning about the difference between regular and direct SIPs"
     }
    ],
+   "quote_caps": {
+    "stated_dropoff": 0,
+    "money": 0
+   },
    "quote_candidates": 22,
    "narrative": {
     "generated": true,
@@ -5269,9 +5269,9 @@
    "label_counts": {
     "lock_in_confusion": 5,
     "lock_in_display_wrong": 3,
-    "tax_calculation_confusion": 2,
-    "elss_lock_in_surprise": 2,
     "exit_load_confusion": 2,
+    "elss_lock_in_surprise": 2,
+    "tax_calculation_confusion": 2,
     "redemption_nav_timing_confusion": 1
    },
    "human_confirmed": 2,
@@ -5295,10 +5295,6 @@
     "youtube-Ugzv4alq-U7Z41RN-Kp4AaABAg"
    ],
    "rank": 20,
-   "quote_caps": {
-    "stated_dropoff": 0,
-    "money": 0
-   },
    "quotes": [
     {
      "id": "tradingqna-363884",
@@ -5319,6 +5315,10 @@
      "evidence_span": "Does the exit load period starts everytime SIP is executed or from date of investment into MF?"
     }
    ],
+   "quote_caps": {
+    "stated_dropoff": 0,
+    "money": 0
+   },
    "quote_candidates": 15,
    "narrative": {
     "generated": true,
@@ -5417,10 +5417,10 @@
    "label_counts": {
     "demat_custody_worry": 3,
     "trust_loss": 2,
-    "safety_doubt": 1,
     "platform_shutdown_worry": 1,
     "platform_trust_concern": 1,
-    "privacy_concern": 1
+    "privacy_concern": 1,
+    "safety_doubt": 1
    },
    "human_confirmed": 0,
    "confidence": "medium",
@@ -5437,10 +5437,6 @@
     "youtube-Ugzli9DC0Z6ZGpVpQKd4AaABAg"
    ],
    "rank": 21,
-   "quote_caps": {
-    "stated_dropoff": 0,
-    "money": 0
-   },
    "quotes": [
     {
      "id": "reddit-1nywhes",
@@ -5461,6 +5457,10 @@
      "evidence_span": "Agar by chance future mei ye nj e wealth application band ho gei toh mere paisay ka kya hoga"
     }
    ],
+   "quote_caps": {
+    "stated_dropoff": 0,
+    "money": 0
+   },
    "quote_candidates": 8,
    "narrative": {
     "generated": true,
@@ -5475,6 +5475,1250 @@
     ],
     "invalidation": "Interviews show the custody format and platform safety play no part in whether investors continue."
    }
+  }
+ ],
+ "questions": [
+  {
+   "id": "Q1",
+   "question": "Why do people start a SIP, and what do they expect to happen?",
+   "criteria": "no tag captures why people start; motives were not tagged",
+   "evidence_count": 0,
+   "denominator": 784,
+   "status_by_count": "not_answered",
+   "status": "not_answered",
+   "status_cap_reason": null,
+   "channel_split": {
+    "reddit": 0,
+    "play_store": 0,
+    "tradingqna": 0,
+    "youtube": 0
+   },
+   "by_problem": {},
+   "by_stage": null,
+   "by_action": null,
+   "by_profile_field": null,
+   "quotes": [],
+   "quote_caps": {},
+   "quote_candidates": 0,
+   "summary": null,
+   "gap_note": "No tag captures why people start an SIP or what they expected from it, so this question is not answered from the corpus. Posts about disappointing returns and comparisons with a fixed deposit hint at expectations, but that is not a direct answer. Interviews should ask about the decision to start and what the investor expected to happen.",
+   "research_link": "track-Q1",
+   "all_ids": []
+  },
+  {
+   "id": "Q2",
+   "question": "What changes in their behaviour in the months after starting?",
+   "criteria": "posts that state a tenure of up to twelve months",
+   "evidence_count": 93,
+   "denominator": 784,
+   "status_by_count": "answered",
+   "status": "partly_answered",
+   "status_cap_reason": "Each post describes a single moment; none follow the same investor over time, so change in behaviour cannot be observed directly.",
+   "channel_split": {
+    "reddit": 55,
+    "play_store": 8,
+    "tradingqna": 8,
+    "youtube": 22
+   },
+   "by_problem": {
+    "EDU-1": 24,
+    "REL-1": 18,
+    "EDU-3": 9,
+    "REL-2": 8,
+    "EDU-2": 7,
+    "EDU-6": 7,
+    "TRU-4": 6,
+    "REL-4": 6
+   },
+   "by_stage": {
+    "start": 64,
+    "month_1_3": 6,
+    "month_4_6": 4,
+    "month_7_12": 19,
+    "beyond_12": 0,
+    "exit_phase": 0
+   },
+   "by_action": null,
+   "by_profile_field": null,
+   "quotes": [
+    {
+     "id": "youtube-Ugx42t45jjr796Al6U54AaABAg.9z6ovmbIN-iAYLuQ1I1dny",
+     "text": "Bro i am starting to invest in mf recently, so from your personal experience should i continue innvesting? And is it giving better returns than fd??",
+     "excerpt": false,
+     "evidence_span": "i am starting to invest in mf recently"
+    },
+    {
+     "id": "reddit-1uwfj72",
+     "text": "Im a college student, its my first time doing SIP via any platform, I have been using Zerodha Kite app for trading for more than an year now, so doing a MF via an app, I choose Coins and the setup and",
+     "excerpt": true,
+     "evidence_span": "its my first time doing SIP via any platform"
+    },
+    {
+     "id": "tradingqna-141049",
+     "text": "I had started my SIP last month in Coin, against my SIP fund it shows only delete button, Pause & Edit button are not available.",
+     "excerpt": false,
+     "evidence_span": "I had started my SIP last month in Coin"
+    }
+   ],
+   "quote_caps": {
+    "stated_dropoff": 0,
+    "money": 0
+   },
+   "quote_candidates": 91,
+   "summary": {
+    "generated": true,
+    "text": "Investors who say they are within their first year mostly describe one early moment rather than a change: a first instalment or order that fails or is stuck, confusion about mandate terms, or, from about six months in, returns below what they hoped for and comparisons with a fixed deposit. A few in this window state a pause because of family or cash needs.",
+    "cited_ids": [
+     "playstore-zerodha_coin-8e4674b9-4cdf-43ef-9cf8-f15fc95b1c35",
+     "playstore-zerodha_coin-b22c0b3b-3cc7-47f6-93ed-84caaa3f7205",
+     "reddit-1vhvdd2",
+     "youtube-UgxWZ-X7571BoJ4GEvt4AaABAg",
+     "reddit-dryrun-1x8xzcv",
+     "reddit-1nxtis0"
+    ]
+   },
+   "gap_note": "Seeing what changes needs the same investors followed across their first year, for example a diary study or account-level data; the corpus only has snapshots.",
+   "research_link": "track-Q2",
+   "all_ids": [
+    "playstore-angel_one-e9a9f057-98ea-4047-85c5-a63e4a9bf533",
+    "playstore-et_money-95ad3f87-e4cf-4528-bbba-284c14179f52",
+    "playstore-groww-92f72fda-ba3f-4f1c-8055-15fec25e5799",
+    "playstore-zerodha_coin-4d300feb-28ec-4d22-a519-041907f9c38d",
+    "playstore-zerodha_coin-8e4674b9-4cdf-43ef-9cf8-f15fc95b1c35",
+    "playstore-zerodha_coin-96d2d802-86c9-4a52-8951-e5322aadc856",
+    "playstore-zerodha_coin-b22c0b3b-3cc7-47f6-93ed-84caaa3f7205",
+    "playstore-zerodha_coin-b3d4217c-d431-4b69-a902-274a1c966ddc",
+    "reddit-18iwnzh",
+    "reddit-18xkw3u",
+    "reddit-1ah0xoi",
+    "reddit-1cm84ot",
+    "reddit-1dkghde",
+    "reddit-1esk1kp",
+    "reddit-1f5i9dv",
+    "reddit-1fz0674",
+    "reddit-1fz1th6",
+    "reddit-1fz8se4",
+    "reddit-1hb90ri",
+    "reddit-1hbtzgp",
+    "reddit-1hetw1m",
+    "reddit-1hgezmp",
+    "reddit-1hsmrw9",
+    "reddit-1htwyyl",
+    "reddit-1hty7ro",
+    "reddit-1kuyvtu",
+    "reddit-1ltq5en",
+    "reddit-1mfi68r",
+    "reddit-1mxqg4g",
+    "reddit-1nbko8l",
+    "reddit-1nxtis0",
+    "reddit-1o1xn2h",
+    "reddit-1ph7f98",
+    "reddit-1pntay7",
+    "reddit-1s9vhn2",
+    "reddit-1snsc3u",
+    "reddit-1t0d98s",
+    "reddit-1tdu8ow",
+    "reddit-1tezhqp",
+    "reddit-1ty9rdy",
+    "reddit-1um7gum",
+    "reddit-1uwfj72",
+    "reddit-1vhvdd2",
+    "reddit-1vtb4cq",
+    "reddit-1xirk0z",
+    "reddit-8n0dj7",
+    "reddit-dryrun-1v8qjop",
+    "reddit-dryrun-1vasakw",
+    "reddit-dryrun-1viyjix",
+    "reddit-dryrun-1w1v388",
+    "reddit-dryrun-1wb1mzf",
+    "reddit-dryrun-1wd4uoa",
+    "reddit-dryrun-1wfvfty",
+    "reddit-dryrun-1wnbxmo",
+    "reddit-dryrun-1wng4jh",
+    "reddit-dryrun-1wrqri0",
+    "reddit-dryrun-1wte69m",
+    "reddit-dryrun-1wwq59i",
+    "reddit-dryrun-1x3rnvl",
+    "reddit-dryrun-1x3tjfr",
+    "reddit-dryrun-1x6amwx",
+    "reddit-dryrun-1x8xzcv",
+    "reddit-dryrun-1xd27xx",
+    "tradingqna-141049",
+    "tradingqna-34939",
+    "tradingqna-45536",
+    "tradingqna-481961",
+    "tradingqna-515714",
+    "tradingqna-527057",
+    "tradingqna-88827",
+    "tradingqna-92190",
+    "youtube-UgwAcCjtB7xPYJxZJwl4AaABAg",
+    "youtube-UgwIRz-VhFJ6Htq9Kyp4AaABAg",
+    "youtube-UgwRgzn14arwlK6kIx14AaABAg",
+    "youtube-UgwdkkkTooHxoSHWYWF4AaABAg",
+    "youtube-Ugwqc3BOxdu2aunAMYh4AaABAg",
+    "youtube-UgwuabgjWac2Zw1wbGl4AaABAg",
+    "youtube-Ugx0iMgVMgS60d5tdVh4AaABAg",
+    "youtube-Ugx42t45jjr796Al6U54AaABAg.9z6ovmbIN-iAYLuQ1I1dny",
+    "youtube-UgxK6AW-TyRhj-LfThh4AaABAg",
+    "youtube-UgxTWlbmv7fKvcqNXVt4AaABAg",
+    "youtube-UgxTWlbmv7fKvcqNXVt4AaABAg.9vPUwUmaw1CA0V6vEcjyAI",
+    "youtube-UgxWPh8KvTehCAwga7x4AaABAg",
+    "youtube-UgxWZ-X7571BoJ4GEvt4AaABAg",
+    "youtube-Ugxkii8nF3i0iAB5Zol4AaABAg",
+    "youtube-UgxtJIiWa1fh_Mi0Wtl4AaABAg",
+    "youtube-Ugy8on5PDgsgNsL1p8V4AaABAg",
+    "youtube-UgyJTCjviEtf9GJTKPh4AaABAg",
+    "youtube-UgyQxL5Vep7o_qxi-sZ4AaABAg",
+    "youtube-UgzIr1fPIG3f1bvE3nt4AaABAg",
+    "youtube-UgzLqlTirQvEYGa5DlF4AaABAg.ADi8KkwBhL_AE-IlT4Lhuc",
+    "youtube-UgzLqlTirQvEYGa5DlF4AaABAg.ADi8KkwBhL_AE-eXWgFgMr",
+    "youtube-UgzqschJRHqcSlmf3Gp4AaABAg"
+   ]
+  },
+  {
+   "id": "Q3",
+   "question": "What leads investors to pause, reduce or stop a SIP?",
+   "criteria": "posts stating a stop, pause, intent to leave or exit at SIP or platform scope",
+   "evidence_count": 116,
+   "denominator": 784,
+   "status_by_count": "answered",
+   "status": "answered",
+   "status_cap_reason": null,
+   "channel_split": {
+    "reddit": 72,
+    "play_store": 25,
+    "tradingqna": 8,
+    "youtube": 11
+   },
+   "by_problem": {
+    "EDU-1": 28,
+    "TRU-5": 15,
+    "OUT-1": 15,
+    "TRU-4": 14,
+    "EDU-2": 13,
+    "REL-4": 9,
+    "TRU-3": 8,
+    "REL-2": 6
+   },
+   "by_stage": null,
+   "by_action": null,
+   "by_profile_field": null,
+   "quotes": [
+    {
+     "id": "youtube-UgxWPh8KvTehCAwga7x4AaABAg",
+     "text": "I belive a fall in silver and gold prices has Affected SIP. My family started for the first time and they are swearing not to do again 😂",
+     "excerpt": false,
+     "evidence_span": "they are swearing not to do again"
+    },
+    {
+     "id": "playstore-et_money-b122e32e-ead0-4f9b-948b-54b0a35bf584",
+     "text": "also, no option to switch mutual funds. you still need to withdraw and reinvest. Been with etmomey for 5 years now and after extreme harassment and frustration, switching to other apps",
+     "excerpt": true,
+     "evidence_span": "switching to other apps"
+    },
+    {
+     "id": "tradingqna-515714",
+     "text": "Sir on 10th January Saturday I started my first sip on mutual fund after completing online payment but I am confused about next sip installment on which date my next instalment done so today I cancel my buy order I want to know when my fund get refunded",
+     "excerpt": false,
+     "evidence_span": "today I cancel my buy order"
+    }
+   ],
+   "quote_caps": {
+    "stated_dropoff": 3,
+    "money": 0
+   },
+   "quote_candidates": 113,
+   "summary": {
+    "generated": true,
+    "text": "Two different things happen. Investors stop or pause their SIPs because money is tight, because they doubt the market or the fund industry, or because they learn they were sold regular plans; these posts rarely blame the platform. Separately, investors leave a platform, most often another app, after new fees or paywalls, heavy upselling, support that does not respond, or repeated failures. Posts about leaving Coin cite late units and failed orders, missing features and numbers that do not add up.",
+    "cited_ids": [
+     "reddit-1auec3w",
+     "reddit-1nxtis0",
+     "tradingqna-415104",
+     "youtube-Ugx5rDuMatVJUKt4JSp4AaABAg",
+     "reddit-dryrun-1w1v388",
+     "playstore-et_money-f234e1ba-76bc-4889-8c99-ef91957db498",
+     "playstore-et_money-48e0099c-2211-4297-85ed-f4fedc0408e2",
+     "playstore-et_money-902e9e92-1364-4cdb-bc1d-e4b7c1a9966e",
+     "reddit-1eivny2",
+     "playstore-zerodha_coin-b89ecf4d-3351-4b3b-8f2d-08697f938126",
+     "playstore-zerodha_coin-ac96c7c9-e7c5-4a71-909d-1269f6f31e50"
+    ]
+   },
+   "gap_note": "These are reasons stated in public posts. They show which reasons exist, not how often each one leads to an actual stop among Coin investors.",
+   "research_link": "track-Q3",
+   "all_ids": [
+    "playstore-et_money-0b486d52-b8a0-43dc-adf1-acda6a07e37a",
+    "playstore-et_money-16911f5a-ea07-4f28-8e62-225af6db0dca",
+    "playstore-et_money-48e0099c-2211-4297-85ed-f4fedc0408e2",
+    "playstore-et_money-4993a233-662c-4015-88c5-e3f053e39033",
+    "playstore-et_money-4edb6db1-c44c-43d7-ad23-46f249efcdee",
+    "playstore-et_money-55ebca46-25e7-4d22-b17b-56e6b3f7e989",
+    "playstore-et_money-6be009a0-e105-4a16-a180-9ed479e05634",
+    "playstore-et_money-740fa7bf-0a84-40cb-a2ce-6dfd6cf71eca",
+    "playstore-et_money-75e30f36-df10-4016-bbdc-d3483d590829",
+    "playstore-et_money-80bcfd48-e192-4926-a13b-23fcd17e8b67",
+    "playstore-et_money-902e9e92-1364-4cdb-bc1d-e4b7c1a9966e",
+    "playstore-et_money-b122e32e-ead0-4f9b-948b-54b0a35bf584",
+    "playstore-et_money-f1bacb4e-7e41-4a00-b7be-8603e01f31be",
+    "playstore-et_money-f234e1ba-76bc-4889-8c99-ef91957db498",
+    "playstore-groww-92f72fda-ba3f-4f1c-8055-15fec25e5799",
+    "playstore-groww-d62bc2ae-f70b-42dd-bb59-00ad3151cb3f",
+    "playstore-paytm_money-0ca50eb4-2aa4-4efc-8a02-de9906ce58f6",
+    "playstore-paytm_money-1f6021f1-0e21-4a7c-8cf4-e9ecf65e69af",
+    "playstore-paytm_money-3681e379-b023-44bb-b94b-dfef26298569",
+    "playstore-paytm_money-3f0fe30a-35b4-4ac8-b1ef-44b6cd21c351",
+    "playstore-paytm_money-778975e6-c47c-4baa-9503-42d18afbe3cf",
+    "playstore-zerodha_coin-ac96c7c9-e7c5-4a71-909d-1269f6f31e50",
+    "playstore-zerodha_coin-b3d4217c-d431-4b69-a902-274a1c966ddc",
+    "playstore-zerodha_coin-b89ecf4d-3351-4b3b-8f2d-08697f938126",
+    "playstore-zerodha_coin-be4d21cf-0436-4533-8c02-03a45b4bed86",
+    "reddit-18snp0k",
+    "reddit-1auec3w",
+    "reddit-1bs2bu0",
+    "reddit-1cb3mre",
+    "reddit-1eivny2",
+    "reddit-1esk1kp",
+    "reddit-1evayzx",
+    "reddit-1f7bta5",
+    "reddit-1fwzi9e",
+    "reddit-1fz1th6",
+    "reddit-1gpip7l",
+    "reddit-1h4t6nw",
+    "reddit-1hggk6i",
+    "reddit-1i08n3w",
+    "reddit-1jlom36",
+    "reddit-1kdnazh",
+    "reddit-1loubur",
+    "reddit-1lqz1be",
+    "reddit-1nxtis0",
+    "reddit-1nzgx4g",
+    "reddit-1o1xn2h",
+    "reddit-1o3sh5t",
+    "reddit-1ocyqjt",
+    "reddit-1oydoph",
+    "reddit-1psrv0o",
+    "reddit-1qf2ova",
+    "reddit-1rfv3xe",
+    "reddit-1rvfn86",
+    "reddit-1s7ztsm",
+    "reddit-1s9vhn2",
+    "reddit-1sbi166",
+    "reddit-1sjb086",
+    "reddit-1szpfjy",
+    "reddit-1tfp0nk",
+    "reddit-1tm44vz",
+    "reddit-1tpvv0s",
+    "reddit-1tpzkiy",
+    "reddit-1tty22u",
+    "reddit-1ty9rdy",
+    "reddit-1u4lsou",
+    "reddit-1u6a88u",
+    "reddit-1ug6zmi",
+    "reddit-1usk5ef",
+    "reddit-1uuacpn",
+    "reddit-1v4jjzh",
+    "reddit-1vlg05i",
+    "reddit-1wrkapq",
+    "reddit-1x1hu6z",
+    "reddit-1xhi3hf",
+    "reddit-3pcoi5",
+    "reddit-702is2",
+    "reddit-7is3i3",
+    "reddit-8d4kbt",
+    "reddit-dryrun-1v739n0",
+    "reddit-dryrun-1vbofl5",
+    "reddit-dryrun-1vtcgjz",
+    "reddit-dryrun-1vubu1c",
+    "reddit-dryrun-1vudmi1",
+    "reddit-dryrun-1w1ptiz",
+    "reddit-dryrun-1w1v388",
+    "reddit-dryrun-1w2adsd",
+    "reddit-dryrun-1w7vfpp",
+    "reddit-dryrun-1wdg52k",
+    "reddit-dryrun-1wgnrvz",
+    "reddit-dryrun-1wn6tbc",
+    "reddit-dryrun-1wtdkj3",
+    "reddit-dryrun-1wtfugh",
+    "reddit-dryrun-1wwoqnd",
+    "reddit-dryrun-1wy2da5",
+    "reddit-dryrun-1x9rq0f",
+    "reddit-w9rjhl",
+    "reddit-zgqr64",
+    "tradingqna-270207",
+    "tradingqna-363191",
+    "tradingqna-394662",
+    "tradingqna-415104",
+    "tradingqna-481961",
+    "tradingqna-515714",
+    "tradingqna-544228",
+    "tradingqna-63699",
+    "youtube-UgwNcLsCqHTJsOZ-eqF4AaABAg",
+    "youtube-UgwTFjHkeO2FO7ao53x4AaABAg",
+    "youtube-UgwtBOozgR2Mlgc-tmV4AaABAg",
+    "youtube-Ugx5rDuMatVJUKt4JSp4AaABAg",
+    "youtube-UgxHMYVuobald0KZegZ4AaABAg",
+    "youtube-UgxWPh8KvTehCAwga7x4AaABAg",
+    "youtube-Ugxz4yTTBVk6oWw60K54AaABAg",
+    "youtube-Ugy3Rn-OwzszvwIsoKV4AaABAg",
+    "youtube-UgzeEp23suMOz-VEOW54AaABAg",
+    "youtube-UgzgTnGUakDHBA_ItJ14AaABAg",
+    "youtube-UgzhirBgdrT8oE1df8N4AaABAg"
+   ]
+  },
+  {
+   "id": "Q4",
+   "question": "What do investors check, and how often, once they have started?",
+   "criteria": "posts in REL-3 (what the app shows) plus posts about compulsive checking",
+   "evidence_count": 58,
+   "denominator": 784,
+   "status_by_count": "answered",
+   "status": "partly_answered",
+   "status_cap_reason": "Posts show what investors check but never how often they check.",
+   "channel_split": {
+    "reddit": 25,
+    "play_store": 29,
+    "tradingqna": 1,
+    "youtube": 3
+   },
+   "by_problem": {
+    "REL-3": 56,
+    "TRU-4": 9,
+    "REL-4": 8,
+    "REL-1": 7,
+    "EDU-1": 4,
+    "TRU-3": 4,
+    "TRU-1": 4,
+    "REL-2": 3
+   },
+   "by_stage": null,
+   "by_action": null,
+   "by_profile_field": null,
+   "quotes": [
+    {
+     "id": "playstore-paytm_money-779c94a7-3381-4376-b8f8-7f6a43d244d3",
+     "text": "Worst in customer support....it takes 1 week to credit NAVs to ur account after deduction of money. again this app has disappointed me ..... can't see my mutual fund portfolio on app",
+     "excerpt": false,
+     "evidence_span": "can't see my mutual fund portfolio on app"
+    },
+    {
+     "id": "reddit-1um7gum",
+     "text": "I had set the auto debit date as 2nd of every month and then changed it to 5th a few days later. I got a message on whatsapp from one of the funds saying my SIP has expired. I checked on the app and all three show “Active”. However when I checked on MF Central, 2 of them show as “Ceased” and one shows as “Terminated”.",
+     "excerpt": true,
+     "evidence_span": "I checked on the app and all three show"
+    },
+    {
+     "id": "tradingqna-365526",
+     "text": "I strongly think fresh investments on Coin should have been stopped. The lumpsum investment I made on Friday, 29th July is yet to be traced.",
+     "excerpt": false,
+     "evidence_span": "The lumpsum investment I made on Friday, 29th July is yet to be traced"
+    }
+   ],
+   "quote_caps": {
+    "stated_dropoff": 0,
+    "money": 0
+   },
+   "quote_candidates": 55,
+   "summary": {
+    "generated": true,
+    "text": "Investors check their portfolio value, the amount invested, their units and the next instalment date, and they post when these do not match what they paid or when holdings seem to disappear.",
+    "cited_ids": [
+     "reddit-1q3iubg",
+     "reddit-1fjurp1",
+     "playstore-zerodha_coin-8e4674b9-4cdf-43ef-9cf8-f15fc95b1c35",
+     "youtube-UgzqschJRHqcSlmf3Gp4AaABAg"
+    ]
+   },
+   "gap_note": "How often investors check, and whether checking more often goes with stopping, is not visible in posts; it needs app usage data or a diary study.",
+   "research_link": "track-Q4",
+   "all_ids": [
+    "playstore-et_money-3fdabc38-2324-4ede-aabe-f9bbfb3a0c0e",
+    "playstore-et_money-42f7c369-ebae-42ac-809a-744af956977a",
+    "playstore-et_money-4e677cc6-7309-4202-a2a9-6342fdb6cedb",
+    "playstore-et_money-75e30f36-df10-4016-bbdc-d3483d590829",
+    "playstore-et_money-7d37f7d9-3836-4071-8398-67b7292bbbc2",
+    "playstore-et_money-95357bee-cbcf-49ab-938f-a28a83150948",
+    "playstore-et_money-d354ab56-015c-430d-85ce-3923472817ec",
+    "playstore-paytm_money-3bfa42df-63ce-47b3-9877-16a59ae21378",
+    "playstore-paytm_money-45fa5327-857c-406d-8640-302b2f242caa",
+    "playstore-paytm_money-610a329b-f354-4042-beca-3b90999e5a7f",
+    "playstore-paytm_money-779c94a7-3381-4376-b8f8-7f6a43d244d3",
+    "playstore-paytm_money-b528355f-183c-460b-ab70-5c46f7f2ce80",
+    "playstore-paytm_money-fb114473-3a5a-4d87-8122-a884f1c1e5bd",
+    "playstore-zerodha_coin-252f60e3-817c-4297-94d4-db34996a5882",
+    "playstore-zerodha_coin-2837b7c2-6467-45b6-826f-33f4ec388b57",
+    "playstore-zerodha_coin-284e67ee-4088-401a-ad4a-bd14796b7bb8",
+    "playstore-zerodha_coin-3c64a315-bf08-4dab-8728-fd8cd0a5b7a5",
+    "playstore-zerodha_coin-3f4a9a73-a019-4289-9950-e9f4c9ed3866",
+    "playstore-zerodha_coin-5af14140-0e12-4a65-8bcb-7611fe3e0448",
+    "playstore-zerodha_coin-8e4674b9-4cdf-43ef-9cf8-f15fc95b1c35",
+    "playstore-zerodha_coin-ac96c7c9-e7c5-4a71-909d-1269f6f31e50",
+    "playstore-zerodha_coin-ade2232e-7425-4c5f-9fd4-bacd7a9ef15e",
+    "playstore-zerodha_coin-b7635a01-038c-41c6-9363-9a8adcee985f",
+    "playstore-zerodha_coin-c3bc6dcc-ed7e-4595-a3d0-ffa1f8fedfe4",
+    "playstore-zerodha_coin-d1b97377-e113-4a3c-ada0-37e6add1542b",
+    "playstore-zerodha_coin-e00e8f13-25d7-4ee2-95ea-9bd088e2877a",
+    "playstore-zerodha_coin-eb7c16ec-1ed0-47c4-8d63-5e6c3eba53f0",
+    "playstore-zerodha_coin-ee43574e-f168-4199-91c0-12b2e1fa28d2",
+    "playstore-zerodha_coin-f23316b8-0a66-4bf6-8a5c-6121c26e8603",
+    "reddit-1bk5ama",
+    "reddit-1d1183w",
+    "reddit-1esk1kp",
+    "reddit-1fjurp1",
+    "reddit-1hsmrw9",
+    "reddit-1i8tj0f",
+    "reddit-1iq4ptz",
+    "reddit-1iq9jey",
+    "reddit-1kjv1ij",
+    "reddit-1l19u07",
+    "reddit-1l7ugwl",
+    "reddit-1mpnz39",
+    "reddit-1mqp190",
+    "reddit-1p56a6e",
+    "reddit-1q3iubg",
+    "reddit-1twvd2p",
+    "reddit-1u595qp",
+    "reddit-1ubqz7v",
+    "reddit-1um7gum",
+    "reddit-1xgognl",
+    "reddit-dryrun-1va6ieh",
+    "reddit-dryrun-1vtc0ns",
+    "reddit-dryrun-1x8d08v",
+    "reddit-dryrun-1x9rq0f",
+    "reddit-w9rjhl",
+    "tradingqna-365526",
+    "youtube-UgyQ7udDuMDVa1-8INN4AaABAg",
+    "youtube-Ugznl_NxgrUJKpfBqZN4AaABAg",
+    "youtube-UgzqschJRHqcSlmf3Gp4AaABAg"
+   ]
+  },
+  {
+   "id": "Q5",
+   "question": "What confuses or worries them inside the app?",
+   "criteria": "posts in EDU-2 to EDU-5, REL-3 and REL-4",
+   "evidence_count": 258,
+   "denominator": 784,
+   "status_by_count": "answered",
+   "status": "answered",
+   "status_cap_reason": null,
+   "channel_split": {
+    "reddit": 91,
+    "play_store": 67,
+    "tradingqna": 42,
+    "youtube": 58
+   },
+   "by_problem": {
+    "EDU-2": 63,
+    "REL-3": 56,
+    "EDU-3": 55,
+    "REL-4": 53,
+    "EDU-4": 34,
+    "TRU-4": 29,
+    "REL-1": 17,
+    "TRU-3": 15
+   },
+   "by_stage": null,
+   "by_action": null,
+   "by_profile_field": null,
+   "quotes": [
+    {
+     "id": "youtube-UgwCTQHB3ot64iAx2HB4AaABAg",
+     "text": "सर मेरी SIP कैंसिल हुई है और रीस्टार्ट बता रही है तो उसको कैसे रीस्टार्ट करें फिर से चालू कैसे करेंरीस्टार्ट कर रहा हूं तो ओटीपी मांग रहा है तो ओटीपी कैसे डालेंइसके बारे में बताइए नासर",
+     "excerpt": false,
+     "evidence_span": "ओटीपी मांग रहा है तो ओटीपी कैसे डालें"
+    },
+    {
+     "id": "playstore-zerodha_coin-4d60d677-1b8c-4284-bccd-fed408bbcf03",
+     "text": "Not good for the investment and SIP not working properly, After successful authentication of OTP , application asking multiple times the same process, unable to sell the units properly.",
+     "excerpt": false,
+     "evidence_span": "application asking multiple times the same process"
+    },
+    {
+     "id": "reddit-1vhvdd2",
+     "text": "I recently started the Invesco SIP. Groww didn't give me an option to create a separate mandate, and asked me to make the first Invesco instalment manually, which I have already done. Now I'm confused about what happens with future Invesco instalments. Groww support/chatbot is giving me conflicting advice.",
+     "excerpt": true,
+     "evidence_span": "I'm confused about what happens with future Invesco instalments"
+    }
+   ],
+   "quote_caps": {
+    "stated_dropoff": 0,
+    "money": 0
+   },
+   "quote_candidates": 252,
+   "summary": {
+    "generated": true,
+    "text": "Inside the app, investors are most often confused by what pause, skip, cancel and delete will do, by numbers that do not match what they paid, by mandate terms and dates, by errors that give no reason, and by the difference between an AMC SIP and an app SIP.",
+    "cited_ids": [
+     "tradingqna-270207",
+     "reddit-1q3iubg",
+     "youtube-Ugwqc3BOxdu2aunAMYh4AaABAg",
+     "playstore-zerodha_coin-d514130c-4e7e-4127-ba8e-92edbe3a5f25",
+     "reddit-1hetw1m"
+    ]
+   },
+   "gap_note": null,
+   "research_link": "track-Q5",
+   "all_ids": [
+    "playstore-angel_one-34b80039-34c3-48ff-b73f-cbad3af2fd6d",
+    "playstore-angel_one-cce86865-e058-4554-9758-c5c03535bf13",
+    "playstore-et_money-1d3d45a5-2b58-4c50-a5b8-e6e1c02b5b74",
+    "playstore-et_money-3fdabc38-2324-4ede-aabe-f9bbfb3a0c0e",
+    "playstore-et_money-42f7c369-ebae-42ac-809a-744af956977a",
+    "playstore-et_money-4993a233-662c-4015-88c5-e3f053e39033",
+    "playstore-et_money-4e677cc6-7309-4202-a2a9-6342fdb6cedb",
+    "playstore-et_money-4edb6db1-c44c-43d7-ad23-46f249efcdee",
+    "playstore-et_money-6be009a0-e105-4a16-a180-9ed479e05634",
+    "playstore-et_money-75e30f36-df10-4016-bbdc-d3483d590829",
+    "playstore-et_money-7a9393c4-9afa-49c7-80e4-d12ac6e1a0e3",
+    "playstore-et_money-7d37f7d9-3836-4071-8398-67b7292bbbc2",
+    "playstore-et_money-84282d9e-e965-4139-9b47-4b9caa62a6d1",
+    "playstore-et_money-95357bee-cbcf-49ab-938f-a28a83150948",
+    "playstore-et_money-95ad3f87-e4cf-4528-bbba-284c14179f52",
+    "playstore-et_money-d354ab56-015c-430d-85ce-3923472817ec",
+    "playstore-et_money-eeaa22b7-6d8a-4fc6-8b50-f6fbd8baf0da",
+    "playstore-et_money-f1bacb4e-7e41-4a00-b7be-8603e01f31be",
+    "playstore-groww-02d756db-bd06-45ad-9575-499892aa93f6",
+    "playstore-groww-1b25b5c2-2c11-450e-8d91-95d5f76dac65",
+    "playstore-groww-44cf2908-a553-4a3b-8909-604f853d4b63",
+    "playstore-groww-66aca4e9-e96a-4e94-ada8-dd661f1f3d02",
+    "playstore-groww-6dcd3916-8204-4c9d-b85e-ca278c976a32",
+    "playstore-groww-e10390c4-9c4e-4406-a83d-bda8dc96ce29",
+    "playstore-groww-e14905a2-2364-4e69-bdca-206d85d8a7ac",
+    "playstore-paytm_money-3bfa42df-63ce-47b3-9877-16a59ae21378",
+    "playstore-paytm_money-45fa5327-857c-406d-8640-302b2f242caa",
+    "playstore-paytm_money-57377ec4-9e48-43a1-a195-00a23c07b6c5",
+    "playstore-paytm_money-610a329b-f354-4042-beca-3b90999e5a7f",
+    "playstore-paytm_money-779c94a7-3381-4376-b8f8-7f6a43d244d3",
+    "playstore-paytm_money-8d4ce078-3dcb-45af-8e38-4c1ad8f10d6a",
+    "playstore-paytm_money-b528355f-183c-460b-ab70-5c46f7f2ce80",
+    "playstore-paytm_money-d2301d8d-c2e3-4a12-912c-2cd08aa09268",
+    "playstore-paytm_money-d77fff0e-8a48-42c9-a4a0-fd7cefe44484",
+    "playstore-paytm_money-fb114473-3a5a-4d87-8122-a884f1c1e5bd",
+    "playstore-zerodha_coin-04e6da88-f882-49e3-986d-66ebc955ad14",
+    "playstore-zerodha_coin-0f9db117-4707-4f1f-bdbc-f1601d8c3ae7",
+    "playstore-zerodha_coin-252f60e3-817c-4297-94d4-db34996a5882",
+    "playstore-zerodha_coin-2837b7c2-6467-45b6-826f-33f4ec388b57",
+    "playstore-zerodha_coin-284e67ee-4088-401a-ad4a-bd14796b7bb8",
+    "playstore-zerodha_coin-2bbf004b-9cf7-42cd-a6d9-5ee23d53a85d",
+    "playstore-zerodha_coin-3c64a315-bf08-4dab-8728-fd8cd0a5b7a5",
+    "playstore-zerodha_coin-3f4a9a73-a019-4289-9950-e9f4c9ed3866",
+    "playstore-zerodha_coin-45fbfee2-0eeb-4bcf-94d9-4c1fc7194fbd",
+    "playstore-zerodha_coin-4d60d677-1b8c-4284-bccd-fed408bbcf03",
+    "playstore-zerodha_coin-5af14140-0e12-4a65-8bcb-7611fe3e0448",
+    "playstore-zerodha_coin-70b5ed00-7c26-41bb-9ba9-ca52c6ad4a28",
+    "playstore-zerodha_coin-759094e9-931c-4240-bcab-9fc81c724c02",
+    "playstore-zerodha_coin-8e4674b9-4cdf-43ef-9cf8-f15fc95b1c35",
+    "playstore-zerodha_coin-96505c21-f829-4966-be47-b01530173a02",
+    "playstore-zerodha_coin-a36db334-a782-4452-be60-fca9412d46e1",
+    "playstore-zerodha_coin-a4920f4b-0ad6-4a5e-aaba-cd58aad2b076",
+    "playstore-zerodha_coin-ac96c7c9-e7c5-4a71-909d-1269f6f31e50",
+    "playstore-zerodha_coin-ade2232e-7425-4c5f-9fd4-bacd7a9ef15e",
+    "playstore-zerodha_coin-b22c0b3b-3cc7-47f6-93ed-84caaa3f7205",
+    "playstore-zerodha_coin-b7635a01-038c-41c6-9363-9a8adcee985f",
+    "playstore-zerodha_coin-bdebc4b0-5495-4ec5-a79b-693835f26389",
+    "playstore-zerodha_coin-be4d21cf-0436-4533-8c02-03a45b4bed86",
+    "playstore-zerodha_coin-c238809b-61a2-4cb5-9666-158e488fe9fd",
+    "playstore-zerodha_coin-c3bc6dcc-ed7e-4595-a3d0-ffa1f8fedfe4",
+    "playstore-zerodha_coin-d1b97377-e113-4a3c-ada0-37e6add1542b",
+    "playstore-zerodha_coin-d514130c-4e7e-4127-ba8e-92edbe3a5f25",
+    "playstore-zerodha_coin-e00e8f13-25d7-4ee2-95ea-9bd088e2877a",
+    "playstore-zerodha_coin-e05d33fc-0a19-407c-b90a-80e37ffcb0d6",
+    "playstore-zerodha_coin-eb7c16ec-1ed0-47c4-8d63-5e6c3eba53f0",
+    "playstore-zerodha_coin-ee43574e-f168-4199-91c0-12b2e1fa28d2",
+    "playstore-zerodha_coin-f23316b8-0a66-4bf6-8a5c-6121c26e8603",
+    "reddit-171ti46",
+    "reddit-1anfqam",
+    "reddit-1aor3zi",
+    "reddit-1bk5ama",
+    "reddit-1bs2bu0",
+    "reddit-1cm84ot",
+    "reddit-1d1183w",
+    "reddit-1dxa3a7",
+    "reddit-1ehf28h",
+    "reddit-1esk1kp",
+    "reddit-1evayzx",
+    "reddit-1f5i9dv",
+    "reddit-1fjurp1",
+    "reddit-1fwzi9e",
+    "reddit-1gc0c6b",
+    "reddit-1gpip7l",
+    "reddit-1h2ht84",
+    "reddit-1h4t6nw",
+    "reddit-1h6bre7",
+    "reddit-1hcgq2k",
+    "reddit-1hetw1m",
+    "reddit-1hgezmp",
+    "reddit-1hggk6i",
+    "reddit-1hsmrw9",
+    "reddit-1hty7ro",
+    "reddit-1imffgq",
+    "reddit-1iq4ptz",
+    "reddit-1jlom36",
+    "reddit-1kjv1ij",
+    "reddit-1l19u07",
+    "reddit-1l7ugwl",
+    "reddit-1lqz1be",
+    "reddit-1lz55me",
+    "reddit-1mpnz39",
+    "reddit-1mqp190",
+    "reddit-1mxqg4g",
+    "reddit-1nzgx4g",
+    "reddit-1oa6yyt",
+    "reddit-1ochaab",
+    "reddit-1oqnm2t",
+    "reddit-1p106vf",
+    "reddit-1p56a6e",
+    "reddit-1pntay7",
+    "reddit-1q3iubg",
+    "reddit-1qsr5ej",
+    "reddit-1qsxi9q",
+    "reddit-1qy5uvi",
+    "reddit-1rfv3xe",
+    "reddit-1rhxh1a",
+    "reddit-1rng5hl",
+    "reddit-1ro2wbc",
+    "reddit-1s55xjz",
+    "reddit-1s9vhn2",
+    "reddit-1te0ckm",
+    "reddit-1ttl62i",
+    "reddit-1twvd2p",
+    "reddit-1u595qp",
+    "reddit-1ubqz7v",
+    "reddit-1um7gum",
+    "reddit-1vhvdd2",
+    "reddit-1w2aylc",
+    "reddit-1wkfwky",
+    "reddit-1wnj5ds",
+    "reddit-1xgognl",
+    "reddit-7is3i3",
+    "reddit-8mxpdd",
+    "reddit-8uthl6",
+    "reddit-b4j439",
+    "reddit-c6g1nf",
+    "reddit-dryrun-1v8qjop",
+    "reddit-dryrun-1va6ieh",
+    "reddit-dryrun-1viok2u",
+    "reddit-dryrun-1vn6ilr",
+    "reddit-dryrun-1vtc0ns",
+    "reddit-dryrun-1vwc5qf",
+    "reddit-dryrun-1w1d9k0",
+    "reddit-dryrun-1w6rdoo",
+    "reddit-dryrun-1w7vfpp",
+    "reddit-dryrun-1we566s",
+    "reddit-dryrun-1wm21zn",
+    "reddit-dryrun-1wnbxmo",
+    "reddit-dryrun-1x4nu3r",
+    "reddit-dryrun-1x6amwx",
+    "reddit-dryrun-1x8d08v",
+    "reddit-dryrun-1x9rq0f",
+    "reddit-dryrun-1xarkf8",
+    "reddit-mai9ug",
+    "reddit-pc42mx",
+    "reddit-scov34",
+    "reddit-tst586",
+    "reddit-w9rjhl",
+    "tradingqna-103065",
+    "tradingqna-116826",
+    "tradingqna-117919",
+    "tradingqna-121223",
+    "tradingqna-127321",
+    "tradingqna-129443",
+    "tradingqna-136239",
+    "tradingqna-136312",
+    "tradingqna-141049",
+    "tradingqna-149109",
+    "tradingqna-183507",
+    "tradingqna-185351",
+    "tradingqna-270207",
+    "tradingqna-305357",
+    "tradingqna-307874",
+    "tradingqna-329431",
+    "tradingqna-343467",
+    "tradingqna-35704",
+    "tradingqna-35785",
+    "tradingqna-361591",
+    "tradingqna-363884",
+    "tradingqna-365526",
+    "tradingqna-369330",
+    "tradingqna-381928",
+    "tradingqna-394662",
+    "tradingqna-39941",
+    "tradingqna-405535",
+    "tradingqna-42004",
+    "tradingqna-42167",
+    "tradingqna-432484",
+    "tradingqna-43776",
+    "tradingqna-45536",
+    "tradingqna-465444",
+    "tradingqna-470483",
+    "tradingqna-481961",
+    "tradingqna-503708",
+    "tradingqna-515714",
+    "tradingqna-519243",
+    "tradingqna-542497",
+    "tradingqna-61323",
+    "tradingqna-80090",
+    "tradingqna-92190",
+    "youtube-Ugw9dQ063mfm9j8sSct4AaABAg",
+    "youtube-UgwAcCjtB7xPYJxZJwl4AaABAg",
+    "youtube-UgwCTQHB3ot64iAx2HB4AaABAg",
+    "youtube-UgwNcLsCqHTJsOZ-eqF4AaABAg",
+    "youtube-UgwQewUNfTyGMqBdSbl4AaABAg",
+    "youtube-UgwZq-0dc-uxB2mPX5t4AaABAg",
+    "youtube-UgwdkkkTooHxoSHWYWF4AaABAg",
+    "youtube-Ugwj-ynFTE74qDSZheN4AaABAg.AC2Dg5cIUQ3ACHDl3KbzZF",
+    "youtube-Ugwj-ynFTE74qDSZheN4AaABAg.AC2Dg5cIUQ3ACm5zpdc_vI",
+    "youtube-UgwpA3w2AYwbbF0kBJ54AaABAg",
+    "youtube-Ugwqc3BOxdu2aunAMYh4AaABAg",
+    "youtube-UgwyiZGPZh1-ZY5jjrF4AaABAg",
+    "youtube-Ugx5PE8dNCfI5lT_f4d4AaABAg",
+    "youtube-Ugx5rDuMatVJUKt4JSp4AaABAg",
+    "youtube-UgxHMYVuobald0KZegZ4AaABAg",
+    "youtube-UgxIBP1suZ38xr_DfPx4AaABAg",
+    "youtube-UgxOQgnu3I2pvTLWEeR4AaABAg",
+    "youtube-UgxSiojE1ucQVo4fciZ4AaABAg",
+    "youtube-UgxVwFn1U5Nsibr4DjV4AaABAg",
+    "youtube-UgxXa9qCwaI_5TyEjXB4AaABAg",
+    "youtube-UgxZGsYIGFd_WVAedMt4AaABAg",
+    "youtube-Ugxqq3Xaa8hedpAHli14AaABAg",
+    "youtube-UgxsPyTD-KddBcUgrVx4AaABAg",
+    "youtube-UgxsPyTD-KddBcUgrVx4AaABAg.9xUuZLcG8iMA-UEh6LwfH5",
+    "youtube-UgxuAxK5KVrqzBvsqip4AaABAg",
+    "youtube-Ugy0p-2OMgHB891H9oZ4AaABAg",
+    "youtube-Ugy3Rn-OwzszvwIsoKV4AaABAg",
+    "youtube-Ugy3bchI8tGoqpSdYs14AaABAg",
+    "youtube-UgyDxSyMTxzGe5Vau994AaABAg",
+    "youtube-UgyJTCjviEtf9GJTKPh4AaABAg",
+    "youtube-UgyO7JU8pFoCO2TAx3d4AaABAg",
+    "youtube-UgyQ731BpkmAXaJRP_x4AaABAg",
+    "youtube-UgyQ7udDuMDVa1-8INN4AaABAg",
+    "youtube-UgyVhO6-fX3YwectY7Z4AaABAg",
+    "youtube-UgybE5X3VXCbUg93GFN4AaABAg",
+    "youtube-Ugyd8MztEHX_YwXaQLJ4AaABAg",
+    "youtube-Ugyj4Pj0MD01VYtO3zl4AaABAg",
+    "youtube-UgypDWGmoOfCpAImH9d4AaABAg",
+    "youtube-UgyvpV0b3fgplUGecdF4AaABAg",
+    "youtube-UgyzOGx7H_bc2vecdVd4AaABAg",
+    "youtube-Ugz0NLhZCNNPI2J9aCx4AaABAg",
+    "youtube-Ugz2vAiJGfM6TfEMsv94AaABAg",
+    "youtube-Ugz4LIV2vmKT3BKd1414AaABAg",
+    "youtube-Ugz9jMtlrsnku1P8vOB4AaABAg",
+    "youtube-UgzGJKrF_gi_sXfBy0d4AaABAg",
+    "youtube-UgzGvIWPrrzJuP7-P-V4AaABAg",
+    "youtube-UgzI68RjgyAuZOtQj7R4AaABAg",
+    "youtube-UgzIr1fPIG3f1bvE3nt4AaABAg",
+    "youtube-UgzLqlTirQvEYGa5DlF4AaABAg.ADi8KkwBhL_AE4UMwsD4pY",
+    "youtube-UgzV52_w0OJaVz1Ee7p4AaABAg",
+    "youtube-UgzVusgSS95QG-F5xjZ4AaABAg",
+    "youtube-UgzYjWDg9e3mbJbfZo54AaABAg",
+    "youtube-UgzaEuIb2ssx2A38mSR4AaABAg",
+    "youtube-UgzduUcWSlwE6lFecgZ4AaABAg",
+    "youtube-Ugznl_NxgrUJKpfBqZN4AaABAg",
+    "youtube-UgzqschJRHqcSlmf3Gp4AaABAg",
+    "youtube-Ugzv4alq-U7Z41RN-Kp4AaABAg",
+    "youtube-UgzyZGl7KOpwbB8iewt4AaABAg"
+   ]
+  },
+  {
+   "id": "Q6",
+   "question": "What do they do outside the app when they feel unsure?",
+   "criteria": "posts stating an action beyond posting: contacting support, the bank, a branch or the regulator",
+   "evidence_count": 24,
+   "denominator": 784,
+   "status_by_count": "answered",
+   "status": "partly_answered",
+   "status_cap_reason": "The corpus was collected from forums and video comments, so asking the community is built into the data and cannot be counted as a finding; only actions beyond posting are counted, and those are few.",
+   "channel_split": {
+    "reddit": 18,
+    "play_store": 2,
+    "tradingqna": 4,
+    "youtube": 0
+   },
+   "by_problem": {
+    "TRU-4": 13,
+    "REL-1": 7,
+    "TRU-1": 7,
+    "REL-4": 5,
+    "REL-3": 4,
+    "EDU-3": 3,
+    "TRU-2": 3,
+    "REL-5": 2
+   },
+   "by_stage": null,
+   "by_action": {
+    "contacted_support": 8,
+    "contacted_bank": 4,
+    "contacted_bank_and_support_manual_invest": 1,
+    "raised_ticket": 1,
+    "contacted_bank_and_support": 1,
+    "raised_ticket_and_keeps_competitor": 1,
+    "visited_branch": 1,
+    "raised_query": 1,
+    "refreshed_and_tried_support": 1,
+    "raised_issue_warned_others": 1
+   },
+   "by_profile_field": null,
+   "quotes": [
+    {
+     "id": "reddit-dryrun-1wtw6bu",
+     "text": "The bank says my KYC and everything is done, so I shouldn't have this issue. And the Zeroda team says it's a bank issue. So, I'm stuck in the middle. If there are other ways you guys know to automate payments, I'd be happy to know how you did the same. Risk appetite moderate",
+     "excerpt": true,
+     "evidence_span": "So, I'm stuck in the middle"
+    },
+    {
+     "id": "tradingqna-403177",
+     "text": "Tried Everything on Kotak Netbankimg+Mobile Banking Even Branch Manager wasn’t able to find any Nach/SI/Auto debit Any other Option to stop this Sip @sufimonks",
+     "excerpt": false,
+     "evidence_span": "able to find any Nach/SI/Auto debit"
+    },
+    {
+     "id": "playstore-zerodha_coin-be4d21cf-0436-4533-8c02-03a45b4bed86",
+     "text": "I placed 2 orders for buying mutual funds through payment gateway and both were rejected citing payment failure. After a week of successful transaction and money being deducted, I am getting a refund and a textbook reply on the ticket that order failed. They are not able to cite a proper reason.",
+     "excerpt": true,
+     "evidence_span": "a textbook reply on the ticket"
+    }
+   ],
+   "quote_caps": {
+    "stated_dropoff": 1,
+    "money": 1
+   },
+   "quote_candidates": 23,
+   "summary": {
+    "generated": true,
+    "text": "Beyond asking online, investors contact the platform's support, call or visit their bank, or complain to the market regulator. Several describe being passed between the bank, the platform and the fund house, or getting only automated replies, and some end up investing by hand while the problem stays open.",
+    "cited_ids": [
+     "reddit-dryrun-1wtw6bu",
+     "reddit-dryrun-1wtfugh",
+     "reddit-1de02u6",
+     "reddit-1oa6yyt",
+     "reddit-1wut1m2",
+     "reddit-1pgjnj9"
+    ]
+   },
+   "gap_note": "Investors who solved the problem quietly, or gave up without posting, are not visible. Interviews should ask where they went first when unsure and what finally resolved it.",
+   "research_link": "track-Q6",
+   "all_ids": [
+    "playstore-zerodha_coin-8e4674b9-4cdf-43ef-9cf8-f15fc95b1c35",
+    "playstore-zerodha_coin-be4d21cf-0436-4533-8c02-03a45b4bed86",
+    "reddit-1azpy53",
+    "reddit-1cikn3s",
+    "reddit-1d1183w",
+    "reddit-1de02u6",
+    "reddit-1h6bre7",
+    "reddit-1i08n3w",
+    "reddit-1mpnz39",
+    "reddit-1nwtv4d",
+    "reddit-1oa6yyt",
+    "reddit-1pgjnj9",
+    "reddit-1qy5uvi",
+    "reddit-1vhvdd2",
+    "reddit-1wut1m2",
+    "reddit-7is3i3",
+    "reddit-8d4kbt",
+    "reddit-dryrun-1vtc0ns",
+    "reddit-dryrun-1wtfugh",
+    "reddit-dryrun-1wtw6bu",
+    "tradingqna-351434",
+    "tradingqna-403177",
+    "tradingqna-481002",
+    "tradingqna-519243"
+   ]
+  },
+  {
+   "id": "Q7",
+   "question": "What separates investors who continue from those who quietly drop off?",
+   "criteria": "no cohort data: the corpus cannot compare investors who continue with those who drop off",
+   "evidence_count": 0,
+   "denominator": 784,
+   "status_by_count": "not_answered",
+   "status": "not_answered",
+   "status_cap_reason": null,
+   "channel_split": {
+    "reddit": 0,
+    "play_store": 0,
+    "tradingqna": 0,
+    "youtube": 0
+   },
+   "by_problem": {},
+   "by_stage": null,
+   "by_action": null,
+   "by_profile_field": null,
+   "quotes": [],
+   "quote_caps": {},
+   "quote_candidates": 0,
+   "summary": null,
+   "gap_note": "Public posts cannot compare investors who continue with those who stop: there is no cohort or account data, and people who quietly stop rarely post. A few posts describe continuing through a loss, but that is not a comparison. This needs interviews with both groups or Coin account data.",
+   "research_link": "track-Q7",
+   "all_ids": []
+  },
+  {
+   "id": "Q8",
+   "question": "How do these patterns differ across user segments (income stability, age, source of money, who influenced them)?",
+   "criteria": "posts that state an age, life stage, experience or income",
+   "evidence_count": 80,
+   "denominator": 784,
+   "status_by_count": "answered",
+   "status": "partly_answered",
+   "status_cap_reason": "Few posts state a profile, and income stability, source of money and influencers are almost never stated, so segments cannot be compared.",
+   "channel_split": {
+    "reddit": 76,
+    "play_store": 1,
+    "tradingqna": 2,
+    "youtube": 1
+   },
+   "by_problem": {
+    "EDU-1": 26,
+    "OUT-1": 12,
+    "OUT-2": 6,
+    "REL-3": 5,
+    "EDU-6": 5,
+    "REL-1": 4,
+    "REL-4": 4,
+    "OUT-3": 4
+   },
+   "by_stage": null,
+   "by_action": null,
+   "by_profile_field": {
+    "life_stage": 23,
+    "age": 46,
+    "experience": 14,
+    "income": 9
+   },
+   "quotes": [
+    {
+     "id": "reddit-1tty22u",
+     "text": "I'm exhausted and don't know what's left to do. I've been putting off writing this because it feels shameful, but the anxiety has become too much. I'm 27, earning ₹89k/month. My necessary living expenses are ₹50k/month. On paper that leaves ₹39k.",
+     "excerpt": true,
+     "evidence_span": "I'm 27, earning ₹89k/month"
+    },
+    {
+     "id": "tradingqna-309803",
+     "text": "I have 2 SIPs triggering every Friday of the week. After initial observation I want, one of them to be executed on Wednesday. I can’t find option to change that. We have option to change the frequency or pause the SIP but nothing on shifting he triggering day. Please let me know, I am a newbie. T...",
+     "excerpt": false,
+     "evidence_span": "I am a newbie"
+    },
+    {
+     "id": "youtube-UgweDZFBVsrasH-XWjF4AaABAg",
+     "text": "Sat sri akal sir Mai army mei hu Nj e wealth mei mera account hai aur mai monthly 20000 sip kr rha hu. Agar by chance future mei ye nj e wealth application band ho gei toh mere paisay ka kya hoga ? Sir mai boht confused hu Plzz Reply",
+     "excerpt": false,
+     "evidence_span": "Mai army mei hu"
+    }
+   ],
+   "quote_caps": {
+    "stated_dropoff": 1,
+    "money": 0
+   },
+   "quote_candidates": 79,
+   "summary": {
+    "generated": true,
+    "text": "Where investors say who they are, they describe themselves as new to investing, as students putting in pocket or internship money, as salaried earners, or as NRIs. Posts from students are mostly about disappointing returns or money pressure, and NRIs describe mandates or apps that do not support them.",
+    "cited_ids": [
+     "reddit-dryrun-1vzs60y",
+     "reddit-1snsc3u",
+     "reddit-1r4pdi5",
+     "reddit-1azpy53",
+     "reddit-1cp7hom",
+     "reddit-1gdszzq"
+    ]
+   },
+   "gap_note": "Comparing segments needs the segment asked directly, for example a short screener in interviews covering income stability, source of money and who influenced the decision to start.",
+   "research_link": "track-Q8",
+   "all_ids": [
+    "playstore-angel_one-34b80039-34c3-48ff-b73f-cbad3af2fd6d",
+    "reddit-18snp0k",
+    "reddit-1auec3w",
+    "reddit-1azpy53",
+    "reddit-1cp7hom",
+    "reddit-1dkghde",
+    "reddit-1evayzx",
+    "reddit-1fjurp1",
+    "reddit-1fwzi9e",
+    "reddit-1fz8se4",
+    "reddit-1gdszzq",
+    "reddit-1jdyltd",
+    "reddit-1kdnazh",
+    "reddit-1ko3rzy",
+    "reddit-1kq76fv",
+    "reddit-1lgva0e",
+    "reddit-1oa6yyt",
+    "reddit-1oydoph",
+    "reddit-1p56a6e",
+    "reddit-1pgjnj9",
+    "reddit-1ph7f98",
+    "reddit-1ptuyd8",
+    "reddit-1pxqdj9",
+    "reddit-1q9ro80",
+    "reddit-1q9wbbj",
+    "reddit-1r4pdi5",
+    "reddit-1s7ztsm",
+    "reddit-1sjb086",
+    "reddit-1sk2jhz",
+    "reddit-1snsc3u",
+    "reddit-1t0d98s",
+    "reddit-1tfp0nk",
+    "reddit-1tj7r18",
+    "reddit-1tm44vz",
+    "reddit-1tpvv0s",
+    "reddit-1tty22u",
+    "reddit-1ty9rdy",
+    "reddit-1u4lsou",
+    "reddit-1u6a88u",
+    "reddit-1ubqz7v",
+    "reddit-1usk5ef",
+    "reddit-1uwfj72",
+    "reddit-1v4jjzh",
+    "reddit-1varaq2",
+    "reddit-1w4j2w5",
+    "reddit-1wut1m2",
+    "reddit-dryrun-1nxn4qr",
+    "reddit-dryrun-1sx2woh",
+    "reddit-dryrun-1v739n0",
+    "reddit-dryrun-1v8roca",
+    "reddit-dryrun-1vasakw",
+    "reddit-dryrun-1viok2u",
+    "reddit-dryrun-1vjjelz",
+    "reddit-dryrun-1vpy8h0",
+    "reddit-dryrun-1vtcgjz",
+    "reddit-dryrun-1vubu1c",
+    "reddit-dryrun-1vzs60y",
+    "reddit-dryrun-1w1d9k0",
+    "reddit-dryrun-1w47pl1",
+    "reddit-dryrun-1w5at5y",
+    "reddit-dryrun-1w6zxxc",
+    "reddit-dryrun-1wdg52k",
+    "reddit-dryrun-1wfvfty",
+    "reddit-dryrun-1wgnrvz",
+    "reddit-dryrun-1wk2t9o",
+    "reddit-dryrun-1wn9c5r",
+    "reddit-dryrun-1wte69m",
+    "reddit-dryrun-1wvpw1n",
+    "reddit-dryrun-1wvtkds",
+    "reddit-dryrun-1x3rnvl",
+    "reddit-dryrun-1x6amwx",
+    "reddit-dryrun-1x7j8y1",
+    "reddit-dryrun-1x8d08v",
+    "reddit-dryrun-1xar55t",
+    "reddit-dryrun-1xarkf8",
+    "reddit-dryrun-1xd27xx",
+    "reddit-w9rjhl",
+    "tradingqna-309803",
+    "tradingqna-544228",
+    "youtube-UgweDZFBVsrasH-XWjF4AaABAg"
+   ]
+  },
+  {
+   "id": "Q9",
+   "question": "What unmet needs emerge consistently across conversations?",
+   "criteria": "posts in GAP-1 plus all feature requests",
+   "evidence_count": 44,
+   "denominator": 784,
+   "status_by_count": "answered",
+   "status": "answered",
+   "status_cap_reason": null,
+   "channel_split": {
+    "reddit": 3,
+    "play_store": 27,
+    "tradingqna": 12,
+    "youtube": 2
+   },
+   "by_problem": {
+    "GAP-1": 30,
+    "REL-5": 11,
+    "REL-4": 3,
+    "EDU-2": 2,
+    "EDU-5": 2,
+    "REL-1": 1,
+    "REL-3": 1,
+    "EDU-3": 1
+   },
+   "by_stage": null,
+   "by_action": null,
+   "by_profile_field": null,
+   "quotes": [
+    {
+     "id": "playstore-paytm_money-8d4ce078-3dcb-45af-8e38-4c1ad8f10d6a",
+     "text": "It used to be bug free app but recently this app has become full of bugs, i am not able to increase my SIP amount of many of my existing running SIPs, it is saying api failed. It also does not give options to skip your SIP or pause which is quite simpler in other app like Groww and Zerodha.",
+     "excerpt": true,
+     "evidence_span": "not able to increase my SIP amount of many of my existing running SIPs"
+    },
+    {
+     "id": "tradingqna-144478",
+     "text": "Kindly add automatic debit of funds facility to coin because without this, one has to manually transfer funds to coin especially if one has a SIP.",
+     "excerpt": false,
+     "evidence_span": "one has to manually transfer funds to coin"
+    },
+    {
+     "id": "youtube-UgzZVubzVVceXIQBXJR4AaABAg",
+     "text": "Aaj kal Paytm money me sip ka amount edit nahi kar pa rahe.Any update?",
+     "excerpt": false,
+     "evidence_span": "Paytm money me sip ka amount edit nahi kar pa rahe"
+    }
+   ],
+   "quote_caps": {
+    "stated_dropoff": 0,
+    "money": 0
+   },
+   "quote_candidates": 42,
+   "summary": {
+    "generated": true,
+    "text": "The same asks recur, mostly in Play Store reviews and TradingQnA: automatic debit from the bank and a true SIP on Coin, reminders before a payment is due, a pause longer than a single skip, and control over an SIP after starting it, such as changing the amount or date, switching funds or withdrawing systematically.",
+    "cited_ids": [
+     "tradingqna-173943",
+     "tradingqna-371637",
+     "playstore-zerodha_coin-e4449d7a-f7b8-42c0-b7ae-38cfd9915f70",
+     "playstore-groww-66aca4e9-e96a-4e94-ada8-dd661f1f3d02",
+     "tradingqna-309803",
+     "playstore-zerodha_coin-4b9286c4-46a7-4a35-870f-9ee71763ee2b"
+    ]
+   },
+   "gap_note": null,
+   "research_link": "track-Q9",
+   "all_ids": [
+    "playstore-et_money-b122e32e-ead0-4f9b-948b-54b0a35bf584",
+    "playstore-groww-44cf2908-a553-4a3b-8909-604f853d4b63",
+    "playstore-groww-66aca4e9-e96a-4e94-ada8-dd661f1f3d02",
+    "playstore-groww-d3e015d9-778a-4a1d-bc05-eaf12fd51b4b",
+    "playstore-groww-f1ca2f35-cdbb-4955-9bd8-8ca9f0241def",
+    "playstore-paytm_money-3bfa42df-63ce-47b3-9877-16a59ae21378",
+    "playstore-paytm_money-8d4ce078-3dcb-45af-8e38-4c1ad8f10d6a",
+    "playstore-zerodha_coin-07e93014-5342-4346-9259-3403f726c457",
+    "playstore-zerodha_coin-0d269280-0657-4ff3-a44d-3f7c1bdde5c4",
+    "playstore-zerodha_coin-0f9db117-4707-4f1f-bdbc-f1601d8c3ae7",
+    "playstore-zerodha_coin-1a7f100d-a5f9-485c-995d-13c660755fda",
+    "playstore-zerodha_coin-4b9286c4-46a7-4a35-870f-9ee71763ee2b",
+    "playstore-zerodha_coin-502c971c-de65-41c1-ab1f-57d133cc383a",
+    "playstore-zerodha_coin-52cf5617-d3c8-4bd4-82d4-e8791c04d4bd",
+    "playstore-zerodha_coin-70b5ed00-7c26-41bb-9ba9-ca52c6ad4a28",
+    "playstore-zerodha_coin-7961ba66-e228-4cc5-8a5d-21512a133e68",
+    "playstore-zerodha_coin-8a2531f7-ccdd-4213-bff3-79b3969d489e",
+    "playstore-zerodha_coin-9be64dec-9c26-468f-9cbd-5428a0c51a29",
+    "playstore-zerodha_coin-aa955a03-0ab6-43ac-9e03-fcd4fb44ce38",
+    "playstore-zerodha_coin-b89ecf4d-3351-4b3b-8f2d-08697f938126",
+    "playstore-zerodha_coin-bdebc4b0-5495-4ec5-a79b-693835f26389",
+    "playstore-zerodha_coin-bf0a4abc-a75a-44fd-8f7e-c1416b88769a",
+    "playstore-zerodha_coin-c238809b-61a2-4cb5-9666-158e488fe9fd",
+    "playstore-zerodha_coin-c55a1e9f-1941-42dc-a956-3793f349c24b",
+    "playstore-zerodha_coin-dd233931-8a5c-46d6-8904-a0f7c62926cd",
+    "playstore-zerodha_coin-e05d33fc-0a19-407c-b90a-80e37ffcb0d6",
+    "playstore-zerodha_coin-e4449d7a-f7b8-42c0-b7ae-38cfd9915f70",
+    "reddit-1fz1th6",
+    "reddit-1ofnnef",
+    "reddit-8d4kbt",
+    "tradingqna-116819",
+    "tradingqna-144478",
+    "tradingqna-173943",
+    "tradingqna-290885",
+    "tradingqna-309803",
+    "tradingqna-325377",
+    "tradingqna-371637",
+    "tradingqna-38834",
+    "tradingqna-443978",
+    "tradingqna-470046",
+    "tradingqna-482075",
+    "tradingqna-60038",
+    "youtube-UgyGMCT0UG6UOEGaIdR4AaABAg",
+    "youtube-UgzZVubzVVceXIQBXJR4AaABAg"
+   ]
   }
  ],
  "switch_flows": [
@@ -6510,6 +7754,226 @@
    "recency": "recent",
    "author_label": "YouTube commenter",
    "platform_subject": "nj_wealth",
+   "language": "hinglish",
+   "truncated_at_source": false
+  },
+  "youtube-Ugx42t45jjr796Al6U54AaABAg.9z6ovmbIN-iAYLuQ1I1dny": {
+   "id": "youtube-Ugx42t45jjr796Al6U54AaABAg.9z6ovmbIN-iAYLuQ1I1dny",
+   "channel": "youtube",
+   "source_url": "https://www.youtube.com/watch?v=wKW1Fk3_dwY",
+   "date": "2026-07-04",
+   "recency": "recent",
+   "author_label": "YouTube commenter",
+   "platform_subject": null,
+   "language": "english",
+   "truncated_at_source": false
+  },
+  "reddit-1uwfj72": {
+   "id": "reddit-1uwfj72",
+   "channel": "reddit",
+   "source_url": "https://www.reddit.com/r/IndianStockMarket/comments/1uwfj72/in_zerodha_coins_app_the_next_instalment_date_has/",
+   "date": "2026-07-14",
+   "recency": "recent",
+   "author_label": "Reddit user",
+   "platform_subject": "zerodha_coin",
+   "language": "english",
+   "truncated_at_source": false
+  },
+  "tradingqna-141049": {
+   "id": "tradingqna-141049",
+   "channel": "tradingqna",
+   "source_url": "https://tradingqna.com/t/48933",
+   "date": "2018-10-21",
+   "recency": "old",
+   "author_label": "TradingQnA user",
+   "platform_subject": "zerodha_coin",
+   "language": "english",
+   "truncated_at_source": false
+  },
+  "youtube-UgxWPh8KvTehCAwga7x4AaABAg": {
+   "id": "youtube-UgxWPh8KvTehCAwga7x4AaABAg",
+   "channel": "youtube",
+   "source_url": "https://www.youtube.com/watch?v=6jpCgC-PwS4",
+   "date": "2026-05-04",
+   "recency": "recent",
+   "author_label": "YouTube commenter",
+   "platform_subject": null,
+   "language": "english",
+   "truncated_at_source": false
+  },
+  "playstore-et_money-b122e32e-ead0-4f9b-948b-54b0a35bf584": {
+   "id": "playstore-et_money-b122e32e-ead0-4f9b-948b-54b0a35bf584",
+   "channel": "play_store",
+   "source_url": "https://play.google.com/store/apps/details?id=com.smartspends",
+   "date": "2026-03-25",
+   "recency": "recent",
+   "author_label": "Play Store reviewer",
+   "platform_subject": "etmoney",
+   "language": "english",
+   "truncated_at_source": false
+  },
+  "tradingqna-515714": {
+   "id": "tradingqna-515714",
+   "channel": "tradingqna",
+   "source_url": "https://tradingqna.com/t/190338",
+   "date": "2026-01-11",
+   "recency": "recent",
+   "author_label": "TradingQnA user",
+   "platform_subject": null,
+   "language": "english",
+   "truncated_at_source": false
+  },
+  "playstore-paytm_money-779c94a7-3381-4376-b8f8-7f6a43d244d3": {
+   "id": "playstore-paytm_money-779c94a7-3381-4376-b8f8-7f6a43d244d3",
+   "channel": "play_store",
+   "source_url": "https://play.google.com/store/apps/details?id=com.paytmmoney",
+   "date": "2026-08-11",
+   "recency": "recent",
+   "author_label": "Play Store reviewer",
+   "platform_subject": "paytm_money",
+   "language": "english",
+   "truncated_at_source": false
+  },
+  "reddit-1um7gum": {
+   "id": "reddit-1um7gum",
+   "channel": "reddit",
+   "source_url": "https://www.reddit.com/r/mutualfunds/comments/1um7gum/sip_expired_in_a_few_days/",
+   "date": "2026-07-03",
+   "recency": "recent",
+   "author_label": "Reddit user",
+   "platform_subject": "kuvera",
+   "language": "english",
+   "truncated_at_source": false
+  },
+  "tradingqna-365526": {
+   "id": "tradingqna-365526",
+   "channel": "tradingqna",
+   "source_url": "https://tradingqna.com/t/120947",
+   "date": "2022-08-02",
+   "recency": "old",
+   "author_label": "TradingQnA user",
+   "platform_subject": "zerodha_coin",
+   "language": "english",
+   "truncated_at_source": false
+  },
+  "youtube-UgwCTQHB3ot64iAx2HB4AaABAg": {
+   "id": "youtube-UgwCTQHB3ot64iAx2HB4AaABAg",
+   "channel": "youtube",
+   "source_url": "https://www.youtube.com/watch?v=dC77fLBOjAI",
+   "date": "2026-06-04",
+   "recency": "recent",
+   "author_label": "YouTube commenter",
+   "platform_subject": null,
+   "language": "hindi",
+   "truncated_at_source": false
+  },
+  "playstore-zerodha_coin-4d60d677-1b8c-4284-bccd-fed408bbcf03": {
+   "id": "playstore-zerodha_coin-4d60d677-1b8c-4284-bccd-fed408bbcf03",
+   "channel": "play_store",
+   "source_url": "https://play.google.com/store/apps/details?id=com.zerodha.coin",
+   "date": "2026-07-09",
+   "recency": "recent",
+   "author_label": "Play Store reviewer",
+   "platform_subject": "zerodha_coin",
+   "language": "english",
+   "truncated_at_source": false
+  },
+  "reddit-1vhvdd2": {
+   "id": "reddit-1vhvdd2",
+   "channel": "reddit",
+   "source_url": "https://www.reddit.com/r/mutualfunds/comments/1vhvdd2/groww_upi_autopay/",
+   "date": "2026-08-07",
+   "recency": "recent",
+   "author_label": "Reddit user",
+   "platform_subject": "groww",
+   "language": "english",
+   "truncated_at_source": false
+  },
+  "reddit-dryrun-1wtw6bu": {
+   "id": "reddit-dryrun-1wtw6bu",
+   "channel": "reddit",
+   "source_url": "https://www.reddit.com/r/MutualfundsIndia/comments/1wtw6bu/google_pay_mandate_issues/",
+   "date": "2026-09-30",
+   "recency": "recent",
+   "author_label": "Reddit user",
+   "platform_subject": "zerodha_coin",
+   "language": "english",
+   "truncated_at_source": false
+  },
+  "tradingqna-403177": {
+   "id": "tradingqna-403177",
+   "channel": "tradingqna",
+   "source_url": "https://tradingqna.com/t/113423",
+   "date": "2023-04-24",
+   "recency": "old",
+   "author_label": "TradingQnA user",
+   "platform_subject": null,
+   "language": "english",
+   "truncated_at_source": false
+  },
+  "playstore-zerodha_coin-be4d21cf-0436-4533-8c02-03a45b4bed86": {
+   "id": "playstore-zerodha_coin-be4d21cf-0436-4533-8c02-03a45b4bed86",
+   "channel": "play_store",
+   "source_url": "https://play.google.com/store/apps/details?id=com.zerodha.coin",
+   "date": "2024-06-11",
+   "recency": "old",
+   "author_label": "Play Store reviewer",
+   "platform_subject": "zerodha_coin",
+   "language": "english",
+   "truncated_at_source": false
+  },
+  "reddit-1tty22u": {
+   "id": "reddit-1tty22u",
+   "channel": "reddit",
+   "source_url": "https://www.reddit.com/r/personalfinanceindia/comments/1tty22u/27_yo_89kmonth_60k_cc_debt_wiped_out_my_savings/",
+   "date": "2026-06-01",
+   "recency": "recent",
+   "author_label": "Reddit user",
+   "platform_subject": null,
+   "language": "english",
+   "truncated_at_source": false
+  },
+  "tradingqna-309803": {
+   "id": "tradingqna-309803",
+   "channel": "tradingqna",
+   "source_url": "https://tradingqna.com/t/112444",
+   "date": "2021-06-19",
+   "recency": "old",
+   "author_label": "TradingQnA user",
+   "platform_subject": "zerodha_coin",
+   "language": "english",
+   "truncated_at_source": true
+  },
+  "playstore-paytm_money-8d4ce078-3dcb-45af-8e38-4c1ad8f10d6a": {
+   "id": "playstore-paytm_money-8d4ce078-3dcb-45af-8e38-4c1ad8f10d6a",
+   "channel": "play_store",
+   "source_url": "https://play.google.com/store/apps/details?id=com.paytmmoney",
+   "date": "2026-06-15",
+   "recency": "recent",
+   "author_label": "Play Store reviewer",
+   "platform_subject": "paytm_money",
+   "language": "english",
+   "truncated_at_source": false
+  },
+  "tradingqna-144478": {
+   "id": "tradingqna-144478",
+   "channel": "tradingqna",
+   "source_url": "https://tradingqna.com/t/50369",
+   "date": "2018-11-21",
+   "recency": "old",
+   "author_label": "TradingQnA user",
+   "platform_subject": "zerodha_coin",
+   "language": "english",
+   "truncated_at_source": false
+  },
+  "youtube-UgzZVubzVVceXIQBXJR4AaABAg": {
+   "id": "youtube-UgzZVubzVVceXIQBXJR4AaABAg",
+   "channel": "youtube",
+   "source_url": "https://www.youtube.com/watch?v=CPEatoLkXNI",
+   "date": "2022-11-04",
+   "recency": "old",
+   "author_label": "YouTube commenter",
+   "platform_subject": "paytm_money",
    "language": "hinglish",
    "truncated_at_source": false
   }

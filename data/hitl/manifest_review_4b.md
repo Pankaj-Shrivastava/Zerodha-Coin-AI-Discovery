@@ -24,7 +24,7 @@ Everything below is read from `data/processed/claims_manifest.json`. No prose ye
 | 6 | REL-3 | The app shows my holdings or values wrong, or not at all | 56 | high | – | Coin and other platforms | 5 (2 / 2) | 2 | Start 5 12+ 3 | 3 of 53 |
 | 7 | EDU-3 | I do not understand the mandate, dates or SIP terms | 55 | high | – | Platform mostly not stated | 2 (0 / 1) | 1 | Start 9 12+ 1 | 3 of 55 |
 | 8 | TRU-3 | My money is stuck: a refund, redemption or bank change will not go through | 54 | high | – | Coin and other platforms | 8 (1 / 5) | 5 | Start 4 M1–3 1 12+ 3 | 3 of 51 |
-| 9 | REL-4 | The app errors, breaks or is hard to use, and does not say why | 53 | high | – | Coin and other platforms | 9 (3 / 5) | 3 | Start 5 M1–3 1 12+ 4 | 3 of 52 |
+| 9 | REL-4 | The app errors, breaks or is hard to use, and does not say why | 53 | high | – | Coin and other platforms | 9 (3 / 5) | 3 | Start 5 M1–3 1 12+ 4 | 3 of 51 |
 | 10 | REL-2 | My money left, but units came late or at a later NAV | 51 | high | – | Coin and other platforms | 6 (3 / 3) | 1 | Start 7 M7–12 1 12+ 3 | 3 of 46 |
 | 11 | TRU-2 | My bank charged me a penalty for a failed SIP debit | 50 | high | Reddit 76% | Platform mostly not stated | 6 (0 / 1) | 18 | Start 2 M1–3 1 12+ 2 | 3 of 49 |
 | 12 | TRU-5 | Charges, upsells and pushes I did not expect | 43 | high | – | Coin and other platforms | 15 (2 / 13) | 2 | Start 3 M1–3 1 12+ 3 | 3 of 43 |

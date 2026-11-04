@@ -403,6 +403,17 @@ def main():
                     for (f, t), v in sorted(sw.items(), key=lambda x: (-len(x[1]), x[0]))]
     cause_split = {'counts': counter_dict(Counter(tg(k)['cause_type'] for k in with_friction)), 'denominator': len(with_friction)}
 
+    # stated moves away from / to Coin, with rule-selected quotes anchored on the switch span (or a friction span)
+    def coin_moves(side):
+        other = 'to' if side == 'from' else 'from'
+        flows = [x for x in switch_flows if x[side] == 'zerodha_coin']
+        ids = sorted(k for x in flows for k in x['ids'])
+        sp = lambda k: [tg(k)['evidence'].get('switch')] + fspans(k)
+        pick, caps, nc = pick_quotes(ids, sp)
+        return {'count': len(ids), 'denominator': N, 'by_platform': {x[other]: x['count'] for x in flows},
+                'all_ids': ids, 'quotes': pick, 'quote_caps': caps, 'quote_candidates': nc}
+    coin_switches = {'away': coin_moves('from'), 'to': coin_moves('to')}
+
     manifest = {
         'schema_version': '2.0', 'step': '4b (numbers and quotes; narratives pending 4c)',
         'rules': __doc__.split('Rules')[1].split('Usage:')[0].strip(),
@@ -411,6 +422,7 @@ def main():
         'switch_flows': switch_flows,
         'switch_summary': {'from_coin': sum(x['count'] for x in switch_flows if x['from'] == 'zerodha_coin'),
                            'to_coin': sum(x['count'] for x in switch_flows if x['to'] == 'zerodha_coin')},
+        'coin_switches': coin_switches,
         'cause_split': cause_split, 'quotes_index': quotes,
         'facets': {'groups': list(tm['groups']), 'problems': [p['id'] for p in problems], 'channels': CHANNELS,
                    'recency': list(RECENCY_RANK), 'stages': STAGES},
@@ -509,7 +521,7 @@ def main():
         for q in pr['quotes']:
             if q['id'] not in pr['all_ids']:
                 errs.append(f'{pr["id"]}: quote {q["id"]} not in problem')
-    for q in questions:
+    for q in questions + list(coin_switches.values()):
         for x in q['quotes']:
             if x['id'] not in q['all_ids']:
                 errs.append(f'{q["id"]}: quote {x["id"]} not in question evidence')
@@ -517,7 +529,7 @@ def main():
     for c, fn in RAW_FILES.items():
         for r in load_json('data', 'raw', fn):
             raw[r['id']] = r.get('verbatim_text') or r.get('review_text') or ''
-    for pr in problems + questions:
+    for pr in problems + questions + list(coin_switches.values()):
         for q in pr['quotes']:
             if q['id'] not in raw:
                 errs.append(f'quote {q["id"]}: not found in raw files')

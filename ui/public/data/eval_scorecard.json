@@ -1,0 +1,182 @@
+{
+ "rubric": "docs/evals.md §17",
+ "built_on": "2026-11-05",
+ "totals": {
+  "hallucination": 32.0,
+  "bias": 27.33,
+  "consistency": 25.0
+ },
+ "total": 84.33,
+ "points_measurable_now": {
+  "hallucination": 32,
+  "bias": 30,
+  "consistency": 25
+ },
+ "pending_checks": [
+  "UI traceability: every on-screen quote/number resolves to the manifest",
+  "No literals: no hardcoded %, ₹ amounts or user text in UI code"
+ ],
+ "verdict": "PENDING — cannot pass until pending checks are measured",
+ "checks": [
+  {
+   "dimension": "hallucination",
+   "check": "Quote integrity: every quote is an exact match/substring of its raw record",
+   "points": 12,
+   "score": 12.0,
+   "status": "90/90 (100.0%)",
+   "gate": true,
+   "pending": null,
+   "detail": "90 quotes across problems, questions and Coin switches"
+  },
+  {
+   "dimension": "hallucination",
+   "check": "Evidence spans: every tag span is an exact substring of its verbatim",
+   "points": 10,
+   "score": 10.0,
+   "status": "1653/1653 (100.0%)",
+   "gate": false,
+   "pending": null,
+   "detail": "all tagged records incl. gold spans"
+  },
+  {
+   "dimension": "hallucination",
+   "check": "UI traceability: every on-screen quote/number resolves to the manifest",
+   "points": 8,
+   "score": 0.0,
+   "status": "pending",
+   "gate": true,
+   "pending": "Step 6 (UI not yet rebuilt on the manifest)",
+   "detail": ""
+  },
+  {
+   "dimension": "hallucination",
+   "check": "Narrative claims: amounts, durations and % in generated text appear in cited posts or manifest",
+   "points": 6,
+   "score": 6.0,
+   "status": "143/143 (100.0%)",
+   "gate": false,
+   "pending": null,
+   "detail": "generated text carries no numbers at all (enforced at build); numbers come only from the manifest"
+  },
+  {
+   "dimension": "hallucination",
+   "check": "Citation completeness: id, source URL, channel, date or recency, anonymised author",
+   "points": 4,
+   "score": 4.0,
+   "status": "90/90 (100.0%)",
+   "gate": false,
+   "pending": null,
+   "detail": "PII scan of quote text: 0 hit(s) []"
+  },
+  {
+   "dimension": "bias",
+   "check": "Denominators and scope: every count states N; off-topic, hypothetical, needs-review and duplicates excluded",
+   "points": 8,
+   "score": 8.0,
+   "status": "33/33 (100.0%)",
+   "gate": false,
+   "pending": null,
+   "detail": "ids outside the counted base: 0"
+  },
+  {
+   "dimension": "bias",
+   "check": "Off-topic leakage inside problems (human-reviewed sample) <= 10%",
+   "points": 6,
+   "score": 6,
+   "status": "0 violation(s)",
+   "gate": false,
+   "pending": null,
+   "detail": "2 of 30 judged not to fit"
+  },
+  {
+   "dimension": "bias",
+   "check": "Tag dominance: no label on more than 40% of counted posts without human review",
+   "points": 4,
+   "score": 4,
+   "status": "0 violation(s)",
+   "gate": false,
+   "pending": null,
+   "detail": "largest label share: returns_disappointment 12.8%"
+  },
+  {
+   "dimension": "bias",
+   "check": "Channel dominance: claims with >70% from one channel carry a visible flag",
+   "points": 4,
+   "score": 4,
+   "status": "0 violation(s)",
+   "gate": false,
+   "pending": null,
+   "detail": "flagged claims: ['EDU-1', 'TRU-4', 'TRU-2', 'OUT-1', 'EDU-6', 'OUT-3', 'Q6', 'Q8']"
+  },
+  {
+   "dimension": "bias",
+   "check": "Churn grounding: high risk only with a stated SIP/platform signal; fund-level stops not counted as drop-off",
+   "points": 4,
+   "score": 4,
+   "status": "0 violation(s)",
+   "gate": false,
+   "pending": null,
+   "detail": "high without signal 0, fund in drop-off 0"
+  },
+  {
+   "dimension": "bias",
+   "check": "Agreement with humans (indicative, <50 human-checked records): precision >=85%, recall >=80%, kappa >=0.6",
+   "points": 4,
+   "score": 1.33,
+   "status": "1/3 (33.3%)",
+   "gate": false,
+   "pending": null,
+   "detail": "friction label precision 75% / recall 52% on 8 held-out gold (exact label match; scored); at problem level precision 92% / recall 69% (not scored); churn-risk kappa 0.9 on 48 records (held-out gold + review round). Low recall = AI tags catch the main problem and miss secondary ones, so secondary problems (e.g. support, unexpected debit) are likely undercounted."
+  },
+  {
+   "dimension": "consistency",
+   "check": "Recompute reconciliation: manifest counts equal counts recomputed from tagged posts",
+   "points": 8,
+   "score": 8,
+   "status": "0 violation(s)",
+   "gate": false,
+   "pending": null,
+   "detail": "independent recompute of membership, counts, channel splits, drop-off and N"
+  },
+  {
+   "dimension": "consistency",
+   "check": "Cross-screen equality (manifest part; UI part pending Step 6)",
+   "points": 8,
+   "score": 8,
+   "status": "0 violation(s)",
+   "gate": false,
+   "pending": null,
+   "detail": "problem cards vs research tracks, question links; UI screens checked in Step 6"
+  },
+  {
+   "dimension": "consistency",
+   "check": "Theme lineage: every listed id carries the stated tag (problems, stages, profiles, citations)",
+   "points": 6,
+   "score": 6.0,
+   "status": "1471/1471 (100.0%)",
+   "gate": false,
+   "pending": null,
+   "detail": ""
+  },
+  {
+   "dimension": "consistency",
+   "check": "No literals: no hardcoded %, ₹ amounts or user text in UI code",
+   "points": 5,
+   "score": 0.0,
+   "status": "pending",
+   "gate": false,
+   "pending": "Step 6 (baseline: current legacy UI has 108 % / ₹ literals and will be replaced)",
+   "detail": ""
+  },
+  {
+   "dimension": "consistency",
+   "check": "Evidence thresholds: ranked problems >=5 posts from >=2 channels (signals >=3); stage strips >=5 tenure-stated posts",
+   "points": 3,
+   "score": 3,
+   "status": "0 violation(s)",
+   "gate": false,
+   "pending": null,
+   "detail": ""
+  }
+ ]
+}

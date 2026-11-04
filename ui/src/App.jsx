@@ -1,140 +1,85 @@
-import React, { useState, useEffect } from 'react';
-import Header from './components/Header';
-import ExecutiveDiscovery from './components/ExecutiveDiscovery';
-import PlatformBenchmark from './components/PlatformBenchmark';
-import JourneyTimeline from './components/JourneyTimeline';
-import BehavioralArchetypes from './components/BehavioralArchetypes';
-import OpportunityTree from './components/OpportunityTree';
-import InterviewGuide from './components/InterviewGuide';
+import { useEffect, useState } from 'react';
+import Overview from './screens/Overview';
+import { num, day } from './lib/format';
+
+// the 5 screens (docs/ui_plan_v2.md, information architecture); built: screens with a component
+const SCREENS = [
+  { id: 'overview', label: 'Overview', component: Overview },
+  { id: 'explorer', label: 'Problem Explorer' },
+  { id: 'questions', label: "What We Know and Don't" },
+  { id: 'library', label: 'Evidence Library' },
+  { id: 'research', label: 'Next Research' },
+];
+
+const screenFromHash = () => {
+  const id = window.location.hash.replace('#', '').split('/')[0];
+  return SCREENS.some((s) => s.id === id) ? id : 'overview';
+};
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState('executive-discovery');
-  const [isLoading, setIsLoading] = useState(true);
-  const [isFading, setIsFading] = useState(false);
-
-  // Discovery State Data
-  const [qaData, setQaData] = useState([]);
-  const [platformData, setPlatformData] = useState([]);
-  const [journeyData, setJourneyData] = useState([]);
-  const [archetypesData, setArchetypesData] = useState([]);
-  const [treeData, setTreeData] = useState(null);
-  const [goldenSetData, setGoldenSetData] = useState([]);
-  const [verbatimsData, setVerbatimsData] = useState([]);
+  const [screen, setScreen] = useState(screenFromHash);
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    async function loadAllDiscoveryData() {
-      try {
-        const [
-          qaRes,
-          platRes,
-          journeyRes,
-          archRes,
-          treeRes,
-          goldenRes,
-          verbRes,
-        ] = await Promise.all([
-          fetch('/data/grounded_qa_synthesis.json'),
-          fetch('/data/platform_comparison.json'),
-          fetch('/data/journey_touchpoints_matrix.json'),
-          fetch('/data/user_archetypes_personas.json'),
-          fetch('/data/opportunities_tree.json'),
-          fetch('/data/golden_set_candidates.json'),
-          fetch('/data/grounded_verbatims.json'),
-        ]);
-
-        if (qaRes.ok) setQaData(await qaRes.json());
-        if (platRes.ok) setPlatformData(await platRes.json());
-        if (journeyRes.ok) setJourneyData(await journeyRes.json());
-        if (archRes.ok) setArchetypesData(await archRes.json());
-        if (treeRes.ok) setTreeData(await treeRes.json());
-        if (goldenRes.ok) setGoldenSetData(await goldenRes.json());
-        if (verbRes.ok) {
-          const verbs = await verbRes.json();
-          setVerbatimsData(verbs);
-        }
-      } catch (err) {
-        console.error('Error fetching discovery data:', err);
-      } finally {
-        setIsLoading(false);
-      }
-    }
-
-    loadAllDiscoveryData();
+    const onHash = () => { setScreen(screenFromHash()); window.scrollTo(0, 0); };
+    window.addEventListener('hashchange', onHash);
+    return () => window.removeEventListener('hashchange', onHash);
   }, []);
 
-  // Smooth tab transition
-  const handleTabChange = (tabId) => {
-    if (tabId === activeTab) return;
-    setIsFading(true);
-    setTimeout(() => {
-      setActiveTab(tabId);
-      setIsFading(false);
-    }, 120);
-  };
+  useEffect(() => {
+    Promise.all(['claims_manifest', 'eval_scorecard'].map((f) =>
+      fetch(`/data/${f}.json`).then((r) => { if (!r.ok) throw new Error(`${f}.json: ${r.status}`); return r.json(); })))
+      .then(([m, score]) => setData({ m, score }))
+      .catch((e) => setError(e.message));
+  }, []);
+
+  const cs = data?.m.corpus_summary;
+  const Screen = SCREENS.find((s) => s.id === screen).component;
 
   return (
-    <div className="min-h-screen bg-surface font-sans text-on-surface antialiased flex flex-col justify-between selection:bg-primary/20 selection:text-primary">
-
-      <Header
-        activeTab={activeTab}
-        setActiveTab={handleTabChange}
-      />
-
-      {/* Main Content Area */}
-      <main className="w-full pt-28 pb-16 px-4 lg:px-8 mx-auto max-w-[1440px] flex-1">
-        {isLoading ? (
-          <div className="flex flex-col items-center justify-center min-h-[50vh] gap-3">
-            <div className="w-10 h-10 border-[3px] border-primary/20 border-t-primary rounded-full animate-spin"></div>
-            <span className="font-sans text-sm text-on-surface-variant">
-              Loading discovery data…
-            </span>
-          </div>
-        ) : (
-          <div
-            className={`w-full mt-4 transition-opacity duration-150 ${isFading ? 'opacity-0' : 'opacity-100'}`}
-          >
-            {activeTab === 'executive-discovery' && (
-              <ExecutiveDiscovery qaData={qaData} />
-            )}
-            {activeTab === 'platform-benchmark' && (
-              <PlatformBenchmark
-                platformData={platformData}
-                verbatimsData={verbatimsData}
-              />
-            )}
-            {activeTab === '12-month-journey' && (
-              <JourneyTimeline journeyData={journeyData} />
-            )}
-            {activeTab === 'behavioral-archetypes' && (
-              <BehavioralArchetypes archetypesData={archetypesData} />
-            )}
-            {activeTab === 'opportunity-tree-ost' && (
-              <OpportunityTree
-                treeData={treeData}
-                verbatimsData={verbatimsData}
-              />
-            )}
-            {activeTab === 'interview-guide-golden-set' && (
-              <InterviewGuide
-                interviewGuideData={null}
-                goldenSetData={goldenSetData}
-              />
+    <div className="flex min-h-screen flex-col bg-canvas text-ink">
+      <header className="sticky top-0 z-30 border-b border-line bg-white" style={{ top: 'env(safe-area-inset-top, 0px)' }}>
+        <div className="mx-auto max-w-6xl px-4 pt-3 lg:px-8">
+          <div className="flex flex-wrap items-center gap-3">
+            <img src="/screen.png" alt="" className="h-9 w-9 shrink-0 rounded-lg object-contain" />
+            <div className="min-w-0">
+              <p className="text-base font-semibold leading-tight">Coin SIP discovery</p>
+              <p className="text-xs text-muted">Which problems to solve so more first-time investors stay with their SIP past 12 months</p>
+            </div>
+            {cs && (
+              <p className="ml-auto text-xs text-muted">
+                {num(cs.counted_N)} SIP-relevant posts · from {num(cs.collected_unique)} collected · {num(cs.channels)} channels · updated {day(cs.built_on)}
+              </p>
             )}
           </div>
-        )}
+          <nav className="-mb-px mt-2 flex gap-1 overflow-x-auto" aria-label="Screens">
+            {SCREENS.map((s) => (
+              <a key={s.id} href={`#${s.id}`} aria-current={s.id === screen ? 'page' : undefined}
+                className={`whitespace-nowrap border-b-2 px-3 py-2 text-sm ${s.id === screen ? 'border-ink font-semibold text-ink' : 'border-transparent text-muted hover:text-ink'}`}>
+                {s.label}
+              </a>
+            ))}
+          </nav>
+        </div>
+      </header>
+
+      <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-8 lg:px-8">
+        <p className="mb-6 rounded-lg bg-white px-3 py-2 text-xs text-muted ring-1 ring-line">
+          These are public posts and reviews, which lean towards complaints. Counts are mentions, not a share of all users.
+        </p>
+        {error && <p className="text-sm text-red-700">Could not load the data: {error}</p>}
+        {!error && !data && <p className="text-sm text-muted">Loading…</p>}
+        {data && (Screen
+          ? <Screen m={data.m} score={data.score} />
+          : <div className="rounded-xl border border-dashed border-line bg-white p-8 text-center text-sm text-muted">
+              This screen is being rebuilt from the grounded data and is not ready yet.
+            </div>)}
       </main>
 
-      {/* Footer */}
-      <footer className="w-full bg-white border-t border-outline-variant/30 py-3.5 px-4 lg:px-8 text-xs font-sans text-on-surface-variant">
-        <div className="max-w-[1440px] mx-auto flex items-center justify-between gap-3">
-          <div className="flex items-center gap-2.5">
-            <span className="font-semibold text-on-surface">Zerodha Coin</span>
-            <span>•</span>
-            <span>SIP Year-1 Retention Study</span>
-            <span>•</span>
-            <span className="text-secondary font-medium">2,759 real user voices · 826 verified quotes</span>
-          </div>
-          <span className="font-mono text-[11px] text-on-surface-variant">Problem Discovery Phase · 2026</span>
+      <footer className="border-t border-line bg-white px-4 py-3 text-xs text-muted lg:px-8" style={{ paddingBottom: 'calc(0.75rem + env(safe-area-inset-bottom, 0px))' }}>
+        <div className="mx-auto max-w-6xl">
+          Every number, quote and summary on these screens comes from the claims manifest built from the tagged posts. Generated summaries are labelled.
         </div>
       </footer>
     </div>

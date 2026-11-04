@@ -14,6 +14,8 @@ export default {
         body: ['Geist', 'sans-serif'],
       },
       colors: {
+        // rebuilt UI tokens
+        ink: '#14181F', muted: '#5B6472', line: '#E3E6EB', canvas: '#F6F7F9', link: '#1C5FD4',
         // Stitch Token System (Zerodha Clean Slate)
         'surface': '#F8F9FF',
         'surface-dim': '#CBDBF5',

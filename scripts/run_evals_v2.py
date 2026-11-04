@@ -57,13 +57,13 @@ def add(dim, name, points, kind, passed=None, total=None, violations=None, gate=
                     'gate': gate, 'pending': pending, 'detail': detail})
 
 
-all_quotes = [(o['id'], q) for o in M['problems'] + M['questions'] for q in o['quotes']]
+all_quotes = [(o['id'], q) for o in M['problems'] + M['questions'] for q in o['quotes']] +              [('switch-' + side, q) for side, o in M['coin_switches'].items() for q in o['quotes']]
 
 # ===================== 17.1 Hallucination (40) =====================
 ok = sum(1 for _, q in all_quotes if q['id'] in raw and q['text'] in norm(raw[q['id']]) and q['evidence_span'] in q['text']
          and (q['excerpt'] or q['text'] == norm(raw[q['id']])))
 add('hallucination', 'Quote integrity: every quote is an exact match/substring of its raw record', 12, 'rate', ok, len(all_quotes), gate=True,
-    detail=f'{len(all_quotes)} quotes across problems and questions')
+    detail=f'{len(all_quotes)} quotes across problems, questions and Coin switches')
 
 spans_total = spans_ok = 0
 for k, r in recs.items():
@@ -96,10 +96,11 @@ results[-1]['detail'] = f'PII scan of quote text: {len(pii_hits)} hit(s) {pii_hi
 
 # ===================== 17.2 Bias (30) =====================
 N = M['corpus_summary']['counted_N']
-bad_den = [p['id'] for p in M['problems'] if p.get('denominator') != N] + [q['id'] for q in M['questions'] if q.get('denominator') != N]
-member_ids = {k for p in M['problems'] for k in p['all_ids']} | {k for q in M['questions'] for k in q['all_ids']}
+SW = M['coin_switches']
+bad_den = [p['id'] for p in M['problems'] if p.get('denominator') != N] + [q['id'] for q in M['questions'] if q.get('denominator') != N] +           ['switch-' + s for s, o in SW.items() if o.get('denominator') != N]
+member_ids = {k for p in M['problems'] for k in p['all_ids']} | {k for q in M['questions'] for k in q['all_ids']} |              {k for o in SW.values() for k in o['all_ids']}
 leak = [k for k in member_ids if k not in C]
-claims = len(M['problems']) + len(M['questions']) + 1
+claims = len(M['problems']) + len(M['questions']) + len(SW) + 1
 add('bias', 'Denominators and scope: every count states N; off-topic, hypothetical, needs-review and duplicates excluded', 8, 'rate',
     claims - len(set(bad_den)) - (1 if leak else 0), claims, detail=f'ids outside the counted base: {len(leak)}')
 

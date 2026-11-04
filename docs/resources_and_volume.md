@@ -9,11 +9,11 @@
 
 | Source Channel | Primary File Path | Starting Volume | Newly Harvested | Current Master Volume | Delta Audit File |
 | :--- | :--- | :---: | :---: | :---: | :--- |
-| **YouTube Comments** | [`data/raw/youtube_comments_raw.json`](file:///c:/Users/panka/Documents/Pankaj_CodeSpace/AI_Projects/Zerodha-Coin-AI-Discovery/data/raw/youtube_comments_raw.json) | 384 | **+1,746** | **2,130** | [`youtube_delta.json`](file:///c:/Users/panka/Documents/Pankaj_CodeSpace/AI_Projects/Zerodha-Coin-AI-Discovery/data/raw/youtube_delta.json) |
-| **Reddit Communities** | [`data/raw/reddit_raw.json`](file:///c:/Users/panka/Documents/Pankaj_CodeSpace/AI_Projects/Zerodha-Coin-AI-Discovery/data/raw/reddit_raw.json) | 1,003 | **+759** | **1,762** | [`reddit_unscraped_delta.json`](file:///c:/Users/panka/Documents/Pankaj_CodeSpace/AI_Projects/Zerodha-Coin-AI-Discovery/data/raw/reddit_unscraped_delta.json)<br>[`reddit_second_batch_delta.json`](file:///c:/Users/panka/Documents/Pankaj_CodeSpace/AI_Projects/Zerodha-Coin-AI-Discovery/data/raw/reddit_second_batch_delta.json) |
-| **Google Play Store Reviews** | [`data/raw/playstore_reviews_raw.json`](file:///c:/Users/panka/Documents/Pankaj_CodeSpace/AI_Projects/Zerodha-Coin-AI-Discovery/data/raw/playstore_reviews_raw.json) | 1,026 | **+401** | **1,427** | [`playstore_reviews_delta.json`](file:///c:/Users/panka/Documents/Pankaj_CodeSpace/AI_Projects/Zerodha-Coin-AI-Discovery/data/raw/playstore_reviews_delta.json) |
+| **YouTube Comments** | [`data/raw/youtube_comments_raw.json`](file:///c:/Users/panka/Documents/Pankaj_CodeSpace/AI_Projects/Zerodha-Coin-AI-Discovery/data/raw/youtube_comments_raw.json) | 384 | **+1,746, then +1,191 (v3 queries)** | **3,321** | [`youtube_delta.json`](file:///c:/Users/panka/Documents/Pankaj_CodeSpace/AI_Projects/Zerodha-Coin-AI-Discovery/data/raw/youtube_delta.json) |
+| **Reddit Communities** | [`data/raw/reddit_raw.json`](file:///c:/Users/panka/Documents/Pankaj_CodeSpace/AI_Projects/Zerodha-Coin-AI-Discovery/data/raw/reddit_raw.json) | 1,003 | **+759, then +577 (batch 3)** | **2,339** | [`reddit_unscraped_delta.json`](file:///c:/Users/panka/Documents/Pankaj_CodeSpace/AI_Projects/Zerodha-Coin-AI-Discovery/data/raw/reddit_unscraped_delta.json)<br>[`reddit_second_batch_delta.json`](file:///c:/Users/panka/Documents/Pankaj_CodeSpace/AI_Projects/Zerodha-Coin-AI-Discovery/data/raw/reddit_second_batch_delta.json)<br>[`reddit_batch3_delta.json`](file:///c:/Users/panka/Documents/Pankaj_CodeSpace/AI_Projects/Zerodha-Coin-AI-Discovery/data/raw/reddit_batch3_delta.json) |
+| **Google Play Store Reviews** | [`data/raw/playstore_reviews_raw.json`](file:///c:/Users/panka/Documents/Pankaj_CodeSpace/AI_Projects/Zerodha-Coin-AI-Discovery/data/raw/playstore_reviews_raw.json) | 1,026 | **+401, then +295 (Coin app)** | **1,722** | [`playstore_reviews_delta.json`](file:///c:/Users/panka/Documents/Pankaj_CodeSpace/AI_Projects/Zerodha-Coin-AI-Discovery/data/raw/playstore_reviews_delta.json) |
 | **TradingQ&A Discourse Forum** | [`data/raw/tradingqna_raw.json`](file:///c:/Users/panka/Documents/Pankaj_CodeSpace/AI_Projects/Zerodha-Coin-AI-Discovery/data/raw/tradingqna_raw.json) | 346 | **+176** | **522** | [`tradingqna_delta.json`](file:///c:/Users/panka/Documents/Pankaj_CodeSpace/AI_Projects/Zerodha-Coin-AI-Discovery/data/raw/tradingqna_delta.json) |
-| **TOTAL RAW CORPUS** | — | **2,759** | **+3,082** | **5,841** | *Corpus expanded by +111.7%* |
+| **TOTAL RAW CORPUS** | — | **2,759** | **+5,145** | **7,904** | *Corpus expanded by +186.5%* |
 
 ---
 
@@ -66,6 +66,7 @@
 | App Name | Package ID | Google Play Store Link | Reviews Harvested | Primary Friction Modes Captured |
 | :--- | :--- | :--- | :---: | :--- |
 | **Paytm Money** | `com.paytmmoney` | [Play Store Link](https://play.google.com/store/apps/details?id=com.paytmmoney) | **318** | Auto-pay recurring mandate failures, ECS bounce penalties, confusion around settlement status. |
+| **Coin by Zerodha** | `com.zerodha.coin` | [Play Store Link](https://play.google.com/store/apps/details?id=com.zerodha.coin) | **295** | Added after finding the harvest had covered only the Kite trading app. Orders stuck in processing, autopay failures, missed-SIP reminders. |
 | **Zerodha Kite / Coin** | `com.zerodha.kite3` | [Play Store Link](https://play.google.com/store/apps/details?id=com.zerodha.kite3) | **312** | Demat unit crediting lag (T+2), web redirect friction, mandate setup delays, lack of in-app 1-click pause controls. |
 | **Angel One** | `com.msf.angelmobile` | [Play Store Link](https://play.google.com/store/apps/details?id=com.msf.angelmobile) | **284** | UI cluttered with F&O and equity trading, mandate dropouts, hidden charges perception. |
 | **ET Money** | `com.smartspends` | [Play Store Link](https://play.google.com/store/apps/details?id=com.smartspends) | **272** | Genius/Smart SIP switch fatigue, return tracking complexity, push notification overload. |
@@ -182,3 +183,16 @@ Every harvest executed during the intelligence expansion generated an isolated d
 | [`tradingqna_delta.json`](file:///c:/Users/panka/Documents/Pankaj_CodeSpace/AI_Projects/Zerodha-Coin-AI-Discovery/data/raw/tradingqna_delta.json) | TradingQ&A | **176** | Full body posts across 14 search queries, paginated Coin Category topics, and Varsity discussions. |
 | **TOTAL NEW RECORDS** | — | **3,082** | *All verified, deduplicated, and PII-sanitized.* |
 
+
+---
+
+## Addendum: Relevance-Focused Harvest (v3)
+
+| Source | Change | Result |
+| :--- | :--- | :--- |
+| Reddit (Apify, new token) | `scripts/harvest_reddit_batch3.js`: 12 first-person queries (e.g. "I stopped my SIP", "SIP not executed Coin") across 6 subreddits, server-side cap `maxTotalChargeUsd = $3.00` | 754 posts returned, 577 new. **Billed $3.00 of the $5.00 monthly credit ($2.00 unused).** About 35% of the new posts pass the strict relevance filter, against about 25% before |
+| Play Store | Added the Coin app `com.zerodha.coin` | +295 reviews |
+| TradingQ&A | 10 first-person queries added | 0 new records: saturated |
+| YouTube | 7 first-person / Hinglish queries added | +1,191 comments, but only about 4 pass the strict filter (high noise) |
+
+Strict relevance filter used for these figures: mentions SIP/mandate/auto-debit, is first-person, contains a lived-event word (stopped, paused, cancelled, bounce, penalty, missed, stuck, failed, ...), and is at least 100 characters.

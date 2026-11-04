@@ -155,7 +155,24 @@
 
 ---
 
-## 6. Edge-Case Validation Checklist
+## 6. Category E: Tagging, Relevance & Provenance Edge Cases (added in v2)
+
+| ID | Edge case | Handling protocol |
+| :-- | :-- | :-- |
+| E.1 | **Substring false positives** (e.g. `red` in "credited") | Use word-boundary matching; a single weak keyword never assigns a theme |
+| E.2 | **Record matches several categories** | Assign multiple tags with lower confidence, or `needs_review`; never pick the first match silently |
+| E.3 | **No rule matches** | Tag `unclassified`; never fall back to a default theme |
+| E.4 | **Off-topic but SIP-adjacent** (fund announcements, FD-vs-debt-fund questions, tax queries, trading app login bugs) | Tag `out_of_scope`; excluded from headline counts, kept in the corpus |
+| E.5 | **Question or advice request rather than lived experience** | Tag `voice = question / advice`; counts as context, not as evidence of a dropout event |
+| E.6 | **Wrong app harvested** (Kite trading app vs. Coin app) | Record `app_id` per review; `com.zerodha.coin` is the primary Zerodha source; Kite-only reviews are tagged by relevance |
+| E.7 | **Hinglish / Hindi verbatims** | Preserved as is; tagged with `language`; counted separately so English-only rules do not under-count them |
+| E.8 | **Truncated quote on screen** | Show an explicit excerpt marker; the link goes to the full source |
+| E.9 | **Tenure not stated** | `tenure_stage = unspecified`; the record never feeds a journey stage |
+| E.10 | **Quote on screen not found in corpus** | Build fails; the quote is removed or replaced with a real verbatim |
+| E.11 | **Human tag disagrees with auto tag** | The human tag wins; the disagreement is logged to refine the rules |
+| E.12 | **Promotional or survey-solicitation posts** | Tag `out_of_scope`; never used as user voice |
+
+## 7. Edge-Case Validation Checklist
 
 Before finalizing any normalized dataset, verify that the following edge-case tests pass:
 
@@ -168,4 +185,7 @@ Before finalizing any normalized dataset, verify that the following edge-case te
 [ ] Sarcastic high-star reviews correctly identified as friction signals
 [ ] Minimum length threshold enforced (≥15 characters, ≥4 words)
 [ ] Zero Apify billing exceeding $0.00
+[ ] No tag assigned by substring match or default fallback
+[ ] Every on-screen quote resolves to a verbatim ID (full-string match)
+[ ] Every on-screen number resolves to the claims manifest
 ```

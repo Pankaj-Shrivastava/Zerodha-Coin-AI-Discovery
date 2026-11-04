@@ -20,6 +20,7 @@ const path = require('path');
 const APPS = [
   // Original apps
   { id: 'com.zerodha.kite3',        name: 'Zerodha Kite/Coin', platformTag: 'zerodha_coin' },
+  { id: 'com.zerodha.coin',         name: 'Coin by Zerodha',   platformTag: 'zerodha_coin' },
   { id: 'com.nextbillion.groww',    name: 'Groww',             platformTag: 'groww'       },
   { id: 'com.msf.angelmobile',      name: 'Angel One',         platformTag: 'angel_one'   },
   { id: 'com.paytmmoney',           name: 'Paytm Money',       platformTag: 'paytm_money' },

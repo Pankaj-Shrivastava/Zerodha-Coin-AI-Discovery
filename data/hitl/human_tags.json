@@ -1,0 +1,1031 @@
+{
+ "description": "Reconciled gold set: only tags supported by the verbatim text. Human interpretations that are not stated in the text and AI-only inferences are excluded. Source of truth for tags: docs/hitl_tagged_verbatims.md.",
+ "churn_risk_rule": "high only when the text states a stop, an intent to leave, or a realised exit; medium when the text shows a loss/failure/lapse pattern without a stated intent; low when neutral, positive or clearly engaged.",
+ "adopted_friction_labels": [
+  "bank_penalty",
+  "cashflow_pressure",
+  "fund_restriction",
+  "mandate_failure",
+  "manual_payment_path_gap",
+  "missed_sip_no_reminder",
+  "pause_cancel_confusion",
+  "returns_disappointment",
+  "silent_mandate_failure",
+  "sip_not_executed",
+  "sip_order_auto_cancelled",
+  "sip_stuck_processing",
+  "support_failure",
+  "unexplained_debit",
+  "unit_allocation_delay"
+ ],
+ "provisional_friction_labels": [
+  "accidental_sip_deletion",
+  "autodebit_unavailable",
+  "autopay_failed_despite_balance",
+  "bank_min_balance_charges",
+  "distrust_of_fund_industry",
+  "elss_lock_in_surprise",
+  "exit_timing_uncertainty",
+  "failed_payment_fear",
+  "fd_comparison",
+  "forced_mandate_resetup_risk",
+  "funds_apparently_missing",
+  "insufficient_funds_on_sip_date",
+  "low_financial_knowledge",
+  "lumpsum_vs_sip_confusion",
+  "mandate_continuity_uncertainty",
+  "mandate_end_date_confusion",
+  "market_doubt",
+  "no_exit_guidance",
+  "notification_uncertainty",
+  "order_failed_no_reason",
+  "other:holdings_not_visible_in_mf_central",
+  "other:market_timing_stop",
+  "other:shift_to_direct_stocks",
+  "penalty_uncertainty",
+  "refund_delay",
+  "sip_creation_failed_with_error",
+  "sip_not_invested_in_time",
+  "statement_confusion",
+  "unclear_debit_cutoff_time",
+  "unclear_delete_meaning",
+  "unclear_mandate_terms",
+  "unexplained_failure"
+ ],
+ "reference_date": "2026-11-02",
+ "entries": [
+  {
+   "entry": 1,
+   "id": "reddit-1septyi",
+   "source_channel": "reddit",
+   "source_url": "https://www.reddit.com/r/mutualfunds/comments/1septyi/sip_autodebit_mandate_failed_and_resulted_in/",
+   "verbatim_text": "SIP Autodebit mandate failed and resulted in penalty. Take care.\nI had 5 SIPs with an autodebit mandate set on the 3rd of April. Due to insufficient balance in my account, an penalty of 1500 rupees was cut from my account. The bank also said they can't do anything to reverse it.\n\nPlease take care before setting the debit mandate. Missing SIPs are fine but the mandate shouldn't fail.\n\nThis is for everyone's knowledge",
+   "tags": {
+    "friction": [
+     "mandate_failure",
+     "bank_penalty",
+     "cashflow_pressure"
+    ],
+    "verbatim_type": "warning_education",
+    "relevance": "direct",
+    "journey_stage": "unspecified",
+    "cause_type": "mixed",
+    "language": "english",
+    "stated_churn": "none_stated",
+    "churn_scope": null,
+    "inferred_churn_risk": "low",
+    "inferred_churn_reason": "the user says \"Missing SIPs are fine\" and frames the problem as mandate setup, not as a reason to stop",
+    "insight_value": "high",
+    "product_addressable": "unclear",
+    "experienced_vs_hypothetical": "experienced",
+    "cost_status": "incurred",
+    "money_text": "₹1,500 · penalty (bank says it cannot reverse)",
+    "resolution_stated": "not_stated",
+    "user_action_stated": "warned_others",
+    "emotion_signal_stated_words": [],
+    "recency": "unknown",
+    "date_note": "not available (Reddit harvest stores no timestamp; text says \"3rd of April\", no year) · unknown",
+    "human_confirmed_tags": [
+     "mandate failed",
+     "penalty",
+     "missing SIPs",
+     "educational"
+    ]
+   },
+   "tag_source": "human+ai_reconciled",
+   "tag_confidence": 1.0
+  },
+  {
+   "entry": 2,
+   "id": "playstore-zerodha_coin-b3d4217c-d431-4b69-a902-274a1c966ddc",
+   "source_channel": "play_store",
+   "source_url": "https://play.google.com/store/apps/details?id=com.zerodha.coin",
+   "verbatim_text": "Its very slow. Mutual Funds are taking lot of time to reflect after buying, what funds I paid for yesterday are not reflecting till now. SIPs are also not executing, sip that was supposed to execute today has not executed. I planned to move here, but now I will search for another platform or use mfcentral. Zerodha Kite is working fine and I will keep using it.",
+   "tags": {
+    "friction": [
+     "unit_allocation_delay",
+     "sip_not_executed"
+    ],
+    "verbatim_type": "review",
+    "relevance": "direct",
+    "journey_stage": "start",
+    "cause_type": "structural_ux",
+    "language": "english",
+    "stated_churn": "intent_to_leave",
+    "churn_scope": "platform",
+    "inferred_churn_risk": "high",
+    "inferred_churn_reason": "failure on the first transactions, with named alternatives",
+    "insight_value": "high",
+    "product_addressable": "yes",
+    "experienced_vs_hypothetical": "experienced",
+    "cost_status": "incurred_temporary",
+    "money_text": "stuck_funds (amount not stated: \"funds I paid for yesterday are not reflecting\")",
+    "resolution_stated": "not_stated",
+    "user_action_stated": "plans_to_switch",
+    "emotion_signal_stated_words": [],
+    "recency": "recent",
+    "date_note": "2026-09-01 · platform · recent",
+    "human_confirmed_tags": [
+     "SIP execution issue",
+     "delay in unit reflection"
+    ]
+   },
+   "tag_source": "human+ai_reconciled",
+   "tag_confidence": 1.0
+  },
+  {
+   "entry": 3,
+   "id": "tradingqna-283989",
+   "source_channel": "tradingqna",
+   "source_url": "https://tradingqna.com/t/30718",
+   "verbatim_text": "I am trying to start a SIP through Zerodha Coin on Edelweiss Greater China Equity Offshore Fund . But when I am placing the order, it cancelled automatically. Here is the screenshot. Screenshot 2021-02-14 at 9.00.17 PM @ShubhS9 once more please help me by proving the right information. @Bhuvan",
+   "tags": {
+    "friction": [
+     "sip_order_auto_cancelled"
+    ],
+    "verbatim_type": "help_request",
+    "relevance": "indirect",
+    "journey_stage": "start",
+    "cause_type": "unclear",
+    "language": "english",
+    "stated_churn": "none_stated",
+    "churn_scope": null,
+    "inferred_churn_risk": "low",
+    "inferred_churn_reason": "a fund-specific blocker; the user is still trying to invest",
+    "insight_value": "low",
+    "product_addressable": "unclear",
+    "experienced_vs_hypothetical": "experienced",
+    "cost_status": "none",
+    "money_text": "none",
+    "resolution_stated": "not_stated",
+    "user_action_stated": "asked_forum",
+    "emotion_signal_stated_words": [],
+    "recency": "old",
+    "date_note": "2021-02-14 · platform · old",
+    "human_confirmed_tags": [
+     "auto cancellation issue",
+     "old verbatim"
+    ]
+   },
+   "tag_source": "human+ai_reconciled",
+   "tag_confidence": 1.0
+  },
+  {
+   "entry": 4,
+   "id": "youtube-UgwsX-lj2ctfdiAdJvR4AaABAg",
+   "source_channel": "youtube",
+   "source_url": "https://www.youtube.com/watch?v=HtUb3pTu32Y",
+   "verbatim_text": "Sir, I am investing from pass few months from zerodha coin\nMy sips status are still processing from 14-9-24\nAnd on 17-9-24 , 3 times ₹590 has been cut from my back account. A total ₹1770 by Indian Clearing.\n\nIt should cut 1200,1800,3000 right\n\nMy sips are \n1) ICICI Prudential Nifty 50 Index Fund - ₹1200\n2) Motilal Oswal mid cap - ₹ 1800\n3) Nippon India Small cap - ₹3000\n\nWhat should I do know? Please help",
+   "tags": {
+    "friction": [
+     "sip_stuck_processing",
+     "unexplained_debit"
+    ],
+    "verbatim_type": "help_request",
+    "relevance": "direct",
+    "journey_stage": "unspecified",
+    "cause_type": "structural_ux",
+    "language": "english",
+    "stated_churn": "none_stated",
+    "churn_scope": null,
+    "inferred_churn_risk": "medium",
+    "inferred_churn_reason": "an early investor losing money to unexplained debits while orders sit pending, and seeking help outside the app",
+    "insight_value": "high",
+    "product_addressable": "yes",
+    "experienced_vs_hypothetical": "experienced",
+    "cost_status": "incurred",
+    "money_text": "₹1,770 (3 × ₹590) · unexplained_debit (user attributes it to \"Indian Clearing\")",
+    "resolution_stated": "not_stated",
+    "user_action_stated": "asked_for_help",
+    "emotion_signal_stated_words": [],
+    "recency": "old",
+    "date_note": "Sep 2024 · text (harvested 2024-11-01) · old",
+    "human_confirmed_tags": [
+     "SIP processing stuck",
+     "unknown amount debited",
+     "old verbatim"
+    ]
+   },
+   "tag_source": "human+ai_reconciled",
+   "tag_confidence": 1.0
+  },
+  {
+   "entry": 5,
+   "id": "reddit-zgqr64",
+   "source_channel": "reddit",
+   "source_url": "https://www.reddit.com/r/IndiaInvestments/comments/zgqr64/auto_debit_stopped_working_for_sips_on_zerodha/",
+   "verbatim_text": "Auto Debit stopped working for SIPs on Zerodha | any alternatives\nFew months ago SIP though Zerodha/coin was seemless. Amount used to auto-debit from my account just befor the SIP date, now auto-debit stopped working due to some regulations. Currently I need to transfer money manually for each SIP, is there a workaround to automate this or a different platform that could auto-debit from account? Thanks!",
+   "tags": {
+    "friction": [
+     "other:autodebit_unavailable",
+     "manual_payment_path_gap"
+    ],
+    "verbatim_type": "help_request",
+    "relevance": "direct",
+    "journey_stage": "unspecified",
+    "cause_type": "external_third_party",
+    "language": "english",
+    "stated_churn": "intent_to_leave",
+    "churn_scope": "platform",
+    "inferred_churn_risk": "high",
+    "inferred_churn_reason": "every SIP now needs a manual action, which creates a recurring drop-off point, and the user is already looking for alternatives; 90 upvotes suggest the problem is shared",
+    "insight_value": "high",
+    "product_addressable": "unclear",
+    "experienced_vs_hypothetical": "experienced",
+    "cost_status": "none",
+    "money_text": "none",
+    "resolution_stated": "not_stated",
+    "user_action_stated": "manual_transfer_and_seeking_alternative",
+    "emotion_signal_stated_words": [],
+    "recency": "unknown",
+    "date_note": "not in the harvest · unknown (the post ID pattern suggests about late 2022; this is an unverified estimate, not used as a date)",
+    "human_confirmed_tags": [
+     "auto debit issue",
+     "date unavailable",
+     "seeking solution",
+     "regulation attributed by user"
+    ]
+   },
+   "tag_source": "human+ai_reconciled",
+   "tag_confidence": 1.0
+  },
+  {
+   "entry": 6,
+   "id": "playstore-zerodha_coin-9635ee97-6f6b-4d01-b3ee-b702e2e85cfe",
+   "source_channel": "play_store",
+   "source_url": "https://play.google.com/store/apps/details?id=com.zerodha.coin",
+   "verbatim_text": "My SIPs are being shown as processing since last 5 days. 2 out of 5 SIPs got processed but 3 of them are still processing. It has been 5 working days now. don ' t know what is the problem. Good app but it still needs a lot of improvement. Autopay has failed I don't know why, there is enough balance jn my bank account. Please fix these issues.",
+   "tags": {
+    "friction": [
+     "sip_stuck_processing",
+     "other:autopay_failed_despite_balance",
+     "other:unexplained_failure"
+    ],
+    "verbatim_type": "review",
+    "relevance": "direct",
+    "journey_stage": "unspecified",
+    "cause_type": "structural_ux",
+    "language": "english",
+    "stated_churn": "none_stated",
+    "churn_scope": null,
+    "inferred_churn_risk": "medium",
+    "inferred_churn_reason": "the user still says \"Good app\" and asks for fixes, but partial SIP execution (2 of 5) breaks investing consistency",
+    "insight_value": "medium",
+    "product_addressable": "yes",
+    "experienced_vs_hypothetical": "experienced",
+    "cost_status": "none",
+    "money_text": "none",
+    "resolution_stated": "not_stated",
+    "user_action_stated": "asked_for_fix",
+    "emotion_signal_stated_words": [],
+    "recency": "recent",
+    "date_note": "2026-06-06 · platform · recent (the text itself states the stuck duration, \"5 working days\", but no calendar date)",
+    "human_confirmed_tags": [
+     "SIPs stuck",
+     "autopay issue",
+     "unknown cause",
+     "no resolution mentioned",
+     "no further action mentioned"
+    ]
+   },
+   "tag_source": "human+ai_reconciled",
+   "tag_confidence": 1.0
+  },
+  {
+   "entry": 7,
+   "id": "tradingqna-460089",
+   "source_channel": "tradingqna",
+   "source_url": "https://tradingqna.com/t/169287",
+   "verbatim_text": "Hi, Previously I used to invest in MF with icici direct and from past few months I stopped it and started using coin to prevent exit load and all. Today when I check in MF central only the mf invested via icici are visible but not ones with coin. I basically replicated mostly same portfolio from icici but added 2 new funds but none are visible. But after sip is done I get messages from ppfas and all that units are credited to folio",
+   "tags": {
+    "friction": [
+     "other:holdings_not_visible_in_mf_central",
+     "other:statement_confusion"
+    ],
+    "verbatim_type": "help_request",
+    "relevance": "indirect",
+    "journey_stage": "unspecified",
+    "cause_type": "unclear",
+    "language": "english",
+    "stated_churn": "none_stated",
+    "churn_scope": null,
+    "inferred_churn_risk": "low",
+    "inferred_churn_reason": "the user still receives AMC messages that units are credited, so there is partial reassurance; the risk is eroding trust, not an exit",
+    "insight_value": "medium",
+    "product_addressable": "unclear",
+    "experienced_vs_hypothetical": "experienced",
+    "cost_status": "none",
+    "money_text": "none",
+    "resolution_stated": "not_stated",
+    "user_action_stated": "asked_forum",
+    "emotion_signal_stated_words": [],
+    "recency": "old",
+    "date_note": "2024-07-05 · platform · old (about 28 months before the reference date)",
+    "human_confirmed_tags": [
+     "user confusion",
+     "funds not reflecting"
+    ]
+   },
+   "tag_source": "human+ai_reconciled",
+   "tag_confidence": 1.0
+  },
+  {
+   "entry": 8,
+   "id": "youtube-Ugy8on5PDgsgNsL1p8V4AaABAg",
+   "source_channel": "youtube",
+   "source_url": "https://www.youtube.com/watch?v=HtUb3pTu32Y",
+   "verbatim_text": "I create SIP with Mandate 10-Sep-25. SIP not shown in the SIP tab and Mandate also shown processing. What can I do Now",
+   "tags": {
+    "friction": [
+     "sip_stuck_processing"
+    ],
+    "verbatim_type": "help_request",
+    "relevance": "direct",
+    "journey_stage": "start",
+    "cause_type": "unclear",
+    "language": "english",
+    "stated_churn": "none_stated",
+    "churn_scope": null,
+    "inferred_churn_risk": "low",
+    "inferred_churn_reason": "a setup-stage question with no elapsed time and no frustration language; it rises if the question stays unanswered",
+    "insight_value": "low",
+    "product_addressable": "unclear",
+    "experienced_vs_hypothetical": "experienced",
+    "cost_status": "none",
+    "money_text": "none",
+    "resolution_stated": "not_stated",
+    "user_action_stated": "asked_for_help",
+    "emotion_signal_stated_words": [],
+    "recency": "aging",
+    "date_note": "Sep 2025 · text (harvested 2025-11-01) · aging",
+    "human_confirmed_tags": [
+     "seeking advice",
+     "no clear visibility on order processing",
+     "future action confusion"
+    ]
+   },
+   "tag_source": "human+ai_reconciled",
+   "tag_confidence": 1.0
+  },
+  {
+   "entry": 9,
+   "id": "reddit-1mfi68r",
+   "source_channel": "reddit",
+   "source_url": "https://www.reddit.com/r/mutualfunds/comments/1mfi68r/sip_amount_not_deducted/",
+   "verbatim_text": "SIP amount not deducted\nHi all, I created 2 new SIPs on 30th July and linked it with e-mandate for auto debit on 2 Aug i.e. today in coin app. I also have 2 old SIPs for today. For the old SIP the order got placed yesterday and today the amounts got deducted. But for new SIPs neither the order is placed not amount is deducted. It doesn't even show in pending payments so that I can pay that myself.\n\nPlease help",
+   "tags": {
+    "friction": [
+     "sip_not_executed",
+     "manual_payment_path_gap"
+    ],
+    "verbatim_type": "help_request",
+    "relevance": "direct",
+    "journey_stage": "start",
+    "cause_type": "unclear",
+    "language": "english",
+    "stated_churn": "none_stated",
+    "churn_scope": null,
+    "inferred_churn_risk": "medium",
+    "inferred_churn_reason": "a failure on the very first instalment, with no way to pay manually, is a first-impression break; the tone is calm and the user is still trying",
+    "insight_value": "high",
+    "product_addressable": "unclear",
+    "experienced_vs_hypothetical": "experienced",
+    "cost_status": "none",
+    "money_text": "none",
+    "resolution_stated": "not_stated",
+    "user_action_stated": "asked_for_help",
+    "emotion_signal_stated_words": [],
+    "recency": "unknown",
+    "date_note": "not in the harvest · unknown (the text gives \"30th July\" and \"2 Aug\" with no year; the post ID suggests about mid-2025, an unverified estimate)",
+    "human_confirmed_tags": [
+     "SIP stuck",
+     "SIP did not trigger"
+    ]
+   },
+   "tag_source": "human+ai_reconciled",
+   "tag_confidence": 1.0
+  },
+  {
+   "entry": 10,
+   "id": "playstore-zerodha_coin-8e4674b9-4cdf-43ef-9cf8-f15fc95b1c35",
+   "source_channel": "play_store",
+   "source_url": "https://play.google.com/store/apps/details?id=com.zerodha.coin",
+   "verbatim_text": "I had added 3 SIPs, and added 15000 rupees to the wallet, today i see all the money is gone and an error message \"holdings: Request failed (kitetrade-common)\" . So no SIP created and the money is gone. It hasn't been refunded I check in my bank account. The support button in the profile section doesn't respond. I feel cheated.. Atleast give my money back! Edit : after multiple refreshes SIPs are showing now.. Although support buttons are still unresponsive.",
+   "tags": {
+    "friction": [
+     "other:sip_creation_failed_with_error",
+     "other:funds_apparently_missing",
+     "support_failure"
+    ],
+    "verbatim_type": "review",
+    "relevance": "direct",
+    "journey_stage": "start",
+    "cause_type": "structural_ux",
+    "language": "english",
+    "stated_churn": "none_stated",
+    "churn_scope": null,
+    "inferred_churn_risk": "medium",
+    "inferred_churn_reason": "trust damage is stated (\"I feel cheated\"), but the edit shows the SIPs appeared and the user did not say they would leave",
+    "insight_value": "high",
+    "product_addressable": "yes",
+    "experienced_vs_hypothetical": "experienced",
+    "cost_status": "apparent_resolved",
+    "money_text": "₹15,000 · stuck_funds (apparent loss; the edit says the SIPs showed up after multiple refreshes)",
+    "resolution_stated": "partly_resolved",
+    "user_action_stated": "refreshed_and_tried_support",
+    "emotion_signal_stated_words": [
+     "I feel cheated"
+    ],
+    "recency": "old",
+    "date_note": "2021-08-03 · platform · old",
+    "human_confirmed_tags": [
+     "support failure",
+     "no proper error message",
+     "stated loss of trust"
+    ]
+   },
+   "tag_source": "human+ai_reconciled",
+   "tag_confidence": 1.0
+  },
+  {
+   "entry": 11,
+   "id": "tradingqna-270207",
+   "source_channel": "tradingqna",
+   "source_url": "https://tradingqna.com/t/96985",
+   "verbatim_text": "Hi Team, I have paused one of SIP but accidently i have deleted the SIP. What exactly delete means? Will by SIP gets redeemed now? If no, can I continue investing in the same SIP again",
+   "tags": {
+    "friction": [
+     "other:accidental_sip_deletion",
+     "other:unclear_delete_meaning",
+     "pause_cancel_confusion"
+    ],
+    "verbatim_type": "help_request",
+    "relevance": "direct",
+    "journey_stage": "unspecified",
+    "cause_type": "mixed",
+    "language": "english",
+    "stated_churn": "sip_pause",
+    "churn_scope": "sip",
+    "inferred_churn_risk": "medium",
+    "inferred_churn_reason": "the user wants to continue (\"can I continue investing in the same SIP again\"), so any failure to restore it turns an accidental delete into an unintended stop",
+    "insight_value": "high",
+    "product_addressable": "unclear",
+    "experienced_vs_hypothetical": "experienced",
+    "cost_status": "none",
+    "money_text": "none",
+    "resolution_stated": "not_stated",
+    "user_action_stated": "asked_forum",
+    "emotion_signal_stated_words": [],
+    "recency": "old",
+    "date_note": "2020-12-08 · platform · old",
+    "human_confirmed_tags": [
+     "unsure of future consequences",
+     "meaning of delete not communicated"
+    ]
+   },
+   "tag_source": "human+ai_reconciled",
+   "tag_confidence": 1.0
+  },
+  {
+   "entry": 12,
+   "id": "youtube-UgwGxCyvcUDFM3tC-qt4AaABAg",
+   "source_channel": "youtube",
+   "source_url": "https://www.youtube.com/watch?v=jYfQgurGEV8",
+   "verbatim_text": "Mera sip Auto payment ma thaa month ka 20 tarik ko par sufficient balance nahi thaa par mane 20 tarikho hi 08:30 am pa hi account pa deposit kar diya thaa toh kiya penalty lage ga kiya?",
+   "tags": {
+    "friction": [
+     "other:penalty_uncertainty",
+     "cashflow_pressure",
+     "other:unclear_debit_cutoff_time"
+    ],
+    "verbatim_type": "question",
+    "relevance": "direct",
+    "journey_stage": "unspecified",
+    "cause_type": "mixed",
+    "language": "hinglish",
+    "stated_churn": "none_stated",
+    "churn_scope": null,
+    "inferred_churn_risk": "low",
+    "inferred_churn_reason": "the user is actively trying to keep the SIP funded; the risk rises if a penalty does hit (compare #1)",
+    "insight_value": "medium",
+    "product_addressable": "unclear",
+    "experienced_vs_hypothetical": "experienced",
+    "cost_status": "anticipated",
+    "money_text": "none (a penalty is feared, none is reported)",
+    "resolution_stated": "not_stated",
+    "user_action_stated": "deposited_same_day_and_asked",
+    "emotion_signal_stated_words": [],
+    "recency": "unknown",
+    "date_note": "not available · unknown (the stored timestamp is the harvest time)",
+    "human_confirmed_tags": [
+     "user confusion",
+     "penalty concern"
+    ]
+   },
+   "tag_source": "human+ai_reconciled",
+   "tag_confidence": 1.0
+  },
+  {
+   "entry": 13,
+   "id": "reddit-1namqg2",
+   "source_channel": "reddit",
+   "source_url": "https://www.reddit.com/r/IndianStockMarket/comments/1namqg2/how_does_my_sip_plan_look/",
+   "verbatim_text": "How does my sip plan look\nWhat do you think of my current sip... I stopped quant mid cap as it was going negative last one year. Added motilal oswal midcap. I have cancelled icici nasdaq as of today just learnt no new investment is allowed for it. Increased motilal midcap to 10k",
+   "tags": {
+    "friction": [
+     "returns_disappointment",
+     "fund_restriction"
+    ],
+    "verbatim_type": "question",
+    "relevance": "indirect",
+    "journey_stage": "unspecified",
+    "cause_type": "mixed",
+    "language": "english",
+    "stated_churn": "sip_stop",
+    "churn_scope": "fund",
+    "inferred_churn_risk": "low",
+    "inferred_churn_reason": "the user is actively reallocating and increasing a SIP",
+    "insight_value": "medium",
+    "product_addressable": "unclear",
+    "experienced_vs_hypothetical": "experienced",
+    "cost_status": "none",
+    "money_text": "none",
+    "resolution_stated": "not_stated",
+    "user_action_stated": "stopped_one_fund_switched_funds",
+    "emotion_signal_stated_words": [],
+    "recency": "unknown",
+    "date_note": "not in the harvest · unknown (the post ID suggests about late 2025, an unverified estimate)",
+    "human_confirmed_tags": [
+     "seeking validation on investments"
+    ]
+   },
+   "tag_source": "human+ai_reconciled",
+   "tag_confidence": 1.0
+  },
+  {
+   "entry": 14,
+   "id": "playstore-zerodha_coin-5b4d08f5-b408-45e6-9fd0-6c649ec30eb7",
+   "source_channel": "play_store",
+   "source_url": "https://play.google.com/store/apps/details?id=com.zerodha.coin",
+   "verbatim_text": "Please add notifications to pay for the SIP, and alerts if not paid till the last date, My SIPs keep getting missed and no I don't want to use mandates. thanks for confirmation.",
+   "tags": {
+    "friction": [
+     "missed_sip_no_reminder",
+     "manual_payment_path_gap"
+    ],
+    "verbatim_type": "review",
+    "relevance": "direct",
+    "journey_stage": "unspecified",
+    "cause_type": "mixed",
+    "language": "english",
+    "stated_churn": "none_stated",
+    "churn_scope": null,
+    "inferred_churn_risk": "medium",
+    "inferred_churn_reason": "repeated missed instalments are a lapse precursor, but the 5★ rating and a constructive request show the user is still engaged",
+    "insight_value": "high",
+    "product_addressable": "unclear",
+    "experienced_vs_hypothetical": "experienced",
+    "cost_status": "none",
+    "money_text": "none",
+    "resolution_stated": "not_stated",
+    "user_action_stated": "requested_reminder",
+    "emotion_signal_stated_words": [],
+    "recency": "recent",
+    "date_note": "2026-10-16 · platform · recent",
+    "human_confirmed_tags": [
+     "manual payment need",
+     "feature request",
+     "missed SIPs"
+    ]
+   },
+   "tag_source": "human+ai_reconciled",
+   "tag_confidence": 1.0
+  },
+  {
+   "entry": 15,
+   "id": "tradingqna-544346",
+   "source_channel": "tradingqna",
+   "source_url": "https://tradingqna.com/t/199065",
+   "verbatim_text": "Hello, I received an email yesterday that my SIP in SBI Gold Fund was being paused with immediate effect. My understanding was that all SIPs (AMC or through brokers) would be honoured and only the fresh investment would be stopped. Does the restriction apply to SIPs set up through brokers as well? Thanks !",
+   "tags": {
+    "friction": [
+     "fund_restriction"
+    ],
+    "verbatim_type": "question",
+    "relevance": "indirect",
+    "journey_stage": "unspecified",
+    "cause_type": "external_third_party",
+    "language": "english",
+    "stated_churn": "sip_pause",
+    "churn_scope": "fund",
+    "inferred_churn_risk": "low",
+    "inferred_churn_reason": "the user wants the SIP honoured and is asking for clarification; it rises if no alternative route exists (compare #13, a closed fund)",
+    "insight_value": "medium",
+    "product_addressable": "unclear",
+    "experienced_vs_hypothetical": "experienced",
+    "cost_status": "none",
+    "money_text": "none",
+    "resolution_stated": "not_stated",
+    "user_action_stated": "asked_forum",
+    "emotion_signal_stated_words": [],
+    "recency": "recent",
+    "date_note": "2026-10-25 · platform · recent",
+    "human_confirmed_tags": []
+   },
+   "tag_source": "human+ai_reconciled",
+   "tag_confidence": 1.0
+  },
+  {
+   "entry": 16,
+   "id": "youtube-Ugwqc3BOxdu2aunAMYh4AaABAg",
+   "source_channel": "youtube",
+   "source_url": "https://www.youtube.com/watch?v=HtUb3pTu32Y",
+   "verbatim_text": "Hi bro..i just start creating SIP in zerotha. While create mandate , SIP in the bank link shows that \"start date 02-01-2024 and End date 02-01-2054\". And also after confirmation, in the next dialog box payment details,Final collection : 01-01-2054. It is not showing \" until cancelled\". I plan to go for 10 years. I dont want to continue till 2054. Whats wrong with this?",
+   "tags": {
+    "friction": [
+     "other:mandate_end_date_confusion",
+     "other:unclear_mandate_terms"
+    ],
+    "verbatim_type": "help_request",
+    "relevance": "direct",
+    "journey_stage": "start",
+    "cause_type": "structural_ux",
+    "language": "english",
+    "stated_churn": "none_stated",
+    "churn_scope": null,
+    "inferred_churn_risk": "low",
+    "inferred_churn_reason": "a setup-stage worry; the user wants to invest for 10 years and is checking before confirming",
+    "insight_value": "medium",
+    "product_addressable": "yes",
+    "experienced_vs_hypothetical": "experienced",
+    "cost_status": "none",
+    "money_text": "none",
+    "resolution_stated": "not_stated",
+    "user_action_stated": "asked_for_help",
+    "emotion_signal_stated_words": [],
+    "recency": "old",
+    "date_note": "about Jan 2024 · text (harvested 2024-11-01) · old",
+    "human_confirmed_tags": []
+   },
+   "tag_source": "human+ai_reconciled",
+   "tag_confidence": 1.0
+  },
+  {
+   "entry": 17,
+   "id": "reddit-8n0dj7",
+   "source_channel": "reddit",
+   "source_url": "https://www.reddit.com/r/IndiaInvestments/comments/8n0dj7/is_the_whole_mf_market_down/",
+   "verbatim_text": "Is the whole MF market down?\nHey guys, so I started doing SIPs in MFs since almost a year back. I am currently in red. Unfortunately, I don't have a lot of knowledge on the market to invest wisely and doing it through a PF manager. What I'm being told is that the whole market is down right now and I should wait for it to bounce back and see returns and that its very difficult to make money in the market right now. Is this the general sentiment right now? Should I continue my SIPs for another year to see any returns?( I can get better returns in FD seeing the present condition right now).",
+   "tags": {
+    "friction": [
+     "returns_disappointment",
+     "other:market_doubt",
+     "other:fd_comparison",
+     "other:low_financial_knowledge"
+    ],
+    "verbatim_type": "question",
+    "relevance": "direct",
+    "journey_stage": "month_7_12",
+    "cause_type": "behavioral",
+    "language": "english",
+    "stated_churn": "none_stated",
+    "churn_scope": null,
+    "inferred_churn_risk": "medium",
+    "inferred_churn_reason": "Considering whether to continue; no stated stop or intent to leave. near the 12-month point, in a loss, low confidence, an FD alternative named, and an explicit continue-or-not question",
+    "insight_value": "high",
+    "product_addressable": "unclear",
+    "experienced_vs_hypothetical": "experienced",
+    "cost_status": "none",
+    "money_text": "none",
+    "resolution_stated": "not_stated",
+    "user_action_stated": "asked_community",
+    "emotion_signal_stated_words": [],
+    "recency": "unknown",
+    "date_note": "not in the harvest · unknown (the post ID suggests about 2018, an unverified estimate)",
+    "human_confirmed_tags": [
+     "seeking sentiment",
+     "seeking guidance",
+     "education ask",
+     "comparing MFs to FDs"
+    ]
+   },
+   "tag_source": "human+ai_reconciled",
+   "tag_confidence": 1.0
+  },
+  {
+   "entry": 18,
+   "id": "playstore-zerodha_coin-be4d21cf-0436-4533-8c02-03a45b4bed86",
+   "source_channel": "play_store",
+   "source_url": "https://play.google.com/store/apps/details?id=com.zerodha.coin",
+   "verbatim_text": "If the app doesnt serve its main purpose how should I rate this? I placed 2 orders for buying mutual funds through payment gateway and both were rejected citing payment failure. After a week of successful transaction and money being deducted, I am getting a refund and a textbook reply on the ticket that order failed. They are not able to cite a proper reason. Due to this I am not able to invest in SIP in time. I will keep using the competitor Kuvera app, which seems more reliable.",
+   "tags": {
+    "friction": [
+     "unexplained_debit",
+     "other:order_failed_no_reason",
+     "other:refund_delay",
+     "support_failure",
+     "other:sip_not_invested_in_time"
+    ],
+    "verbatim_type": "review",
+    "relevance": "direct",
+    "journey_stage": "start",
+    "cause_type": "structural_ux",
+    "language": "english",
+    "stated_churn": "platform_switch",
+    "churn_scope": "platform",
+    "inferred_churn_risk": "high",
+    "inferred_churn_reason": "churn is effectively realised, since the first transactions failed and a named alternative is preferred",
+    "insight_value": "high",
+    "product_addressable": "yes",
+    "experienced_vs_hypothetical": "experienced",
+    "cost_status": "incurred_temporary",
+    "money_text": "amount not stated · stuck_funds (money deducted, refunded after about a week)",
+    "resolution_stated": "partly_resolved",
+    "user_action_stated": "raised_ticket_and_keeps_competitor",
+    "emotion_signal_stated_words": [],
+    "recency": "old",
+    "date_note": "2024-06-11 · platform · old",
+    "human_confirmed_tags": [
+     "not serving its main purpose"
+    ]
+   },
+   "tag_source": "human+ai_reconciled",
+   "tag_confidence": 1.0
+  },
+  {
+   "entry": 19,
+   "id": "tradingqna-140122",
+   "source_channel": "tradingqna",
+   "source_url": "https://tradingqna.com/t/48508",
+   "verbatim_text": "Hi, I am a bit confused and wanted to clarify what would happen in following situation Since coin uses lumpsum model n suppose I have X mutual fund with monthly sip of 2000rs , now coin is depositing that fund using lumpsum model right by default? What if that AMC stops lumpsum investment n accept on traditional sips, how coin or ZERODHA would notify me or all it will be handled without my interference n monthly sips of 2k will continue on or investment will be stopped all together?",
+   "tags": {
+    "friction": [
+     "other:lumpsum_vs_sip_confusion",
+     "fund_restriction",
+     "other:notification_uncertainty"
+    ],
+    "verbatim_type": "question",
+    "relevance": "indirect",
+    "journey_stage": "unspecified",
+    "cause_type": "structural_ux",
+    "language": "english",
+    "stated_churn": "none_stated",
+    "churn_scope": null,
+    "inferred_churn_risk": "low",
+    "inferred_churn_reason": "a clarification question about a scenario, no distress or loss",
+    "insight_value": "medium",
+    "product_addressable": "yes",
+    "experienced_vs_hypothetical": "hypothetical",
+    "cost_status": "none",
+    "money_text": "none",
+    "resolution_stated": "not_stated",
+    "user_action_stated": "asked_forum",
+    "emotion_signal_stated_words": [
+     "I am a bit confused"
+    ],
+    "recency": "old",
+    "date_note": "2018-10-12 · platform · old",
+    "human_confirmed_tags": [
+     "educational ask"
+    ]
+   },
+   "tag_source": "human+ai_reconciled",
+   "tag_confidence": 1.0
+  },
+  {
+   "entry": 20,
+   "id": "youtube-Ugx5rDuMatVJUKt4JSp4AaABAg",
+   "source_channel": "youtube",
+   "source_url": "https://www.youtube.com/watch?v=VYFkr_kuJQs",
+   "verbatim_text": "Maine 2021 me dala tha ab vo paisa 2024 me nikla aur SIP band kar diya lekin iska last instalment 2027 me withdraw hoga. ELSS liya tha ye fraud hai. Market ke sath MF bhi volatile h I rather take more risk and more rewards than risk my money with these unknown people doing unknown things with my money only to read news a few years later that the fund Manager became rich by front running while investors were watching reels.  🙄",
+   "tags": {
+    "friction": [
+     "other:elss_lock_in_surprise",
+     "other:distrust_of_fund_industry"
+    ],
+    "verbatim_type": "review",
+    "relevance": "direct",
+    "journey_stage": "beyond_12",
+    "cause_type": "mixed",
+    "language": "hinglish",
+    "stated_churn": "sip_stop",
+    "churn_scope": "sip",
+    "inferred_churn_risk": "high",
+    "inferred_churn_reason": "the SIP is stopped)",
+    "insight_value": "high",
+    "product_addressable": "unclear",
+    "experienced_vs_hypothetical": "experienced",
+    "cost_status": "none",
+    "money_text": "none",
+    "resolution_stated": "not_stated",
+    "user_action_stated": "stopped_sip",
+    "emotion_signal_stated_words": [
+     "fraud"
+    ],
+    "recency": "aging",
+    "date_note": "after 2024 and before the 2025-10 harvest · text · bucket aging or old (cannot be told apart)",
+    "human_confirmed_tags": [
+     "considers ELSS a fraud"
+    ]
+   },
+   "tag_source": "human+ai_reconciled",
+   "tag_confidence": 1.0
+  },
+  {
+   "entry": 21,
+   "id": "reddit-1s5oudf",
+   "source_channel": "reddit",
+   "source_url": "https://www.reddit.com/r/IndianStockMarket/comments/1s5oudf/fi_federal_bank_partnership_ending_what_happens/",
+   "verbatim_text": "Fi & Federal Bank partnership ending — what happens to SIPs and UPI mandates?\nHi everyone,\n\nI recently got the email about Fi ending its partnership with Federal Bank by the end of this month due to “business realignment.”\n\nI have a few SIPs and UPI auto-debits set up through Fi, so I’m a bit worried about what happens to those mandates once the app stops supporting banking.\n\nHas anyone here already handled this transition?\n\n- Did your mandates continue automatically through Federal Bank?\n- Or did you have to cancel and set them up again via another app / net banking?\n\nWould really appreciate if someone can share what they did to avoid failed payments 🙏",
+   "tags": {
+    "friction": [
+     "other:mandate_continuity_uncertainty",
+     "other:failed_payment_fear",
+     "other:forced_mandate_resetup_risk"
+    ],
+    "verbatim_type": "question",
+    "relevance": "indirect",
+    "journey_stage": "unspecified",
+    "cause_type": "external_third_party",
+    "language": "english",
+    "stated_churn": "none_stated",
+    "churn_scope": null,
+    "inferred_churn_risk": "medium",
+    "inferred_churn_reason": "a forced mandate re-setup with a deadline (end of the month) is a natural drop-off point, though the user is proactive",
+    "insight_value": "medium",
+    "product_addressable": "unclear",
+    "experienced_vs_hypothetical": "experienced",
+    "cost_status": "anticipated",
+    "money_text": "none (failed payments are feared, none reported)",
+    "resolution_stated": "not_stated",
+    "user_action_stated": "asked_peers",
+    "emotion_signal_stated_words": [],
+    "recency": "unknown",
+    "date_note": "not in the harvest · unknown (the post ID suggests about early 2026, an unverified estimate)",
+    "human_confirmed_tags": [
+     "seeking result of latest change",
+     "wants to avoid failed payments"
+    ]
+   },
+   "tag_source": "human+ai_reconciled",
+   "tag_confidence": 1.0
+  },
+  {
+   "entry": 22,
+   "id": "playstore-zerodha_coin-0bba37ab-08da-4b3a-be41-8fad57a09457",
+   "source_channel": "play_store",
+   "source_url": "https://play.google.com/store/apps/details?id=com.zerodha.coin",
+   "verbatim_text": "Very good app for maintaining all your SIPs at one place. Only one suggestion that please enable a function that before one day of your incoming SIP order, person should get a notification to check that proper fund is available in zerodha account for SIP order. Everyone didn't check the app daily and sometimes my order got cancelled due to not availability of funds. Please add this feature 🙏🙏",
+   "tags": {
+    "friction": [
+     "missed_sip_no_reminder",
+     "other:insufficient_funds_on_sip_date"
+    ],
+    "verbatim_type": "review",
+    "relevance": "direct",
+    "journey_stage": "unspecified",
+    "cause_type": "mixed",
+    "language": "english",
+    "stated_churn": "none_stated",
+    "churn_scope": null,
+    "inferred_churn_risk": "low",
+    "inferred_churn_reason": "\"Very good app\", a 5★ rating, a single suggestion, and cancellations only \"sometimes\"",
+    "insight_value": "medium",
+    "product_addressable": "unclear",
+    "experienced_vs_hypothetical": "experienced",
+    "cost_status": "none",
+    "money_text": "none",
+    "resolution_stated": "not_stated",
+    "user_action_stated": "requested_reminder",
+    "emotion_signal_stated_words": [],
+    "recency": "old",
+    "date_note": "2022-06-02 · platform · old",
+    "human_confirmed_tags": [
+     "reminder request",
+     "feature request"
+    ]
+   },
+   "tag_source": "human+ai_reconciled",
+   "tag_confidence": 1.0
+  },
+  {
+   "entry": 23,
+   "id": "tradingqna-421743",
+   "source_channel": "tradingqna",
+   "source_url": "https://tradingqna.com/t/153051",
+   "verbatim_text": "I went into 100% debt when nifty hit 13800. And stopped all mutual funds SIPs. With the profits from trading, I purchased few stocks @ dips image Planning to find 12 more opportunities over the next year. Used the @Tickertape to shortlist close to 300+ stocks for the same. Researching stocks take...",
+   "tags": {
+    "friction": [
+     "other:market_timing_stop",
+     "other:shift_to_direct_stocks"
+    ],
+    "verbatim_type": "experience",
+    "relevance": "indirect",
+    "journey_stage": "unspecified",
+    "cause_type": "deliberate_strategy_shift",
+    "language": "english",
+    "stated_churn": "sip_stop",
+    "churn_scope": "sip",
+    "inferred_churn_risk": "high",
+    "inferred_churn_reason": "high (already realised); no friction involved, so not product-addressable on this evidence",
+    "insight_value": "medium",
+    "product_addressable": "no",
+    "experienced_vs_hypothetical": "experienced",
+    "cost_status": "none",
+    "money_text": "none",
+    "resolution_stated": "not_stated",
+    "user_action_stated": "stopped_sips_moved_to_trading",
+    "emotion_signal_stated_words": [],
+    "recency": "old",
+    "date_note": "2023-09-12 · platform · old",
+    "human_confirmed_tags": [
+     "relies more on trading than MFs",
+     "finds trading lucrative"
+    ]
+   },
+   "tag_source": "human+ai_reconciled",
+   "tag_confidence": 1.0
+  },
+  {
+   "entry": 24,
+   "id": "youtube-UgwwadUsgvr8ENVPcgp4AaABAg",
+   "source_channel": "youtube",
+   "source_url": "https://www.youtube.com/watch?v=CPEatoLkXNI",
+   "verbatim_text": "You aren't telling when exactly to redeem our corpus, during bull run.  Just telling us to remain invested.   I have invested in SIP of Franklin prima fund for 5 years & then stopped SIP.  Now the CAGR returns are in single digit.   Tell me when exactly to exit this fund, during life time high market.?",
+   "tags": {
+    "friction": [
+     "other:exit_timing_uncertainty",
+     "other:no_exit_guidance",
+     "returns_disappointment"
+    ],
+    "verbatim_type": "question",
+    "relevance": "indirect",
+    "journey_stage": "exit_phase",
+    "cause_type": "behavioral",
+    "language": "english",
+    "stated_churn": "sip_stop",
+    "churn_scope": "sip",
+    "inferred_churn_risk": "medium",
+    "inferred_churn_reason": "the SIP has stopped and the user is looking for an exit point",
+    "insight_value": "medium",
+    "product_addressable": "unclear",
+    "experienced_vs_hypothetical": "experienced",
+    "cost_status": "none",
+    "money_text": "none",
+    "resolution_stated": "not_stated",
+    "user_action_stated": "stopped_sip_asked_exit_timing",
+    "emotion_signal_stated_words": [],
+    "recency": "old",
+    "date_note": "before 2023-10-24 · harvest (upper bound) · old (at least about 36 months old)",
+    "human_confirmed_tags": [
+     "needs clarity on exit"
+    ]
+   },
+   "tag_source": "human+ai_reconciled",
+   "tag_confidence": 1.0
+  },
+  {
+   "entry": 25,
+   "id": "reddit-1uodemb",
+   "source_channel": "reddit",
+   "source_url": "https://www.reddit.com/r/personalfinanceindia/comments/1uodemb/a_better_bank_than_an_hdfc/",
+   "verbatim_text": "A better bank than an hdfc.\nI really liked hdfc but it has become notorious. I have only finished college, and it is impossible to maintain a balance of 5k to avoid AMB charges.\n\nBut today, I was met with several ACH debit returns something which I am assuming is due to failed SIPs. But this is something I never noticed before. Nor it is showing in my previous statements... but I lost around 4k due to this. I was supposed to spend this whole month with that.",
+   "tags": {
+    "friction": [
+     "other:bank_min_balance_charges",
+     "bank_penalty",
+     "silent_mandate_failure",
+     "cashflow_pressure"
+    ],
+    "verbatim_type": "experience",
+    "relevance": "indirect",
+    "journey_stage": "unspecified",
+    "cause_type": "mixed",
+    "language": "english",
+    "stated_churn": "none_stated",
+    "churn_scope": null,
+    "inferred_churn_risk": "medium",
+    "inferred_churn_reason": "a low-balance investor whose SIP debits fail silently is likely to lapse, but the user blames the bank and does not say whether SIPs continue",
+    "insight_value": "high",
+    "product_addressable": "unclear",
+    "experienced_vs_hypothetical": "experienced",
+    "cost_status": "incurred",
+    "money_text": "\"around 4k\" · charges (the text does not separate bank charges from returned debits)",
+    "resolution_stated": "not_stated",
+    "user_action_stated": "vented_seeking_other_bank",
+    "emotion_signal_stated_words": [
+     "notorious"
+    ],
+    "recency": "unknown",
+    "date_note": "not in the harvest · unknown (the post ID suggests about mid-2026, an unverified estimate)",
+    "human_confirmed_tags": [
+     "bank minimum balance issue",
+     "money lost",
+     "monthly expense impact"
+    ]
+   },
+   "tag_source": "human+ai_reconciled",
+   "tag_confidence": 1.0
+  }
+ ]
+}

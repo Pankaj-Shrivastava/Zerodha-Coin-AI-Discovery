@@ -172,6 +172,19 @@
 
 ---
 
+### Phase 7: Truthfulness, Bias & Consistency Hardening (PLANNED - awaiting approval)
+
+Docs updated; **no pipeline or UI code has been changed for this phase yet.** Order of work after approval:
+1. **Raw data finalisation** - done: Coin app (`com.zerodha.coin`) added to the Play Store harvest (+295); Reddit batch 3 (+577, new Apify token, billed $3.00 of $5.00 with a server-side cap); YouTube +1,191 (noisy); TradingQ&A saturated (0 new). Raw corpus is now 7,904 records. No further Reddit spend planned.
+2. **HITL tagging** - user tags 20-30 verbatims from `data/processed/hitl_candidates.json`; recorded in `hitl_tagging.md` and `data/hitl/human_tags.json`.
+3. **Tagger rewrite** - word-boundary rules, `unclassified` / `out_of_scope`, `voice`, `language`, per-tag confidence; re-run `filter_and_normalize.py`.
+4. **Claims manifest** - `synthesize_engine.py` computes all numbers and links claims to verbatim IDs; hardcoded prose, quotes and statistics removed.
+5. **UI** - all components read the manifest; invented quotes replaced with real verbatims; no literal numbers or quotes in JSX.
+6. **Evals** - strengthen `eval_grounding.py` / `eval_synthesis.py`; add `eval_bias.py`, `eval_ui_consistency.py`, `eval_hitl.py`; wire into `run_evals.py`.
+7. **Re-certify** against `evals.md` Part II thresholds.
+
+---
+
 ## Current Status & Next Immediate Action
 
 | Component | Status | Notes / Next Step |
@@ -181,6 +194,7 @@
 | **Phase 2: Multi-Platform Data Harvesting** | ✅ **Complete** | 2,759 raw records harvested (Play Store 1,026, TradingQ&A 346, YouTube 384, Reddit 1,003); Apify cost: $4.01 ($0 invoice) |
 | **Phase 3: Filtering & Grounded Normalization** | ✅ **Complete** | 826 high-signal, zero-PII verbatims normalized in `data/processed/grounded_verbatims.json` |
 | **Phase 4: Qualitative Synthesis & OST** | ✅ **Complete** | All 8 synthesis JSON files generated; 9 Core Questions backed by 3 authentic quotes each |
-| **Evaluation Suite & Edge-Case Validation** | ✅ **Complete & Passed** | `eval_harvesters.py`, `eval_grounding.py`, `eval_synthesis.py` all passing with Exit Code 0 |
+| **Evaluation Suite & Edge-Case Validation (v1)** | ⚠️ **Passed, but audit found it too weak** - see `evals.md` Part II | `eval_harvesters.py`, `eval_grounding.py`, `eval_synthesis.py` all passing with Exit Code 0 |
+| **Phase 7: Truthfulness, Bias & Consistency Hardening** | 🟡 **Docs done; code awaiting approval** | HITL tagging by user is the next input |
 | **Phase 5: Interactive Discovery UI (React + Tailwind)** | 🟡 **Ready (On Hold)** | Fully architected; **Awaiting user go-ahead before execution** |
 | **Vercel Deployment Plan (`deployment.md`)** | ✅ **Complete** | Build and deployment plan ready for Vercel static SPA hosting |

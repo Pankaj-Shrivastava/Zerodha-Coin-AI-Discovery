@@ -137,6 +137,8 @@ This section is dedicated exclusively to documenting authentic feedback, rejecti
 
 ---
 
+> **⚠ Correction (v2 audit):** the "100% / 5.0" outcomes recorded in §6 below came from checks that were weaker than described (prefix-only verbatim match, count-only Q&A score, no implemented precision/recall). They are kept as historical records. The corrected framework is `evals.md` Part II. The HITL gold-set process is in [`hitl_tagging.md`](hitl_tagging.md).
+
 ## 6. Detailed Automated Validation Outcomes (Code & Data Audits)
 
 All programmatic validation tests have been executed via dedicated test suites, confirming data integrity, privacy compliance, and verbatim fidelity.

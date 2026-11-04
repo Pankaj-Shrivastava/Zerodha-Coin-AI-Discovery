@@ -44,6 +44,17 @@ SEARCH_QUERIES = [
     "units not showing coin",
     "coin demat confusion",
     "cancel mandate zerodha",
+    # v3: first-person lived-experience queries (relevance-focused)
+    "I stopped my SIP",
+    "I want to stop my SIP",
+    "SIP got cancelled automatically",
+    "SIP order failed money debited",
+    "SIP stuck in processing",
+    "SIP not executed on date",
+    "mandate failed charges deducted",
+    "how to pause SIP coin",
+    "SIP skipped insufficient balance",
+    "my SIP is not working coin",
 ]
 
 def redact_pii(text: str) -> str:

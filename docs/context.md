@@ -99,6 +99,21 @@ To prevent cognitive bias, product hallucinations, and sterile summaries, the AI
 * **Rule**: The platform does **NOT store any Personally Identifiable Information (PII)**. Any phone numbers, email addresses, bank accounts, PAN numbers, full real names, or physical addresses present in public comments/reviews must be automatically scrubbed and redacted (e.g., `[REDACTED_PHONE]`, `[REDACTED_EMAIL]`).
 * **Why**: Empathy discovery focuses entirely on understanding behavioral frictions, mental models, and emotional pain points. Storing personal identifiers is strictly unnecessary and violates user privacy principles.
 
+
+### Guardrail 6: No Invention of User Voice (Verbatims Only)
+* **Rule**: User verbatims are shown exactly as harvested and are the only source for tags, themes, numbers, journey stages, personas and opportunities. Generated prose is allowed only where a story must be told on the UI; it is labelled as generated and cites at least 3 supporting verbatim IDs. Statistics are computed by code, never typed by hand.
+* **Why**: One invented quote or number breaks trust in the whole platform. Quotes, tags and claims must carry citations (source, ID, URL) and a confidence level. The researcher's manual tags ([`hitl_tagging.md`](hitl_tagging.md)) are the gold standard for tagging all other verbatims.
+
+### Guardrail 7: No Bias Amplification
+* **Rule**: Tags and counts must reflect what users said and no more. No default-bucket inflation, no hand-set severity, no percentages without a stated denominator, and no claims about "all dropouts" from a self-selected public corpus. Off-topic records are tagged out-of-scope instead of being forced into a theme.
+* **Why**: The corpus over-represents people who post complaints. Rules that over-assign a theme would turn a minority signal into an apparent majority.
+
+### Guardrail 8: One Source of Truth Across Screens
+* **Rule**: Charts, journey, personas and opportunities all read from a single claims manifest generated from the verbatims. The same metric must be identical on every screen. No screen may tell a different story or hold hardcoded numbers or quotes.
+* **Why**: Variability between screens makes the findings look arbitrary. Every claim must trace to verbatims.
+
+See [`evals.md`](evals.md) Part II for the scoring and thresholds that enforce Guardrails 6-8.
+
 ---
 
 ## 4. Methodological Foundations & Pillars

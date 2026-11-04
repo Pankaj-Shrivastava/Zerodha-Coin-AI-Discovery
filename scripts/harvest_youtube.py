@@ -62,7 +62,18 @@ HINDI_QUERIES = [
     "mutual fund sahi hai ya nahi India",
 ]
 
-ALL_QUERIES = ENGLISH_QUERIES + HINDI_QUERIES
+# v3: first-person lived-experience queries (relevance-focused)
+EXPERIENCE_QUERIES = [
+    "I stopped my SIP experience India",
+    "my SIP is in loss what to do India",
+    "SIP mandate failed bank charged me",
+    "Zerodha Coin SIP not executed",
+    "SIP pause and restart India",
+    "SIP band kar diya kyun",
+    "SIP loss mein hai kya karu",
+]
+
+ALL_QUERIES = ENGLISH_QUERIES + HINDI_QUERIES + EXPERIENCE_QUERIES
 
 # Manually curated high-engagement video IDs from top Indian personal finance channels
 # (Pranjal Kamra, Akshat Shrivastava, Shankar Nath, Labour Law Advisor, CA Rachana Ranade)

@@ -541,3 +541,24 @@ Zerodha-Coin-AI-Discovery/
         ├── index.css
         └── components/                 # Views 1 to 6 & 9 Core Questions Module
 ```
+
+## 8. Truthfulness & Consistency Layer (planned, v2)
+
+```
+raw JSON --> filter/normalize (word-boundary rules, unclassified/out_of_scope,
+             voice, language, tag_confidence) --> grounded_verbatims.json
+                                                     |            ^
+              HITL tags (data/hitl/human_tags.json) -+ (override, gold set)
+                                                     v
+                      synthesize_engine.py --> claims_manifest.json
+                      (computed counts, supporting_verbatim_ids, claim_confidence,
+                       labelled generated_narrative only where a story is needed)
+                                                     v
+                      UI components (read manifest only; no literal numbers/quotes)
+                                                     v
+          evals: integrity, no-invention, bias, cross-screen, HITL (evals.md Part II)
+```
+
+* **`claims_manifest.json`** is the single source of truth for every number, quote, stage, archetype and opportunity shown on any screen.
+* **Per-verbatim fields to add:** `app_id`, `tag_source`, `tag_confidence`, `voice`, `language`, `sip_relevance`, `needs_review`.
+* **Play Store harvest** now covers the Coin app (`com.zerodha.coin`) in addition to Kite (`com.zerodha.kite3`).

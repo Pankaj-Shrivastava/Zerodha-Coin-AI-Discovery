@@ -1,0 +1,789 @@
+
+=== EDU-1 My returns are not what I expected, and I doubt whether to continue | posts 136 | ch {'reddit': 98, 'play_store': 0, 'tradingqna': 2, 'youtube': 36} | platform {'coin': 17, 'other': 15, 'not_identifiable': 104} (platform_rarely_stated) | drop-off 28 (coin 0, competitor 3) | money 0 | fix {'product': 1, 'education': 107, 'external': 19, 'unclear': 9} | top labels {'returns_disappointment': 100, 'market_doubt': 16, 'fd_comparison': 10, 'distrust_of_fund_industry': 7, 'market_timing_stop': 5, 'volatility_anxiety': 4}
+- reddit-8n0dj7 [reddit|-|behavioral] H stage:month_7_12
+  spans: returns_disappointment: "I am currently in red"; market_doubt: "its very difficult to make money in the market right now"; fd_comparison: "I can get better returns in FD"
+  text: Is the whole MF market down? Hey guys, so I started doing SIPs in MFs since almost a year back. I am currently in red. Unfortunately, I don't have a lot of knowledge on the market to invest wisely and doing it through a PF manager…
+- youtube-Ugx5rDuMatVJUKt4JSp4AaABAg [youtube|-|mixed] H stop:sip_stop/sip stage:beyond_12
+  spans: distrust_of_fund_industry: "risk my money with these unknown people doing unknown things"
+  text: Maine 2021 me dala tha ab vo paisa 2024 me nikla aur SIP band kar diya lekin iska last instalment 2027 me withdraw hoga. ELSS liya tha ye fraud hai. Market ke sath MF bhi volatile h I rather take more risk and more rewards than ri…
+- tradingqna-312071 [tradingqna|-|external_third_party] 
+  spans: returns_disappointment: "it is not performing well in past year"
+  text: I have invested in Nippon large cap fund regular fund 3 yersa ago of 1000 rs sip each month ,currently investment amount is 36000 and market value is 50000 , since it is not performing well in past year ,and also I want to switch …
+- reddit-1ko3rzy [reddit|-|behavioral] H
+  spans: returns_disappointment: "After a long streak of a red portfolio (6–7 months)"
+  text: What's the best next step? I am 20 (M). After a long streak of a red portfolio (6–7 months), it has finally turned green. All my savings are going into the Axis Smallcap Direct Growth Fund. I want to increase my SIP by ₹2,000–₹3,0…
+- youtube-Ugxkii8nF3i0iAB5Zol4AaABAg [youtube|-|behavioral] H stage:month_7_12
+  spans: returns_disappointment: "Kaafi time se daily loss hi dikh raha h"; volatility_anxiety: "portfolio red dekh kr daily bht dukh hota h"
+  text: Mene bhi 1 yr se SIP Krna start Kiya h ... starting me kuchh profit dikhta tha leki। Kaafi time se daily loss hi dikh raha h... portfolio red dekh kr daily bht dukh hota h😢😢😢😢
+- tradingqna-415104 [tradingqna|-|behavioral] stop:sip_stop/sip
+  spans: market_timing_stop: "will resume only when the current euphoria ends"
+  text: debt funds - 70% (mutual funds & gsecs) real estate - 20% (cannot be really considered as a liquid asset) FDs, treasuries, PPF, NPS - 5% Equity - 3-4% gold - less than 0.1% cash & savings account emergency fund - rest. I will reba…
+- reddit-1q9ro80 [reddit|-|behavioral] H
+  spans: returns_disappointment: "My MF investment returns have been very poor I think"
+  text: Need serious investment advise please 27M, Debt free My MF investment returns have been very poor I think. See below for breakdown. Invesco Midcap - Invested: 2.64L, XIRR: 11.52% Uti nifty 50 - Invested: 2.58L, XIRR: 8.27% Motilal…
+- youtube-UgzhirBgdrT8oE1df8N4AaABAg [youtube|-|behavioral] H stop:realised_exit/sip
+  spans: gold_fomo: "invest in gold"
+  text: I withdraw all my sip and invest in gold one year back.
+- reddit-dryrun-1v739n0 [reddit|zerodha_coin|behavioral] H stop:realised_exit/sip
+  spans: early_withdrawal_regret: "I made mistake 2 year ago by withdrawing"
+  text: Review my portfolio and provide suggestions My age is 27 and I have total 30K Monthly SIP and planning to increase to 40K after building the emergency fund. I have term insurance and health insurance as well my company cover the h…
+- youtube-UgwIRz-VhFJ6Htq9Kyp4AaABAg [youtube|-|behavioral] stage:month_4_6
+  spans: returns_disappointment: "aaj uska return lagbhag -325rs"; market_doubt: "mandi aane wale hai"
+  text: Maine 5month pehle hdfc index sensex fund me 2000/month ki sip shuru ki thi aaj uska return lagbhag -325rs. Me dikha rha hai kya mujhe apna paisa withdrawal kr lena chahiye ya wait Krna chahiye kyonki kahan ja rha hai aur mandi aa…
+- reddit-18snp0k [reddit|-|behavioral] stop:realised_exit/sip
+  spans: panic_exit_regret: "My biggest regrets!!"
+  text: My advice: nothing new I grew up lower middle class. Wealthy in terms of “love from mom”, “friends: we’re all poor to middle class: this meant very little inferiority” and an education( this is the biggest thing). An aunt helped f…
+- youtube-UgwW7FCsS2SOb36wZ5F4AaABAg.8qm1undDOwy8qoP_50eNG2 [youtube|-|behavioral] stage:beyond_12
+  spans: returns_disappointment: "sip hai -5.55 abhi ho gya hai"
+  text: @ShubhamSharma-nm6vq sir 14 month ho gaye sip hai -5.55 abhi ho gya hai. mai 25 yr ke liye socha hu aap bataye ki kya karu plz sir.
+
+=== REL-1 My SIP instalment did not go through | posts 101 | ch {'reddit': 35, 'play_store': 39, 'tradingqna': 10, 'youtube': 17} | platform {'coin': 48, 'other': 29, 'not_identifiable': 24} (mostly_coin) | drop-off 5 (coin 2, competitor 3) | money 10 | fix {'product': 83, 'education': 0, 'external': 3, 'unclear': 15} | top labels {'sip_not_executed': 24, 'sip_stuck_processing': 14, 'sip_creation_failed_with_error': 12, 'mandate_failure': 11, 'sip_order_auto_cancelled': 7, 'autopay_failed_despite_balance': 5}
+- playstore-zerodha_coin-8e4674b9-4cdf-43ef-9cf8-f15fc95b1c35 [play_store|zerodha_coin|structural_ux] H stage:start
+  spans: sip_creation_failed_with_error: "So no SIP created and the money is gone"
+  text: I had added 3 SIPs, and added 15000 rupees to the wallet, today i see all the money is gone and an error message "holdings: Request failed (kitetrade-common)" . So no SIP created and the money is gone. It hasn't been refunded I ch…
+- reddit-1mfi68r [reddit|zerodha_coin|unclear] H stage:start
+  spans: sip_not_executed: "for new SIPs neither the order is placed not amount is deducted"
+  text: SIP amount not deducted Hi all, I created 2 new SIPs on 30th July and linked it with e-mandate for auto debit on 2 Aug i.e. today in coin app. I also have 2 old SIPs for today. For the old SIP the order got placed yesterday and to…
+- youtube-UgwCTQHB3ot64iAx2HB4AaABAg [youtube|-|structural_ux] H
+  spans: sip_order_auto_cancelled: "मेरी SIP कैंसिल हुई है"
+  text: सर मेरी SIP कैंसिल हुई है और रीस्टार्ट बता रही है तो उसको कैसे रीस्टार्ट करें फिर से चालू कैसे करेंरीस्टार्ट कर रहा हूं तो ओटीपी मांग रहा है तो ओटीपी कैसे डालेंइसके बारे में बताइए नासर
+- tradingqna-341699 [tradingqna|zerodha_coin|structural_ux] H
+  spans: sip_order_auto_cancelled: "Why SIP also cancelled for the above mutual funds"
+  text: @Bhuvan Why SIP also cancelled for the above mutual funds…
+- playstore-zerodha_coin-b3d4217c-d431-4b69-a902-274a1c966ddc [play_store|zerodha_coin|structural_ux] H stop:intent_to_leave/platform money:what funds I paid for yesterday are not reflecting till now stage:start
+  spans: sip_not_executed: "sip that was supposed to execute today has not executed"
+  text: Its very slow. Mutual Funds are taking lot of time to reflect after buying, what funds I paid for yesterday are not reflecting till now. SIPs are also not executing, sip that was supposed to execute today has not executed. I plann…
+- reddit-1septyi [reddit|-|mixed] H money:penalty of 1500 rupees
+  spans: mandate_failure: "SIP Autodebit mandate failed and resulted in penalty"
+  text: SIP Autodebit mandate failed and resulted in penalty. Take care. I had 5 SIPs with an autodebit mandate set on the 3rd of April. Due to insufficient balance in my account, an penalty of 1500 rupees was cut from my account. The ban…
+- youtube-UgwsX-lj2ctfdiAdJvR4AaABAg [youtube|zerodha_coin|structural_ux] H money:A total ₹1770 by Indian Clearing
+  spans: sip_stuck_processing: "My sips status are still processing from 14-9-24"
+  text: Sir, I am investing from pass few months from zerodha coin My sips status are still processing from 14-9-24 And on 17-9-24 , 3 times ₹590 has been cut from my back account. A total ₹1770 by Indian Clearing. It should cut 1200,1800…
+- tradingqna-104289 [tradingqna|zerodha_coin|structural_ux] 
+  spans: sip_order_auto_cancelled: "how come my SIP from coins got cancelled today"
+  text: Reliance small cap not to accept lump sum investments, only SIP and STp, are allowed , then how come my SIP from coins got cancelled today ?
+- playstore-zerodha_coin-be4d21cf-0436-4533-8c02-03a45b4bed86 [play_store|zerodha_coin|structural_ux] H stop:platform_switch/platform money:None
+  spans: sip_not_invested_in_time: "Due to this I am not able to invest in SIP in time"
+  text: If the app doesnt serve its main purpose how should I rate this? I placed 2 orders for buying mutual funds through payment gateway and both were rejected citing payment failure. After a week of successful transaction and money bei…
+- reddit-dryrun-1vv87ie [reddit|groww|mixed] H
+  spans: auto_pause_unexplained: "I didn't pause these SIPs"
+  text: Foreign investment via MF I didn't pause these SIPs. This happened automatically. How do I resume or redirect investing in foreign markets using groww? Thank you 🙏🏻 I'm a moderate investor as per the quiz attached. Goal foreign in…
+- youtube-Ugy8on5PDgsgNsL1p8V4AaABAg [youtube|-|unclear] H stage:start
+  spans: sip_stuck_processing: "Mandate also shown processing"
+  text: I create SIP with Mandate 10-Sep-25. SIP not shown in the SIP tab and Mandate also shown processing. What can I do Now
+- tradingqna-361591 [tradingqna|zerodha_coin|structural_ux] 
+  spans: sip_not_executed: "SIPs scheduled today will not be triggered"
+  text: Hey, saw this at Coin dashboard page notification " SIPs scheduled today will not be triggered. " Will they be triggered tomorrow instead (as mentioned earlier, SIPs will be live for 5 days for the payment) or The orders for this …
+
+=== TRU-4 Support did not resolve my problem | posts 67 | ch {'reddit': 16, 'play_store': 48, 'tradingqna': 2, 'youtube': 1} | platform {'coin': 19, 'other': 43, 'not_identifiable': 5} (coin_and_other_platforms) | drop-off 14 (coin 1, competitor 10) | money 6 | fix {'product': 56, 'education': 0, 'external': 2, 'unclear': 9} | top labels {'support_failure': 67}
+- playstore-et_money-2d0c106a-06d2-4c94-a258-f25b35002dc2 [play_store|etmoney|structural_ux] H money:deducted my SIP amount twice
+  spans: support_failure: "even after multiple emails they do not respond"
+  text: Very bad customer support service. App deducted my SIP amount twice in the same month and even after multiple emails they do not respond. I don't know weather I'll be getting my money back or no as its not showing in my portfolio …
+- reddit-1h6bre7 [reddit|groww|structural_ux] H
+  spans: support_failure: "Raised multiple complaints with Groww support but no help"
+  text: Issue with Groww I have been facing this issue since past few months where I am unable to invest one time or sip in any of the funds for amounts greater than ₹50,000. Raised multiple complaints with Groww support but no help. They…
+- tradingqna-387962 [tradingqna|-|structural_ux] 
+  spans: support_failure: "get reply of any email and call"
+  text: Also customer service is very poor. Without letting me know, they stopped my SIPs automatically and charged a huge amount on my withdrawals. Didn’t get reply of any email and call.
+- youtube-UgwIVHjutTvVQ2-U2KR4AaABAg [youtube|groww|structural_ux] 
+  spans: support_failure: "complain krne pe reply aata hai ki xyz UTR ke through paise chale gye hai"
+  text: Sir maine groww app se SIP redeem kiye huye aaj 11 din ho gye(3 times redeem kiya), groww me completed dikh rha hai pr account me transfer nhi huye, complain krne pe reply aata hai ki xyz UTR ke through paise chale gye hai.
+- playstore-et_money-740fa7bf-0a84-40cb-a2ce-6dfd6cf71eca [play_store|etmoney|structural_ux] H stop:intent_to_leave/platform
+  spans: support_failure: "Pathetic service, no customer care"
+  text: Pathetic service, no customer care, if you are lucky they will respond on your email in 2 days. They give a false claim that if you do lumpsum investment before 2pm you get the same day nav, but they always delay placing an order …
+- reddit-1cikn3s [reddit|kuvera|structural_ux] money:bounced EMIs, exit load charges
+  spans: support_failure: "the support executive just reads from their script"
+  text: Kuvera is a mess after Cred acquisition After all these years of easy investing, Kuvera is starting to disappoint. I woke up today to duplicate SIP orders purchased. My account shows the correct number of scheduled SIPs but the Or…
+- tradingqna-351434 [tradingqna|-|external_third_party] 
+  spans: support_failure: "more than a week but no response from their end"
+  text: I have mandated Monthly SIP in Motilal Oswal S & P 500 but because of some reasons, they have stopped my SIP. I tried to reach out to their customer support but It’s been more than a week but no response from their end. I don’t un…
+- playstore-paytm_money-1f6021f1-0e21-4a7c-8cf4-e9ecf65e69af [play_store|paytm_money|structural_ux] H stop:intent_to_leave/platform
+  spans: support_failure: "customer support services are very slow"
+  text: lately I have been facing mutual fund redemption issue . customer support services are very slow and not up to the mark. they made customer to wait for more than 25 or 30 minutes, or sometime upto one hour. such a bad experience. …
+- reddit-1ehf28h [reddit|kuvera|mixed] 
+  spans: support_failure: "The branch and the customer support has no idea about it"
+  text: Charges for missing a SIP Have a SIP set up through kuvera using billpay mandate. Unfortunately won't be having enough funds this month, can't stop the sip now because it needs to be stopped atleast 2 weeks before. How much is the…
+- playstore-paytm_money-45fa5327-857c-406d-8640-302b2f242caa [play_store|paytm_money|structural_ux] H
+  spans: support_failure: "even poorer customer service"
+  text: App has glitches (ENtire MF portfolio not visible on app) and raising tickets is another tedious task.. Ensuring they understand your issue is another issue.. Poor app interface and even poorer customer service. Redemption becomes…
+- reddit-1fwzi9e [reddit|etmoney|structural_ux] stop:intent_to_leave/platform
+  spans: support_failure: "currently we do not have any feature through which product wise notifications"
+  text: ET Money: A Good App??? Very aggressive marketing to the point the app is so distracting??? I have been using ET Money App for a few months now and though I like many of their recommendations and the basic app style, I'm thinking …
+- playstore-zerodha_coin-8e4674b9-4cdf-43ef-9cf8-f15fc95b1c35 [play_store|zerodha_coin|structural_ux] H stage:start
+  spans: support_failure: "The support button in the profile section doesn't respond"
+  text: I had added 3 SIPs, and added 15000 rupees to the wallet, today i see all the money is gone and an error message "holdings: Request failed (kitetrade-common)" . So no SIP created and the money is gone. It hasn't been refunded I ch…
+
+=== EDU-2 I do not know what pause, stop, cancel or delete will do, or how to do it | posts 63 | ch {'reddit': 27, 'play_store': 7, 'tradingqna': 17, 'youtube': 12} | platform {'coin': 18, 'other': 21, 'not_identifiable': 24} (coin_and_other_platforms) | drop-off 13 (coin 0, competitor 0) | money 3 | fix {'product': 56, 'education': 0, 'external': 2, 'unclear': 5} | top labels {'pause_cancel_confusion': 30, 'no_pause_option': 5, 'cannot_stop_sip': 4, 'offline_stop_process': 4, 'exit_procedure_uncertainty': 3, 'restart_unclear': 3}
+- reddit-1rfv3xe [reddit|-|structural_ux] H stop:sip_stop/sip money:the money got deducted
+  spans: pause_cancel_confusion: "Does SIP cancellation usually take one full month to reflect?"
+  text: SIP cancellation requested but amount still deducted – does it take a month to stop? I requested to cancel my monthly SIPs around Jan 25, but the Feb 1 SIP was still active and the money got deducted. I still see the status as "ca…
+- tradingqna-270207 [tradingqna|zerodha_coin|mixed] H stop:sip_pause/sip
+  spans: accidental_sip_deletion: "accidently i have deleted the SIP"; unclear_delete_meaning: "What exactly delete means?"; pause_cancel_confusion: "Will by SIP gets redeemed now?"
+  text: Hi Team, I have paused one of SIP but accidently i have deleted the SIP. What exactly delete means? Will by SIP gets redeemed now? If no, can I continue investing in the same SIP again
+- youtube-UgwCTQHB3ot64iAx2HB4AaABAg [youtube|-|structural_ux] H
+  spans: restart_unclear: "ओटीपी मांग रहा है तो ओटीपी कैसे डालें"
+  text: सर मेरी SIP कैंसिल हुई है और रीस्टार्ट बता रही है तो उसको कैसे रीस्टार्ट करें फिर से चालू कैसे करेंरीस्टार्ट कर रहा हूं तो ओटीपी मांग रहा है तो ओटीपी कैसे डालेंइसके बारे में बताइए नासर
+- playstore-et_money-1d3d45a5-2b58-4c50-a5b8-e6e1c02b5b74 [play_store|etmoney|structural_ux] 
+  spans: cannot_stop_sip: "i am unable to stop SIP"
+  text: Major bug issue in the app. the SIP option does not work now. when i try to open it the page does try to open a bit closes down midway and says something error happened. please try again later. I have reinstalled the app and the s…
+- reddit-1bs2bu0 [reddit|-|mixed] stop:sip_stop/sip
+  spans: pause_cancel_confusion: "Yet I am getting sms that SIP amount will be deducted on 2nd April"
+  text: Do bank charge penalty for missing SIP? I wanted to stop a regular mf SIP. Already confirmed to the agent on 8th March. Yet I am getting sms that SIP amount will be deducted on 2nd April. I have requested redemption of the already…
+- tradingqna-117919 [tradingqna|-|structural_ux] H
+  spans: pause_cancel_confusion: "what will happened to the money which i invested till now"
+  text: Thanks Faisr for your reply. As you suggested, i have started investing in ‘Aditya birla sun lite Tax relief 96 fund’ instead of ‘Aditya birla sun lite Tax Plan’ for ELSS (U/S 80C). So if i pause/inactive the ‘Aditya birla sun lit…
+- youtube-UgxVwFn1U5Nsibr4DjV4AaABAg [youtube|-|structural_ux] 
+  spans: sip_edit_skipped_installment: "मैंने अपनी sip एडिट करी थी तो उस महीने की एसआईपी कटी नहीं"
+  text: सर अकाउंट में पैसे भी हैं लेकिन मैंने अपनी sip एडिट करी थी तो उस महीने की एसआईपी कटी नहीं next month ki same date aa rhi h अब तो क्या मेरे पैसे बैंक अभी काटेंगा
+- playstore-et_money-4993a233-662c-4015-88c5-e3f053e39033 [play_store|etmoney|structural_ux] stop:sip_stop/sip
+  spans: cannot_stop_sip: "I am unable to close or stop sip"
+  text: I am unable to close or stop sip.i can not talk to executive for resolution.solution provided by them is not working.pura backwash app hai.waste of time and money.close all 3 sip at your end today,i am frustrated.
+- reddit-1cm84ot [reddit|groww|structural_ux] stage:month_7_12
+  spans: pause_cancel_confusion: "Is it better to skip instalments for those months ? Or should I cancel this"
+  text: New here I got a job a year back and have been making an SIP for 7.5k per month via Groww. Due to some personal reasons I will not be able to pay that for a couple of months. Is it better to skip instalments for those months ? Or …
+- tradingqna-121223 [tradingqna|-|structural_ux] H
+  spans: offline_pause_process: "having to send a physical request letter"
+  text: I was reading https://www.livemint.com/Money/AfOMW0DVcQCLp9MbrA1zpK/You-can-pause-your-mutual-fund-SIPs-and-then-restart-them.html this article yesterday which said that you can pause and resume your SIP’s. But this seems like an …
+- youtube-Ugy0p-2OMgHB891H9oZ4AaABAg [youtube|-|structural_ux] 
+  spans: pause_cancel_confusion: "Sip agar toot gaya to kiya sip band ho jayegi"
+  text: Sip agar toot gaya to kiya sip band ho jayegi pehle ye batao
+- playstore-groww-66aca4e9-e96a-4e94-ada8-dd661f1f3d02 [play_store|groww|structural_ux] 
+  spans: no_indefinite_pause: "Allow us to pause SIPs indefinitely"
+  text: Allow us to pause SIPs indefinitely. Currently you can skip 1 installment or cancel completely but I just want to pause for a few months.
+
+=== REL-5 My SIP needs me to pay by hand each time, so instalments get missed | posts 63 | ch {'reddit': 13, 'play_store': 24, 'tradingqna': 19, 'youtube': 7} | platform {'coin': 41, 'other': 13, 'not_identifiable': 9} (mostly_coin) | drop-off 2 (coin 1, competitor 1) | money 0 | fix {'product': 53, 'education': 1, 'external': 2, 'unclear': 7} | top labels {'manual_payment_path_gap': 44, 'missed_sip_no_reminder': 6, 'no_reminder_feature': 4, 'mandate_aversion': 2, 'upi_autopay_unavailable': 2, 'no_bank_sip': 1}
+- playstore-et_money-dacccd8b-d0e7-4aa1-82b2-75f17a539412 [play_store|etmoney|structural_ux] H
+  spans: upi_autopay_unavailable: "I don't understand why you can't provide UPI option"
+  text: Hi ET Money team, I don't understand why you can't provide UPI option as it helps to purchase MF units on same day. instead you have some Easypay setup which takes money early morning, but units allocate after 3-4days. This has cr…
+- tradingqna-44058 [tradingqna|zerodha_coin|structural_ux] H
+  spans: manual_payment_path_gap: "How do I schedule a bank transfer from my bank account for a date regularly from my bank"
+  text: I wish to start a SIP(Systematic Investment Plan) in a direct mutual fund on Coin every month after my pay day. How do I schedule a bank transfer from my bank account for a date regularly from my bank since Zerodha doesn’t have an…
+- reddit-1mfi68r [reddit|zerodha_coin|unclear] H stage:start
+  spans: manual_payment_path_gap: "It doesn't even show in pending payments so that I can pay that myself"
+  text: SIP amount not deducted Hi all, I created 2 new SIPs on 30th July and linked it with e-mandate for auto debit on 2 Aug i.e. today in coin app. I also have 2 old SIPs for today. For the old SIP the order got placed yesterday and to…
+- youtube-UgwBXedQo9if3gU1Wf54AaABAg [youtube|-|structural_ux] H
+  spans: manual_payment_path_gap: "agar mandate add ni krege toh , pending m dikhaega na hr month"
+  text: Sir agar mandate add ni krege toh , pending m dikhaega na hr month
+- playstore-zerodha_coin-07e93014-5342-4346-9259-3403f726c457 [play_store|zerodha_coin|structural_ux] H
+  spans: no_reminder_feature: "Coin is not sending mobile notification when an SIP order is ready for payment"
+  text: Waiting since 2 years. No update on this feature. Coin is not sending mobile notification when an SIP order is ready for payment.
+- tradingqna-533664 [tradingqna|zerodha_coin|structural_ux] H
+  spans: missed_sip_no_reminder: "kept getting tired of remembering to add funds manually"
+  text: wow! this is a great feature. I do weekly SIP's and kept getting tired of remembering to add funds manually, added reminders but to many times the SIP would fail due to lack of sufficient funds. The streamlined SIP process and aut…
+- reddit-zgqr64 [reddit|zerodha_coin|external_third_party] H stop:intent_to_leave/platform
+  spans: autodebit_unavailable: "now auto-debit stopped working due to some regulations"; manual_payment_path_gap: "Currently I need to transfer money manually for each SIP"
+  text: Auto Debit stopped working for SIPs on Zerodha | any alternatives Few months ago SIP though Zerodha/coin was seemless. Amount used to auto-debit from my account just befor the SIP date, now auto-debit stopped working due to some r…
+- youtube-UgwBXedQo9if3gU1Wf54AaABAg.9vwOqXPnxpwA5H5Kt_qkYk [youtube|-|structural_ux] H
+  spans: manual_payment_path_gap: "Nhi dikh raha h pending me"
+  text: Nhi dikh raha h pending me.. mera mandate nhi he.. apke pas koi solution he?
+- playstore-zerodha_coin-5b4d08f5-b408-45e6-9fd0-6c649ec30eb7 [play_store|zerodha_coin|mixed] H
+  spans: missed_sip_no_reminder: "My SIPs keep getting missed"; manual_payment_path_gap: "no I don't want to use mandates"
+  text: Please add notifications to pay for the SIP, and alerts if not paid till the last date, My SIPs keep getting missed and no I don't want to use mandates. thanks for confirmation.
+- tradingqna-80752 [tradingqna|zerodha_coin|structural_ux] H
+  spans: manual_payment_path_gap: "is there any way, something like ECS facility, so that funds can be auto debited"
+  text: I bought few direct mutual funds through SIP mode. But what I observed is monthly SIP is being debited from Zerodha account instead from my bank account and I understand why it is so. So, is there any way, something like ECS facil…
+- reddit-18xkw3u [reddit|hdfc_mf|structural_ux] stage:start
+  spans: manual_payment_path_gap: "Since I missed on sip today I want to purchase a one time 15K"
+  text: Hdfc mutual fund question Guys I recently registered for sip via hdfcmutualfund.com but failed to add biller. Sip was supposed to happen today but didn’t. So sip will happen next month same day (I added the biller now). The sip wa…
+- youtube-UgxTWlbmv7fKvcqNXVt4AaABAg.9vPUwUmaw1CA0V6vEcjyAI [youtube|-|structural_ux] H stage:start
+  spans: manual_payment_path_gap: "untill now it isn't showing any pending payment"
+  text: I did an sip on 29th feb and made installment day on 1 of every month that's 1st march but untill now it isn't showing any pending payment... How to proceed?
+
+=== REL-3 The app shows my holdings or values wrong, or not at all | posts 56 | ch {'reddit': 23, 'play_store': 29, 'tradingqna': 1, 'youtube': 3} | platform {'coin': 26, 'other': 25, 'not_identifiable': 5} (coin_and_other_platforms) | drop-off 5 (coin 2, competitor 2) | money 2 | fix {'product': 54, 'education': 1, 'external': 0, 'unclear': 1} | top labels {'statement_confusion': 26, 'funds_apparently_missing': 8, 'portfolio_value_mismatch': 4, 'external_fund_tracking': 2, 'holdings_not_visible': 2, 'no_payment_history': 2}
+- playstore-paytm_money-45fa5327-857c-406d-8640-302b2f242caa [play_store|paytm_money|structural_ux] H
+  spans: holdings_not_visible: "ENtire MF portfolio not visible on app"
+  text: App has glitches (ENtire MF portfolio not visible on app) and raising tickets is another tedious task.. Ensuring they understand your issue is another issue.. Poor app interface and even poorer customer service. Redemption becomes…
+- reddit-1q3iubg [reddit|zerodha_coin|structural_ux] H
+  spans: statement_confusion: "Invested ₹50k in SBI SAVINGS FUND - shows ₹49997"
+  text: Is there any charges or Transaction costs in Coinapp ? Is there any transaction costs or other charges in Coin app if paid via Gpay UPI? Invested ₹50k in SBI SAVINGS FUND - shows ₹49997 Invested ₹5k in ICICI fund - shows ₹4999.749…
+- youtube-Ugznl_NxgrUJKpfBqZN4AaABAg [youtube|-|structural_ux] 
+  spans: statement_confusion: "portfolio me kuch nhi aa raha or sip active aa rahi hai"
+  text: Sir sip ka order cancel kar diya fir aapki is video ki jese aa raha hai portfolio me kuch nhi aa raha or sip active aa rahi hai but usme se paise vapas kese nikale
+- tradingqna-365526 [tradingqna|zerodha_coin|structural_ux] 
+  spans: funds_apparently_missing: "The lumpsum investment I made on Friday, 29th July is yet to be traced"
+  text: I strongly think fresh investments on Coin should have been stopped. The lumpsum investment I made on Friday, 29th July is yet to be traced.
+- playstore-paytm_money-fb114473-3a5a-4d87-8122-a884f1c1e5bd [play_store|paytm_money|structural_ux] H
+  spans: funds_apparently_missing: "now all funds are not visible on Paytm do not know where it went"
+  text: Fraud, have transferred 2 lakhs mutual funds from other app. now all funds are not visible on Paytm do not know where it went. also, unnecessary getting popup to create demat on Paytm, even not interested
+- reddit-1d1183w [reddit|tata_mf|structural_ux] 
+  spans: active_sip_not_visible: "I dont see my active SIP in their online portal"
+  text: SIP is missing in Tata MF online? I want to cancel my existing SIP that I had created in Tata MF portal and create another one with increased amount. However, I dont see my active SIP in their online portal. SIP amount had deducte…
+- youtube-UgyQ7udDuMDVa1-8INN4AaABAg [youtube|groww|structural_ux] 
+  spans: autopay_status_unclear: "SIP la auto debit la iruka ilayanu epdi therinjukala"
+  text: Anna grow app la SIP la auto debit la iruka ilayanu epdi therinjukala
+- playstore-zerodha_coin-8e4674b9-4cdf-43ef-9cf8-f15fc95b1c35 [play_store|zerodha_coin|structural_ux] H stage:start
+  spans: funds_apparently_missing: "today i see all the money is gone"
+  text: I had added 3 SIPs, and added 15000 rupees to the wallet, today i see all the money is gone and an error message "holdings: Request failed (kitetrade-common)" . So no SIP created and the money is gone. It hasn't been refunded I ch…
+- reddit-1esk1kp [reddit|zerodha_coin|structural_ux] stop:intent_to_leave/platform stage:start
+  spans: external_fund_tracking: "ability to track external funds"
+  text: Switching MFs from Zerodha to Groww creates a new ‘portfolio’?🤔 Hello everyone, I’ve invested in a couple of mutual funds recently through Zerodha coin (two different AMCs) and now I feel that I want to switch to Groww just coz of…
+- youtube-UgzqschJRHqcSlmf3Gp4AaABAg [youtube|-|structural_ux] stage:start
+  spans: statement_confusion: "it still keep showing as next sip date 10 Aug 2024"
+  text: Sir I created and paid my first installment on 10th Aug successfully but now when I go and check my sip it still keep showing as next sip date 10 Aug 2024 😅😅😅?
+- playstore-et_money-75e30f36-df10-4016-bbdc-d3483d590829 [play_store|etmoney|structural_ux] stop:intent_to_leave/platform
+  spans: external_fund_tracking: "Cannot see external MFs"
+  text: Update - The app has become less and less useful now. Everything is about purchasing Genius subscription. Cannot see external MFs. Going to switch to another platform!! It was good app until recent updates.Now there are endless pr…
+- reddit-1fjurp1 [reddit|zerodha_coin|structural_ux] 
+  spans: statement_confusion: "it's showing invested amt 1k and the current amt as 2k"
+  text: What is wrong with Coin? I am a beginner. I have put 2k in Nifty and now it's showing invested amt 1k and the current amt as 2k. Make this make sense please.
+
+=== EDU-3 I do not understand the mandate, dates or SIP terms | posts 55 | ch {'reddit': 13, 'play_store': 4, 'tradingqna': 5, 'youtube': 33} | platform {'coin': 14, 'other': 6, 'not_identifiable': 35} (platform_rarely_stated) | drop-off 2 (coin 0, competitor 1) | money 1 | fix {'product': 44, 'education': 0, 'external': 6, 'unclear': 5} | top labels {'unclear_mandate_terms': 17, 'mandate_end_date_confusion': 10, 'notification_uncertainty': 4, 'auto_debit_setup_confusion': 3, 'installment_date_confusion': 3, 'forced_mandate_resetup_risk': 3}
+- youtube-Ugwqc3BOxdu2aunAMYh4AaABAg [youtube|zerodha_coin|structural_ux] H stage:start
+  spans: mandate_end_date_confusion: "End date 02-01-2054"; unclear_mandate_terms: "It is not showing " until cancelled""
+  text: Hi bro..i just start creating SIP in zerotha. While create mandate , SIP in the bank link shows that "start date 02-01-2024 and End date 02-01-2054". And also after confirmation, in the next dialog box payment details,Final collec…
+- reddit-pc42mx [reddit|-|mixed] H
+  spans: date_change_not_honoured: "does banks consider original payment due date"
+  text: Dropping question here as couldn't find a banking related subreddit Hi. I have a few SIPs which are due on 27th August. Original date were 24th August which I edited to 27th of every month. The edit request was processed and curre…
+- tradingqna-515714 [tradingqna|-|structural_ux] H stop:sip_stop/sip stage:start
+  spans: installment_date_confusion: "I am confused about next sip installment on which date"
+  text: Sir on 10th January Saturday I started my first sip on mutual fund after completing online payment but I am confused about next sip installment on which date my next instalment done so today I cancel my buy order I want to know wh…
+- playstore-et_money-4edb6db1-c44c-43d7-ad23-46f249efcdee [play_store|etmoney|structural_ux] stop:realised_exit/platform
+  spans: notification_uncertainty: "Never received notifications for my registered SIPs"
+  text: Never received notifications for my registered SIPs. Emailed support, but no response even after 15 days. Replying to the same email resulted in an "Undelivered" bounce. This issue has happened multiple times and was reported earl…
+- youtube-Ugxqq3Xaa8hedpAHli14AaABAg [youtube|-|structural_ux] H
+  spans: upi_mandate_howto: "How to create mandate using upi"
+  text: How to create mandate using upi
+- reddit-1gc0c6b [reddit|zerodha_coin|mixed] money:295₹
+  spans: emandate_introduction: "started after Zerodha introduced emandate"
+  text: MF sip zerodha(coin) failure causes 295₹ deduction from SBI, any suggestions to avoid. Every time my SBI account has insufficient balance and sip hits, it causes penalty of 295₹. This was not the case earlier and started after Zer…
+- tradingqna-361591 [tradingqna|zerodha_coin|structural_ux] 
+  spans: notification_uncertainty: "Will they be triggered tomorrow instead"
+  text: Hey, saw this at Coin dashboard page notification " SIPs scheduled today will not be triggered. " Will they be triggered tomorrow instead (as mentioned earlier, SIPs will be live for 5 days for the payment) or The orders for this …
+- playstore-groww-1b25b5c2-2c11-450e-8d91-95d5f76dac65 [play_store|groww|structural_ux] 
+  spans: mandate_type_change_blocked: "Unable to change Autopay mandate from eNACH to UPI"
+  text: Unable to change Autopay mandate from eNACH to UPI. Your support team also don't know anything. they just use AI for giving response and close the chat within seconds of giving a response. ticket number 28326142
+- youtube-UgwAcCjtB7xPYJxZJwl4AaABAg [youtube|groww|structural_ux] stage:start
+  spans: sip_tenure_confusion: "Groww app se sip first time invest karo to 5yers dekha raha hy"
+  text: Sir Groww app se sip first time invest karo to 5yers dekha raha hy?hel me
+- reddit-1h2ht84 [reddit|-|mixed] 
+  spans: mandate_type_change: "providing ECS for sip rather than old biller way"
+  text: MF ECS mandate is sham I have started seeing many of MF company sites providing ECS for sip rather than old biller way. This ECS if bounces there are charges (590Rs in ICICI, could be different for other banks). In Biller way, the…
+- tradingqna-432484 [tradingqna|zerodha_coin|structural_ux] stage:beyond_12
+  spans: order_date_confusion: "I'm trying to understand how exactly the SIPs work - especially the order dates"
+  text: I've been using COIN SIPs for well over a year now and I'm trying to understand how exactly the SIPs work - especially the order dates. Say I have a bunch of SIPs for the 26th of every month through NACH mandates and one of them i…
+- playstore-zerodha_coin-70b5ed00-7c26-41bb-9ba9-ca52c6ad4a28 [play_store|zerodha_kite|structural_ux] 
+  spans: forced_mandate_resetup_risk: "I have to first create and then delete the previous one, which also fails many times"
+  text: Is it too difficult to add an edit mandate option in the console when I want to update a mandate amount? I have to first create and then delete the previous one, which also fails many times.
+
+=== TRU-3 My money is stuck: a refund, redemption or bank change will not go through | posts 54 | ch {'reddit': 17, 'play_store': 29, 'tradingqna': 4, 'youtube': 4} | platform {'coin': 16, 'other': 27, 'not_identifiable': 11} (coin_and_other_platforms) | drop-off 8 (coin 1, competitor 5) | money 5 | fix {'product': 46, 'education': 0, 'external': 1, 'unclear': 7} | top labels {'refund_delay': 13, 'redemption_blocked': 10, 'redemption_issue': 7, 'bank_change_blocked': 3, 'refund_uncertainty': 3, 'slow_withdrawal': 3}
+- playstore-paytm_money-1f6021f1-0e21-4a7c-8cf4-e9ecf65e69af [play_store|paytm_money|structural_ux] H stop:intent_to_leave/platform
+  spans: redemption_issue: "facing mutual fund redemption issue"
+  text: lately I have been facing mutual fund redemption issue . customer support services are very slow and not up to the mark. they made customer to wait for more than 25 or 30 minutes, or sometime upto one hour. such a bad experience. …
+- reddit-1e77h3n [reddit|groww|mixed] 
+  spans: redemption_to_defunct_account: "both of them are being redeemed to now"
+  text: Changing the folio connected bank account after Citibank-Axis migration (my experience) So just wanted to leave it here incase someone has a similar scenario to deal with: 1. Axis in its communication(during migration) sent the fo…
+- tradingqna-515714 [tradingqna|-|structural_ux] H stop:sip_stop/sip stage:start
+  spans: refund_delay: "I want to know when my fund get refunded"
+  text: Sir on 10th January Saturday I started my first sip on mutual fund after completing online payment but I am confused about next sip installment on which date my next instalment done so today I cancel my buy order I want to know wh…
+- youtube-UgwIVHjutTvVQ2-U2KR4AaABAg [youtube|groww|structural_ux] 
+  spans: redemption_issue: "groww me completed dikh rha hai pr account me transfer nhi huye"
+  text: Sir maine groww app se SIP redeem kiye huye aaj 11 din ho gye(3 times redeem kiya), groww me completed dikh rha hai pr account me transfer nhi huye, complain krne pe reply aata hai ki xyz UTR ke through paise chale gye hai.
+- playstore-zerodha_coin-be4d21cf-0436-4533-8c02-03a45b4bed86 [play_store|zerodha_coin|structural_ux] H stop:platform_switch/platform money:None
+  spans: refund_delay: "After a week of successful transaction and money being deducted, I am getting a refund"
+  text: If the app doesnt serve its main purpose how should I rate this? I placed 2 orders for buying mutual funds through payment gateway and both were rejected citing payment failure. After a week of successful transaction and money bei…
+- reddit-1fe2oip [reddit|groww|structural_ux] 
+  spans: bank_detail_change_blocked: "all transfer requests are failing"
+  text: Unable to change bank details registered with Fund houses due to citibank and axis bank details mismatch. Please help me in a situation where my old bank details are not getting updated. Situation is as below. 1. Started investmen…
+- tradingqna-507813 [tradingqna|zerodha_coin|structural_ux] money:money deducted
+  spans: refund_delay: "when will ge the refund"
+  text: Did you get the refund? Mine is same…I have sip …it's emandate…auto debit from account. The order was processing but money didn't deduct…so I cancelled the order…mrng i checked money deducted…order is in cancelled state as I cance…
+- youtube-Ugxn7axztdEPpsHJZj94AaABAg [youtube|-|structural_ux] 
+  spans: redemption_blocked: "bank account mismatch with ucc aa raha hai"
+  text: Withdraw kar raha hu to bank account mismatch with ucc aa raha hai toh kya mandate karna padega Please sir solution batao
+- playstore-et_money-0b486d52-b8a0-43dc-adf1-acda6a07e37a [play_store|etmoney|structural_ux] stop:intent_to_leave/platform money:deducted the amount twice for each SIP
+  spans: refund_delay: "till the date they didn't refund me the amount"
+  text: I have registered 6 SIPs from etmoney but in the month July 2022 they deducted the amount twice for each SIP. I registered a complaint last week but till the date they didn't refund me the amount. Planning to withdraw all the amou…
+- reddit-1hgezmp [reddit|zerodha_coin|structural_ux] money:6.5k has been deducted thrice stage:month_1_3
+  spans: bank_change_delay: "it took them 4weeks to do so and all the order during that time were failing"
+  text: Zerodha Mandate deducted money thrice Attached below are the SS of all the orders placed for this month and the deductions made from my bank account. I had 3 Orders for 6th dec which got deducted, fine! Then i had another 3 mandat…
+- tradingqna-527057 [tradingqna|zerodha_coin|structural_ux] stage:start
+  spans: refund_delay: "when will I get the refund for cancelled order"
+  text: I have started new SIP, amount deducted from account but order cancelled by user. so when will I get the refund for cancelled order ?
+- youtube-Ugznl_NxgrUJKpfBqZN4AaABAg [youtube|-|structural_ux] 
+  spans: refund_uncertainty: "usme se paise vapas kese nikale"
+  text: Sir sip ka order cancel kar diya fir aapki is video ki jese aa raha hai portfolio me kuch nhi aa raha or sip active aa rahi hai but usme se paise vapas kese nikale
+
+=== REL-4 The app errors, breaks or is hard to use, and does not say why | posts 53 | ch {'reddit': 19, 'play_store': 32, 'tradingqna': 1, 'youtube': 1} | platform {'coin': 21, 'other': 30, 'not_identifiable': 2} (coin_and_other_platforms) | drop-off 9 (coin 3, competitor 5) | money 3 | fix {'product': 49, 'education': 0, 'external': 0, 'unclear': 4} | top labels {'unclear_error_message': 10, 'app_confusing': 8, 'order_failed_no_reason': 7, 'ui_glitch': 4, 'platform_bugginess': 4, 'kyc_issue': 3}
+- playstore-zerodha_coin-8e4674b9-4cdf-43ef-9cf8-f15fc95b1c35 [play_store|zerodha_coin|structural_ux] H stage:start
+  spans: unclear_error_message: "an error message "holdings: Request failed (kitetrade-common)""
+  text: I had added 3 SIPs, and added 15000 rupees to the wallet, today i see all the money is gone and an error message "holdings: Request failed (kitetrade-common)" . So no SIP created and the money is gone. It hasn't been refunded I ch…
+- reddit-1h6bre7 [reddit|groww|structural_ux] H
+  spans: investment_limit_error: "unable to invest one time or sip in any of the funds for amounts greater than ₹50,000"
+  text: Issue with Groww I have been facing this issue since past few months where I am unable to invest one time or sip in any of the funds for amounts greater than ₹50,000. Raised multiple complaints with Groww support but no help. They…
+- tradingqna-394662 [tradingqna|zerodha_coin|structural_ux] stop:realised_exit/platform
+  spans: recurring_issues: "These issues keep repeating"
+  text: @Bhuvan @nithin Can’t post more than 3 replies on a topic, so cannot post another reply on previous topic. So posting my last post on Coin here and then moving out from coin for all my new MF investments. Experience is not pleasan…
+- youtube-UgzGJKrF_gi_sXfBy0d4AaABAg [youtube|zerodha_coin|structural_ux] 
+  spans: sip_setup_confusing: "my coin is showing 1) Investment 2) installment. What to fill in investment"
+  text: Nice explanation bro. But my coin is showing 1) Investment 2) installment. What to fill in investment
+- playstore-zerodha_coin-be4d21cf-0436-4533-8c02-03a45b4bed86 [play_store|zerodha_coin|structural_ux] H stop:platform_switch/platform money:None
+  spans: order_failed_no_reason: "They are not able to cite a proper reason"
+  text: If the app doesnt serve its main purpose how should I rate this? I placed 2 orders for buying mutual funds through payment gateway and both were rejected citing payment failure. After a week of successful transaction and money bei…
+- reddit-1d1183w [reddit|tata_mf|structural_ux] 
+  spans: slow_portal: "their online portal is very slow and they dont have any mobile app"
+  text: SIP is missing in Tata MF online? I want to cancel my existing SIP that I had created in Tata MF portal and create another one with increased amount. However, I dont see my active SIP in their online portal. SIP amount had deducte…
+- playstore-zerodha_coin-d514130c-4e7e-4127-ba8e-92edbe3a5f25 [play_store|zerodha_coin|structural_ux] H
+  spans: unclear_error_message: "with vague error like 'KTError80' or something, what a user friendly warning"
+  text: App lags. UPI payment sucks, it didn't open external upi app for payment (no, I don't want to register yet another upi id with you when I've 3 upi apps) with vague error like 'KTError80' or something, what a user friendly warning.…
+- reddit-1fwzi9e [reddit|etmoney|structural_ux] stop:intent_to_leave/platform
+  spans: poor_web_interface: "Very poor web interface"
+  text: ET Money: A Good App??? Very aggressive marketing to the point the app is so distracting??? I have been using ET Money App for a few months now and though I like many of their recommendations and the basic app style, I'm thinking …
+- playstore-angel_one-34b80039-34c3-48ff-b73f-cbad3af2fd6d [play_store|angel_one|structural_ux] 
+  spans: accessibility_gap: "are not readable by our screen readers"
+  text: My name is Nagesh, and both my wife and I are visually impaired users of the Angel One application. We are writing to highlight the lack of accessibility within certain parts of the app. Specifically, the options within the three-…
+- reddit-1hgezmp [reddit|zerodha_coin|structural_ux] money:6.5k has been deducted thrice stage:month_1_3
+  spans: platform_bugginess: "Honestly i have felt that zerodha is very buggy"
+  text: Zerodha Mandate deducted money thrice Attached below are the SS of all the orders placed for this month and the deductions made from my bank account. I had 3 Orders for 6th dec which got deducted, fine! Then i had another 3 mandat…
+- playstore-angel_one-cce86865-e058-4554-9758-c5c03535bf13 [play_store|angel_one|structural_ux] 
+  spans: app_confusing: "Navigating and managing basic Mutual Fund investments or monthly SIP payments is a complete nightmare"
+  text: Extremely user-unfriendly and cluttered app! Navigating and managing basic Mutual Fund investments or monthly SIP payments is a complete nightmare. Confusing Interface: Basic options like making a simple manual SIP payment or maki…
+- reddit-1hggk6i [reddit|zerodha_coin|structural_ux] stop:realised_exit/platform
+  spans: platform_bugginess: "several issues arising related to funds, intraday transaction"; stagnant_features: "falling behind competitors such as IND Money, Dhan"
+  text: Zerodha!!! Zerodha appears to be losing its status as the preferred brokerage firm, as it seems to be falling behind competitors such as IND Money, Dhan and others. My recent experiences have not been great, with several issues ar…
+
+=== REL-2 My money left, but units came late or at a later NAV | posts 51 | ch {'reddit': 12, 'play_store': 33, 'tradingqna': 5, 'youtube': 1} | platform {'coin': 28, 'other': 19, 'not_identifiable': 4} (coin_and_other_platforms) | drop-off 6 (coin 3, competitor 3) | money 1 | fix {'product': 50, 'education': 0, 'external': 0, 'unclear': 1} | top labels {'unit_allocation_delay': 38, 'delayed_nav': 13, 'nav_update_lag': 1, 'early_cutoff_time': 1, 'holiday_debit_timing': 1}
+- playstore-et_money-740fa7bf-0a84-40cb-a2ce-6dfd6cf71eca [play_store|etmoney|structural_ux] H stop:intent_to_leave/platform
+  spans: delayed_nav: "they always delay placing an order with the AMC and you then get next days nav"
+  text: Pathetic service, no customer care, if you are lucky they will respond on your email in 2 days. They give a false claim that if you do lumpsum investment before 2pm you get the same day nav, but they always delay placing an order …
+- reddit-1de02u6 [reddit|zerodha_coin|structural_ux] 
+  spans: delayed_nav: "Payments made through Razorpay weren't being reported to the ICCL"
+  text: Response From Zerodha in Scores (Delayed NAV) Hey everyone, I wanted to share an update on an issue I had with delayed NAV reporting for mutual fund transactions. Payments made through Razorpay weren't being reported to the ICCL (…
+- tradingqna-283121 [tradingqna|zerodha_coin|structural_ux] 
+  spans: unit_allocation_delay: "there is a delay of 2-3 days between funds debit and MF Units purchase"
+  text: Hi, On going through Mutual Fund account statement noticed that the purchase date and hence the purchase NAV of MF units through SIP mode is different from the date when funds are auto debited from the bank account. Basically, the…
+- youtube-UgxtJIiWa1fh_Mi0Wtl4AaABAg [youtube|-|structural_ux] stage:start
+  spans: unit_allocation_delay: "अमाउंट पोर्टफोलियो में शो नहीं हो रहा"
+  text: भैया जी मेने सीप की है अभी 3000 रुपए की निप्पोन इंडिया में लेकिन अमाउंट पोर्टफोलियो में शो नहीं हो रहा।ऑर्डर सेंट तो amc दिखा रहा है।कृपया बताए कितने समय बाद अमाउंट शो हो जाएगा पोर्टफोलियो में
+- playstore-et_money-b122e32e-ead0-4f9b-948b-54b0a35bf584 [play_store|etmoney|structural_ux] H stop:realised_exit/platform stage:beyond_12
+  spans: delayed_nav: "the NAV is not allotted for the same date"
+  text: incredibly frustrating and unreliable app. even for SIP transactions done via "easypay" which are supposed to reach the fund house/amc hours before the cutoff time, the NAV is not allotted for the same date, the NAV of the next da…
+- reddit-1dkghde [reddit|indmoney|structural_ux] stage:start
+  spans: unit_allocation_delay: "it already got delayed by a week for it to process"
+  text: XSIP due date prior to mandate start date Newbie here, as the title says, this is what it says on INDMoney app for failed SIP on Nippon small cap fund. I registered SIP on 13th June and it already got delayed by a week for it to p…
+- tradingqna-363191 [tradingqna|zerodha_coin|structural_ux] stop:realised_exit/platform
+  spans: unit_allocation_delay: "Money stuck for almost 2 weeks now without unit allocation or refund"
+  text: Money stuck for almost 2 weeks now without unit allocation or refund or even ETA to fix issue. Stopped all SIPs on zerodha. Cant believe a payment cannot be tracked Or reversed in 2 weeks in current digital age. Really disappointe…
+- playstore-et_money-dacccd8b-d0e7-4aa1-82b2-75f17a539412 [play_store|etmoney|structural_ux] H
+  spans: unit_allocation_delay: "units allocate after 3-4days"
+  text: Hi ET Money team, I don't understand why you can't provide UPI option as it helps to purchase MF units on same day. instead you have some Easypay setup which takes money early morning, but units allocate after 3-4days. This has cr…
+- reddit-1eivny2 [reddit|zerodha_coin|structural_ux] stop:realised_exit/platform
+  spans: unit_allocation_delay: "The money was debited successfully but they units were not allotted"
+  text: Why I stopped investing via Zerodha's Coin or for that matter any other 3rd party or broker app? Just give a read to the below tweets and the replies or any quoted tweets under these 2. [https://x.com/IndiaEtfs/status/180524545243…
+- tradingqna-196171 [tradingqna|zerodha_coin|structural_ux] 
+  spans: early_cutoff_time: "why is Zerodha forcing investors to place the order by 1:30 PM"
+  text: @RahulKhanna @Bhuvan @sabyasachi_sadhu @trader_dude allow to add to this thread:- @hawkgaze is simply asking that when the Mutual Fund investment rule book and the industry standard is cut-off 3PM, then why is Zerodha forcing inve…
+- playstore-zerodha_coin-b3d4217c-d431-4b69-a902-274a1c966ddc [play_store|zerodha_coin|structural_ux] H stop:intent_to_leave/platform money:what funds I paid for yesterday are not reflecting till now stage:start
+  spans: unit_allocation_delay: "Mutual Funds are taking lot of time to reflect after buying"
+  text: Its very slow. Mutual Funds are taking lot of time to reflect after buying, what funds I paid for yesterday are not reflecting till now. SIPs are also not executing, sip that was supposed to execute today has not executed. I plann…
+- reddit-1eivuce [reddit|-|structural_ux] 
+  spans: unit_allocation_delay: "The money was debited successfully but they units were not allotted"
+  text: investing directly with AMC's rather than broker app or 3rd party apps Just give a read to the below tweets and the replies or any quoted tweets under these 2. [https://x.com/IndiaEtfs/status/1805245452436324647](https://x.com/Ind…
+
+=== TRU-2 My bank charged me a penalty for a failed SIP debit | posts 50 | ch {'reddit': 38, 'play_store': 1, 'tradingqna': 7, 'youtube': 4} | platform {'coin': 9, 'other': 16, 'not_identifiable': 25} (platform_rarely_stated) | drop-off 6 (coin 0, competitor 1) | money 18 | fix {'product': 16, 'education': 0, 'external': 0, 'unclear': 34} | top labels {'bank_penalty': 28, 'penalty_uncertainty': 19, 'insufficient_funds_on_sip_date': 17, 'failed_payment_fear': 2, 'unclear_debit_cutoff_time': 1, 'platform_blamed_for_bank_charge': 1}
+- reddit-1septyi [reddit|-|mixed] H money:penalty of 1500 rupees
+  spans: bank_penalty: "an penalty of 1500 rupees was cut from my account"
+  text: SIP Autodebit mandate failed and resulted in penalty. Take care. I had 5 SIPs with an autodebit mandate set on the 3rd of April. Due to insufficient balance in my account, an penalty of 1500 rupees was cut from my account. The ban…
+- tradingqna-533664 [tradingqna|zerodha_coin|structural_ux] H
+  spans: insufficient_funds_on_sip_date: "the SIP would fail due to lack of sufficient funds"
+  text: wow! this is a great feature. I do weekly SIP's and kept getting tired of remembering to add funds manually, added reminders but to many times the SIP would fail due to lack of sufficient funds. The streamlined SIP process and aut…
+- youtube-UgwGxCyvcUDFM3tC-qt4AaABAg [youtube|-|mixed] H
+  spans: penalty_uncertainty: "toh kiya penalty lage ga kiya?"; unclear_debit_cutoff_time: "08:30 am pa hi account pa deposit kar diya thaa"
+  text: Mera sip Auto payment ma thaa month ka 20 tarik ko par sufficient balance nahi thaa par mane 20 tarikho hi 08:30 am pa hi account pa deposit kar diya thaa toh kiya penalty lage ga kiya?
+- playstore-zerodha_coin-0bba37ab-08da-4b3a-be41-8fad57a09457 [play_store|zerodha_coin|mixed] H
+  spans: insufficient_funds_on_sip_date: "my order got cancelled due to not availability of funds"
+  text: Very good app for maintaining all your SIPs at one place. Only one suggestion that please enable a function that before one day of your incoming SIP order, person should get a notification to check that proper fund is available in…
+- reddit-1telwwr [reddit|-|mixed] H money:₹590 twice
+  spans: bank_penalty: "My bank charged me ₹590 twice for NACH return"; insufficient_funds_on_sip_date: "I forgot to maintain balance in it"
+  text: My bank charged me ₹590 twice for NACH return — what does this mean? So i got charged ₹590 twice by my bank with the description: I think this happened because I missed my SIP auto-debit. I actually had enough money overall, but t…
+- tradingqna-103065 [tradingqna|zerodha_coin|structural_ux] 
+  spans: insufficient_funds_on_sip_date: "have any fund in my equity wallet"
+  text: CASE: Consider I have 1 ongoing SIP and scheduled date for payment is 5th of every month. Query: If I don’t have any fund in my equity wallet, will it purchase on 5th and show negative balance in my account or it will automaticall…
+- youtube-Ugy-otLBgnfRXVzmlDp4AaABAg [youtube|zerodha_coin|structural_ux] 
+  spans: penalty_uncertainty: "mujhe penalty to nahin lagega jis month mein push karunga"
+  text: Sir maine e-mandate active kar diya hun aap ka video dekh kar but mujhe kisi month me push karna hai kisi fi Karan jaisa mere account paise nahin hai next month fir se coins app par resume karde ..to sir mujhe penalty to nahin lag…
+- reddit-pc42mx [reddit|-|mixed] H
+  spans: bank_penalty: "my bank decided to charge ECS/NACH bounce penalty today"
+  text: Dropping question here as couldn't find a banking related subreddit Hi. I have a few SIPs which are due on 27th August. Original date were 24th August which I edited to 27th of every month. The edit request was processed and curre…
+- tradingqna-118068 [tradingqna|-|mixed] money:approx Rs. 300 plus taxes
+  spans: bank_penalty: "I was penalized heavily (approx Rs. 300 plus taxes against an SIP of Rs. 1000/-) by bank for bounce of ECS"
+  text: There is one advantage of deducting money from Zerodha trading account as compared to bank account. Once I did not kept enough funds for my SIP and I was penalized heavily (approx Rs. 300 plus taxes against an SIP of Rs. 1000/-) b…
+- youtube-UgyYJnLMZEVBQtv0dR14AaABAg [youtube|-|mixed] 
+  spans: penalty_uncertainty: "penalty lagegi ya nhi"
+  text: Monthly Sip jo date chose kre h payment ke us date pe nhi jama kre paise to penalty lagegi ya nhi
+- reddit-187slnp [reddit|-|mixed] money:573
+  spans: bank_penalty: "HDFC today charges me 573 for failing a mandate"
+  text: SIP penalty ! I did not knew this before , if your bank account doesn’t have sufficient balance for the SIP, the bank charges you a penalty! HDFC today charges me 573 for failing a mandate !
+- tradingqna-136312 [tradingqna|-|structural_ux] 
+  spans: penalty_uncertainty: "will doing so involve penalties?"
+  text: Should I just cancel the bank mandate or will doing so involve penalties? Whats the proper way of doing this? I had invested offline through an intermediary.
+
+=== TRU-5 Charges, upsells and pushes I did not expect | posts 43 | ch {'reddit': 12, 'play_store': 20, 'tradingqna': 6, 'youtube': 5} | platform {'coin': 14, 'other': 22, 'not_identifiable': 7} (coin_and_other_platforms) | drop-off 15 (coin 2, competitor 13) | money 2 | fix {'product': 42, 'education': 0, 'external': 1, 'unclear': 0} | top labels {'charges_uncertainty': 9, 'aggressive_marketing': 7, 'hidden_fee': 6, 'paywall_basic_features': 4, 'exit_load_surprise': 3, 'advisory_plan_underperformance': 2}
+- playstore-et_money-2d0c106a-06d2-4c94-a258-f25b35002dc2 [play_store|etmoney|structural_ux] H money:deducted my SIP amount twice
+  spans: aggressive_marketing: "they have started telling to opt for their paid service"
+  text: Very bad customer support service. App deducted my SIP amount twice in the same month and even after multiple emails they do not respond. I don't know weather I'll be getting my money back or no as its not showing in my portfolio …
+- reddit-1q3iubg [reddit|zerodha_coin|structural_ux] H
+  spans: charges_uncertainty: "Is there any transaction costs or other charges in Coin app"
+  text: Is there any charges or Transaction costs in Coinapp ? Is there any transaction costs or other charges in Coin app if paid via Gpay UPI? Invested ₹50k in SBI SAVINGS FUND - shows ₹49997 Invested ₹5k in ICICI fund - shows ₹4999.749…
+- tradingqna-387962 [tradingqna|-|structural_ux] 
+  spans: hidden_fee: "charged a huge amount on my withdrawals"
+  text: Also customer service is very poor. Without letting me know, they stopped my SIPs automatically and charged a huge amount on my withdrawals. Didn’t get reply of any email and call.
+- youtube-Ugw00RBNLVb7aZIOoaV4AaABAg [youtube|-|structural_ux] 
+  spans: charges_uncertainty: "does the bank charges for every sip mandate"
+  text: Very nicely explained..tq. Wanted to know does the bank charges for every sip mandate..
+- playstore-paytm_money-fb114473-3a5a-4d87-8122-a884f1c1e5bd [play_store|paytm_money|structural_ux] H
+  spans: demat_push: "unnecessary getting popup to create demat on Paytm"
+  text: Fraud, have transferred 2 lakhs mutual funds from other app. now all funds are not visible on Paytm do not know where it went. also, unnecessary getting popup to create demat on Paytm, even not interested
+- reddit-1fwzi9e [reddit|etmoney|structural_ux] stop:intent_to_leave/platform
+  spans: aggressive_marketing: "Very aggressive marketing to the point the app is so distracting"
+  text: ET Money: A Good App??? Very aggressive marketing to the point the app is so distracting??? I have been using ET Money App for a few months now and though I like many of their recommendations and the basic app style, I'm thinking …
+- tradingqna-63699 [tradingqna|zerodha_coin|structural_ux] stop:intent_to_leave/platform
+  spans: no_value_add: "I dont see any value add provided by Coin"
+  text: In future in case i wish to move away from Zerodha Coin (my mf are in demat format) to another DP (ICICI Direct or HDFC Securities, Kotak Security etc ) . Will this be possible ? What would be the procedure ? Reasons for thinking …
+- youtube-UgxbO3sSH5gn3YVZJRp4AaABAg.A547uF-RkpKA54C8XL3QrI [youtube|-|structural_ux] 
+  spans: charges_uncertainty: "200rs for opening demat acc will charger per year or only one time"
+  text: @TheBongInvestor brother I'm asking for selling like I have portfolio of above 50k in kite app mutual fund then When I redeem it, do I have to any taxes for that Or not and brother please that 200rs for opening demat acc will char…
+- playstore-zerodha_coin-d514130c-4e7e-4127-ba8e-92edbe3a5f25 [play_store|zerodha_coin|structural_ux] H
+  spans: charges_uncertainty: "No info about charges, taxes, exit load"
+  text: App lags. UPI payment sucks, it didn't open external upi app for payment (no, I don't want to register yet another upi id with you when I've 3 upi apps) with vague error like 'KTError80' or something, what a user friendly warning.…
+- reddit-1hbtzgp [reddit|-|structural_ux] stage:start
+  spans: charges_uncertainty: "What would be different charges once I start investing??"
+  text: Newbie doubt about SIP in Index funds I'm just getting started and I want to start investing in Nifty 50.so if start investing, 1.Can do it manually every month or is it mandatory for it to be automated? 2.What if I miss a month,w…
+- tradingqna-116826 [tradingqna|zerodha_coin|structural_ux] 
+  spans: charges_uncertainty: "are there any additional charges involved with each SIP installment"
+  text: I have used the coin platform since the last few months. And I plan to use it for a very long term duration for my investments in direct MF’s by way of SIP’s. But as far as I understand, the SIP offered in the coin platform is lik…
+- youtube-Ugzv4alq-U7Z41RN-Kp4AaABAg [youtube|zerodha_coin|structural_ux] 
+  spans: charges_uncertainty: "are the mutual services offered by Zerodah still free"
+  text: August 2024, are the mutual services offered by Zerodah still free or they charge us a percentage once we sell the mutual funds ? Also how to check the locking period for a particular MF before purchase can we customise this perio…
+
+=== TRU-1 Money was taken that I did not expect | posts 39 | ch {'reddit': 24, 'play_store': 8, 'tradingqna': 5, 'youtube': 2} | platform {'coin': 12, 'other': 17, 'not_identifiable': 10} (coin_and_other_platforms) | drop-off 4 (coin 1, competitor 1) | money 21 | fix {'product': 29, 'education': 0, 'external': 4, 'unclear': 6} | top labels {'unexplained_debit': 27, 'duplicate_sip_debit': 3, 'mandate_continues_after_death': 2, 'duplicate_sip_orders': 2, 'cannot_cancel_mandate': 2, 'unintended_sip_creation': 1}
+- reddit-1rfv3xe [reddit|-|structural_ux] H stop:sip_stop/sip money:the money got deducted
+  spans: unexplained_debit: "the Feb 1 SIP was still active and the money got deducted"
+  text: SIP cancellation requested but amount still deducted – does it take a month to stop? I requested to cancel my monthly SIPs around Jan 25, but the Feb 1 SIP was still active and the money got deducted. I still see the status as "ca…
+- playstore-et_money-2d0c106a-06d2-4c94-a258-f25b35002dc2 [play_store|etmoney|structural_ux] H money:deducted my SIP amount twice
+  spans: duplicate_sip_debit: "App deducted my SIP amount twice in the same month"
+  text: Very bad customer support service. App deducted my SIP amount twice in the same month and even after multiple emails they do not respond. I don't know weather I'll be getting my money back or no as its not showing in my portfolio …
+- tradingqna-481002 [tradingqna|zerodha_coin|structural_ux] H money:it has deducted 13500
+  spans: unexplained_debit: "For a total of 5000 SIP, it has deducted 13500"; mandate_cancel_not_effective: "I cancelled the mandate in Coin, but still getting transaction SMS from the bank"
+  text: Hi @Neelesh Please look at the support ticket [REDACTED_ACCOUNT] urgently. The UPI auto pay is deducting amount continuously from the bank. For a total of 5000 SIP, it has deducted 13500. I cancelled the mandate in Coin, but still…
+- youtube-UgwsX-lj2ctfdiAdJvR4AaABAg [youtube|zerodha_coin|structural_ux] H money:A total ₹1770 by Indian Clearing
+  spans: unexplained_debit: "3 times ₹590 has been cut from my back account"
+  text: Sir, I am investing from pass few months from zerodha coin My sips status are still processing from 14-9-24 And on 17-9-24 , 3 times ₹590 has been cut from my back account. A total ₹1770 by Indian Clearing. It should cut 1200,1800…
+- reddit-1ah0xoi [reddit|angel_one|structural_ux] stage:start
+  spans: unexplained_debit: "it is deducted in bank but not credited in Angelone app"
+  text: SIP amount deducted by shows failed in AngelOne I had my first installment payment for SIP after I placed my first order in December. But it is deducted in bank but not credited in Angelone app.
+- playstore-zerodha_coin-be4d21cf-0436-4533-8c02-03a45b4bed86 [play_store|zerodha_coin|structural_ux] H stop:platform_switch/platform money:None
+  spans: unexplained_debit: "money being deducted"
+  text: If the app doesnt serve its main purpose how should I rate this? I placed 2 orders for buying mutual funds through payment gateway and both were rejected citing payment failure. After a week of successful transaction and money bei…
+- tradingqna-397369 [tradingqna|zerodha_coin|structural_ux] money:SIP amount through e-mandate was debited
+  spans: unexplained_debit: "SIP order was not placed but SIP amount through e-mandate was debited from my account"
+  text: Another glitch in kite, as Kotak has stopped additional purchase in NASDAQ 100 fund, the AMC SIP in the same was paused in Kite. But today on SIP date, SIP order was not placed but SIP amount through e-mandate was debited from my …
+- youtube-UgwIu135RYcGVJHOndN4AaABAg [youtube|-|structural_ux] 
+  spans: unexplained_debit: "a/c se pese kat gye pr sip failed dikha raha h"
+  text: Sir mene upi payment kiya tha a/c se pese kat gye pr sip failed dikha raha h sir
+- reddit-1cikn3s [reddit|kuvera|structural_ux] money:bounced EMIs, exit load charges
+  spans: duplicate_sip_orders: "I woke up today to duplicate SIP orders purchased"; unexplained_debit: "my bank balance was simply exhausted"
+  text: Kuvera is a mess after Cred acquisition After all these years of easy investing, Kuvera is starting to disappoint. I woke up today to duplicate SIP orders purchased. My account shows the correct number of scheduled SIPs but the Or…
+- playstore-et_money-0b486d52-b8a0-43dc-adf1-acda6a07e37a [play_store|etmoney|structural_ux] stop:intent_to_leave/platform money:deducted the amount twice for each SIP
+  spans: duplicate_sip_debit: "they deducted the amount twice for each SIP"
+  text: I have registered 6 SIPs from etmoney but in the month July 2022 they deducted the amount twice for each SIP. I registered a complaint last week but till the date they didn't refund me the amount. Planning to withdraw all the amou…
+- tradingqna-403177 [tradingqna|-|mixed] 
+  spans: cannot_cancel_mandate: "able to find any Nach/SI/Auto debit"
+  text: Tried Everything on Kotak Netbankimg+Mobile Banking Even Branch Manager wasn’t able to find any Nach/SI/Auto debit Any other Option to stop this Sip @sufimonks
+- reddit-1cuvdfj [reddit|groww|structural_ux] 
+  spans: unintended_sip_creation: "somehow, a SIP for the Aditya Birla PSU Direct Growth fund got created via the Groww app"
+  text: Unintended SIP Creation in Groww Hey everyone, Today, I ran into an unexpected issue while checking my mutual fund portfolios in Groww app. I accidentally left my phone unlocked, and somehow, a SIP for the Aditya Birla PSU Direct …
+
+=== EDU-4 AMC SIP vs app SIP, demat vs statement: I do not know where my SIP lives | posts 34 | ch {'reddit': 16, 'play_store': 0, 'tradingqna': 14, 'youtube': 4} | platform {'coin': 20, 'other': 8, 'not_identifiable': 6} (mostly_coin) | drop-off 2 (coin 1, competitor 1) | money 0 | fix {'product': 28, 'education': 0, 'external': 6, 'unclear': 0} | top labels {'amc_sip_confusion': 10, 'amc_sip_modification_gap': 5, 'regular_to_direct_tax': 5, 'soa_preference': 2, 'demat_folio_confusion': 2, 'demat_default_on_sip_change': 1}
+- reddit-1hetw1m [reddit|zerodha_coin|structural_ux] H stage:start
+  spans: amc_sip_modification_gap: "directly modify through broker"
+  text: How to handle amc sip Hi, beginner in MF investing here. I am investing 5k pm in nippon small cap through amc sip because that was the only option in coin broker. I have just begun the investment and I realise i can increase it to…
+- tradingqna-127321 [tradingqna|zerodha_coin|structural_ux] 
+  spans: amc_sip_confusion: "but lumpsum periodic investment"
+  text: Hello, So recently in one of the Z-Connect posts, I found that Coin SIPs aren’t actual SIPs but lumpsum periodic investment, but I am more interested in actual SIPs, AMC SIPs are actual SIP that cannot be paused. How can I convert…
+- youtube-UgyDxSyMTxzGe5Vau994AaABAg [youtube|-|external_third_party] 
+  spans: regular_to_direct_tax: "if I stop my current sip which is a regular sip and start my new sip on direct fund"
+  text: Sir will it make any difference if I stop my current sip which is a regular sip and start my new sip on direct fund without switching it and starting a new sip on same fund pls tell ?
+- reddit-1esk1kp [reddit|zerodha_coin|structural_ux] stop:intent_to_leave/platform stage:start
+  spans: soa_preference: "it stores the units in SOA format"
+  text: Switching MFs from Zerodha to Groww creates a new ‘portfolio’?🤔 Hello everyone, I’ve invested in a couple of mutual funds recently through Zerodha coin (two different AMCs) and now I feel that I want to switch to Groww just coz of…
+- tradingqna-542497 [tradingqna|zerodha_coin|structural_ux] 
+  spans: amc_sip_modification_gap: "AMC SIP help page says they cannot be paused, modified or stepped up"
+  text: Could the Coin team support pause/resume and permitted amount changes for AMC SIPs? The current https://support.zerodha.com/category/mutual-funds/features-on-coin/systematic-investment-plan/articles/amc-sip-on-coin AMC SIP help pa…
+- youtube-Ugyj4Pj0MD01VYtO3zl4AaABAg [youtube|-|structural_ux] 
+  spans: amc_sip_confusion: "I am only getting an option for AMC SIP"
+  text: Hi, I am only getting an option for AMC SIP on mobile (Iphone) as well as on laptop. Not able to get "create SIP" option. Can you please help? The fund in which I want to invest, is not reflecting under tax saver fund. If I am sea…
+- reddit-1lqz1be [reddit|groww|structural_ux] stop:realised_exit/platform
+  spans: soa_to_demat_switch: "GROWW switching from SOA format to DEMAT"
+  text: [Experience] Why I moved to MFUIndia. Recently heard the news of GROWW switching from SOA format to DEMAT. Got me thinking — what even is a SOA? That’s when I started learning about custody — who actually holds your mutual fund un…
+- tradingqna-116826 [tradingqna|zerodha_coin|structural_ux] 
+  spans: amc_sip_confusion: "the SIP offered in the coin platform is like a purchase executed by zerodha"
+  text: I have used the coin platform since the last few months. And I plan to use it for a very long term duration for my investments in direct MF’s by way of SIP’s. But as far as I understand, the SIP offered in the coin platform is lik…
+- youtube-UgyzOGx7H_bc2vecdVd4AaABAg [youtube|-|structural_ux] 
+  spans: amc_sip_confusion: "it's showing amc sip option only"
+  text: Bro it's showing amc sip option only
+- reddit-1mxqg4g [reddit|zerodha_coin|structural_ux] stage:start
+  spans: amc_sip_confusion: "Coin offers something called AMC SIP and I heard that it is the same thing as holding in SOA?"
+  text: Should I change from demat to SOA Should I change from demat to SOA? I have only just started investing though unfortunately invested through demat mode. Coin offers something called AMC SIP and I heard that it is the same thing a…
+- tradingqna-129443 [tradingqna|zerodha_coin|structural_ux] 
+  spans: demat_folio_confusion: "by mistake I have started an SIP offline"
+  text: Hello Coin Users, I have purchase “HDFC Top 100 Fund - Direct Plan” via Coin last year. A folio number ( Lets say F1 ) is generate and allocated some units ( lets say X ). However, by mistake I have started an SIP offline (not via…
+- youtube-UgzLqlTirQvEYGa5DlF4AaABAg.ADi8KkwBhL_AE4UMwsD4pY [youtube|zerodha_coin|structural_ux] 
+  spans: amc_sip_confusion: "us me jo 0/9999 likh ker ata hai us ka kya mtlb hai"
+  text: @ sir ek or doubt hai mene coin ke zareye amc sip start ki hai us me jo 0/9999 likh ker ata hai us ka kya mtlb hai ??
+
+=== OUT-1 Money is tight or needed for something else | posts 33 | ch {'reddit': 27, 'play_store': 2, 'tradingqna': 2, 'youtube': 2} | platform {'coin': 5, 'other': 6, 'not_identifiable': 22} (platform_rarely_stated) | drop-off 15 (coin 0, competitor 0) | money 2 | fix {'product': 7, 'education': 5, 'external': 7, 'unclear': 14} | top labels {'cashflow_pressure': 31, 'loan_prepayment_priority': 1, 'goal_redemption_for_house': 1}
+- reddit-1auec3w [reddit|-|mixed] H stop:sip_stop/sip
+  spans: cashflow_pressure: "after investing the amount I'm left with very little money"
+  text: I'm thinking of stopping my SIPs next month onwards. Please advise accordingly. I will have 8.2lakh invested in mutual funds by the end of the month. I do 32k SIP per month. I get 1.05lpm. after investing the amount I'm left with …
+- playstore-groww-e10390c4-9c4e-4406-a83d-bda8dc96ce29 [play_store|groww|structural_ux] 
+  spans: cashflow_pressure: "I recently got operated on my knee"
+  text: Giving 1 star just because I tried a lot to skip my sips for a month and it shows it can be done 2 days before sip date, but even before 2 days it doesn't work. I recently got operated on my knee and I'm not able to go for work du…
+- tradingqna-183507 [tradingqna|zerodha_coin|structural_ux] 
+  spans: cashflow_pressure: "for next 4 months there will be no fund in my equity wallet"
+  text: Just checking on this.some sip such as mirae does not offer to pause sip.it has only option of cancel.if i dnt want to cancel but due some reason for next 4 months there will be no fund in my equity wallet. ,You sure right sip wil…
+- youtube-UgwGxCyvcUDFM3tC-qt4AaABAg [youtube|-|mixed] H
+  spans: cashflow_pressure: "par sufficient balance nahi thaa"
+  text: Mera sip Auto payment ma thaa month ka 20 tarik ko par sufficient balance nahi thaa par mane 20 tarikho hi 08:30 am pa hi account pa deposit kar diya thaa toh kiya penalty lage ga kiya?
+- reddit-1septyi [reddit|-|mixed] H money:penalty of 1500 rupees
+  spans: cashflow_pressure: "Due to insufficient balance in my account"
+  text: SIP Autodebit mandate failed and resulted in penalty. Take care. I had 5 SIPs with an autodebit mandate set on the 3rd of April. Due to insufficient balance in my account, an penalty of 1500 rupees was cut from my account. The ban…
+- playstore-groww-a70a7e7e-e2b7-47ef-8eba-40bad316181c [play_store|groww|structural_ux] 
+  spans: cashflow_pressure: "Sometimes out of compulsion, I have to withdraw the amount of SIP"
+  text: If you want to save money, this is the right place. Through this platform, you can invest your money very well and earn money. This is the right platform, it is right for you and there is no cheating or fraud issue here. I too hav…
+- tradingqna-544228 [tradingqna|-|mixed] stop:sip_stop/sip
+  spans: cashflow_pressure: "Our cash-flow can fluctuate quite a bit"
+  text: I had the same concern after switching to full-time freelancing 5 years ago. Our cash-flow can fluctuate quite a bit for various reasons, making it difficult to maintain a fixed monthly SIP. I stopped my SIPs after making the swit…
+- youtube-Ugy-otLBgnfRXVzmlDp4AaABAg [youtube|zerodha_coin|structural_ux] 
+  spans: cashflow_pressure: "mere account paise nahin hai"
+  text: Sir maine e-mandate active kar diya hun aap ka video dekh kar but mujhe kisi month me push karna hai kisi fi Karan jaisa mere account paise nahin hai next month fir se coins app par resume karde ..to sir mujhe penalty to nahin lag…
+- reddit-dryrun-1nxn4qr [reddit|-|deliberate_strategy_shift] H
+  spans: goal_redemption_for_house: "need to sell my mutual funds and possibly stop SIPs for a while"
+  text: Should I redeem mutual funds (~₹50L) and stop SIPs for buying a ₹2.5Cr flat? Need advice. Hello everyone, I’m looking for some perspective on a big financial decision I’m about to make. Current situation: • Age: 34 • Family: Marri…
+- reddit-1cm84ot [reddit|groww|structural_ux] stage:month_7_12
+  spans: cashflow_pressure: "Due to some personal reasons I will not be able to pay that for a couple of months"
+  text: New here I got a job a year back and have been making an SIP for 7.5k per month via Groww. Due to some personal reasons I will not be able to pay that for a couple of months. Is it better to skip instalments for those months ? Or …
+- reddit-1h4t6nw [reddit|groww|structural_ux] stop:sip_pause/sip
+  spans: cashflow_pressure: "I am expecting increase in expenses over the coming few months"
+  text: How do I skip SIP? Hello, I have been doing SIP since a few months now and my total monthly amount that I invest over 4 funds is Rs.20,000. I am expecting increase in expenses over the coming few months so I want to pause my SIP. …
+- reddit-1nxtis0 [reddit|zerodha_coin|external_third_party] stop:sip_pause/sip stage:month_7_12
+  spans: cashflow_pressure: "life threw me a curveball family commitments"
+  text: Uninstalled Zerodha For the last 9 months, I was sipping a small amount from my earnings into SIPs. Felt good, like I was building something for the future. But life threw me a curveball family commitments. So from this month, I’v…
+
+=== OUT-2 The fund or the rules stopped me investing | posts 33 | ch {'reddit': 23, 'play_store': 1, 'tradingqna': 9, 'youtube': 0} | platform {'coin': 10, 'other': 4, 'not_identifiable': 19} (platform_rarely_stated) | drop-off 1 (coin 0, competitor 0) | money 2 | fix {'product': 7, 'education': 0, 'external': 24, 'unclear': 2} | top labels {'fund_restriction': 27, 'platform_fund_availability': 3, 'nri_not_supported': 2, 'nri_status_change': 2, 'high_expense_ratio': 1}
+- reddit-dryrun-1vv87ie [reddit|groww|mixed] H
+  spans: fund_restriction: "This happened automatically"
+  text: Foreign investment via MF I didn't pause these SIPs. This happened automatically. How do I resume or redirect investing in foreign markets using groww? Thank you 🙏🏻 I'm a moderate investor as per the quiz attached. Goal foreign in…
+- tradingqna-104289 [tradingqna|zerodha_coin|structural_ux] 
+  spans: fund_restriction: "Reliance small cap not to accept lump sum investments"
+  text: Reliance small cap not to accept lump sum investments, only SIP and STp, are allowed , then how come my SIP from coins got cancelled today ?
+- playstore-zerodha_coin-db105665-45cf-4623-b162-97a79d582acc [play_store|zerodha_coin|structural_ux] 
+  spans: nri_not_supported: "NRI s in the gulf and other countries cannot invest using their nre accounts"
+  text: Amazing experience to invest in direct mutual funds with zero commission. Sadly NRI s in the gulf and other countries cannot invest using their nre accounts. That's the only drawback. Otherwise, superb, I hope pausing sips , and c…
+- reddit-1ttjd3f [reddit|-|external_third_party] H
+  spans: high_expense_ratio: "we are paying a freaking 5.41% expense ratio"
+  text: Motilal Oswal Midcap Fund- 5.41% expense ratio!! I just realised we are paying a freaking 5.41% expense ratio for Motilal Oswal Midcap Fund. It's almost 5-8x of peer funds in the same category. I had to mail them and confirm to be…
+- tradingqna-397369 [tradingqna|zerodha_coin|structural_ux] money:SIP amount through e-mandate was debited
+  spans: fund_restriction: "Kotak has stopped additional purchase in NASDAQ 100 fund"
+  text: Another glitch in kite, as Kotak has stopped additional purchase in NASDAQ 100 fund, the AMC SIP in the same was paused in Kite. But today on SIP date, SIP order was not placed but SIP amount through e-mandate was debited from my …
+- reddit-1wkfwky [reddit|-|external_third_party] 
+  spans: fund_restriction: "My SIP has been locked for modification"
+  text: ICICI Nasdaq 100 SIP locked by AMC. Where is my money actually going? My SIP has been locked for modification probably coz of the SEBI overseas investment limit. But I want to know what is it actually buying? I've read that some A…
+- tradingqna-405535 [tradingqna|zerodha_coin|structural_ux] 
+  spans: fund_restriction: "MO S & P 500 was paused by the fund"
+  text: Recently I visited Coin after few weeks. I have lately stopped visiting since all SIP are automated. MO S & P 500 was paused by the fund, so I understand it was paused by Coin. But it wasn’t resumed automatically. Today I did it m…
+- reddit-dryrun-1vn6ilr [reddit|-|external_third_party] 
+  spans: fund_restriction: "SIP skipped automatically"
+  text: Edelweiss US Technology equity mutual fund SIP skipped automatically?! Anyone else facing this issue? I don’t remember skipping this SIP. Can a fund house skip/ close our SIP without notice? Risk level from survey- MODERATE
+- tradingqna-345456 [tradingqna|zerodha_coin|external_third_party] 
+  spans: fund_restriction: "have stopped accepting lumpsum and new SIPS"; platform_fund_availability: "when AMC SIP option will be open for those 2 funds in coin"
+  text: Both Motilal Oswal Nasdaq 100 Fund of Fund and parag parikh flexi cap fund have stopped accepting lumpsum and new SIPS. May i know when AMC SIP option will be open for those 2 funds in coin.
+- reddit-dryrun-1vzm32q [reddit|-|external_third_party] money:amount was already deducted
+  spans: fund_restriction: "got auto paused due to the permissible threshold limit"
+  text: Money stuck with Edelweiss Mutual Funds \[Need Help\] I have an SIP of **Edelweiss US Technology Equity Fund of Fund - Direct Plan Growth** with Edelweiss Funds(EMF) which got auto paused due to the permissible threshold limit. Ho…
+- tradingqna-351434 [tradingqna|-|external_third_party] 
+  spans: fund_restriction: "they have stopped my SIP"
+  text: I have mandated Monthly SIP in Motilal Oswal S & P 500 but because of some reasons, they have stopped my SIP. I tried to reach out to their customer support but It’s been more than a week but no response from their end. I don’t un…
+- reddit-1031fil [reddit|-|external_third_party] 
+  spans: fund_restriction: "got paused due to the rule about foreign investment"
+  text: Motilal Oswal presented bill for my S&P500 SIP that they paused months back, anyone else? I had a 10K SIP in Motilal Oswal S&P500 which as we all know got paused due to the rule about foreign investment. I am also aware about the …
+
+=== GAP-1 I cannot change or shape my SIP the way I need | posts 30 | ch {'reddit': 3, 'play_store': 17, 'tradingqna': 8, 'youtube': 2} | platform {'coin': 19, 'other': 10, 'not_identifiable': 1} (mostly_coin) | drop-off 4 (coin 1, competitor 3) | money 0 | fix {'product': 26, 'education': 3, 'external': 0, 'unclear': 1} | top labels {'sip_amount_edit_missing': 5, 'sip_schedule_restriction': 4, 'goal_labelling_missing': 3, 'redeem_by_amount_missing': 2, 'no_switch_option': 2, 'no_swp': 2}
+- playstore-et_money-b122e32e-ead0-4f9b-948b-54b0a35bf584 [play_store|etmoney|structural_ux] H stop:realised_exit/platform stage:beyond_12
+  spans: no_switch_option: "no option to switch mutual funds"
+  text: incredibly frustrating and unreliable app. even for SIP transactions done via "easypay" which are supposed to reach the fund house/amc hours before the cutoff time, the NAV is not allotted for the same date, the NAV of the next da…
+- tradingqna-325377 [tradingqna|zerodha_coin|structural_ux] 
+  spans: mandate_amount_edit_missing: "Changing mandate also takes times 4/5 days to close"
+  text: Yes, but Mandate is different thing all together. Consider my mandate matches with SIP amount today, if I reduce the SIP or stop few funds from doing SIP then it will not reflect the correct picture of my monthly SIP. Changing man…
+- reddit-1fz1th6 [reddit|upstox|mixed] stop:intent_to_leave/platform stage:month_1_3
+  spans: no_step_up_sip: "There is no Step-Up SIP option"
+  text: One time investement vs SIP (Zerodha-Mutual Funds) ? Hi Guys, I’d like your opinion on **one-time investments** vs. **SIPs** on the Zerodha platform. For the past two months, I have been investing in 3 mutual funds through SIPs on…
+- youtube-UgzZVubzVVceXIQBXJR4AaABAg [youtube|paytm_money|structural_ux] 
+  spans: sip_amount_edit_missing: "Paytm money me sip ka amount edit nahi kar pa rahe"
+  text: Aaj kal Paytm money me sip ka amount edit nahi kar pa rahe.Any update?
+- playstore-zerodha_coin-0f9db117-4707-4f1f-bdbc-f1601d8c3ae7 [play_store|zerodha_coin|behavioral] H stage:beyond_12
+  spans: goal_labelling_missing: "Goal based investment is much awaited feature"
+  text: Hi. Goal based investment is much awaited feature from Zerodha especially in Coin. Some plan some investment for car, home or retirement etc. Also, it would be of great help if the app can show how many units are Locked, how many …
+- tradingqna-290885 [tradingqna|zerodha_coin|structural_ux] 
+  spans: no_swp: "there be a workaround for atleast SWP"
+  text: Can’t there be a workaround for atleast SWP? For example, an instruction to auto redeem. Currently, I have to keep a reminder to redeem the ultra short term fund just before the SIP date. Auto redemption combined with SIP can be a…
+- reddit-8d4kbt [reddit|fundsindia|structural_ux] stop:intent_to_leave/platform
+  spans: min_installment_lock: "they have told that you need to complete six installments"
+  text: How to Stop Regular SIPs at FundsIndia I have some SIPs going on with FundsIndia,after I got to know about the regular funds and direct funds I decided to stop my SIPs at FundsIndia, I contacted them but they have told that you ne…
+- youtube-UgyGMCT0UG6UOEGaIdR4AaABAg [youtube|-|structural_ux] 
+  spans: sip_amount_edit_missing: "Is it possible to increase or decrease the amount monthly in sip?"
+  text: Is it possible to increase or decrease the amount monthly in sip?
+- playstore-paytm_money-8d4ce078-3dcb-45af-8e38-4c1ad8f10d6a [play_store|paytm_money|structural_ux] 
+  spans: sip_increase_lock: "not able to increase my SIP amount of many of my existing running SIPs"
+  text: It used to be bug free app but recently this app has become full of bugs, i am not able to increase my SIP amount of many of my existing running SIPs, it is saying api failed. It also does not give options to skip your SIP or paus…
+- tradingqna-309803 [tradingqna|zerodha_coin|structural_ux] 
+  spans: sip_schedule_restriction: "find option to change that"
+  text: I have 2 SIPs triggering every Friday of the week. After initial observation I want, one of them to be executed on Wednesday. I can’t find option to change that. We have option to change the frequency or pause the SIP but nothing …
+- reddit-1ofnnef [reddit|zerodha_coin|structural_ux] 
+  spans: stp_restriction: "no option either to start the STP from existing LF to a new fund"
+  text: When will my MF units show up in demat? Why is STP to new MF not possible? I placed these 3 orders (lumpsum min amount for now, will do STP from liquid funds once added to my holdings) on 23/10/25 at 10pm. Normally it takes T+2 da…
+- playstore-zerodha_coin-4b9286c4-46a7-4a35-870f-9ee71763ee2b [play_store|zerodha_coin|structural_ux] 
+  spans: no_switch_option: "If I want to switch from one MF scheme to another I cannot do it"
+  text: Please provide automated E mandate SIP option. Also Provide Options like STP,SWP, Switch options. Being the number 1 app these features are Missing. It's really disappointing to see. If I want to switch from one MF scheme to anoth…
+
+=== EDU-6 I do not know enough to invest with confidence | posts 23 | ch {'reddit': 19, 'play_store': 1, 'tradingqna': 0, 'youtube': 3} | platform {'coin': 5, 'other': 3, 'not_identifiable': 15} (platform_rarely_stated) | drop-off 2 (coin 0, competitor 0) | money 0 | fix {'product': 5, 'education': 18, 'external': 0, 'unclear': 0} | top labels {'low_financial_knowledge': 23}
+- reddit-8n0dj7 [reddit|-|behavioral] H stage:month_7_12
+  spans: low_financial_knowledge: "I don't have a lot of knowledge on the market"
+  text: Is the whole MF market down? Hey guys, so I started doing SIPs in MFs since almost a year back. I am currently in red. Unfortunately, I don't have a lot of knowledge on the market to invest wisely and doing it through a PF manager…
+- youtube-Ugx5PE8dNCfI5lT_f4d4AaABAg [youtube|-|structural_ux] 
+  spans: low_financial_knowledge: "my finalization/maturity will take place after 20 years"
+  text: How can we set the end date of SIP .. also suppose i set SIP for 10 years so my finalization/maturity will take place after 20 years?
+- playstore-angel_one-e9a9f057-98ea-4047-85c5-a63e4a9bf533 [play_store|angel_one|behavioral] stage:start
+  spans: low_financial_knowledge: "kya hoga pata nhi"
+  text: ab pahali bar is mai sip kar raha hu kya hoga pata nhi
+- reddit-1hty7ro [reddit|zerodha_coin|structural_ux] stage:start
+  spans: low_financial_knowledge: "There are a lot of different answers everywhere"
+  text: Need help with understanding SIPs on Coin (Zerodha) Hi All, I recently started earning post and wanted to invest. I invested a portion of my salary on ELSS SIP on Coin but I have a few queries. There are a lot of different answers…
+- youtube-UgyIWti1wZfIXwQLrQd4AaABAg.AJNhs6ftHHXAKiWaZzNx9f [youtube|-|behavioral] 
+  spans: low_financial_knowledge: "Muze sip ke bare me bahut kuch malum nahi he"
+  text: ​ @joshiji8408 hindi? Muze sip ke bare me bahut kuch malum nahi he lekin agr 5 year ki sip ki aur maturity date pe market down hoga to loss hoga na?
+- reddit-1kwvm1i [reddit|-|behavioral] stage:beyond_12
+  spans: low_financial_knowledge: "a total noob in investing"
+  text: Why did my mutual fund investment yield such low returns over 8+ years? Hi everyone, Let me start by saying that I’m a total noob in investing and it’s hard for me grasping even basic fundamentals . I’ve been investing in mutual f…
+- youtube-UgyQxL5Vep7o_qxi-sZ4AaABAg [youtube|zerodha_coin|structural_ux] stage:start
+  spans: low_financial_knowledge: "wasn't sure how to start"
+  text: Great explanation. I downloaded coin today and wasn't sure how to start. Subbed you
+- reddit-1sbi166 [reddit|-|behavioral] stop:sip_pause/sip
+  spans: low_financial_knowledge: "I bought at peak PE without knowing what PE even meant"
+  text: Lost 30% of my portfolio in 6 months, but I didn’t sell a single unit. Here’s what I learned — and what I genuinely wish someone had told me before the crash. What’s YOUR biggest lesson from this correction? Started my SIP journey…
+- reddit-dryrun-1v8qjop [reddit|groww|structural_ux] stage:start
+  spans: low_financial_knowledge: "I know nothing about mutual funds or stocks"
+  text: I have around 1 lakh rs in my bank account rn and what to invest it I know nothing about mutual funds or stocks but I want to invest the money I have so that I don't spend in on shopping.Also I have downloaded the groww app and I …
+- reddit-dryrun-1wwq59i [reddit|zerodha_coin|behavioral] stage:start
+  spans: low_financial_knowledge: "I'm new to investing"
+  text: I need help ! I'm new to investing I saw HSBC & bandhan were doing good so I put whatever savings(money not needed rn) I had in lumpsum & unfortunately I got the highest possible nav 31st Aug (monday) after that it started going d…
+- reddit-1hu982u [reddit|-|behavioral] 
+  spans: low_financial_knowledge: "ed up investing in 22 different mutual funds randomly"
+  text: Need help with the MF portfolio analysis. Hello Everyone, This is my first post in this community. I recently started investing in stocks and mutual funds over the past couple of years, but in the beginning, I didn’t really have a…
+- reddit-1mv7ufg [reddit|-|behavioral] stage:beyond_12
+  spans: low_financial_knowledge: "Was totally clueless honestly"
+  text: Finally crossed 50L milestone after 8 years - here's my complete journey and something I discovered that no portal tells you **The Journey (2017-2025):** 36Y, Male. Started my investing journey back in 2017 with just 3k SIP in Axi…
+
+=== OUT-3 An advisor or distributor sold me the wrong product | posts 22 | ch {'reddit': 19, 'play_store': 0, 'tradingqna': 3, 'youtube': 0} | platform {'coin': 1, 'other': 4, 'not_identifiable': 17} (platform_rarely_stated) | drop-off 3 (coin 0, competitor 1) | money 0 | fix {'product': 1, 'education': 0, 'external': 20, 'unclear': 1} | top labels {'distributor_misselling': 20, 'ulip_misselling': 2}
+- reddit-1vfrwk7 [reddit|-|external_third_party] H
+  spans: distributor_misselling: "some investment advisor had asked her to switch from regular mutual fund"
+  text: Why financial education is important. In 2025 I was building a portfolio for both mom and dad, since they were going to retire. I have been learning about the stock market and investing in stocks since early 2024, so by 2025 I was…
+- tradingqna-226012 [tradingqna|-|external_third_party] 
+  spans: distributor_misselling: "I had invested through advisors in regular mutual funds"
+  text: Hi, Can someone please explain to me what is the best time to switch from regular to direct fund? I had invested through advisors in regular mutual funds. Later I had stopped SIP and opened same funds in direct mutual fund and sta…
+- reddit-1f5i9dv [reddit|-|external_third_party] stage:month_7_12
+  spans: distributor_misselling: "because of regular plan instead of direct one"
+  text: Should I pause my SIP? About an year ago my parents started SIP of 5k. The SIP was done through some known agent in ICICI Large & Mid Cap, today I came to know about the high expense ratio i.e 1.71% because of regular plan instead…
+- tradingqna-312071 [tradingqna|-|external_third_party] 
+  spans: distributor_misselling: "regular fund 3 yersa ago"
+  text: I have invested in Nippon large cap fund regular fund 3 yersa ago of 1000 rs sip each month ,currently investment amount is 36000 and market value is 50000 , since it is not performing well in past year ,and also I want to switch …
+- reddit-1nktvia [reddit|-|external_third_party] 
+  spans: distributor_misselling: "Someone in the bank persuaded her into putting all the money in SBI Dynamic Bond Fund, saying it's safe"
+  text: Help, My mom made a bad decision My family is not used to big money. My father sold a property he had for 80 lakhs. My mother went to fixed deposit 45 lakhs in sbi for 6 months, so that we had enough time to decide what to do with…
+- tradingqna-36579 [tradingqna|-|external_third_party] 
+  spans: distributor_misselling: "The money already invested in regular plans"
+  text: Adding to the above question, can I “pause” the existing regular investments & start fresh SIPs in direct funds? The money already invested in regular plans will remain as it is but I’ll be starting fresh investments under direct …
+- reddit-1sk2jhz [reddit|zerodha_coin|structural_ux] 
+  spans: distributor_misselling: "after learning about the difference between regular and direct SIPs"
+  text: Portfolio Review | Aggressive | Age 23 Risk Appetite- Aggressive Goal- Wealth Creation Horizon - 15-20 year Allocation - 10K Monthly (5K via Coin , 5k split in regular plans) App- Coin. I had initially started SIP with a friend of…
+- reddit-1t0d98s [reddit|-|external_third_party] stage:month_7_12
+  spans: distributor_misselling: "1 yr investing via advisor (regular plans)"
+  text: 25F | ₹1.3L income | ₹4L MF portfolio | 4.4% CAGR - what am I doing wrong? 1 yr investing via advisor (regular plans). Returns lagging market. **Monthly:** ₹50k expenses | ₹10k family | ₹30k SIP | ₹25k surplus (planning arbitrage)…
+- reddit-dryrun-1vbofl5 [reddit|bajaj_broking|external_third_party] stop:intent_to_leave/platform
+  spans: distributor_misselling: "got steered heavily into Bajaj's proprietary funds"
+  text: Invested ₹50L lump sum in Regular Mutual Funds in Aug 2024 via Broker — Currently at ₹54.2L (4.29% XIRR). Feeling like FD was better. Portfolio Review/Advice needed. * **Risk Appetite:** Moderate * **Investment Goal:** Wealth Crea…
+- reddit-dryrun-1w1v388 [reddit|-|external_third_party] stop:sip_stop/sip stage:month_1_3
+  spans: distributor_misselling: "found him prioritising"
+  text: Existing portfolio review 1. Risk Appetite - Moderate. 2. Goal - nothing specific 3. Horizon - 15 years 4. Allocation - 15k monthly sip. Edelweiss emerging markets equity - 5k Dsp natural resources and new energy- 2k ICICI pru mid…
+- reddit-1bxlbx6 [reddit|motilal_amc|external_third_party] 
+  spans: distributor_misselling: "were regular funds only recently"
+  text: Direct vs Regular Funds - Existing Funds Hi everyone, I have 2 different questions. 1. I have already read about investing via regular vs direct funds, there are countless posts on this. Currently I am investing in 4 different mut…
+- reddit-1frbc05 [reddit|hdfc_securities|external_third_party] 
+  spans: distributor_misselling: "I had invested in regular plan through my RM instead of direct"
+  text: Need advice. So I started my SIP journey in my HDFC demat account but later consulting to my friend I came to know that I had invested in regular plan through my RM instead of direct. So I canceled my 3 SIP's and created the same …
+
+=== EDU-5 Lock-in, exit load and tax catch me by surprise | posts 15 | ch {'reddit': 3, 'play_store': 3, 'tradingqna': 4, 'youtube': 5} | platform {'coin': 4, 'other': 2, 'not_identifiable': 9} (platform_rarely_stated) | drop-off 2 (coin 0, competitor 0) | money 0 | fix {'product': 11, 'education': 1, 'external': 2, 'unclear': 1} | top labels {'lock_in_confusion': 5, 'lock_in_display_wrong': 3, 'tax_calculation_confusion': 2, 'exit_load_confusion': 2, 'elss_lock_in_surprise': 2, 'redemption_nav_timing_confusion': 1}
+- youtube-Ugx5rDuMatVJUKt4JSp4AaABAg [youtube|-|mixed] H stop:sip_stop/sip stage:beyond_12
+  spans: elss_lock_in_surprise: "lekin iska last instalment 2027 me withdraw hoga"
+  text: Maine 2021 me dala tha ab vo paisa 2024 me nikla aur SIP band kar diya lekin iska last instalment 2027 me withdraw hoga. ELSS liya tha ye fraud hai. Market ke sath MF bhi volatile h I rather take more risk and more rewards than ri…
+- tradingqna-363884 [tradingqna|zerodha_coin|structural_ux] 
+  spans: lock_in_display_wrong: "I have completed 3 years in ELSS but the units still show locked"
+  text: I have completed 3 years in ELSS but the units still show locked. Can I cancelled SIP and redeem all the amount now. Kindly find the screenshot attached for reference. If not kindly guide me how to redeem it. Screenshot_2022-07-21…
+- playstore-zerodha_coin-0f9db117-4707-4f1f-bdbc-f1601d8c3ae7 [play_store|zerodha_coin|behavioral] H stage:beyond_12
+  spans: lock_in_display_wrong: "show how many units are Locked"
+  text: Hi. Goal based investment is much awaited feature from Zerodha especially in Coin. Some plan some investment for car, home or retirement etc. Also, it would be of great help if the app can show how many units are Locked, how many …
+- reddit-1anfqam [reddit|-|structural_ux] 
+  spans: exit_load_confusion: "Does the exit load period starts everytime SIP is executed or from date of investment into MF?"
+  text: Query on Exit Load.. Can someone please explain me the below exit loads. Does the exit load period starts everytime SIP is executed or from date of investment into MF? I'm a bit confused coz it is mentioned as date of allotment. T…
+- youtube-UgwNcLsCqHTJsOZ-eqF4AaABAg [youtube|-|deliberate_strategy_shift] stop:realised_exit/sip stage:beyond_12
+  spans: elss_lock_in_surprise: "lock in period hai so 3000 ka approx nehi nikal"
+  text: 2019 mai mutual fund mai invest Kiya tha avi 122 percent return de Diya mai withdraw karke Ghar colour Kiya...but ha lock in period hai so 3000 ka approx nehi nikal so lock in period fund thora samaj ke invest karna bas....kuch bu…
+- tradingqna-465444 [tradingqna|-|structural_ux] 
+  spans: lock_in_confusion: "what will be the lock in period"
+  text: Hi Nithin, If i have completed 3 years ELSS SIP and i have stopped SIP now, if i invest any lumsum after 3 years what will be the lock in period ?
+- playstore-zerodha_coin-c238809b-61a2-4cb5-9666-158e488fe9fd [play_store|zerodha_coin|structural_ux] 
+  spans: lock_in_display_wrong: "it will just show all units are available for redemption which is not true"
+  text: First of all it is a great platform providing direct funds, I am a seasoned investor Looking for more features, especially while withdrawing, for instance in case of ELSS funds it will just show all units are available for redempt…
+- reddit-dryrun-1vwc5qf [reddit|-|structural_ux] 
+  spans: tax_calculation_confusion: "The app seems to calculate 20% directly on the full"
+  text: Is exit load deducted before calculating STCG tax? I have an investment in Invesco India Mid Cap Fund. * Current value: ₹2,25,644 * Invested amount: ₹1,99,990 * Gain shown: \~₹25,653 * Exit load: ₹2,030.79 * All my SIPs are less t…
+- youtube-Ugwj-ynFTE74qDSZheN4AaABAg.AC2Dg5cIUQ3ACm5zpdc_vI [youtube|-|structural_ux] 
+  spans: lock_in_confusion: "withdrawal kar sakta hu ki nhi"
+  text: Sir mene 10year ka sip Kiya par kabhi mujhe money important huwa to Mai usko withdrawal kar sakta hu ki nhi🤔🤔🤔🤔
+- tradingqna-80090 [tradingqna|-|structural_ux] 
+  spans: exit_load_confusion: "the exit load term is another 6 months away"
+  text: Say I believe I am investing in a fund for which there is another better alternative. I dont want to cancel my SIP in this fund now as the exit load term is another 6 months away. So what if I do not invest a penny more in this fu…
+- playstore-groww-e14905a2-2364-4e69-bdca-206d85d8a7ac [play_store|groww|structural_ux] 
+  spans: lock_in_confusion: "Mutual fund locking system is wrong"
+  text: Mutual fund locking system is wrong. Starting investing money date is important. After investing money date is not important.
+- reddit-dryrun-1x4nu3r [reddit|groww|structural_ux] 
+  spans: redemption_nav_timing_confusion: "do I get the exact money or it deducts the amount as per next day market movement"
+  text: Quick question on redeeming mf Q1) Let's say my investment is 10k and with 20% return i.e. on grow it shows 12k which is available to redeem at any point of the day If i redeem all after market closes, and tomorrow the market dips…
+
+=== TRU-6 I am not sure my money is safe with the platform | posts 9 | ch {'reddit': 4, 'play_store': 2, 'tradingqna': 1, 'youtube': 2} | platform {'coin': 6, 'other': 2, 'not_identifiable': 1} (mostly_coin) | drop-off 1 (coin 0, competitor 1) | money 0 | fix {'product': 8, 'education': 1, 'external': 0, 'unclear': 0} | top labels {'demat_custody_worry': 3, 'trust_loss': 2, 'platform_trust_concern': 1, 'privacy_concern': 1, 'safety_doubt': 1, 'platform_shutdown_worry': 1}
+- reddit-1ewcu5e [reddit|zerodha_coin|structural_ux] 
+  spans: demat_custody_worry: "what will happen if zerodha shuts down"
+  text: Should I move out of coin? Planning to start few new SIPs, heard a lot about coin using demate format to hold the mutual funds units, are they really bad? I do like coins UI, but as I'm planning to invest for long time, I am a bit…
+- playstore-zerodha_coin-284e67ee-4088-401a-ad4a-bd14796b7bb8 [play_store|zerodha_coin|structural_ux] 
+  spans: trust_loss: "we cannot trust on Zerodha anymore"
+  text: Doesn't deserve a star..!! Worst app I can say...In total it was showing 10 mutual funds NAV few minutes back and now it is showing 7 and the amount also invested was 87k and now it's showing as 47k... This issue I have noticed lo…
+- youtube-UgweDZFBVsrasH-XWjF4AaABAg [youtube|nj_wealth|structural_ux] 
+  spans: platform_shutdown_worry: "Agar by chance future mei ye nj e wealth application band ho gei toh mere paisay ka kya hoga"
+  text: Sat sri akal sir Mai army mei hu Nj e wealth mei mera account hai aur mai monthly 20000 sip kr rha hu. Agar by chance future mei ye nj e wealth application band ho gei toh mere paisay ka kya hoga ? Sir mai boht confused hu Plzz Re…
+- tradingqna-458258 [tradingqna|zerodha_coin|structural_ux] 
+  spans: platform_trust_concern: "how are we protected in Coin?"
+  text: With all the issues surrounding Groww regards to debiting money from a customer and not using it to invest in funds, how are we protected in Coin? Is AMC SIP a safer option compared to Coin SIP? Can it still happen?
+- reddit-1mxqg4g [reddit|zerodha_coin|structural_ux] stage:start
+  spans: demat_custody_worry: "unfortunately invested through demat mode"
+  text: Should I change from demat to SOA Should I change from demat to SOA? I have only just started investing though unfortunately invested through demat mode. Coin offers something called AMC SIP and I heard that it is the same thing a…
+- playstore-zerodha_coin-4a174746-010a-4cea-8a3f-4c6754e98ab1 [play_store|zerodha_coin|structural_ux] 
+  spans: trust_loss: "If their backend system supposedly has an error why the investor should suffer"
+  text: Always check the units you are receiving from zerodha/ coin. I noticed that they silently alloted less number of units by increasing the purchase NAV to the higher value. When I questioned how come the NAV is different from all ot…
+- youtube-Ugzli9DC0Z6ZGpVpQKd4AaABAg [youtube|-|behavioral] 
+  spans: safety_doubt: "मेरी sip सेफ है या नहीं"
+  text: मेरी sip सेफ है या नहीं
+- reddit-1nywhes [reddit|zerodha_coin|structural_ux] 
+  spans: demat_custody_worry: "no dependency on a broker for redemptions"
+  text: Should I Switch My Existing Demat MF Holdings in Zerodha to SoA Folios? (Currently ~65k Invested) Hey everyone, I've been investing in mutual funds for a while now, mostly through Zerodha's Coin platform in demat form. It's been c…
+- reddit-1tpzkiy [reddit|kuvera|structural_ux] stop:realised_exit/platform
+  spans: privacy_concern: "CRED only focuses on selling your private data"
+  text: Kuvera - CRED acquisition pushed Me to Use MFCentral + Build a Privacy First MF Analytics Dashboard. (Try the demo!) Hi all, Since Kuvera was acquired by CRED and most of you know how CRED only focuses on selling your private data…

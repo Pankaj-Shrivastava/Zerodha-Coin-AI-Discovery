@@ -336,8 +336,35 @@ def main():
         'merge_log': merge_log,
     }
 
-    # ---------- self-checks ----------
+    # ---------- narratives (Step 4c, generated text) ----------
     errs = []
+    npath = P('data', 'processed', 'narratives.json')
+    if os.path.exists(npath):
+        nar = load_json('data', 'processed', 'narratives.json').get('problems', {})
+        for pr in problems:
+            n = nar.get(pr['id'])
+            if not n:
+                errs.append(f'{pr["id"]}: no narrative')
+                continue
+            cited = n['cited_ids']
+            for field in ('statement', 'invalidation'):
+                txt = n[field]
+                if re.search(r'[0-9०-९%]', txt):
+                    errs.append(f'{pr["id"]} {field}: contains a digit or % (numbers must come from the manifest)')
+                if re.search(r'["“”‘’]|(?<![A-Za-z])\'|\'(?![A-Za-z])', txt):
+                    errs.append(f'{pr["id"]} {field}: contains quotation marks (no paraphrased quotes in generated text)')
+            if len(set(cited)) < 3:
+                errs.append(f'{pr["id"]}: cites fewer than 3 posts')
+            bad = [c for c in cited if c not in pr['all_ids']]
+            if bad:
+                errs.append(f'{pr["id"]}: cited ids not in this problem: {bad}')
+            pr['narrative'] = {'generated': True, 'statement': n['statement'], 'cited_ids': cited,
+                               'invalidation': n['invalidation']}
+        extra = set(nar) - {p['id'] for p in problems}
+        if extra:
+            errs.append(f'narratives for unknown problems: {sorted(extra)}')
+
+    # ---------- self-checks ----------
     for pr in problems:  # recompute membership independently
         lbls = set(next(p for p in tm['problems'] if p['id'] == pr['id'])['labels'])
         re_ids = {k for k in C if lbls & {bare(f) for f in tg(k)['friction']}}

@@ -1,0 +1,111 @@
+{
+ "description": "Step 4c generated text. Written in-session from data/processed/_narrative_reading.txt (evidence spans + text openings of up to 12 rule-selected posts per problem). Every entry is generated (shown labelled in the UI), cites >=3 posts from the problem's own ids, contains no digits and no quotation marks; numbers always come from the manifest. Checked by scripts/build_manifest.py.",
+ "batch_1_written": "2026-11-04",
+ "problems": {
+  "EDU-1": {
+   "statement": "Investors who see their portfolio in the red, or growing more slowly than they hoped, start asking whether to keep going, compare their SIP with a fixed deposit, or doubt the market itself. This includes people only months after starting. Some stop or withdraw, and a few later describe that withdrawal as a mistake. These posts rarely name a platform, so this reads as an industry-wide expectation gap rather than a Coin-specific one.",
+   "cited_ids": ["reddit-8n0dj7", "reddit-1q9ro80", "youtube-Ugxkii8nF3i0iAB5Zol4AaABAg", "youtube-UgwIRz-VhFJ6Htq9Kyp4AaABAg", "youtube-UgzhirBgdrT8oE1df8N4AaABAg", "reddit-dryrun-1v739n0"],
+   "invalidation": "Interviews find that investors who saw early losses kept investing at the same rate as others, or that the ones who stopped did so because they needed the money, not because of returns."
+  },
+  "REL-1": {
+   "statement": "An instalment the investor expected does not happen: the order is never placed, sits in processing for days, is cancelled without a clear reason, or the mandate fails. Some are left with money debited and no SIP created. Among posts that state their stage, most describe a new SIP or a newly set-up mandate.",
+   "cited_ids": ["reddit-1mfi68r", "youtube-Ugy8on5PDgsgNsL1p8V4AaABAg", "playstore-zerodha_coin-8e4674b9-4cdf-43ef-9cf8-f15fc95b1c35", "tradingqna-341699", "youtube-UgwsX-lj2ctfdiAdJvR4AaABAg"],
+   "invalidation": "Order logs show that failed or stuck first instalments are rare, or that investors whose early instalment failed continued at the same rate as others."
+  },
+  "TRU-4": {
+   "statement": "When something goes wrong with their money, investors contact support and get no reply, slow replies, scripted answers or a closed ticket, and the problem stays open. Several reviews pair this with a statement that they will move to another app. Most of these posts are about other platforms and come mainly from Play Store reviews.",
+   "cited_ids": ["playstore-et_money-2d0c106a-06d2-4c94-a258-f25b35002dc2", "reddit-1h6bre7", "playstore-et_money-740fa7bf-0a84-40cb-a2ce-6dfd6cf71eca", "playstore-paytm_money-1f6021f1-0e21-4a7c-8cf4-e9ecf65e69af", "reddit-1cikn3s", "playstore-zerodha_coin-8e4674b9-4cdf-43ef-9cf8-f15fc95b1c35"],
+   "invalidation": "Coin support data shows money-related tickets are resolved quickly, or interviews show the support experience plays no part in whether investors keep their SIPs."
+  },
+  "EDU-2": {
+   "statement": "Investors who want to pause, skip, stop or restart an SIP are unsure what each action will do to their money and to future debits: whether deleting means redeeming, whether a cancelled SIP will still be debited, or how to restart one. Some apps allow only a single skip or a full cancel, and some fund processes still need a physical request. These questions often come up when investors are short of money for a few months.",
+   "cited_ids": ["tradingqna-270207", "reddit-1rfv3xe", "youtube-UgwCTQHB3ot64iAx2HB4AaABAg", "playstore-groww-66aca4e9-e96a-4e94-ada8-dd661f1f3d02", "tradingqna-121223", "reddit-1cm84ot"],
+   "invalidation": "In interviews, investors correctly explain what pause, skip, cancel and delete do, or those who were confused went on to restart without difficulty."
+  },
+  "REL-5": {
+   "statement": "On Coin, an SIP without an active mandate becomes a payment the investor has to make by hand each time. Instalments are missed when there is no reminder, when the pending payment does not show up, or after auto-debit stopped working. Some investors do not want a mandate at all and ask for reminders instead, while later posts welcome the autopay mandate as the fix. This problem is reported mostly about Coin.",
+   "cited_ids": ["tradingqna-44058", "reddit-zgqr64", "playstore-zerodha_coin-5b4d08f5-b408-45e6-9fd0-6c649ec30eb7", "playstore-zerodha_coin-07e93014-5342-4346-9259-3403f726c457", "youtube-UgwBXedQo9if3gU1Wf54AaABAg.9vwOqXPnxpwA5H5Kt_qkYk", "tradingqna-533664"],
+   "invalidation": "Coin data shows investors who pay by hand miss no more instalments than those with a mandate, or the posts describe a payment flow that has since changed for everyone."
+  },
+  "REL-3": {
+   "statement": "Investors open the app and the numbers do not add up: an invested amount that differs from what they paid, holdings that vanish or show zero, an SIP that looks active with nothing in the portfolio, or no way to see funds held elsewhere. Without an explanation, a display gap reads as lost money.",
+   "cited_ids": ["reddit-1q3iubg", "reddit-1fjurp1", "playstore-zerodha_coin-8e4674b9-4cdf-43ef-9cf8-f15fc95b1c35", "playstore-paytm_money-fb114473-3a5a-4d87-8122-a884f1c1e5bd", "youtube-Ugznl_NxgrUJKpfBqZN4AaABAg", "reddit-1esk1kp"],
+   "invalidation": "Interviews show investors correctly interpret these display differences and do not see them as lost money."
+  },
+  "EDU-3": {
+   "statement": "Investors setting up or living with a mandate do not understand its terms: an end date decades away with no until-cancelled option, which date the next instalment falls on, whether an edited date is honoured, or how to create or change the mandate type. Many of these questions are YouTube comments under how-to videos, and the investors who state their stage are mostly just starting.",
+   "cited_ids": ["youtube-Ugwqc3BOxdu2aunAMYh4AaABAg", "tradingqna-515714", "tradingqna-432484", "reddit-pc42mx", "playstore-groww-1b25b5c2-2c11-450e-8d91-95d5f76dac65", "youtube-Ugxqq3Xaa8hedpAHli14AaABAg"],
+   "invalidation": "First-time investors in interviews correctly explain their mandate's end date and debit date, and none describe mandate terms as a reason for stopping."
+  },
+  "TRU-3": {
+   "statement": "Investors try to get money back, whether a refund for a failed or cancelled order, a redemption, or a change of bank account, and it does not arrive, takes weeks, or is blocked by a bank mismatch. Some say they will withdraw everything from the platform as a result.",
+   "cited_ids": ["tradingqna-527057", "tradingqna-507813", "youtube-UgwIVHjutTvVQ2-U2KR4AaABAg", "reddit-1fe2oip", "playstore-et_money-0b486d52-b8a0-43dc-adf1-acda6a07e37a", "youtube-Ugxn7axztdEPpsHJZj94AaABAg"],
+   "invalidation": "Refund and redemption timelines are met in nearly all cases, and investors who had to wait did not reduce their investing."
+  },
+  "REL-4": {
+   "statement": "Investors hit errors that do not say what went wrong or what to do next: cryptic codes, generic failures, or orders rejected without a reason. Others describe slow, cluttered or inaccessible screens. When the same issues repeat, some investors move their new money elsewhere.",
+   "cited_ids": ["playstore-zerodha_coin-8e4674b9-4cdf-43ef-9cf8-f15fc95b1c35", "playstore-zerodha_coin-d514130c-4e7e-4127-ba8e-92edbe3a5f25", "playstore-zerodha_coin-be4d21cf-0436-4533-8c02-03a45b4bed86", "playstore-angel_one-34b80039-34c3-48ff-b73f-cbad3af2fd6d", "playstore-angel_one-cce86865-e058-4554-9758-c5c03535bf13", "tradingqna-394662"],
+   "invalidation": "Usability tests show first-time investors recover from these errors without help, or error logs show such failures are rare on Coin."
+  },
+  "REL-2": {
+   "statement": "Money leaves the investor's account but units arrive days later, or at the next day's NAV even when they paid before the cut-off. Investors read this as a loss when markets move, and some name it as their reason for stopping their SIPs or leaving the platform.",
+   "cited_ids": ["playstore-et_money-740fa7bf-0a84-40cb-a2ce-6dfd6cf71eca", "playstore-et_money-dacccd8b-d0e7-4aa1-82b2-75f17a539412", "tradingqna-283121", "tradingqna-363191", "reddit-1eivny2", "reddit-1de02u6"],
+   "invalidation": "Allotment records show units are allotted at the expected NAV, or investors who experienced delays did not change how they invest."
+  },
+  "TRU-2": {
+   "statement": "When the SIP account is short of funds on the debit date, the bank charges a bounce penalty that can be large next to the SIP itself, and some investors learn of it only when it is charged. Others ask in advance whether they will be penalised. The charge comes from the bank, but the SIP is where investors meet it. Most of these posts are from Reddit and do not name a platform.",
+   "cited_ids": ["reddit-1septyi", "reddit-1telwwr", "reddit-187slnp", "tradingqna-118068", "youtube-UgyYJnLMZEVBQtv0dR14AaABAg", "youtube-UgwGxCyvcUDFM3tC-qt4AaABAg"],
+   "invalidation": "Interviews show investors knew about bounce charges before setting up the mandate, or that a penalty did not change whether they kept the SIP."
+  },
+  "TRU-5": {
+   "statement": "Investors are unsure what the platform charges, on each instalment, on redemption or for the demat account, and some find fees, paid plans or marketing pushes they did not expect. On other apps, new fees and heavy upselling are a stated reason to switch, sometimes to Coin.",
+   "cited_ids": ["reddit-1q3iubg", "tradingqna-116826", "youtube-Ugzv4alq-U7Z41RN-Kp4AaABAg", "playstore-zerodha_coin-d514130c-4e7e-4127-ba8e-92edbe3a5f25", "reddit-1fwzi9e", "playstore-et_money-16911f5a-ea07-4f28-8e62-225af6db0dca"],
+   "invalidation": "Investors in interviews state Coin's charges correctly, and charge questions do not come up in the period before they stop."
+  },
+  "TRU-1": {
+   "statement": "Money leaves the investor's bank account when they did not expect it: after cancelling an SIP or a mandate, twice for the same instalment, or for an order that failed or was never placed. Investors then have to chase the platform, the bank or the fund house to get it back.",
+   "cited_ids": ["reddit-1rfv3xe", "tradingqna-481002", "playstore-et_money-2d0c106a-06d2-4c94-a258-f25b35002dc2", "tradingqna-397369", "youtube-UgwIu135RYcGVJHOndN4AaABAg", "tradingqna-403177"],
+   "invalidation": "Payment records show such debits are rare and are refunded automatically without the investor having to act."
+  },
+  "EDU-4": {
+   "statement": "Investors on Coin find two kinds of SIP and do not know the difference: the platform SIP and the AMC SIP, which cannot be paused, changed or stepped up, and units held in demat versus a statement of account. Beginners sometimes end up in an AMC SIP because it was the only option shown, and then cannot change it.",
+   "cited_ids": ["reddit-1hetw1m", "tradingqna-542497", "tradingqna-127321", "reddit-1mxqg4g", "youtube-UgyzOGx7H_bc2vecdVd4AaABAg", "youtube-UgzLqlTirQvEYGa5DlF4AaABAg.ADi8KkwBhL_AE4UMwsD4pY"],
+   "invalidation": "First-time Coin investors can say which SIP type they hold and what it allows them to change."
+  },
+  "OUT-1": {
+   "statement": "The investor's own situation changes, through a medical emergency, family commitments, irregular freelance income, a loan or a planned purchase, and they need to pause or stop. The cause is outside the product, but it shows up in the product as a search for a pause or skip that works.",
+   "cited_ids": ["playstore-groww-e10390c4-9c4e-4406-a83d-bda8dc96ce29", "reddit-1nxtis0", "tradingqna-544228", "reddit-1auec3w", "reddit-1h4t6nw"],
+   "invalidation": "Interviews show investors facing a cash shortfall stop regardless of what pause or skip options exist."
+  },
+  "OUT-2": {
+   "statement": "Fund houses stop taking new money, including international funds at the overseas investment limit, and investors find their SIPs paused, skipped or cancelled, often without notice and without an automatic restart. Some are then billed or debited for the paused SIP. Residency rules block NRI investors.",
+   "cited_ids": ["reddit-dryrun-1vn6ilr", "reddit-dryrun-1vv87ie", "tradingqna-405535", "reddit-1031fil", "tradingqna-397369", "playstore-zerodha_coin-db105665-45cf-4623-b162-97a79d582acc"],
+   "invalidation": "Investors whose SIP was paused by the fund were told in advance and restarted or redirected their money without difficulty."
+  },
+  "GAP-1": {
+   "statement": "Investors want to shape an SIP after starting it, by changing the amount or the day, stepping it up, switching between funds, setting up a withdrawal plan or labelling it with a goal, and the app does not allow it or only through cancelling and recreating. Most of these requests are about Coin.",
+   "cited_ids": ["tradingqna-309803", "tradingqna-325377", "playstore-zerodha_coin-4b9286c4-46a7-4a35-870f-9ee71763ee2b", "playstore-zerodha_coin-0f9db117-4707-4f1f-bdbc-f1601d8c3ae7", "tradingqna-290885", "youtube-UgzZVubzVVceXIQBXJR4AaABAg"],
+   "invalidation": "Investors who asked for these changes kept investing as before without them, or did not use the feature once it existed."
+  },
+  "EDU-6": {
+   "statement": "Investors start an SIP with little understanding of how it works, such as what maturity means or how to pick funds, and conflicting advice online makes it harder. Several later describe buying many funds at random or at a market peak. Most of these posts are from Reddit.",
+   "cited_ids": ["playstore-angel_one-e9a9f057-98ea-4047-85c5-a63e4a9bf533", "youtube-UgyIWti1wZfIXwQLrQd4AaABAg.AJNhs6ftHHXAKiWaZzNx9f", "reddit-1hty7ro", "reddit-1hu982u", "reddit-1sbi166", "youtube-Ugx5PE8dNCfI5lT_f4d4AaABAg"],
+   "invalidation": "Interviews show investors who describe low knowledge continue at the same rate as others."
+  },
+  "OUT-3": {
+   "statement": "Investors learn that an advisor, agent, bank employee or acquaintance put them in regular plans or costlier products, and they stop those SIPs or switch them to direct plans. This usually shows up as stopping one SIP and restarting elsewhere, not as leaving investing.",
+   "cited_ids": ["reddit-1frbc05", "reddit-1f5i9dv", "reddit-dryrun-1w1v388", "reddit-1sk2jhz", "tradingqna-226012", "reddit-1nktvia"],
+   "invalidation": "Investors who moved from regular to direct plans then stopped investing altogether."
+  },
+  "EDU-5": {
+   "statement": "Investors are caught out by when money can be taken out: ELSS units that unlock instalment by instalment rather than from the first SIP, units shown as locked or available incorrectly, and exit load and tax rules they cannot work out from the app.",
+   "cited_ids": ["youtube-Ugx5rDuMatVJUKt4JSp4AaABAg", "tradingqna-363884", "playstore-zerodha_coin-c238809b-61a2-4cb5-9666-158e488fe9fd", "reddit-1anfqam", "reddit-dryrun-1vwc5qf", "playstore-groww-e14905a2-2364-4e69-bdca-206d85d8a7ac"],
+   "invalidation": "Investors can correctly say when each instalment unlocks and which exit load applies."
+  },
+  "TRU-6": {
+   "statement": "Some investors worry about what happens to their money if the platform has a problem or shuts down, especially when units are held in demat through a broker, and a few say they lost trust after the app showed wrong values or units. The evidence here is thin, so treat it as a signal to explore rather than a finding.",
+   "cited_ids": ["reddit-1ewcu5e", "tradingqna-458258", "youtube-UgweDZFBVsrasH-XWjF4AaABAg", "playstore-zerodha_coin-284e67ee-4088-401a-ad4a-bd14796b7bb8", "playstore-zerodha_coin-4a174746-010a-4cea-8a3f-4c6754e98ab1", "reddit-1mxqg4g"],
+   "invalidation": "Interviews show the custody format and platform safety play no part in whether investors continue."
+  }
+ }
+}

@@ -3,7 +3,7 @@
 _Last updated: 2026-11-04. Self-contained: a new Claude Code session on any machine should read only this file to continue. Repo: `https://github.com/Pankaj-Shrivastava/Zerodha-Coin-AI-Discovery` (branch `main`). All work up to Step 4b is committed and pushed; commit this file too before switching machines._
 
 ## Current status (one line)
-Phase 7, **Step 4 (claims manifest) in progress**: 4a themes ✅ approved, 4b numbers + quotes ✅ built and reviewed. **Next: Step 4c batch 1 (21 problem statements). Wait for the user's explicit go-ahead before starting it.**
+Phase 7, **Step 4 (claims manifest) in progress**: 4a themes ✅, 4b numbers + quotes ✅, **4c batch 1 written** — 21 problem statements + invalidation criteria in `data/processed/narratives.json` (merged into the manifest by `build_manifest.py`, which rejects digits, %, quotation marks, <3 citations or citations outside the problem). **Waiting on user review of `data/hitl/narratives_review_batch1.md`** (`scripts/narrative_report.py`), then ask before batch 2 (9 questions). Reading pack for writing: `scripts/narrative_reading.py [K]` → `data/processed/_narrative_reading.txt`.
 
 ## Setting up on a new machine
 1. `git clone` the repo (or `git pull`). `.env` (Apify token) is not in git; it is not needed for Step 4+ — **no more Apify spend** (~$4.78 of $5 used).

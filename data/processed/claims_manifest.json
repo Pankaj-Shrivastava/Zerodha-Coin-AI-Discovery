@@ -560,80 +560,80 @@
      "count": 19,
      "facts": [
       {
-       "id": "reddit-18snp0k",
-       "text": "Age: 38 years"
-      },
-      {
-       "id": "reddit-dryrun-1wvpw1n",
-       "text": "I am 21 and I started investing at the age of 19"
-      },
-      {
-       "id": "reddit-dryrun-1wdg52k",
-       "text": "I am currently 30 years old"
-      },
-      {
-       "id": "reddit-1tj7r18",
-       "text": "Age: 29"
-      },
-      {
-       "id": "reddit-1p56a6e",
-       "text": "32 M"
-      },
-      {
        "id": "reddit-1lgva0e",
        "text": "Now,i m 21"
-      },
-      {
-       "id": "reddit-1q9ro80",
-       "text": "27M, Debt free"
-      },
-      {
-       "id": "reddit-1q9wbbj",
-       "text": "Age - 25 yo"
-      },
-      {
-       "id": "reddit-1s7ztsm",
-       "text": "Age: 27"
-      },
-      {
-       "id": "reddit-dryrun-1wfvfty",
-       "text": "Im 22"
-      },
-      {
-       "id": "reddit-dryrun-1v739n0",
-       "text": "My age is 27"
-      },
-      {
-       "id": "reddit-dryrun-1vzs60y",
-       "text": "I'm (21)"
-      },
-      {
-       "id": "reddit-1pxqdj9",
-       "text": "I am 28 married with two kids under 2 years"
-      },
-      {
-       "id": "reddit-1ptuyd8",
-       "text": "I am a 29"
-      },
-      {
-       "id": "reddit-1t0d98s",
-       "text": "25F"
-      },
-      {
-       "id": "reddit-1ko3rzy",
-       "text": "I am 20 (M)"
-      },
-      {
-       "id": "reddit-dryrun-1w47pl1",
-       "text": "I am 23 earning below avg"
       },
       {
        "id": "reddit-dryrun-1v8roca",
        "text": "I'm 22"
       },
       {
+       "id": "reddit-dryrun-1w47pl1",
+       "text": "I am 23 earning below avg"
+      },
+      {
+       "id": "reddit-1p56a6e",
+       "text": "32 M"
+      },
+      {
        "id": "reddit-dryrun-1wgnrvz",
        "text": "Portfolio review 29Y"
+      },
+      {
+       "id": "reddit-1tj7r18",
+       "text": "Age: 29"
+      },
+      {
+       "id": "reddit-dryrun-1vzs60y",
+       "text": "I'm (21)"
+      },
+      {
+       "id": "reddit-1t0d98s",
+       "text": "25F"
+      },
+      {
+       "id": "reddit-18snp0k",
+       "text": "Age: 38 years"
+      },
+      {
+       "id": "reddit-dryrun-1wdg52k",
+       "text": "I am currently 30 years old"
+      },
+      {
+       "id": "reddit-1ko3rzy",
+       "text": "I am 20 (M)"
+      },
+      {
+       "id": "reddit-dryrun-1v739n0",
+       "text": "My age is 27"
+      },
+      {
+       "id": "reddit-1s7ztsm",
+       "text": "Age: 27"
+      },
+      {
+       "id": "reddit-dryrun-1wvpw1n",
+       "text": "I am 21 and I started investing at the age of 19"
+      },
+      {
+       "id": "reddit-1ptuyd8",
+       "text": "I am a 29"
+      },
+      {
+       "id": "reddit-1q9wbbj",
+       "text": "Age - 25 yo"
+      },
+      {
+       "id": "reddit-dryrun-1wfvfty",
+       "text": "Im 22"
+      },
+      {
+       "id": "reddit-1q9ro80",
+       "text": "27M, Debt free"
+      },
+      {
+       "id": "reddit-1pxqdj9",
+       "text": "I am 28 married with two kids under 2 years"
       }
      ]
     },
@@ -641,20 +641,20 @@
      "count": 4,
      "facts": [
       {
-       "id": "reddit-dryrun-1w5at5y",
-       "text": "newbie in this arena"
-      },
-      {
        "id": "reddit-1gdszzq",
        "text": "I'm a new investor"
       },
       {
-       "id": "reddit-dryrun-1vasakw",
-       "text": "My parents only use fd"
+       "id": "reddit-dryrun-1w5at5y",
+       "text": "newbie in this arena"
       },
       {
        "id": "reddit-dryrun-1xd27xx",
        "text": "relatively new to investing/SIPs"
+      },
+      {
+       "id": "reddit-dryrun-1vasakw",
+       "text": "My parents only use fd"
       }
      ]
     },
@@ -662,26 +662,22 @@
      "count": 3,
      "facts": [
       {
-       "id": "reddit-1pxqdj9",
-       "text": "my salary is 1.5L/month in hand"
+       "id": "reddit-dryrun-1wgnrvz",
+       "text": "Stable salary around 1Lakh"
       },
       {
        "id": "reddit-1t0d98s",
        "text": "₹1.3L income"
       },
       {
-       "id": "reddit-dryrun-1wgnrvz",
-       "text": "Stable salary around 1Lakh"
+       "id": "reddit-1pxqdj9",
+       "text": "my salary is 1.5L/month in hand"
       }
      ]
     },
     "life_stage": {
      "count": 5,
      "facts": [
-      {
-       "id": "reddit-1fz8se4",
-       "text": "She is a student"
-      },
       {
        "id": "reddit-1lgva0e",
        "text": "i am now sitting with my father in his shop helping"
@@ -693,6 +689,10 @@
       {
        "id": "reddit-dryrun-1vzs60y",
        "text": "college student"
+      },
+      {
+       "id": "reddit-1fz8se4",
+       "text": "She is a student"
       },
       {
        "id": "reddit-dryrun-1wvtkds",
@@ -714,18 +714,18 @@
     "distrust_of_fund_industry": 7,
     "market_timing_stop": 5,
     "volatility_anxiety": 4,
-    "market_timing_regret": 2,
     "compulsive_checking": 2,
     "over_diversification": 2,
-    "panic_exit_regret": 1,
-    "pause_urge": 1,
-    "disengagement": 1,
-    "gold_fomo": 1,
-    "exit_timing_uncertainty": 1,
+    "market_timing_regret": 2,
     "early_loss_scare": 1,
-    "early_withdrawal_regret": 1,
     "influencer_driven_stop": 1,
+    "pause_urge": 1,
+    "exit_timing_uncertainty": 1,
+    "panic_exit_regret": 1,
+    "early_withdrawal_regret": 1,
     "chasing_past_returns": 1,
+    "gold_fomo": 1,
+    "disengagement": 1,
     "ipo_chasing": 1,
     "sip_too_slow": 1
    },
@@ -895,7 +895,20 @@
      "evidence_span": "it is not performing well in past year"
     }
    ],
-   "quote_candidates": 136
+   "quote_candidates": 136,
+   "narrative": {
+    "generated": true,
+    "statement": "Investors who see their portfolio in the red, or growing more slowly than they hoped, start asking whether to keep going, compare their SIP with a fixed deposit, or doubt the market itself. This includes people only months after starting. Some stop or withdraw, and a few later describe that withdrawal as a mistake. These posts rarely name a platform, so this reads as an industry-wide expectation gap rather than a Coin-specific one.",
+    "cited_ids": [
+     "reddit-8n0dj7",
+     "reddit-1q9ro80",
+     "youtube-Ugxkii8nF3i0iAB5Zol4AaABAg",
+     "youtube-UgwIRz-VhFJ6Htq9Kyp4AaABAg",
+     "youtube-UgzhirBgdrT8oE1df8N4AaABAg",
+     "reddit-dryrun-1v739n0"
+    ],
+    "invalidation": "Interviews find that investors who saw early losses kept investing at the same rate as others, or that the ones who stopped did so because they needed the money, not because of returns."
+   }
   },
   {
    "id": "REL-1",
@@ -1046,16 +1059,16 @@
      "count": 3,
      "facts": [
       {
-       "id": "reddit-1uwfj72",
-       "text": "Im a college student"
-      },
-      {
        "id": "reddit-1cp7hom",
        "text": "I'm an NRI"
       },
       {
        "id": "reddit-1azpy53",
        "text": "I'm an NRI living in the EU"
+      },
+      {
+       "id": "reddit-1uwfj72",
+       "text": "Im a college student"
       }
      ]
     }
@@ -1076,28 +1089,28 @@
     "upi_payment_failure": 4,
     "autopay_setup_failure": 4,
     "mandate_activation_delay": 4,
-    "payment_gateway_failure": 2,
     "silent_mandate_failure": 2,
-    "erroneous_sip_cancellation_email": 1,
-    "unexplained_failure": 1,
+    "payment_gateway_failure": 2,
     "sip_stopped_without_notice": 1,
-    "tpv_pending_rejection": 1,
-    "payment_stuck_pending": 1,
-    "aof_rejected_after_debit": 1,
-    "conditional_order_failure": 1,
-    "mandate_not_effective": 1,
-    "sip_not_invested_in_time": 1,
-    "sip_cancelled_during_platform_move": 1,
-    "sip_rejected_blacklisted_agent": 1,
-    "sip_payment_error": 1,
     "sip_terminated_unexplained": 1,
-    "auto_pause_unexplained": 1,
-    "units_bounced_kyc_dpid": 1,
-    "payment_friction": 1,
-    "holiday_sip_execution": 1,
-    "missed_installment": 1,
     "sip_order_delayed": 1,
-    "auto_payment_refunded": 1
+    "mandate_not_effective": 1,
+    "payment_friction": 1,
+    "erroneous_sip_cancellation_email": 1,
+    "tpv_pending_rejection": 1,
+    "auto_pause_unexplained": 1,
+    "payment_stuck_pending": 1,
+    "sip_payment_error": 1,
+    "aof_rejected_after_debit": 1,
+    "sip_rejected_blacklisted_agent": 1,
+    "auto_payment_refunded": 1,
+    "missed_installment": 1,
+    "holiday_sip_execution": 1,
+    "sip_not_invested_in_time": 1,
+    "unexplained_failure": 1,
+    "sip_cancelled_during_platform_move": 1,
+    "conditional_order_failure": 1,
+    "units_bounced_kyc_dpid": 1
    },
    "human_confirmed": 12,
    "confidence": "high",
@@ -1230,7 +1243,19 @@
      "evidence_span": "I didn't pause these SIPs"
     }
    ],
-   "quote_candidates": 96
+   "quote_candidates": 96,
+   "narrative": {
+    "generated": true,
+    "statement": "An instalment the investor expected does not happen: the order is never placed, sits in processing for days, is cancelled without a clear reason, or the mandate fails. Some are left with money debited and no SIP created. Among posts that state their stage, most describe a new SIP or a newly set-up mandate.",
+    "cited_ids": [
+     "reddit-1mfi68r",
+     "youtube-Ugy8on5PDgsgNsL1p8V4AaABAg",
+     "playstore-zerodha_coin-8e4674b9-4cdf-43ef-9cf8-f15fc95b1c35",
+     "tradingqna-341699",
+     "youtube-UgwsX-lj2ctfdiAdJvR4AaABAg"
+    ],
+    "invalidation": "Order logs show that failed or stuck first instalments are rare, or that investors whose early instalment failed continued at the same rate as others."
+   }
   },
   {
    "id": "TRU-4",
@@ -1475,7 +1500,20 @@
      "evidence_span": "their customer service"
     }
    ],
-   "quote_candidates": 65
+   "quote_candidates": 65,
+   "narrative": {
+    "generated": true,
+    "statement": "When something goes wrong with their money, investors contact support and get no reply, slow replies, scripted answers or a closed ticket, and the problem stays open. Several reviews pair this with a statement that they will move to another app. Most of these posts are about other platforms and come mainly from Play Store reviews.",
+    "cited_ids": [
+     "playstore-et_money-2d0c106a-06d2-4c94-a258-f25b35002dc2",
+     "reddit-1h6bre7",
+     "playstore-et_money-740fa7bf-0a84-40cb-a2ce-6dfd6cf71eca",
+     "playstore-paytm_money-1f6021f1-0e21-4a7c-8cf4-e9ecf65e69af",
+     "reddit-1cikn3s",
+     "playstore-zerodha_coin-8e4674b9-4cdf-43ef-9cf8-f15fc95b1c35"
+    ],
+    "invalidation": "Coin support data shows money-related tickets are resolved quickly, or interviews show the support experience plays no part in whether investors keep their SIPs."
+   }
   },
   {
    "id": "EDU-2",
@@ -1598,23 +1636,23 @@
     "no_pause_option": 5,
     "cannot_stop_sip": 4,
     "offline_stop_process": 4,
-    "exit_procedure_uncertainty": 3,
     "restart_unclear": 3,
+    "exit_procedure_uncertainty": 3,
     "stop_notice_period": 2,
-    "offline_pause_process": 1,
     "slow_sip_cancellation": 1,
-    "folio_reuse_uncertainty": 1,
+    "no_bulk_cancel": 1,
+    "transfer_sip_continuity": 1,
+    "no_indefinite_pause": 1,
+    "agent_dependency_to_pause": 1,
     "sip_stop_required_for_transfer": 1,
+    "accidental_sip_deletion": 1,
+    "unclear_delete_meaning": 1,
+    "offline_pause_process": 1,
+    "folio_reuse_uncertainty": 1,
     "no_auto_resume": 1,
     "skip_not_working": 1,
-    "agent_dependency_to_pause": 1,
-    "transfer_sip_continuity": 1,
     "cannot_resume_paused_sip": 1,
-    "no_indefinite_pause": 1,
-    "no_bulk_cancel": 1,
-    "sip_edit_skipped_installment": 1,
-    "accidental_sip_deletion": 1,
-    "unclear_delete_meaning": 1
+    "sip_edit_skipped_installment": 1
    },
    "human_confirmed": 5,
    "confidence": "high",
@@ -1709,7 +1747,20 @@
      "evidence_span": "I cannot find any pause option on the website"
     }
    ],
-   "quote_candidates": 63
+   "quote_candidates": 63,
+   "narrative": {
+    "generated": true,
+    "statement": "Investors who want to pause, skip, stop or restart an SIP are unsure what each action will do to their money and to future debits: whether deleting means redeeming, whether a cancelled SIP will still be debited, or how to restart one. Some apps allow only a single skip or a full cancel, and some fund processes still need a physical request. These questions often come up when investors are short of money for a few months.",
+    "cited_ids": [
+     "tradingqna-270207",
+     "reddit-1rfv3xe",
+     "youtube-UgwCTQHB3ot64iAx2HB4AaABAg",
+     "playstore-groww-66aca4e9-e96a-4e94-ada8-dd661f1f3d02",
+     "tradingqna-121223",
+     "reddit-1cm84ot"
+    ],
+    "invalidation": "In interviews, investors correctly explain what pause, skip, cancel and delete do, or those who were confused went on to restart without difficulty."
+   }
   },
   {
    "id": "REL-5",
@@ -1812,15 +1863,15 @@
     "no_reminder_feature": 4,
     "mandate_aversion": 2,
     "upi_autopay_unavailable": 2,
-    "no_bank_sip": 1,
-    "mandate_not_reusable": 1,
-    "nri_mandate_unsupported": 1,
-    "payment_method_visibility": 1,
-    "missing_true_sip": 1,
-    "delayed_mandate_feature": 1,
     "bank_not_supported": 1,
+    "missing_true_sip": 1,
+    "mandate_not_reusable": 1,
+    "payment_method_visibility": 1,
     "autodebit_unavailable": 1,
-    "secondary_bank_mandate_unavailable": 1
+    "secondary_bank_mandate_unavailable": 1,
+    "delayed_mandate_feature": 1,
+    "nri_mandate_unsupported": 1,
+    "no_bank_sip": 1
    },
    "human_confirmed": 13,
    "confidence": "high",
@@ -1915,7 +1966,20 @@
      "evidence_span": "it is asking to create a new OTM"
     }
    ],
-   "quote_candidates": 59
+   "quote_candidates": 59,
+   "narrative": {
+    "generated": true,
+    "statement": "On Coin, an SIP without an active mandate becomes a payment the investor has to make by hand each time. Instalments are missed when there is no reminder, when the pending payment does not show up, or after auto-debit stopped working. Some investors do not want a mandate at all and ask for reminders instead, while later posts welcome the autopay mandate as the fix. This problem is reported mostly about Coin.",
+    "cited_ids": [
+     "tradingqna-44058",
+     "reddit-zgqr64",
+     "playstore-zerodha_coin-5b4d08f5-b408-45e6-9fd0-6c649ec30eb7",
+     "playstore-zerodha_coin-07e93014-5342-4346-9259-3403f726c457",
+     "youtube-UgwBXedQo9if3gU1Wf54AaABAg.9vwOqXPnxpwA5H5Kt_qkYk",
+     "tradingqna-533664"
+    ],
+    "invalidation": "Coin data shows investors who pay by hand miss no more instalments than those with a mandate, or the posts describe a payment flow that has since changed for everyone."
+   }
   },
   {
    "id": "REL-3",
@@ -2009,12 +2073,12 @@
      "count": 2,
      "facts": [
       {
-       "id": "reddit-1p56a6e",
-       "text": "32 M"
-      },
-      {
        "id": "reddit-dryrun-1x8d08v",
        "text": "in my early 20s"
+      },
+      {
+       "id": "reddit-1p56a6e",
+       "text": "32 M"
       }
      ]
     },
@@ -2022,20 +2086,20 @@
      "count": 4,
      "facts": [
       {
-       "id": "reddit-1ubqz7v",
-       "text": "I'm new to MFs"
-      },
-      {
-       "id": "reddit-w9rjhl",
-       "text": "I'm new to investments"
-      },
-      {
        "id": "reddit-1fjurp1",
        "text": "I am a beginner"
       },
       {
        "id": "reddit-dryrun-1x8d08v",
        "text": "been investing for past 2 years"
+      },
+      {
+       "id": "reddit-1ubqz7v",
+       "text": "I'm new to MFs"
+      },
+      {
+       "id": "reddit-w9rjhl",
+       "text": "I'm new to investments"
       }
      ]
     }
@@ -2050,24 +2114,24 @@
     "statement_confusion": 26,
     "funds_apparently_missing": 8,
     "portfolio_value_mismatch": 4,
-    "external_fund_tracking": 2,
-    "holdings_not_visible": 2,
     "no_payment_history": 2,
+    "external_fund_tracking": 2,
     "holdings_not_visible_after_transfer": 2,
     "reporting_gap": 2,
+    "holdings_not_visible": 2,
     "fragmented_tracking": 2,
-    "folio_name_mismatch": 1,
-    "amc_sip_not_in_portfolio": 1,
-    "duplicate_folio_entry": 1,
     "payment_status_unclear": 1,
+    "folio_name_mismatch": 1,
     "holdings_not_visible_on_amc": 1,
-    "virtual_account_visibility": 1,
-    "amc_sip_not_tracked": 1,
+    "multiple_folios": 1,
+    "duplicate_folio_entry": 1,
     "holdings_not_visible_in_mf_central": 1,
-    "nav_not_shown": 1,
+    "virtual_account_visibility": 1,
     "active_sip_not_visible": 1,
     "autopay_status_unclear": 1,
-    "multiple_folios": 1
+    "amc_sip_not_in_portfolio": 1,
+    "nav_not_shown": 1,
+    "amc_sip_not_tracked": 1
    },
    "human_confirmed": 4,
    "confidence": "high",
@@ -2155,7 +2219,20 @@
      "evidence_span": "there nothing in the transaction list"
     }
    ],
-   "quote_candidates": 53
+   "quote_candidates": 53,
+   "narrative": {
+    "generated": true,
+    "statement": "Investors open the app and the numbers do not add up: an invested amount that differs from what they paid, holdings that vanish or show zero, an SIP that looks active with nothing in the portfolio, or no way to see funds held elsewhere. Without an explanation, a display gap reads as lost money.",
+    "cited_ids": [
+     "reddit-1q3iubg",
+     "reddit-1fjurp1",
+     "playstore-zerodha_coin-8e4674b9-4cdf-43ef-9cf8-f15fc95b1c35",
+     "playstore-paytm_money-fb114473-3a5a-4d87-8122-a884f1c1e5bd",
+     "youtube-Ugznl_NxgrUJKpfBqZN4AaABAg",
+     "reddit-1esk1kp"
+    ],
+    "invalidation": "Interviews show investors correctly interpret these display differences and do not see them as lost money."
+   }
   },
   {
    "id": "EDU-3",
@@ -2193,8 +2270,8 @@
      "fund": 0
     },
     "by_type": {
-     "realised_exit": 1,
-     "sip_stop": 1
+     "sip_stop": 1,
+     "realised_exit": 1
     },
     "leaving_coin": 0,
     "leaving_competitor": 1,
@@ -2258,24 +2335,24 @@
     "unclear_mandate_terms": 17,
     "mandate_end_date_confusion": 10,
     "notification_uncertainty": 4,
-    "auto_debit_setup_confusion": 3,
     "installment_date_confusion": 3,
     "forced_mandate_resetup_risk": 3,
+    "auto_debit_setup_confusion": 3,
+    "installment_date_mismatch": 2,
     "upi_mandate_howto": 2,
     "bank_account_setup_blocks_mandate": 2,
-    "installment_date_mismatch": 2,
-    "joint_account_mandate": 1,
-    "upi_autopay_limit_confusion": 1,
     "mandate_name_matching": 1,
     "mandate_deletion_unclear": 1,
-    "mandate_method_discontinued": 1,
-    "mandate_type_change": 1,
-    "date_change_not_honoured": 1,
-    "mandate_type_confusion": 1,
     "order_date_confusion": 1,
-    "mandate_type_change_blocked": 1,
     "sip_tenure_confusion": 1,
-    "emandate_introduction": 1
+    "mandate_type_change": 1,
+    "emandate_introduction": 1,
+    "mandate_type_confusion": 1,
+    "upi_autopay_limit_confusion": 1,
+    "date_change_not_honoured": 1,
+    "joint_account_mandate": 1,
+    "mandate_method_discontinued": 1,
+    "mandate_type_change_blocked": 1
    },
    "human_confirmed": 4,
    "confidence": "high",
@@ -2362,7 +2439,20 @@
      "evidence_span": "Will they be triggered tomorrow instead"
     }
    ],
-   "quote_candidates": 55
+   "quote_candidates": 55,
+   "narrative": {
+    "generated": true,
+    "statement": "Investors setting up or living with a mandate do not understand its terms: an end date decades away with no until-cancelled option, which date the next instalment falls on, whether an edited date is honoured, or how to create or change the mandate type. Many of these questions are YouTube comments under how-to videos, and the investors who state their stage are mostly just starting.",
+    "cited_ids": [
+     "youtube-Ugwqc3BOxdu2aunAMYh4AaABAg",
+     "tradingqna-515714",
+     "tradingqna-432484",
+     "reddit-pc42mx",
+     "playstore-groww-1b25b5c2-2c11-450e-8d91-95d5f76dac65",
+     "youtube-Ugxqq3Xaa8hedpAHli14AaABAg"
+    ],
+    "invalidation": "First-time investors in interviews correctly explain their mandate's end date and debit date, and none describe mandate terms as a reason for stopping."
+   }
   },
   {
    "id": "TRU-3",
@@ -2495,27 +2585,27 @@
     "refund_delay": 13,
     "redemption_blocked": 10,
     "redemption_issue": 7,
-    "bank_change_blocked": 3,
     "refund_uncertainty": 3,
     "slow_withdrawal": 3,
+    "bank_change_blocked": 3,
     "bank_detail_change_blocked": 2,
     "redemption_blocked_closed_bank": 2,
-    "refund_tracking_missing": 1,
-    "nominee_transmission_harassment": 1,
-    "bank_account_blocked": 1,
-    "redemption_in_installments": 1,
-    "no_instant_redemption": 1,
-    "cannot_skip_or_change_bank": 1,
-    "name_mismatch_redemption": 1,
     "redemption_delay": 1,
     "bank_change_cooling_period": 1,
-    "bank_change_delay": 1,
     "redemption_amount_mismatch": 1,
-    "nominee_detail_error": 1,
+    "refund_tracking_missing": 1,
+    "no_instant_redemption": 1,
+    "nominee_transmission_harassment": 1,
+    "name_mismatch_redemption": 1,
+    "bank_account_blocked": 1,
+    "bank_change_delay": 1,
     "redemption_to_defunct_account": 1,
-    "regular_funds_locked": 1,
+    "cannot_skip_or_change_bank": 1,
+    "withdrawal_limit": 1,
     "redemption_friction": 1,
-    "withdrawal_limit": 1
+    "regular_funds_locked": 1,
+    "nominee_detail_error": 1,
+    "redemption_in_installments": 1
    },
    "human_confirmed": 3,
    "confidence": "high",
@@ -2601,7 +2691,20 @@
      "evidence_span": "the platform is pending it since one year"
     }
    ],
-   "quote_candidates": 51
+   "quote_candidates": 51,
+   "narrative": {
+    "generated": true,
+    "statement": "Investors try to get money back, whether a refund for a failed or cancelled order, a redemption, or a change of bank account, and it does not arrive, takes weeks, or is blocked by a bank mismatch. Some say they will withdraw everything from the platform as a result.",
+    "cited_ids": [
+     "tradingqna-527057",
+     "tradingqna-507813",
+     "youtube-UgwIVHjutTvVQ2-U2KR4AaABAg",
+     "reddit-1fe2oip",
+     "playstore-et_money-0b486d52-b8a0-43dc-adf1-acda6a07e37a",
+     "youtube-Ugxn7axztdEPpsHJZj94AaABAg"
+    ],
+    "invalidation": "Refund and redemption timelines are met in nearly all cases, and investors who had to wait did not reduce their investing."
+   }
   },
   {
    "id": "REL-4",
@@ -2711,16 +2814,16 @@
      "count": 3,
      "facts": [
       {
+       "id": "playstore-angel_one-34b80039-34c3-48ff-b73f-cbad3af2fd6d",
+       "text": "both my wife and I are visually impaired users"
+      },
+      {
        "id": "reddit-dryrun-1w1d9k0",
        "text": "NRI here"
       },
       {
        "id": "reddit-dryrun-1xarkf8",
        "text": "MBBS student investing some amount from my pocket money"
-      },
-      {
-       "id": "playstore-angel_one-34b80039-34c3-48ff-b73f-cbad3af2fd6d",
-       "text": "both my wife and I are visually impaired users"
       }
      ]
     }
@@ -2742,21 +2845,21 @@
     "login_failure": 2,
     "sip_setup_confusing": 2,
     "poor_web_interface": 2,
-    "nri_otp_lockout": 1,
-    "mandate_creation_difficult": 1,
-    "search_broken": 1,
-    "double_payout_glitch": 1,
-    "account_blocked": 1,
-    "cluttered_sip_list": 1,
     "onboarding_document_friction": 1,
-    "redemption_otp_failure": 1,
-    "recurring_issues": 1,
+    "cluttered_sip_list": 1,
+    "accessibility_gap": 1,
+    "stagnant_features": 1,
     "investment_limit_error": 1,
     "slow_portal": 1,
-    "accessibility_gap": 1,
+    "account_blocked": 1,
+    "nri_otp_lockout": 1,
+    "double_payout_glitch": 1,
+    "recurring_issues": 1,
     "ekyc_failure": 1,
     "broker_app_fatigue": 1,
-    "stagnant_features": 1
+    "mandate_creation_difficult": 1,
+    "search_broken": 1,
+    "redemption_otp_failure": 1
    },
    "human_confirmed": 4,
    "confidence": "high",
@@ -2841,7 +2944,20 @@
      "evidence_span": "These issues keep repeating"
     }
    ],
-   "quote_candidates": 52
+   "quote_candidates": 52,
+   "narrative": {
+    "generated": true,
+    "statement": "Investors hit errors that do not say what went wrong or what to do next: cryptic codes, generic failures, or orders rejected without a reason. Others describe slow, cluttered or inaccessible screens. When the same issues repeat, some investors move their new money elsewhere.",
+    "cited_ids": [
+     "playstore-zerodha_coin-8e4674b9-4cdf-43ef-9cf8-f15fc95b1c35",
+     "playstore-zerodha_coin-d514130c-4e7e-4127-ba8e-92edbe3a5f25",
+     "playstore-zerodha_coin-be4d21cf-0436-4533-8c02-03a45b4bed86",
+     "playstore-angel_one-34b80039-34c3-48ff-b73f-cbad3af2fd6d",
+     "playstore-angel_one-cce86865-e058-4554-9758-c5c03535bf13",
+     "tradingqna-394662"
+    ],
+    "invalidation": "Usability tests show first-time investors recover from these errors without help, or error logs show such failures are rare on Coin."
+   }
   },
   {
    "id": "REL-2",
@@ -2879,8 +2995,8 @@
      "fund": 0
     },
     "by_type": {
-     "intent_to_leave": 3,
-     "realised_exit": 3
+     "realised_exit": 3,
+     "intent_to_leave": 3
     },
     "leaving_coin": 3,
     "leaving_competitor": 3,
@@ -2948,9 +3064,9 @@
    "label_counts": {
     "unit_allocation_delay": 38,
     "delayed_nav": 13,
-    "nav_update_lag": 1,
+    "holiday_debit_timing": 1,
     "early_cutoff_time": 1,
-    "holiday_debit_timing": 1
+    "nav_update_lag": 1
    },
    "human_confirmed": 4,
    "confidence": "high",
@@ -3033,7 +3149,20 @@
      "evidence_span": "there is a delay of 2-3 days between funds debit and MF Units purchase"
     }
    ],
-   "quote_candidates": 46
+   "quote_candidates": 46,
+   "narrative": {
+    "generated": true,
+    "statement": "Money leaves the investor's account but units arrive days later, or at the next day's NAV even when they paid before the cut-off. Investors read this as a loss when markets move, and some name it as their reason for stopping their SIPs or leaving the platform.",
+    "cited_ids": [
+     "playstore-et_money-740fa7bf-0a84-40cb-a2ce-6dfd6cf71eca",
+     "playstore-et_money-dacccd8b-d0e7-4aa1-82b2-75f17a539412",
+     "tradingqna-283121",
+     "tradingqna-363191",
+     "reddit-1eivny2",
+     "reddit-1de02u6"
+    ],
+    "invalidation": "Allotment records show units are allotted at the expected NAV, or investors who experienced delays did not change how they invest."
+   }
   },
   {
    "id": "TRU-2",
@@ -3072,8 +3201,8 @@
     },
     "by_type": {
      "sip_stop": 4,
-     "intent_to_leave": 1,
-     "sip_pause": 1
+     "sip_pause": 1,
+     "intent_to_leave": 1
     },
     "leaving_coin": 0,
     "leaving_competitor": 1,
@@ -3231,9 +3360,9 @@
     "penalty_uncertainty": 19,
     "insufficient_funds_on_sip_date": 17,
     "failed_payment_fear": 2,
-    "unclear_debit_cutoff_time": 1,
+    "cibil_worry": 1,
     "platform_blamed_for_bank_charge": 1,
-    "cibil_worry": 1
+    "unclear_debit_cutoff_time": 1
    },
    "human_confirmed": 6,
    "confidence": "high",
@@ -3315,7 +3444,20 @@
      "evidence_span": "will doing so involve penalties?"
     }
    ],
-   "quote_candidates": 49
+   "quote_candidates": 49,
+   "narrative": {
+    "generated": true,
+    "statement": "When the SIP account is short of funds on the debit date, the bank charges a bounce penalty that can be large next to the SIP itself, and some investors learn of it only when it is charged. Others ask in advance whether they will be penalised. The charge comes from the bank, but the SIP is where investors meet it. Most of these posts are from Reddit and do not name a platform.",
+    "cited_ids": [
+     "reddit-1septyi",
+     "reddit-1telwwr",
+     "reddit-187slnp",
+     "tradingqna-118068",
+     "youtube-UgyYJnLMZEVBQtv0dR14AaABAg",
+     "youtube-UgwGxCyvcUDFM3tC-qt4AaABAg"
+    ],
+    "invalidation": "Interviews show investors knew about bounce charges before setting up the mandate, or that a penalty did not change whether they kept the SIP."
+   }
   },
   {
    "id": "TRU-5",
@@ -3445,19 +3587,19 @@
     "paywall_basic_features": 4,
     "exit_load_surprise": 3,
     "advisory_plan_underperformance": 2,
-    "demat_amc_charges": 2,
     "forced_demat_account": 2,
-    "amc_charges": 1,
-    "platform_fee_during_lock_in": 1,
-    "paywall_upgrade": 1,
+    "demat_amc_charges": 2,
     "regular_plan_default": 1,
-    "no_value_add": 1,
-    "demat_push": 1,
+    "forced_autopay": 1,
+    "amc_charges": 1,
+    "paywall_upgrade": 1,
+    "ddpi_paywall": 1,
     "demat_conversion_charges": 1,
     "demat_amc_surprise": 1,
-    "forced_autopay": 1,
+    "demat_push": 1,
+    "platform_fee_during_lock_in": 1,
     "charges_not_visible": 1,
-    "ddpi_paywall": 1
+    "no_value_add": 1
    },
    "human_confirmed": 4,
    "confidence": "high",
@@ -3532,7 +3674,20 @@
      "evidence_span": "What would be different charges once I start investing??"
     }
    ],
-   "quote_candidates": 43
+   "quote_candidates": 43,
+   "narrative": {
+    "generated": true,
+    "statement": "Investors are unsure what the platform charges, on each instalment, on redemption or for the demat account, and some find fees, paid plans or marketing pushes they did not expect. On other apps, new fees and heavy upselling are a stated reason to switch, sometimes to Coin.",
+    "cited_ids": [
+     "reddit-1q3iubg",
+     "tradingqna-116826",
+     "youtube-Ugzv4alq-U7Z41RN-Kp4AaABAg",
+     "playstore-zerodha_coin-d514130c-4e7e-4127-ba8e-92edbe3a5f25",
+     "reddit-1fwzi9e",
+     "playstore-et_money-16911f5a-ea07-4f28-8e62-225af6db0dca"
+    ],
+    "invalidation": "Investors in interviews state Coin's charges correctly, and charge questions do not come up in the period before they stop."
+   }
   },
   {
    "id": "TRU-1",
@@ -3571,8 +3726,8 @@
     },
     "by_type": {
      "sip_stop": 2,
-     "intent_to_leave": 1,
-     "platform_switch": 1
+     "platform_switch": 1,
+     "intent_to_leave": 1
     },
     "leaving_coin": 1,
     "leaving_competitor": 1,
@@ -3722,11 +3877,11 @@
     "mandate_continues_after_death": 2,
     "duplicate_sip_orders": 2,
     "cannot_cancel_mandate": 2,
-    "unintended_sip_creation": 1,
+    "mandate_cancelled_without_consent": 1,
+    "unexpected_bill_paused_sip": 1,
     "mandate_cancel_not_effective": 1,
     "premature_debit_initiation": 1,
-    "unexpected_bill_paused_sip": 1,
-    "mandate_cancelled_without_consent": 1
+    "unintended_sip_creation": 1
    },
    "human_confirmed": 5,
    "confidence": "high",
@@ -3797,7 +3952,20 @@
      "evidence_span": "mrng i checked money deducted"
     }
    ],
-   "quote_candidates": 37
+   "quote_candidates": 37,
+   "narrative": {
+    "generated": true,
+    "statement": "Money leaves the investor's bank account when they did not expect it: after cancelling an SIP or a mandate, twice for the same instalment, or for an order that failed or was never placed. Investors then have to chase the platform, the bank or the fund house to get it back.",
+    "cited_ids": [
+     "reddit-1rfv3xe",
+     "tradingqna-481002",
+     "playstore-et_money-2d0c106a-06d2-4c94-a258-f25b35002dc2",
+     "tradingqna-397369",
+     "youtube-UgwIu135RYcGVJHOndN4AaABAg",
+     "tradingqna-403177"
+    ],
+    "invalidation": "Payment records show such debits are rare and are refunded automatically without the investor having to act."
+   }
   },
   {
    "id": "EDU-4",
@@ -3835,8 +4003,8 @@
      "fund": 1
     },
     "by_type": {
-     "realised_exit": 1,
-     "intent_to_leave": 1
+     "intent_to_leave": 1,
+     "realised_exit": 1
     },
     "leaving_coin": 1,
     "leaving_competitor": 1,
@@ -3896,16 +4064,16 @@
     "regular_to_direct_tax": 5,
     "soa_preference": 2,
     "demat_folio_confusion": 2,
-    "demat_default_on_sip_change": 1,
-    "direct_conversion_tax_concern": 1,
-    "soa_transfer_form_confusion": 1,
-    "sip_converted_to_amc_sip": 1,
-    "etf_requires_kite_app": 1,
-    "soa_to_demat_switch": 1,
     "direct_regular_confusion": 1,
+    "sip_converted_to_amc_sip": 1,
+    "demat_default_on_sip_change": 1,
+    "etf_requires_kite_app": 1,
+    "amc_sip_min_installments": 1,
+    "soa_transfer_form_confusion": 1,
     "external_sip_not_editable": 1,
+    "direct_conversion_tax_concern": 1,
     "demat_to_soa_process": 1,
-    "amc_sip_min_installments": 1
+    "soa_to_demat_switch": 1
    },
    "human_confirmed": 1,
    "confidence": "medium",
@@ -3971,7 +4139,20 @@
      "evidence_span": "us me jo 0/9999 likh ker ata hai us ka kya mtlb hai"
     }
    ],
-   "quote_candidates": 33
+   "quote_candidates": 33,
+   "narrative": {
+    "generated": true,
+    "statement": "Investors on Coin find two kinds of SIP and do not know the difference: the platform SIP and the AMC SIP, which cannot be paused, changed or stepped up, and units held in demat versus a statement of account. Beginners sometimes end up in an AMC SIP because it was the only option shown, and then cannot change it.",
+    "cited_ids": [
+     "reddit-1hetw1m",
+     "tradingqna-542497",
+     "tradingqna-127321",
+     "reddit-1mxqg4g",
+     "youtube-UgyzOGx7H_bc2vecdVd4AaABAg",
+     "youtube-UgzLqlTirQvEYGa5DlF4AaABAg.ADi8KkwBhL_AE4UMwsD4pY"
+    ],
+    "invalidation": "First-time Coin investors can say which SIP type they hold and what it allows them to change."
+   }
   },
   {
    "id": "OUT-1",
@@ -4073,20 +4254,20 @@
      "count": 7,
      "facts": [
       {
-       "id": "reddit-dryrun-1nxn4qr",
-       "text": "Age: 34"
-      },
-      {
-       "id": "reddit-1tty22u",
-       "text": "I'm 27, earning ₹89k/month"
+       "id": "reddit-dryrun-1wn9c5r",
+       "text": "25, Need advice"
       },
       {
        "id": "reddit-1jdyltd",
        "text": "32M, out of my income"
       },
       {
-       "id": "reddit-1kdnazh",
-       "text": "24F"
+       "id": "reddit-1tty22u",
+       "text": "I'm 27, earning ₹89k/month"
+      },
+      {
+       "id": "reddit-dryrun-1nxn4qr",
+       "text": "Age: 34"
       },
       {
        "id": "reddit-dryrun-1vzs60y",
@@ -4097,8 +4278,8 @@
        "text": "Portfolio review 29Y"
       },
       {
-       "id": "reddit-dryrun-1wn9c5r",
-       "text": "25, Need advice"
+       "id": "reddit-1kdnazh",
+       "text": "24F"
       }
      ]
     },
@@ -4106,16 +4287,16 @@
      "count": 4,
      "facts": [
       {
-       "id": "reddit-1w4j2w5",
-       "text": "earn ₹1.23 lakh in hand each month"
-      },
-      {
        "id": "reddit-1auec3w",
        "text": "I get 1.05lpm"
       },
       {
        "id": "reddit-dryrun-1nxn4qr",
        "text": "Income: ₹2.2L per month (net in hand)"
+      },
+      {
+       "id": "reddit-1w4j2w5",
+       "text": "earn ₹1.23 lakh in hand each month"
       },
       {
        "id": "reddit-dryrun-1wgnrvz",
@@ -4127,8 +4308,16 @@
      "count": 5,
      "facts": [
       {
+       "id": "tradingqna-544228",
+       "text": "switching to full-time freelancing 5 years ago"
+      },
+      {
        "id": "reddit-dryrun-1nxn4qr",
        "text": "Married, 1 child"
+      },
+      {
+       "id": "reddit-dryrun-1vzs60y",
+       "text": "college student"
       },
       {
        "id": "reddit-1r4pdi5",
@@ -4137,14 +4326,6 @@
       {
        "id": "reddit-1varaq2",
        "text": "I used to do SIP in college with my internship money"
-      },
-      {
-       "id": "reddit-dryrun-1vzs60y",
-       "text": "college student"
-      },
-      {
-       "id": "tradingqna-544228",
-       "text": "switching to full-time freelancing 5 years ago"
       }
      ]
     }
@@ -4157,8 +4338,8 @@
    },
    "label_counts": {
     "cashflow_pressure": 31,
-    "loan_prepayment_priority": 1,
-    "goal_redemption_for_house": 1
+    "goal_redemption_for_house": 1,
+    "loan_prepayment_priority": 1
    },
    "human_confirmed": 4,
    "confidence": "high",
@@ -4223,7 +4404,19 @@
      "evidence_span": "mere account paise nahin hai"
     }
    ],
-   "quote_candidates": 32
+   "quote_candidates": 32,
+   "narrative": {
+    "generated": true,
+    "statement": "The investor's own situation changes, through a medical emergency, family commitments, irregular freelance income, a loan or a planned purchase, and they need to pause or stop. The cause is outside the product, but it shows up in the product as a search for a pause or skip that works.",
+    "cited_ids": [
+     "playstore-groww-e10390c4-9c4e-4406-a83d-bda8dc96ce29",
+     "reddit-1nxtis0",
+     "tradingqna-544228",
+     "reddit-1auec3w",
+     "reddit-1h4t6nw"
+    ],
+    "invalidation": "Interviews show investors facing a cash shortfall stop regardless of what pause or skip options exist."
+   }
   },
   {
    "id": "OUT-2",
@@ -4309,16 +4502,16 @@
        "text": "I am 23 yr old"
       },
       {
-       "id": "reddit-dryrun-1vjjelz",
-       "text": "24 here"
+       "id": "reddit-dryrun-1w6zxxc",
+       "text": "I'm 23"
       },
       {
        "id": "reddit-dryrun-1xar55t",
        "text": "I'm 24 and started investing after getting my first job"
       },
       {
-       "id": "reddit-dryrun-1w6zxxc",
-       "text": "I'm 23"
+       "id": "reddit-dryrun-1vjjelz",
+       "text": "24 here"
       }
      ]
     },
@@ -4354,8 +4547,8 @@
    "label_counts": {
     "fund_restriction": 27,
     "platform_fund_availability": 3,
-    "nri_not_supported": 2,
     "nri_status_change": 2,
+    "nri_not_supported": 2,
     "high_expense_ratio": 1
    },
    "human_confirmed": 2,
@@ -4421,7 +4614,20 @@
      "evidence_span": "NRI s in the gulf and other countries cannot invest using their nre accounts"
     }
    ],
-   "quote_candidates": 32
+   "quote_candidates": 32,
+   "narrative": {
+    "generated": true,
+    "statement": "Fund houses stop taking new money, including international funds at the overseas investment limit, and investors find their SIPs paused, skipped or cancelled, often without notice and without an automatic restart. Some are then billed or debited for the paused SIP. Residency rules block NRI investors.",
+    "cited_ids": [
+     "reddit-dryrun-1vn6ilr",
+     "reddit-dryrun-1vv87ie",
+     "tradingqna-405535",
+     "reddit-1031fil",
+     "tradingqna-397369",
+     "playstore-zerodha_coin-db105665-45cf-4623-b162-97a79d582acc"
+    ],
+    "invalidation": "Investors whose SIP was paused by the fund were told in advance and restarted or redirected their money without difficulty."
+   }
   },
   {
    "id": "GAP-1",
@@ -4513,18 +4719,18 @@
     "sip_amount_edit_missing": 5,
     "sip_schedule_restriction": 4,
     "goal_labelling_missing": 3,
-    "redeem_by_amount_missing": 2,
     "no_switch_option": 2,
+    "mandate_amount_edit_missing": 2,
+    "redeem_by_amount_missing": 2,
     "no_swp": 2,
     "sip_increase_lock": 2,
-    "mandate_amount_edit_missing": 2,
-    "no_step_up_sip": 1,
     "stp_restriction": 1,
-    "unit_based_sip_request": 1,
     "missing_flexi_sip": 1,
-    "min_sip_amount": 1,
-    "sip_end_date_missing": 1,
     "min_installment_lock": 1,
+    "min_sip_amount": 1,
+    "no_step_up_sip": 1,
+    "sip_end_date_missing": 1,
+    "unit_based_sip_request": 1,
     "step_up_blocked_by_increment": 1
    },
    "human_confirmed": 2,
@@ -4587,7 +4793,20 @@
      "evidence_span": "no option either to start the STP from existing LF to a new fund"
     }
    ],
-   "quote_candidates": 29
+   "quote_candidates": 29,
+   "narrative": {
+    "generated": true,
+    "statement": "Investors want to shape an SIP after starting it, by changing the amount or the day, stepping it up, switching between funds, setting up a withdrawal plan or labelling it with a goal, and the app does not allow it or only through cancelling and recreating. Most of these requests are about Coin.",
+    "cited_ids": [
+     "tradingqna-309803",
+     "tradingqna-325377",
+     "playstore-zerodha_coin-4b9286c4-46a7-4a35-870f-9ee71763ee2b",
+     "playstore-zerodha_coin-0f9db117-4707-4f1f-bdbc-f1601d8c3ae7",
+     "tradingqna-290885",
+     "youtube-UgzZVubzVVceXIQBXJR4AaABAg"
+    ],
+    "invalidation": "Investors who asked for these changes kept investing as before without them, or did not use the feature once it existed."
+   }
   },
   {
    "id": "EDU-6",
@@ -4671,20 +4890,20 @@
      "count": 4,
      "facts": [
       {
-       "id": "reddit-1ptuyd8",
-       "text": "I am a 29"
+       "id": "reddit-1q9wbbj",
+       "text": "Age - 25 yo"
       },
       {
        "id": "reddit-dryrun-1vpy8h0",
        "text": "I'm currently 26"
       },
       {
-       "id": "reddit-1q9wbbj",
-       "text": "Age - 25 yo"
-      },
-      {
        "id": "reddit-dryrun-1wte69m",
        "text": "Age: 19"
+      },
+      {
+       "id": "reddit-1ptuyd8",
+       "text": "I am a 29"
       }
      ]
     },
@@ -4773,7 +4992,20 @@
      "evidence_span": "kya hoga pata nhi"
     }
    ],
-   "quote_candidates": 23
+   "quote_candidates": 23,
+   "narrative": {
+    "generated": true,
+    "statement": "Investors start an SIP with little understanding of how it works, such as what maturity means or how to pick funds, and conflicting advice online makes it harder. Several later describe buying many funds at random or at a market peak. Most of these posts are from Reddit.",
+    "cited_ids": [
+     "playstore-angel_one-e9a9f057-98ea-4047-85c5-a63e4a9bf533",
+     "youtube-UgyIWti1wZfIXwQLrQd4AaABAg.AJNhs6ftHHXAKiWaZzNx9f",
+     "reddit-1hty7ro",
+     "reddit-1hu982u",
+     "reddit-1sbi166",
+     "youtube-Ugx5PE8dNCfI5lT_f4d4AaABAg"
+    ],
+    "invalidation": "Interviews show investors who describe low knowledge continue at the same rate as others."
+   }
   },
   {
    "id": "OUT-3",
@@ -4855,12 +5087,12 @@
      "count": 4,
      "facts": [
       {
-       "id": "reddit-1t0d98s",
-       "text": "25F"
-      },
-      {
        "id": "reddit-1sjb086",
        "text": "senior citizen, 65+"
+      },
+      {
+       "id": "reddit-1t0d98s",
+       "text": "25F"
       },
       {
        "id": "reddit-1ph7f98",
@@ -4944,7 +5176,20 @@
      "evidence_span": "after learning about the difference between regular and direct SIPs"
     }
    ],
-   "quote_candidates": 22
+   "quote_candidates": 22,
+   "narrative": {
+    "generated": true,
+    "statement": "Investors learn that an advisor, agent, bank employee or acquaintance put them in regular plans or costlier products, and they stop those SIPs or switch them to direct plans. This usually shows up as stopping one SIP and restarting elsewhere, not as leaving investing.",
+    "cited_ids": [
+     "reddit-1frbc05",
+     "reddit-1f5i9dv",
+     "reddit-dryrun-1w1v388",
+     "reddit-1sk2jhz",
+     "tradingqna-226012",
+     "reddit-1nktvia"
+    ],
+    "invalidation": "Investors who moved from regular to direct plans then stopped investing altogether."
+   }
   },
   {
    "id": "EDU-5",
@@ -5025,8 +5270,8 @@
     "lock_in_confusion": 5,
     "lock_in_display_wrong": 3,
     "tax_calculation_confusion": 2,
-    "exit_load_confusion": 2,
     "elss_lock_in_surprise": 2,
+    "exit_load_confusion": 2,
     "redemption_nav_timing_confusion": 1
    },
    "human_confirmed": 2,
@@ -5074,7 +5319,20 @@
      "evidence_span": "Does the exit load period starts everytime SIP is executed or from date of investment into MF?"
     }
    ],
-   "quote_candidates": 15
+   "quote_candidates": 15,
+   "narrative": {
+    "generated": true,
+    "statement": "Investors are caught out by when money can be taken out: ELSS units that unlock instalment by instalment rather than from the first SIP, units shown as locked or available incorrectly, and exit load and tax rules they cannot work out from the app.",
+    "cited_ids": [
+     "youtube-Ugx5rDuMatVJUKt4JSp4AaABAg",
+     "tradingqna-363884",
+     "playstore-zerodha_coin-c238809b-61a2-4cb5-9666-158e488fe9fd",
+     "reddit-1anfqam",
+     "reddit-dryrun-1vwc5qf",
+     "playstore-groww-e14905a2-2364-4e69-bdca-206d85d8a7ac"
+    ],
+    "invalidation": "Investors can correctly say when each instalment unlocks and which exit load applies."
+   }
   },
   {
    "id": "TRU-6",
@@ -5159,10 +5417,10 @@
    "label_counts": {
     "demat_custody_worry": 3,
     "trust_loss": 2,
-    "platform_trust_concern": 1,
-    "privacy_concern": 1,
     "safety_doubt": 1,
-    "platform_shutdown_worry": 1
+    "platform_shutdown_worry": 1,
+    "platform_trust_concern": 1,
+    "privacy_concern": 1
    },
    "human_confirmed": 0,
    "confidence": "medium",
@@ -5203,7 +5461,20 @@
      "evidence_span": "Agar by chance future mei ye nj e wealth application band ho gei toh mere paisay ka kya hoga"
     }
    ],
-   "quote_candidates": 8
+   "quote_candidates": 8,
+   "narrative": {
+    "generated": true,
+    "statement": "Some investors worry about what happens to their money if the platform has a problem or shuts down, especially when units are held in demat through a broker, and a few say they lost trust after the app showed wrong values or units. The evidence here is thin, so treat it as a signal to explore rather than a finding.",
+    "cited_ids": [
+     "reddit-1ewcu5e",
+     "tradingqna-458258",
+     "youtube-UgweDZFBVsrasH-XWjF4AaABAg",
+     "playstore-zerodha_coin-284e67ee-4088-401a-ad4a-bd14796b7bb8",
+     "playstore-zerodha_coin-4a174746-010a-4cea-8a3f-4c6754e98ab1",
+     "reddit-1mxqg4g"
+    ],
+    "invalidation": "Interviews show the custody format and platform safety play no part in whether investors continue."
+   }
   }
  ],
  "switch_flows": [

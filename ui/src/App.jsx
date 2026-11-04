@@ -1,12 +1,14 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Overview from './screens/Overview';
+import Explorer from './screens/Explorer';
+import Questions from './screens/Questions';
 import { num, day } from './lib/format';
 
 // the 5 screens (docs/ui_plan_v2.md, information architecture); built: screens with a component
 const SCREENS = [
   { id: 'overview', label: 'Overview', component: Overview },
-  { id: 'explorer', label: 'Problem Explorer' },
-  { id: 'questions', label: "What We Know and Don't" },
+  { id: 'explorer', label: 'Problem Explorer', component: Explorer },
+  { id: 'questions', label: "What We Know and Don't", component: Questions },
   { id: 'library', label: 'Evidence Library' },
   { id: 'research', label: 'Next Research' },
 ];
@@ -34,12 +36,21 @@ export default function App() {
       .catch((e) => setError(e.message));
   }, []);
 
+  // publish the header height as --header-h so screen-level sticky bars sit right below it at any width
+  const headerRef = useRef(null);
+  useEffect(() => {
+    const el = headerRef.current;
+    const ro = new ResizeObserver(() => document.documentElement.style.setProperty('--header-h', `${el.offsetHeight}px`));
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+
   const cs = data?.m.corpus_summary;
   const Screen = SCREENS.find((s) => s.id === screen).component;
 
   return (
     <div className="flex min-h-screen flex-col bg-canvas text-ink">
-      <header className="sticky top-0 z-30 border-b border-line bg-white" style={{ top: 'env(safe-area-inset-top, 0px)' }}>
+      <header ref={headerRef} className="sticky top-0 z-30 border-b border-line bg-white" style={{ top: 'env(safe-area-inset-top, 0px)' }}>
         <div className="mx-auto max-w-6xl px-4 pt-3 lg:px-8">
           <div className="flex flex-wrap items-center gap-3">
             <img src="/screen.png" alt="" className="h-9 w-9 shrink-0 rounded-lg object-contain" />
@@ -68,7 +79,7 @@ export default function App() {
         <p className="mb-6 rounded-lg bg-white px-3 py-2 text-xs text-muted ring-1 ring-line">
           These are public posts and reviews, which lean towards complaints. Counts are mentions, not a share of all users.
         </p>
-        {error && <p className="text-sm text-red-700">Could not load the data: {error}</p>}
+        {error && <p className="text-sm text-danger">Could not load the data: {error}</p>}
         {!error && !data && <p className="text-sm text-muted">Loading…</p>}
         {data && (Screen
           ? <Screen m={data.m} score={data.score} />

@@ -560,80 +560,80 @@
      "count": 19,
      "facts": [
       {
-       "id": "reddit-dryrun-1vzs60y",
-       "text": "I'm (21)"
-      },
-      {
-       "id": "reddit-dryrun-1wdg52k",
-       "text": "I am currently 30 years old"
+       "id": "reddit-dryrun-1wgnrvz",
+       "text": "Portfolio review 29Y"
       },
       {
        "id": "reddit-1p56a6e",
        "text": "32 M"
       },
       {
-       "id": "reddit-dryrun-1w47pl1",
-       "text": "I am 23 earning below avg"
-      },
-      {
-       "id": "reddit-dryrun-1wvpw1n",
-       "text": "I am 21 and I started investing at the age of 19"
-      },
-      {
-       "id": "reddit-1q9wbbj",
-       "text": "Age - 25 yo"
-      },
-      {
        "id": "reddit-1ptuyd8",
        "text": "I am a 29"
-      },
-      {
-       "id": "reddit-1s7ztsm",
-       "text": "Age: 27"
-      },
-      {
-       "id": "reddit-1pxqdj9",
-       "text": "I am 28 married with two kids under 2 years"
-      },
-      {
-       "id": "reddit-18snp0k",
-       "text": "Age: 38 years"
-      },
-      {
-       "id": "reddit-dryrun-1v739n0",
-       "text": "My age is 27"
-      },
-      {
-       "id": "reddit-1tj7r18",
-       "text": "Age: 29"
-      },
-      {
-       "id": "reddit-1lgva0e",
-       "text": "Now,i m 21"
       },
       {
        "id": "reddit-1t0d98s",
        "text": "25F"
       },
       {
-       "id": "reddit-1ko3rzy",
-       "text": "I am 20 (M)"
+       "id": "reddit-dryrun-1wfvfty",
+       "text": "Im 22"
+      },
+      {
+       "id": "reddit-1pxqdj9",
+       "text": "I am 28 married with two kids under 2 years"
+      },
+      {
+       "id": "reddit-1tj7r18",
+       "text": "Age: 29"
+      },
+      {
+       "id": "reddit-dryrun-1v739n0",
+       "text": "My age is 27"
+      },
+      {
+       "id": "reddit-dryrun-1w47pl1",
+       "text": "I am 23 earning below avg"
+      },
+      {
+       "id": "reddit-1lgva0e",
+       "text": "Now,i m 21"
+      },
+      {
+       "id": "reddit-dryrun-1wvpw1n",
+       "text": "I am 21 and I started investing at the age of 19"
       },
       {
        "id": "reddit-1q9ro80",
        "text": "27M, Debt free"
       },
       {
+       "id": "reddit-1ko3rzy",
+       "text": "I am 20 (M)"
+      },
+      {
+       "id": "reddit-dryrun-1wdg52k",
+       "text": "I am currently 30 years old"
+      },
+      {
+       "id": "reddit-18snp0k",
+       "text": "Age: 38 years"
+      },
+      {
+       "id": "reddit-1s7ztsm",
+       "text": "Age: 27"
+      },
+      {
+       "id": "reddit-dryrun-1vzs60y",
+       "text": "I'm (21)"
+      },
+      {
        "id": "reddit-dryrun-1v8roca",
        "text": "I'm 22"
       },
       {
-       "id": "reddit-dryrun-1wgnrvz",
-       "text": "Portfolio review 29Y"
-      },
-      {
-       "id": "reddit-dryrun-1wfvfty",
-       "text": "Im 22"
+       "id": "reddit-1q9wbbj",
+       "text": "Age - 25 yo"
       }
      ]
     },
@@ -645,16 +645,16 @@
        "text": "relatively new to investing/SIPs"
       },
       {
-       "id": "reddit-dryrun-1vasakw",
-       "text": "My parents only use fd"
-      },
-      {
        "id": "reddit-dryrun-1w5at5y",
        "text": "newbie in this arena"
       },
       {
        "id": "reddit-1gdszzq",
        "text": "I'm a new investor"
+      },
+      {
+       "id": "reddit-dryrun-1vasakw",
+       "text": "My parents only use fd"
       }
      ]
     },
@@ -662,16 +662,16 @@
      "count": 3,
      "facts": [
       {
-       "id": "reddit-1pxqdj9",
-       "text": "my salary is 1.5L/month in hand"
+       "id": "reddit-dryrun-1wgnrvz",
+       "text": "Stable salary around 1Lakh"
       },
       {
        "id": "reddit-1t0d98s",
        "text": "₹1.3L income"
       },
       {
-       "id": "reddit-dryrun-1wgnrvz",
-       "text": "Stable salary around 1Lakh"
+       "id": "reddit-1pxqdj9",
+       "text": "my salary is 1.5L/month in hand"
       }
      ]
     },
@@ -679,12 +679,12 @@
      "count": 5,
      "facts": [
       {
-       "id": "reddit-dryrun-1vzs60y",
-       "text": "college student"
-      },
-      {
        "id": "reddit-1fz8se4",
        "text": "She is a student"
+      },
+      {
+       "id": "reddit-dryrun-1wvtkds",
+       "text": "I am from a very poor background"
       },
       {
        "id": "reddit-1snsc3u",
@@ -695,8 +695,8 @@
        "text": "i am now sitting with my father in his shop helping"
       },
       {
-       "id": "reddit-dryrun-1wvtkds",
-       "text": "I am from a very poor background"
+       "id": "reddit-dryrun-1vzs60y",
+       "text": "college student"
       }
      ]
     }
@@ -715,19 +715,19 @@
     "market_timing_stop": 5,
     "volatility_anxiety": 4,
     "over_diversification": 2,
-    "compulsive_checking": 2,
     "market_timing_regret": 2,
-    "sip_too_slow": 1,
-    "disengagement": 1,
+    "compulsive_checking": 2,
+    "influencer_driven_stop": 1,
     "gold_fomo": 1,
+    "chasing_past_returns": 1,
+    "pause_urge": 1,
+    "early_withdrawal_regret": 1,
+    "sip_too_slow": 1,
+    "early_loss_scare": 1,
     "exit_timing_uncertainty": 1,
     "ipo_chasing": 1,
     "panic_exit_regret": 1,
-    "early_withdrawal_regret": 1,
-    "influencer_driven_stop": 1,
-    "pause_urge": 1,
-    "early_loss_scare": 1,
-    "chasing_past_returns": 1
+    "disengagement": 1
    },
    "human_confirmed": 7,
    "confidence": "high",
@@ -1087,30 +1087,30 @@
     "mandate_failure": 11,
     "sip_order_auto_cancelled": 7,
     "autopay_failed_despite_balance": 5,
-    "upi_payment_failure": 4,
-    "mandate_activation_delay": 4,
     "autopay_setup_failure": 4,
+    "mandate_activation_delay": 4,
+    "upi_payment_failure": 4,
     "silent_mandate_failure": 2,
     "payment_gateway_failure": 2,
-    "sip_payment_error": 1,
-    "unexplained_failure": 1,
-    "sip_rejected_blacklisted_agent": 1,
+    "erroneous_sip_cancellation_email": 1,
     "mandate_not_effective": 1,
-    "auto_pause_unexplained": 1,
+    "sip_payment_error": 1,
+    "sip_order_delayed": 1,
+    "sip_cancelled_during_platform_move": 1,
     "sip_stopped_without_notice": 1,
     "missed_installment": 1,
-    "aof_rejected_after_debit": 1,
-    "tpv_pending_rejection": 1,
     "sip_terminated_unexplained": 1,
-    "auto_payment_refunded": 1,
-    "erroneous_sip_cancellation_email": 1,
-    "holiday_sip_execution": 1,
-    "sip_cancelled_during_platform_move": 1,
-    "payment_stuck_pending": 1,
-    "sip_order_delayed": 1,
-    "payment_friction": 1,
-    "conditional_order_failure": 1,
     "units_bounced_kyc_dpid": 1,
+    "tpv_pending_rejection": 1,
+    "payment_friction": 1,
+    "aof_rejected_after_debit": 1,
+    "sip_rejected_blacklisted_agent": 1,
+    "conditional_order_failure": 1,
+    "holiday_sip_execution": 1,
+    "payment_stuck_pending": 1,
+    "auto_pause_unexplained": 1,
+    "auto_payment_refunded": 1,
+    "unexplained_failure": 1,
     "sip_not_invested_in_time": 1
    },
    "human_confirmed": 12,
@@ -1296,8 +1296,8 @@
     },
     "by_type": {
      "intent_to_leave": 7,
-     "realised_exit": 3,
      "sip_stop": 3,
+     "realised_exit": 3,
      "platform_switch": 1
     },
     "leaving_coin": 1,
@@ -1637,25 +1637,25 @@
    "label_counts": {
     "pause_cancel_confusion": 30,
     "no_pause_option": 5,
-    "offline_stop_process": 4,
     "cannot_stop_sip": 4,
+    "offline_stop_process": 4,
     "restart_unclear": 3,
     "exit_procedure_uncertainty": 3,
     "stop_notice_period": 2,
-    "cannot_resume_paused_sip": 1,
-    "agent_dependency_to_pause": 1,
-    "no_bulk_cancel": 1,
-    "offline_pause_process": 1,
-    "no_auto_resume": 1,
-    "sip_stop_required_for_transfer": 1,
     "skip_not_working": 1,
-    "slow_sip_cancellation": 1,
-    "sip_edit_skipped_installment": 1,
-    "transfer_sip_continuity": 1,
     "folio_reuse_uncertainty": 1,
+    "no_bulk_cancel": 1,
+    "no_auto_resume": 1,
+    "offline_pause_process": 1,
     "accidental_sip_deletion": 1,
     "unclear_delete_meaning": 1,
-    "no_indefinite_pause": 1
+    "no_indefinite_pause": 1,
+    "slow_sip_cancellation": 1,
+    "agent_dependency_to_pause": 1,
+    "sip_edit_skipped_installment": 1,
+    "cannot_resume_paused_sip": 1,
+    "transfer_sip_continuity": 1,
+    "sip_stop_required_for_transfer": 1
    },
    "human_confirmed": 5,
    "confidence": "high",
@@ -1865,16 +1865,16 @@
     "manual_payment_path_gap": 44,
     "missed_sip_no_reminder": 6,
     "no_reminder_feature": 4,
-    "upi_autopay_unavailable": 2,
     "mandate_aversion": 2,
-    "mandate_not_reusable": 1,
-    "delayed_mandate_feature": 1,
-    "missing_true_sip": 1,
-    "autodebit_unavailable": 1,
+    "upi_autopay_unavailable": 2,
     "bank_not_supported": 1,
     "no_bank_sip": 1,
-    "nri_mandate_unsupported": 1,
+    "missing_true_sip": 1,
     "secondary_bank_mandate_unavailable": 1,
+    "nri_mandate_unsupported": 1,
+    "mandate_not_reusable": 1,
+    "delayed_mandate_feature": 1,
+    "autodebit_unavailable": 1,
     "payment_method_visibility": 1
    },
    "human_confirmed": 13,
@@ -2091,6 +2091,10 @@
      "count": 4,
      "facts": [
       {
+       "id": "reddit-1ubqz7v",
+       "text": "I'm new to MFs"
+      },
+      {
        "id": "reddit-w9rjhl",
        "text": "I'm new to investments"
       },
@@ -2101,10 +2105,6 @@
       {
        "id": "reddit-dryrun-1x8d08v",
        "text": "been investing for past 2 years"
-      },
-      {
-       "id": "reddit-1ubqz7v",
-       "text": "I'm new to MFs"
       }
      ]
     }
@@ -2119,24 +2119,24 @@
     "statement_confusion": 26,
     "funds_apparently_missing": 8,
     "portfolio_value_mismatch": 4,
+    "fragmented_tracking": 2,
+    "holdings_not_visible_after_transfer": 2,
     "holdings_not_visible": 2,
+    "no_payment_history": 2,
     "external_fund_tracking": 2,
     "reporting_gap": 2,
-    "fragmented_tracking": 2,
-    "no_payment_history": 2,
-    "holdings_not_visible_after_transfer": 2,
-    "amc_sip_not_in_portfolio": 1,
     "folio_name_mismatch": 1,
-    "active_sip_not_visible": 1,
-    "duplicate_folio_entry": 1,
-    "holdings_not_visible_on_amc": 1,
-    "nav_not_shown": 1,
     "amc_sip_not_tracked": 1,
-    "holdings_not_visible_in_mf_central": 1,
     "multiple_folios": 1,
     "payment_status_unclear": 1,
+    "active_sip_not_visible": 1,
+    "amc_sip_not_in_portfolio": 1,
+    "duplicate_folio_entry": 1,
+    "holdings_not_visible_in_mf_central": 1,
+    "virtual_account_visibility": 1,
+    "holdings_not_visible_on_amc": 1,
     "autopay_status_unclear": 1,
-    "virtual_account_visibility": 1
+    "nav_not_shown": 1
    },
    "human_confirmed": 4,
    "confidence": "high",
@@ -2276,8 +2276,8 @@
      "fund": 0
     },
     "by_type": {
-     "sip_stop": 1,
-     "realised_exit": 1
+     "realised_exit": 1,
+     "sip_stop": 1
     },
     "leaving_coin": 0,
     "leaving_competitor": 1,
@@ -2341,24 +2341,24 @@
     "unclear_mandate_terms": 17,
     "mandate_end_date_confusion": 10,
     "notification_uncertainty": 4,
-    "installment_date_confusion": 3,
-    "auto_debit_setup_confusion": 3,
     "forced_mandate_resetup_risk": 3,
+    "auto_debit_setup_confusion": 3,
+    "installment_date_confusion": 3,
+    "installment_date_mismatch": 2,
     "upi_mandate_howto": 2,
     "bank_account_setup_blocks_mandate": 2,
-    "installment_date_mismatch": 2,
-    "emandate_introduction": 1,
-    "mandate_method_discontinued": 1,
-    "mandate_type_change_blocked": 1,
-    "date_change_not_honoured": 1,
-    "mandate_name_matching": 1,
-    "mandate_deletion_unclear": 1,
-    "sip_tenure_confusion": 1,
-    "order_date_confusion": 1,
-    "mandate_type_confusion": 1,
-    "mandate_type_change": 1,
     "upi_autopay_limit_confusion": 1,
-    "joint_account_mandate": 1
+    "mandate_type_change": 1,
+    "mandate_name_matching": 1,
+    "sip_tenure_confusion": 1,
+    "joint_account_mandate": 1,
+    "mandate_deletion_unclear": 1,
+    "date_change_not_honoured": 1,
+    "mandate_method_discontinued": 1,
+    "emandate_introduction": 1,
+    "mandate_type_change_blocked": 1,
+    "mandate_type_confusion": 1,
+    "order_date_confusion": 1
    },
    "human_confirmed": 4,
    "confidence": "high",
@@ -2592,27 +2592,27 @@
     "refund_delay": 13,
     "redemption_blocked": 10,
     "redemption_issue": 7,
-    "slow_withdrawal": 3,
-    "refund_uncertainty": 3,
     "bank_change_blocked": 3,
-    "redemption_blocked_closed_bank": 2,
+    "refund_uncertainty": 3,
+    "slow_withdrawal": 3,
     "bank_detail_change_blocked": 2,
-    "nominee_detail_error": 1,
-    "no_instant_redemption": 1,
-    "redemption_delay": 1,
-    "bank_change_cooling_period": 1,
+    "redemption_blocked_closed_bank": 2,
+    "redemption_to_defunct_account": 1,
     "withdrawal_limit": 1,
-    "refund_tracking_missing": 1,
-    "redemption_amount_mismatch": 1,
     "nominee_transmission_harassment": 1,
-    "regular_funds_locked": 1,
-    "name_mismatch_redemption": 1,
-    "redemption_friction": 1,
+    "bank_change_delay": 1,
     "redemption_in_installments": 1,
     "cannot_skip_or_change_bank": 1,
+    "nominee_detail_error": 1,
+    "redemption_delay": 1,
+    "bank_change_cooling_period": 1,
+    "name_mismatch_redemption": 1,
     "bank_account_blocked": 1,
-    "redemption_to_defunct_account": 1,
-    "bank_change_delay": 1
+    "no_instant_redemption": 1,
+    "redemption_friction": 1,
+    "redemption_amount_mismatch": 1,
+    "regular_funds_locked": 1,
+    "refund_tracking_missing": 1
    },
    "human_confirmed": 3,
    "confidence": "high",
@@ -2822,16 +2822,16 @@
      "count": 3,
      "facts": [
       {
-       "id": "playstore-angel_one-34b80039-34c3-48ff-b73f-cbad3af2fd6d",
-       "text": "both my wife and I are visually impaired users"
-      },
-      {
        "id": "reddit-dryrun-1w1d9k0",
        "text": "NRI here"
       },
       {
        "id": "reddit-dryrun-1xarkf8",
        "text": "MBBS student investing some amount from my pocket money"
+      },
+      {
+       "id": "playstore-angel_one-34b80039-34c3-48ff-b73f-cbad3af2fd6d",
+       "text": "both my wife and I are visually impaired users"
       }
      ]
     }
@@ -2849,25 +2849,25 @@
     "platform_bugginess": 4,
     "ui_glitch": 4,
     "kyc_issue": 3,
-    "sip_setup_confusing": 2,
-    "otp_loop": 2,
     "poor_web_interface": 2,
     "login_failure": 2,
-    "slow_portal": 1,
-    "account_blocked": 1,
+    "sip_setup_confusing": 2,
+    "otp_loop": 2,
+    "cluttered_sip_list": 1,
+    "nri_otp_lockout": 1,
+    "investment_limit_error": 1,
+    "broker_app_fatigue": 1,
     "mandate_creation_difficult": 1,
     "search_broken": 1,
-    "recurring_issues": 1,
-    "onboarding_document_friction": 1,
+    "ekyc_failure": 1,
     "accessibility_gap": 1,
-    "investment_limit_error": 1,
-    "cluttered_sip_list": 1,
-    "double_payout_glitch": 1,
-    "broker_app_fatigue": 1,
+    "slow_portal": 1,
     "redemption_otp_failure": 1,
-    "nri_otp_lockout": 1,
+    "account_blocked": 1,
+    "onboarding_document_friction": 1,
+    "double_payout_glitch": 1,
     "stagnant_features": 1,
-    "ekyc_failure": 1
+    "recurring_issues": 1
    },
    "human_confirmed": 4,
    "confidence": "high",
@@ -3004,8 +3004,8 @@
      "fund": 0
     },
     "by_type": {
-     "intent_to_leave": 3,
-     "realised_exit": 3
+     "realised_exit": 3,
+     "intent_to_leave": 3
     },
     "leaving_coin": 3,
     "leaving_competitor": 3,
@@ -3073,9 +3073,9 @@
    "label_counts": {
     "unit_allocation_delay": 38,
     "delayed_nav": 13,
-    "nav_update_lag": 1,
     "holiday_debit_timing": 1,
-    "early_cutoff_time": 1
+    "early_cutoff_time": 1,
+    "nav_update_lag": 1
    },
    "human_confirmed": 4,
    "confidence": "high",
@@ -3370,9 +3370,9 @@
     "penalty_uncertainty": 19,
     "insufficient_funds_on_sip_date": 17,
     "failed_payment_fear": 2,
-    "unclear_debit_cutoff_time": 1,
+    "cibil_worry": 1,
     "platform_blamed_for_bank_charge": 1,
-    "cibil_worry": 1
+    "unclear_debit_cutoff_time": 1
    },
    "human_confirmed": 6,
    "confidence": "high",
@@ -3506,9 +3506,9 @@
      "fund": 5
     },
     "by_type": {
-     "intent_to_leave": 1,
+     "sip_stop": 1,
      "realised_exit": 1,
-     "sip_stop": 1
+     "intent_to_leave": 1
     },
     "leaving_coin": 1,
     "leaving_competitor": 1,
@@ -3554,14 +3554,6 @@
      "count": 6,
      "facts": [
       {
-       "id": "reddit-1t0d98s",
-       "text": "25F"
-      },
-      {
-       "id": "reddit-dryrun-1x6amwx",
-       "text": "Age- 28"
-      },
-      {
        "id": "reddit-1ph7f98",
        "text": "I am 29"
       },
@@ -3576,6 +3568,14 @@
       {
        "id": "reddit-1sk2jhz",
        "text": "Age 23"
+      },
+      {
+       "id": "reddit-1t0d98s",
+       "text": "25F"
+      },
+      {
+       "id": "reddit-dryrun-1x6amwx",
+       "text": "Age- 28"
       }
      ]
     },
@@ -3598,18 +3598,18 @@
    "label_counts": {
     "regular_to_direct_switch": 15,
     "amc_sip_confusion": 10,
-    "regular_to_direct_tax": 5,
     "amc_sip_modification_gap": 5,
-    "soa_preference": 2,
+    "regular_to_direct_tax": 5,
     "demat_folio_confusion": 2,
-    "direct_conversion_tax_concern": 1,
-    "external_sip_not_editable": 1,
-    "etf_requires_kite_app": 1,
-    "soa_to_demat_switch": 1,
+    "soa_preference": 2,
     "demat_default_on_sip_change": 1,
-    "direct_regular_confusion": 1,
-    "soa_transfer_form_confusion": 1,
     "sip_converted_to_amc_sip": 1,
+    "direct_conversion_tax_concern": 1,
+    "direct_regular_confusion": 1,
+    "soa_to_demat_switch": 1,
+    "external_sip_not_editable": 1,
+    "soa_transfer_form_confusion": 1,
+    "etf_requires_kite_app": 1,
     "demat_to_soa_process": 1
    },
    "human_confirmed": 1,
@@ -3839,17 +3839,17 @@
     "advisory_plan_underperformance": 2,
     "demat_amc_charges": 2,
     "forced_demat_account": 2,
-    "platform_fee_during_lock_in": 1,
-    "paywall_upgrade": 1,
-    "charges_not_visible": 1,
+    "demat_push": 1,
     "demat_conversion_charges": 1,
+    "ddpi_paywall": 1,
     "forced_autopay": 1,
+    "no_value_add": 1,
+    "charges_not_visible": 1,
     "regular_plan_default": 1,
     "demat_amc_surprise": 1,
-    "demat_push": 1,
-    "no_value_add": 1,
-    "ddpi_paywall": 1,
-    "amc_charges": 1
+    "amc_charges": 1,
+    "paywall_upgrade": 1,
+    "platform_fee_during_lock_in": 1
    },
    "human_confirmed": 4,
    "confidence": "high",
@@ -3977,8 +3977,8 @@
     },
     "by_type": {
      "sip_stop": 2,
-     "platform_switch": 1,
-     "intent_to_leave": 1
+     "intent_to_leave": 1,
+     "platform_switch": 1
     },
     "leaving_coin": 1,
     "leaving_competitor": 1,
@@ -4125,14 +4125,14 @@
    "label_counts": {
     "unexplained_debit": 27,
     "duplicate_sip_debit": 3,
-    "cannot_cancel_mandate": 2,
     "mandate_continues_after_death": 2,
     "duplicate_sip_orders": 2,
-    "mandate_cancelled_without_consent": 1,
-    "unintended_sip_creation": 1,
-    "mandate_cancel_not_effective": 1,
+    "cannot_cancel_mandate": 2,
     "premature_debit_initiation": 1,
-    "unexpected_bill_paused_sip": 1
+    "mandate_cancelled_without_consent": 1,
+    "unexpected_bill_paused_sip": 1,
+    "unintended_sip_creation": 1,
+    "mandate_cancel_not_effective": 1
    },
    "human_confirmed": 5,
    "confidence": "high",
@@ -4319,32 +4319,32 @@
      "count": 7,
      "facts": [
       {
-       "id": "reddit-dryrun-1nxn4qr",
-       "text": "Age: 34"
-      },
-      {
-       "id": "reddit-dryrun-1vzs60y",
-       "text": "I'm (21)"
+       "id": "reddit-dryrun-1wgnrvz",
+       "text": "Portfolio review 29Y"
       },
       {
        "id": "reddit-1jdyltd",
        "text": "32M, out of my income"
       },
       {
+       "id": "reddit-dryrun-1wn9c5r",
+       "text": "25, Need advice"
+      },
+      {
        "id": "reddit-1kdnazh",
        "text": "24F"
+      },
+      {
+       "id": "reddit-dryrun-1nxn4qr",
+       "text": "Age: 34"
       },
       {
        "id": "reddit-1tty22u",
        "text": "I'm 27, earning ₹89k/month"
       },
       {
-       "id": "reddit-dryrun-1wn9c5r",
-       "text": "25, Need advice"
-      },
-      {
-       "id": "reddit-dryrun-1wgnrvz",
-       "text": "Portfolio review 29Y"
+       "id": "reddit-dryrun-1vzs60y",
+       "text": "I'm (21)"
       }
      ]
     },
@@ -4352,20 +4352,20 @@
      "count": 4,
      "facts": [
       {
-       "id": "reddit-dryrun-1nxn4qr",
-       "text": "Income: ₹2.2L per month (net in hand)"
-      },
-      {
-       "id": "reddit-1w4j2w5",
-       "text": "earn ₹1.23 lakh in hand each month"
+       "id": "reddit-dryrun-1wgnrvz",
+       "text": "Stable salary around 1Lakh"
       },
       {
        "id": "reddit-1auec3w",
        "text": "I get 1.05lpm"
       },
       {
-       "id": "reddit-dryrun-1wgnrvz",
-       "text": "Stable salary around 1Lakh"
+       "id": "reddit-1w4j2w5",
+       "text": "earn ₹1.23 lakh in hand each month"
+      },
+      {
+       "id": "reddit-dryrun-1nxn4qr",
+       "text": "Income: ₹2.2L per month (net in hand)"
       }
      ]
     },
@@ -4373,24 +4373,24 @@
      "count": 5,
      "facts": [
       {
+       "id": "reddit-1varaq2",
+       "text": "I used to do SIP in college with my internship money"
+      },
+      {
        "id": "reddit-dryrun-1nxn4qr",
        "text": "Married, 1 child"
       },
       {
-       "id": "reddit-dryrun-1vzs60y",
-       "text": "college student"
-      },
-      {
-       "id": "reddit-1varaq2",
-       "text": "I used to do SIP in college with my internship money"
+       "id": "reddit-1r4pdi5",
+       "text": "22M Intern (15k/mo)"
       },
       {
        "id": "tradingqna-544228",
        "text": "switching to full-time freelancing 5 years ago"
       },
       {
-       "id": "reddit-1r4pdi5",
-       "text": "22M Intern (15k/mo)"
+       "id": "reddit-dryrun-1vzs60y",
+       "text": "college student"
       }
      ]
     }
@@ -4564,6 +4564,10 @@
      "count": 4,
      "facts": [
       {
+       "id": "reddit-dryrun-1w6zxxc",
+       "text": "I'm 23"
+      },
+      {
        "id": "reddit-dryrun-1wk2t9o",
        "text": "I am 23 yr old"
       },
@@ -4574,10 +4578,6 @@
       {
        "id": "reddit-dryrun-1xar55t",
        "text": "I'm 24 and started investing after getting my first job"
-      },
-      {
-       "id": "reddit-dryrun-1w6zxxc",
-       "text": "I'm 23"
       }
      ]
     },
@@ -4786,19 +4786,19 @@
     "sip_amount_edit_missing": 5,
     "sip_schedule_restriction": 4,
     "goal_labelling_missing": 3,
-    "redeem_by_amount_missing": 2,
-    "no_switch_option": 2,
     "no_swp": 2,
     "sip_increase_lock": 2,
+    "no_switch_option": 2,
+    "redeem_by_amount_missing": 2,
     "mandate_amount_edit_missing": 2,
-    "missing_flexi_sip": 1,
-    "unit_based_sip_request": 1,
-    "no_step_up_sip": 1,
-    "sip_end_date_missing": 1,
-    "min_installment_lock": 1,
     "min_sip_amount": 1,
-    "step_up_blocked_by_increment": 1,
-    "stp_restriction": 1
+    "no_step_up_sip": 1,
+    "stp_restriction": 1,
+    "unit_based_sip_request": 1,
+    "min_installment_lock": 1,
+    "missing_flexi_sip": 1,
+    "sip_end_date_missing": 1,
+    "step_up_blocked_by_increment": 1
    },
    "human_confirmed": 2,
    "confidence": "medium",
@@ -4958,20 +4958,20 @@
      "count": 4,
      "facts": [
       {
-       "id": "reddit-1q9wbbj",
-       "text": "Age - 25 yo"
-      },
-      {
-       "id": "reddit-dryrun-1wte69m",
-       "text": "Age: 19"
+       "id": "reddit-dryrun-1vpy8h0",
+       "text": "I'm currently 26"
       },
       {
        "id": "reddit-1ptuyd8",
        "text": "I am a 29"
       },
       {
-       "id": "reddit-dryrun-1vpy8h0",
-       "text": "I'm currently 26"
+       "id": "reddit-dryrun-1wte69m",
+       "text": "Age: 19"
+      },
+      {
+       "id": "reddit-1q9wbbj",
+       "text": "Age - 25 yo"
       }
      ]
     },
@@ -4988,12 +4988,12 @@
      "count": 2,
      "facts": [
       {
-       "id": "reddit-dryrun-1wte69m",
-       "text": "College student"
-      },
-      {
        "id": "reddit-dryrun-1vpy8h0",
        "text": "im a doctor"
+      },
+      {
+       "id": "reddit-dryrun-1wte69m",
+       "text": "College student"
       }
      ]
     }
@@ -5154,8 +5154,8 @@
    "label_counts": {
     "lock_in_confusion": 5,
     "lock_in_display_wrong": 3,
-    "elss_lock_in_surprise": 2,
     "exit_load_confusion": 2,
+    "elss_lock_in_surprise": 2,
     "tax_calculation_confusion": 2,
     "redemption_nav_timing_confusion": 1
    },
@@ -5303,8 +5303,8 @@
    "label_counts": {
     "demat_custody_worry": 3,
     "trust_loss": 2,
-    "platform_shutdown_worry": 1,
     "platform_trust_concern": 1,
+    "platform_shutdown_worry": 1,
     "safety_doubt": 1,
     "privacy_concern": 1
    },
@@ -6383,15 +6383,15 @@
    },
    "by_stage": null,
    "by_action": {
-    "contacted_support": 8,
+    "contacted_support": 9,
     "contacted_bank": 4,
-    "raised_query": 1,
-    "contacting_support": 1,
-    "filed_scores_complaint": 1,
-    "visited_branch": 1,
     "raised_issue_warned_others": 1,
-    "contacted_bank_and_support_manual_invest": 1,
-    "refreshed_and_tried_support": 1,
+    "raised_query": 1,
+    "raised_complaints": 1,
+    "visited_branch": 1,
+    "filed_scores_complaint": 1,
+    "contacted_bank_and_support": 1,
+    "asked_support": 1,
     "raised_ticket": 1
    },
    "by_profile_field": null,
@@ -6519,9 +6519,9 @@
    "by_action": null,
    "by_profile_field": {
     "age": 46,
+    "income": 9,
     "life_stage": 23,
-    "experience": 14,
-    "income": 9
+    "experience": 14
    },
    "quotes": [
     {

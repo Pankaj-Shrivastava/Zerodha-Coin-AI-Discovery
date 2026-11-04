@@ -3,7 +3,7 @@ import { CHANNELS, CONFIDENCE, RECENCY } from '../lib/vocab';
 import { num, day } from '../lib/format';
 
 // "X of N" with a thin bar. max lets several bars share one scale.
-export function CountBar({ count, denominator, max = denominator, color = '#1C5FD4', label }) {
+export function CountBar({ count, denominator, max = denominator, color = '#005CAB', label }) {
   const w = max ? (count / max) * 100 : 0;
   return (
     <div className="min-w-0">
@@ -11,7 +11,7 @@ export function CountBar({ count, denominator, max = denominator, color = '#1C5F
         <span className="font-semibold tabular-nums text-ink">{num(count)}</span>
         <span className="text-muted">of {num(denominator)}{label ? ` ${label}` : ''}</span>
       </div>
-      <div className="mt-1 h-1.5 w-full rounded-full bg-line" aria-hidden="true">
+      <div className="mt-1 h-1.5 w-full rounded-full bg-track" aria-hidden="true">
         <div className="h-1.5 rounded-full" style={{ width: `${w}%`, backgroundColor: color }} />
       </div>
     </div>
@@ -24,7 +24,7 @@ export function SplitBar({ counts, meta, order = Object.keys(counts), showZero =
   const keys = order.filter((k) => showZero || counts[k]);
   return (
     <div>
-      <div className="flex h-2.5 w-full overflow-hidden rounded-full bg-line" aria-hidden="true">
+      <div className="flex h-2.5 w-full overflow-hidden rounded-full bg-track" aria-hidden="true">
         {keys.map((k) => (
           <div key={k} style={{ width: `${total ? (counts[k] / total) * 100 : 0}%`, backgroundColor: meta[k].color }} />
         ))}
@@ -62,6 +62,20 @@ export function ConfidenceBadge({ level }) {
   return (
     <span title={c.hint} className={`inline-flex items-center rounded-full border px-2 py-0.5 text-xs ${CONF_STYLE[level]}`}>
       {c.name}
+    </span>
+  );
+}
+
+const STATUS = {
+  answered: { name: 'Answered', style: CONF_STYLE.high },
+  partly_answered: { name: 'Partly answered', style: CONF_STYLE.medium },
+  not_answered: { name: 'Not answered yet', style: CONF_STYLE.low },
+};
+export const statusName = (s) => STATUS[s].name;
+export function StatusBadge({ status }) {
+  return (
+    <span className={`inline-flex items-center rounded-full border px-2 py-0.5 text-xs ${STATUS[status].style}`}>
+      {STATUS[status].name}
     </span>
   );
 }

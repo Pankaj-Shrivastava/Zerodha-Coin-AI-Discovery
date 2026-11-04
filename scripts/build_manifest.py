@@ -385,7 +385,7 @@ def main():
             'channel_flag': bool(n and max(sum(1 for k in ids if ch(k) == c) for c in CHANNELS) / n > 0.7),
             'by_problem': dict(prob_counts.most_common(8)),
             'by_stage': {s: sum(1 for k in ids if tg(k)['journey_stage'] == s) for s in STAGES} if qid == 'Q2' else None,
-            'by_action': dict(Counter(tg(k)['user_action_stated'] for k in ids).most_common(10)) if qid == 'Q6' else None,
+            'by_action': dict(Counter(re.sub(r'^contacting_', 'contacted_', tg(k)['user_action_stated']) for k in ids).most_common(10)) if qid == 'Q6' else None,
             'by_profile_field': dict(Counter(f for k in ids for f in tg(k)['stated_profile'])) if qid == 'Q8' else None,
             'quotes': pick, 'quote_caps': caps, 'quote_candidates': nc,
             'summary': ({'generated': True, 'text': qn['summary'], 'cited_ids': qn['cited_ids']} if qn.get('summary') else None),

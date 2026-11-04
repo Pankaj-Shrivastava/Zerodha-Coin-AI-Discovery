@@ -15,7 +15,8 @@ export default {
       },
       colors: {
         // rebuilt UI tokens
-        ink: '#14181F', muted: '#5B6472', line: '#E3E6EB', canvas: '#F6F7F9', link: '#1C5FD4',
+        // palette agreed 2026-11-05: the previous UI's surface, text, outline and accent colours
+        ink: '#0B1C30', muted: '#414751', line: '#C1C6D3', track: '#E5EEFF', canvas: '#F8F9FF', link: '#005CAB', danger: '#BA1A1A',
         // Stitch Token System (Zerodha Clean Slate)
         'surface': '#F8F9FF',
         'surface-dim': '#CBDBF5',

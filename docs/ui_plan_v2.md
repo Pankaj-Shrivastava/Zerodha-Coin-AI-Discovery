@@ -38,9 +38,13 @@
 - Next to the count, every problem shows its evidence strength: posts that state drop-off, posts reporting money lost or held, number of channels, recency mix and the confidence badge.
 - No retention percentage anywhere: there is no cohort or internal data.
 
-### 0.6 Colour
-- One colour per lever (Trust, Education, Reliability) and one fixed colour per channel, used identically on every screen.
-- Badges only where they carry computed meaning.
+### 0.6 Colour (agreed 2026-11-05: the previous UI's palette)
+- **Base:** page `#F8F9FF`, cards `#FFFFFF`, text `#0B1C30`, secondary text `#414751`, borders `#C1C6D3`, bar tracks `#E5EEFF`, links and focus `#005CAB`, errors `#BA1A1A`.
+- **Levers** (the previous accents): Reliability `#005CAB` blue · Trust `#006C4A` green · Education `#A33900` burnt orange. Product gaps `#414751` and Outside the product `#727783` in greys. No other hues.
+- **Channels** (navy-to-grey tones, always shown with name and count, so they never compete with the levers): Reddit `#0B1C30` · Play Store `#2D76C8` · TradingQnA `#727783` · YouTube `#C1C6D3`.
+- Fix type and cause bars reuse the lever colours for product (blue) and education (orange) and greys for the rest; recency uses a navy-to-grey ramp.
+- Colours live in one place, `ui/src/lib/vocab.js`, and are used identically on every screen.
+- Badges only where they carry computed meaning: confidence and question status use fill / outline / dashed, not colour.
 
 ---
 

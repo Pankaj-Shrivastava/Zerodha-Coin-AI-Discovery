@@ -1,20 +1,27 @@
 // UI vocabulary: display names for codes that appear in claims_manifest.json, and fixed colours.
 // No counts, percentages, amounts or user text live here: every value shown comes from the manifest.
 
-export const CHANNELS = {
-  reddit: { name: 'Reddit', color: '#E8590C' },
-  play_store: { name: 'Play Store', color: '#5C940D' },
-  tradingqna: { name: 'TradingQnA', color: '#9C6B00' },
-  youtube: { name: 'YouTube', color: '#C2255C' },
+// Palette (agreed 2026-11-05): the previous UI's colours. Levers use its three accents; channels use
+// navy-to-grey tones so they never compete with the levers; neutral greys for everything that is not a lever.
+const C = {
+  navy: '#0B1C30', blue: '#005CAB', midBlue: '#2D76C8', green: '#006C4A', orange: '#A33900',
+  grey900: '#414751', grey600: '#727783', grey400: '#A2A7B2', grey200: '#C1C6D3', grey100: '#DCE1EA',
 };
 
-// one colour per lever (and a neutral pair for the two non-lever groups), identical on every screen
+export const CHANNELS = {
+  reddit: { name: 'Reddit', color: C.navy },
+  play_store: { name: 'Play Store', color: C.midBlue },
+  tradingqna: { name: 'TradingQnA', color: C.grey600 },
+  youtube: { name: 'YouTube', color: C.grey200 },
+};
+
+// one colour per lever (and two greys for the non-lever groups), identical on every screen
 export const GROUPS = {
-  reliability: { short: 'Reliability', color: '#1C5FD4', tint: '#EAF1FD', lever: true },
-  trust: { short: 'Trust', color: '#0B7A6E', tint: '#E6F4F2', lever: true },
-  education: { short: 'Education', color: '#7046D6', tint: '#F1ECFC', lever: true },
-  product_gap: { short: 'Product gaps', color: '#56606E', tint: '#F0F2F5', lever: false },
-  outside: { short: 'Outside the product', color: '#7A7F87', tint: '#F3F4F5', lever: false },
+  reliability: { short: 'Reliability', color: C.blue, lever: true },
+  trust: { short: 'Trust', color: C.green, lever: true },
+  education: { short: 'Education', color: C.orange, lever: true },
+  product_gap: { short: 'Product gaps', color: C.grey900, lever: false },
+  outside: { short: 'Outside the product', color: C.grey600, lever: false },
 };
 
 export const STAGES = {
@@ -40,19 +47,19 @@ export const PLATFORM_LABEL = {
 };
 
 export const FIX_TYPES = {
-  product: { name: 'Product can fix', color: '#1C5FD4' },
-  education: { name: 'Education can address', color: '#7046D6' },
-  external: { name: 'Outside the product', color: '#7A7F87' },
-  unclear: { name: 'Unclear', color: '#C5CAD1' },
+  product: { name: 'Product can fix', color: C.blue },
+  education: { name: 'Education can address', color: C.orange },
+  external: { name: 'Outside the product', color: C.grey600 },
+  unclear: { name: 'Unclear', color: C.grey200 },
 };
 
 export const CAUSES = {
-  structural_ux: { name: 'Product or process design', color: '#1C5FD4' },
-  behavioral: { name: 'Investor behaviour or understanding', color: '#7046D6' },
-  external_third_party: { name: 'Bank, AMC or other third party', color: '#7A7F87' },
-  deliberate_strategy_shift: { name: 'Deliberate change of plan', color: '#A3A8AF' },
-  mixed: { name: 'Mixed', color: '#C5CAD1' },
-  unclear: { name: 'Unclear', color: '#DDE1E6' },
+  structural_ux: { name: 'Product or process design', color: C.blue },
+  behavioral: { name: 'Investor behaviour or understanding', color: C.orange },
+  external_third_party: { name: 'Bank, AMC or other third party', color: C.grey600 },
+  deliberate_strategy_shift: { name: 'Deliberate change of plan', color: C.grey900 },
+  mixed: { name: 'Mixed', color: C.grey400 },
+  unclear: { name: 'Unclear', color: C.grey100 },
 };
 
 export const CONFIDENCE = {
@@ -77,3 +84,39 @@ const PLATFORMS = {
 };
 export const platformName = (code) =>
   PLATFORMS[code] ?? String(code).replace(/_/g, ' ').replace(/^\w/, (c) => c.toUpperCase());
+
+export const RECENCY_META = {
+  recent: { name: RECENCY.recent, color: C.navy },
+  aging: { name: RECENCY.aging, color: C.grey600 },
+  old: { name: RECENCY.old, color: C.grey200 },
+  unknown: { name: RECENCY.unknown, color: C.grey100 },
+};
+
+export const PLATFORM_SPLIT = {
+  coin: { name: 'Zerodha Coin', color: C.blue },
+  other: { name: 'Another platform', color: C.grey600 },
+  not_identifiable: { name: 'Not stated', color: C.grey100 },
+};
+
+export const DROPOFF_TYPES = {
+  sip_stop: 'Stopped a SIP',
+  sip_pause: 'Paused a SIP',
+  realised_exit: 'Left a platform or redeemed',
+  intent_to_leave: 'Plans to leave',
+  platform_switch: 'Switched platform',
+};
+
+export const PROFILE_FIELDS = {
+  experience: 'Investing experience',
+  life_stage: 'Life stage',
+  age: 'Age',
+  income: 'Income',
+};
+
+export const MONEY_STATUS = { incurred: 'lost', incurred_temporary: 'held for a time' };
+
+// tag codes are shown in plain words: underscores to spaces, first letter capital
+export const labelName = (code) => {
+  const t = String(code).replace(/^other:/, '').replace(/_/g, ' ');
+  return t.charAt(0).toUpperCase() + t.slice(1);
+};

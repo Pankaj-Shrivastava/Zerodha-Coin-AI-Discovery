@@ -375,7 +375,7 @@ The three non-negotiable rules are scored together. **Hallucination carries 40 p
 
 ## 18. Schema v2 and Grounded Tagging (for the full corpus)
 
-- Tags use the 20-field schema in `data/hitl/human_tags.json` plus `stated_profile` (age, life stage, experience, income only when stated in the text).
+- Tags use the 20-field schema in `data/hitl/human_tags.json` plus `stated_profile` (age, life stage, experience, income only when stated in the text), `platform_subject` (the platform the post is about: from `app_id` on Play Store, from a text mention elsewhere) and `switch_from` / `switch_to` (only when the user states a move).
 - Every tag carries an `evidence_span` copied from the verbatim; code verifies it is an exact substring. A tag with no valid span is dropped.
 - Each record carries `tag_source` (`human`, `ai_session`) and `tag_confidence`; below 0.5 the record is `needs_review` and excluded from headline numbers.
 - Tagging is done in-session by the assistant in batches, guided by 10 gold examples; the other 15 gold entries are held out for agreement metrics.

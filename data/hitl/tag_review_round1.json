@@ -1,0 +1,1434 @@
+[
+ {
+  "n": 1,
+  "id": "reddit-1q9ro80",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "question",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "returns_disappointment"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "sip_pause",
+   "churn_scope": "fund",
+   "inferred_churn_risk": "medium",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": null,
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {
+    "age": "27M, Debt free"
+   },
+   "insight_value": "medium",
+   "product_addressable": "no",
+   "cause_type": "behavioral",
+   "user_action_stated": "asked_forum",
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "unknown",
+   "evidence": {
+    "friction": {
+     "returns_disappointment": "My MF investment returns have been very poor I think"
+    },
+    "stated_churn": "(have paused this one now)"
+   }
+  }
+ },
+ {
+  "n": 2,
+  "id": "reddit-1ttjd3f",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "warning_education",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "other:high_expense_ratio"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "none_stated",
+   "churn_scope": null,
+   "inferred_churn_risk": "low",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": null,
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "medium",
+   "product_addressable": "no",
+   "cause_type": "external_third_party",
+   "user_action_stated": "warned_others",
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "recent",
+   "evidence": {
+    "friction": {
+     "other:high_expense_ratio": "we are paying a freaking 5.41% expense ratio"
+    }
+   }
+  }
+ },
+ {
+  "n": 3,
+  "id": "reddit-pc42mx",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "help_request",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "bank_penalty",
+    "other:date_change_not_honoured"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "none_stated",
+   "churn_scope": null,
+   "inferred_churn_risk": "medium",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": null,
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "high",
+   "product_addressable": "yes",
+   "cause_type": "mixed",
+   "user_action_stated": "asked_forum",
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "old",
+   "evidence": {
+    "friction": {
+     "bank_penalty": "my bank decided to charge ECS/NACH bounce penalty today",
+     "other:date_change_not_honoured": "does banks consider original payment due date"
+    }
+   }
+  }
+ },
+ {
+  "n": 4,
+  "id": "reddit-1rfv3xe",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "help_request",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "pause_cancel_confusion",
+    "unexplained_debit"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "sip_stop",
+   "churn_scope": "sip",
+   "inferred_churn_risk": "high",
+   "cost_status": "incurred",
+   "money_text": "the money got deducted",
+   "platform_subject": null,
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "high",
+   "product_addressable": "yes",
+   "cause_type": "structural_ux",
+   "user_action_stated": "asked_forum",
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "recent",
+   "evidence": {
+    "friction": {
+     "pause_cancel_confusion": "Does SIP cancellation usually take one full month to reflect?",
+     "unexplained_debit": "the Feb 1 SIP was still active and the money got deducted"
+    },
+    "stated_churn": "I requested to cancel my monthly SIPs",
+    "cost": "the money got deducted"
+   }
+  }
+ },
+ {
+  "n": 5,
+  "id": "reddit-1h6bre7",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "help_request",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "other:investment_limit_error",
+    "support_failure"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "none_stated",
+   "churn_scope": null,
+   "inferred_churn_risk": "medium",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": "groww",
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "high",
+   "product_addressable": "yes",
+   "cause_type": "structural_ux",
+   "user_action_stated": "raised_complaints",
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "unknown",
+   "evidence": {
+    "friction": {
+     "other:investment_limit_error": "unable to invest one time or sip in any of the funds for amounts greater than ₹50,000",
+     "support_failure": "Raised multiple complaints with Groww support but no help"
+    }
+   }
+  }
+ },
+ {
+  "n": 6,
+  "id": "reddit-1auec3w",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "question",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "cashflow_pressure"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "sip_stop",
+   "churn_scope": "sip",
+   "inferred_churn_risk": "high",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": null,
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {
+    "income": "I get 1.05lpm"
+   },
+   "insight_value": "high",
+   "product_addressable": "no",
+   "cause_type": "mixed",
+   "user_action_stated": "asked_forum",
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "unknown",
+   "evidence": {
+    "stated_churn": "I'm thinking of stopping my SIPs next month onwards",
+    "friction": {
+     "cashflow_pressure": "after investing the amount I'm left with very little money"
+    }
+   }
+  }
+ },
+ {
+  "n": 7,
+  "id": "reddit-1hetw1m",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "question",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "other:amc_sip_modification_gap"
+   ],
+   "journey_stage": "start",
+   "stated_churn": "none_stated",
+   "churn_scope": null,
+   "inferred_churn_risk": "low",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": "zerodha_coin",
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "high",
+   "product_addressable": "yes",
+   "cause_type": "structural_ux",
+   "user_action_stated": "asked_forum",
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "aging",
+   "evidence": {
+    "friction": {
+     "other:amc_sip_modification_gap": "directly modify through broker"
+    },
+    "journey_stage": "I have just begun the investment"
+   }
+  }
+ },
+ {
+  "n": 8,
+  "id": "reddit-dryrun-1vv87ie",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "help_request",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "fund_restriction",
+    "other:auto_pause_unexplained"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "none_stated",
+   "churn_scope": null,
+   "inferred_churn_risk": "low",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": "groww",
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "high",
+   "product_addressable": "yes",
+   "cause_type": "mixed",
+   "user_action_stated": "asked_forum",
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "recent",
+   "evidence": {
+    "friction": {
+     "fund_restriction": "This happened automatically",
+     "other:auto_pause_unexplained": "I didn't pause these SIPs"
+    }
+   }
+  }
+ },
+ {
+  "n": 9,
+  "id": "reddit-1telwwr",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "help_request",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "bank_penalty",
+    "insufficient_funds_on_sip_date"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "none_stated",
+   "churn_scope": null,
+   "inferred_churn_risk": "low",
+   "cost_status": "incurred",
+   "money_text": "₹590 twice",
+   "platform_subject": null,
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "high",
+   "product_addressable": "yes",
+   "cause_type": "mixed",
+   "user_action_stated": "asked_forum",
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "unknown",
+   "evidence": {
+    "friction": {
+     "bank_penalty": "My bank charged me ₹590 twice for NACH return",
+     "insufficient_funds_on_sip_date": "I forgot to maintain balance in it"
+    },
+    "cost": "₹590 twice"
+   }
+  }
+ },
+ {
+  "n": 10,
+  "id": "reddit-1ko3rzy",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "question",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "returns_disappointment"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "none_stated",
+   "churn_scope": null,
+   "inferred_churn_risk": "low",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": null,
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {
+    "age": "I am 20 (M)"
+   },
+   "insight_value": "medium",
+   "product_addressable": "no",
+   "cause_type": "behavioral",
+   "user_action_stated": "asked_forum",
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "aging",
+   "evidence": {
+    "friction": {
+     "returns_disappointment": "After a long streak of a red portfolio (6–7 months)"
+    }
+   }
+  }
+ },
+ {
+  "n": 11,
+  "id": "reddit-1vfrwk7",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "experience",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "other:distributor_misselling"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "none_stated",
+   "churn_scope": null,
+   "inferred_churn_risk": "low",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": null,
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "medium",
+   "product_addressable": "no",
+   "cause_type": "external_third_party",
+   "user_action_stated": null,
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "unknown",
+   "evidence": {
+    "friction": {
+     "other:distributor_misselling": "some investment advisor had asked her to switch from regular mutual fund"
+    }
+   }
+  }
+ },
+ {
+  "n": 12,
+  "id": "reddit-dryrun-1nxn4qr",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "question",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "other:goal_redemption_for_house"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "none_stated",
+   "churn_scope": null,
+   "inferred_churn_risk": "medium",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": null,
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {
+    "age": "Age: 34",
+    "income": "Income: ₹2.2L per month (net in hand)",
+    "life_stage": "Married, 1 child"
+   },
+   "insight_value": "medium",
+   "product_addressable": "no",
+   "cause_type": "deliberate_strategy_shift",
+   "user_action_stated": "asked_forum",
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "unknown",
+   "evidence": {
+    "friction": {
+     "other:goal_redemption_for_house": "need to sell my mutual funds and possibly stop SIPs for a while"
+    }
+   }
+  }
+ },
+ {
+  "n": 13,
+  "id": "reddit-dryrun-1v739n0",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "question",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "other:early_withdrawal_regret"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "realised_exit",
+   "churn_scope": "sip",
+   "inferred_churn_risk": "low",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": "zerodha_coin",
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {
+    "age": "My age is 27"
+   },
+   "insight_value": "medium",
+   "product_addressable": "no",
+   "cause_type": "behavioral",
+   "user_action_stated": "asked_forum",
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "unknown",
+   "evidence": {
+    "stated_churn": "I made mistake 2 year ago by withdrawing my investment from mutual fund",
+    "friction": {
+     "other:early_withdrawal_regret": "I made mistake 2 year ago by withdrawing"
+    }
+   }
+  }
+ },
+ {
+  "n": 14,
+  "id": "reddit-1q3iubg",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "question",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "statement_confusion",
+    "other:charges_uncertainty"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "none_stated",
+   "churn_scope": null,
+   "inferred_churn_risk": "low",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": "zerodha_coin",
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "medium",
+   "product_addressable": "yes",
+   "cause_type": "structural_ux",
+   "user_action_stated": "asked_forum",
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "unknown",
+   "evidence": {
+    "friction": {
+     "statement_confusion": "Invested ₹50k in SBI SAVINGS FUND - shows ₹49997",
+     "other:charges_uncertainty": "Is there any transaction costs or other charges in Coin app"
+    }
+   }
+  }
+ },
+ {
+  "n": 15,
+  "id": "playstore-zerodha_coin-d514130c-4e7e-4127-ba8e-92edbe3a5f25",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "review",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "other:upi_payment_failure",
+    "other:charges_uncertainty"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "none_stated",
+   "churn_scope": null,
+   "inferred_churn_risk": "medium",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": "zerodha_coin",
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "high",
+   "product_addressable": "yes",
+   "cause_type": "structural_ux",
+   "user_action_stated": null,
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "old",
+   "evidence": {
+    "friction": {
+     "other:upi_payment_failure": "it HARD BLOCKS you from payment for 10 solid minutes",
+     "other:charges_uncertainty": "No info about charges, taxes, exit load"
+    }
+   }
+  }
+ },
+ {
+  "n": 16,
+  "id": "playstore-zerodha_coin-07e93014-5342-4346-9259-3403f726c457",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "feature_request",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "other:no_reminder_feature"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "none_stated",
+   "churn_scope": null,
+   "inferred_churn_risk": "low",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": "zerodha_coin",
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "high",
+   "product_addressable": "yes",
+   "cause_type": "structural_ux",
+   "user_action_stated": null,
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "recent",
+   "evidence": {
+    "friction": {
+     "other:no_reminder_feature": "Coin is not sending mobile notification when an SIP order is ready for payment"
+    }
+   }
+  }
+ },
+ {
+  "n": 17,
+  "id": "playstore-et_money-740fa7bf-0a84-40cb-a2ce-6dfd6cf71eca",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "review",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "other:delayed_nav",
+    "support_failure"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "intent_to_leave",
+   "churn_scope": "platform",
+   "inferred_churn_risk": "high",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": "etmoney",
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "high",
+   "product_addressable": "yes",
+   "cause_type": "structural_ux",
+   "user_action_stated": null,
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "old",
+   "evidence": {
+    "stated_churn": "better to switch to another app",
+    "friction": {
+     "other:delayed_nav": "they always delay placing an order with the AMC and you then get next days nav",
+     "support_failure": "Pathetic service, no customer care"
+    }
+   }
+  }
+ },
+ {
+  "n": 18,
+  "id": "playstore-paytm_money-fb114473-3a5a-4d87-8122-a884f1c1e5bd",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "review",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "funds_apparently_missing",
+    "other:demat_push"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "none_stated",
+   "churn_scope": null,
+   "inferred_churn_risk": "medium",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": "paytm_money",
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "high",
+   "product_addressable": "yes",
+   "cause_type": "structural_ux",
+   "user_action_stated": null,
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "recent",
+   "evidence": {
+    "friction": {
+     "funds_apparently_missing": "now all funds are not visible on Paytm do not know where it went",
+     "other:demat_push": "unnecessary getting popup to create demat on Paytm"
+    }
+   }
+  }
+ },
+ {
+  "n": 19,
+  "id": "playstore-et_money-b122e32e-ead0-4f9b-948b-54b0a35bf584",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "review",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "other:delayed_nav",
+    "other:no_switch_option"
+   ],
+   "journey_stage": "beyond_12",
+   "stated_churn": "realised_exit",
+   "churn_scope": "platform",
+   "inferred_churn_risk": "high",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": "etmoney",
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "high",
+   "product_addressable": "yes",
+   "cause_type": "structural_ux",
+   "user_action_stated": null,
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "recent",
+   "evidence": {
+    "stated_churn": "switching to other apps",
+    "friction": {
+     "other:delayed_nav": "the NAV is not allotted for the same date",
+     "other:no_switch_option": "no option to switch mutual funds"
+    },
+    "journey_stage": "Been with etmomey for 5 years now"
+   }
+  }
+ },
+ {
+  "n": 20,
+  "id": "playstore-et_money-dacccd8b-d0e7-4aa1-82b2-75f17a539412",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "review",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "unit_allocation_delay",
+    "other:upi_autopay_unavailable"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "none_stated",
+   "churn_scope": null,
+   "inferred_churn_risk": "medium",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": "etmoney",
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "high",
+   "product_addressable": "yes",
+   "cause_type": "structural_ux",
+   "user_action_stated": null,
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "recent",
+   "evidence": {
+    "friction": {
+     "unit_allocation_delay": "units allocate after 3-4days",
+     "other:upi_autopay_unavailable": "I don't understand why you can't provide UPI option"
+    }
+   }
+  }
+ },
+ {
+  "n": 21,
+  "id": "playstore-et_money-2d0c106a-06d2-4c94-a258-f25b35002dc2",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "review",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "other:duplicate_sip_debit",
+    "support_failure",
+    "other:aggressive_marketing"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "none_stated",
+   "churn_scope": null,
+   "inferred_churn_risk": "medium",
+   "cost_status": "incurred",
+   "money_text": "deducted my SIP amount twice",
+   "platform_subject": "etmoney",
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "high",
+   "product_addressable": "yes",
+   "cause_type": "structural_ux",
+   "user_action_stated": null,
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "old",
+   "evidence": {
+    "friction": {
+     "other:duplicate_sip_debit": "App deducted my SIP amount twice in the same month",
+     "support_failure": "even after multiple emails they do not respond",
+     "other:aggressive_marketing": "they have started telling to opt for their paid service"
+    },
+    "cost": "deducted my SIP amount twice"
+   }
+  }
+ },
+ {
+  "n": 22,
+  "id": "playstore-paytm_money-1f6021f1-0e21-4a7c-8cf4-e9ecf65e69af",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "review",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "other:redemption_issue",
+    "support_failure"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "intent_to_leave",
+   "churn_scope": "platform",
+   "inferred_churn_risk": "high",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": "paytm_money",
+   "switch_from": "paytm_money",
+   "switch_to": "zerodha",
+   "stated_profile": {},
+   "insight_value": "high",
+   "product_addressable": "yes",
+   "cause_type": "structural_ux",
+   "user_action_stated": null,
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "recent",
+   "evidence": {
+    "stated_churn": "looks like I have to switch to zerodha or other apps",
+    "friction": {
+     "other:redemption_issue": "facing mutual fund redemption issue",
+     "support_failure": "customer support services are very slow"
+    },
+    "switch": "switch to zerodha or other apps"
+   }
+  }
+ },
+ {
+  "n": 23,
+  "id": "playstore-paytm_money-45fa5327-857c-406d-8640-302b2f242caa",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "review",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "other:holdings_not_visible",
+    "support_failure"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "none_stated",
+   "churn_scope": null,
+   "inferred_churn_risk": "medium",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": "paytm_money",
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "high",
+   "product_addressable": "yes",
+   "cause_type": "structural_ux",
+   "user_action_stated": null,
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "recent",
+   "evidence": {
+    "friction": {
+     "other:holdings_not_visible": "ENtire MF portfolio not visible on app",
+     "support_failure": "even poorer customer service"
+    }
+   }
+  }
+ },
+ {
+  "n": 24,
+  "id": "playstore-zerodha_coin-0f9db117-4707-4f1f-bdbc-f1601d8c3ae7",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "feature_request",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "other:goal_labelling_missing",
+    "other:lock_in_display_wrong"
+   ],
+   "journey_stage": "beyond_12",
+   "stated_churn": "none_stated",
+   "churn_scope": null,
+   "inferred_churn_risk": "low",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": "zerodha_coin",
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "medium",
+   "product_addressable": "yes",
+   "cause_type": "behavioral",
+   "user_action_stated": null,
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "old",
+   "evidence": {
+    "friction": {
+     "other:goal_labelling_missing": "Goal based investment is much awaited feature",
+     "other:lock_in_display_wrong": "show how many units are Locked"
+    },
+    "journey_stage": "I have been using Coin since many years"
+   }
+  }
+ },
+ {
+  "n": 25,
+  "id": "tradingqna-80752",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "question",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "manual_payment_path_gap"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "none_stated",
+   "churn_scope": null,
+   "inferred_churn_risk": "low",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": "zerodha_coin",
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "high",
+   "product_addressable": "yes",
+   "cause_type": "structural_ux",
+   "user_action_stated": "asked_forum",
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "old",
+   "evidence": {
+    "friction": {
+     "manual_payment_path_gap": "is there any way, something like ECS facility, so that funds can be auto debited"
+    }
+   }
+  }
+ },
+ {
+  "n": 26,
+  "id": "tradingqna-481002",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "help_request",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "unexplained_debit",
+    "other:mandate_cancel_not_effective"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "none_stated",
+   "churn_scope": null,
+   "inferred_churn_risk": "medium",
+   "cost_status": "incurred",
+   "money_text": "it has deducted 13500",
+   "platform_subject": "zerodha_coin",
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "high",
+   "product_addressable": "yes",
+   "cause_type": "structural_ux",
+   "user_action_stated": "raised_ticket",
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "aging",
+   "evidence": {
+    "friction": {
+     "unexplained_debit": "For a total of 5000 SIP, it has deducted 13500",
+     "other:mandate_cancel_not_effective": "I cancelled the mandate in Coin, but still getting transaction SMS from the bank"
+    },
+    "cost": "it has deducted 13500"
+   }
+  }
+ },
+ {
+  "n": 27,
+  "id": "tradingqna-341699",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "question",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "sip_order_auto_cancelled"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "none_stated",
+   "churn_scope": null,
+   "inferred_churn_risk": "low",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": "zerodha_coin",
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "medium",
+   "product_addressable": "yes",
+   "cause_type": "structural_ux",
+   "user_action_stated": "asked_forum",
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "old",
+   "evidence": {
+    "friction": {
+     "sip_order_auto_cancelled": "Why SIP also cancelled for the above mutual funds"
+    }
+   }
+  }
+ },
+ {
+  "n": 28,
+  "id": "tradingqna-121223",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "question",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "other:offline_pause_process"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "none_stated",
+   "churn_scope": null,
+   "inferred_churn_risk": "low",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": null,
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "medium",
+   "product_addressable": "yes",
+   "cause_type": "structural_ux",
+   "user_action_stated": "asked_forum",
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "old",
+   "evidence": {
+    "friction": {
+     "other:offline_pause_process": "having to send a physical request letter"
+    }
+   }
+  }
+ },
+ {
+  "n": 29,
+  "id": "tradingqna-533664",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "experience",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "missed_sip_no_reminder"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "none_stated",
+   "churn_scope": null,
+   "inferred_churn_risk": "low",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": "zerodha_coin",
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "high",
+   "product_addressable": "yes",
+   "cause_type": "structural_ux",
+   "user_action_stated": null,
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "recent",
+   "evidence": {
+    "friction": {
+     "missed_sip_no_reminder": "kept getting tired of remembering to add funds manually"
+    }
+   }
+  }
+ },
+ {
+  "n": 30,
+  "id": "tradingqna-117919",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "question",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "pause_cancel_confusion"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "none_stated",
+   "churn_scope": null,
+   "inferred_churn_risk": "low",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": null,
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "medium",
+   "product_addressable": "yes",
+   "cause_type": "structural_ux",
+   "user_action_stated": "asked_forum",
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "old",
+   "evidence": {
+    "friction": {
+     "pause_cancel_confusion": "what will happened to the money which i invested till now"
+    }
+   }
+  }
+ },
+ {
+  "n": 31,
+  "id": "tradingqna-44058",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "question",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "manual_payment_path_gap"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "none_stated",
+   "churn_scope": null,
+   "inferred_churn_risk": "low",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": "zerodha_coin",
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "high",
+   "product_addressable": "yes",
+   "cause_type": "structural_ux",
+   "user_action_stated": "asked_forum",
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "old",
+   "evidence": {
+    "friction": {
+     "manual_payment_path_gap": "How do I schedule a bank transfer from my bank account for a date regularly from my bank"
+    }
+   }
+  }
+ },
+ {
+  "n": 32,
+  "id": "tradingqna-515714",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "question",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "other:installment_date_confusion",
+    "refund_delay"
+   ],
+   "journey_stage": "start",
+   "stated_churn": "sip_stop",
+   "churn_scope": "sip",
+   "inferred_churn_risk": "medium",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": null,
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "high",
+   "product_addressable": "yes",
+   "cause_type": "structural_ux",
+   "user_action_stated": "asked_forum",
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "recent",
+   "evidence": {
+    "stated_churn": "today I cancel my buy order",
+    "friction": {
+     "other:installment_date_confusion": "I am confused about next sip installment on which date",
+     "refund_delay": "I want to know when my fund get refunded"
+    },
+    "journey_stage": "I started my first sip on mutual fund"
+   }
+  }
+ },
+ {
+  "n": 33,
+  "id": "youtube-UgwBXedQo9if3gU1Wf54AaABAg",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "question",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "manual_payment_path_gap"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "none_stated",
+   "churn_scope": null,
+   "inferred_churn_risk": "low",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": null,
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "medium",
+   "product_addressable": "yes",
+   "cause_type": "structural_ux",
+   "user_action_stated": null,
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "old",
+   "evidence": {
+    "friction": {
+     "manual_payment_path_gap": "agar mandate add ni krege toh , pending m dikhaega na hr month"
+    }
+   }
+  }
+ },
+ {
+  "n": 34,
+  "id": "youtube-UgzhirBgdrT8oE1df8N4AaABAg",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "experience",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "other:gold_fomo"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "realised_exit",
+   "churn_scope": "sip",
+   "inferred_churn_risk": "high",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": null,
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "medium",
+   "product_addressable": "no",
+   "cause_type": "behavioral",
+   "user_action_stated": null,
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "recent",
+   "evidence": {
+    "stated_churn": "I withdraw all my sip and invest in gold one year back",
+    "friction": {
+     "other:gold_fomo": "invest in gold"
+    }
+   }
+  }
+ },
+ {
+  "n": 35,
+  "id": "youtube-UgwCTQHB3ot64iAx2HB4AaABAg",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "question",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "sip_order_auto_cancelled",
+    "other:restart_unclear"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "none_stated",
+   "churn_scope": null,
+   "inferred_churn_risk": "low",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": null,
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "high",
+   "product_addressable": "yes",
+   "cause_type": "structural_ux",
+   "user_action_stated": null,
+   "resolution_stated": "not_stated",
+   "language": "hindi",
+   "recency": "recent",
+   "evidence": {
+    "friction": {
+     "sip_order_auto_cancelled": "मेरी SIP कैंसिल हुई है",
+     "other:restart_unclear": "ओटीपी मांग रहा है तो ओटीपी कैसे डालें"
+    }
+   }
+  }
+ },
+ {
+  "n": 36,
+  "id": "youtube-UgwBXedQo9if3gU1Wf54AaABAg.9vwOqXPnxpwA5H5Kt_qkYk",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "question",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "manual_payment_path_gap"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "none_stated",
+   "churn_scope": null,
+   "inferred_churn_risk": "low",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": null,
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "medium",
+   "product_addressable": "yes",
+   "cause_type": "structural_ux",
+   "user_action_stated": null,
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "aging",
+   "evidence": {
+    "friction": {
+     "manual_payment_path_gap": "Nhi dikh raha h pending me"
+    }
+   }
+  }
+ },
+ {
+  "n": 37,
+  "id": "youtube-Ugxqq3Xaa8hedpAHli14AaABAg",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "question",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "other:upi_mandate_howto"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "none_stated",
+   "churn_scope": null,
+   "inferred_churn_risk": "low",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": null,
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "low",
+   "product_addressable": "yes",
+   "cause_type": "structural_ux",
+   "user_action_stated": null,
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "recent",
+   "evidence": {
+    "friction": {
+     "other:upi_mandate_howto": "How to create mandate using upi"
+    }
+   }
+  }
+ },
+ {
+  "n": 38,
+  "id": "youtube-Ugz5G42zBvmaSBjSH6h4AaABAg",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "question",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "manual_payment_path_gap"
+   ],
+   "journey_stage": "unspecified",
+   "stated_churn": "none_stated",
+   "churn_scope": null,
+   "inferred_churn_risk": "low",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": null,
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "medium",
+   "product_addressable": "yes",
+   "cause_type": "structural_ux",
+   "user_action_stated": null,
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "recent",
+   "evidence": {
+    "friction": {
+     "manual_payment_path_gap": "next installment today to mai kaise karu"
+    }
+   }
+  }
+ },
+ {
+  "n": 39,
+  "id": "youtube-UgxTWlbmv7fKvcqNXVt4AaABAg.9vPUwUmaw1CA0V6vEcjyAI",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "question",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "manual_payment_path_gap"
+   ],
+   "journey_stage": "start",
+   "stated_churn": "none_stated",
+   "churn_scope": null,
+   "inferred_churn_risk": "low",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": null,
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "medium",
+   "product_addressable": "yes",
+   "cause_type": "structural_ux",
+   "user_action_stated": null,
+   "resolution_stated": "not_stated",
+   "language": "english",
+   "recency": "aging",
+   "evidence": {
+    "friction": {
+     "manual_payment_path_gap": "untill now it isn't showing any pending payment"
+    },
+    "journey_stage": "I did an sip on 29th feb"
+   }
+  }
+ },
+ {
+  "n": 40,
+  "id": "youtube-Ugxkii8nF3i0iAB5Zol4AaABAg",
+  "tags": {
+   "relevance": "direct",
+   "verbatim_type": "experience",
+   "experienced_vs_hypothetical": "experienced",
+   "friction": [
+    "returns_disappointment",
+    "other:volatility_anxiety"
+   ],
+   "journey_stage": "month_7_12",
+   "stated_churn": "none_stated",
+   "churn_scope": null,
+   "inferred_churn_risk": "medium",
+   "cost_status": "none",
+   "money_text": null,
+   "platform_subject": null,
+   "switch_from": null,
+   "switch_to": null,
+   "stated_profile": {},
+   "insight_value": "high",
+   "product_addressable": "yes",
+   "cause_type": "behavioral",
+   "user_action_stated": null,
+   "resolution_stated": "not_stated",
+   "language": "hindi",
+   "recency": "unknown",
+   "evidence": {
+    "friction": {
+     "returns_disappointment": "Kaafi time se daily loss hi dikh raha h",
+     "other:volatility_anxiety": "portfolio red dekh kr daily bht dukh hota h"
+    },
+    "journey_stage": "Mene bhi 1 yr se SIP Krna start Kiya h"
+   }
+  }
+ }
+]

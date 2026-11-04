@@ -185,7 +185,7 @@ Goal: every number, quote, theme, journey stage, persona and opportunity on the 
 | 3 | Deep tagging of the relevant set (in-session, in batches), 20-field schema + `stated_profile`, every tag with an exact `evidence_span` | `tagged_verbatims.json` | agreement on 15 held-out gold entries; user accepts/rejects tags on ~40 sampled records |
 | 4 | Claims manifest: themes, journey, investor profiles, opportunities, quotes by rule, denominators and channel split; no retention % (no cohort data) | `claims_manifest.json` | manifest summary reviewed before UI work |
 | 5 | Evals: rubric scorecard (40 / 30 / 30) | `eval_scorecard.json` | pass rule in `evals.md` §17.4 |
-| 6 | UI phase (later): components read only the manifest; invented quotes replaced with real verbatims | — | separate review |
+| 6 | UI phase: 5-screen layout in `docs/ui_plan_v2.md` (Overview, Problem Explorer, What We Know and Don't, Evidence Library, Next Research); components read only the manifest | — | screen-by-screen review |
 
 Old processed files stay in place until Step 6 switches the UI to the manifest.
 

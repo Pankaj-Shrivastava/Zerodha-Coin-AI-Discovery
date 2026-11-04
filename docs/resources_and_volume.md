@@ -196,3 +196,14 @@ Every harvest executed during the intelligence expansion generated an isolated d
 | YouTube | 7 first-person / Hinglish queries added | +1,191 comments, but only about 4 pass the strict filter (high noise) |
 
 Strict relevance filter used for these figures: mentions SIP/mandate/auto-debit, is first-person, contains a lived-event word (stopped, paused, cancelled, bounce, penalty, missed, stuck, failed, ...), and is at least 100 characters.
+
+## Relevance Funnel (2026-11, before tagging)
+
+| Stage | Reddit | Play Store | TradingQ&A | YouTube | Total |
+| :-- | --: | --: | --: | --: | --: |
+| Raw records | 2,339 | 1,722 | 522 | 3,321 | 7,904 |
+| Mention MF/SIP at all | 1,931 | 484 | 384 | 873 | 3,672 |
+| First-person SIP event (rough keyword filter) | 691 | 37 | 146 | 41 | ~915 |
+| Records with a real date | 0 | 1,722 | 522 | 0 (harvest time only) | — |
+
+Reddit is about 75% of the first-person SIP pool, so every dashboard claim must show its channel split (see `evals.md` §17.2).

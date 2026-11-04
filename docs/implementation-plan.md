@@ -172,16 +172,22 @@
 
 ---
 
-### Phase 7: Truthfulness, Bias & Consistency Hardening (PLANNED - awaiting approval)
+### Phase 7: Grounded Data Rebuild (APPROVED 2026-11 — in progress)
 
-Docs updated; **no pipeline or UI code has been changed for this phase yet.** Order of work after approval:
-1. **Raw data finalisation** - done: Coin app (`com.zerodha.coin`) added to the Play Store harvest (+295); Reddit batch 3 (+577, new Apify token, billed $3.00 of $5.00 with a server-side cap); YouTube +1,191 (noisy); TradingQ&A saturated (0 new). Raw corpus is now 7,904 records. No further Reddit spend planned.
-2. **HITL tagging** - user tags 20-30 verbatims from `data/processed/hitl_candidates.json`; recorded in `hitl_tagging.md` and `data/hitl/human_tags.json`.
-3. **Tagger rewrite** - word-boundary rules, `unclassified` / `out_of_scope`, `voice`, `language`, per-tag confidence; re-run `filter_and_normalize.py`.
-4. **Claims manifest** - `synthesize_engine.py` computes all numbers and links claims to verbatim IDs; hardcoded prose, quotes and statistics removed.
-5. **UI** - all components read the manifest; invented quotes replaced with real verbatims; no literal numbers or quotes in JSX.
-6. **Evals** - strengthen `eval_grounding.py` / `eval_synthesis.py`; add `eval_bias.py`, `eval_ui_consistency.py`, `eval_hitl.py`; wire into `run_evals.py`.
-7. **Re-certify** against `evals.md` Part II thresholds.
+Goal: every number, quote, theme, journey stage, persona and opportunity on the dashboard comes from tagged verbatims, scored by the weighted rubric in `evals.md` §17.
+
+| Step | Work | Output | Checkpoint |
+| :-- | :-- | :-- | :-- |
+| 0 | Raw data finalisation (done): Coin app +295, Reddit batch 3 +577 (Apify $3.00 of $5.00), YouTube +1,191, TradingQ&A saturated | 7,904 raw records | — |
+| 0b | HITL gold set (done): 25 verbatims, human vs. AI, reconciled | `data/hitl/human_tags.json` | — |
+| 1 | Normalise: one schema across channels, remove near-duplicates, flag truncation and rating-text mismatch; backfill Reddit dates (public lookup, free) and approximate YouTube dates (relative comment time, free) | `data/processed/corpus_v2.json`, `date_backfill.json` | funnel numbers reported |
+| 2 | Relevance gate on records that mention MF/SIP: `direct` / `indirect` / `off_topic`, `verbatim_type`, `experienced_vs_hypothetical` | relevance fields in `tagged_verbatims.json` | user reviews ~30 random decisions |
+| 3 | Deep tagging of the relevant set (in-session, in batches), 20-field schema + `stated_profile`, every tag with an exact `evidence_span` | `tagged_verbatims.json` | agreement on 15 held-out gold entries; user accepts/rejects tags on ~40 sampled records |
+| 4 | Claims manifest: themes, journey, investor profiles, opportunities, quotes by rule, denominators and channel split; no retention % (no cohort data) | `claims_manifest.json` | manifest summary reviewed before UI work |
+| 5 | Evals: rubric scorecard (40 / 30 / 30) | `eval_scorecard.json` | pass rule in `evals.md` §17.4 |
+| 6 | UI phase (later): components read only the manifest; invented quotes replaced with real verbatims | — | separate review |
+
+Old processed files stay in place until Step 6 switches the UI to the manifest.
 
 ---
 

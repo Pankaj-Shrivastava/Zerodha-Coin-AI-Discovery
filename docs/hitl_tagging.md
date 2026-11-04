@@ -50,3 +50,9 @@ Candidates are drawn from the finalised raw data (after the Coin-app Play Store 
 2. A similarity step proposes tags for untagged verbatims, marked `tag_source = similarity` with a confidence, for your review.
 3. Disagreements are listed so rules can be fixed, and the taxonomy updated from your `other:` labels.
 4. Metrics are indicative until the gold set reaches 50 entries.
+
+
+## 7. Review rounds for the full corpus
+1. **Relevance review (~30 records):** the user marks each relevance decision correct or incorrect. This also supplies the off-topic examples the gold set lacks.
+2. **Tag review (~40 records):** the user accepts or rejects each AI tag on a random sample. Accepted tags give a precision figure; rejected tags feed rule and prompt fixes.
+3. Gold entries 1–10 guide tagging; entries 11–25 are held out to measure agreement.

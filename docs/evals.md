@@ -330,3 +330,52 @@ Thresholds are provisional while the gold set is small (<50). With few examples 
 | 13 HITL gold set | P ≥85%, R ≥80%, κ ≥0.6 | Planned (awaiting user tags) |
 
 **Planned scripts:** `eval_grounding.py` (strengthened), `eval_synthesis.py` (relevance), new `eval_bias.py`, `eval_ui_consistency.py`, `eval_hitl.py`; all run from `run_evals.py`.
+
+
+## 17. Weighted Evaluation Rubric (100 points)
+
+The three non-negotiable rules are scored together. **Hallucination carries 40 points; bias amplification and cross-screen consistency carry 30 each.** `run_evals.py` prints this scorecard and writes `data/processed/eval_scorecard.json`.
+
+### 17.1 No hallucination / no invention: 40 points
+
+| Sub-check | Points | Pass condition |
+| :-- | :-: | :-- |
+| Quote integrity: every stored or displayed verbatim is a full-string match to its raw record (by `id`) | 12 | 100% (**gate**) |
+| Evidence spans: every tag's `evidence_span` is an exact substring of its verbatim | 10 | 100% (tags without a valid span are dropped before scoring) |
+| UI traceability: every on-screen quote resolves to a verbatim `id`, every number to the manifest | 8 | 100% (**gate**) |
+| Narrative claims: amounts, durations and percentages in `generated_narrative` appear in the cited verbatims or the manifest | 6 | 100% |
+| Citation completeness: `id`, `source_url`, channel, date or recency, anonymised author | 4 | 100% |
+
+### 17.2 No bias amplification: 30 points
+
+| Sub-check | Points | Pass condition |
+| :-- | :-: | :-- |
+| Denominator and scope honesty: every percentage states its denominator; `off_topic`, `hypothetical` and `needs_review` records are excluded from counts | 8 | 100% |
+| Off-topic leakage inside themes (human-reviewed sample) | 6 | ≤10% |
+| Tag dominance: no single tag above 40% share without human review | 4 | 0 violations |
+| Channel dominance: no claim with more than 70% of its evidence from one channel without a visible flag | 4 | 0 violations |
+| Churn grounding: `high` churn risk only with a stated signal; fund-level stops not counted as investor churn | 4 | 100% |
+| Agreement with humans: held-out gold set and review round | 4 | precision ≥85%, recall ≥80%, κ ≥0.6 |
+
+### 17.3 Cross-screen consistency: 30 points
+
+| Sub-check | Points | Pass condition |
+| :-- | :-: | :-- |
+| Recompute reconciliation: manifest counts equal counts recomputed from tagged verbatims | 8 | tolerance 0 |
+| Cross-screen equality: the same metric is identical on every screen | 8 | 0 mismatches |
+| Theme lineage: every journey stage, persona and opportunity lists existing verbatim IDs that carry the stated tag | 6 | 100% |
+| No literals: no hardcoded `%`, `₹` amounts or quoted user text in UI code | 5 | 0 violations |
+| Evidence thresholds: themes ≥5 verbatims from ≥2 channels; journey stages ≥5 tenure-stated verbatims | 3 | 100% |
+
+### 17.4 Scoring and pass rule
+- Each sub-check scores `points × pass rate` (a check measured as a rate) or full/zero (a check measured as violations).
+- **Gates:** if quote integrity or UI traceability is below 100%, the hallucination dimension scores **0** and the build fails, whatever the total.
+- **Pass:** total ≥ 90 **and** hallucination = 40/40 **and** bias ≥ 24/30 **and** consistency ≥ 27/30.
+- Agreement metrics are indicative (reported, not gating) while the human-checked set is below 50 records.
+
+## 18. Schema v2 and Grounded Tagging (for the full corpus)
+
+- Tags use the 20-field schema in `data/hitl/human_tags.json` plus `stated_profile` (age, life stage, experience, income only when stated in the text).
+- Every tag carries an `evidence_span` copied from the verbatim; code verifies it is an exact substring. A tag with no valid span is dropped.
+- Each record carries `tag_source` (`human`, `ai_session`) and `tag_confidence`; below 0.5 the record is `needs_review` and excluded from headline numbers.
+- Tagging is done in-session by the assistant in batches, guided by 10 gold examples; the other 15 gold entries are held out for agreement metrics.

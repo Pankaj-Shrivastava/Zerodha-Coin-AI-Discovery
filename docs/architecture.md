@@ -562,3 +562,16 @@ raw JSON --> filter/normalize (word-boundary rules, unclassified/out_of_scope,
 * **`claims_manifest.json`** is the single source of truth for every number, quote, stage, archetype and opportunity shown on any screen.
 * **Per-verbatim fields to add:** `app_id`, `tag_source`, `tag_confidence`, `voice`, `language`, `sip_relevance`, `needs_review`.
 * **Play Store harvest** now covers the Coin app (`com.zerodha.coin`) in addition to Kite (`com.zerodha.kite3`).
+
+## 9. Data Pipeline v2 (approved)
+
+```
+data/raw/*_raw.json (7,904; delta files are audit copies, reddit_dry_run excluded)
+   └─ normalize_corpus.py  (+ date_backfill.json from backfill_dates.py)
+        └─ data/processed/corpus_v2.json        one schema, dedup, flags, dates
+             └─ in-session tagging (gold-guided, evidence spans verified by code)
+                  └─ data/processed/tagged_verbatims.json
+                       └─ build_claims_manifest.py
+                            └─ data/processed/claims_manifest.json  ──► UI (later)
+   evals: run_evals.py ──► eval_scorecard.json (rubric 40 / 30 / 30, evals.md §17)
+```

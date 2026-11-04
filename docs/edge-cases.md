@@ -171,6 +171,12 @@
 | E.10 | **Quote on screen not found in corpus** | Build fails; the quote is removed or replaced with a real verbatim |
 | E.11 | **Human tag disagrees with auto tag** | The human tag wins; the disagreement is logged to refine the rules |
 | E.12 | **Promotional or survey-solicitation posts** | Tag `out_of_scope`; never used as user voice |
+| E.13 | **Reddit records without a post date** | Backfill from Reddit's public lookup; if unavailable, recency `unknown` (never estimated from the post ID) |
+| E.14 | **YouTube timestamp is the harvest time** | Treat as an upper bound only; approximate date from the comment's relative time, bucket-level use only |
+| E.15 | **Hypothetical scenarios** ("suppose I have…") | `experienced_vs_hypothetical = hypothetical`; excluded from event counts |
+| E.16 | **Rating-text mismatch** (5★ with a complaint) | Flag; the text, not the star rating, drives tags |
+| E.17 | **User's assumed cause** ("I am assuming it is due to failed SIPs") | Tag the stated symptom; the assumed cause is recorded as the user's attribution, not as fact |
+| E.18 | **Fund-level stop while still investing** | `churn_scope = fund`; not counted as investor churn |
 
 ## 7. Edge-Case Validation Checklist
 

@@ -3,7 +3,9 @@
 _Last updated: 2026-11-04. Self-contained: a new Claude Code session (any editor) should read only this file to continue. Nothing has been committed to git yet — all work is uncommitted in the working tree._
 
 ## Current status (one line)
-Phase 7 Steps 1–3 are **done**. **Waiting on the user** to review 40 sampled tags in `data/hitl/tag_review_round1.md`, then to approve starting **Step 4 (claims manifest)**. Do not start Step 4 without asking.
+Phase 7 Steps 1–3 are **done**, and tag review round 1 is **applied** (25 changes via `scripts/apply_review_corrections.py`; rules in `docs/hitl_tagged_verbatims.md` → "Refinements from tag review round 1"). **Step 4 in progress:** 4a themes approved (21 problems, `data/processed/theme_map.json`, review `data/hitl/theme_review_round1.md`); 4b manifest numbers + quotes built (`scripts/build_manifest.py` → `data/processed/claims_manifest.json`, review `data/hitl/manifest_review_4b.md`) — **waiting on user review of 4b**, then 4c (narratives: problem statements, 9 questions, research tracks → `data/processed/narratives.json`). Gold direct records get exact spans from `data/hitl/gold_spans.json` (merge logic in `scripts/manifest_base.py`). Quote rule caps drop-off/money quotes at their share of posts (bias). Caveat: 3 Play reviews with `playstore-zerodha_coin-*` ids are Kite app reviews (app_id kite3) → platform zerodha_kite, correctly not Coin.
+
+Python: installed at `C:/Users/PankajShrivastava/AppData/Local/Programs/Python/Python315/python.exe` (3.15). If `python` hits the Store alias, call it by that full path.
 
 ## Goal
 A grounded discovery dashboard showing which problems to solve so more **first-time Zerodha Coin SIP investors stay past 12 months** (levers: **Trust / Education / Reliability**). Audience: PMs, stakeholders, leadership, designers, research team.
@@ -38,7 +40,8 @@ A grounded discovery dashboard showing which problems to solve so more **first-t
 
 ### Step 3 results
 - Direct **806** (reddit 377, play_store 184, tradingqna 110, youtube 135) · indirect 448 · off_topic 124. 30 direct are hypothetical.
-- Stated churn among direct: 136 (realised_exit platform 20, intent_to_leave platform 24, sip_stop sip 31, sip_pause sip 28, realised_exit sip 8, intent_to_leave sip 2; fund-level 23 = not investor churn). Risk: high 64 / medium 317 / low 425; 0 rule violations.
+- Stated churn among direct: 136 (realised_exit platform 20, intent_to_leave platform 24, sip_stop sip 31, sip_pause sip 28, realised_exit sip 8, intent_to_leave sip 2; fund-level 23 = not investor churn). Risk after review round 1: high 64 / medium 332 / low 410 (was 64/317/425); 0 rule violations.
+- Review round 1 also added `other:unclear_error_message` (9 records) and fixed #29's span; gold agreement unchanged (risk 7/8).
 - Platform: zerodha_coin 246, groww 69, etmoney 54, paytm_money 35, kuvera 15; **346 not identifiable (left blank, not guessed)**.
 - Top frictions: returns_disappointment 102, support_failure 65, manual_payment_path_gap 41, unit_allocation_delay 37, cashflow_pressure 35, pause_cancel_confusion 29, fund_restriction 27, bank_penalty 27, statement_confusion 26, unexplained_debit 25. 275 distinct labels → **need consolidation into themes in Step 4**.
 - Integrity: 0 invalid spans; 1 tag dropped (span mismatch). Held-out gold agreement (8 in queue): relevance 8/8, friction overlap 7/8, risk 7/8, stated churn 6/8, stage 6/8.
@@ -48,13 +51,13 @@ A grounded discovery dashboard showing which problems to solve so more **first-t
 Codes `<D|I|O><E|H|Q|A|R|W|F>[h]`. Portfolio-review / fund-selection posts with no SIP friction → `IQ`; planned portfolios → `IQh`; positive long-tenure stories → `DE` with no friction; pauses → risk medium unless indefinite stop; fund-level stops → `sip_stop fund`, never high; loan/IPO/F&O/insurance mandates → off-topic. Treat `other:x` and `x` as the same friction label (gold uses the prefix).
 
 ## Next steps (Phase 7, `docs/implementation-plan.md`)
-1. **Apply user's corrections** from `data/hitl/tag_review_round1.md` (edit `tags_v2.json`, re-run `tag_report.py`).
-2. **Step 4 — `claims_manifest.json`** (ask first): merge gold entries 1–10 from `human_tags.json` (they are NOT in tags_v2); consolidate 275 friction labels into themes by lever (Trust/Education/Reliability); stage strip (only stated tenure); stated profiles; platform switches; quote selection by rule (0–3 per item, exact text + ID + source URL). Ranking = count of relevant experienced posts + evidence-strength chips; denominators and channel split everywhere.
+1. ~~Apply user's corrections~~ — done 2026-11-04.
+2. **Step 4 — `claims_manifest.json`** (ask first): merge gold entries 1–10 from `human_tags.json` (they are NOT in tags_v2); consolidate 275 friction labels into themes by lever (Trust/Education/Reliability); stage strip (only stated tenure); stated profiles; platform switches; quote selection by rule (0–3 per item, exact text + ID + source URL). Ranking = count of relevant experienced posts + evidence-strength chips; denominators and channel split everywhere. Show **Coin / other platform / not identifiable** per theme; platform churn on other apps = "leaving a competitor", never Coin churn. Merge `order_failed_no_reason` with `unclear_error_message` when building themes.
 3. Step 5 — evals scorecard against the §17 rubric.
 4. Step 6 — UI rebuild per `docs/ui_plan_v2.md` (React + Tailwind + Vite).
 
 ## UI decisions (`docs/ui_plan_v2.md`)
-5 screens: **Overview · Problem Explorer · What We Know and Don't (9 questions, 0–3 quotes each) · Evidence Library · Next Research**. Dropped: Platform Comparison, Investor Journey, Who Are They?, Opportunity Map (folded in). AMFI retention figure removed. No collapsible sections. Keep logo `/screen.png`. Geist font only, weights 400 + 600, no mono/italic/uppercase. Current UI quotes/stats are invented (e.g. all 10 Journey quotes not in corpus) — replace from the manifest.
+**Unique records only** (user, 2026-11-04): the UI shows and uses only unique records — say "7,831 unique posts", never 7,904; near-duplicates are excluded in `manifest_base.counted()` and dropped from the manifest. 5 screens: **Overview · Problem Explorer · What We Know and Don't (9 questions, 0–3 quotes each) · Evidence Library · Next Research**. Dropped: Platform Comparison, Investor Journey, Who Are They?, Opportunity Map (folded in). AMFI retention figure removed. No collapsible sections. Keep logo `/screen.png`. Geist font only, weights 400 + 600, no mono/italic/uppercase. Current UI quotes/stats are invented (e.g. all 10 Journey quotes not in corpus) — replace from the manifest.
 
 ## Other docs touched this phase
 `docs/evals.md` (Part II, §17 rubric, §18 schema v2), `docs/context.md`, `docs/edge-cases.md` (Category E), `docs/architecture.md` (§8–9), `docs/implementation-plan.md` (Phase 7), `docs/resources_and_volume.md`, `docs/hitl_tagging.md`, `docs/ui_plan_v2.md`.

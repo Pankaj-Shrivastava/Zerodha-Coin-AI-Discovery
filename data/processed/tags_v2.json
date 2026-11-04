@@ -10,7 +10,7 @@
    "journey_stage": "unspecified",
    "stated_churn": "none_stated",
    "churn_scope": null,
-   "inferred_churn_risk": "low",
+   "inferred_churn_risk": "medium",
    "cost_status": "none",
    "money_text": null,
    "platform_subject": "etmoney",
@@ -35,7 +35,16 @@
   "relevance_before": "direct",
   "gold_held_out": false,
   "needs_review": false,
-  "tag_errors": []
+  "tag_errors": [],
+  "review_log": [
+   {
+    "source": "rule_sweep_round1",
+    "field": "inferred_churn_risk",
+    "from": "low",
+    "to": "medium",
+    "reason": "fresh investments blocked for all funds"
+   }
+  ]
  },
  "reddit-dryrun-1xd27xx": {
   "tags": {
@@ -1700,7 +1709,7 @@
    "journey_stage": "unspecified",
    "stated_churn": "none_stated",
    "churn_scope": null,
-   "inferred_churn_risk": "low",
+   "inferred_churn_risk": "medium",
    "cost_status": "none",
    "money_text": null,
    "platform_subject": null,
@@ -1726,7 +1735,16 @@
   "relevance_before": "direct_candidate",
   "gold_held_out": false,
   "needs_review": false,
-  "tag_errors": []
+  "tag_errors": [],
+  "review_log": [
+   {
+    "source": "rule_sweep_round1",
+    "field": "inferred_churn_risk",
+    "from": "low",
+    "to": "medium",
+    "reason": "international SIPs failed, unresolved"
+   }
+  ]
  },
  "reddit-dryrun-1wrojp2": {
   "tags": {
@@ -4604,7 +4622,7 @@
    "journey_stage": "unspecified",
    "stated_churn": "none_stated",
    "churn_scope": null,
-   "inferred_churn_risk": "low",
+   "inferred_churn_risk": "medium",
    "cost_status": "none",
    "money_text": null,
    "platform_subject": "groww",
@@ -4630,7 +4648,16 @@
   "relevance_before": "direct_candidate",
   "gold_held_out": false,
   "needs_review": false,
-  "tag_errors": []
+  "tag_errors": [],
+  "review_log": [
+   {
+    "source": "hitl_review_round1",
+    "field": "inferred_churn_risk",
+    "from": "low",
+    "to": "medium",
+    "reason": "#8 SIPs paused automatically, unresolved (R-medium)"
+   }
+  ]
  },
  "reddit-dryrun-1vuaxvy": {
   "tags": {
@@ -5198,7 +5225,7 @@
    "journey_stage": "unspecified",
    "stated_churn": "none_stated",
    "churn_scope": null,
-   "inferred_churn_risk": "low",
+   "inferred_churn_risk": "medium",
    "cost_status": "none",
    "money_text": null,
    "platform_subject": null,
@@ -5224,7 +5251,16 @@
   "relevance_before": "direct_candidate",
   "gold_held_out": false,
   "needs_review": false,
-  "tag_errors": []
+  "tag_errors": [],
+  "review_log": [
+   {
+    "source": "rule_sweep_round1",
+    "field": "inferred_churn_risk",
+    "from": "low",
+    "to": "medium",
+    "reason": "SIP skipped automatically without notice"
+   }
+  ]
  },
  "reddit-dryrun-1vlzsqv": {
   "tags": {
@@ -5509,7 +5545,7 @@
    "journey_stage": "month_1_3",
    "stated_churn": "none_stated",
    "churn_scope": null,
-   "inferred_churn_risk": "low",
+   "inferred_churn_risk": "medium",
    "cost_status": "none",
    "money_text": null,
    "platform_subject": null,
@@ -5535,7 +5571,16 @@
   "relevance_before": "direct",
   "gold_held_out": false,
   "needs_review": false,
-  "tag_errors": []
+  "tag_errors": [],
+  "review_log": [
+   {
+    "source": "rule_sweep_round1",
+    "field": "inferred_churn_risk",
+    "from": "low",
+    "to": "medium",
+    "reason": "only US fund closed 3 months into SIP, unresolved"
+   }
+  ]
  },
  "reddit-dryrun-1vjk1kh": {
   "tags": {
@@ -13824,7 +13869,8 @@
    "experienced_vs_hypothetical": "experienced",
    "friction": [
     "autopay_failed_despite_balance",
-    "other:upi_autopay_limit_confusion"
+    "other:upi_autopay_limit_confusion",
+    "other:unclear_error_message"
    ],
    "journey_stage": "unspecified",
    "stated_churn": "none_stated",
@@ -13846,7 +13892,8 @@
    "evidence": {
     "friction": {
      "autopay_failed_despite_balance": "the account has always had more than enough money",
-     "other:upi_autopay_limit_confusion": "Is this a known policy to block individual UPI AutoPay transactions"
+     "other:upi_autopay_limit_confusion": "Is this a known policy to block individual UPI AutoPay transactions",
+     "other:unclear_error_message": "The error message says \"payment failed due to insufficient funds,\""
     }
    }
   },
@@ -13855,7 +13902,16 @@
   "relevance_before": "direct_candidate",
   "gold_held_out": false,
   "needs_review": false,
-  "tag_errors": []
+  "tag_errors": [],
+  "review_log": [
+   {
+    "source": "rule_sweep_round1",
+    "field": "friction",
+    "added": "other:unclear_error_message",
+    "span": "The error message says \"payment failed due to insufficient funds,\"",
+    "reason": "misleading insufficient-funds error"
+   }
+  ]
  },
  "reddit-1hetw1m": {
   "tags": {
@@ -16955,7 +17011,7 @@
    "journey_stage": "unspecified",
    "stated_churn": "none_stated",
    "churn_scope": null,
-   "inferred_churn_risk": "low",
+   "inferred_churn_risk": "medium",
    "cost_status": "anticipated",
    "money_text": "ACH return charges",
    "platform_subject": null,
@@ -16983,7 +17039,16 @@
   "relevance_before": "direct",
   "gold_held_out": false,
   "needs_review": false,
-  "tag_errors": []
+  "tag_errors": [],
+  "review_log": [
+   {
+    "source": "rule_sweep_round1",
+    "field": "inferred_churn_risk",
+    "from": "low",
+    "to": "medium",
+    "reason": "ACH return for insufficient funds, charge pending"
+   }
+  ]
  },
  "reddit-1is5b9f": {
   "tags": {
@@ -17033,7 +17098,8 @@
    "friction": [
     "other:redemption_blocked",
     "unexplained_debit",
-    "penalty_uncertainty"
+    "penalty_uncertainty",
+    "other:unclear_error_message"
    ],
    "journey_stage": "beyond_12",
    "stated_churn": "none_stated",
@@ -17056,7 +17122,8 @@
     "friction": {
      "other:redemption_blocked": "while redeeming it says something went wrong and I am not able to redeem",
      "unexplained_debit": "it says no active sips even though everyday 201rs is debited",
-     "penalty_uncertainty": "will I have to pay any penalties"
+     "penalty_uncertainty": "will I have to pay any penalties",
+     "other:unclear_error_message": "while redeeming it says something went wrong"
     },
     "journey_stage": "back in September 2024"
    }
@@ -17066,7 +17133,16 @@
   "relevance_before": "direct_candidate",
   "gold_held_out": false,
   "needs_review": false,
-  "tag_errors": []
+  "tag_errors": [],
+  "review_log": [
+   {
+    "source": "rule_sweep_round1",
+    "field": "friction",
+    "added": "other:unclear_error_message",
+    "span": "while redeeming it says something went wrong",
+    "reason": "generic error on redeem"
+   }
+  ]
  },
  "reddit-1wae4ce": {
   "tags": {
@@ -20181,7 +20257,7 @@
    "journey_stage": "unspecified",
    "stated_churn": "none_stated",
    "churn_scope": null,
-   "inferred_churn_risk": "low",
+   "inferred_churn_risk": "medium",
    "cost_status": "none",
    "money_text": null,
    "platform_subject": null,
@@ -20206,7 +20282,16 @@
   "relevance_before": "direct_candidate",
   "gold_held_out": false,
   "needs_review": false,
-  "tag_errors": []
+  "tag_errors": [],
+  "review_log": [
+   {
+    "source": "rule_sweep_round1",
+    "field": "inferred_churn_risk",
+    "from": "low",
+    "to": "medium",
+    "reason": "SIPs cancelled by scheme closure, still searching"
+   }
+  ]
  },
  "reddit-1hcgq2k": {
   "tags": {
@@ -20739,7 +20824,7 @@
    "journey_stage": "unspecified",
    "stated_churn": "none_stated",
    "churn_scope": null,
-   "inferred_churn_risk": "low",
+   "inferred_churn_risk": "medium",
    "cost_status": "incurred",
    "money_text": "573",
    "platform_subject": null,
@@ -20765,7 +20850,16 @@
   "relevance_before": "direct_candidate",
   "gold_held_out": false,
   "needs_review": false,
-  "tag_errors": []
+  "tag_errors": [],
+  "review_log": [
+   {
+    "source": "rule_sweep_round1",
+    "field": "inferred_churn_risk",
+    "from": "low",
+    "to": "medium",
+    "reason": "bank charged Rs 573 for failed mandate"
+   }
+  ]
  },
  "reddit-1iq9jey": {
   "tags": {
@@ -24514,7 +24608,7 @@
    "journey_stage": "unspecified",
    "stated_churn": "none_stated",
    "churn_scope": null,
-   "inferred_churn_risk": "low",
+   "inferred_churn_risk": "medium",
    "cost_status": "none",
    "money_text": null,
    "platform_subject": "zerodha_coin",
@@ -24539,7 +24633,16 @@
   "relevance_before": "direct_candidate",
   "gold_held_out": false,
   "needs_review": false,
-  "tag_errors": []
+  "tag_errors": [],
+  "review_log": [
+   {
+    "source": "rule_sweep_round1",
+    "field": "inferred_churn_risk",
+    "from": "low",
+    "to": "medium",
+    "reason": "fund closed, SIP lapsed, unsure whether to resume"
+   }
+  ]
  },
  "reddit-1pdr2mh": {
   "tags": {
@@ -25512,7 +25615,7 @@
    "journey_stage": "beyond_12",
    "stated_churn": "none_stated",
    "churn_scope": null,
-   "inferred_churn_risk": "low",
+   "inferred_churn_risk": "medium",
    "cost_status": "incurred",
    "money_text": "₹590",
    "platform_subject": null,
@@ -25540,7 +25643,16 @@
   "relevance_before": "direct_candidate",
   "gold_held_out": false,
   "needs_review": false,
-  "tag_errors": []
+  "tag_errors": [],
+  "review_log": [
+   {
+    "source": "rule_sweep_round1",
+    "field": "inferred_churn_risk",
+    "from": "low",
+    "to": "medium",
+    "reason": "SIP bounced, charged Rs 590"
+   }
+  ]
  },
  "reddit-1bxz4uq": {
   "tags": {
@@ -25793,7 +25905,7 @@
    "journey_stage": "unspecified",
    "stated_churn": "none_stated",
    "churn_scope": null,
-   "inferred_churn_risk": "low",
+   "inferred_churn_risk": "medium",
    "cost_status": "incurred",
    "money_text": "Rps 590",
    "platform_subject": null,
@@ -25822,7 +25934,16 @@
   "relevance_before": "direct_candidate",
   "gold_held_out": false,
   "needs_review": false,
-  "tag_errors": []
+  "tag_errors": [],
+  "review_log": [
+   {
+    "source": "rule_sweep_round1",
+    "field": "inferred_churn_risk",
+    "from": "low",
+    "to": "medium",
+    "reason": "Rs 590 deducted for bounced SIP, new investor"
+   }
+  ]
  },
  "reddit-1ff9mk7": {
   "tags": {
@@ -25941,7 +26062,7 @@
    "journey_stage": "unspecified",
    "stated_churn": "none_stated",
    "churn_scope": null,
-   "inferred_churn_risk": "low",
+   "inferred_churn_risk": "medium",
    "cost_status": "incurred",
    "money_text": "₹590 twice",
    "platform_subject": null,
@@ -25968,7 +26089,16 @@
   "relevance_before": "direct_candidate",
   "gold_held_out": false,
   "needs_review": false,
-  "tag_errors": []
+  "tag_errors": [],
+  "review_log": [
+   {
+    "source": "hitl_review_round1",
+    "field": "inferred_churn_risk",
+    "from": "low",
+    "to": "medium",
+    "reason": "#9 missed SIP debit, Rs 590 x2 bank penalty (R-medium)"
+   }
+  ]
  },
  "reddit-1io4acj": {
   "tags": {
@@ -29801,7 +29931,8 @@
    "experienced_vs_hypothetical": "experienced",
    "friction": [
     "other:sip_schedule_restriction",
-    "other:sip_setup_confusing"
+    "other:sip_setup_confusing",
+    "other:unclear_error_message"
    ],
    "journey_stage": "unspecified",
    "stated_churn": "none_stated",
@@ -29823,7 +29954,8 @@
    "evidence": {
     "friction": {
      "other:sip_schedule_restriction": "Only schedule allowed per SIP",
-     "other:sip_setup_confusing": "very confusing way to set up SIP"
+     "other:sip_setup_confusing": "very confusing way to set up SIP",
+     "other:unclear_error_message": "now getting error \"Only schedule allowed per SIP\""
     }
    }
   },
@@ -29832,7 +29964,16 @@
   "relevance_before": "direct",
   "gold_held_out": false,
   "needs_review": false,
-  "tag_errors": []
+  "tag_errors": [],
+  "review_log": [
+   {
+    "source": "rule_sweep_round1",
+    "field": "friction",
+    "added": "other:unclear_error_message",
+    "span": "now getting error \"Only schedule allowed per SIP\"",
+    "reason": "confusing error text"
+   }
+  ]
  },
  "playstore-zerodha_coin-9be64dec-9c26-468f-9cbd-5428a0c51a29": {
   "tags": {
@@ -30576,7 +30717,8 @@
    "friction": [
     "sip_not_executed",
     "other:bank_change_blocked",
-    "support_failure"
+    "support_failure",
+    "other:unclear_error_message"
    ],
    "journey_stage": "unspecified",
    "stated_churn": "none_stated",
@@ -30599,7 +30741,8 @@
     "friction": {
      "sip_not_executed": "my SIP is not getting deducted as before",
      "other:bank_change_blocked": "trying to switch the bank account but it is not allowing me",
-     "support_failure": "their customer care will not answer your call"
+     "support_failure": "their customer care will not answer your call",
+     "other:unclear_error_message": "it just shows technical error from our side"
     }
    }
   },
@@ -30608,7 +30751,16 @@
   "relevance_before": "direct_candidate",
   "gold_held_out": false,
   "needs_review": false,
-  "tag_errors": []
+  "tag_errors": [],
+  "review_log": [
+   {
+    "source": "rule_sweep_round1",
+    "field": "friction",
+    "added": "other:unclear_error_message",
+    "span": "it just shows technical error from our side",
+    "reason": "generic technical error"
+   }
+  ]
  },
  "playstore-paytm_money-78686b14-ae00-4f06-b2c1-a7229898a517": {
   "tags": {
@@ -31789,7 +31941,8 @@
    "experienced_vs_hypothetical": "experienced",
    "friction": [
     "other:cannot_stop_sip",
-    "other:ui_glitch"
+    "other:ui_glitch",
+    "other:unclear_error_message"
    ],
    "journey_stage": "unspecified",
    "stated_churn": "none_stated",
@@ -31811,7 +31964,8 @@
    "evidence": {
     "friction": {
      "other:cannot_stop_sip": "i am unable to stop SIP",
-     "other:ui_glitch": "the SIP option does not work now"
+     "other:ui_glitch": "the SIP option does not work now",
+     "other:unclear_error_message": "says something error happened. please try again later"
     }
    }
   },
@@ -31820,7 +31974,16 @@
   "relevance_before": "direct_candidate",
   "gold_held_out": false,
   "needs_review": false,
-  "tag_errors": []
+  "tag_errors": [],
+  "review_log": [
+   {
+    "source": "rule_sweep_round1",
+    "field": "friction",
+    "added": "other:unclear_error_message",
+    "span": "says something error happened. please try again later",
+    "reason": "generic error"
+   }
+  ]
  },
  "playstore-et_money-bf0ddf91-d836-4d8c-9d5d-c80e2740c310": {
   "tags": {
@@ -32534,7 +32697,8 @@
    "verbatim_type": "review",
    "experienced_vs_hypothetical": "experienced",
    "friction": [
-    "other:login_failure"
+    "other:login_failure",
+    "other:unclear_error_message"
    ],
    "journey_stage": "unspecified",
    "stated_churn": "none_stated",
@@ -32555,7 +32719,8 @@
    "recency": "old",
    "evidence": {
     "friction": {
-     "other:login_failure": "Now it is stuck at the login icon"
+     "other:login_failure": "Now it is stuck at the login icon",
+     "other:unclear_error_message": "After sometime it shows server error"
     }
    }
   },
@@ -32564,7 +32729,16 @@
   "relevance_before": "direct_candidate",
   "gold_held_out": false,
   "needs_review": false,
-  "tag_errors": []
+  "tag_errors": [],
+  "review_log": [
+   {
+    "source": "rule_sweep_round1",
+    "field": "friction",
+    "added": "other:unclear_error_message",
+    "span": "After sometime it shows server error",
+    "reason": "server error, no guidance"
+   }
+  ]
  },
  "playstore-et_money-42f7c369-ebae-42ac-809a-744af956977a": {
   "tags": {
@@ -33803,7 +33977,8 @@
    "experienced_vs_hypothetical": "experienced",
    "friction": [
     "other:ekyc_failure",
-    "support_failure"
+    "support_failure",
+    "other:unclear_error_message"
    ],
    "journey_stage": "start",
    "stated_churn": "none_stated",
@@ -33825,7 +34000,8 @@
    "evidence": {
     "friction": {
      "other:ekyc_failure": "neither app nor website allowing me to complete the eKYC",
-     "support_failure": "Already raised a ticket, no response"
+     "support_failure": "Already raised a ticket, no response",
+     "other:unclear_error_message": "\"something went wrong try after some time\". What does something mean ?"
     },
     "journey_stage": "choosing ETMoney for my first mutual fund"
    }
@@ -33835,7 +34011,16 @@
   "relevance_before": "direct",
   "gold_held_out": false,
   "needs_review": false,
-  "tag_errors": []
+  "tag_errors": [],
+  "review_log": [
+   {
+    "source": "rule_sweep_round1",
+    "field": "friction",
+    "added": "other:unclear_error_message",
+    "span": "\"something went wrong try after some time\". What does something mean ?",
+    "reason": "user asks what the error means"
+   }
+  ]
  },
  "playstore-zerodha_coin-dd233931-8a5c-46d6-8904-a0f7c62926cd": {
   "tags": {
@@ -33968,7 +34153,8 @@
    "experienced_vs_hypothetical": "experienced",
    "friction": [
     "funds_apparently_missing",
-    "support_failure"
+    "support_failure",
+    "other:unclear_error_message"
    ],
    "journey_stage": "beyond_12",
    "stated_churn": "none_stated",
@@ -33990,7 +34176,8 @@
    "evidence": {
     "friction": {
      "funds_apparently_missing": "my total investment value is showing as 0",
-     "support_failure": "the issue is still not resolved"
+     "support_failure": "the issue is still not resolved",
+     "other:unclear_error_message": "The error shown on all funds is there may be discrepancy in fund holdings"
     },
     "journey_stage": "for the last 3 years"
    }
@@ -34000,7 +34187,16 @@
   "relevance_before": "direct",
   "gold_held_out": false,
   "needs_review": false,
-  "tag_errors": []
+  "tag_errors": [],
+  "review_log": [
+   {
+    "source": "rule_sweep_round1",
+    "field": "friction",
+    "added": "other:unclear_error_message",
+    "span": "The error shown on all funds is there may be discrepancy in fund holdings",
+    "reason": "vague holdings-discrepancy error"
+   }
+  ]
  },
  "playstore-zerodha_coin-7961ba66-e228-4cc5-8a5d-21512a133e68": {
   "tags": {
@@ -34577,7 +34773,8 @@
    "experienced_vs_hypothetical": "experienced",
    "friction": [
     "other:upi_payment_failure",
-    "other:charges_uncertainty"
+    "other:charges_uncertainty",
+    "other:unclear_error_message"
    ],
    "journey_stage": "unspecified",
    "stated_churn": "none_stated",
@@ -34599,7 +34796,8 @@
    "evidence": {
     "friction": {
      "other:upi_payment_failure": "it HARD BLOCKS you from payment for 10 solid minutes",
-     "other:charges_uncertainty": "No info about charges, taxes, exit load"
+     "other:charges_uncertainty": "No info about charges, taxes, exit load",
+     "other:unclear_error_message": "with vague error like 'KTError80' or something, what a user friendly warning"
     }
    }
   },
@@ -34608,7 +34806,16 @@
   "relevance_before": "direct_candidate",
   "gold_held_out": false,
   "needs_review": false,
-  "tag_errors": []
+  "tag_errors": [],
+  "review_log": [
+   {
+    "source": "hitl_review_round1",
+    "field": "friction",
+    "added": "other:unclear_error_message",
+    "span": "with vague error like 'KTError80' or something, what a user friendly warning",
+    "reason": "#15 vague error code (R-error)"
+   }
+  ]
  },
  "playstore-zerodha_coin-96d2d802-86c9-4a52-8951-e5322aadc856": {
   "tags": {
@@ -34784,7 +34991,7 @@
    "journey_stage": "unspecified",
    "stated_churn": "none_stated",
    "churn_scope": null,
-   "inferred_churn_risk": "low",
+   "inferred_churn_risk": "medium",
    "cost_status": "none",
    "money_text": null,
    "platform_subject": "zerodha_coin",
@@ -34809,7 +35016,16 @@
   "relevance_before": "direct_candidate",
   "gold_held_out": false,
   "needs_review": false,
-  "tag_errors": []
+  "tag_errors": [],
+  "review_log": [
+   {
+    "source": "rule_sweep_round1",
+    "field": "inferred_churn_risk",
+    "from": "low",
+    "to": "medium",
+    "reason": "stated loss multiple times from next-day NAV"
+   }
+  ]
  },
  "playstore-zerodha_coin-a4920f4b-0ad6-4a5e-aaba-cd58aad2b076": {
   "tags": {
@@ -34861,7 +35077,7 @@
    "journey_stage": "unspecified",
    "stated_churn": "none_stated",
    "churn_scope": null,
-   "inferred_churn_risk": "low",
+   "inferred_churn_risk": "medium",
    "cost_status": "none",
    "money_text": null,
    "platform_subject": "zerodha_coin",
@@ -34887,7 +35103,16 @@
   "relevance_before": "direct",
   "gold_held_out": false,
   "needs_review": false,
-  "tag_errors": []
+  "tag_errors": [],
+  "review_log": [
+   {
+    "source": "rule_sweep_round1",
+    "field": "inferred_churn_risk",
+    "from": "low",
+    "to": "medium",
+    "reason": "states orders always get higher NAV"
+   }
+  ]
  },
  "playstore-zerodha_coin-be4d21cf-0436-4533-8c02-03a45b4bed86": {
   "tags": {
@@ -35983,7 +36208,7 @@
    "journey_stage": "unspecified",
    "stated_churn": "none_stated",
    "churn_scope": null,
-   "inferred_churn_risk": "low",
+   "inferred_churn_risk": "medium",
    "cost_status": "none",
    "money_text": null,
    "platform_subject": "zerodha_coin",
@@ -36009,7 +36234,16 @@
   "relevance_before": "direct",
   "gold_held_out": false,
   "needs_review": false,
-  "tag_errors": []
+  "tag_errors": [],
+  "review_log": [
+   {
+    "source": "rule_sweep_round1",
+    "field": "inferred_churn_risk",
+    "from": "low",
+    "to": "medium",
+    "reason": "payment failure rate higher, refund follow-ups"
+   }
+  ]
  },
  "playstore-zerodha_coin-aa955a03-0ab6-43ac-9e03-fcd4fb44ce38": {
   "tags": {
@@ -39594,7 +39828,8 @@
    "verbatim_type": "experience",
    "experienced_vs_hypothetical": "experienced",
    "friction": [
-    "missed_sip_no_reminder"
+    "missed_sip_no_reminder",
+    "insufficient_funds_on_sip_date"
    ],
    "journey_stage": "unspecified",
    "stated_churn": "none_stated",
@@ -39615,7 +39850,8 @@
    "recency": "recent",
    "evidence": {
     "friction": {
-     "missed_sip_no_reminder": "kept getting tired of remembering to add funds manually"
+     "missed_sip_no_reminder": "kept getting tired of remembering to add funds manually",
+     "insufficient_funds_on_sip_date": "the SIP would fail due to lack of sufficient funds"
     }
    }
   },
@@ -39626,6 +39862,15 @@
   "needs_review": false,
   "tag_errors": [
    "f: span not in text 'too many times the SIP would fail due to lack of sufficient funds'"
+  ],
+  "review_log": [
+   {
+    "source": "hitl_review_round1",
+    "field": "friction",
+    "added": "insufficient_funds_on_sip_date",
+    "span": "the SIP would fail due to lack of sufficient funds",
+    "reason": "#29 stated past SIP failures for lack of funds (span fixed: \"to many\")"
+   }
   ]
  },
  "tradingqna-519243": {

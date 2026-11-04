@@ -261,10 +261,12 @@ Each tagged verbatim carries a confidence value, and each claim carries a claim-
 
 | Level | Condition |
 | :-- | :-- |
-| High | ≥5 supporting verbatims, from ≥2 platforms, and ≥1 human-confirmed tag among them |
-| Medium | ≥5 verbatims from ≥2 platforms, no human confirmation yet |
-| Low | 3–4 verbatims or a single platform |
+| High | ≥5 supporting verbatims, from ≥2 channels, and ≥3 human-confirmed verbatims among them |
+| Medium | ≥5 verbatims from ≥2 channels, with 0–2 human-confirmed verbatims |
+| Low | 3–4 verbatims or a single channel |
 | Insufficient | <3 verbatims: the claim is not shown as a finding |
+
+*Human-confirmed* = a gold-set record (`data/hitl/human_tags.json`) or a record the user approved or corrected in a tag review round (e.g. `data/hitl/tag_review_round1.json`). **Changed 2026-11-04:** "High" previously needed only ≥1 human-confirmed verbatim, which put 20 of 21 problems at High and made the badge uninformative; ≥3 separates claims with real human checking from the rest and shows where more review is needed.
 
 **Citation requirement:** every claim in `claims_manifest.json` lists `supporting_verbatim_ids`, and the UI renders them as clickable source links.
 

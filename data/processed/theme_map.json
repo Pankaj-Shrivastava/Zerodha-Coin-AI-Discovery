@@ -1,0 +1,58 @@
+{
+ "description": "Step 4a: friction label -> problem. Labels are compared without the 'other:' prefix. Every label used in counted records must appear exactly once (checked by scripts/theme_report.py). Problem names are written from the investor's point of view, not as features. Drafted in-session 2026-11-04; pending user review.",
+ "groups": {
+  "reliability": "Reliability: the SIP and the app work as expected",
+  "trust": "Trust: my money is safe and nothing happens without my knowledge",
+  "education": "Education: I understand what is happening and what my choices mean",
+  "product_gap": "Product gaps: the app cannot do something I need (feature asks)",
+  "outside": "Outside the product: money, rules or advice beyond the platform"
+ },
+ "problems": [
+  {"id": "REL-1", "group": "reliability", "name": "My SIP instalment did not go through",
+   "labels": ["sip_not_executed", "sip_order_auto_cancelled", "sip_creation_failed_with_error", "mandate_failure", "autopay_failed_despite_balance", "autopay_setup_failure", "silent_mandate_failure", "sip_stuck_processing", "mandate_activation_delay", "upi_payment_failure", "payment_gateway_failure", "sip_payment_error", "payment_stuck_pending", "sip_terminated_unexplained", "sip_stopped_without_notice", "auto_pause_unexplained", "erroneous_sip_cancellation_email", "sip_cancelled_during_platform_move", "missed_installment", "holiday_sip_execution", "sip_order_delayed", "aof_rejected_after_debit", "tpv_pending_rejection", "sip_rejected_blacklisted_agent", "units_bounced_kyc_dpid", "auto_payment_refunded", "mandate_not_effective", "unexplained_failure", "sip_not_invested_in_time", "payment_friction", "conditional_order_failure"]},
+  {"id": "REL-2", "group": "reliability", "name": "My money left, but units came late or at a later NAV",
+   "labels": ["unit_allocation_delay", "delayed_nav", "nav_update_lag", "early_cutoff_time", "holiday_debit_timing"]},
+  {"id": "REL-3", "group": "reliability", "name": "The app shows my holdings or values wrong, or not at all",
+   "labels": ["funds_apparently_missing", "holdings_not_visible", "holdings_not_visible_after_transfer", "holdings_not_visible_on_amc", "holdings_not_visible_in_mf_central", "portfolio_value_mismatch", "statement_confusion", "amc_sip_not_in_portfolio", "amc_sip_not_tracked", "active_sip_not_visible", "nav_not_shown", "no_payment_history", "reporting_gap", "duplicate_folio_entry", "folio_name_mismatch", "virtual_account_visibility", "payment_status_unclear", "autopay_status_unclear", "fragmented_tracking", "external_fund_tracking", "multiple_folios"]},
+  {"id": "REL-4", "group": "reliability", "name": "The app errors, breaks or is hard to use, and does not say why",
+   "labels": ["unclear_error_message", "order_failed_no_reason", "ui_glitch", "platform_bugginess", "login_failure", "otp_loop", "redemption_otp_failure", "nri_otp_lockout", "slow_portal", "poor_web_interface", "search_broken", "double_payout_glitch", "recurring_issues", "ekyc_failure", "kyc_issue", "onboarding_document_friction", "investment_limit_error", "account_blocked", "app_confusing", "sip_setup_confusing", "cluttered_sip_list", "accessibility_gap", "mandate_creation_difficult", "broker_app_fatigue", "stagnant_features"]},
+  {"id": "REL-5", "group": "reliability", "name": "My SIP needs me to pay by hand each time, so instalments get missed",
+   "labels": ["manual_payment_path_gap", "autodebit_unavailable", "no_reminder_feature", "missed_sip_no_reminder", "upi_autopay_unavailable", "no_bank_sip", "missing_true_sip", "delayed_mandate_feature", "secondary_bank_mandate_unavailable", "nri_mandate_unsupported", "mandate_not_reusable", "payment_method_visibility", "mandate_aversion", "bank_not_supported"]},
+
+  {"id": "TRU-1", "group": "trust", "name": "Money was taken that I did not expect",
+   "labels": ["unexplained_debit", "duplicate_sip_debit", "duplicate_sip_orders", "mandate_cancel_not_effective", "cannot_cancel_mandate", "mandate_continues_after_death", "premature_debit_initiation", "unintended_sip_creation", "unexpected_bill_paused_sip", "mandate_cancelled_without_consent"]},
+  {"id": "TRU-2", "group": "trust", "name": "My bank charged me a penalty for a failed SIP debit",
+   "labels": ["bank_penalty", "penalty_uncertainty", "insufficient_funds_on_sip_date", "bank_min_balance_charges", "unclear_debit_cutoff_time", "platform_blamed_for_bank_charge", "cibil_worry", "failed_payment_fear"]},
+  {"id": "TRU-3", "group": "trust", "name": "My money is stuck: a refund, redemption or bank change will not go through",
+   "labels": ["refund_delay", "refund_uncertainty", "refund_tracking_missing", "redemption_blocked", "redemption_issue", "redemption_delay", "slow_withdrawal", "redemption_blocked_closed_bank", "redemption_to_defunct_account", "name_mismatch_redemption", "redemption_amount_mismatch", "no_instant_redemption", "withdrawal_limit", "redemption_in_installments", "redemption_friction", "bank_change_blocked", "bank_detail_change_blocked", "bank_change_delay", "bank_change_cooling_period", "cannot_skip_or_change_bank", "nominee_transmission_harassment", "nominee_detail_error", "regular_funds_locked", "bank_account_blocked"]},
+  {"id": "TRU-4", "group": "trust", "name": "Support did not resolve my problem",
+   "labels": ["support_failure"]},
+  {"id": "TRU-5", "group": "trust", "name": "Charges, upsells and pushes I did not expect",
+   "labels": ["hidden_fee", "charges_uncertainty", "charges_not_visible", "aggressive_marketing", "paywall_basic_features", "paywall_upgrade", "ddpi_paywall", "exit_load_surprise", "demat_amc_charges", "demat_amc_surprise", "amc_charges", "demat_conversion_charges", "platform_fee_during_lock_in", "demat_push", "forced_demat_account", "forced_autopay", "regular_plan_default", "advisory_plan_underperformance", "no_value_add"]},
+  {"id": "TRU-6", "group": "trust", "name": "I am not sure my money is safe with the platform",
+   "labels": ["platform_trust_concern", "trust_loss", "platform_shutdown_worry", "demat_custody_worry", "privacy_concern", "safety_doubt"]},
+
+  {"id": "EDU-1", "group": "education", "name": "My returns are not what I expected, and I doubt whether to continue",
+   "labels": ["returns_disappointment", "market_doubt", "volatility_anxiety", "fd_comparison", "early_loss_scare", "compulsive_checking", "chasing_past_returns", "market_timing_regret", "market_timing_stop", "panic_exit_regret", "early_withdrawal_regret", "gold_fomo", "ipo_chasing", "sip_too_slow", "influencer_driven_stop", "pause_urge", "distrust_of_fund_industry", "over_diversification", "exit_timing_uncertainty", "no_exit_guidance", "disengagement"]},
+  {"id": "EDU-2", "group": "education", "name": "I do not know what pause, stop, cancel or delete will do, or how to do it",
+   "labels": ["pause_cancel_confusion", "accidental_sip_deletion", "unclear_delete_meaning", "cannot_stop_sip", "offline_stop_process", "offline_pause_process", "slow_sip_cancellation", "stop_notice_period", "restart_unclear", "cannot_resume_paused_sip", "no_auto_resume", "no_pause_option", "no_indefinite_pause", "skip_not_working", "no_bulk_cancel", "exit_procedure_uncertainty", "agent_dependency_to_pause", "sip_edit_skipped_installment", "folio_reuse_uncertainty", "sip_stop_required_for_transfer", "transfer_sip_continuity"]},
+  {"id": "EDU-3", "group": "education", "name": "I do not understand the mandate, dates or SIP terms",
+   "labels": ["unclear_mandate_terms", "mandate_end_date_confusion", "auto_debit_setup_confusion", "upi_mandate_howto", "upi_autopay_limit_confusion", "mandate_type_confusion", "mandate_type_change", "mandate_type_change_blocked", "mandate_deletion_unclear", "emandate_introduction", "mandate_method_discontinued", "forced_mandate_resetup_risk", "mandate_continuity_uncertainty", "joint_account_mandate", "mandate_name_matching", "bank_account_setup_blocks_mandate", "installment_date_confusion", "installment_date_mismatch", "order_date_confusion", "sip_tenure_confusion", "date_change_not_honoured", "notification_uncertainty", "lumpsum_vs_sip_confusion"]},
+  {"id": "EDU-4", "group": "education", "name": "AMC SIP vs app SIP, demat vs statement: I do not know where my SIP lives",
+   "labels": ["amc_sip_confusion", "amc_sip_modification_gap", "demat_folio_confusion", "soa_preference", "soa_transfer_form_confusion", "soa_to_demat_switch", "demat_to_soa_process", "demat_default_on_sip_change", "sip_converted_to_amc_sip", "external_sip_not_editable", "amc_sip_min_installments", "etf_requires_kite_app", "direct_regular_confusion", "regular_to_direct_tax", "direct_conversion_tax_concern"]},
+  {"id": "EDU-5", "group": "education", "name": "Lock-in, exit load and tax catch me by surprise",
+   "labels": ["lock_in_confusion", "lock_in_display_wrong", "elss_lock_in_surprise", "exit_load_confusion", "tax_calculation_confusion", "redemption_nav_timing_confusion"]},
+  {"id": "EDU-6", "group": "education", "name": "I do not know enough to invest with confidence",
+   "labels": ["low_financial_knowledge"]},
+
+  {"id": "GAP-1", "group": "product_gap", "name": "I cannot change or shape my SIP the way I need",
+   "labels": ["sip_amount_edit_missing", "mandate_amount_edit_missing", "sip_increase_lock", "step_up_blocked_by_increment", "no_step_up_sip", "min_installment_lock", "min_sip_amount", "missing_flexi_sip", "unit_based_sip_request", "sip_schedule_restriction", "sip_end_date_missing", "goal_labelling_missing", "no_switch_option", "no_swp", "redeem_by_amount_missing", "stp_restriction"]},
+
+  {"id": "OUT-1", "group": "outside", "name": "Money is tight or needed for something else",
+   "labels": ["cashflow_pressure", "loan_prepayment_priority", "goal_redemption_for_house", "loan_vs_sip_tradeoff"]},
+  {"id": "OUT-2", "group": "outside", "name": "The fund or the rules stopped me investing",
+   "labels": ["fund_restriction", "platform_fund_availability", "high_expense_ratio", "nri_not_supported", "nri_status_change"]},
+  {"id": "OUT-3", "group": "outside", "name": "An advisor or distributor sold me the wrong product",
+   "labels": ["distributor_misselling", "ulip_misselling"]}
+ ]
+}

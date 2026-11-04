@@ -647,6 +647,14 @@ The researcher delegated the final tag choice to the evidence: only tags support
 
 **Churn-risk rule (text-grounded):** `high` only when the text states a stop, an intent to leave or a realised exit; `medium` when the text shows a loss, failure or lapse pattern without a stated intent; `low` when neutral, positive or clearly engaged. Result: 5 high, 10 medium, 10 low.
 
+**Refinements from tag review round 1 (2026-11-04, applied by `scripts/apply_review_corrections.py`):**
+- `medium` needs the failure, lapse or loss to have happened to this user and to be unresolved in the text: a bank bounce penalty charged or notified, an SIP stopped by the fund/platform with no stated way forward, investing blocked, or a stated money loss.
+- `low` when the problem is past and the text states the investor kept or increased investing (e.g. "finally turned green… want to increase my SIP"), or when the text says it was resolved and the user is still engaged.
+- An SIP order auto-cancelled by the platform stays `low` unless more is stated (gold #22; review #27, #35).
+- General discussion, hypotheticals, normal processing-time questions and positive reviews with a minor complaint stay `low`.
+- New friction `other:unclear_error_message`: the text quotes an app error that gives no reason or a misleading one. Bank SMS wording is not counted.
+- Other-platform posts stay in the corpus; Step 4 shows Coin / other platform / not identifiable separately, and platform-scope churn on another app is labelled as leaving a competitor, never as Coin churn.
+
 **Overrides to the AI column above:**
 - #17 churn risk `high` → `medium` (no stated stop or intent; the user is still deciding).
 - #5, #15, #21 cause `structural_ux` / `unclear` → `external_third_party` (regulation, fund house, bank partnership).

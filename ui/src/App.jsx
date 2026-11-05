@@ -4,7 +4,7 @@ import Explorer from './screens/Explorer';
 import Questions from './screens/Questions';
 import Library from './screens/Library';
 import Research from './screens/Research';
-import { num, day } from './lib/format';
+import { num } from './lib/format';
 
 // the 5 screens (docs/ui_plan_v2.md, information architecture); built: screens with a component
 const SCREENS = [
@@ -67,7 +67,7 @@ export default function App() {
             </div>
             {cs && (
               <p className="ml-auto text-xs text-muted">
-                {num(cs.counted_N)} SIP-relevant posts · from {num(cs.collected_unique)} collected · {num(cs.channels)} channels · updated {day(cs.built_on)}
+                {num(cs.counted_N)} SIP-relevant posts · from {num(cs.collected_unique)} collected · {num(cs.channels)} channels
               </p>
             )}
           </div>

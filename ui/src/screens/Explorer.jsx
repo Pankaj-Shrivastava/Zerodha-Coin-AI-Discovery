@@ -8,7 +8,7 @@ import {
 } from '../lib/vocab';
 import { num, revealTop } from '../lib/format';
 import {
-  CountBar, SplitBar, Chip, ConfidenceBadge, QuoteCarousel, GeneratedLabel, EvidenceEmpty, LeverDot, Disclosure,
+  CountBar, SplitBar, Chip, ConfidenceBadge, QuoteCarousel, GeneratedLabel, EvidenceEmpty, LeverDot, Disclosure, Select,
 } from '../components/shared';
 
 const SUBLABELS_SHOWN = 5;
@@ -297,19 +297,17 @@ export default function Explorer({ m }) {
       </div>
 
       {/* phones and tablets: a dropdown picker instead of the side list */}
-      <label className="mt-4 block lg:hidden">
-        <span className="text-xs text-muted">Problem</span>
-        <select value={sel} onChange={(e) => pick(e.target.value)}
-          className="mt-1 w-full rounded-lg bg-white px-3 py-2 text-sm text-ink ring-1 ring-line">
+      <div className="mt-4 lg:hidden">
+        <Select label="Problem" value={sel} onChange={pick}>
           {groupKeys.filter((g) => group === 'all' || g === group).map((g) => (
             <optgroup key={g} label={GROUPS[g].short}>
               {shown.filter((x) => x.group === g).map((x) => (
-                <option key={x.id} value={x.id}>{x.rank ? `${x.rank}. ` : ''}{x.name} ({x.count})</option>
+                <option key={x.id} value={x.id}>{x.name} ({x.count})</option>
               ))}
             </optgroup>
           ))}
-        </select>
-      </label>
+        </Select>
+      </div>
 
       <div className="mt-5 grid gap-6 lg:grid-cols-[17rem_minmax(0,1fr)]">
         <nav aria-label="Problems" className="hidden lg:block">

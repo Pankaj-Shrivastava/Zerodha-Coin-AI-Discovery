@@ -1,7 +1,7 @@
 // Shared building blocks used by every screen (docs/ui_plan_v2.md §0.3).
 // Layout rule: headline evidence (counts, confidence, statements, the first quote) is never hidden;
 // only secondary detail goes inside a Disclosure, a Tab or a further carousel slide.
-import { useEffect, useId, useRef, useState } from 'react';
+import { Children, isValidElement, useEffect, useId, useRef, useState } from 'react';
 import { CHANNELS, CONFIDENCE, RECENCY, STATUS_NAMES } from '../lib/vocab';
 import { num, day } from '../lib/format';
 
@@ -183,6 +183,106 @@ export function QuoteCarousel({ quotes, index, tone = 'card', empty = 'No quote 
         <span className="ml-auto text-xs tabular-nums text-muted">Quote {num(i + 1)} of {num(quotes.length)}</span>
       </div>
     </figure>
+  );
+}
+
+// ---------- form controls ----------
+
+// <option> / <optgroup> children -> flat list of rows: { group } headings and { value, label } choices
+function readOptions(children) {
+  const rows = [];
+  const add = (el, group) => {
+    if (!isValidElement(el)) return;
+    if (el.type === 'optgroup') {
+      rows.push({ group: el.props.label });
+      Children.forEach(el.props.children, (c) => add(c, el.props.label));
+    } else if (el.type === 'option') {
+      rows.push({ value: String(el.props.value), label: Children.toArray(el.props.children).join(''), group });
+    } else if (el.props?.children) {
+      Children.forEach(el.props.children, (c) => add(c, group));
+    }
+  };
+  Children.forEach(children, (c) => add(c));
+  let n = 0;
+  return rows.map((r) => (r.value === undefined ? r : { ...r, n: n++ }));
+}
+
+// A slim dropdown (listbox) with its own list, so the list scrolls without a visible scrollbar.
+// Same API as a native select: <Select value onChange={(v) => ...}><option value="">…</option>…</Select>
+// Keyboard: Enter / Space / ↓ open; ↑ ↓ Home End move; Enter selects; Escape or Tab closes.
+export function Select({ label, value, onChange, children, className = '', align = 'left' }) {
+  const rows = readOptions(children);
+  const choices = rows.filter((r) => r.value !== undefined);
+  const current = choices.find((r) => r.value === String(value)) ?? choices[0];
+  const [open, setOpen] = useState(false);
+  const [active, setActive] = useState(0);
+  const id = useId();
+  const box = useRef(null);
+  const list = useRef(null);
+
+  useEffect(() => {
+    if (!open) return undefined;
+    const close = (e) => { if (!box.current?.contains(e.target)) setOpen(false); };
+    document.addEventListener('mousedown', close);
+    return () => document.removeEventListener('mousedown', close);
+  }, [open]);
+
+  useEffect(() => {
+    if (open) list.current?.querySelector(`[data-i="${active}"]`)?.scrollIntoView({ block: 'nearest' });
+  }, [open, active]);
+
+  const show = () => { setActive(Math.max(0, choices.indexOf(current))); setOpen(true); };
+  const choose = (i) => { onChange(choices[i].value); setOpen(false); };
+  const onKey = (e) => {
+    if (!open) {
+      if (['Enter', ' ', 'ArrowDown', 'ArrowUp'].includes(e.key)) { e.preventDefault(); show(); }
+      return;
+    }
+    const last = choices.length - 1;
+    const moves = { ArrowDown: Math.min(active + 1, last), ArrowUp: Math.max(active - 1, 0), Home: 0, End: last };
+    if (e.key in moves) { e.preventDefault(); setActive(moves[e.key]); }
+    else if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); choose(active); }
+    else if (e.key === 'Escape') { e.preventDefault(); setOpen(false); }
+    else if (e.key === 'Tab') setOpen(false);
+  };
+
+  return (
+    <div ref={box} className={`relative min-w-0 ${className}`}>
+      {label && <span id={`${id}-label`} className="mb-1 block text-xs text-muted">{label}</span>}
+      <button type="button" onClick={() => (open ? setOpen(false) : show())} onKeyDown={onKey}
+        aria-haspopup="listbox" aria-expanded={open} aria-controls={`${id}-list`}
+        aria-labelledby={label ? `${id}-label ${id}-value` : undefined}
+        className={`flex w-full items-center gap-2 rounded-lg bg-white py-2 pl-3 pr-2.5 text-left text-sm text-ink ring-1 transition-shadow hover:ring-muted focus:outline-none focus-visible:ring-2 focus-visible:ring-link/60 ${open ? 'ring-muted' : 'ring-line'}`}>
+        <span id={`${id}-value`} className="min-w-0 flex-1 truncate">{current?.label}</span>
+        <svg className={`h-4 w-4 shrink-0 text-muted transition-transform ${open ? 'rotate-180' : ''}`} viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M5.5 8l4.5 4.5L14.5 8" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </button>
+      {open && (
+        <ul ref={list} id={`${id}-list`} role="listbox" tabIndex={-1} aria-activedescendant={`${id}-o${active}`}
+          className={`no-scrollbar absolute z-40 mt-1 max-h-72 min-w-full overflow-y-auto overscroll-contain rounded-xl bg-white py-1 shadow-[0_8px_24px_rgba(30,43,60,0.14)] ring-1 ring-line sm:w-max sm:max-w-[22rem] ${align === 'right' ? 'right-0' : 'left-0'}`}>
+          {rows.map((r) => {
+            if (r.value === undefined) {
+              return <li key={`g-${r.group}`} role="presentation" className="px-3 pb-1 pt-2.5 text-xs font-semibold text-muted">{r.group}</li>;
+            }
+            const { n } = r;
+            const sel = r.value === current?.value;
+            return (
+              <li key={r.value} id={`${id}-o${n}`} data-i={n} role="option" aria-selected={sel}
+                onMouseDown={(e) => e.preventDefault()} onClick={() => choose(n)} onMouseEnter={() => setActive(n)}
+                className={`flex cursor-pointer items-start gap-2 py-1.5 pr-3 text-sm leading-snug ${r.group ? 'pl-5' : 'pl-3'} ${n === active ? 'bg-canvas' : ''} ${sel ? 'font-semibold text-ink' : 'text-ink'}`}>
+                <span className="min-w-0 flex-1">{r.label}</span>
+                {sel && (
+                  <svg className="mt-0.5 h-4 w-4 shrink-0 text-link" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M5 10.5l3.2 3.2L15 7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </div>
   );
 }
 

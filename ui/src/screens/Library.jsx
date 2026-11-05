@@ -6,7 +6,7 @@ import {
   CHANNELS, GROUPS, RECENCY, STAGES, EXCLUSION, LANGUAGES, DROPOFF_SCOPE, platformName, labelName,
 } from '../lib/vocab';
 import { num, day } from '../lib/format';
-import { ChannelChip, Chip, LeverDot, Disclosure, EvidenceEmpty } from '../components/shared';
+import { ChannelChip, Chip, LeverDot, Disclosure, EvidenceEmpty, Select } from '../components/shared';
 
 const PAGE = 25;
 const CLAMP_CHARS = 600;
@@ -108,20 +108,44 @@ function PostCard({ p, probs }) {
   );
 }
 
+function Group({ title, children }) {
+  return (
+    <div role="group" aria-label={title} className="border-t border-line pt-4">
+      <p className="text-xs font-semibold text-ink">{title}</p>
+      <div className="mt-3 space-y-3">{children}</div>
+    </div>
+  );
+}
+
+function Check({ checked, onChange, children }) {
+  return (
+    <label className="flex cursor-pointer items-start gap-2.5 text-sm leading-snug text-ink">
+      <input type="checkbox" checked={checked} onChange={(e) => onChange(e.target.checked)}
+        className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer rounded accent-[#1E2B3C]" />
+      <span>{children}</span>
+    </label>
+  );
+}
+
 function Filters({ f, set, m, lib }) {
   const groupKeys = Object.keys(GROUPS).filter((g) => m.problems.some((p) => p.group === g && p.display !== 'hidden'));
   const langs = [...new Set(lib.posts.map((p) => p.lang).filter(Boolean))];
-  const field = 'mt-1 w-full rounded-lg bg-white px-3 py-2 text-sm text-ink ring-1 ring-line';
   const toggleCh = (c) => set({ channels: f.channels.includes(c) ? f.channels.filter((x) => x !== c) : [...f.channels, c] });
   return (
     <div className="space-y-4">
       <label className="block">
-        <span className="text-xs text-muted">Search the text</span>
-        <input type="search" value={f.q} onChange={(e) => set({ q: e.target.value })} placeholder="e.g. mandate, refund, NAV" className={field} />
+        <span className="mb-1 block text-xs text-muted">Search the text</span>
+        <span className="relative block">
+          <svg className="pointer-events-none absolute left-2.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <circle cx="9" cy="9" r="5.5" stroke="currentColor" strokeWidth="1.6" /><path d="M13.2 13.2L17 17" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+          </svg>
+          <input type="search" value={f.q} onChange={(e) => set({ q: e.target.value })} placeholder="e.g. mandate, refund, NAV"
+            className="w-full rounded-lg bg-white py-2 pl-8 pr-3 text-sm text-ink ring-1 ring-line placeholder:text-muted/70 hover:ring-muted focus:outline-none focus-visible:ring-2 focus-visible:ring-link/60" />
+        </span>
       </label>
-      <label className="block">
-        <span className="text-xs text-muted">Problem</span>
-        <select value={f.problem} onChange={(e) => set({ problem: e.target.value })} className={field}>
+
+      <Group title="What the post is about">
+        <Select label="Problem" value={f.problem} onChange={(v) => set({ problem: v })}>
           <option value="">All problems</option>
           {groupKeys.map((g) => (
             <optgroup key={g} label={GROUPS[g].short}>
@@ -130,62 +154,57 @@ function Filters({ f, set, m, lib }) {
               ))}
             </optgroup>
           ))}
-        </select>
-      </label>
-      <label className="block">
-        <span className="text-xs text-muted">Discovery question</span>
-        <select value={f.question} onChange={(e) => set({ question: e.target.value })} className={field}>
+        </Select>
+        <Select label="Discovery question" value={f.question} onChange={(v) => set({ question: v })}>
           <option value="">All questions</option>
           {m.questions.filter((q) => q.evidence_count > 0).map((q) => <option key={q.id} value={q.id}>{q.question}</option>)}
-        </select>
-      </label>
-      <label className="block">
-        <span className="text-xs text-muted">Lever</span>
-        <select value={f.group} onChange={(e) => set({ group: e.target.value })} className={field}>
+        </Select>
+        <Select label="Lever" value={f.group} onChange={(v) => set({ group: v })}>
           <option value="">All levers</option>
           {groupKeys.map((g) => <option key={g} value={g}>{GROUPS[g].short}</option>)}
-        </select>
-      </label>
-      <fieldset>
-        <legend className="text-xs text-muted">Channel</legend>
-        <div className="mt-1 flex flex-wrap gap-1.5">
-          {Object.keys(CHANNELS).map((c) => {
-            const on = f.channels.includes(c);
-            return (
-              <button key={c} type="button" onClick={() => toggleCh(c)} aria-pressed={on}
-                className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs ring-1 ${on ? 'bg-ink text-white ring-ink' : 'bg-white text-ink ring-line hover:ring-ink'}`}>
-                <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: CHANNELS[c].color }} />{CHANNELS[c].name}
-              </button>
-            );
-          })}
+        </Select>
+      </Group>
+
+      <Group title="Where and when">
+        <div>
+          <span className="mb-1 block text-xs text-muted">Channel</span>
+          <div className="flex flex-wrap gap-1.5">
+            {Object.keys(CHANNELS).map((c) => {
+              const on = f.channels.includes(c);
+              return (
+                <button key={c} type="button" onClick={() => toggleCh(c)} aria-pressed={on}
+                  className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs ring-1 ${on ? 'bg-ink text-white ring-ink' : 'bg-white text-ink ring-line hover:ring-ink'}`}>
+                  <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: on ? '#FFFFFF' : CHANNELS[c].color }} />{CHANNELS[c].name}
+                </button>
+              );
+            })}
+          </div>
         </div>
-      </fieldset>
-      <div className="grid grid-cols-2 gap-3">
-        <label className="block">
-          <span className="text-xs text-muted">When</span>
-          <select value={f.recency} onChange={(e) => set({ recency: e.target.value })} className={field}>
+        <div className="grid grid-cols-2 gap-2">
+          <Select label="When" value={f.recency} onChange={(v) => set({ recency: v })}>
             <option value="">Any time</option>
             {Object.keys(RECENCY).map((r) => <option key={r} value={r}>{RECENCY[r]}</option>)}
-          </select>
-        </label>
-        <label className="block">
-          <span className="text-xs text-muted">Language</span>
-          <select value={f.lang} onChange={(e) => set({ lang: e.target.value })} className={field}>
+          </Select>
+          <Select label="Language" value={f.lang} onChange={(v) => set({ lang: v })}>
             <option value="">Any</option>
             {langs.map((l) => <option key={l} value={l}>{LANGUAGES[l] ?? l}</option>)}
-          </select>
-        </label>
-      </div>
-      <div className="space-y-2 text-sm text-ink">
-        <label className="flex items-center gap-2"><input type="checkbox" checked={f.dropoff} onChange={(e) => set({ dropoff: e.target.checked })} />Says they stopped, paused or are leaving</label>
-        <label className="flex items-center gap-2"><input type="checkbox" checked={f.money} onChange={(e) => set({ money: e.target.checked })} />Reports money lost or held</label>
-        <label className="flex items-center gap-2"><input type="checkbox" checked={f.excluded} onChange={(e) => set({ excluded: e.target.checked })} />Also show posts that are not counted</label>
-      </div>
-      {f.excluded && (
-        <p className="text-xs leading-relaxed text-muted">
-          Not counted: {Object.entries(lib.excluded_counts).filter(([, n]) => n).map(([r, n]) => `${EXCLUSION[r]} ${num(n)}`).join(' · ')}
-        </p>
-      )}
+          </Select>
+        </div>
+      </Group>
+
+      <Group title="Only posts that">
+        <Check checked={f.dropoff} onChange={(v) => set({ dropoff: v })}>Says they stopped, paused or are leaving</Check>
+        <Check checked={f.money} onChange={(v) => set({ money: v })}>Reports money lost or held</Check>
+      </Group>
+
+      <Group title="Transparency">
+        <Check checked={f.excluded} onChange={(v) => set({ excluded: v })}>Also show posts that are not counted</Check>
+        {f.excluded && (
+          <p className="text-xs leading-relaxed text-muted">
+            Not counted: {Object.entries(lib.excluded_counts).filter(([, n]) => n).map(([r, n]) => `${EXCLUSION[r]} ${num(n)}`).join(' · ')}
+          </p>
+        )}
+      </Group>
     </div>
   );
 }
@@ -264,10 +283,9 @@ export default function Library({ m }) {
       <div className="mt-6 grid gap-6 lg:grid-cols-[17rem_minmax(0,1fr)]">
         <aside>
           <div className="lg:hidden">
-            <Disclosure summary={`Filters${active.length ? ` (${num(active.length)} on)` : ''}`} className="bg-white">{filters}</Disclosure>
+            <Disclosure summary={`Filters${active.length ? ` (${num(active.length)} on)` : ''}`}>{filters}</Disclosure>
           </div>
-          <div className="sticky hidden max-h-[calc(100vh-var(--header-h,6rem)-3rem)] overflow-y-auto rounded-2xl bg-white p-4 ring-1 ring-line lg:block"
-            style={{ top: 'calc(var(--header-h, 6rem) + 1.5rem)' }}>
+          <div className="hidden rounded-2xl bg-white p-4 ring-1 ring-line lg:block">
             {filters}
           </div>
         </aside>
@@ -275,13 +293,13 @@ export default function Library({ m }) {
         <section aria-label="Posts" className="min-w-0">
           <div className="flex flex-wrap items-center gap-2">
             <p className="text-sm text-ink"><span className="font-semibold tabular-nums">{num(results.length)}</span> {results.length === 1 ? 'post' : 'posts'}</p>
-            <label className="ml-auto flex items-center gap-2 text-xs text-muted">
-              Order
-              <select value={f.sort} onChange={(e) => set({ sort: e.target.value })} className="rounded-lg bg-white px-2 py-1 text-sm text-ink ring-1 ring-line">
+            <div className="ml-auto flex items-center gap-2 text-xs text-muted">
+              <span>Order</span>
+              <Select value={f.sort} onChange={(v) => set({ sort: v })} className="w-36" align="right">
                 <option value="newest">Newest first</option>
                 <option value="oldest">Oldest first</option>
-              </select>
-            </label>
+              </Select>
+            </div>
           </div>
           {active.length > 0 && (
             <div className="mt-3 flex flex-wrap items-center gap-1.5">

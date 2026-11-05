@@ -4,7 +4,7 @@
 import { useEffect, useState } from 'react';
 import { GROUPS } from '../lib/vocab';
 import { num, revealTop } from '../lib/format';
-import { StatusBadge, ConfidenceBadge, LeverDot, EvidenceEmpty } from '../components/shared';
+import { StatusBadge, ConfidenceBadge, LeverDot, EvidenceEmpty, Select } from '../components/shared';
 
 const SOURCES = [
   { type: 'question', title: 'From the open questions', lead: 'What the posts cannot tell us.' },
@@ -134,16 +134,15 @@ export default function Research({ m }) {
         </p>
       </header>
 
-      <label className="mt-5 block lg:hidden">
-        <span className="text-xs text-muted">Track</span>
-        <select value={sel} onChange={(e) => pick(e.target.value)} className="mt-1 w-full rounded-lg bg-white px-3 py-2 text-sm text-ink ring-1 ring-line">
-          {SOURCES.map((s) => (
-            <optgroup key={s.type} label={s.title}>
-              {tracks.filter((x) => x.source_type === s.type).map((x) => <option key={x.id} value={x.id}>{x.source_title}</option>)}
+      <div className="mt-5 lg:hidden">
+        <Select label="Track" value={sel} onChange={pick}>
+          {SOURCES.map((src) => (
+            <optgroup key={src.type} label={src.title}>
+              {tracks.filter((x) => x.source_type === src.type).map((x) => <option key={x.id} value={x.id}>{x.source_title}</option>)}
             </optgroup>
           ))}
-        </select>
-      </label>
+        </Select>
+      </div>
 
       <div className="mt-6 grid gap-6 lg:grid-cols-[17rem_minmax(0,1fr)]">
         <nav aria-label="Interview tracks" className="hidden lg:block">

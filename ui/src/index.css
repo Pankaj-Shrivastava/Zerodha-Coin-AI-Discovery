@@ -19,3 +19,7 @@
    trackpad, touch and keyboard; only the bar itself is hidden. */
 html, nav[aria-label="Screens"] { scrollbar-width: none; -ms-overflow-style: none; }
 html::-webkit-scrollbar, body::-webkit-scrollbar, nav[aria-label="Screens"]::-webkit-scrollbar { display: none; width: 0; height: 0; }
+
+/* lists that scroll without a visible bar (custom dropdowns) */
+.no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; width: 0; height: 0; }

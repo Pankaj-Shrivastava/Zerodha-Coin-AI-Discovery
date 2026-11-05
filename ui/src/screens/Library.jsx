@@ -51,14 +51,13 @@ function PostCard({ p, probs }) {
   const when = day(p.date) ?? RECENCY[p.rec];
   return (
     <article className={`rounded-2xl bg-white p-4 ${p.excl ? 'border border-dashed border-muted' : 'ring-1 ring-line'}`}>
-      <header className="flex flex-wrap items-center gap-2 text-xs text-muted">
-        <ChannelChip channel={p.ch} />
-        <span>{p.author}</span>
-        {when && <span>· {when}</span>}
-        {p.plat && <span>· About {platformName(p.plat)}</span>}
-        {p.lang && p.lang !== 'english' && <span>· {LANGUAGES[p.lang] ?? p.lang}</span>}
-        {p.excl && <span className="rounded-full border border-dashed border-muted px-2 py-0.5">Not counted: {EXCLUSION[p.excl]}</span>}
-        <a href={p.url} target="_blank" rel="noreferrer" className="ml-auto text-link underline-offset-2 hover:underline">Source</a>
+      <header className="space-y-1 text-xs text-muted">
+        <div className="flex items-center gap-2">
+          <ChannelChip channel={p.ch} label={p.author} />
+          {p.excl && <span className="truncate rounded-full border border-dashed border-muted px-2 py-0.5">Not counted: {EXCLUSION[p.excl]}</span>}
+          <a href={p.url} target="_blank" rel="noreferrer" className="ml-auto shrink-0 text-link underline-offset-2 hover:underline">Source</a>
+        </div>
+        <p>{[when, p.plat && `About ${platformName(p.plat)}`, p.lang && p.lang !== 'english' && (LANGUAGES[p.lang] ?? p.lang)].filter(Boolean).join(' · ')}</p>
       </header>
 
       {p.withheld ? (
@@ -80,7 +79,7 @@ function PostCard({ p, probs }) {
       {(p.problems.length > 0 || p.dropoff || p.money || p.stage) && (
         <div className="mt-3 flex flex-wrap gap-1.5">
           {p.problems.map((id) => (
-            <a key={id} href={`#explorer/${id}`} className="inline-flex items-center gap-1.5 rounded-full bg-canvas px-2 py-0.5 text-xs text-ink hover:ring-1 hover:ring-ink">
+            <a key={id} href={`#explorer/${id}`} className="inline-flex items-center gap-1.5 rounded-full bg-white px-2 py-0.5 text-xs text-ink ring-1 ring-line hover:ring-ink">
               <LeverDot color={GROUPS[probs[id].group].color} size="h-2 w-2" />{probs[id].name}
             </a>
           ))}
@@ -91,7 +90,7 @@ function PostCard({ p, probs }) {
       )}
 
       {p.labels.length > 0 && (
-        <Disclosure summary={`Tags (${num(p.labels.length)}) and their evidence`} className="mt-3">
+        <Disclosure plain summary={`Tags (${num(p.labels.length)}) and their evidence`} className="mt-3">
           <ul className="space-y-1.5 text-sm">
             {p.labels.map((l) => {
               const sp = p.spans.find((x) => x.k === 'friction' && x.l === l);

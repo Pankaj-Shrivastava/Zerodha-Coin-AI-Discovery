@@ -3,7 +3,7 @@
 import { CHANNELS, GROUPS, STAGES, PLATFORM_LABEL, FIX_TYPES, CAUSES, platformName } from '../lib/vocab';
 import { num, month, topKey } from '../lib/format';
 import {
-  CountBar, SplitBar, Chip, ConfidenceBadge, QuoteCarousel, GeneratedLabel, StatBlock, LeverDot, Disclosure, Tabs,
+  CountBar, SplitBar, Chip, ConfidenceBadge, QuoteCarousel, GeneratedLabel, StatBlock, LeverDot, Tabs,
   Chapter, StoryLayout,
 } from '../components/shared';
 
@@ -58,7 +58,7 @@ function Featured({ p, m, maxCount }) {
       <div className="mt-2 flex items-center gap-2"><ConfidenceBadge level={p.confidence} /></div>
       <p className="mt-3 text-sm leading-relaxed text-ink">{p.narrative.statement}</p>
       <div className="mt-1"><GeneratedLabel cited={p.narrative.cited_ids} /></div>
-      <div className="mt-4 flex-1"><QuoteCarousel quotes={p.quotes.slice(0, 2)} index={m.quotes_index} /></div>
+      <div className="mt-4 flex-1"><QuoteCarousel quotes={p.quotes.slice(0, 2)} index={m.quotes_index} tone="inset" /></div>
       <a href={`#explorer/${p.id}`} className="mt-4 text-sm text-link underline-offset-2 hover:underline">Open the problem card</a>
     </article>
   );
@@ -68,25 +68,28 @@ function Featured({ p, m, maxCount }) {
 function RankRow({ p, m, maxCount }) {
   const g = GROUPS[p.group];
   return (
-    <li className="rounded-xl bg-white ring-1 ring-line">
-      <div className="grid items-center gap-x-4 gap-y-2 p-3 sm:grid-cols-[2.5rem_minmax(0,1fr)_12rem_auto]">
-        <span className="text-sm tabular-nums text-muted">{p.rank ? `#${num(p.rank)}` : '—'}</span>
-        <span className="flex items-center gap-2 text-sm font-semibold text-ink"><LeverDot color={g.color} size="h-2 w-2" />{p.name}</span>
-        <CountBar count={p.count} denominator={p.denominator} max={maxCount} color={g.color} label="posts" />
-        <ConfidenceBadge level={p.confidence} />
-      </div>
-      <Disclosure summary="Evidence, stage, summary and quotes" className="mx-3 mb-3">
-        <div className="grid gap-4 lg:grid-cols-2">
+    <li>
+      <details className="group rounded-xl bg-white ring-1 ring-line">
+        <summary className="grid cursor-pointer list-none grid-cols-[2.5rem_minmax(0,1fr)] items-center gap-x-4 gap-y-2 rounded-xl p-3 hover:bg-canvas/60 sm:grid-cols-[2.5rem_minmax(0,1fr)_11rem_9.5rem_1rem] [&::-webkit-details-marker]:hidden">
+          <span className="text-sm tabular-nums text-muted">{p.rank ? `#${num(p.rank)}` : '—'}</span>
+          <span className="text-sm font-semibold leading-snug text-ink">{p.name}</span>
+          <span className="col-start-2 sm:col-start-auto"><CountBar count={p.count} denominator={p.denominator} max={maxCount} color={g.color} label="posts" /></span>
+          <span className="col-start-2 sm:col-start-auto sm:justify-self-end"><ConfidenceBadge level={p.confidence} /></span>
+          <span className="hidden text-muted transition-transform group-open:rotate-90 sm:block" aria-hidden="true">›</span>
+        </summary>
+        <div className="grid items-start gap-4 border-t border-line p-4 lg:grid-cols-2">
           <div className="space-y-3">
             <EvidenceChips p={p} />
             <StageLine st={p.stage} />
-            <p className="text-sm leading-relaxed text-ink">{p.narrative.statement}</p>
-            <GeneratedLabel cited={p.narrative.cited_ids} />
-            <div><a href={`#explorer/${p.id}`} className="text-sm text-link underline-offset-2 hover:underline">Open the problem card</a></div>
+            <div>
+              <p className="text-sm leading-relaxed text-ink">{p.narrative.statement}</p>
+              <div className="mt-1"><GeneratedLabel cited={p.narrative.cited_ids} /></div>
+            </div>
+            <a href={`#explorer/${p.id}`} className="inline-block text-sm text-link underline-offset-2 hover:underline">Open the problem card</a>
           </div>
-          <QuoteCarousel quotes={p.quotes.slice(0, 2)} index={m.quotes_index} />
+          <QuoteCarousel quotes={p.quotes.slice(0, 2)} index={m.quotes_index} tone="inset" />
         </div>
-      </Disclosure>
+      </details>
     </li>
   );
 }
@@ -139,7 +142,7 @@ function WhereToFocus({ m }) {
 function Moves({ side, m }) {
   const flows = Object.entries(side.by_platform);
   return (
-    <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]">
+    <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]">
       <div>
         <p className="text-sm text-muted">{num(side.count)} of {num(side.denominator)} posts</p>
         <ul className="mt-3 space-y-1.5">
@@ -193,7 +196,7 @@ export default function Overview({ m, score }) {
       </Chapter>
 
       <Chapter id="ov-looked" n={2} title="What we looked at">
-        <div className="max-w-xl">
+        <div className="max-w-3xl">
           <StatBlock label="Evidence base" value={eb.count} caption="Unique, first-hand posts about SIPs. Hypothetical, off-topic and duplicate posts are excluded.">
             <SplitBar counts={eb.channel_split} meta={CHANNELS} order={Object.keys(CHANNELS)} />
           </StatBlock>
@@ -201,7 +204,7 @@ export default function Overview({ m, score }) {
       </Chapter>
 
       <Chapter id="ov-heard" n={3} title="What we heard">
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-3 md:[&_.stat-label]:min-h-[2.5rem]">
           <StatBlock label="Say they stopped, paused or are leaving" value={sd.count_investor} of={sd.denominator}
             caption={`Fund switches are counted apart (${num(sd.by_scope.fund)} posts): changing a fund is not leaving.`}>
             <ul className="space-y-1 text-sm text-ink">

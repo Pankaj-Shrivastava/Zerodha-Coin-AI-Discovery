@@ -14,3 +14,8 @@
   }
   *:focus-visible { outline: 2px solid #2F6CA3; outline-offset: 2px; }
 }
+
+/* No visible scrollbars (user preference 2026-11-05): pages and the tab bar still scroll with the mouse wheel,
+   trackpad, touch and keyboard; only the bar itself is hidden. */
+html, nav[aria-label="Screens"] { scrollbar-width: none; -ms-overflow-style: none; }
+html::-webkit-scrollbar, body::-webkit-scrollbar, nav[aria-label="Screens"]::-webkit-scrollbar { display: none; width: 0; height: 0; }

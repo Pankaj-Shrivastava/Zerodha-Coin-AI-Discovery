@@ -3,7 +3,7 @@
 // disprove it → the evidence behind it. Every value comes from claims_manifest.json (research_tracks).
 import { useEffect, useState } from 'react';
 import { GROUPS } from '../lib/vocab';
-import { num } from '../lib/format';
+import { num, revealTop } from '../lib/format';
 import { StatusBadge, ConfidenceBadge, LeverDot, EvidenceEmpty } from '../components/shared';
 
 const SOURCES = [
@@ -118,7 +118,7 @@ export default function Research({ m }) {
   const pick = (id) => {
     setSel(id);
     window.history.replaceState(null, '', `#research/${id}`);
-    document.getElementById('track-detail')?.scrollIntoView({ block: 'start' });
+    requestAnimationFrame(() => revealTop('track-detail'));
   };
   const at = tracks.findIndex((t) => t.id === sel);
   const t = tracks[at];
@@ -147,11 +147,11 @@ export default function Research({ m }) {
 
       <div className="mt-6 grid gap-6 lg:grid-cols-[17rem_minmax(0,1fr)]">
         <nav aria-label="Interview tracks" className="hidden lg:block">
-          <div className="sticky max-h-[calc(100vh-var(--header-h,6rem)-3rem)] space-y-5 overflow-y-auto pr-1" style={{ top: 'calc(var(--header-h, 6rem) + 1.5rem)' }}>
+          <div className="space-y-6">
             {SOURCES.map((s) => (
               <div key={s.type}>
-                <p className="px-2 text-sm font-semibold text-ink">{s.title}</p>
-                <p className="px-2 text-xs text-muted">{s.lead}</p>
+                <p className="pl-[15px] text-sm font-semibold text-ink">{s.title}</p>
+                <p className="pl-[15px] text-xs text-muted">{s.lead}</p>
                 <ol className="mt-2 space-y-0.5">
                   {tracks.filter((x) => x.source_type === s.type).map((x) => {
                     const on = x.id === sel;
@@ -159,7 +159,7 @@ export default function Research({ m }) {
                     return (
                       <li key={x.id}>
                         <button type="button" onClick={() => pick(x.id)} aria-current={on ? 'true' : undefined}
-                          className={`flex w-full gap-2 rounded-lg px-2 py-2 text-left text-sm ${on ? 'bg-white ring-1 ring-ink' : 'hover:bg-white'}`}>
+                          className={`flex w-full gap-2 rounded-lg border-l-[3px] py-2 pl-3 pr-2 text-left text-sm ${on ? 'border-ink bg-white shadow-[0_1px_3px_rgba(30,43,60,0.08)]' : 'border-transparent hover:bg-white/70'}`}>
                           {p ? <LeverDot color={GROUPS[p.group].color} size="mt-1.5 h-2 w-2" /> : <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full border border-muted" aria-hidden="true" />}
                           <span className={`text-ink ${on ? 'font-semibold' : ''}`}>{x.source_title}</span>
                         </button>

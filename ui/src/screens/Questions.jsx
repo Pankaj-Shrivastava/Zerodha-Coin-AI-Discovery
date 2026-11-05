@@ -93,12 +93,12 @@ function QuestionCard({ q, m, n }) {
       )}
 
       {q.summary ? (
-        <div className="mt-4 grid gap-4 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
+        <div className="mt-4 grid items-start gap-5 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
           <div>
             <p className="text-[0.95rem] leading-relaxed text-ink">{q.summary.text}</p>
             <div className="mt-1"><GeneratedLabel cited={q.summary.cited_ids} /></div>
           </div>
-          <QuoteCarousel quotes={q.quotes} index={m.quotes_index} />
+          <QuoteCarousel quotes={q.quotes} index={m.quotes_index} tone="inset" />
         </div>
       ) : (
         <div className="mt-4"><EvidenceEmpty>No posts in the corpus answer this question.</EvidenceEmpty></div>
@@ -134,7 +134,7 @@ export default function Questions({ m }) {
   useEffect(() => {
     const go = () => {
       const id = window.location.hash.replace('#', '').split('/')[1];
-      if (id) requestAnimationFrame(() => document.getElementById(`question-${id}`)?.scrollIntoView({ block: 'start' }));
+      if (id) requestAnimationFrame(() => document.getElementById(`question-${id}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
     };
     go();
     window.addEventListener('hashchange', go);

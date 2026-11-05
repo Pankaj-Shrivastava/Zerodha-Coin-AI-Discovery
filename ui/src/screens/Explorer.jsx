@@ -6,7 +6,7 @@ import {
   CHANNELS, GROUPS, STAGES, PLATFORM_LABEL, FIX_TYPES, RECENCY_META, PLATFORM_SPLIT, DROPOFF_TYPES,
   PROFILE_FIELDS, MONEY_STATUS, labelName,
 } from '../lib/vocab';
-import { num } from '../lib/format';
+import { num, revealTop } from '../lib/format';
 import {
   CountBar, SplitBar, Chip, ConfidenceBadge, QuoteCarousel, GeneratedLabel, EvidenceEmpty, LeverDot, Disclosure,
 } from '../components/shared';
@@ -42,7 +42,7 @@ function StageStrip({ stage }) {
           const n = stage.counts[k] ?? 0;
           return (
             <div key={k} className="flex flex-col items-center gap-1">
-              <div className="flex h-12 w-full items-end rounded bg-track">
+              <div className="flex h-12 w-full items-end rounded bg-white">
                 <div className="w-full rounded bg-ink" style={{ height: `${max ? (n / max) * 100 : 0}%` }} />
               </div>
               <span className="text-xs font-semibold tabular-nums text-ink">{num(n)}</span>
@@ -87,7 +87,7 @@ function Impact({ p }) {
   const types = Object.entries(sd.by_type).filter(([, n]) => n);
   const items = p.money.items;
   return (
-    <div className="grid gap-3 sm:grid-cols-2">
+    <div className="grid items-start gap-3 sm:grid-cols-2">
       <div className="rounded-xl bg-canvas p-3 text-sm">
         <p className="text-ink">
           <span className="text-lg font-semibold tabular-nums">{num(sd.investor)}</span> say they stopped, paused or are leaving
@@ -110,7 +110,7 @@ function Impact({ p }) {
           <div className="mt-2 space-y-2">
             <MoneyChips items={items.slice(0, MONEY_SHOWN)} />
             {items.length > MONEY_SHOWN && (
-              <Disclosure summary={`Show all ${num(items.length)} amounts`} className="bg-white">
+              <Disclosure plain summary={`Show all ${num(items.length)} amounts`}>
                 <MoneyChips items={items.slice(MONEY_SHOWN)} />
               </Disclosure>
             )}
@@ -133,7 +133,7 @@ function SubProblems({ labels }) {
     <div className="space-y-2">
       <ul className="space-y-1 text-sm">{all.slice(0, SUBLABELS_SHOWN).map(row)}</ul>
       {all.length > SUBLABELS_SHOWN && (
-        <Disclosure summary={`Show ${num(all.length - SUBLABELS_SHOWN)} more`} className="bg-white">
+        <Disclosure plain summary={`Show ${num(all.length - SUBLABELS_SHOWN)} more`}>
           <ul className="space-y-1 text-sm">{all.slice(SUBLABELS_SHOWN).map(row)}</ul>
         </Disclosure>
       )}
@@ -173,13 +173,13 @@ function ProblemDetail({ p, m, maxCount, prev, next, onPick }) {
           <div className="mt-1"><GeneratedLabel cited={p.narrative.cited_ids} /></div>
         </Step>
         <Step title="In their words">
-          <div className="max-w-2xl"><QuoteCarousel quotes={p.quotes} index={m.quotes_index} /></div>
+          <div className="max-w-2xl"><QuoteCarousel quotes={p.quotes} index={m.quotes_index} tone="inset" /></div>
           <a href={`#library/${p.id}`} className="mt-2 inline-block text-sm text-link underline-offset-2 hover:underline">
             See all {num(p.count)} posts in the Evidence Library
           </a>
         </Step>
         <Step title="Evidence">
-          <div className="grid gap-3 md:grid-cols-3">
+          <div className="grid items-start gap-3 md:grid-cols-3">
             <Mini title="Channels">
               <SplitBar counts={p.channel_split} meta={CHANNELS} order={Object.keys(CHANNELS)} />
               {p.channel_flag && <p className="mt-2 text-xs text-muted">More than 7 in 10 posts come from {CHANNELS[p.top_channel].name}.</p>}
@@ -194,7 +194,7 @@ function ProblemDetail({ p, m, maxCount, prev, next, onPick }) {
           </div>
         </Step>
         <Step title="When it happens and who reports it">
-          <div className="grid gap-3 md:grid-cols-2">
+          <div className="grid items-start gap-3">
             <Mini title="When it happens"><StageStrip stage={p.stage} /></Mini>
             <Mini title="Who reports it"><Profile profile={p.profile} /></Mini>
           </div>
@@ -203,7 +203,7 @@ function ProblemDetail({ p, m, maxCount, prev, next, onPick }) {
           <Impact p={p} />
         </Step>
         <Step title="What kind of fix">
-          <div className="grid gap-3 md:grid-cols-2">
+          <div className="grid items-start gap-3 md:grid-cols-2">
             <Mini title="From the cause each post points to">
               <SplitBar counts={p.fix_type_counts} meta={FIX_TYPES} order={Object.keys(FIX_TYPES)} />
             </Mini>
@@ -233,8 +233,8 @@ function ListItem({ p, on, onPick }) {
   return (
     <li>
       <button type="button" onClick={() => onPick(p.id)} aria-current={on ? 'true' : undefined}
-        className={`grid w-full grid-cols-[1.75rem_minmax(0,1fr)_auto] items-start gap-2 rounded-lg px-2 py-2 text-left text-sm ${on ? 'bg-white ring-1 ring-ink' : 'hover:bg-white'}`}>
-        <span className="tabular-nums text-muted">{p.rank ? num(p.rank) : '—'}</span>
+        className={`grid w-full grid-cols-[minmax(0,1fr)_auto] items-start gap-3 rounded-lg border-l-[3px] py-2 pl-3 pr-2 text-left text-sm ${on ? 'bg-white shadow-[0_1px_3px_rgba(30,43,60,0.08)]' : 'border-transparent hover:bg-white/70'}`}
+        style={on ? { borderLeftColor: g.color } : undefined}>
         <span className="flex gap-2 text-ink"><LeverDot color={g.color} size="mt-1.5 h-2 w-2" /><span className={on ? 'font-semibold' : ''}>{p.name}</span></span>
         <span className="tabular-nums text-muted">{num(p.count)}</span>
       </button>
@@ -261,7 +261,7 @@ export default function Explorer({ m }) {
   const pick = (id) => {
     setSel(id);
     window.history.replaceState(null, '', `#explorer/${id}`);
-    document.getElementById('problem-detail')?.scrollIntoView({ block: 'start' });
+    requestAnimationFrame(() => revealTop('problem-detail'));
   };
   const setFilter = (g) => {
     setGroup(g);
@@ -313,13 +313,13 @@ export default function Explorer({ m }) {
 
       <div className="mt-5 grid gap-6 lg:grid-cols-[17rem_minmax(0,1fr)]">
         <nav aria-label="Problems" className="hidden lg:block">
-          <div className="sticky max-h-[calc(100vh-var(--header-h,6rem)-3rem)] overflow-y-auto pr-1" style={{ top: 'calc(var(--header-h, 6rem) + 1.5rem)' }}>
+          <div>
             <ol className="space-y-0.5">
               {list.filter((x) => x.display === 'ranked').map((x) => <ListItem key={x.id} p={x} on={x.id === sel} onPick={pick} />)}
             </ol>
             {list.some((x) => x.display === 'signal') && (
               <>
-                <p className="mt-4 px-2 text-xs text-muted">Signals to watch</p>
+                <p className="mt-5 pl-[15px] text-xs text-muted">Signals to watch</p>
                 <ol className="mt-1 space-y-0.5">
                   {list.filter((x) => x.display === 'signal').map((x) => <ListItem key={x.id} p={x} on={x.id === sel} onPick={pick} />)}
                 </ol>

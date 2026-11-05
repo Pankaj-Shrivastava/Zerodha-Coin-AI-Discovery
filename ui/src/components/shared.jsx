@@ -50,7 +50,7 @@ export function SplitBar({ counts, meta, order = Object.keys(counts), showZero =
 export function StatBlock({ label, value, of, unit = 'posts', children, caption }) {
   return (
     <div className="flex flex-col rounded-2xl bg-white p-5 shadow-[0_1px_2px_rgba(30,43,60,0.06)] ring-1 ring-line">
-      <p className="text-sm text-muted">{label}</p>
+      <p className="stat-label text-sm text-muted">{label}</p>
       <p className="mt-2 flex items-baseline gap-1.5">
         <span className="text-[2rem] font-semibold leading-none tabular-nums text-ink">{num(value)}</span>
         {of != null && <span className="text-sm text-muted">of {num(of)} {unit}</span>}
@@ -67,12 +67,13 @@ export function LeverDot({ color, size = 'h-2.5 w-2.5' }) {
   return <span className={`inline-block shrink-0 rounded-full ${size}`} style={{ backgroundColor: color }} aria-hidden="true" />;
 }
 
-export function ChannelChip({ channel }) {
+// channel dot + name; label replaces the name (e.g. "YouTube commenter") where the author type is shown
+export function ChannelChip({ channel, label }) {
   const c = CHANNELS[channel];
   return (
-    <span className="inline-flex items-center gap-1.5 rounded-full bg-canvas px-2 py-0.5 text-xs text-ink">
+    <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-white px-2 py-0.5 text-xs text-ink ring-1 ring-line">
       <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: c.color }} />
-      {c.name}
+      {label ?? c.name}
     </span>
   );
 }
@@ -104,7 +105,7 @@ export function StatusBadge({ status }) {
 
 export function Chip({ children, title }) {
   return (
-    <span title={title} className="inline-flex items-center rounded-full bg-canvas px-2 py-0.5 text-xs text-ink">
+    <span title={title} className="inline-flex items-center rounded-full bg-white px-2 py-0.5 text-xs text-ink ring-1 ring-line">
       {children}
     </span>
   );
@@ -112,7 +113,7 @@ export function Chip({ children, title }) {
 
 export function GeneratedLabel({ cited }) {
   return (
-    <span className="text-xs text-muted" title={cited.join('\n')}>
+    <span className="block text-xs leading-snug text-muted" title={cited.join('\n')}>
       Generated summary · based on {num(cited.length)} cited posts
     </span>
   );
@@ -133,49 +134,49 @@ function QuoteBody({ quote, meta }) {
         {quote.text}
         {quote.excerpt && <span className="text-muted"> …</span>}
       </blockquote>
-      <figcaption className="mt-3 flex flex-wrap items-center gap-2 text-xs text-muted">
-        <ChannelChip channel={meta.channel} />
-        <span>{meta.author_label}</span>
-        {when && <span>· {when}</span>}
-        {quote.excerpt && <span>· Excerpt</span>}
-        {meta.truncated_at_source && <span>· Cut off at source</span>}
-        <a href={meta.source_url} target="_blank" rel="noreferrer" className="ml-auto text-link underline-offset-2 hover:underline">
-          Source
-        </a>
+      <figcaption className="mt-3 space-y-1 text-xs text-muted">
+        <div className="flex items-center gap-2">
+          <ChannelChip channel={meta.channel} label={meta.author_label} />
+          <a href={meta.source_url} target="_blank" rel="noreferrer" className="ml-auto shrink-0 text-link underline-offset-2 hover:underline">
+            Source
+          </a>
+        </div>
+        <p>{[when, quote.excerpt && 'Excerpt', meta.truncated_at_source && 'Cut off at source'].filter(Boolean).join(' · ')}</p>
       </figcaption>
     </>
   );
 }
 
 // one quote, exactly as selected by the manifest; meta comes from manifest.quotes_index
-export function QuoteCard({ quote, meta }) {
+const QUOTE_TONE = { card: 'bg-white ring-1 ring-line', inset: 'bg-canvas' };
+export function QuoteCard({ quote, meta, tone = 'card' }) {
   return (
-    <figure className="rounded-xl bg-white p-4 ring-1 ring-line">
+    <figure className={`rounded-xl p-4 ${QUOTE_TONE[tone]}`}>
       <QuoteBody quote={quote} meta={meta} />
     </figure>
   );
 }
 
 // quotes one at a time; never moves on its own; every quote reachable with the buttons
-export function QuoteCarousel({ quotes, index, empty = 'No quote met the selection rules.' }) {
+export function QuoteCarousel({ quotes, index, tone = 'card', empty = 'No quote met the selection rules.' }) {
   // position resets when the quote set changes (another problem selected)
   const key = quotes.map((q) => q.id).join('|');
   const [pos, setPos] = useState({ key, i: 0 });
   const i = pos.key === key ? pos.i : 0;
   if (!quotes.length) return <EvidenceEmpty>{empty}</EvidenceEmpty>;
-  if (quotes.length === 1) return <QuoteCard quote={quotes[0]} meta={index[quotes[0].id]} />;
+  if (quotes.length === 1) return <QuoteCard quote={quotes[0]} meta={index[quotes[0].id]} tone={tone} />;
   const q = quotes[i];
   const go = (d) => setPos({ key, i: (i + d + quotes.length) % quotes.length });
   return (
-    <figure className="rounded-xl bg-white p-4 ring-1 ring-line" aria-roledescription="carousel">
+    <figure className={`rounded-xl p-4 ${QUOTE_TONE[tone]}`} aria-roledescription="carousel">
       <div aria-live="polite">
         <QuoteBody quote={q} meta={index[q.id]} />
       </div>
       <div className="mt-3 flex items-center gap-2 border-t border-line pt-3">
         <button type="button" onClick={() => go(-1)} aria-label="Previous quote"
-          className="grid h-7 w-7 place-items-center rounded-full ring-1 ring-line hover:bg-canvas">‹</button>
+          className="grid h-7 w-7 place-items-center rounded-full bg-white ring-1 ring-line hover:ring-ink">‹</button>
         <button type="button" onClick={() => go(1)} aria-label="Next quote"
-          className="grid h-7 w-7 place-items-center rounded-full ring-1 ring-line hover:bg-canvas">›</button>
+          className="grid h-7 w-7 place-items-center rounded-full bg-white ring-1 ring-line hover:ring-ink">›</button>
         <span className="flex gap-1" aria-hidden="true">
           {quotes.map((x, j) => <span key={x.id} className={`h-1.5 w-1.5 rounded-full ${j === i ? 'bg-ink' : 'bg-line'}`} />)}
         </span>
@@ -187,10 +188,21 @@ export function QuoteCarousel({ quotes, index, empty = 'No quote met the selecti
 
 // ---------- disclosure, tabs ----------
 
-export function Disclosure({ summary, children, className = '' }) {
+export function Disclosure({ summary, children, className = '', plain = false }) {
+  if (plain) {
+    return (
+      <details className={`group ${className}`}>
+        <summary className="inline-flex cursor-pointer list-none items-center gap-1.5 text-sm text-link hover:underline [&::-webkit-details-marker]:hidden">
+          <span className="transition-transform group-open:rotate-90" aria-hidden="true">›</span>
+          {summary}
+        </summary>
+        <div className="mt-2">{children}</div>
+      </details>
+    );
+  }
   return (
-    <details className={`group rounded-xl ring-1 ring-line ${className}`}>
-      <summary className="flex cursor-pointer list-none items-center gap-2 px-3 py-2 text-sm text-ink hover:bg-canvas [&::-webkit-details-marker]:hidden">
+    <details className={`group rounded-xl bg-white ring-1 ring-line ${className}`}>
+      <summary className="flex cursor-pointer list-none items-center gap-2 rounded-xl px-3 py-2 text-sm text-ink hover:bg-canvas [&::-webkit-details-marker]:hidden">
         <span className="text-muted transition-transform group-open:rotate-90" aria-hidden="true">›</span>
         {summary}
       </summary>
